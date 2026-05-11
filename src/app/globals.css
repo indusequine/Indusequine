@@ -1,0 +1,73 @@
+@import "tailwindcss";
+
+@theme {
+  --color-forest: #1a3a2e;
+  --color-forest-deep: #0e2419;
+  --color-forest-soft: #2a4a3e;
+  --color-oxblood: #6b1818;
+  --color-oxblood-deep: #4a0f0f;
+  --color-cream: #f5ede0;
+  --color-cream-soft: #faf6ed;
+  --color-cream-warm: #ece2d0;
+  --color-brass: #b58952;
+  --color-brass-light: #d4b07a;
+  --color-brass-deep: #8a6638;
+  --color-ink: #1a1a1a;
+  --color-charcoal: #3a3a3a;
+  --color-stone: #6b6258;
+
+  --font-display: var(--font-cormorant), "Cormorant Garamond", "Times New Roman", serif;
+  --font-body: var(--font-inter), "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+html {
+  background: var(--color-cream-soft);
+  color: var(--color-ink);
+}
+
+body {
+  font-family: var(--font-body);
+  background: var(--color-cream-soft);
+  color: var(--color-ink);
+  font-feature-settings: "ss01", "cv11";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6, .font-display {
+  font-family: var(--font-display);
+  font-weight: 400;
+  letter-spacing: -0.01em;
+}
+
+::selection {
+  background: var(--color-forest);
+  color: var(--color-cream-soft);
+}
+
+.eyebrow {
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.rule {
+  display: inline-block;
+  width: 2rem;
+  height: 1px;
+  background: currentColor;
+  vertical-align: middle;
+  margin-right: 0.75rem;
+  opacity: 0.5;
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in-up {
+  animation: fadeInUp 0.8s ease-out backwards;
+}
