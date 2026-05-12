@@ -1,8 +1,6 @@
 "use client";
 
-import { useActionState } from "react";
-import { useFormStatus } from "react-dom";
-import { submitContact, type FormState } from "@/app/actions";
+import { useState, FormEvent } from "react";
 
 const kinds = [
   { value: "brand", label: "I represent a brand" },
@@ -12,10 +10,78 @@ const kinds = [
   { value: "other", label: "Something else" },
 ];
 
-export function ContactForm() {
-  const [state, formAction] = useActionState<FormState, FormData>(submitContact, null);
+const WEBHOOK_URL = process.env.NEXT_PUBLIC_SHEETS_WEBHOOK_URL;
 
-  if (state?.ok) {
+type Status =
+  | { kind: "idle" }
+  | { kind: "submitting" }
+  | { kind: "success" }
+  | { kind: "error"; message: string };
+
+function validEmail(email: string): boolean {
+  return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+}
+
+export function ContactForm() {
+  const [status, setStatus] = useState<Status>({ kind: "idle" });
+
+  async function handleSubmit(event: FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+    const form = event.currentTarget;
+    const data = new FormData(form);
+
+    const name = String(data.get("name") || "").trim();
+    const email = String(data.get("email") || "").trim();
+    const organisation = String(data.get("organisation") || "").trim();
+    const kind = String(data.get("kind") || "").trim();
+    const message = String(data.get("message") || "").trim();
+
+    if (!name) return setStatus({ kind: "error", message: "Please share your name." });
+    if (!email || !validEmail(email))
+      return setStatus({ kind: "error", message: "Please share a valid email address." });
+    if (!message || message.length < 10)
+      return setStatus({ kind: "error", message: "Please share a bit more in your message." });
+
+    setStatus({ kind: "submitting" });
+
+    const payload = {
+      form: "contact",
+      timestamp: new Date().toISOString(),
+      name,
+      email,
+      organisation,
+      kind,
+      message,
+    };
+
+    if (!WEBHOOK_URL) {
+      console.warn("[Indusequine] NEXT_PUBLIC_SHEETS_WEBHOOK_URL not set", payload);
+      setStatus({ kind: "success" });
+      return;
+    }
+
+    try {
+      const res = await fetch(WEBHOOK_URL, {
+        method: "POST",
+        headers: { "Content-Type": "text/plain;charset=utf-8" },
+        body: JSON.stringify(payload),
+        redirect: "follow",
+      });
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      const json = await res.json().catch(() => ({ ok: true }));
+      if (json.ok === false) throw new Error(json.error || "Unknown error");
+      setStatus({ kind: "success" });
+    } catch (err) {
+      console.error("[Indusequine] contact submission failed", err);
+      setStatus({
+        kind: "error",
+        message:
+          "Something went wrong on our side. Please try again, or email hello@indusequine.com.",
+      });
+    }
+  }
+
+  if (status.kind === "success") {
     return (
       <div className="border border-forest/20 bg-cream p-10 md:p-14 text-center">
         <p className="eyebrow text-brass-deep">
@@ -25,14 +91,16 @@ export function ContactForm() {
           Thank you.
         </h3>
         <p className="mt-4 text-charcoal leading-relaxed max-w-xl mx-auto">
-          {state.message}
+          Thank you — we&rsquo;ve received your note and will reply soon.
         </p>
       </div>
     );
   }
 
+  const pending = status.kind === "submitting";
+
   return (
-    <form action={formAction} className="space-y-6">
+    <form onSubmit={handleSubmit} className="space-y-6" noValidate>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <Field id="name" label="Your name" required />
         <Field id="email" label="Email" type="email" required />
@@ -76,11 +144,17 @@ export function ContactForm() {
         />
       </div>
 
-      {state?.message && !state.ok && (
-        <p className="text-oxblood text-sm">{state.message}</p>
+      {status.kind === "error" && (
+        <p className="text-oxblood text-sm">{status.message}</p>
       )}
 
-      <SubmitButton />
+      <button
+        type="submit"
+        disabled={pending}
+        className="inline-flex items-center justify-center px-8 py-4 bg-forest text-cream-soft hover:bg-forest-deep transition-colors text-sm tracking-[0.15em] uppercase disabled:opacity-50 disabled:cursor-not-allowed"
+      >
+        {pending ? "Sending…" : "Send Message"}
+      </button>
     </form>
   );
 }
@@ -110,18 +184,5 @@ function Field({
         className="w-full px-4 py-3 bg-cream-soft border border-forest/15 focus:border-forest focus:outline-none focus:ring-1 focus:ring-forest/30 transition-colors text-ink"
       />
     </div>
-  );
-}
-
-function SubmitButton() {
-  const { pending } = useFormStatus();
-  return (
-    <button
-      type="submit"
-      disabled={pending}
-      className="inline-flex items-center justify-center px-8 py-4 bg-forest text-cream-soft hover:bg-forest-deep transition-colors text-sm tracking-[0.15em] uppercase disabled:opacity-50 disabled:cursor-not-allowed"
-    >
-      {pending ? "Sending…" : "Send Message"}
-    </button>
   );
 }

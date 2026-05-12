@@ -4,11 +4,11 @@ This is the pre-launch site for Indusequine, India's first equestrian marketplac
 
 ## Stack
 
-- **Next.js 16** (App Router, Turbopack) running on Node
+- **Next.js 16** (App Router, Turbopack) in **static export mode** (`output: 'export'`)
 - **Tailwind CSS v4** with brand tokens in `src/app/globals.css`
 - **Cormorant Garamond** (display) + **Inter** (body) via `next/font/google`
-- Server Actions handle waitlist + contact form submissions; webhook URL stays server-side
-- Builds in **`output: 'standalone'`** mode — produces a self-contained bundle suitable for Hostinger's Node.js Selector
+- Forms submit client-side via `fetch` to a Google Apps Script webhook — no server needed
+- Deploys to any static host (Hostinger shared hosting, Cloudflare Pages, Netlify, S3, etc.)
 
 ## Local development
 
@@ -19,9 +19,11 @@ npm run dev
 
 Opens at [http://localhost:3000](http://localhost:3000).
 
-## Setting up the Google Sheets webhook
+## Setting up the Google Sheets waitlist webhook
 
-The forms post submissions via Server Actions to a Google Apps Script Web App, which appends rows to a Google Sheet. The webhook URL is read from `SHEETS_WEBHOOK_URL` (server-side only — never exposed to the client).
+The waitlist and contact forms POST submissions directly from the browser to a Google Apps Script Web App, which appends rows to a Google Sheet. The webhook URL is read from `NEXT_PUBLIC_SHEETS_WEBHOOK_URL` and **baked into the client bundle at build time** — so you need to set it before running `npm run build`.
+
+> **About the `NEXT_PUBLIC_` prefix:** This is Next.js convention for env vars that get inlined into client-side JavaScript. The Apps Script URL is meant to be publicly accessible (it's deployed as "Anyone" access), so baking it into the static export is the correct architecture for this kind of hosting.
 
 ### Step 1 — Create the sheet
 
@@ -36,7 +38,7 @@ The forms post submissions via Server Actions to a Google Apps Script Web App, w
 ### Step 2 — Add the Apps Script
 
 1. In the sheet: **Extensions → Apps Script**.
-2. Replace `Code.gs` content with:
+2. Replace the default `Code.gs` content with:
 
    ```javascript
    function doPost(e) {
@@ -66,125 +68,85 @@ The forms post submissions via Server Actions to a Google Apps Script Web App, w
    }
    ```
 
-3. Save (`Ctrl+S`).
+3. Save (`Ctrl+S`). Name the project `Indusequine Webhook`.
 
 ### Step 3 — Deploy as a Web App
 
-1. **Deploy → New deployment** → gear icon → **Web app**.
-2. Execute as: **Me**. Who has access: **Anyone**.
-3. Click **Deploy**, authorize (Advanced → Go to project → Allow).
-4. Copy the **Web app URL**.
+1. Click **Deploy → New deployment**.
+2. Gear icon next to "Select type" → **Web app**.
+3. Execute as: **Me**. Who has access: **Anyone**.
+4. Click **Deploy**, authorize when prompted (Advanced → Go to project → Allow).
+5. Copy the **Web app URL** — `https://script.google.com/macros/s/AKfycb.../exec`.
 
 > **When you change the script later:** Editing the script doesn't auto-update the live deployment. Go to **Deploy → Manage deployments**, click the edit pencil, change Version to **New version**, click Deploy. URL stays the same.
 
-### Step 4 — Wire the URL
+### Step 4 — Wire the URL into the build
 
-For local development, create `.env.local` next to `package.json`:
+Create `.env.local` in the project root (next to `package.json`):
 
 ```
-SHEETS_WEBHOOK_URL=https://script.google.com/macros/s/YOUR_DEPLOYMENT_ID/exec
+NEXT_PUBLIC_SHEETS_WEBHOOK_URL=https://script.google.com/macros/s/YOUR_DEPLOYMENT_ID/exec
 ```
 
-Restart `npm run dev`. For production, see the Hostinger setup below — env vars are set in hPanel's Node.js Selector UI, not in a file on the server.
+For local dev, restart `npm run dev` to pick up the var. For production, the URL gets compiled into the JS bundle the next time you run `npm run build`.
 
-## Building for production
+## Building the production site
 
 ```powershell
 npm run build
 ```
 
-Three things matter in the output:
+Output goes to `out/`. That folder is the complete static site — HTML, CSS, JS, fonts, images — ready to upload to any static host.
 
-```
-.next/standalone/        ← Self-contained server bundle (server.js + minimal deps)
-.next/static/            ← Static chunks (JS, CSS, fonts) — needs to be copied INTO standalone
-public/                  ← Public assets (favicons, SVGs) — needs to be copied INTO standalone
-```
+## Deploying to Hostinger shared hosting
 
-The build doesn't auto-merge these. To produce the deployable folder, after `npm run build`:
+> **What you'll need:** Hostinger account, a domain pointed at it, hPanel access.
+
+### Step 1 — Build locally
 
 ```powershell
-# from the indusequine/ project root
-Copy-Item -Recurse .next\static .next\standalone\.next\static
-Copy-Item -Recurse public .next\standalone\public
+npm run build
 ```
 
-Now `.next/standalone/` is the complete deploy bundle (~22 MB). Its contents:
+Then verify `out/` exists and contains `index.html`, `marketplace/`, `services/`, etc.
 
-```
-.next/standalone/
-├── server.js              ← Entry point (Node runs this)
-├── package.json
-├── node_modules/          ← Only production deps
-├── .next/
-│   └── static/            ← Hashed JS/CSS/fonts
-└── public/                ← Favicons, SVGs
-```
+### Step 2 — ZIP the contents
 
-## Deploying to Hostinger Node.js Selector
+In Windows Explorer, open the `out/` folder. **Select all files INSIDE `out/`** (Ctrl+A) — _not the `out/` folder itself_ — then right-click → **Send to → Compressed (zipped) folder**. Name it `indusequine.zip`.
 
-> **Prerequisites:** Hostinger Premium / Business / Cloud plan with **Node.js Selector** available in hPanel.
+> **Why this matters:** If you zip the `out/` folder itself, you'll end up serving the site from `yourdomain.com/out/` instead of `yourdomain.com/`. The zip should expand to put `index.html` straight into `public_html/`.
 
-### Step 1 — Zip the bundle
+### Step 3 — Upload via Hostinger File Manager
 
-Compress everything inside `.next/standalone/` into a single zip (e.g. `indusequine-app.zip`). Make sure the zip contents start with `server.js`, `package.json`, `.next/`, etc. directly — **not** wrapped in a `standalone/` folder.
+1. Log in to **hPanel** at [hpanel.hostinger.com](https://hpanel.hostinger.com).
+2. Click your domain → **File Manager** (or directly: **Files → File Manager**).
+3. Open the **`public_html`** folder.
+4. **Important** — if `public_html` has existing files (e.g. a default Hostinger placeholder `default.php`, `.htaccess`), select them all and **move them to a backup folder** (right-click → Move → e.g. `public_html_backup/`) rather than deleting outright. Keeps a rollback option.
+5. Click the **upload icon** (cloud-with-arrow, top toolbar) → select your `indusequine.zip`.
+6. Once uploaded, right-click the zip in the file list → **Extract**.
+7. Confirm. After extraction, you should see `index.html`, `_next/`, `marketplace/`, etc. directly inside `public_html/`.
+8. Delete the zip file (it's no longer needed).
 
-### Step 2 — Upload via File Manager
+### Step 4 — Point your domain
 
-1. Log in to [**hpanel.hostinger.com**](https://hpanel.hostinger.com)
-2. Open your domain → **File Manager**
-3. Create a new folder outside `public_html/` for the Node app, e.g. **`/nodejs/indusequine/`**. (Keeping the app outside `public_html` is the convention — the Node.js Selector will reverse-proxy your domain to this app on a private port.)
-4. Upload `indusequine-app.zip` into `/nodejs/indusequine/`
-5. Right-click → **Extract**. After extraction, you should see `server.js` and `package.json` directly inside `/nodejs/indusequine/`. Delete the zip.
+If your domain is already configured at Hostinger as the primary domain, it's already pointed at `public_html`. Visit your domain in a browser — site should load.
 
-### Step 3 — Configure Node.js Selector
+If you see a Hostinger placeholder page, force a hard refresh (`Ctrl+Shift+R`) or wait 2–3 minutes for any cached version to expire.
 
-1. In hPanel, navigate to **Advanced → Node.js** (or **Websites → Node.js** depending on hPanel version)
-2. Click **Create Application** (or **+ Add app**)
-3. Fill in:
-   - **Node.js version:** select the highest 20.x available (or 22.x if offered). Next.js 16 needs Node 20+.
-   - **Application mode:** Production
-   - **Application root:** `/nodejs/indusequine` (or wherever you uploaded)
-   - **Application URL:** `indusequine.com` (your domain — Hostinger will reverse-proxy here)
-   - **Application startup file:** `server.js`
-   - **Passenger log file:** leave blank (default)
-4. Scroll to **Environment variables** and add:
-   - **Variable name:** `SHEETS_WEBHOOK_URL`
-   - **Value:** your Apps Script web app URL (the one in your local `.env.local`)
-   - Add another: **`HOSTNAME`** = `0.0.0.0` (so the Node process binds to all interfaces, not just localhost)
-   - And: **`PORT`** — leave Hostinger's default (it assigns one and proxies your domain to it)
-   - Optionally: **`NODE_ENV`** = `production`
-5. Click **Create** / **Save**
-
-### Step 4 — Install dependencies (probably skip — standalone has them)
-
-Standalone mode includes its own `node_modules/`, so you usually don't need to run `npm install` on the server. If Hostinger's interface offers a **Run NPM Install** button, you can skip it. If the app fails to start with "module not found" errors, then run it.
-
-### Step 5 — Start the app
-
-1. In Node.js Selector, find your `indusequine` app in the list
-2. Click **Start App** (or **Restart**)
-3. Hostinger reports a status (Running / Stopped). It should say **Running**.
-
-### Step 6 — Verify
-
-Visit [https://indusequine.com](https://indusequine.com). The site should load. If you see a Hostinger placeholder or a 502 error, give it 30 seconds, then hard-refresh (`Ctrl+Shift+R`). Check the Node.js Selector log file for any startup errors.
-
-### Re-deploying after code changes
+### Step 5 — Re-deploying after code changes
 
 Each time you change the site:
 
 ```powershell
-npm run build
-Copy-Item -Recurse -Force .next\static .next\standalone\.next\static
-Copy-Item -Recurse -Force public .next\standalone\public
+npm run build       # rebuild out/ with the latest code
 ```
 
 Then:
-1. Zip the new `.next/standalone/` contents
-2. In hPanel File Manager, **delete** the contents of `/nodejs/indusequine/` (or move to a backup folder)
-3. Upload + extract the new zip
-4. In Node.js Selector, click **Restart App**
+- ZIP the new contents of `out/`
+- In hPanel File Manager, delete (or move to backup) everything in `public_html/` from the previous deploy
+- Upload + extract the new zip
+
+> **Tip:** You can also use Hostinger's FTP credentials with a tool like FileZilla for faster repeated uploads if this becomes frequent.
 
 ## What's where
 
@@ -193,8 +155,7 @@ src/
 ├── app/
 │   ├── layout.tsx           Root layout (fonts, metadata, header, footer)
 │   ├── page.tsx             Home
-│   ├── globals.css          Brand tokens + base styles
-│   ├── actions.ts           Server Actions for the forms (Node-only)
+│   ├── globals.css          Brand tokens (Tailwind @theme) + base styles
 │   ├── marketplace/page.tsx
 │   ├── services/page.tsx
 │   ├── story/page.tsx
@@ -205,18 +166,29 @@ src/
 └── components/
     ├── Header.tsx
     ├── Footer.tsx
-    ├── Logo.tsx
+    ├── Logo.tsx             SVG mark + wordmark
     ├── Container.tsx
-    ├── Illustrations.tsx
-    ├── WaitlistForm.tsx     useActionState → server action
+    ├── Illustrations.tsx    Inline SVG art for category cards & hero
+    ├── WaitlistForm.tsx     Client-side fetch to Apps Script
     └── ContactForm.tsx
-next.config.ts               output: 'standalone'
+next.config.ts               output: 'export' (static site mode)
 ```
 
 ## Customising the brand
 
-Colors and fonts live in `src/app/globals.css` under `@theme { ... }`. Tailwind v4 generates utility classes from these tokens — e.g. `bg-forest`, `text-brass-light`, `border-forest/20`.
+All colors and fonts live in `src/app/globals.css` under `@theme { ... }`. Tailwind v4 generates utility classes from these tokens — e.g. `bg-forest`, `text-brass-light`, `border-forest/20`.
 
-Change a CSS variable, run `npm run build` (+ the copy steps above), redeploy.
+Change a CSS variable, run `npm run build`, redeploy — site is rebranded.
 
-To change fonts, edit the `next/font/google` imports in `src/app/layout.tsx` and update the corresponding variables in `globals.css`.
+To change fonts, edit the `next/font/google` imports in `src/app/layout.tsx` and update the `--font-display` / `--font-body` variables in `globals.css` to point at the new font CSS variables.
+
+## Upgrading the architecture later
+
+This static export is the right call for a pre-launch landing site. When you're ready to build the actual marketplace (auth, payments, multi-seller, dynamic data), you'll likely want to:
+
+1. Remove `output: 'export'` from `next.config.ts`
+2. Switch back to server-rendered Next.js
+3. Deploy to a host that supports Node (Vercel, Cloudflare Pages, Railway, or a Hostinger VPS plan)
+4. Add a real database (Postgres on Neon / Supabase) + auth (Clerk / Auth.js) + payments (Razorpay)
+
+The current pages and brand assets all carry over — only the form submission logic and hosting setup change.
