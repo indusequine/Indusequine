@@ -25,6 +25,28 @@ export function Logo({ variant = "forest", showMark = true, size = "md" }: LogoP
   );
 }
 
+export function LogoMarkPattern() {
+  return (
+    <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <defs>
+        <pattern id="logo-marks" x="0" y="0" width="120" height="120" patternUnits="userSpaceOnUse">
+          <g transform="translate(60 60)" fill="none" stroke="currentColor" strokeWidth="1.2">
+            <path d="M -18 -22 C -18 -32, -10 -38, 0 -38 C 10 -38, 18 -32, 18 -22 L 18 12 L 12 12 L 12 -18 C 12 -26, 6 -30, 0 -30 C -6 -30, -12 -26, -12 -18 L -12 12 L -18 12 Z" />
+            <line x1="0" y1="-10" x2="0" y2="8" />
+            <line x1="-3.5" y1="-10" x2="3.5" y2="-10" />
+            <line x1="-3.5" y1="8" x2="3.5" y2="8" />
+            <circle cx="-14" cy="6" r="0.8" fill="currentColor" />
+            <circle cx="14" cy="6" r="0.8" fill="currentColor" />
+            <circle cx="-14" cy="-2" r="0.8" fill="currentColor" />
+            <circle cx="14" cy="-2" r="0.8" fill="currentColor" />
+          </g>
+        </pattern>
+      </defs>
+      <rect width="100%" height="100%" fill="url(#logo-marks)" />
+    </svg>
+  );
+}
+
 export function LogoMark({ size = 32 }: { size?: number }) {
   return (
     <svg
