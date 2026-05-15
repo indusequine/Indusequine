@@ -15,7 +15,7 @@ const sections = [
     title: "What you wear, in and out of the saddle.",
     intro:
       "Helmets engineered for safety. Boots built for the long ride. Apparel that performs in the school and reads well in the show ring. Hand-selected from brands trusted by riders worldwide, and made available in India for the first time under one roof.",
-    photo: "https://images.unsplash.com/photo-1752721653605-a03141184f9f?w=800&fit=crop&q=80",
+    photo: "https://images.unsplash.com/photo-1550785330-003a9afa3bd9?w=800&fit=crop&q=80",
     groups: [
       { title: "Headwear & Safety", items: ["Show helmets", "Schooling helmets", "Body protectors", "Air vests"] },
       { title: "Footwear", items: ["Tall boots", "Paddock & jodhpur boots", "Half chaps", "Mucker boots"] },
@@ -29,7 +29,7 @@ const sections = [
     title: "What your horse needs to thrive.",
     intro:
       "From the saddlery on his back to the bedding under his feet. Indian and imported tack, feed and supplements suited to our climate, grooming essentials for show and home — and the health products every owner should have on hand.",
-    photo: "https://images.unsplash.com/photo-1746540368676-3ea770f8b9e3?w=800&fit=crop&q=80",
+    photo: "https://images.unsplash.com/photo-1544467251-2184f386011f?w=800&fit=crop&q=80",
     groups: [
       { title: "Tack & Saddlery", items: ["Saddles (dressage, jumping, GP, polo)", "Bridles & nosebands", "Bits & accessories", "Girths & stirrups", "Numnahs & saddle pads"] },
       { title: "Rugs & Boots", items: ["Turnout rugs", "Stable rugs", "Coolers & fleeces", "Travel & exercise boots", "Bandages & wraps"] },

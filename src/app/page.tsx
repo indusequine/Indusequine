@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { Container } from "@/components/Container";
-import { HorseSilhouette, HorseshoePattern, SaddlePattern, HoofPattern } from "@/components/Illustrations";
+import { HorseSilhouette, HorseshoePattern, HoofPattern } from "@/components/Illustrations";
 
 export default function HomePage() {
   return (
@@ -115,21 +115,21 @@ function MarketplacePreview() {
       eyebrow: "For Riders",
       title: "What you wear in the saddle.",
       items: ["Helmets & headwear", "Boots & half chaps", "Breeches & jodhpurs", "Show jackets & shirts", "Gloves & accessories", "Body protectors"],
-      art: <SaddlePattern variant="rider" />,
+      photo: "https://images.unsplash.com/photo-1550785330-003a9afa3bd9?w=800&fit=crop&q=80",
       href: "/marketplace#riders",
     },
     {
       eyebrow: "For Horses",
       title: "What your horse needs to thrive.",
       items: ["Saddles & saddlery", "Bridles & bits", "Rugs & blankets", "Feed & supplements", "Grooming & care", "Health essentials"],
-      art: <SaddlePattern variant="horse" />,
+      photo: "https://images.unsplash.com/photo-1544467251-2184f386011f?w=800&fit=crop&q=80",
       href: "/marketplace#horses",
     },
     {
       eyebrow: "For Stables",
       title: "What it takes to run one well.",
       items: ["Stable equipment", "Arena & footing", "Fencing & paddocks", "Yard supplies", "Hay & bedding", "Safety & first aid"],
-      art: <SaddlePattern variant="stable" />,
+      photo: "https://images.unsplash.com/photo-1576692192914-9abed71b3ef9?w=800&fit=crop&q=80",
       href: "/marketplace#stables",
     },
   ];
@@ -158,10 +158,9 @@ function MarketplacePreview() {
               href={c.href}
               className="group bg-cream hover:bg-cream-warm transition-colors p-8 md:p-10 flex flex-col"
             >
-              <div className="aspect-[4/3] mb-8 bg-forest-deep relative overflow-hidden">
-                <div className="absolute inset-0 flex items-center justify-center text-brass/60 group-hover:text-brass transition-colors">
-                  {c.art}
-                </div>
+              <div className="aspect-[4/3] mb-8 overflow-hidden">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src={c.photo} alt={c.eyebrow} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
               </div>
               <p className="eyebrow text-brass-deep">{c.eyebrow}</p>
               <h3 className="font-display text-2xl md:text-3xl mt-3 text-forest leading-snug">
