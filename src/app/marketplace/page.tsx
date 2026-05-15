@@ -1,7 +1,6 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import { Container } from "@/components/Container";
-import { SaddlePattern } from "@/components/Illustrations";
 
 export const metadata: Metadata = {
   title: "The Marketplace",
@@ -16,7 +15,7 @@ const sections = [
     title: "What you wear, in and out of the saddle.",
     intro:
       "Helmets engineered for safety. Boots built for the long ride. Apparel that performs in the school and reads well in the show ring. Hand-selected from brands trusted by riders worldwide, and made available in India for the first time under one roof.",
-    art: "rider" as const,
+    photo: "https://images.unsplash.com/photo-1752721653605-a03141184f9f?w=800&fit=crop&q=80",
     groups: [
       { title: "Headwear & Safety", items: ["Show helmets", "Schooling helmets", "Body protectors", "Air vests"] },
       { title: "Footwear", items: ["Tall boots", "Paddock & jodhpur boots", "Half chaps", "Mucker boots"] },
@@ -30,7 +29,7 @@ const sections = [
     title: "What your horse needs to thrive.",
     intro:
       "From the saddlery on his back to the bedding under his feet. Indian and imported tack, feed and supplements suited to our climate, grooming essentials for show and home — and the health products every owner should have on hand.",
-    art: "horse" as const,
+    photo: "https://images.unsplash.com/photo-1746540368676-3ea770f8b9e3?w=800&fit=crop&q=80",
     groups: [
       { title: "Tack & Saddlery", items: ["Saddles (dressage, jumping, GP, polo)", "Bridles & nosebands", "Bits & accessories", "Girths & stirrups", "Numnahs & saddle pads"] },
       { title: "Rugs & Boots", items: ["Turnout rugs", "Stable rugs", "Coolers & fleeces", "Travel & exercise boots", "Bandages & wraps"] },
@@ -44,7 +43,7 @@ const sections = [
     title: "What it takes to run one well.",
     intro:
       "Whether you board ten horses or one hundred. Yard tools that last, arena equipment that performs, fencing that holds, and the operational kit — first aid stations, water systems, hay storage — that makes a stable feel professional from the moment someone drives in.",
-    art: "stable" as const,
+    photo: "https://images.unsplash.com/photo-1576692192914-9abed71b3ef9?w=800&fit=crop&q=80",
     groups: [
       { title: "Stable & Yard", items: ["Stalls & dividers", "Stable mats & flooring", "Mucking tools", "Wheelbarrows", "Buckets & tubs"] },
       { title: "Arena & Training", items: ["Jumps & poles", "Footing & maintenance", "Mirrors", "Lunging gear", "Cones & markers"] },
@@ -112,8 +111,9 @@ function CategorySection({
       <Container size="wide">
         <div className={`grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start ${flip ? "lg:flex-row-reverse" : ""}`}>
           <div className={`lg:col-span-5 ${flip ? "lg:order-2" : ""}`}>
-            <div className="aspect-square bg-forest-deep flex items-center justify-center text-brass/70 sticky top-32">
-              <SaddlePattern variant={section.art} />
+            <div className="aspect-square sticky top-32 overflow-hidden">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src={section.photo} alt={section.eyebrow} className="w-full h-full object-cover" />
             </div>
           </div>
 
