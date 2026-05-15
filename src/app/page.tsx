@@ -1,57 +1,59 @@
 import Link from "next/link";
 import { Container } from "@/components/Container";
-import { HorseSilhouette, HorseshoePattern, HoofPattern } from "@/components/Illustrations";
+
+const HERO_PHOTO = "/images/hero-wide.jpg";
+const MARKETPLACE_PHOTO = "/images/horse-portrait.jpg";
+const SERVICES_PHOTO = "/images/rider-medal-bw.jpg";
+const CLOSER_PHOTO = "/images/rider-walking.jpg";
 
 export default function HomePage() {
   return (
     <>
-      <Hero />
-      <BrandPromise />
-      <MarketplacePreview />
-      <ServicesPreview />
-      <FoundersNote />
-      <WaitlistCTA />
+      <CinematicHero />
+      <Whisper />
+      <MarketplaceSplit />
+      <ServicesSplit />
+      <FoundersQuote />
+      <LaunchingSoon />
     </>
   );
 }
 
-function Hero() {
+function CinematicHero() {
   return (
-    <section className="relative bg-forest-deep text-cream-soft overflow-hidden">
-      <div className="absolute inset-0 opacity-[0.07]">
-        <HorseshoePattern />
-      </div>
-      <div className="absolute right-0 top-1/2 -translate-y-1/2 w-2/3 max-w-3xl opacity-[0.12] pointer-events-none hidden md:block">
-        <HorseSilhouette />
-      </div>
+    <section className="relative h-[92vh] min-h-[640px] flex items-center justify-center overflow-hidden bg-forest-deep">
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img
+        src={HERO_PHOTO}
+        alt="A rider with their horse"
+        className="absolute inset-0 w-full h-full object-cover opacity-65"
+      />
+      <div className="absolute inset-0 bg-gradient-to-b from-forest-deep/55 via-forest-deep/30 to-forest-deep/85" />
 
-      <Container size="wide" className="relative py-28 md:py-40">
-        <div className="max-w-3xl">
-          <p className="eyebrow text-brass-light fade-in-up" style={{ animationDelay: "0.1s" }}>
-            <span className="rule"></span>India&rsquo;s First Equestrian Marketplace
+      <Container size="wide" className="relative text-cream-soft text-center">
+        <div className="max-w-5xl mx-auto">
+          <p
+            className="eyebrow text-brass-light fade-in-up"
+            style={{ animationDelay: "0.1s" }}
+          >
+            India&rsquo;s First Equestrian Marketplace
           </p>
-          <h1 className="font-display text-5xl md:text-7xl lg:text-[5.5rem] leading-[1.05] mt-6 fade-in-up" style={{ animationDelay: "0.25s" }}>
-            For the rider.
-            <br />
-            For the horse.
-            <br />
-            <span className="text-brass-light italic">For the stable.</span>
+          <h1
+            className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-[4.75rem] mt-8 leading-[1.08] fade-in-up"
+            style={{ animationDelay: "0.25s" }}
+          >
+            <span className="block whitespace-nowrap">For the rider. For the horse.</span>
+            <span className="block italic text-brass-light">
+              For the stable.
+            </span>
           </h1>
-          <p className="mt-8 text-lg md:text-xl text-cream-soft/80 leading-relaxed max-w-2xl fade-in-up" style={{ animationDelay: "0.4s" }}>
-            A curated home for India&rsquo;s equestrian community. Premium gear,
-            trusted professionals, and considered curation — gathered in one
-            place for the first time.
-          </p>
-          <div className="mt-10 flex flex-col sm:flex-row gap-4 fade-in-up" style={{ animationDelay: "0.55s" }}>
-            <Link
-              href="/waitlist"
-              className="inline-flex items-center justify-center px-8 py-4 bg-brass text-forest-deep hover:bg-brass-light transition-colors text-sm tracking-[0.18em] uppercase"
-            >
-              Join the Waitlist
-            </Link>
+          <div
+            className="mt-12 fade-in-up"
+            style={{ animationDelay: "0.45s" }}
+          >
             <Link
               href="/story"
-              className="inline-flex items-center justify-center px-8 py-4 border border-cream-soft/30 text-cream-soft hover:border-cream-soft/60 transition-colors text-sm tracking-[0.18em] uppercase"
+              className="inline-flex items-center justify-center px-8 py-4 border border-cream-soft/40 text-cream-soft hover:border-cream-soft hover:bg-cream-soft/5 transition-colors text-sm tracking-[0.18em] uppercase"
             >
               Our Story
             </Link>
@@ -64,197 +66,118 @@ function Hero() {
   );
 }
 
-function BrandPromise() {
-  const pillars = [
-    {
-      eyebrow: "Curated",
-      title: "Hand-picked, not endless.",
-      body: "Every brand, every product, every professional vetted by riders who know. No noise. Only what we'd recommend to a friend.",
-    },
-    {
-      eyebrow: "Trusted",
-      title: "Verified, rated, reviewed.",
-      body: "Coaches with credentials. Vets with track records. Farriers your stable has worked with. Real reputations, transparent reviews.",
-    },
-    {
-      eyebrow: "Organised",
-      title: "One home for it all.",
-      body: "India's equestrian world has lived in WhatsApp groups and word of mouth. We're bringing it into the light — without losing its soul.",
-    },
-  ];
+function Whisper() {
+  return (
+    <section className="bg-cream-soft py-32 md:py-48">
+      <Container size="narrow" className="text-center">
+        <p className="eyebrow text-brass-deep">
+          What is Indusequine
+        </p>
+        <h2 className="font-display text-4xl md:text-5xl lg:text-6xl mt-10 text-forest leading-[1.15]">
+          A curated platform for India&rsquo;s equestrian community.
+        </h2>
+        <p className="mt-10 text-charcoal leading-relaxed text-lg max-w-2xl mx-auto">
+          India&rsquo;s rich equestrian culture, finally with the home it
+          deserves. Products for the rider, the horse, and the stable. A
+          directory of verified coaches, vets, and farriers. Built with the
+          community, for the community.
+        </p>
+      </Container>
+    </section>
+  );
+}
 
+function MarketplaceSplit() {
   return (
     <section className="bg-cream-soft py-24 md:py-32">
-      <Container>
-        <p className="eyebrow text-brass-deep">
-          <span className="rule"></span>The Indusequine Promise
-        </p>
-        <h2 className="font-display text-4xl md:text-5xl mt-4 max-w-2xl text-forest leading-tight">
-          A market this discerning deserves a home this considered.
-        </h2>
-
-        <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-8">
-          {pillars.map((p) => (
-            <div key={p.eyebrow} className="md:border-l md:border-forest/15 md:pl-8 first:md:border-l-0 first:md:pl-0">
-              <p className="eyebrow text-brass-deep">{p.eyebrow}</p>
-              <h3 className="font-display text-2xl md:text-3xl mt-3 text-forest leading-snug">
-                {p.title}
-              </h3>
-              <p className="mt-4 text-charcoal leading-relaxed">{p.body}</p>
-            </div>
-          ))}
+      <Container size="wide">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-12 md:gap-16 items-center">
+          <div className="md:col-span-7">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src={MARKETPLACE_PHOTO}
+              alt="A portrait of a horse"
+              className="w-full aspect-[4/5] object-cover"
+            />
+          </div>
+          <div className="md:col-span-5">
+            <p className="eyebrow text-brass-deep text-center text-lg md:text-xl font-bold tracking-[0.32em]">
+              The Marketplace
+            </p>
+            <h2 className="font-display text-4xl md:text-5xl mt-6 text-forest-deep leading-[1.1]">
+              Every product, for every kind of ride.
+            </h2>
+            <p className="mt-8 text-charcoal leading-relaxed text-lg">
+              The brands you&rsquo;ve struggled to find in India — and the ones
+              you&rsquo;ve only heard of from friends abroad. All under one
+              well-tended roof.
+            </p>
+            <Link
+              href="/marketplace"
+              className="mt-10 inline-flex items-center gap-3 eyebrow text-forest hover:text-oxblood hover:gap-4 transition-all"
+            >
+              Explore the marketplace <span aria-hidden>→</span>
+            </Link>
+          </div>
         </div>
       </Container>
     </section>
   );
 }
 
-function MarketplacePreview() {
-  const categories = [
-    {
-      eyebrow: "For Riders",
-      title: "What you wear in the saddle.",
-      items: ["Helmets & headwear", "Boots & half chaps", "Breeches & jodhpurs", "Show jackets & shirts", "Gloves & accessories", "Body protectors"],
-      photo: "https://images.unsplash.com/photo-1550785330-003a9afa3bd9?w=800&fit=crop&q=80",
-      href: "/marketplace#riders",
-    },
-    {
-      eyebrow: "For Horses",
-      title: "What your horse needs to thrive.",
-      items: ["Saddles & saddlery", "Bridles & bits", "Rugs & blankets", "Feed & supplements", "Grooming & care", "Health essentials"],
-      photo: "https://images.unsplash.com/photo-1544467251-2184f386011f?w=800&fit=crop&q=80",
-      href: "/marketplace#horses",
-    },
-    {
-      eyebrow: "For Stables",
-      title: "What it takes to run one well.",
-      items: ["Stable equipment", "Arena & footing", "Fencing & paddocks", "Yard supplies", "Hay & bedding", "Safety & first aid"],
-      photo: "https://images.unsplash.com/photo-1576692192914-9abed71b3ef9?w=800&fit=crop&q=80",
-      href: "/marketplace#stables",
-    },
-  ];
-
+function ServicesSplit() {
   return (
     <section className="bg-cream py-24 md:py-32">
       <Container size="wide">
-        <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-16">
-          <div>
-            <p className="eyebrow text-brass-deep">
-              <span className="rule"></span>The Marketplace
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-12 md:gap-16 items-center">
+          <div className="md:col-span-5 md:order-1 order-2">
+            <p className="eyebrow text-brass-deep text-center text-lg md:text-xl font-bold tracking-[0.32em]">
+              The Services
             </p>
-            <h2 className="font-display text-4xl md:text-5xl mt-4 max-w-2xl text-forest leading-tight">
-              Every product, for every kind of ride.
-            </h2>
-          </div>
-          <Link href="/marketplace" className="eyebrow text-forest hover:text-oxblood whitespace-nowrap">
-            Explore the marketplace →
-          </Link>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-forest/15">
-          {categories.map((c) => (
-            <Link
-              key={c.eyebrow}
-              href={c.href}
-              className="group bg-cream hover:bg-cream-warm transition-colors p-8 md:p-10 flex flex-col"
-            >
-              <div className="aspect-[4/3] mb-8 overflow-hidden">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src={c.photo} alt={c.eyebrow} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
-              </div>
-              <p className="eyebrow text-brass-deep">{c.eyebrow}</p>
-              <h3 className="font-display text-2xl md:text-3xl mt-3 text-forest leading-snug">
-                {c.title}
-              </h3>
-              <ul className="mt-5 space-y-1.5 text-sm text-charcoal flex-1">
-                {c.items.map((i) => (
-                  <li key={i} className="flex items-center gap-2">
-                    <span className="w-1 h-1 bg-brass rounded-full"></span>
-                    {i}
-                  </li>
-                ))}
-              </ul>
-              <span className="mt-6 eyebrow text-forest group-hover:text-oxblood transition-colors">
-                Preview →
-              </span>
-            </Link>
-          ))}
-        </div>
-      </Container>
-    </section>
-  );
-}
-
-function ServicesPreview() {
-  const services = [
-    {
-      eyebrow: "Coaches",
-      title: "Find the right instructor.",
-      body: "From first lessons to competitive show jumping. Discover certified coaches across India, with disciplines, fees, and reviews up front.",
-    },
-    {
-      eyebrow: "Vets",
-      title: "Equine care, when it matters.",
-      body: "A directory of qualified equine vets — for routine wellness, lameness work, dentistry, and emergencies. Verified and accessible.",
-    },
-    {
-      eyebrow: "Farriers",
-      title: "Shoeing your horse can trust.",
-      body: "From corrective work to barefoot trims. Connect with farriers who travel to your stable and stand behind their work.",
-    },
-  ];
-
-  return (
-    <section className="bg-forest text-cream-soft py-24 md:py-32 relative overflow-hidden">
-      <div className="absolute inset-0 opacity-[0.05]">
-        <HoofPattern />
-      </div>
-      <Container className="relative">
-        <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-16">
-          <div>
-            <p className="eyebrow text-brass-light">
-              <span className="rule"></span>The Services
-            </p>
-            <h2 className="font-display text-4xl md:text-5xl mt-4 max-w-2xl leading-tight">
+            <h2 className="font-display text-4xl md:text-5xl mt-6 text-forest-deep leading-[1.1]">
               The professionals you trust, brought into the light.
             </h2>
+            <p className="mt-8 text-charcoal leading-relaxed text-lg">
+              Coaches, vets, and farriers across India — verified credentials,
+              transparent fees, honest reviews. A network you can actually find.
+            </p>
+            <Link
+              href="/services"
+              className="mt-10 inline-flex items-center gap-3 eyebrow text-forest hover:text-oxblood hover:gap-4 transition-all"
+            >
+              Browse the directory <span aria-hidden>→</span>
+            </Link>
           </div>
-          <Link href="/services" className="eyebrow text-brass-light hover:text-cream-soft whitespace-nowrap">
-            Browse the directory →
-          </Link>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
-          {services.map((s) => (
-            <div key={s.eyebrow} className="border-t border-cream-soft/20 pt-6">
-              <p className="eyebrow text-brass-light">{s.eyebrow}</p>
-              <h3 className="font-display text-2xl md:text-3xl mt-3 leading-snug">
-                {s.title}
-              </h3>
-              <p className="mt-4 text-cream-soft/75 leading-relaxed">{s.body}</p>
-            </div>
-          ))}
+          <div className="md:col-span-7 md:order-2 order-1">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src={SERVICES_PHOTO}
+              alt="A rider with her horse, a medal at her chest"
+              className="w-full aspect-[4/5] object-cover"
+            />
+          </div>
         </div>
       </Container>
     </section>
   );
 }
 
-function FoundersNote() {
+function FoundersQuote() {
   return (
-    <section className="bg-cream-soft py-24 md:py-32">
-      <Container size="narrow">
-        <p className="eyebrow text-brass-deep text-center">
-          A Note From The Founders
-        </p>
-        <blockquote className="mt-8 font-display text-3xl md:text-4xl lg:text-5xl text-forest text-center leading-tight italic">
+    <section className="bg-cream-soft py-32 md:py-48 border-t border-b border-forest/10">
+      <Container size="narrow" className="text-center">
+        <p className="eyebrow text-brass-deep">A Note From The Founders</p>
+        <blockquote className="mt-14 font-display text-2xl md:text-3xl lg:text-4xl text-forest leading-[1.35] italic">
           &ldquo;India has one of the world&rsquo;s oldest equestrian
           traditions — and one of its most fragmented modern markets. We grew
           up between the two. Indusequine is our attempt to bridge them.&rdquo;
         </blockquote>
-        <div className="mt-10 text-center">
-          <Link href="/story" className="eyebrow text-forest hover:text-oxblood">
-            Read our story →
+        <div className="mt-14">
+          <Link
+            href="/story"
+            className="inline-flex items-center gap-3 eyebrow text-forest hover:text-oxblood hover:gap-4 transition-all"
+          >
+            Read our story <span aria-hidden>→</span>
           </Link>
         </div>
       </Container>
@@ -262,26 +185,38 @@ function FoundersNote() {
   );
 }
 
-function WaitlistCTA() {
+function LaunchingSoon() {
   return (
-    <section className="bg-oxblood text-cream-soft">
-      <Container className="py-20 md:py-24 text-center">
-        <p className="eyebrow text-brass-light">
-          <span className="rule"></span>Launching Soon
-        </p>
-        <h2 className="font-display text-4xl md:text-5xl lg:text-6xl mt-6 leading-tight">
-          Be the first in the saddle.
-        </h2>
-        <p className="mt-6 text-cream-soft/80 max-w-xl mx-auto leading-relaxed">
-          Join the waitlist for early access, founder updates, and a hand-picked
-          welcome when we open the gates.
-        </p>
-        <Link
-          href="/waitlist"
-          className="mt-10 inline-flex items-center justify-center px-10 py-4 bg-cream-soft text-oxblood hover:bg-cream transition-colors text-sm tracking-[0.18em] uppercase"
-        >
-          Join the Waitlist
-        </Link>
+    <section className="relative h-[90vh] min-h-[640px] overflow-hidden bg-forest-deep">
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img
+        src={CLOSER_PHOTO}
+        alt="A rider walking with their horse"
+        className="absolute inset-0 w-full h-full object-cover opacity-55"
+      />
+      <div className="absolute inset-0 bg-gradient-to-t from-forest-deep via-forest-deep/40 to-forest-deep/60" />
+
+      <Container size="narrow" className="relative h-full flex items-center justify-center text-cream-soft text-center">
+        <div>
+          <p className="eyebrow text-brass-light">
+            Launching Soon
+          </p>
+          <h2 className="font-display text-5xl md:text-7xl lg:text-8xl mt-8 leading-[1.02]">
+            Be the first
+            <br />
+            <span className="italic text-brass-light">in the saddle.</span>
+          </h2>
+          <p className="mt-10 text-cream-soft/85 max-w-lg mx-auto leading-relaxed">
+            Join the waitlist for early access, founder updates, and a hand-picked
+            welcome when we open the gates.
+          </p>
+          <Link
+            href="/waitlist"
+            className="mt-12 inline-flex items-center justify-center px-12 py-4 bg-cream-soft text-forest-deep hover:bg-cream transition-colors text-sm tracking-[0.18em] uppercase"
+          >
+            Join the Waitlist
+          </Link>
+        </div>
       </Container>
     </section>
   );
