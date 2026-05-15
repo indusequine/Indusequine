@@ -1,7 +1,7 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import { Container } from "@/components/Container";
-import { HorseSilhouette } from "@/components/Illustrations";
+import { LogoMark } from "@/components/Logo";
 
 export const metadata: Metadata = {
   title: "Our Story",
@@ -26,8 +26,8 @@ export default function StoryPage() {
 function PageHero() {
   return (
     <section className="bg-forest-deep text-cream-soft py-24 md:py-32 relative overflow-hidden border-b border-brass/20">
-      <div className="absolute right-0 top-1/2 -translate-y-1/2 w-2/3 max-w-2xl opacity-[0.10] pointer-events-none hidden md:block">
-        <HorseSilhouette />
+      <div className="absolute right-8 top-1/2 -translate-y-1/2 opacity-[0.10] pointer-events-none hidden md:block text-brass-light">
+        <LogoMark size={460} />
       </div>
       <Container className="relative">
         <p className="eyebrow text-brass-light">
