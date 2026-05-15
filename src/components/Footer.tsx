@@ -14,7 +14,7 @@ export function Footer() {
               riders, horses, stables, and the professionals who serve them.
             </p>
             <p className="mt-6 eyebrow text-brass-light">
-              <span className="rule"></span>Launching Soon
+              Launching Soon
             </p>
           </div>
 

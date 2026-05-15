@@ -85,7 +85,7 @@ export function WaitlistForm() {
     return (
       <div className="border border-forest/20 bg-cream p-10 md:p-14 text-center">
         <p className="eyebrow text-brass-deep">
-          <span className="rule"></span>You&rsquo;re On The List
+          You&rsquo;re On The List
         </p>
         <h3 className="font-display text-3xl md:text-4xl mt-4 text-forest">
           Thank you.

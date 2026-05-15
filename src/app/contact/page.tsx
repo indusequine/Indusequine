@@ -14,7 +14,7 @@ export default function ContactPage() {
       <section className="bg-forest text-cream-soft py-20 md:py-28 border-b border-brass/20">
         <Container size="narrow" className="text-center">
           <p className="eyebrow text-brass-light">
-            <span className="rule"></span>Partner With Us
+            Partner With Us
           </p>
           <h1 className="font-display text-5xl md:text-6xl lg:text-7xl mt-6 leading-[1.05]">
             Let&rsquo;s talk.
@@ -32,7 +32,7 @@ export default function ContactPage() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
             <div className="lg:col-span-5">
               <p className="eyebrow text-brass-deep">
-                <span className="rule"></span>Direct lines
+                Direct lines
               </p>
               <h2 className="font-display text-3xl md:text-4xl mt-4 text-forest leading-tight">
                 Three ways to reach us.

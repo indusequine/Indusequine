@@ -92,7 +92,7 @@ function PageHero() {
       </div>
       <Container className="relative">
         <p className="eyebrow text-brass-light">
-          <span className="rule"></span>The Services Directory
+          The Services Directory
         </p>
         <h1 className="font-display text-5xl md:text-7xl mt-6 leading-[1.05] max-w-4xl">
           The professionals you trust, brought into the light.
@@ -177,7 +177,7 @@ function ProviderCTA() {
     <section className="bg-oxblood text-cream-soft py-24 md:py-28">
       <Container size="narrow" className="text-center">
         <p className="eyebrow text-brass-light">
-          <span className="rule"></span>For Coaches, Vets & Farriers
+          For Coaches, Vets & Farriers
         </p>
         <h2 className="font-display text-4xl md:text-5xl mt-4 leading-tight">
           Be listed where India&rsquo;s riders are already looking.

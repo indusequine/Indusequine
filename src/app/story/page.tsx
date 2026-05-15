@@ -31,7 +31,7 @@ function PageHero() {
       </div>
       <Container className="relative">
         <p className="eyebrow text-brass-light">
-          <span className="rule"></span>Our Story
+          Our Story
         </p>
         <h1 className="font-display text-5xl md:text-7xl mt-6 leading-[1.05] max-w-4xl italic">
           One of the world&rsquo;s oldest equestrian traditions.
@@ -51,7 +51,7 @@ function Problem() {
     <section className="py-24 md:py-32 bg-cream-soft">
       <Container size="narrow">
         <p className="eyebrow text-brass-deep">
-          <span className="rule"></span>The Problem
+          The Problem
         </p>
         <h2 className="font-display text-4xl md:text-5xl mt-4 text-forest leading-tight">
           A market that moves through WhatsApp.
@@ -89,7 +89,7 @@ function Mission() {
     <section className="py-24 md:py-32 bg-forest text-cream-soft">
       <Container size="narrow">
         <p className="eyebrow text-brass-light">
-          <span className="rule"></span>Our Mission
+          Our Mission
         </p>
         <h2 className="font-display text-4xl md:text-5xl mt-4 leading-tight">
           To organise the unorganised — without losing what makes it good.
@@ -140,7 +140,7 @@ function Why() {
     <section className="py-24 md:py-32 bg-cream">
       <Container>
         <p className="eyebrow text-brass-deep">
-          <span className="rule"></span>The Wedge
+          The Wedge
         </p>
         <h2 className="font-display text-4xl md:text-5xl mt-4 text-forest leading-tight max-w-3xl">
           The right idea, in the right country, at the right time.
@@ -163,7 +163,7 @@ function Promise() {
     <section className="py-24 md:py-32 bg-cream-soft">
       <Container size="narrow">
         <p className="eyebrow text-brass-deep">
-          <span className="rule"></span>Our Promise
+          Our Promise
         </p>
         <h2 className="font-display text-4xl md:text-5xl mt-4 text-forest leading-tight">
           To the rider, to the brand, to the professional.

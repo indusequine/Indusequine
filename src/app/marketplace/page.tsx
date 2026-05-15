@@ -70,7 +70,7 @@ function PageHero() {
     <section className="bg-forest-deep text-cream-soft py-24 md:py-32 border-b border-brass/20">
       <Container>
         <p className="eyebrow text-brass-light">
-          <span className="rule"></span>The Marketplace
+          The Marketplace
         </p>
         <h1 className="font-display text-5xl md:text-7xl mt-6 leading-[1.05] max-w-4xl">
           Every product, for every kind of ride.
@@ -155,7 +155,7 @@ function BrandsCTA() {
     <section className="bg-forest text-cream-soft py-24 md:py-28">
       <Container size="narrow" className="text-center">
         <p className="eyebrow text-brass-light">
-          <span className="rule"></span>For Brands & Importers
+          For Brands & Importers
         </p>
         <h2 className="font-display text-4xl md:text-5xl mt-4 leading-tight">
           Bring your brand to India&rsquo;s riders.

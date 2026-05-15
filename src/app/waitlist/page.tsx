@@ -14,7 +14,7 @@ export default function WaitlistPage() {
       <section className="bg-forest-deep text-cream-soft py-20 md:py-28 border-b border-brass/20">
         <Container size="narrow" className="text-center">
           <p className="eyebrow text-brass-light">
-            <span className="rule"></span>Launching Soon
+            Launching Soon
           </p>
           <h1 className="font-display text-5xl md:text-6xl lg:text-7xl mt-6 leading-[1.05]">
             Be the first in the saddle.
@@ -35,7 +35,7 @@ export default function WaitlistPage() {
       <section className="py-20 md:py-28 bg-cream">
         <Container size="narrow">
           <p className="eyebrow text-brass-deep text-center">
-            <span className="rule"></span>What Happens Next
+            What Happens Next
           </p>
           <h2 className="font-display text-3xl md:text-4xl mt-4 text-forest text-center leading-tight">
             A few small things, well done.
