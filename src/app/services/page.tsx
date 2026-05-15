@@ -35,7 +35,7 @@ const services = [
     eyebrow: "Equine Vets",
     title: "Care your horse can count on.",
     intro:
-      "Equine medicine is a specialism — and a small one in India. We're mapping every qualified equine vet in the country, so when something goes wrong (or right — pre-purchase exam, vaccination, dentistry), you know exactly who to call.",
+      "Equine medicine is a specialism — and a small one in India. We're mapping every qualified equine vet in the country, so whether it's a routine vaccination, a pre-purchase exam, or an emergency at midnight, you know exactly who to call.",
     bullets: [
       "Routine care: vaccinations, deworming, dentistry, nutrition",
       "Performance work: lameness, gait analysis, joint injections, pre-purchase exams",
@@ -53,7 +53,7 @@ const services = [
   {
     id: "farriers",
     eyebrow: "Farriers",
-    title: "Shoeing your horse — and you — can trust.",
+    title: "Shoeing you — and your horse — can trust.",
     intro:
       "Good farriery keeps a horse sound. Poor farriery breaks one. The farrier community in India is tight, talented, and largely invisible outside the stables where each works. We're putting their work — and your stable's experience of it — into the open.",
     bullets: [

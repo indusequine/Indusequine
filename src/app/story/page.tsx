@@ -6,7 +6,7 @@ import { HorseSilhouette } from "@/components/Illustrations";
 export const metadata: Metadata = {
   title: "Our Story",
   description:
-    "Why we're building Indusequine — India's first dedicated equestrian marketplace. Organizing one of the world's oldest equestrian traditions into one trusted modern home.",
+    "Why we're building Indusequine — India's first dedicated equestrian marketplace. Organising one of the world's oldest equestrian traditions into one trusted modern home.",
 };
 
 export default function StoryPage() {
@@ -66,17 +66,17 @@ function Problem() {
           </p>
           <p>
             And yet, in 2026, buying a well-fitting saddle in India still
-            often means a flight to Europe, a customs bill, and a friend with
-            a sample case. Finding a vet who specialises in lameness means
-            asking three stable owners, who ask three more. Hiring a coach
-            for your child means relying on whoever your school happens to
-            employ.
+            often means a flight to Europe, a customs bill, and a fitter
+            willing to travel. Finding a vet who specialises in lameness
+            means asking three stable owners, who ask three more. Hiring a
+            coach for your child means relying on whoever your school
+            happens to employ.
           </p>
           <p>
             The market is real. The expertise is real. The demand is
             growing. But it lives in WhatsApp groups, stable noticeboards,
             and the personal address books of a few well-connected riders.
-            It is the textbook definition of an unorganized market.
+            It is the textbook definition of an unorganised market.
           </p>
         </div>
       </Container>
@@ -92,7 +92,7 @@ function Mission() {
           <span className="rule"></span>Our Mission
         </p>
         <h2 className="font-display text-4xl md:text-5xl mt-4 leading-tight">
-          To organize the unorganized — without losing what makes it good.
+          To organise the unorganised — without losing what makes it good.
         </h2>
         <div className="mt-8 space-y-6 text-cream-soft/85 leading-relaxed text-lg">
           <p>
@@ -105,8 +105,8 @@ function Mission() {
             Two halves, working together. A <em className="text-brass-light not-italic font-medium">marketplace</em>{" "}
             of considered, curated products for riders, horses, and
             stables. A <em className="text-brass-light not-italic font-medium">services directory</em> of verified
-            coaches, vets, and farriers — the people who keep the rest of it
-            standing.
+            coaches, vets, and farriers — the people who keep the whole
+            thing standing.
           </p>
           <p>
             What we won&rsquo;t do is reduce a craft community to a
@@ -124,11 +124,11 @@ function Why() {
   const pillars = [
     {
       title: "Why now",
-      body: "A new generation is entering the sport — through schools, polo, and the leisure equestrian boom. They expect to discover, evaluate, and book online. The infrastructure simply isn't there yet.",
+      body: "A new generation is entering the sport — through schools, polo, and the leisure riding boom. They expect to discover, evaluate, and book online. The infrastructure simply isn't there yet.",
     },
     {
       title: "Why India",
-      body: "The category is unwon. There is no dominant horizontal player. The early mover with the right standards — vetted brands, verified professionals, fair fees — defines the category for the next decade.",
+      body: "No one has built this yet. There is no trusted home for the category — no name a rider, a stable, or a brand already turns to. The early mover with the right standards — vetted brands, verified professionals, fair fees — sets the bar for the next decade.",
     },
     {
       title: "Why us",
@@ -203,10 +203,10 @@ function FoundersNote() {
         <p className="eyebrow text-brass-light text-center">A Note From The Founders</p>
         <blockquote className="mt-8 font-display text-2xl md:text-3xl leading-snug italic text-cream-soft">
           <p>
-            &ldquo;Every Indian rider has the same conversation, on loop. Where
-            did you get your saddle. Who does your shoeing. Who&rsquo;s your
-            coach. Where do you find a decent vet in the city. The answer is
-            always &lsquo;let me ask someone&rsquo;.&rdquo;
+            &ldquo;Every Indian rider has the same conversation, on loop.
+            Where did you get your saddle? Who does your shoeing? Who&rsquo;s
+            your coach? Where do you find a decent vet in the city? The
+            answer is always &lsquo;let me ask someone&rsquo;.&rdquo;
           </p>
           <p className="mt-6">
             &ldquo;Indusequine is the version of that conversation that

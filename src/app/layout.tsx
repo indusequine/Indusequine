@@ -41,7 +41,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Indusequine — India's First Equestrian Marketplace",
     description:
-      "A curated home for riders, horses, stables, and the professionals who serve them. Organizing India's equestrian community for the first time.",
+      "A curated home for riders, horses, stables, and the professionals who serve them. Organising India's equestrian community for the first time.",
     type: "website",
     locale: "en_IN",
     siteName: "Indusequine",

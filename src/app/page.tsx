@@ -39,7 +39,7 @@ function Hero() {
           </h1>
           <p className="mt-8 text-lg md:text-xl text-cream-soft/80 leading-relaxed max-w-2xl fade-in-up" style={{ animationDelay: "0.4s" }}>
             A curated home for India&rsquo;s equestrian community. Premium gear,
-            trusted professionals, and considered service — gathered in one
+            trusted professionals, and considered curation — gathered in one
             place for the first time.
           </p>
           <div className="mt-10 flex flex-col sm:flex-row gap-4 fade-in-up" style={{ animationDelay: "0.55s" }}>
@@ -77,9 +77,9 @@ function BrandPromise() {
       body: "Coaches with credentials. Vets with track records. Farriers your stable has worked with. Real reputations, transparent reviews.",
     },
     {
-      eyebrow: "Organized",
+      eyebrow: "Organised",
       title: "One home for it all.",
-      body: "India's equestrian world has lived in WhatsApp groups and word of mouth. We're bringing it into the light — without losing the soul.",
+      body: "India's equestrian world has lived in WhatsApp groups and word of mouth. We're bringing it into the light — without losing its soul.",
     },
   ];
 

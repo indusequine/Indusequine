@@ -49,7 +49,7 @@ export default function WaitlistPage() {
             <Step
               n="02"
               title="The occasional considered update"
-              body="When we add a brand worth meeting, list a professional worth knowing, or pass a milestone worth marking. Roughly once a month."
+              body="When we add a brand worth meeting, list a professional worth knowing, or reach a milestone worth marking. Roughly once a month."
             />
             <Step
               n="03"
