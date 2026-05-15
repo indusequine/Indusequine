@@ -1,6 +1,7 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import { Container } from "@/components/Container";
+import { LogoMarkPattern } from "@/components/Logo";
 
 export const metadata: Metadata = {
   title: "The Marketplace",
@@ -67,8 +68,11 @@ export default function MarketplacePage() {
 
 function PageHero() {
   return (
-    <section className="bg-forest-deep text-cream-soft py-24 md:py-32 border-b border-brass/20">
-      <Container>
+    <section className="bg-forest-deep text-cream-soft py-24 md:py-32 relative overflow-hidden border-b border-brass/20">
+      <div className="absolute inset-0 opacity-[0.07] pointer-events-none text-brass-light">
+        <LogoMarkPattern />
+      </div>
+      <Container className="relative">
         <p className="eyebrow text-brass-light">
           The Marketplace
         </p>
