@@ -12,10 +12,41 @@ export default function HomePage() {
       <CinematicHero />
       <Whisper />
       <MarketplaceSplit />
+      <SectionDivider />
       <ServicesSplit />
       <FoundersQuote />
       <LaunchingSoon />
     </>
+  );
+}
+
+function SectionDivider() {
+  return (
+    <div className="bg-cream py-12 md:py-16">
+      <div className="flex items-center justify-center gap-6">
+        <span className="h-px w-24 md:w-40 bg-brass/50"></span>
+        <svg
+          width="28"
+          height="28"
+          viewBox="0 0 32 32"
+          fill="none"
+          className="text-brass shrink-0"
+          aria-hidden="true"
+        >
+          <path
+            d="M8 6 Q 8 4 10 4 L 12 4 L 12 16 Q 12 22 16 22 Q 20 22 20 16 L 20 4 L 22 4 Q 24 4 24 6 L 24 18 Q 24 28 16 28 Q 8 28 8 18 Z"
+            stroke="currentColor"
+            strokeWidth="1.4"
+            fill="none"
+          />
+          <circle cx="10.5" cy="9" r="0.8" fill="currentColor" />
+          <circle cx="13" cy="6.5" r="0.8" fill="currentColor" />
+          <circle cx="19" cy="6.5" r="0.8" fill="currentColor" />
+          <circle cx="21.5" cy="9" r="0.8" fill="currentColor" />
+        </svg>
+        <span className="h-px w-24 md:w-40 bg-brass/50"></span>
+      </div>
+    </div>
   );
 }
 
@@ -89,8 +120,11 @@ function Whisper() {
 
 function MarketplaceSplit() {
   return (
-    <section className="bg-cream-soft py-24 md:py-32">
+    <section className="bg-cream py-24 md:py-32">
       <Container size="wide">
+        <p className="md:hidden eyebrow text-brass-deep text-center text-lg font-bold tracking-[0.32em] mb-10">
+          The Marketplace
+        </p>
         <div className="grid grid-cols-1 md:grid-cols-12 gap-12 md:gap-16 items-center">
           <div className="md:col-span-7">
             {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -101,7 +135,7 @@ function MarketplaceSplit() {
             />
           </div>
           <div className="md:col-span-5">
-            <p className="eyebrow text-brass-deep text-center text-lg md:text-xl font-bold tracking-[0.32em]">
+            <p className="hidden md:block eyebrow text-brass-deep text-center text-lg md:text-xl font-bold tracking-[0.32em]">
               The Marketplace
             </p>
             <h2 className="font-display text-4xl md:text-5xl mt-6 text-forest-deep leading-[1.1]">
@@ -129,9 +163,12 @@ function ServicesSplit() {
   return (
     <section className="bg-cream py-24 md:py-32">
       <Container size="wide">
+        <p className="md:hidden eyebrow text-brass-deep text-center text-lg font-bold tracking-[0.32em] mb-10">
+          The Services
+        </p>
         <div className="grid grid-cols-1 md:grid-cols-12 gap-12 md:gap-16 items-center">
           <div className="md:col-span-5 md:order-1 order-2">
-            <p className="eyebrow text-brass-deep text-center text-lg md:text-xl font-bold tracking-[0.32em]">
+            <p className="hidden md:block eyebrow text-brass-deep text-center text-lg md:text-xl font-bold tracking-[0.32em]">
               The Services
             </p>
             <h2 className="font-display text-4xl md:text-5xl mt-6 text-forest-deep leading-[1.1]">
