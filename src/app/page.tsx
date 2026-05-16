@@ -62,14 +62,14 @@ function CinematicHero() {
       <div className="absolute inset-0 bg-forest-deep/50" />
 
       <Container size="wide" className="relative text-cream-soft text-center">
-        <div className="max-w-4xl mx-auto">
-          <h1
-            className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-[1.1] italic text-brass-light fade-in-up"
-          >
-            Say hello to India&rsquo;s first equestrian marketplace.
+        <div className="max-w-6xl mx-auto">
+          <h1 className="font-display text-6xl sm:text-7xl md:text-8xl lg:text-9xl leading-[1.02] tracking-tight fade-in-up">
+            India&rsquo;s equestrian
+            <br />
+            <span className="italic text-brass-light">marketplace.</span>
           </h1>
           <p
-            className="mt-8 text-xl md:text-2xl text-cream-soft/70 tracking-wide fade-in-up"
+            className="mt-8 text-lg md:text-xl text-cream-soft/60 tracking-wide fade-in-up"
             style={{ animationDelay: "0.2s" }}
           >
             For the rider. For the horse. For the stable.
