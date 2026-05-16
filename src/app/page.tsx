@@ -57,42 +57,36 @@ function CinematicHero() {
       <img
         src={HERO_PHOTO}
         alt="A rider with their horse"
-        className="absolute inset-0 w-full h-full object-cover opacity-65"
+        className="absolute inset-0 w-full h-full object-cover opacity-40"
       />
-      <div className="absolute inset-0 bg-gradient-to-b from-forest-deep/55 via-forest-deep/30 to-forest-deep/85" />
+      <div className="absolute inset-0 bg-forest-deep/50" />
 
       <Container size="wide" className="relative text-cream-soft text-center">
-        <div className="max-w-5xl mx-auto">
-          <p
-            className="eyebrow text-brass-light fade-in-up"
-            style={{ animationDelay: "0.1s" }}
-          >
-            India&rsquo;s First Equestrian Marketplace
-          </p>
-          <h1
-            className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-[4.75rem] mt-8 leading-[1.08] fade-in-up"
-            style={{ animationDelay: "0.25s" }}
-          >
-            <span className="block whitespace-nowrap">For the rider. For the horse.</span>
-            <span className="block italic text-brass-light">
-              For the stable.
-            </span>
+        <div className="max-w-6xl mx-auto">
+          <h1 className="font-display text-6xl sm:text-7xl md:text-8xl lg:text-9xl leading-[1.02] tracking-tight fade-in-up">
+            India&rsquo;s equestrian
+            <br />
+            <span className="italic text-brass-light">marketplace.</span>
           </h1>
+          <p
+            className="mt-8 text-lg md:text-xl text-cream-soft/60 tracking-wide fade-in-up"
+            style={{ animationDelay: "0.2s" }}
+          >
+            For the rider. For the horse. For the stable.
+          </p>
           <div
             className="mt-12 fade-in-up"
-            style={{ animationDelay: "0.45s" }}
+            style={{ animationDelay: "0.35s" }}
           >
             <Link
               href="/story"
-              className="inline-flex items-center justify-center px-8 py-4 border border-cream-soft/40 text-cream-soft hover:border-cream-soft hover:bg-cream-soft/5 transition-colors text-sm tracking-[0.18em] uppercase"
+              className="inline-flex items-center justify-center px-8 py-4 bg-cream-soft text-forest-deep hover:bg-cream transition-colors text-sm tracking-[0.18em] uppercase"
             >
               Our Story
             </Link>
           </div>
         </div>
       </Container>
-
-      <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-brass/40 to-transparent"></div>
     </section>
   );
 }
