@@ -86,7 +86,7 @@ export default function ServicesPage() {
 
 function PageHero() {
   return (
-    <section className="bg-forest text-cream-soft py-24 md:py-32 relative overflow-hidden border-b border-brass/20">
+    <section className="bg-forest-deep text-cream-soft py-24 md:py-32 relative overflow-hidden border-b border-brass/20">
       <div className="absolute inset-0 opacity-[0.07] pointer-events-none text-brass-light">
         <LogoMarkPattern />
       </div>
