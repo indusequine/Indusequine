@@ -90,6 +90,47 @@ NEXT_PUBLIC_SHEETS_WEBHOOK_URL=https://script.google.com/macros/s/YOUR_DEPLOYMEN
 
 For local dev, restart `npm run dev` to pick up the var. For production, the URL gets compiled into the JS bundle the next time you run `npm run build`.
 
+## Product catalog & enquiry form (`catalog` branch)
+
+The `catalog` branch adds a browse-only product catalog under `/marketplace` — real categories, placeholder listings (clearly tagged "Sample Listing" until suppliers deliver real photography and copy), and an "Enquire about this product" form on each product page (`/marketplace/product/[slug]`). There's still no checkout — enquiries go through the same Apps Script webhook as the waitlist and contact forms, just with a new `form` value and two extra fields.
+
+This section only matters once you're ready to merge this branch and deploy it — it doesn't change anything about the live site until then.
+
+### Sheet update
+
+Add two columns at the **end** of the existing `Submissions` header (don't reorder the existing ones — older rows don't have these columns and reordering would misalign them):
+
+```
+timestamp	form	name	email	role	city	phone	organisation	kind	message	productId	productName
+```
+
+### Apps Script update
+
+In the same `Code.gs` from Step 2 above, add two lines to the `sheet.appendRow([...])` array, right after `data.message`:
+
+```javascript
+sheet.appendRow([
+  data.timestamp || new Date().toISOString(),
+  data.form || '',
+  data.name || '',
+  data.email || '',
+  data.role || '',
+  data.city || '',
+  data.phone || '',
+  data.organisation || '',
+  data.kind || '',
+  data.message || '',
+  data.productId || '',      // new
+  data.productName || '',    // new
+]);
+```
+
+No other `doPost` logic changes — `"product-enquiry"` simply becomes a third value alongside `"waitlist"`/`"contact"` in the existing `form` column. Redeploy the same way as before: **Deploy → Manage deployments → edit → New version → Deploy**.
+
+### Product data
+
+Products and categories live in `src/data/products.ts` — a typed array, not a CMS. To add a real product, add an entry to the `products` array (and omit `isPlaceholder` once it's real supplier data, not a sample). To retire the placeholders, remove the `isPlaceholder: true` entries once real listings replace them category by category.
+
 ## Building the production site
 
 ```powershell
@@ -157,20 +198,27 @@ src/
 │   ├── page.tsx             Home
 │   ├── globals.css          Brand tokens (Tailwind @theme) + base styles
 │   ├── marketplace/page.tsx
+│   ├── marketplace/product/[slug]/page.tsx   Product detail (catalog branch)
 │   ├── services/page.tsx
 │   ├── story/page.tsx
 │   ├── waitlist/page.tsx
 │   ├── contact/page.tsx
 │   ├── sitemap.ts           Generates /sitemap.xml
 │   └── robots.ts            Generates /robots.txt
-└── components/
-    ├── Header.tsx
-    ├── Footer.tsx
-    ├── Logo.tsx             SVG mark + wordmark
-    ├── Container.tsx
-    ├── Illustrations.tsx    Inline SVG art for category cards & hero
-    ├── WaitlistForm.tsx     Client-side fetch to Apps Script
-    └── ContactForm.tsx
+├── components/
+│   ├── Header.tsx
+│   ├── Footer.tsx
+│   ├── Logo.tsx             SVG mark + wordmark
+│   ├── Container.tsx
+│   ├── Illustrations.tsx    Inline SVG art for category cards & hero
+│   ├── WaitlistForm.tsx     Client-side fetch to Apps Script
+│   ├── ContactForm.tsx
+│   ├── ProductCard.tsx      Catalog branch
+│   ├── ProductGrid.tsx      Catalog branch
+│   ├── ProductImagePlaceholder.tsx   Catalog branch — brand-consistent "Sample Listing" tile
+│   └── EnquiryForm.tsx      Catalog branch — client-side fetch to Apps Script
+└── data/
+    └── products.ts          Catalog branch — typed product & category data
 next.config.ts               output: 'export' (static site mode)
 ```
 

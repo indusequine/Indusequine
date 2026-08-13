@@ -21,9 +21,11 @@ export function Footer() {
           <div className="md:col-span-2">
             <p className="eyebrow text-cream-soft/50 mb-4">Marketplace</p>
             <ul className="space-y-3 text-sm">
-              <li><Link href="/marketplace#riders" className="hover:text-brass-light">For Riders</Link></li>
-              <li><Link href="/marketplace#horses" className="hover:text-brass-light">For Horses</Link></li>
-              <li><Link href="/marketplace#stables" className="hover:text-brass-light">For Stables</Link></li>
+              <li><Link href="/marketplace#saddles-tack" className="hover:text-brass-light">Saddles & Tack</Link></li>
+              <li><Link href="/marketplace#bridles-halters" className="hover:text-brass-light">Bridles & Halters</Link></li>
+              <li><Link href="/marketplace#rugs-blankets" className="hover:text-brass-light">Rugs & Blankets</Link></li>
+              <li><Link href="/marketplace#rider-apparel" className="hover:text-brass-light">Rider Apparel</Link></li>
+              <li><Link href="/marketplace#grooming-accessories" className="hover:text-brass-light">Grooming</Link></li>
             </ul>
           </div>
 
