@@ -41,3 +41,8 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# raw inventory source files (real pricing data — the generated
+# src/data/catalogue.json is what's committed, never the spreadsheet)
+*.xlsx
+*.xls

@@ -1,8 +1,11 @@
 import Link from "next/link";
 import { Logo } from "./Logo";
 import { Container } from "./Container";
+import { getTopCategories } from "@/data/products";
 
 export function Footer() {
+  const topCategories = getTopCategories(4);
+
   return (
     <footer className="bg-forest-deep text-cream-soft/80 mt-24">
       <Container size="wide" className="py-16">
@@ -21,11 +24,14 @@ export function Footer() {
           <div className="md:col-span-2">
             <p className="eyebrow text-cream-soft/50 mb-4">Marketplace</p>
             <ul className="space-y-3 text-sm">
-              <li><Link href="/marketplace#saddles-tack" className="hover:text-brass-light">Saddles & Tack</Link></li>
-              <li><Link href="/marketplace#bridles-halters" className="hover:text-brass-light">Bridles & Halters</Link></li>
-              <li><Link href="/marketplace#rugs-blankets" className="hover:text-brass-light">Rugs & Blankets</Link></li>
-              <li><Link href="/marketplace#rider-apparel" className="hover:text-brass-light">Rider Apparel</Link></li>
-              <li><Link href="/marketplace#grooming-accessories" className="hover:text-brass-light">Grooming</Link></li>
+              <li><Link href="/marketplace" className="hover:text-brass-light">All Categories</Link></li>
+              {topCategories.map((c) => (
+                <li key={c.slug}>
+                  <Link href={`/marketplace/category/${c.slug}`} className="hover:text-brass-light">
+                    {c.name}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
 

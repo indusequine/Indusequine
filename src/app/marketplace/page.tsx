@@ -2,8 +2,8 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import { Container } from "@/components/Container";
 import { LogoMarkPattern } from "@/components/Logo";
-import { ProductGrid } from "@/components/ProductGrid";
-import { categories, getProductsByCategory, type Category } from "@/data/products";
+import { CategoryTile } from "@/components/CategoryTile";
+import { categories, getProductsByCategory } from "@/data/products";
 
 export const metadata: Metadata = {
   title: "The Marketplace",
@@ -12,12 +12,28 @@ export const metadata: Metadata = {
 };
 
 export default function MarketplacePage() {
+  const sortedCategories = [...categories].sort(
+    (a, b) => getProductsByCategory(b.slug).length - getProductsByCategory(a.slug).length,
+  );
+
   return (
     <>
       <PageHero />
-      {categories.map((category, i) => (
-        <CategorySection key={category.slug} category={category} flip={i % 2 === 1} />
-      ))}
+
+      <section className="bg-cream-soft py-16 md:py-20">
+        <Container size="wide">
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
+            {sortedCategories.map((category) => (
+              <CategoryTile
+                key={category.slug}
+                category={category}
+                count={getProductsByCategory(category.slug).length}
+              />
+            ))}
+          </div>
+        </Container>
+      </section>
+
       <BrandsCTA />
     </>
   );
@@ -30,9 +46,7 @@ function PageHero() {
         <LogoMarkPattern />
       </div>
       <Container className="relative">
-        <p className="eyebrow text-brass-light">
-          The Marketplace
-        </p>
+        <p className="eyebrow text-brass-light">The Marketplace</p>
         <h1 className="font-display text-5xl md:text-7xl mt-6 leading-[1.05] max-w-4xl">
           Every product, for every kind of ride.
         </h1>
@@ -42,47 +56,8 @@ function PageHero() {
           well-tended roof.
         </p>
         <p className="mt-4 text-sm text-cream-soft/50 max-w-2xl">
-          The categories and listings below are illustrative — full supplier
-          catalogues and photography are on their way.
+          Real listings, real prices — product photography is on its way.
         </p>
-        <div className="mt-12 flex flex-wrap gap-3">
-          {categories.map((c) => (
-            <Link
-              key={c.slug}
-              href={`#${c.slug}`}
-              className="px-5 py-2.5 border border-cream-soft/30 hover:border-brass-light hover:text-brass-light transition-colors text-sm tracking-wide"
-            >
-              {c.eyebrow}
-            </Link>
-          ))}
-        </div>
-      </Container>
-    </section>
-  );
-}
-
-function CategorySection({ category, flip }: { category: Category; flip: boolean }) {
-  const products = getProductsByCategory(category.slug);
-
-  return (
-    <section
-      id={category.slug}
-      className={`py-24 md:py-32 scroll-mt-24 ${flip ? "bg-cream" : "bg-cream-soft"}`}
-    >
-      <Container size="wide">
-        <div className="max-w-2xl">
-          <p className="eyebrow text-brass-deep">{category.eyebrow}</p>
-          <h2 className="font-display text-4xl md:text-5xl mt-4 text-forest leading-tight">
-            {category.title}
-          </h2>
-          <p className="mt-6 text-charcoal leading-relaxed text-lg">
-            {category.description}
-          </p>
-        </div>
-
-        <div className="mt-14">
-          <ProductGrid products={products} />
-        </div>
       </Container>
     </section>
   );
@@ -92,9 +67,7 @@ function BrandsCTA() {
   return (
     <section className="bg-forest text-cream-soft py-24 md:py-28">
       <Container size="narrow" className="text-center">
-        <p className="eyebrow text-brass-light">
-          For Brands & Importers
-        </p>
+        <p className="eyebrow text-brass-light">For Brands & Importers</p>
         <h2 className="font-display text-4xl md:text-5xl mt-4 leading-tight">
           Bring your brand to India&rsquo;s riders.
         </h2>

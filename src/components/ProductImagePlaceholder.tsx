@@ -1,6 +1,7 @@
 import { LogoMarkPattern } from "@/components/Logo";
 import type { Product } from "@/data/products";
 import { getCategory } from "@/data/products";
+import { categoryTileClass } from "@/lib/categoryTileColor";
 
 type ProductImagePlaceholderProps = {
   product: Product;
@@ -9,13 +10,13 @@ type ProductImagePlaceholderProps = {
 
 export function ProductImagePlaceholder({ product, size = "card" }: ProductImagePlaceholderProps) {
   const category = getCategory(product.category);
-  const label = category?.eyebrow ?? "";
+  const label = category?.name ?? "";
 
   return (
     <div
       role="img"
-      aria-label={`${product.name} — sample listing, photography coming soon`}
-      className={`relative aspect-square overflow-hidden flex items-center justify-center ${category?.tileClassName ?? "bg-forest-deep text-cream-soft"}`}
+      aria-label={`${product.name} — photography coming soon`}
+      className={`relative aspect-square overflow-hidden flex items-center justify-center ${categoryTileClass(product.category)}`}
     >
       <div className="absolute inset-0 opacity-[0.08] pointer-events-none">
         <LogoMarkPattern />
@@ -24,7 +25,7 @@ export function ProductImagePlaceholder({ product, size = "card" }: ProductImage
       <span
         className={`absolute top-4 left-4 eyebrow bg-cream-soft/95 text-forest-deep px-3 py-1.5 ${size === "detail" ? "text-xs" : "text-[10px]"}`}
       >
-        Sample Listing
+        Photography Coming Soon
       </span>
 
       <p
