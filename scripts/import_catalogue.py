@@ -57,7 +57,73 @@ def is_variant_token(token: str) -> bool:
     return False
 
 
+# Matches a bare size token — used only as an anchor to find where the
+# variant cluster (size/color) begins, not to identify every attribute.
+_SIZE_TOKEN = re.compile(
+    r"^(xxs|xs|s|m|l|xl|xxl|xxxl|xl2|xl3|ss|ls|ms|st|lt|mt|xls|"
+    r"cob|full|pony|x-full|xfull|shetland|yearling|extra-full|warmblood|osfa|os|"
+    r'[0-9]{1,3}(\.[0-9])?"?)$',
+    re.I,
+)
+
+
+def _find_variant_start(name: str) -> tuple[str, str] | None:
+    """Locate where a product's variant cluster (size/color) begins.
+
+    Free-text fashion colors ("Night Blue Tone on Tone") can't be matched
+    word-by-word, so instead this anchors on a *size* token — a much
+    smaller, reliable vocabulary — and only trusts that anchor when it's
+    adjacent to a "/", since sizes in this data always border a slash
+    (".../32/Amarante", "...Black/L") while unrelated hyphenated codes
+    (CWD's "BL-17-2C" tree-width codes) never do. Once anchored, it walks
+    backward to absorb a color that precedes the size (freely across "/",
+    at most one "-") without absorbing real product-name words.
+    """
+    parts = re.split(r"([\-/])", name.strip())
+    offsets = []
+    pos = 0
+    for p in parts:
+        offsets.append(pos)
+        pos += len(p)
+
+    candidates = []
+    for i in range(1, len(parts), 2):
+        delim = parts[i]
+        following = parts[i + 1].strip() if i + 1 < len(parts) else ""
+        if not _SIZE_TOKEN.match(following):
+            continue
+        after_delim = parts[i + 2] if i + 2 < len(parts) else None
+        if delim == "/" or after_delim == "/":
+            candidates.append(i)
+    if not candidates:
+        return None
+    split_idx = min(candidates)
+
+    hyphen_budget = 1
+    while split_idx - 2 >= 0:
+        prev_delim = parts[split_idx - 2]
+        if prev_delim == "/":
+            split_idx -= 2
+        elif prev_delim == "-" and hyphen_budget > 0:
+            hyphen_budget -= 1
+            split_idx -= 2
+        else:
+            break
+
+    cut = offsets[split_idx]
+    return name[:cut].strip(" -/"), name[cut:].strip(" -/")
+
+
 def base_name(name: str) -> str:
+    anchored = _find_variant_start(name)
+    if anchored:
+        base, _tail = anchored
+        if base:
+            return base
+
+    # Fallback for names with no slash-adjacent size anchor at all (e.g.
+    # "Bell Boots (with Fleece Lining)- Full") — strip recognized trailing
+    # tokens one at a time.
     remaining = name.strip()
     changed = True
     while changed:
