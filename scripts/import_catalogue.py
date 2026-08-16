@@ -28,6 +28,8 @@ SIZE_WORDS = {
     "ss", "ls", "ms", "st", "lt", "mt", "xls",
     "cob", "full", "pony", "x-full", "xfull", "shetland", "yearling",
     "extra-full", "warmblood", "osfa", "os",
+    "small", "medium", "large", "x-small", "x-large", "xx-large",
+    "extra small", "extra large",
 }
 COLOR_WORDS = {
     "black", "blue", "brown", "white", "red", "navy", "green", "grey", "gray", "orange",
@@ -61,6 +63,7 @@ def is_variant_token(token: str) -> bool:
 # variant cluster (size/color) begins, not to identify every attribute.
 _SIZE_TOKEN = re.compile(
     r"^(xxs|xs|s|m|l|xl|xxl|xxxl|xl2|xl3|ss|ls|ms|st|lt|mt|xls|"
+    r"small|medium|large|xlarge|xsmall|xxlarge|"
     r"cob|full|pony|x-full|xfull|shetland|yearling|extra-full|warmblood|osfa|os|"
     r"fr[0-9]{2,3}|in[0-9]{2,3}|"  # European clothing size ("FR36") / inseam-inches ("IN26")
     r'[0-9]{1,3}(\.[0-9])?"?)$',

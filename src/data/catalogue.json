@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-16T17:09:27.818346+05:30",
+  "generatedAt": "2026-08-16T17:17:27.522147+05:30",
   "sourceFile": "Tack-Shop_Inventory-List_13AUG26.xlsx",
   "categories": [
     {
@@ -12685,28 +12685,20 @@
       ]
     },
     {
-      "slug": "freejump-airbag-child-large",
+      "slug": "freejump-airbag-child",
       "category": "protective-vests",
-      "name": "Freejump Airbag Child- Large",
+      "name": "Freejump Airbag Child",
       "brand": "Freejump",
       "variants": [
         {
           "sku": "FJS-AIRC-LAR",
-          "size": null,
+          "size": "Large",
           "color": null,
           "price": 75000
-        }
-      ]
-    },
-    {
-      "slug": "freejump-airbag-child-small",
-      "category": "protective-vests",
-      "name": "Freejump Airbag Child-Small",
-      "brand": "Freejump",
-      "variants": [
+        },
         {
           "sku": "FJS-AIRC-SMA",
-          "size": null,
+          "size": "Small",
           "color": null,
           "price": 79999
         }
@@ -14261,210 +14253,98 @@
       ]
     },
     {
-      "slug": "freejump-voronoi-temple-protection-black-gloss-large",
+      "slug": "freejump-voronoi-temple-protection",
       "category": "helmet-accessories",
-      "name": "Freejump Voronoi Temple Protection-Black Gloss/Large",
+      "name": "Freejump Voronoi Temple Protection",
       "brand": "Freejump",
       "variants": [
         {
           "sku": "FJS-VNI-TLE-PRN-BLA-L",
-          "size": null,
+          "size": "Large",
           "color": null,
           "price": 18000
-        }
-      ]
-    },
-    {
-      "slug": "freejump-voronoi-temple-protection-black-gloss-medium",
-      "category": "helmet-accessories",
-      "name": "Freejump Voronoi Temple Protection-Black Gloss/Medium",
-      "brand": "Freejump",
-      "variants": [
+        },
         {
           "sku": "FJS-VNI-TLE-PRN-BLA-M",
-          "size": null,
+          "size": "Medium",
           "color": null,
           "price": 18000
-        }
-      ]
-    },
-    {
-      "slug": "freejump-voronoi-temple-protection-black-gloss-small",
-      "category": "helmet-accessories",
-      "name": "Freejump Voronoi Temple Protection-Black Gloss/Small",
-      "brand": "Freejump",
-      "variants": [
+        },
         {
           "sku": "FJS-VNI-TLE-PRN-BLA-S",
-          "size": null,
+          "size": "Small",
           "color": null,
           "price": 18000
-        }
-      ]
-    },
-    {
-      "slug": "freejump-voronoi-temple-protection-black-matte-large",
-      "category": "helmet-accessories",
-      "name": "Freejump Voronoi Temple Protection-Black Matte/Large",
-      "brand": "Freejump",
-      "variants": [
+        },
         {
           "sku": "FJS-VNI-TLE-PRN-BLA-L-1",
-          "size": null,
+          "size": "Large",
           "color": null,
           "price": 18000
-        }
-      ]
-    },
-    {
-      "slug": "freejump-voronoi-temple-protection-black-matte-medium",
-      "category": "helmet-accessories",
-      "name": "Freejump Voronoi Temple Protection-Black Matte/Medium",
-      "brand": "Freejump",
-      "variants": [
+        },
         {
           "sku": "FJS-VNI-TLE-PRN-BLA-M-1",
-          "size": null,
+          "size": "Medium",
           "color": null,
           "price": 18000
-        }
-      ]
-    },
-    {
-      "slug": "freejump-voronoi-temple-protection-black-matte-small",
-      "category": "helmet-accessories",
-      "name": "Freejump Voronoi Temple Protection-Black Matte/Small",
-      "brand": "Freejump",
-      "variants": [
+        },
         {
           "sku": "FJS-VNI-TLE-PRN-BLA-S-1",
-          "size": null,
+          "size": "Small",
           "color": null,
           "price": 18000
-        }
-      ]
-    },
-    {
-      "slug": "freejump-voronoi-temple-protection-bronze-large",
-      "category": "helmet-accessories",
-      "name": "Freejump Voronoi Temple Protection-Bronze/Large",
-      "brand": "Freejump",
-      "variants": [
+        },
         {
           "sku": "FJS-VNI-TLE-PRN-BRO-L",
-          "size": null,
-          "color": null,
+          "size": "Large",
+          "color": "Bronze",
           "price": 18000
-        }
-      ]
-    },
-    {
-      "slug": "freejump-voronoi-temple-protection-bronze-medium",
-      "category": "helmet-accessories",
-      "name": "Freejump Voronoi Temple Protection-Bronze/Medium",
-      "brand": "Freejump",
-      "variants": [
+        },
         {
           "sku": "FJS-VNI-TLE-PRN-BRO-M",
-          "size": null,
-          "color": null,
+          "size": "Medium",
+          "color": "Bronze",
           "price": 18000
-        }
-      ]
-    },
-    {
-      "slug": "freejump-voronoi-temple-protection-bronze-small",
-      "category": "helmet-accessories",
-      "name": "Freejump Voronoi Temple Protection-Bronze/Small",
-      "brand": "Freejump",
-      "variants": [
+        },
         {
           "sku": "FJS-VNI-TLE-PRN-BRO-S",
-          "size": null,
-          "color": null,
+          "size": "Small",
+          "color": "Bronze",
           "price": 18000
-        }
-      ]
-    },
-    {
-      "slug": "freejump-voronoi-temple-protection-rose-gold-large",
-      "category": "helmet-accessories",
-      "name": "Freejump Voronoi Temple Protection-Rose Gold/Large",
-      "brand": "Freejump",
-      "variants": [
+        },
         {
           "sku": "FJS-VNI-TLE-PRN-ROS-L",
-          "size": null,
+          "size": "Large",
           "color": null,
           "price": 18000
-        }
-      ]
-    },
-    {
-      "slug": "freejump-voronoi-temple-protection-rose-gold-medium",
-      "category": "helmet-accessories",
-      "name": "Freejump Voronoi Temple Protection-Rose Gold/Medium",
-      "brand": "Freejump",
-      "variants": [
+        },
         {
           "sku": "FJS-VNI-TLE-PRN-ROS-M",
-          "size": null,
+          "size": "Medium",
           "color": null,
           "price": 18000
-        }
-      ]
-    },
-    {
-      "slug": "freejump-voronoi-temple-protection-rose-gold-small",
-      "category": "helmet-accessories",
-      "name": "Freejump Voronoi Temple Protection-Rose Gold/Small",
-      "brand": "Freejump",
-      "variants": [
+        },
         {
           "sku": "FJS-VNI-TLE-PRN-ROS-S",
-          "size": null,
+          "size": "Small",
           "color": null,
           "price": 18000
-        }
-      ]
-    },
-    {
-      "slug": "freejump-voronoi-temple-protection-sky-blue-large",
-      "category": "helmet-accessories",
-      "name": "Freejump Voronoi Temple Protection-Sky Blue/Large",
-      "brand": "Freejump",
-      "variants": [
+        },
         {
           "sku": "FJS-VNI-TLE-PRN-SKY-L",
-          "size": null,
+          "size": "Large",
           "color": null,
           "price": 18000
-        }
-      ]
-    },
-    {
-      "slug": "freejump-voronoi-temple-protection-sky-blue-medium",
-      "category": "helmet-accessories",
-      "name": "Freejump Voronoi Temple Protection-Sky Blue/Medium",
-      "brand": "Freejump",
-      "variants": [
+        },
         {
           "sku": "FJS-VNI-TLE-PRN-SKY-M",
-          "size": null,
+          "size": "Medium",
           "color": null,
           "price": 18000
-        }
-      ]
-    },
-    {
-      "slug": "freejump-voronoi-temple-protection-sky-blue-small",
-      "category": "helmet-accessories",
-      "name": "Freejump Voronoi Temple Protection-Sky Blue/Small",
-      "brand": "Freejump",
-      "variants": [
+        },
         {
           "sku": "FJS-VNI-TLE-PRN-SKY-S",
-          "size": null,
+          "size": "Small",
           "color": null,
           "price": 18000
         }
@@ -15767,14 +15647,14 @@
       ]
     },
     {
-      "slug": "helite-vest-adult-large",
+      "slug": "helite-vest",
       "category": "protective-vests",
-      "name": "Helite Vest - Adult / Large",
+      "name": "Helite Vest",
       "brand": "Helite",
       "variants": [
         {
           "sku": "HEL-VST-AD-L-ORGE",
-          "size": null,
+          "size": "Large",
           "color": "Orange",
           "price": null
         }
@@ -16461,99 +16341,51 @@
       ]
     },
     {
-      "slug": "horse-boots-soft-cloth-tendon-black-large",
+      "slug": "horse-boots-soft-cloth-tendon",
       "category": "tendon-boots",
-      "name": "Horse Boots - Soft Cloth Tendon-Black/Large",
+      "name": "Horse Boots - Soft Cloth Tendon",
       "brand": null,
       "variants": [
         {
           "sku": "HRSE-BTS-SFT-TDN-BLA-L",
-          "size": null,
-          "color": null,
+          "size": "Large",
+          "color": "Black",
           "price": 7000
-        }
-      ]
-    },
-    {
-      "slug": "horse-boots-soft-cloth-tendon-black-medium",
-      "category": "tendon-boots",
-      "name": "Horse Boots - Soft Cloth Tendon-Black/Medium",
-      "brand": null,
-      "variants": [
+        },
         {
           "sku": "HRSE-BTS-SFT-TDN-BLA-M",
-          "size": null,
-          "color": null,
+          "size": "Medium",
+          "color": "Black",
           "price": 7000
-        }
-      ]
-    },
-    {
-      "slug": "horse-boots-soft-cloth-tendon-black-small",
-      "category": "tendon-boots",
-      "name": "Horse Boots - Soft Cloth Tendon-Black/Small",
-      "brand": null,
-      "variants": [
+        },
         {
           "sku": "HRSE-BTS-SFT-TDN-BLA-S",
-          "size": null,
-          "color": null,
+          "size": "Small",
+          "color": "Black",
           "price": 7000
-        }
-      ]
-    },
-    {
-      "slug": "horse-boots-soft-cloth-tendon-blue-large",
-      "category": "tendon-boots",
-      "name": "Horse Boots - Soft Cloth Tendon-Blue/Large",
-      "brand": null,
-      "variants": [
+        },
         {
           "sku": "HRSE-BTS-SFT-TDN-BLU-L",
-          "size": null,
-          "color": null,
+          "size": "Large",
+          "color": "Blue",
           "price": 7000
-        }
-      ]
-    },
-    {
-      "slug": "horse-boots-soft-cloth-tendon-purple-large",
-      "category": "tendon-boots",
-      "name": "Horse Boots - Soft Cloth Tendon-Purple/Large",
-      "brand": null,
-      "variants": [
+        },
         {
           "sku": "HRSE-BTS-SFT-TDN-PUR-L",
-          "size": null,
-          "color": null,
+          "size": "Large",
+          "color": "Purple",
           "price": 7000
-        }
-      ]
-    },
-    {
-      "slug": "horse-boots-soft-cloth-tendon-purple-medium",
-      "category": "tendon-boots",
-      "name": "Horse Boots - Soft Cloth Tendon-Purple/Medium",
-      "brand": null,
-      "variants": [
+        },
         {
           "sku": "HRSE-BTS-SFT-TDN-PUR-M",
-          "size": null,
-          "color": null,
+          "size": "Medium",
+          "color": "Purple",
           "price": 7000
-        }
-      ]
-    },
-    {
-      "slug": "horse-boots-soft-cloth-tendon-purple-small",
-      "category": "tendon-boots",
-      "name": "Horse Boots - Soft Cloth Tendon-Purple/Small",
-      "brand": null,
-      "variants": [
+        },
         {
           "sku": "HRSE-BTS-SFT-TDN-PUR-S",
-          "size": null,
-          "color": null,
+          "size": "Small",
+          "color": "Purple",
           "price": 7000
         }
       ]
@@ -17427,154 +17259,98 @@
       ]
     },
     {
-      "slug": "kask-helmet-dogma-pure-shine-black-small",
+      "slug": "kask-helmet-dogma-pure-shine",
       "category": "helmet",
-      "name": "KASK Helmet - Dogma Pure Shine - Black/Small",
+      "name": "KASK Helmet - Dogma Pure Shine",
       "brand": "Kask",
       "variants": [
         {
           "sku": "KAS-DGM-SHI-BLA-SMA",
-          "size": null,
-          "color": null,
+          "size": "Small",
+          "color": "Black",
           "price": 69749
         }
       ]
     },
     {
-      "slug": "kask-helmet-kooki-matt-navy-medium",
+      "slug": "kask-helmet-kooki-matt",
       "category": "helmet",
-      "name": "KASK Helmet - Kooki Matt- Navy/ Medium",
+      "name": "KASK Helmet - Kooki Matt",
       "brand": "Kask",
       "variants": [
         {
           "sku": "KAS-KOMA-NAV-MED",
-          "size": null,
-          "color": null,
+          "size": "Medium",
+          "color": "Navy",
           "price": 39999
-        }
-      ]
-    },
-    {
-      "slug": "kask-helmet-kooki-matt-navy-small",
-      "category": "helmet",
-      "name": "KASK Helmet - Kooki Matt- Navy/Small",
-      "brand": "Kask",
-      "variants": [
+        },
         {
           "sku": "KAS-KOMA-NAV-SMA",
-          "size": null,
-          "color": null,
+          "size": "Small",
+          "color": "Navy",
           "price": 39999
-        }
-      ]
-    },
-    {
-      "slug": "kask-helmet-kooki-matt-black-medium",
-      "category": "helmet",
-      "name": "KASK Helmet - Kooki Matt-Black/ Medium",
-      "brand": "Kask",
-      "variants": [
+        },
         {
           "sku": "KAS-KOMA-BLA-MED",
-          "size": null,
-          "color": null,
+          "size": "Medium",
+          "color": "Black",
           "price": 39999
-        }
-      ]
-    },
-    {
-      "slug": "kask-helmet-kooki-matt-black-small",
-      "category": "helmet",
-      "name": "KASK Helmet - Kooki Matt-Black/Small",
-      "brand": "Kask",
-      "variants": [
+        },
         {
           "sku": "KAS-KOMA-BLA-SMA",
-          "size": null,
-          "color": null,
+          "size": "Small",
+          "color": "Black",
           "price": 39999
         }
       ]
     },
     {
-      "slug": "kask-helmet-kooki-shine-navy-medium",
+      "slug": "kask-helmet-kooki-shine",
       "category": "helmet",
-      "name": "KASK Helmet - Kooki Shine- Navy/ Medium",
+      "name": "KASK Helmet - Kooki Shine",
       "brand": "Kask",
       "variants": [
         {
           "sku": "KAS-KOO-SHI-NAV-MED",
-          "size": null,
-          "color": null,
+          "size": "Medium",
+          "color": "Navy",
           "price": 39999
-        }
-      ]
-    },
-    {
-      "slug": "kask-helmet-kooki-shine-navy-small",
-      "category": "helmet",
-      "name": "KASK Helmet - Kooki Shine- Navy/Small",
-      "brand": "Kask",
-      "variants": [
+        },
         {
           "sku": "KAS-KOO-SHI-NAV-SMA",
-          "size": null,
-          "color": null,
+          "size": "Small",
+          "color": "Navy",
           "price": 39999
-        }
-      ]
-    },
-    {
-      "slug": "kask-helmet-kooki-shine-black-medium",
-      "category": "helmet",
-      "name": "KASK Helmet - Kooki Shine-Black/ Medium",
-      "brand": "Kask",
-      "variants": [
+        },
         {
           "sku": "KAS-KOO-SHI-BLA-MED",
-          "size": null,
-          "color": null,
+          "size": "Medium",
+          "color": "Black",
           "price": 39999
-        }
-      ]
-    },
-    {
-      "slug": "kask-helmet-kooki-shine-black-small",
-      "category": "helmet",
-      "name": "KASK Helmet - Kooki Shine-Black/Small",
-      "brand": "Kask",
-      "variants": [
+        },
         {
           "sku": "KAS-KOO-SHI-BLA-SMA",
-          "size": null,
-          "color": null,
+          "size": "Small",
+          "color": "Black",
           "price": 39999
         }
       ]
     },
     {
-      "slug": "kask-helmet-kooki-black-shadow-medium",
+      "slug": "kask-helmet-kooki-black-shadow",
       "category": "helmet",
-      "name": "KASK Helmet Kooki Black Shadow Medium",
+      "name": "KASK Helmet Kooki Black Shadow",
       "brand": "Kask",
       "variants": [
         {
           "sku": "KAS-KOO-BLS-M",
-          "size": null,
+          "size": "Medium",
           "color": null,
           "price": 39999
-        }
-      ]
-    },
-    {
-      "slug": "kask-helmet-kooki-black-shadow-small",
-      "category": "helmet",
-      "name": "KASK Helmet Kooki Black Shadow Small",
-      "brand": "Kask",
-      "variants": [
+        },
         {
           "sku": "KAS-KOO-BLS-S",
-          "size": null,
+          "size": "Small",
           "color": null,
           "price": 39999
         }
@@ -17601,40 +17377,32 @@
       ]
     },
     {
-      "slug": "kep-italia-cromo-textile-polish-front-large",
+      "slug": "kep-italia-cromo-textile-polish-front",
       "category": "helmet",
-      "name": "KEP Italia Cromo Textile Polish front-Large",
+      "name": "KEP Italia Cromo Textile Polish front",
       "brand": "Kep Italia",
       "variants": [
         {
           "sku": "KEP-CR-TEX-POF-BLA-L",
-          "size": null,
+          "size": "Large",
           "color": "Black",
           "price": 62999
         },
         {
           "sku": "KEP-CR-TEX-POF-BLU-L",
-          "size": null,
+          "size": "Large",
           "color": "Blue",
           "price": 62999
-        }
-      ]
-    },
-    {
-      "slug": "kep-italia-cromo-textile-polish-front-medium",
-      "category": "helmet",
-      "name": "KEP Italia Cromo Textile Polish front-Medium",
-      "brand": "Kep Italia",
-      "variants": [
+        },
         {
           "sku": "KEP-CR-TEX-POF-BLA-M",
-          "size": null,
+          "size": "Medium",
           "color": "Black",
           "price": 62999
         },
         {
           "sku": "KEP-CR-TEX-POF-BLU-M",
-          "size": null,
+          "size": "Medium",
           "color": "Blue",
           "price": 62999
         }
@@ -17655,57 +17423,33 @@
       ]
     },
     {
-      "slug": "kask-dogma-helmet-pure-shine-black-small",
+      "slug": "kask-dogma-helmet",
       "category": "helmet",
-      "name": "Kask Dogma Helmet  - Pure Shine/Black/Small",
+      "name": "Kask Dogma Helmet",
       "brand": "Kask",
       "variants": [
         {
           "sku": "KAS-DGM-SHI-BLA-SMA-1",
-          "size": null,
-          "color": null,
+          "size": "Small",
+          "color": "Black",
           "price": 69749
-        }
-      ]
-    },
-    {
-      "slug": "kask-dogma-helmet-chrome-anthracite-medium",
-      "category": "helmet",
-      "name": "Kask Dogma Helmet - Chrome/Anthracite/Medium",
-      "brand": "Kask",
-      "variants": [
+        },
         {
           "sku": "KAS-DOG-ANT-MED-1",
-          "size": null,
-          "color": null,
+          "size": "Medium",
+          "color": "Anthracite",
           "price": 69749
-        }
-      ]
-    },
-    {
-      "slug": "kask-dogma-helmet-chrome-anthracite-small",
-      "category": "helmet",
-      "name": "Kask Dogma Helmet - Chrome/Anthracite/Small",
-      "brand": "Kask",
-      "variants": [
+        },
         {
           "sku": "KAS-DOG-ANT-SMA-1",
-          "size": null,
-          "color": null,
+          "size": "Small",
+          "color": "Anthracite",
           "price": 69749
-        }
-      ]
-    },
-    {
-      "slug": "kask-dogma-helmet-chrome-black-small",
-      "category": "helmet",
-      "name": "Kask Dogma Helmet - Chrome/Black/Small",
-      "brand": "Kask",
-      "variants": [
+        },
         {
           "sku": "KAS-DOG-BLA-SMA-1",
-          "size": null,
-          "color": null,
+          "size": "Small",
+          "color": "Black",
           "price": 69749
         }
       ]
@@ -18085,113 +17829,65 @@
       ]
     },
     {
-      "slug": "kep-italia-cromo-2-0-polish-black-large",
+      "slug": "kep-italia-cromo-2-0-polish",
       "category": "helmet",
-      "name": "Kep Italia Cromo 2.0 Polish-Black/Large",
+      "name": "Kep Italia Cromo 2.0 Polish",
       "brand": "Kep Italia",
       "variants": [
         {
           "sku": "KEP-CR-2.0-PLSH-BLA-L",
-          "size": null,
-          "color": null,
+          "size": "Large",
+          "color": "Black",
           "price": 79999
-        }
-      ]
-    },
-    {
-      "slug": "kep-italia-cromo-2-0-polish-black-medium",
-      "category": "helmet",
-      "name": "Kep Italia Cromo 2.0 Polish-Black/Medium",
-      "brand": "Kep Italia",
-      "variants": [
+        },
         {
           "sku": "KEP-CR-2.0-PLSH-BLA-M",
-          "size": null,
-          "color": null,
+          "size": "Medium",
+          "color": "Black",
           "price": 79999
-        }
-      ]
-    },
-    {
-      "slug": "kep-italia-cromo-2-0-polish-blue-large",
-      "category": "helmet",
-      "name": "Kep Italia Cromo 2.0 Polish-Blue/Large",
-      "brand": "Kep Italia",
-      "variants": [
+        },
         {
           "sku": "KEP-CR-2.0-PLSH-BLU-L",
-          "size": null,
-          "color": null,
+          "size": "Large",
+          "color": "Blue",
           "price": 79999
-        }
-      ]
-    },
-    {
-      "slug": "kep-italia-cromo-2-0-polish-blue-medium",
-      "category": "helmet",
-      "name": "Kep Italia Cromo 2.0 Polish-Blue/Medium",
-      "brand": "Kep Italia",
-      "variants": [
+        },
         {
           "sku": "KEP-CR-2.0-PLSH-BLU-M",
-          "size": null,
-          "color": null,
+          "size": "Medium",
+          "color": "Blue",
           "price": 79999
         }
       ]
     },
     {
-      "slug": "kep-italia-cromo-2-0-shine-black-large",
+      "slug": "kep-italia-cromo-2-0-shine",
       "category": "helmet",
-      "name": "Kep Italia Cromo 2.0 Shine-Black/Large",
+      "name": "Kep Italia Cromo 2.0 Shine",
       "brand": "Kep Italia",
       "variants": [
         {
           "sku": "KEP-CR-2.0-SHNE-BLA-L",
-          "size": null,
-          "color": null,
+          "size": "Large",
+          "color": "Black",
           "price": 62999
-        }
-      ]
-    },
-    {
-      "slug": "kep-italia-cromo-2-0-shine-black-medium",
-      "category": "helmet",
-      "name": "Kep Italia Cromo 2.0 Shine-Black/Medium",
-      "brand": "Kep Italia",
-      "variants": [
+        },
         {
           "sku": "KEP-CR-2.0-SHNE-BLA-M",
-          "size": null,
-          "color": null,
+          "size": "Medium",
+          "color": "Black",
           "price": 62999
-        }
-      ]
-    },
-    {
-      "slug": "kep-italia-cromo-2-0-shine-blue-large",
-      "category": "helmet",
-      "name": "Kep Italia Cromo 2.0 Shine-Blue/Large",
-      "brand": "Kep Italia",
-      "variants": [
+        },
         {
           "sku": "KEP-CR-2.0-SHNE-BLU-L",
-          "size": null,
-          "color": null,
+          "size": "Large",
+          "color": "Blue",
           "price": 62999
-        }
-      ]
-    },
-    {
-      "slug": "kep-italia-cromo-2-0-shine-blue-medium",
-      "category": "helmet",
-      "name": "Kep Italia Cromo 2.0 Shine-Blue/Medium",
-      "brand": "Kep Italia",
-      "variants": [
+        },
         {
           "sku": "KEP-CR-2.0-SHNE-BLU-M",
-          "size": null,
-          "color": null,
+          "size": "Medium",
+          "color": "Blue",
           "price": 62999
         }
       ]
@@ -18349,160 +18045,128 @@
       ]
     },
     {
-      "slug": "kep-italia-cromo-matt-large",
+      "slug": "kep-italia-cromo-matt",
       "category": "helmet",
-      "name": "Kep Italia Cromo Matt-Large",
+      "name": "Kep Italia Cromo Matt",
       "brand": "Kep Italia",
       "variants": [
         {
           "sku": "KEP-CR-MATT-BLA-L",
-          "size": null,
+          "size": "Large",
           "color": "Black",
           "price": 34999
         },
         {
           "sku": "KEP-CR-MATT-BLU-L",
-          "size": null,
+          "size": "Large",
           "color": "Blue",
           "price": 34999
-        }
-      ]
-    },
-    {
-      "slug": "kep-italia-cromo-matt-medium",
-      "category": "helmet",
-      "name": "Kep Italia Cromo Matt-Medium",
-      "brand": "Kep Italia",
-      "variants": [
+        },
         {
           "sku": "KEP-CR-MATT-BLA-M",
-          "size": null,
+          "size": "Medium",
           "color": "Black",
           "price": 34999
         },
         {
           "sku": "KEP-CR-MATT-BLU-M",
-          "size": null,
+          "size": "Medium",
           "color": "Blue",
           "price": 34999
         }
       ]
     },
     {
-      "slug": "kep-italia-cromo-polish-large",
+      "slug": "kep-italia-cromo-polish",
       "category": "helmet",
-      "name": "Kep Italia Cromo Polish-Large",
+      "name": "Kep Italia Cromo Polish",
       "brand": "Kep Italia",
       "variants": [
         {
           "sku": "KEP-CR-PLSH-BLA-L",
-          "size": null,
+          "size": "Large",
           "color": "Black",
           "price": 42999
         },
         {
           "sku": "KEP-CR-PLSH-BLU-L",
-          "size": null,
+          "size": "Large",
           "color": "Blue",
           "price": 42999
-        }
-      ]
-    },
-    {
-      "slug": "kep-italia-cromo-polish-medium",
-      "category": "helmet",
-      "name": "Kep Italia Cromo Polish-Medium",
-      "brand": "Kep Italia",
-      "variants": [
+        },
         {
           "sku": "KEP-CR-PLSH-BLA-M",
-          "size": null,
+          "size": "Medium",
           "color": "Black",
           "price": 42999
         },
         {
           "sku": "KEP-CR-PLSH-BLU-M",
-          "size": null,
+          "size": "Medium",
           "color": "Blue",
           "price": 42999
         }
       ]
     },
     {
-      "slug": "kep-italia-cromo-shine-large",
+      "slug": "kep-italia-cromo-shine",
       "category": "helmet",
-      "name": "Kep Italia Cromo Shine-Large",
+      "name": "Kep Italia Cromo Shine",
       "brand": "Kep Italia",
       "variants": [
         {
           "sku": "KEP-CR-SHNE-BLA-L",
-          "size": null,
+          "size": "Large",
           "color": "Black",
           "price": 40499
         },
         {
           "sku": "KEP-CR-SHNE-BLU-L",
-          "size": null,
+          "size": "Large",
           "color": "Blue",
           "price": 40499
-        }
-      ]
-    },
-    {
-      "slug": "kep-italia-cromo-shine-medium",
-      "category": "helmet",
-      "name": "Kep Italia Cromo Shine-Medium",
-      "brand": "Kep Italia",
-      "variants": [
+        },
         {
           "sku": "KEP-CR-SHNE-BLA-M",
-          "size": null,
+          "size": "Medium",
           "color": "Black",
           "price": 40499
         },
         {
           "sku": "KEP-CR-SHNE-BLU-M",
-          "size": null,
+          "size": "Medium",
           "color": "Blue",
           "price": 40499
         }
       ]
     },
     {
-      "slug": "kep-italia-cromo-textile-large",
+      "slug": "kep-italia-cromo-textile",
       "category": "helmet",
-      "name": "Kep Italia Cromo Textile-Large",
+      "name": "Kep Italia Cromo Textile",
       "brand": "Kep Italia",
       "variants": [
         {
           "sku": "KEP-CR-TEX-BLA-L",
-          "size": null,
+          "size": "Large",
           "color": "Black",
           "price": 37999
         },
         {
           "sku": "KEP-CR-TEX-BLU-L",
-          "size": null,
+          "size": "Large",
           "color": "Blue",
           "price": 37999
-        }
-      ]
-    },
-    {
-      "slug": "kep-italia-cromo-textile-medium",
-      "category": "helmet",
-      "name": "Kep Italia Cromo Textile-Medium",
-      "brand": "Kep Italia",
-      "variants": [
+        },
         {
           "sku": "KEP-CR-TEX-BLA-M",
-          "size": null,
+          "size": "Medium",
           "color": "Black",
           "price": 37999
         },
         {
           "sku": "KEP-CR-TEX-BLU-M",
-          "size": null,
+          "size": "Medium",
           "color": "Blue",
           "price": 37999
         }
@@ -21207,14 +20871,14 @@
       ]
     },
     {
-      "slug": "samshield-xj-helmet-darkline-glossy-black-medium",
+      "slug": "samshield-xj-helmet-darkline-glossy-black",
       "category": "helmet",
-      "name": "SamShield XJ Helmet Darkline Glossy Black/Medium",
+      "name": "SamShield XJ Helmet Darkline Glossy Black",
       "brand": "Samshield",
       "variants": [
         {
           "sku": "SAM-HEL-XJG-DL-BL-M",
-          "size": null,
+          "size": "Medium",
           "color": null,
           "price": 85299
         }
@@ -23855,15 +23519,53 @@
       ]
     },
     {
-      "slug": "samshield-christophe-showshirt-half-sleeves-blue-large",
+      "slug": "samshield-christophe-showshirt",
       "category": "show-shirt",
-      "name": "Samshield Christophe Showshirt Half Sleeves-Blue/Large",
+      "name": "Samshield Christophe Showshirt",
+      "brand": "Samshield",
+      "variants": [
+        {
+          "sku": "SAM-CHRIS-SS-ANT-L",
+          "size": "Large",
+          "color": null,
+          "price": 13499
+        },
+        {
+          "sku": "SAM-CHRIS-SS-ANT-M",
+          "size": "Medium",
+          "color": null,
+          "price": 13499
+        },
+        {
+          "sku": "SAM-CHRIS-SS-ANT-S",
+          "size": "Small",
+          "color": null,
+          "price": 13499
+        },
+        {
+          "sku": "SAM-CHRIS-SS-BLA-L",
+          "size": "Large",
+          "color": null,
+          "price": 13499
+        },
+        {
+          "sku": "SAM-CHRIS-SS-BLA-M",
+          "size": "Medium",
+          "color": null,
+          "price": 13499
+        }
+      ]
+    },
+    {
+      "slug": "samshield-christophe-showshirt-half-sleeves",
+      "category": "show-shirt",
+      "name": "Samshield Christophe Showshirt Half Sleeves",
       "brand": "Samshield",
       "variants": [
         {
           "sku": "SAM-CHRIS-SS-HS-BLU-L",
-          "size": null,
-          "color": null,
+          "size": "Large",
+          "color": "Blue",
           "price": 13499
         }
       ]
@@ -23875,9 +23577,45 @@
       "brand": "Samshield",
       "variants": [
         {
+          "sku": "SAM-CHRTO-SS-LS-DAR-L",
+          "size": "Large",
+          "color": null,
+          "price": 14999
+        },
+        {
+          "sku": "SAM-CHRTO-SS-LS-DAR-M",
+          "size": "Medium",
+          "color": null,
+          "price": 14999
+        },
+        {
+          "sku": "SAM-CHRTO-SS-LS-DAR-S",
+          "size": "Small",
+          "color": null,
+          "price": 14999
+        },
+        {
           "sku": "SAM-CHRTO-SS-LS-DAR-X",
           "size": "XL",
           "color": null,
+          "price": 14999
+        },
+        {
+          "sku": "SAM-CHRTO-SS-LS-NAV-L",
+          "size": "Large",
+          "color": "Navy",
+          "price": 14999
+        },
+        {
+          "sku": "SAM-CHRTO-SS-LS-NAV-M",
+          "size": "Medium",
+          "color": "Navy",
+          "price": 14999
+        },
+        {
+          "sku": "SAM-CHRTO-SS-LS-NAV-S",
+          "size": "Small",
+          "color": "Navy",
           "price": 14999
         },
         {
@@ -23889,141 +23627,33 @@
       ]
     },
     {
-      "slug": "samshield-christophe-showshirt-long-sleeve-dark-shadow-large",
-      "category": "show-shirt",
-      "name": "Samshield Christophe Showshirt Long Sleeve-Dark Shadow/Large",
-      "brand": "Samshield",
-      "variants": [
-        {
-          "sku": "SAM-CHRTO-SS-LS-DAR-L",
-          "size": null,
-          "color": null,
-          "price": 14999
-        }
-      ]
-    },
-    {
-      "slug": "samshield-christophe-showshirt-long-sleeve-dark-shadow-medium",
-      "category": "show-shirt",
-      "name": "Samshield Christophe Showshirt Long Sleeve-Dark Shadow/Medium",
-      "brand": "Samshield",
-      "variants": [
-        {
-          "sku": "SAM-CHRTO-SS-LS-DAR-M",
-          "size": null,
-          "color": null,
-          "price": 14999
-        }
-      ]
-    },
-    {
-      "slug": "samshield-christophe-showshirt-long-sleeve-dark-shadow-small",
-      "category": "show-shirt",
-      "name": "Samshield Christophe Showshirt Long Sleeve-Dark Shadow/Small",
-      "brand": "Samshield",
-      "variants": [
-        {
-          "sku": "SAM-CHRTO-SS-LS-DAR-S",
-          "size": null,
-          "color": null,
-          "price": 14999
-        }
-      ]
-    },
-    {
       "slug": "samshield-christophe-showshirt-long-sleeve-navy",
       "category": "show-shirt",
       "name": "Samshield Christophe Showshirt Long Sleeve-Navy",
       "brand": "Samshield",
       "variants": [
         {
+          "sku": "SAM-CHRTO-SS-LS-NAV-L-1",
+          "size": "Large",
+          "color": "Black",
+          "price": 14999
+        },
+        {
+          "sku": "SAM-CHRTO-SS-LS-NAV-M-1",
+          "size": "Medium",
+          "color": "Black",
+          "price": 14999
+        },
+        {
+          "sku": "SAM-CHRTO-SS-LS-NAV-S-1",
+          "size": "Small",
+          "color": "Black",
+          "price": 14999
+        },
+        {
           "sku": "SAM-CHRTO-SS-LS-NAV-X-1",
           "size": "XL",
           "color": "Black",
-          "price": 14999
-        }
-      ]
-    },
-    {
-      "slug": "samshield-christophe-showshirt-long-sleeve-navy-black-large",
-      "category": "show-shirt",
-      "name": "Samshield Christophe Showshirt Long Sleeve-Navy-Black/Large",
-      "brand": "Samshield",
-      "variants": [
-        {
-          "sku": "SAM-CHRTO-SS-LS-NAV-L-1",
-          "size": null,
-          "color": null,
-          "price": 14999
-        }
-      ]
-    },
-    {
-      "slug": "samshield-christophe-showshirt-long-sleeve-navy-black-medium",
-      "category": "show-shirt",
-      "name": "Samshield Christophe Showshirt Long Sleeve-Navy-Black/Medium",
-      "brand": "Samshield",
-      "variants": [
-        {
-          "sku": "SAM-CHRTO-SS-LS-NAV-M-1",
-          "size": null,
-          "color": null,
-          "price": 14999
-        }
-      ]
-    },
-    {
-      "slug": "samshield-christophe-showshirt-long-sleeve-navy-black-small",
-      "category": "show-shirt",
-      "name": "Samshield Christophe Showshirt Long Sleeve-Navy-Black/Small",
-      "brand": "Samshield",
-      "variants": [
-        {
-          "sku": "SAM-CHRTO-SS-LS-NAV-S-1",
-          "size": null,
-          "color": null,
-          "price": 14999
-        }
-      ]
-    },
-    {
-      "slug": "samshield-christophe-showshirt-long-sleeve-navy-large",
-      "category": "show-shirt",
-      "name": "Samshield Christophe Showshirt Long Sleeve-Navy/Large",
-      "brand": "Samshield",
-      "variants": [
-        {
-          "sku": "SAM-CHRTO-SS-LS-NAV-L",
-          "size": null,
-          "color": null,
-          "price": 14999
-        }
-      ]
-    },
-    {
-      "slug": "samshield-christophe-showshirt-long-sleeve-navy-medium",
-      "category": "show-shirt",
-      "name": "Samshield Christophe Showshirt Long Sleeve-Navy/Medium",
-      "brand": "Samshield",
-      "variants": [
-        {
-          "sku": "SAM-CHRTO-SS-LS-NAV-M",
-          "size": null,
-          "color": null,
-          "price": 14999
-        }
-      ]
-    },
-    {
-      "slug": "samshield-christophe-showshirt-long-sleeve-navy-small",
-      "category": "show-shirt",
-      "name": "Samshield Christophe Showshirt Long Sleeve-Navy/Small",
-      "brand": "Samshield",
-      "variants": [
-        {
-          "sku": "SAM-CHRTO-SS-LS-NAV-S",
-          "size": null,
-          "color": null,
           "price": 14999
         }
       ]
@@ -24035,50 +23665,26 @@
       "brand": "Samshield",
       "variants": [
         {
-          "sku": "SAM-CHRTO-SS-LS-STO-X",
-          "size": "XL",
-          "color": null,
-          "price": 14999
-        }
-      ]
-    },
-    {
-      "slug": "samshield-christophe-showshirt-long-sleeve-stone-grey-dark-shadow-large",
-      "category": "show-shirt",
-      "name": "Samshield Christophe Showshirt Long Sleeve-Stone Grey-Dark Shadow/Large",
-      "brand": "Samshield",
-      "variants": [
-        {
           "sku": "SAM-CHRTO-SS-LS-STO-L",
-          "size": null,
+          "size": "Large",
           "color": null,
           "price": 14999
-        }
-      ]
-    },
-    {
-      "slug": "samshield-christophe-showshirt-long-sleeve-stone-grey-dark-shadow-medium",
-      "category": "show-shirt",
-      "name": "Samshield Christophe Showshirt Long Sleeve-Stone Grey-Dark Shadow/Medium",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-CHRTO-SS-LS-STO-M",
-          "size": null,
+          "size": "Medium",
           "color": null,
           "price": 14999
-        }
-      ]
-    },
-    {
-      "slug": "samshield-christophe-showshirt-long-sleeve-stone-grey-dark-shadow-small",
-      "category": "show-shirt",
-      "name": "Samshield Christophe Showshirt Long Sleeve-Stone Grey-Dark Shadow/Small",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-CHRTO-SS-LS-STO-S",
-          "size": null,
+          "size": "Small",
+          "color": null,
+          "price": 14999
+        },
+        {
+          "sku": "SAM-CHRTO-SS-LS-STO-X",
+          "size": "XL",
           "color": null,
           "price": 14999
         }
@@ -24091,122 +23697,28 @@
       "brand": "Samshield",
       "variants": [
         {
+          "sku": "SAM-CHRTO-SS-LS-WHI-L",
+          "size": "Large",
+          "color": null,
+          "price": 14999
+        },
+        {
+          "sku": "SAM-CHRTO-SS-LS-WHI-M",
+          "size": "Medium",
+          "color": null,
+          "price": 14999
+        },
+        {
+          "sku": "SAM-CHRTO-SS-LS-WHI-S",
+          "size": "Small",
+          "color": null,
+          "price": 14999
+        },
+        {
           "sku": "SAM-CHRTO-SS-LS-WHI-X",
           "size": "XL",
           "color": null,
           "price": 14999
-        }
-      ]
-    },
-    {
-      "slug": "samshield-christophe-showshirt-long-sleeve-white-stone-grey-large",
-      "category": "show-shirt",
-      "name": "Samshield Christophe Showshirt Long Sleeve-White-Stone Grey/Large",
-      "brand": "Samshield",
-      "variants": [
-        {
-          "sku": "SAM-CHRTO-SS-LS-WHI-L",
-          "size": null,
-          "color": null,
-          "price": 14999
-        }
-      ]
-    },
-    {
-      "slug": "samshield-christophe-showshirt-long-sleeve-white-stone-grey-medium",
-      "category": "show-shirt",
-      "name": "Samshield Christophe Showshirt Long Sleeve-White-Stone Grey/Medium",
-      "brand": "Samshield",
-      "variants": [
-        {
-          "sku": "SAM-CHRTO-SS-LS-WHI-M",
-          "size": null,
-          "color": null,
-          "price": 14999
-        }
-      ]
-    },
-    {
-      "slug": "samshield-christophe-showshirt-long-sleeve-white-stone-grey-small",
-      "category": "show-shirt",
-      "name": "Samshield Christophe Showshirt Long Sleeve-White-Stone Grey/Small",
-      "brand": "Samshield",
-      "variants": [
-        {
-          "sku": "SAM-CHRTO-SS-LS-WHI-S",
-          "size": null,
-          "color": null,
-          "price": 14999
-        }
-      ]
-    },
-    {
-      "slug": "samshield-christophe-showshirt-anthracite-black-large",
-      "category": "show-shirt",
-      "name": "Samshield Christophe Showshirt-Anthracite Black/Large",
-      "brand": "Samshield",
-      "variants": [
-        {
-          "sku": "SAM-CHRIS-SS-ANT-L",
-          "size": null,
-          "color": null,
-          "price": 13499
-        }
-      ]
-    },
-    {
-      "slug": "samshield-christophe-showshirt-anthracite-black-medium",
-      "category": "show-shirt",
-      "name": "Samshield Christophe Showshirt-Anthracite Black/Medium",
-      "brand": "Samshield",
-      "variants": [
-        {
-          "sku": "SAM-CHRIS-SS-ANT-M",
-          "size": null,
-          "color": null,
-          "price": 13499
-        }
-      ]
-    },
-    {
-      "slug": "samshield-christophe-showshirt-anthracite-black-small",
-      "category": "show-shirt",
-      "name": "Samshield Christophe Showshirt-Anthracite Black/Small",
-      "brand": "Samshield",
-      "variants": [
-        {
-          "sku": "SAM-CHRIS-SS-ANT-S",
-          "size": null,
-          "color": null,
-          "price": 13499
-        }
-      ]
-    },
-    {
-      "slug": "samshield-christophe-showshirt-black-dark-shadow-large",
-      "category": "show-shirt",
-      "name": "Samshield Christophe Showshirt-Black Dark Shadow/Large",
-      "brand": "Samshield",
-      "variants": [
-        {
-          "sku": "SAM-CHRIS-SS-BLA-L",
-          "size": null,
-          "color": null,
-          "price": 13499
-        }
-      ]
-    },
-    {
-      "slug": "samshield-christophe-showshirt-black-dark-shadow-medium",
-      "category": "show-shirt",
-      "name": "Samshield Christophe Showshirt-Black Dark Shadow/Medium",
-      "brand": "Samshield",
-      "variants": [
-        {
-          "sku": "SAM-CHRIS-SS-BLA-M",
-          "size": null,
-          "color": null,
-          "price": 13499
         }
       ]
     },
@@ -24257,217 +23769,105 @@
       ]
     },
     {
-      "slug": "samshield-dorian-t-shirt-black-large",
+      "slug": "samshield-dorian-t-shirt-t-shirt",
       "category": "t-shirt",
-      "name": "Samshield Dorian T-Shirt-Black/Large",
+      "name": "Samshield Dorian T-Shirt",
       "brand": "Samshield",
       "variants": [
         {
           "sku": "SAM-DOR-TSHRT-BLA-L",
-          "size": null,
-          "color": null,
+          "size": "Large",
+          "color": "Black",
           "price": 8499
-        }
-      ]
-    },
-    {
-      "slug": "samshield-dorian-t-shirt-black-medium",
-      "category": "t-shirt",
-      "name": "Samshield Dorian T-Shirt-Black/Medium",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-DOR-TSHRT-BLA-M",
-          "size": null,
-          "color": null,
+          "size": "Medium",
+          "color": "Black",
           "price": 8499
-        }
-      ]
-    },
-    {
-      "slug": "samshield-dorian-t-shirt-black-small",
-      "category": "t-shirt",
-      "name": "Samshield Dorian T-Shirt-Black/Small",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-DOR-TSHRT-BLA-S",
-          "size": null,
-          "color": null,
+          "size": "Small",
+          "color": "Black",
           "price": 8499
-        }
-      ]
-    },
-    {
-      "slug": "samshield-dorian-t-shirt-dark-shadow-large",
-      "category": "t-shirt",
-      "name": "Samshield Dorian T-Shirt-Dark Shadow/Large",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-DOR-TSHRT-DAR-L",
-          "size": null,
+          "size": "Large",
           "color": null,
           "price": 8499
-        }
-      ]
-    },
-    {
-      "slug": "samshield-dorian-t-shirt-dark-shadow-medium",
-      "category": "t-shirt",
-      "name": "Samshield Dorian T-Shirt-Dark Shadow/Medium",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-DOR-TSHRT-DAR-M",
-          "size": null,
+          "size": "Medium",
           "color": null,
           "price": 8499
-        }
-      ]
-    },
-    {
-      "slug": "samshield-dorian-t-shirt-dark-shadow-small",
-      "category": "t-shirt",
-      "name": "Samshield Dorian T-Shirt-Dark Shadow/Small",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-DOR-TSHRT-DAR-S",
-          "size": null,
+          "size": "Small",
           "color": null,
           "price": 8499
-        }
-      ]
-    },
-    {
-      "slug": "samshield-dorian-t-shirt-kaki-large",
-      "category": "t-shirt",
-      "name": "Samshield Dorian T-Shirt-Kaki/Large",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-DOR-TSHRT-KAK-L",
-          "size": null,
+          "size": "Large",
           "color": null,
           "price": 8499
-        }
-      ]
-    },
-    {
-      "slug": "samshield-dorian-t-shirt-kaki-medium",
-      "category": "t-shirt",
-      "name": "Samshield Dorian T-Shirt-Kaki/Medium",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-DOR-TSHRT-KAK-M",
-          "size": null,
+          "size": "Medium",
           "color": null,
           "price": 8499
-        }
-      ]
-    },
-    {
-      "slug": "samshield-dorian-t-shirt-kaki-small",
-      "category": "t-shirt",
-      "name": "Samshield Dorian T-Shirt-Kaki/Small",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-DOR-TSHRT-KAK-S",
-          "size": null,
+          "size": "Small",
           "color": null,
           "price": 8499
-        }
-      ]
-    },
-    {
-      "slug": "samshield-dorian-t-shirt-navy-large",
-      "category": "t-shirt",
-      "name": "Samshield Dorian T-Shirt-Navy/Large",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-DOR-TSHRT-NAV-L",
-          "size": null,
-          "color": null,
+          "size": "Large",
+          "color": "Navy",
           "price": 8499
-        }
-      ]
-    },
-    {
-      "slug": "samshield-dorian-t-shirt-navy-medium",
-      "category": "t-shirt",
-      "name": "Samshield Dorian T-Shirt-Navy/Medium",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-DOR-TSHRT-NAV-M",
-          "size": null,
-          "color": null,
+          "size": "Medium",
+          "color": "Navy",
           "price": 8499
-        }
-      ]
-    },
-    {
-      "slug": "samshield-dorian-t-shirt-navy-small",
-      "category": "t-shirt",
-      "name": "Samshield Dorian T-Shirt-Navy/Small",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-DOR-TSHRT-NAV-S",
-          "size": null,
-          "color": null,
+          "size": "Small",
+          "color": "Navy",
           "price": 8499
-        }
-      ]
-    },
-    {
-      "slug": "samshield-dorian-t-shirt-sea-pine-large",
-      "category": "t-shirt",
-      "name": "Samshield Dorian T-Shirt-Sea Pine/Large",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-DOR-TSHRT-SEA-L",
-          "size": null,
+          "size": "Large",
           "color": null,
           "price": 8499
-        }
-      ]
-    },
-    {
-      "slug": "samshield-dorian-t-shirt-sea-pine-medium",
-      "category": "t-shirt",
-      "name": "Samshield Dorian T-Shirt-Sea Pine/Medium",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-DOR-TSHRT-SEA-M",
-          "size": null,
+          "size": "Medium",
           "color": null,
           "price": 8499
-        }
-      ]
-    },
-    {
-      "slug": "samshield-dorian-t-shirt-sea-pine-small",
-      "category": "t-shirt",
-      "name": "Samshield Dorian T-Shirt-Sea Pine/Small",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-DOR-TSHRT-SEA-S",
-          "size": null,
+          "size": "Small",
           "color": null,
           "price": 8499
         }
       ]
     },
     {
-      "slug": "samshield-dorian-t-shirt",
+      "slug": "samshield-dorian-t-shirt-t-shirt-2",
       "category": "t-shirt",
       "name": "Samshield Dorian T.Shirt",
       "brand": "Samshield",
@@ -24581,6 +23981,24 @@
       "brand": "Samshield",
       "variants": [
         {
+          "sku": "SAM-GENA-JKT-BLA-LAR",
+          "size": "Large",
+          "color": "Black",
+          "price": 21099
+        },
+        {
+          "sku": "SAM-GENA-JKT-BLA-MED",
+          "size": "Medium",
+          "color": "Black",
+          "price": 21099
+        },
+        {
+          "sku": "SAM-GENA-JKT-BLA-SMA",
+          "size": "Small",
+          "color": "Black",
+          "price": 21099
+        },
+        {
           "sku": "SAM-GENA-JKT-BLA-XL",
           "size": "XL",
           "color": "Black",
@@ -24599,6 +24017,24 @@
           "price": 21099
         },
         {
+          "sku": "SAM-GENA-JKT-PET-LAR",
+          "size": "Large",
+          "color": null,
+          "price": 21099
+        },
+        {
+          "sku": "SAM-GENA-JKT-PET-MED",
+          "size": "Medium",
+          "color": null,
+          "price": 21099
+        },
+        {
+          "sku": "SAM-GENA-JKT-PET-SMA",
+          "size": "Small",
+          "color": null,
+          "price": 21099
+        },
+        {
           "sku": "SAM-GENA-JKT-PET-XL",
           "size": "XL",
           "color": null,
@@ -24613,90 +24049,6 @@
         {
           "sku": "SAM-GENA-JKT-PET-XXS",
           "size": "XXS",
-          "color": null,
-          "price": 21099
-        }
-      ]
-    },
-    {
-      "slug": "samshield-gena-jacket-black-large",
-      "category": "softshell-jacket",
-      "name": "Samshield Gena Jacket-Black/Large",
-      "brand": "Samshield",
-      "variants": [
-        {
-          "sku": "SAM-GENA-JKT-BLA-LAR",
-          "size": null,
-          "color": null,
-          "price": 21099
-        }
-      ]
-    },
-    {
-      "slug": "samshield-gena-jacket-black-medium",
-      "category": "softshell-jacket",
-      "name": "Samshield Gena Jacket-Black/Medium",
-      "brand": "Samshield",
-      "variants": [
-        {
-          "sku": "SAM-GENA-JKT-BLA-MED",
-          "size": null,
-          "color": null,
-          "price": 21099
-        }
-      ]
-    },
-    {
-      "slug": "samshield-gena-jacket-black-small",
-      "category": "softshell-jacket",
-      "name": "Samshield Gena Jacket-Black/Small",
-      "brand": "Samshield",
-      "variants": [
-        {
-          "sku": "SAM-GENA-JKT-BLA-SMA",
-          "size": null,
-          "color": null,
-          "price": 21099
-        }
-      ]
-    },
-    {
-      "slug": "samshield-gena-jacket-petrol-blue-large",
-      "category": "softshell-jacket",
-      "name": "Samshield Gena Jacket-Petrol Blue/Large",
-      "brand": "Samshield",
-      "variants": [
-        {
-          "sku": "SAM-GENA-JKT-PET-LAR",
-          "size": null,
-          "color": null,
-          "price": 21099
-        }
-      ]
-    },
-    {
-      "slug": "samshield-gena-jacket-petrol-blue-medium",
-      "category": "softshell-jacket",
-      "name": "Samshield Gena Jacket-Petrol Blue/Medium",
-      "brand": "Samshield",
-      "variants": [
-        {
-          "sku": "SAM-GENA-JKT-PET-MED",
-          "size": null,
-          "color": null,
-          "price": 21099
-        }
-      ]
-    },
-    {
-      "slug": "samshield-gena-jacket-petrol-blue-small",
-      "category": "softshell-jacket",
-      "name": "Samshield Gena Jacket-Petrol Blue/Small",
-      "brand": "Samshield",
-      "variants": [
-        {
-          "sku": "SAM-GENA-JKT-PET-SMA",
-          "size": null,
           "color": null,
           "price": 21099
         }
@@ -26045,337 +25397,185 @@
       ]
     },
     {
-      "slug": "samshield-liam-t-shirt-anthracite-large",
+      "slug": "samshield-liam-t-shirt",
       "category": "t-shirt",
-      "name": "Samshield Liam T.Shirt-Anthracite/Large",
+      "name": "Samshield Liam T.Shirt",
       "brand": "Samshield",
       "variants": [
         {
           "sku": "SAM-LM-TSHRT-ANT-LAR",
-          "size": null,
-          "color": null,
+          "size": "Large",
+          "color": "Anthracite",
           "price": 5749
-        }
-      ]
-    },
-    {
-      "slug": "samshield-liam-t-shirt-anthracite-medium",
-      "category": "t-shirt",
-      "name": "Samshield Liam T.Shirt-Anthracite/Medium",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-LM-TSHRT-ANT-MED",
-          "size": null,
-          "color": null,
+          "size": "Medium",
+          "color": "Anthracite",
           "price": 5749
-        }
-      ]
-    },
-    {
-      "slug": "samshield-liam-t-shirt-anthracite-small",
-      "category": "t-shirt",
-      "name": "Samshield Liam T.Shirt-Anthracite/Small",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-LM-TSHRT-ANT-SMA",
-          "size": null,
-          "color": null,
+          "size": "Small",
+          "color": "Anthracite",
           "price": 5749
-        }
-      ]
-    },
-    {
-      "slug": "samshield-liam-t-shirt-black-large",
-      "category": "t-shirt",
-      "name": "Samshield Liam T.Shirt-Black/Large",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-LM-TSHRT-BLA-LAR",
-          "size": null,
-          "color": null,
+          "size": "Large",
+          "color": "Black",
           "price": 5749
-        }
-      ]
-    },
-    {
-      "slug": "samshield-liam-t-shirt-black-medium",
-      "category": "t-shirt",
-      "name": "Samshield Liam T.Shirt-Black/Medium",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-LM-TSHRT-BLA-MED",
-          "size": null,
-          "color": null,
+          "size": "Medium",
+          "color": "Black",
           "price": 5749
-        }
-      ]
-    },
-    {
-      "slug": "samshield-liam-t-shirt-black-small",
-      "category": "t-shirt",
-      "name": "Samshield Liam T.Shirt-Black/Small",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-LM-TSHRT-BLA-SMA",
-          "size": null,
-          "color": null,
+          "size": "Small",
+          "color": "Black",
           "price": 5749
-        }
-      ]
-    },
-    {
-      "slug": "samshield-liam-t-shirt-kaki-medium",
-      "category": "t-shirt",
-      "name": "Samshield Liam T.Shirt-Kaki/Medium",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-LM-TSHRT-KAK-MED",
-          "size": null,
+          "size": "Medium",
           "color": null,
           "price": 5749
-        }
-      ]
-    },
-    {
-      "slug": "samshield-liam-t-shirt-kaki-small",
-      "category": "t-shirt",
-      "name": "Samshield Liam T.Shirt-Kaki/Small",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-LM-TSHRT-KAK-SMA",
-          "size": null,
+          "size": "Small",
           "color": null,
           "price": 5749
-        }
-      ]
-    },
-    {
-      "slug": "samshield-liam-t-shirt-light-grey-large",
-      "category": "t-shirt",
-      "name": "Samshield Liam T.Shirt-Light Grey/Large",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-LM-TSHRT-LIG-LAR",
-          "size": null,
+          "size": "Large",
           "color": null,
           "price": 5749
-        }
-      ]
-    },
-    {
-      "slug": "samshield-liam-t-shirt-light-grey-medium",
-      "category": "t-shirt",
-      "name": "Samshield Liam T.Shirt-Light Grey/Medium",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-LM-TSHRT-LIG-MED",
-          "size": null,
+          "size": "Medium",
           "color": null,
           "price": 5749
-        }
-      ]
-    },
-    {
-      "slug": "samshield-liam-t-shirt-light-grey-small",
-      "category": "t-shirt",
-      "name": "Samshield Liam T.Shirt-Light Grey/Small",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-LM-TSHRT-LIG-SMA",
-          "size": null,
+          "size": "Small",
           "color": null,
           "price": 5749
-        }
-      ]
-    },
-    {
-      "slug": "samshield-liam-t-shirt-navy-large",
-      "category": "t-shirt",
-      "name": "Samshield Liam T.Shirt-Navy/Large",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-LM-TSHRT-NAV-LAR",
-          "size": null,
-          "color": null,
+          "size": "Large",
+          "color": "Navy",
           "price": 5749
-        }
-      ]
-    },
-    {
-      "slug": "samshield-liam-t-shirt-navy-medium",
-      "category": "t-shirt",
-      "name": "Samshield Liam T.Shirt-Navy/Medium",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-LM-TSHRT-NAV-MED",
-          "size": null,
-          "color": null,
+          "size": "Medium",
+          "color": "Navy",
           "price": 5749
-        }
-      ]
-    },
-    {
-      "slug": "samshield-liam-t-shirt-navy-small",
-      "category": "t-shirt",
-      "name": "Samshield Liam T.Shirt-Navy/Small",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-LM-TSHRT-NAV-SMA",
-          "size": null,
-          "color": null,
+          "size": "Small",
+          "color": "Navy",
           "price": 5749
-        }
-      ]
-    },
-    {
-      "slug": "samshield-liam-t-shirt-seaport-blue-large",
-      "category": "t-shirt",
-      "name": "Samshield Liam T.Shirt-Seaport Blue/Large",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-LM-TSHRT-SEA-LAR",
-          "size": null,
+          "size": "Large",
           "color": null,
           "price": 5749
-        }
-      ]
-    },
-    {
-      "slug": "samshield-liam-t-shirt-seaport-blue-medium",
-      "category": "t-shirt",
-      "name": "Samshield Liam T.Shirt-Seaport Blue/Medium",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-LM-TSHRT-SEA-MED",
-          "size": null,
+          "size": "Medium",
           "color": null,
           "price": 5749
-        }
-      ]
-    },
-    {
-      "slug": "samshield-liam-t-shirt-seaport-blue-small",
-      "category": "t-shirt",
-      "name": "Samshield Liam T.Shirt-Seaport Blue/Small",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-LM-TSHRT-SEA-SMA",
-          "size": null,
+          "size": "Small",
           "color": null,
           "price": 5749
-        }
-      ]
-    },
-    {
-      "slug": "samshield-liam-t-shirt-white-large",
-      "category": "t-shirt",
-      "name": "Samshield Liam T.Shirt-White/Large",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-LM-TSHRT-WHI-LAR",
-          "size": null,
-          "color": null,
+          "size": "Large",
+          "color": "White",
           "price": 5749
-        }
-      ]
-    },
-    {
-      "slug": "samshield-liam-t-shirt-white-medium",
-      "category": "t-shirt",
-      "name": "Samshield Liam T.Shirt-White/Medium",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-LM-TSHRT-WHI-MED",
-          "size": null,
-          "color": null,
+          "size": "Medium",
+          "color": "White",
           "price": 5749
-        }
-      ]
-    },
-    {
-      "slug": "samshield-liam-t-shirt-white-small",
-      "category": "t-shirt",
-      "name": "Samshield Liam T.Shirt-White/Small",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-LM-TSHRT-WHI-SMA",
-          "size": null,
-          "color": null,
+          "size": "Small",
+          "color": "White",
           "price": 5749
         }
       ]
     },
     {
-      "slug": "samshield-miss-premium-crystal-fabric-blue-medium",
+      "slug": "samshield-miss-premium-crystal-fabric-blue",
       "category": "others",
-      "name": "Samshield Miss Premium Crystal Fabric Blue/Medium",
+      "name": "Samshield Miss Premium Crystal Fabric Blue",
       "brand": "Samshield",
       "variants": [
         {
           "sku": "SAM-HEL-MP-CF-BL-M",
-          "size": null,
+          "size": "Medium",
           "color": null,
           "price": 39099
         }
       ]
     },
     {
-      "slug": "samshield-miss-premium-velvet-fabric-leather-top-helmet-blue-medium",
+      "slug": "samshield-miss-premium-velvet-fabric-leather-top-helmet-blue",
       "category": "others",
-      "name": "Samshield Miss Premium Velvet Fabric Leather Top Helmet Blue/Medium",
+      "name": "Samshield Miss Premium Velvet Fabric Leather Top Helmet Blue",
       "brand": "Samshield",
       "variants": [
         {
           "sku": "SAM-HEL-MP",
-          "size": null,
+          "size": "Medium",
           "color": null,
           "price": 53099
         }
       ]
     },
     {
-      "slug": "samshield-miss-premium-velvet-flower-swarovski-black-medium",
+      "slug": "samshield-miss-premium-velvet-flower-swarovski-black",
       "category": "others",
-      "name": "Samshield Miss Premium Velvet Flower Swarovski Black/Medium",
+      "name": "Samshield Miss Premium Velvet Flower Swarovski Black",
       "brand": "Samshield",
       "variants": [
         {
           "sku": "SAM-HEL-VFS",
-          "size": null,
+          "size": "Medium",
           "color": null,
           "price": 62099
         }
       ]
     },
     {
-      "slug": "samshield-missshield-shadowmatt-helmet-black-medium",
+      "slug": "samshield-missshield-shadowmatt-helmet",
       "category": "helmet",
-      "name": "Samshield MissShield Shadowmatt Helmet-Black/Medium",
+      "name": "Samshield MissShield Shadowmatt Helmet",
       "brand": "Samshield",
       "variants": [
         {
           "sku": "SAM-HL-MSSM-BLA-M",
-          "size": null,
-          "color": null,
+          "size": "Medium",
+          "color": "Black",
           "price": 29999
         }
       ]
@@ -26387,98 +25587,50 @@
       "brand": "Samshield",
       "variants": [
         {
+          "sku": "SAM-NOE-JKT-BLA-LA",
+          "size": "Large",
+          "color": "Black",
+          "price": 19999
+        },
+        {
+          "sku": "SAM-NOE-JKT-BLA-ME",
+          "size": "Medium",
+          "color": "Black",
+          "price": 19999
+        },
+        {
+          "sku": "SAM-NOE-JKT-BLA-SM",
+          "size": "Small",
+          "color": "Black",
+          "price": 19999
+        },
+        {
           "sku": "SAM-NOE-JKT-BLA-XL",
           "size": "XL",
           "color": "Black",
           "price": 19999
         },
         {
-          "sku": "SAM-NOE-JKT-PET-XL",
-          "size": "XL",
-          "color": null,
-          "price": 19999
-        }
-      ]
-    },
-    {
-      "slug": "samshield-noe-jacket-black-large",
-      "category": "softshell-jacket",
-      "name": "Samshield NOE Jacket-Black/Large",
-      "brand": "Samshield",
-      "variants": [
-        {
-          "sku": "SAM-NOE-JKT-BLA-LA",
-          "size": null,
-          "color": null,
-          "price": 19999
-        }
-      ]
-    },
-    {
-      "slug": "samshield-noe-jacket-black-medium",
-      "category": "softshell-jacket",
-      "name": "Samshield NOE Jacket-Black/Medium",
-      "brand": "Samshield",
-      "variants": [
-        {
-          "sku": "SAM-NOE-JKT-BLA-ME",
-          "size": null,
-          "color": null,
-          "price": 19999
-        }
-      ]
-    },
-    {
-      "slug": "samshield-noe-jacket-black-small",
-      "category": "softshell-jacket",
-      "name": "Samshield NOE Jacket-Black/Small",
-      "brand": "Samshield",
-      "variants": [
-        {
-          "sku": "SAM-NOE-JKT-BLA-SM",
-          "size": null,
-          "color": null,
-          "price": 19999
-        }
-      ]
-    },
-    {
-      "slug": "samshield-noe-jacket-petrol-blue-large",
-      "category": "softshell-jacket",
-      "name": "Samshield NOE Jacket-Petrol Blue/Large",
-      "brand": "Samshield",
-      "variants": [
-        {
           "sku": "SAM-NOE-JKT-PET-LA",
-          "size": null,
+          "size": "Large",
           "color": null,
           "price": 19999
-        }
-      ]
-    },
-    {
-      "slug": "samshield-noe-jacket-petrol-blue-medium",
-      "category": "softshell-jacket",
-      "name": "Samshield NOE Jacket-Petrol Blue/Medium",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-NOE-JKT-PET-ME",
-          "size": null,
+          "size": "Medium",
           "color": null,
           "price": 19999
-        }
-      ]
-    },
-    {
-      "slug": "samshield-noe-jacket-petrol-blue-small",
-      "category": "softshell-jacket",
-      "name": "Samshield NOE Jacket-Petrol Blue/Small",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-NOE-JKT-PET-SM",
-          "size": null,
+          "size": "Small",
+          "color": null,
+          "price": 19999
+        },
+        {
+          "sku": "SAM-NOE-JKT-PET-XL",
+          "size": "XL",
           "color": null,
           "price": 19999
         }
@@ -26559,99 +25711,51 @@
       "brand": "Samshield",
       "variants": [
         {
+          "sku": "SAM-PO-WILAM-BLA-L",
+          "size": "Large",
+          "color": "Black",
+          "price": 10298
+        },
+        {
+          "sku": "SAM-PO-WILAM-BLA-M",
+          "size": "Medium",
+          "color": "Black",
+          "price": 10298
+        },
+        {
+          "sku": "SAM-PO-WILAM-BLA-S",
+          "size": "Small",
+          "color": "Black",
+          "price": 10298
+        },
+        {
           "sku": "SAM-PO-WILAM-BLA-X",
           "size": "XL",
           "color": "Black",
           "price": 10298
         },
         {
+          "sku": "SAM-PO-WILAM-NAV-L",
+          "size": "Large",
+          "color": "Navy",
+          "price": 10298
+        },
+        {
+          "sku": "SAM-PO-WILAM-NAV-M",
+          "size": "Medium",
+          "color": "Navy",
+          "price": 10298
+        },
+        {
+          "sku": "SAM-PO-WILAM-NAV-S",
+          "size": "Small",
+          "color": "Navy",
+          "price": 10298
+        },
+        {
           "sku": "SAM-PO-WILAM-NAV-X",
           "size": "XL",
           "color": "Navy",
-          "price": 10298
-        }
-      ]
-    },
-    {
-      "slug": "samshield-polo-william-black-large",
-      "category": "show-shirt",
-      "name": "Samshield Polo William-Black-Large",
-      "brand": "Samshield",
-      "variants": [
-        {
-          "sku": "SAM-PO-WILAM-BLA-L",
-          "size": null,
-          "color": null,
-          "price": 10298
-        }
-      ]
-    },
-    {
-      "slug": "samshield-polo-william-black-medium",
-      "category": "show-shirt",
-      "name": "Samshield Polo William-Black-Medium",
-      "brand": "Samshield",
-      "variants": [
-        {
-          "sku": "SAM-PO-WILAM-BLA-M",
-          "size": null,
-          "color": null,
-          "price": 10298
-        }
-      ]
-    },
-    {
-      "slug": "samshield-polo-william-black-small",
-      "category": "show-shirt",
-      "name": "Samshield Polo William-Black-Small",
-      "brand": "Samshield",
-      "variants": [
-        {
-          "sku": "SAM-PO-WILAM-BLA-S",
-          "size": null,
-          "color": null,
-          "price": 10298
-        }
-      ]
-    },
-    {
-      "slug": "samshield-polo-william-navy-large",
-      "category": "show-shirt",
-      "name": "Samshield Polo William-Navy-Large",
-      "brand": "Samshield",
-      "variants": [
-        {
-          "sku": "SAM-PO-WILAM-NAV-L",
-          "size": null,
-          "color": null,
-          "price": 10298
-        }
-      ]
-    },
-    {
-      "slug": "samshield-polo-william-navy-medium",
-      "category": "show-shirt",
-      "name": "Samshield Polo William-Navy-Medium",
-      "brand": "Samshield",
-      "variants": [
-        {
-          "sku": "SAM-PO-WILAM-NAV-M",
-          "size": null,
-          "color": null,
-          "price": 10298
-        }
-      ]
-    },
-    {
-      "slug": "samshield-polo-william-navy-small",
-      "category": "show-shirt",
-      "name": "Samshield Polo William-Navy-Small",
-      "brand": "Samshield",
-      "variants": [
-        {
-          "sku": "SAM-PO-WILAM-NAV-S",
-          "size": null,
-          "color": null,
           "price": 10298
         }
       ]
@@ -27287,254 +26391,134 @@
       ]
     },
     {
-      "slug": "samshield-shadowmatt-dark-line-black-large",
+      "slug": "samshield-shadowmatt-dark-line",
       "category": "helmet",
-      "name": "Samshield Shadowmatt Dark Line-Black/Large",
+      "name": "Samshield Shadowmatt Dark Line",
       "brand": "Samshield",
       "variants": [
         {
           "sku": "SAM-HEL-SHW-MT-DL-BL-L",
-          "size": null,
-          "color": null,
+          "size": "Large",
+          "color": "Black",
           "price": 34999
-        }
-      ]
-    },
-    {
-      "slug": "samshield-shadowmatt-dark-line-black-medium",
-      "category": "helmet",
-      "name": "Samshield Shadowmatt Dark Line-Black/Medium",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-HEL-SHW-MT-DL-BL-M",
-          "size": null,
-          "color": null,
+          "size": "Medium",
+          "color": "Black",
           "price": 34999
-        }
-      ]
-    },
-    {
-      "slug": "samshield-shadowmatt-dark-line-black-small",
-      "category": "helmet",
-      "name": "Samshield Shadowmatt Dark Line-Black/Small",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-HEL-SHW-MT-DL-BL-S",
-          "size": null,
-          "color": null,
+          "size": "Small",
+          "color": "Black",
           "price": 34000
-        }
-      ]
-    },
-    {
-      "slug": "samshield-shadowmatt-dark-line-blue-large",
-      "category": "helmet",
-      "name": "Samshield Shadowmatt Dark Line-Blue/Large",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-HEL-SHW-MT-DL-BL-L-1",
-          "size": null,
-          "color": null,
+          "size": "Large",
+          "color": "Blue",
           "price": 34999
-        }
-      ]
-    },
-    {
-      "slug": "samshield-shadowmatt-dark-line-blue-medium",
-      "category": "helmet",
-      "name": "Samshield Shadowmatt Dark Line-Blue/Medium",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-HEL-SHW-MT-DL-BL-M-1",
-          "size": null,
-          "color": null,
+          "size": "Medium",
+          "color": "Blue",
           "price": 34999
-        }
-      ]
-    },
-    {
-      "slug": "samshield-shadowmatt-dark-line-blue-small",
-      "category": "helmet",
-      "name": "Samshield Shadowmatt Dark Line-Blue/Small",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-HEL-SHW-MT-DL-BL-S-1",
-          "size": null,
-          "color": null,
+          "size": "Small",
+          "color": "Blue",
           "price": 34999
         }
       ]
     },
     {
-      "slug": "samshield-shadowmatt-helmet-2-0-black-large",
+      "slug": "samshield-shadowmatt-helmet",
       "category": "helmet",
-      "name": "Samshield Shadowmatt Helmet 2.0-Black /Large",
-      "brand": "Samshield",
-      "variants": [
-        {
-          "sku": "SAM-HL-SHM2-BLA-L",
-          "size": null,
-          "color": null,
-          "price": 37499
-        }
-      ]
-    },
-    {
-      "slug": "samshield-shadowmatt-helmet-2-0-black-medium",
-      "category": "helmet",
-      "name": "Samshield Shadowmatt Helmet 2.0-Black /Medium",
-      "brand": "Samshield",
-      "variants": [
-        {
-          "sku": "SAM-HL-SHM2-BLA-M",
-          "size": null,
-          "color": null,
-          "price": 37499
-        }
-      ]
-    },
-    {
-      "slug": "samshield-shadowmatt-helmet-2-0-black-small",
-      "category": "helmet",
-      "name": "Samshield Shadowmatt Helmet 2.0-Black /Small",
-      "brand": "Samshield",
-      "variants": [
-        {
-          "sku": "SAM-HL-SHM2-BLA-S",
-          "size": null,
-          "color": null,
-          "price": 37499
-        }
-      ]
-    },
-    {
-      "slug": "samshield-shadowmatt-helmet-2-0-blue-large",
-      "category": "helmet",
-      "name": "Samshield Shadowmatt Helmet 2.0-Blue /Large",
-      "brand": "Samshield",
-      "variants": [
-        {
-          "sku": "SAM-HL-SHM2-BLU-L",
-          "size": null,
-          "color": null,
-          "price": 37499
-        }
-      ]
-    },
-    {
-      "slug": "samshield-shadowmatt-helmet-2-0-blue-medium",
-      "category": "helmet",
-      "name": "Samshield Shadowmatt Helmet 2.0-Blue /Medium",
-      "brand": "Samshield",
-      "variants": [
-        {
-          "sku": "SAM-HL-SHM2-BLU-M",
-          "size": null,
-          "color": null,
-          "price": 37499
-        }
-      ]
-    },
-    {
-      "slug": "samshield-shadowmatt-helmet-2-0-blue-small",
-      "category": "helmet",
-      "name": "Samshield Shadowmatt Helmet 2.0-Blue /Small",
-      "brand": "Samshield",
-      "variants": [
-        {
-          "sku": "SAM-HL-SHM2-BLU-S",
-          "size": null,
-          "color": null,
-          "price": 37499
-        }
-      ]
-    },
-    {
-      "slug": "samshield-shadowmatt-helmet-black-large",
-      "category": "helmet",
-      "name": "Samshield Shadowmatt Helmet-Black/Large",
+      "name": "Samshield Shadowmatt Helmet",
       "brand": "Samshield",
       "variants": [
         {
           "sku": "SAM-HL-SHM-BLA-L",
-          "size": null,
-          "color": null,
+          "size": "Large",
+          "color": "Black",
           "price": 33199
-        }
-      ]
-    },
-    {
-      "slug": "samshield-shadowmatt-helmet-black-medium",
-      "category": "helmet",
-      "name": "Samshield Shadowmatt Helmet-Black/Medium",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-HL-SHM-BLA-M",
-          "size": null,
-          "color": null,
+          "size": "Medium",
+          "color": "Black",
           "price": 33199
-        }
-      ]
-    },
-    {
-      "slug": "samshield-shadowmatt-helmet-black-small",
-      "category": "helmet",
-      "name": "Samshield Shadowmatt Helmet-Black/Small",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-HL-SHM-BLA-S",
-          "size": null,
-          "color": null,
+          "size": "Small",
+          "color": "Black",
           "price": 33199
-        }
-      ]
-    },
-    {
-      "slug": "samshield-shadowmatt-helmet-blue-large",
-      "category": "helmet",
-      "name": "Samshield Shadowmatt Helmet-Blue/Large",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-HL-SHM-BLU-L",
-          "size": null,
-          "color": null,
+          "size": "Large",
+          "color": "Blue",
           "price": 33199
-        }
-      ]
-    },
-    {
-      "slug": "samshield-shadowmatt-helmet-blue-medium",
-      "category": "helmet",
-      "name": "Samshield Shadowmatt Helmet-Blue/Medium",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-HL-SHM-BLU-M",
-          "size": null,
-          "color": null,
+          "size": "Medium",
+          "color": "Blue",
+          "price": 33199
+        },
+        {
+          "sku": "SAM-HL-SHM-BLU-S",
+          "size": "Small",
+          "color": "Blue",
           "price": 33199
         }
       ]
     },
     {
-      "slug": "samshield-shadowmatt-helmet-blue-small",
+      "slug": "samshield-shadowmatt-helmet-2-0",
       "category": "helmet",
-      "name": "Samshield Shadowmatt Helmet-Blue/Small",
+      "name": "Samshield Shadowmatt Helmet 2.0",
       "brand": "Samshield",
       "variants": [
         {
-          "sku": "SAM-HL-SHM-BLU-S",
-          "size": null,
-          "color": null,
-          "price": 33199
+          "sku": "SAM-HL-SHM2-BLA-L",
+          "size": "Large",
+          "color": "Black",
+          "price": 37499
+        },
+        {
+          "sku": "SAM-HL-SHM2-BLA-M",
+          "size": "Medium",
+          "color": "Black",
+          "price": 37499
+        },
+        {
+          "sku": "SAM-HL-SHM2-BLA-S",
+          "size": "Small",
+          "color": "Black",
+          "price": 37499
+        },
+        {
+          "sku": "SAM-HL-SHM2-BLU-L",
+          "size": "Large",
+          "color": "Blue",
+          "price": 37499
+        },
+        {
+          "sku": "SAM-HL-SHM2-BLU-M",
+          "size": "Medium",
+          "color": "Blue",
+          "price": 37499
+        },
+        {
+          "sku": "SAM-HL-SHM2-BLU-S",
+          "size": "Small",
+          "color": "Blue",
+          "price": 37499
         }
       ]
     },
@@ -28555,253 +27539,117 @@
       ]
     },
     {
-      "slug": "samshield-socks-balzane-air-black-grey-large",
+      "slug": "samshield-socks-balzane-air",
       "category": "socks-and-ties",
-      "name": "Samshield Socks Balzane Air-Black/Grey/Large",
+      "name": "Samshield Socks Balzane Air",
       "brand": "Samshield",
       "variants": [
         {
           "sku": "SAM-SKS-BLZ-AIR-BLA-L-1",
-          "size": null,
-          "color": null,
+          "size": "Large",
+          "color": "Grey",
           "price": 2299
-        }
-      ]
-    },
-    {
-      "slug": "samshield-socks-balzane-air-black-grey-medium",
-      "category": "socks-and-ties",
-      "name": "Samshield Socks Balzane Air-Black/Grey/Medium",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-SKS-BLZ-AIR-BLA-M-1",
-          "size": null,
-          "color": null,
+          "size": "Medium",
+          "color": "Grey",
           "price": 2299
-        }
-      ]
-    },
-    {
-      "slug": "samshield-socks-balzane-air-black-grey-small",
-      "category": "socks-and-ties",
-      "name": "Samshield Socks Balzane Air-Black/Grey/Small",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-SKS-BLZ-AIR-BLA-S-1",
-          "size": null,
-          "color": null,
+          "size": "Small",
+          "color": "Grey",
           "price": 2299
-        }
-      ]
-    },
-    {
-      "slug": "samshield-socks-balzane-air-black-large",
-      "category": "socks-and-ties",
-      "name": "Samshield Socks Balzane Air-Black/Large",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-SKS-BLZ-AIR-BLA-L",
-          "size": null,
-          "color": null,
+          "size": "Large",
+          "color": "Black",
           "price": 2299
-        }
-      ]
-    },
-    {
-      "slug": "samshield-socks-balzane-air-black-medium",
-      "category": "socks-and-ties",
-      "name": "Samshield Socks Balzane Air-Black/Medium",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-SKS-BLZ-AIR-BLA-M",
-          "size": null,
-          "color": null,
+          "size": "Medium",
+          "color": "Black",
           "price": 2299
-        }
-      ]
-    },
-    {
-      "slug": "samshield-socks-balzane-air-black-small",
-      "category": "socks-and-ties",
-      "name": "Samshield Socks Balzane Air-Black/Small",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-SKS-BLZ-AIR-BLA-S",
-          "size": null,
-          "color": null,
+          "size": "Small",
+          "color": "Black",
           "price": 2299
-        }
-      ]
-    },
-    {
-      "slug": "samshield-socks-balzane-air-grey-black-large",
-      "category": "socks-and-ties",
-      "name": "Samshield Socks Balzane Air-Grey/Black/Large",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-SKS-BLZ-AIR-GRE-L-1",
-          "size": null,
-          "color": null,
+          "size": "Large",
+          "color": "Black",
           "price": 2299
-        }
-      ]
-    },
-    {
-      "slug": "samshield-socks-balzane-air-grey-black-medium",
-      "category": "socks-and-ties",
-      "name": "Samshield Socks Balzane Air-Grey/Black/Medium",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-SKS-BLZ-AIR-GRE-M-1",
-          "size": null,
-          "color": null,
+          "size": "Medium",
+          "color": "Black",
           "price": 2299
-        }
-      ]
-    },
-    {
-      "slug": "samshield-socks-balzane-air-grey-black-small",
-      "category": "socks-and-ties",
-      "name": "Samshield Socks Balzane Air-Grey/Black/Small",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-SKS-BLZ-AIR-GRE-S-1",
-          "size": null,
-          "color": null,
+          "size": "Small",
+          "color": "Black",
           "price": 2299
-        }
-      ]
-    },
-    {
-      "slug": "samshield-socks-balzane-air-grey-large",
-      "category": "socks-and-ties",
-      "name": "Samshield Socks Balzane Air-Grey/Large",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-SKS-BLZ-AIR-GRE-L",
-          "size": null,
-          "color": null,
+          "size": "Large",
+          "color": "Grey",
           "price": 2299
-        }
-      ]
-    },
-    {
-      "slug": "samshield-socks-balzane-air-grey-medium",
-      "category": "socks-and-ties",
-      "name": "Samshield Socks Balzane Air-Grey/Medium",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-SKS-BLZ-AIR-GRE-M",
-          "size": null,
-          "color": null,
+          "size": "Medium",
+          "color": "Grey",
           "price": 2299
-        }
-      ]
-    },
-    {
-      "slug": "samshield-socks-balzane-air-grey-small",
-      "category": "socks-and-ties",
-      "name": "Samshield Socks Balzane Air-Grey/Small",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-SKS-BLZ-AIR-GRE-S",
-          "size": null,
-          "color": null,
+          "size": "Small",
+          "color": "Grey",
           "price": 2299
-        }
-      ]
-    },
-    {
-      "slug": "samshield-socks-balzane-air-navy-grey-large",
-      "category": "socks-and-ties",
-      "name": "Samshield Socks Balzane Air-Navy/Grey/Large",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-SKS-BLZ-AIR-NAV-L-1",
-          "size": null,
-          "color": null,
+          "size": "Large",
+          "color": "Grey",
           "price": 2299
-        }
-      ]
-    },
-    {
-      "slug": "samshield-socks-balzane-air-navy-grey-medium",
-      "category": "socks-and-ties",
-      "name": "Samshield Socks Balzane Air-Navy/Grey/Medium",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-SKS-BLZ-AIR-NAV-M-1",
-          "size": null,
-          "color": null,
+          "size": "Medium",
+          "color": "Grey",
           "price": 2299
-        }
-      ]
-    },
-    {
-      "slug": "samshield-socks-balzane-air-navy-grey-small",
-      "category": "socks-and-ties",
-      "name": "Samshield Socks Balzane Air-Navy/Grey/Small",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-SKS-BLZ-AIR-NAV-S-1",
-          "size": null,
-          "color": null,
+          "size": "Small",
+          "color": "Grey",
           "price": 2299
-        }
-      ]
-    },
-    {
-      "slug": "samshield-socks-balzane-air-navy-large",
-      "category": "socks-and-ties",
-      "name": "Samshield Socks Balzane Air-Navy/Large",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-SKS-BLZ-AIR-NAV-L",
-          "size": null,
-          "color": null,
+          "size": "Large",
+          "color": "Navy",
           "price": 2299
-        }
-      ]
-    },
-    {
-      "slug": "samshield-socks-balzane-air-navy-medium",
-      "category": "socks-and-ties",
-      "name": "Samshield Socks Balzane Air-Navy/Medium",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-SKS-BLZ-AIR-NAV-M",
-          "size": null,
-          "color": null,
+          "size": "Medium",
+          "color": "Navy",
           "price": 2299
-        }
-      ]
-    },
-    {
-      "slug": "samshield-socks-balzane-air-navy-small",
-      "category": "socks-and-ties",
-      "name": "Samshield Socks Balzane Air-Navy/Small",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-SKS-BLZ-AIR-NAV-S",
-          "size": null,
-          "color": null,
+          "size": "Small",
+          "color": "Navy",
           "price": 2299
         }
       ]
@@ -29053,127 +27901,63 @@
       ]
     },
     {
-      "slug": "samshield-socks-balzane-print-black-grey-large",
+      "slug": "samshield-socks-balzane-print",
       "category": "socks-and-ties",
-      "name": "Samshield Socks Balzane Print - Black/Grey / Large",
+      "name": "Samshield Socks Balzane Print",
       "brand": "Samshield",
       "variants": [
         {
           "sku": "SAM-SOC-BP-BLA-L",
-          "size": null,
-          "color": null,
+          "size": "Large",
+          "color": "Grey",
           "price": 2249
-        }
-      ]
-    },
-    {
-      "slug": "samshield-socks-balzane-print-grey-black-small",
-      "category": "socks-and-ties",
-      "name": "Samshield Socks Balzane Print - Grey / Black /Small",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-SOC-BP-GRY-BLA-S",
-          "size": null,
-          "color": null,
+          "size": "Small",
+          "color": "Black",
           "price": 2249
-        }
-      ]
-    },
-    {
-      "slug": "samshield-socks-balzane-print-anthracite-medium",
-      "category": "socks-and-ties",
-      "name": "Samshield Socks Balzane Print-Anthracite/Medium",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-SOC-BP-ANT-M",
-          "size": null,
-          "color": null,
+          "size": "Medium",
+          "color": "Anthracite",
           "price": 2249
-        }
-      ]
-    },
-    {
-      "slug": "samshield-socks-balzane-print-anthracite-small",
-      "category": "socks-and-ties",
-      "name": "Samshield Socks Balzane Print-Anthracite/Small",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-SOC-BP-ANT-S",
-          "size": null,
-          "color": null,
+          "size": "Small",
+          "color": "Anthracite",
           "price": 2249
-        }
-      ]
-    },
-    {
-      "slug": "samshield-socks-balzane-print-black-grey-medium",
-      "category": "socks-and-ties",
-      "name": "Samshield Socks Balzane Print-Black / Grey / Medium",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-SOC-BP-BL-GRY-M",
-          "size": null,
-          "color": null,
+          "size": "Medium",
+          "color": "Grey",
           "price": 2249
-        }
-      ]
-    },
-    {
-      "slug": "samshield-socks-balzane-print-black-grey-small",
-      "category": "socks-and-ties",
-      "name": "Samshield Socks Balzane Print-Black / Grey / Small",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-SOC-BP-BLA-Gry-S",
-          "size": null,
-          "color": null,
+          "size": "Small",
+          "color": "Grey",
           "price": 2249
-        }
-      ]
-    },
-    {
-      "slug": "samshield-socks-balzane-print-navy-large",
-      "category": "socks-and-ties",
-      "name": "Samshield Socks Balzane Print-Navy /Large",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-SOC-BP-NAV-L",
-          "size": null,
-          "color": null,
+          "size": "Large",
+          "color": "Navy",
           "price": 2249
-        }
-      ]
-    },
-    {
-      "slug": "samshield-socks-balzane-print-navy-medium",
-      "category": "socks-and-ties",
-      "name": "Samshield Socks Balzane Print-Navy /Medium",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-SOC-BP-NAV-M",
-          "size": null,
-          "color": null,
+          "size": "Medium",
+          "color": "Navy",
           "price": 2249
-        }
-      ]
-    },
-    {
-      "slug": "samshield-socks-balzane-print-navy-small",
-      "category": "socks-and-ties",
-      "name": "Samshield Socks Balzane Print-Navy /Small",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-SOC-BP-NAV-S",
-          "size": null,
-          "color": null,
+          "size": "Small",
+          "color": "Navy",
           "price": 2249
         }
       ]
@@ -29189,215 +27973,103 @@
           "size": "M",
           "color": "Grey",
           "price": 2499
+        },
+        {
+          "sku": "SAM-SCKS-BLZ-SFT-BLA-L",
+          "size": "Large",
+          "color": "Black",
+          "price": 2499
+        },
+        {
+          "sku": "SAM-SCKS-BLZ-SFT-BLA-M",
+          "size": "Medium",
+          "color": "Black",
+          "price": 2499
+        },
+        {
+          "sku": "SAM-SCKS-BLZ-SFT-BLA-S",
+          "size": "Small",
+          "color": "Black",
+          "price": 2499
+        },
+        {
+          "sku": "SAM-SCKS-BLZ-SFT-NAV-L",
+          "size": "Large",
+          "color": "Navy",
+          "price": 2499
+        },
+        {
+          "sku": "SAM-SCKS-BLZ-SFT-NAV-M",
+          "size": "Medium",
+          "color": "Navy",
+          "price": 2499
+        },
+        {
+          "sku": "SAM-SCKS-BLZ-SFT-NAV-S",
+          "size": "Small",
+          "color": "Navy",
+          "price": 2499
         }
       ]
     },
     {
-      "slug": "samshield-socks-balzane-soft-holographic-bulbo-black-large",
+      "slug": "samshield-socks-balzane-soft-holographic-bulbo",
       "category": "socks-and-ties",
-      "name": "Samshield Socks Balzane Soft Holographic Bulbo-Black/Large",
+      "name": "Samshield Socks Balzane Soft Holographic Bulbo",
       "brand": "Samshield",
       "variants": [
         {
           "sku": "SAM-SKS-SFT-HLOIC-BLA-L",
-          "size": null,
-          "color": null,
+          "size": "Large",
+          "color": "Black",
           "price": 2499
-        }
-      ]
-    },
-    {
-      "slug": "samshield-socks-balzane-soft-holographic-bulbo-black-medium",
-      "category": "socks-and-ties",
-      "name": "Samshield Socks Balzane Soft Holographic Bulbo-Black/Medium",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-SKS-SFT-HLOIC-BLA-M",
-          "size": null,
-          "color": null,
+          "size": "Medium",
+          "color": "Black",
           "price": 2499
-        }
-      ]
-    },
-    {
-      "slug": "samshield-socks-balzane-soft-holographic-bulbo-black-small",
-      "category": "socks-and-ties",
-      "name": "Samshield Socks Balzane Soft Holographic Bulbo-Black/Small",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-SKS-SFT-HLOIC-BLA-S",
-          "size": null,
-          "color": null,
+          "size": "Small",
+          "color": "Black",
           "price": 2499
-        }
-      ]
-    },
-    {
-      "slug": "samshield-socks-balzane-soft-holographic-bulbo-navy-large",
-      "category": "socks-and-ties",
-      "name": "Samshield Socks Balzane Soft Holographic Bulbo-Navy/Large",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-SKS-SFT-HLOIC-NAV-L",
-          "size": null,
-          "color": null,
+          "size": "Large",
+          "color": "Navy",
           "price": 2499
-        }
-      ]
-    },
-    {
-      "slug": "samshield-socks-balzane-soft-holographic-bulbo-navy-medium",
-      "category": "socks-and-ties",
-      "name": "Samshield Socks Balzane Soft Holographic Bulbo-Navy/Medium",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-SKS-SFT-HLOIC-NAV-M",
-          "size": null,
-          "color": null,
+          "size": "Medium",
+          "color": "Navy",
           "price": 2499
-        }
-      ]
-    },
-    {
-      "slug": "samshield-socks-balzane-soft-holographic-bulbo-navy-small",
-      "category": "socks-and-ties",
-      "name": "Samshield Socks Balzane Soft Holographic Bulbo-Navy/Small",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-SKS-SFT-HLOIC-NAV-S",
-          "size": null,
-          "color": null,
+          "size": "Small",
+          "color": "Navy",
           "price": 2499
-        }
-      ]
-    },
-    {
-      "slug": "samshield-socks-balzane-soft-holographic-bulbo-pink-large",
-      "category": "socks-and-ties",
-      "name": "Samshield Socks Balzane Soft Holographic Bulbo-Pink/Large",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-SKS-SFT-HLOIC-PIN-L",
-          "size": null,
-          "color": null,
+          "size": "Large",
+          "color": "Pink",
           "price": 2499
-        }
-      ]
-    },
-    {
-      "slug": "samshield-socks-balzane-soft-holographic-bulbo-pink-medium",
-      "category": "socks-and-ties",
-      "name": "Samshield Socks Balzane Soft Holographic Bulbo-Pink/Medium",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-SKS-SFT-HLOIC-PIN-M",
-          "size": null,
-          "color": null,
+          "size": "Medium",
+          "color": "Pink",
           "price": 2499
-        }
-      ]
-    },
-    {
-      "slug": "samshield-socks-balzane-soft-holographic-bulbo-pink-small",
-      "category": "socks-and-ties",
-      "name": "Samshield Socks Balzane Soft Holographic Bulbo-Pink/Small",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-SKS-SFT-HLOIC-PIN-S",
-          "size": null,
-          "color": null,
-          "price": 2499
-        }
-      ]
-    },
-    {
-      "slug": "samshield-socks-balzane-soft-black-large",
-      "category": "socks-and-ties",
-      "name": "Samshield Socks Balzane Soft-Black/Large",
-      "brand": "Samshield",
-      "variants": [
-        {
-          "sku": "SAM-SCKS-BLZ-SFT-BLA-L",
-          "size": null,
-          "color": null,
-          "price": 2499
-        }
-      ]
-    },
-    {
-      "slug": "samshield-socks-balzane-soft-black-medium",
-      "category": "socks-and-ties",
-      "name": "Samshield Socks Balzane Soft-Black/Medium",
-      "brand": "Samshield",
-      "variants": [
-        {
-          "sku": "SAM-SCKS-BLZ-SFT-BLA-M",
-          "size": null,
-          "color": null,
-          "price": 2499
-        }
-      ]
-    },
-    {
-      "slug": "samshield-socks-balzane-soft-black-small",
-      "category": "socks-and-ties",
-      "name": "Samshield Socks Balzane Soft-Black/Small",
-      "brand": "Samshield",
-      "variants": [
-        {
-          "sku": "SAM-SCKS-BLZ-SFT-BLA-S",
-          "size": null,
-          "color": null,
-          "price": 2499
-        }
-      ]
-    },
-    {
-      "slug": "samshield-socks-balzane-soft-navy-large",
-      "category": "socks-and-ties",
-      "name": "Samshield Socks Balzane Soft-Navy/Large",
-      "brand": "Samshield",
-      "variants": [
-        {
-          "sku": "SAM-SCKS-BLZ-SFT-NAV-L",
-          "size": null,
-          "color": null,
-          "price": 2499
-        }
-      ]
-    },
-    {
-      "slug": "samshield-socks-balzane-soft-navy-medium",
-      "category": "socks-and-ties",
-      "name": "Samshield Socks Balzane Soft-Navy/Medium",
-      "brand": "Samshield",
-      "variants": [
-        {
-          "sku": "SAM-SCKS-BLZ-SFT-NAV-M",
-          "size": null,
-          "color": null,
-          "price": 2499
-        }
-      ]
-    },
-    {
-      "slug": "samshield-socks-balzane-soft-navy-small",
-      "category": "socks-and-ties",
-      "name": "Samshield Socks Balzane Soft-Navy/Small",
-      "brand": "Samshield",
-      "variants": [
-        {
-          "sku": "SAM-SCKS-BLZ-SFT-NAV-S",
-          "size": null,
-          "color": null,
+          "size": "Small",
+          "color": "Pink",
           "price": 2499
         }
       ]
@@ -29511,294 +28183,134 @@
       ]
     },
     {
-      "slug": "samshield-t-shirt-ava-anthracite-large",
+      "slug": "samshield-t-shirt-ava",
       "category": "t-shirt",
-      "name": "Samshield T-Shirt Ava-Anthracite/Large",
+      "name": "Samshield T-Shirt Ava",
       "brand": "Samshield",
       "variants": [
         {
           "sku": "SAM-TSH-ANT-LAR",
-          "size": null,
-          "color": null,
+          "size": "Large",
+          "color": "Anthracite",
           "price": 9749
-        }
-      ]
-    },
-    {
-      "slug": "samshield-t-shirt-ava-anthracite-medium",
-      "category": "t-shirt",
-      "name": "Samshield T-Shirt Ava-Anthracite/Medium",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-TSH-ANT-MED",
-          "size": null,
-          "color": null,
+          "size": "Medium",
+          "color": "Anthracite",
           "price": 9749
-        }
-      ]
-    },
-    {
-      "slug": "samshield-t-shirt-ava-anthracite-small",
-      "category": "t-shirt",
-      "name": "Samshield T-Shirt Ava-Anthracite/Small",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-TSH-ANT-SMA",
-          "size": null,
-          "color": null,
+          "size": "Small",
+          "color": "Anthracite",
           "price": 9749
-        }
-      ]
-    },
-    {
-      "slug": "samshield-t-shirt-ava-black-large",
-      "category": "t-shirt",
-      "name": "Samshield T-Shirt Ava-Black/Large",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-TSH-BLA-LAR",
-          "size": null,
-          "color": null,
+          "size": "Large",
+          "color": "Black",
           "price": 9749
-        }
-      ]
-    },
-    {
-      "slug": "samshield-t-shirt-ava-black-medium",
-      "category": "t-shirt",
-      "name": "Samshield T-Shirt Ava-Black/Medium",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-TSH-BLA-MED",
-          "size": null,
-          "color": null,
+          "size": "Medium",
+          "color": "Black",
           "price": 9749
-        }
-      ]
-    },
-    {
-      "slug": "samshield-t-shirt-ava-black-small",
-      "category": "t-shirt",
-      "name": "Samshield T-Shirt Ava-Black/Small",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-TSH-BLA-SMA",
-          "size": null,
-          "color": null,
+          "size": "Small",
+          "color": "Black",
           "price": 9749
-        }
-      ]
-    },
-    {
-      "slug": "samshield-t-shirt-ava-grey-large",
-      "category": "t-shirt",
-      "name": "Samshield T-Shirt Ava-Grey/Large",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-TSH-GRE-LAR",
-          "size": null,
-          "color": null,
+          "size": "Large",
+          "color": "Grey",
           "price": 9749
-        }
-      ]
-    },
-    {
-      "slug": "samshield-t-shirt-ava-grey-medium",
-      "category": "t-shirt",
-      "name": "Samshield T-Shirt Ava-Grey/Medium",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-TSH-GRE-MED",
-          "size": null,
-          "color": null,
+          "size": "Medium",
+          "color": "Grey",
           "price": 9749
-        }
-      ]
-    },
-    {
-      "slug": "samshield-t-shirt-ava-grey-small",
-      "category": "t-shirt",
-      "name": "Samshield T-Shirt Ava-Grey/Small",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-TSH-GRE-SMA",
-          "size": null,
-          "color": null,
+          "size": "Small",
+          "color": "Grey",
           "price": 9749
-        }
-      ]
-    },
-    {
-      "slug": "samshield-t-shirt-ava-navy-large",
-      "category": "t-shirt",
-      "name": "Samshield T-Shirt Ava-Navy/Large",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-TSH-NAV-LAR",
-          "size": null,
-          "color": null,
+          "size": "Large",
+          "color": "Navy",
           "price": 9749
-        }
-      ]
-    },
-    {
-      "slug": "samshield-t-shirt-ava-navy-medium",
-      "category": "t-shirt",
-      "name": "Samshield T-Shirt Ava-Navy/Medium",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-TSH-NAV-MED",
-          "size": null,
-          "color": null,
+          "size": "Medium",
+          "color": "Navy",
           "price": 9749
-        }
-      ]
-    },
-    {
-      "slug": "samshield-t-shirt-ava-navy-small",
-      "category": "t-shirt",
-      "name": "Samshield T-Shirt Ava-Navy/Small",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-TSH-NAV-SMA",
-          "size": null,
-          "color": null,
+          "size": "Small",
+          "color": "Navy",
           "price": 9749
-        }
-      ]
-    },
-    {
-      "slug": "samshield-t-shirt-ava-pink-large",
-      "category": "t-shirt",
-      "name": "Samshield T-Shirt Ava-Pink/Large",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-TSH-PIN-LAR",
-          "size": null,
-          "color": null,
+          "size": "Large",
+          "color": "Pink",
           "price": 9749
-        }
-      ]
-    },
-    {
-      "slug": "samshield-t-shirt-ava-pink-medium",
-      "category": "t-shirt",
-      "name": "Samshield T-Shirt Ava-Pink/Medium",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-TSH-PIN-MED",
-          "size": null,
-          "color": null,
+          "size": "Medium",
+          "color": "Pink",
           "price": 9749
-        }
-      ]
-    },
-    {
-      "slug": "samshield-t-shirt-ava-pink-small",
-      "category": "t-shirt",
-      "name": "Samshield T-Shirt Ava-Pink/Small",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-TSH-PIN-SMA",
-          "size": null,
-          "color": null,
+          "size": "Small",
+          "color": "Pink",
           "price": 9749
-        }
-      ]
-    },
-    {
-      "slug": "samshield-t-shirt-ava-sea-green-large",
-      "category": "t-shirt",
-      "name": "Samshield T-Shirt Ava-Sea Green/Large",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-TSH-SEA-LAR1",
-          "size": null,
+          "size": "Large",
           "color": null,
           "price": 9749
-        }
-      ]
-    },
-    {
-      "slug": "samshield-t-shirt-ava-sea-green-medium",
-      "category": "t-shirt",
-      "name": "Samshield T-Shirt Ava-Sea Green/Medium",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-TSH-SEA-MED1",
-          "size": null,
+          "size": "Medium",
           "color": null,
           "price": 9749
-        }
-      ]
-    },
-    {
-      "slug": "samshield-t-shirt-ava-sea-green-small",
-      "category": "t-shirt",
-      "name": "Samshield T-Shirt Ava-Sea Green/Small",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-TSH-SEA-SMA1",
-          "size": null,
+          "size": "Small",
           "color": null,
           "price": 9749
-        }
-      ]
-    },
-    {
-      "slug": "samshield-t-shirt-ava-seagreen-large",
-      "category": "t-shirt",
-      "name": "Samshield T-Shirt Ava-SeaGreen/Large",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-TSH-SEA-LAR",
-          "size": null,
+          "size": "Large",
           "color": null,
           "price": 9749
-        }
-      ]
-    },
-    {
-      "slug": "samshield-t-shirt-ava-seagreen-medium",
-      "category": "t-shirt",
-      "name": "Samshield T-Shirt Ava-SeaGreen/Medium",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-TSH-SEA-MED",
-          "size": null,
+          "size": "Medium",
           "color": null,
           "price": 9749
-        }
-      ]
-    },
-    {
-      "slug": "samshield-t-shirt-ava-seagreen-small",
-      "category": "t-shirt",
-      "name": "Samshield T-Shirt Ava-SeaGreen/Small",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-TSH-SEA-SMA",
-          "size": null,
+          "size": "Small",
           "color": null,
           "price": 9749
         }
@@ -30127,168 +28639,112 @@
       ]
     },
     {
-      "slug": "samshield-xj-chrome-dark-edition-helmet-black-medium",
+      "slug": "samshield-xj-chrome-dark-edition-helmet-black",
       "category": "helmet",
-      "name": "Samshield XJ Chrome Dark Edition Helmet Black/Medium",
+      "name": "Samshield XJ Chrome Dark Edition Helmet Black",
       "brand": "Samshield",
       "variants": [
         {
           "sku": "SAM-HEL-XJC-DE-BL-M",
-          "size": null,
+          "size": "Medium",
           "color": null,
           "price": 85299
         }
       ]
     },
     {
-      "slug": "samshield-xj-chrome-helmet-black-large-helmet",
+      "slug": "samshield-xj-chrome-helmet",
       "category": "helmet",
-      "name": "Samshield XJ Chrome Helmet Black/Large",
-      "brand": "Samshield",
-      "variants": [
-        {
-          "sku": "SAM-HEL-CM-BL-L",
-          "size": null,
-          "color": null,
-          "price": 85299
-        }
-      ]
-    },
-    {
-      "slug": "samshield-xj-chrome-helmet-black-large-helmet-2",
-      "category": "helmet",
-      "name": "Samshield XJ Chrome Helmet-Black/Large",
+      "name": "Samshield XJ Chrome Helmet",
       "brand": "Samshield",
       "variants": [
         {
           "sku": "SAM-XJCR-HEL-BLA-L",
-          "size": null,
-          "color": null,
+          "size": "Large",
+          "color": "Black",
           "price": 85299
-        }
-      ]
-    },
-    {
-      "slug": "samshield-xj-chrome-helmet-black-medium",
-      "category": "helmet",
-      "name": "Samshield XJ Chrome Helmet-Black/Medium",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-XJCR-HEL-BLA-M",
-          "size": null,
-          "color": null,
+          "size": "Medium",
+          "color": "Black",
           "price": 85299
-        }
-      ]
-    },
-    {
-      "slug": "samshield-xj-chrome-helmet-black-small",
-      "category": "helmet",
-      "name": "Samshield XJ Chrome Helmet-Black/Small",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-XJCR-HEL-BLA-S",
-          "size": null,
-          "color": null,
+          "size": "Small",
+          "color": "Black",
           "price": 85299
-        }
-      ]
-    },
-    {
-      "slug": "samshield-xj-chrome-helmet-blue-large",
-      "category": "helmet",
-      "name": "Samshield XJ Chrome Helmet-Blue/Large",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-XJCR-HEL-BLU-L",
-          "size": null,
-          "color": null,
+          "size": "Large",
+          "color": "Blue",
           "price": 85299
-        }
-      ]
-    },
-    {
-      "slug": "samshield-xj-chrome-helmet-blue-medium",
-      "category": "helmet",
-      "name": "Samshield XJ Chrome Helmet-Blue/Medium",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-XJCR-HEL-BLU-M",
-          "size": null,
-          "color": null,
+          "size": "Medium",
+          "color": "Blue",
+          "price": 85299
+        },
+        {
+          "sku": "SAM-XJCR-HEL-BLU-S",
+          "size": "Small",
+          "color": "Blue",
           "price": 85299
         }
       ]
     },
     {
-      "slug": "samshield-xj-chrome-helmet-blue-small",
+      "slug": "samshield-xj-chrome-helmet-black",
       "category": "helmet",
-      "name": "Samshield XJ Chrome Helmet-Blue/Small",
+      "name": "Samshield XJ Chrome Helmet Black",
       "brand": "Samshield",
       "variants": [
         {
-          "sku": "SAM-XJCR-HEL-BLU-S",
-          "size": null,
+          "sku": "SAM-HEL-CM-BL-L",
+          "size": "Large",
           "color": null,
           "price": 85299
         }
       ]
     },
     {
-      "slug": "samshield-xj-chrome-matt-helmet-black-large",
+      "slug": "samshield-xj-chrome-matt-helmet",
       "category": "helmet",
-      "name": "Samshield XJ Chrome Matt Helmet-Black/Large",
+      "name": "Samshield XJ Chrome Matt Helmet",
       "brand": "Samshield",
       "variants": [
         {
           "sku": "SAM-HEL-XJCM-BL-L",
-          "size": null,
-          "color": null,
+          "size": "Large",
+          "color": "Black",
           "price": 85299
-        }
-      ]
-    },
-    {
-      "slug": "samshield-xj-chrome-matt-helmet-black-medium",
-      "category": "helmet",
-      "name": "Samshield XJ Chrome Matt Helmet-Black/Medium",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-HEL-XJCM-BL-M",
-          "size": null,
-          "color": null,
+          "size": "Medium",
+          "color": "Black",
           "price": 85299
-        }
-      ]
-    },
-    {
-      "slug": "samshield-xj-chrome-matt-helmet-black-small",
-      "category": "helmet",
-      "name": "Samshield XJ Chrome Matt Helmet-Black/Small",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-HEL-XJCM-BL-S",
-          "size": null,
-          "color": null,
+          "size": "Small",
+          "color": "Black",
           "price": 85299
         }
       ]
     },
     {
-      "slug": "samshield-xj-matt-dark-edition-helmet-black-medium",
+      "slug": "samshield-xj-matt-dark-edition-helmet-black",
       "category": "helmet",
-      "name": "Samshield XJ Matt Dark Edition Helmet Black/Medium",
+      "name": "Samshield XJ Matt Dark Edition Helmet Black",
       "brand": "Samshield",
       "variants": [
         {
           "sku": "SAM-HEL-XJM-DE-M-B",
-          "size": null,
+          "size": "Medium",
           "color": null,
           "price": 85299
         }
@@ -30631,14 +29087,14 @@
       ]
     },
     {
-      "slug": "torino-sports-socks-black-small",
+      "slug": "torino-sports-socks-black",
       "category": "socks-and-ties",
-      "name": "Torino Sports Socks Black/Small",
+      "name": "Torino Sports Socks Black",
       "brand": null,
       "variants": [
         {
           "sku": "SCKS-TOR-SCKS-BL-S",
-          "size": null,
+          "size": "Small",
           "color": null,
           "price": 1999
         }
@@ -30897,140 +29353,100 @@
       ]
     },
     {
-      "slug": "usg-aixplorer-airbag-large",
+      "slug": "usg-aixplorer-airbag",
       "category": "protective-vests",
-      "name": "USG AIXPLORER - Airbag- Large",
+      "name": "USG AIXPLORER - Airbag",
       "brand": "USG",
       "variants": [
         {
           "sku": "USG-AIX-AB-L",
-          "size": null,
+          "size": "Large",
           "color": null,
           "price": 25000
-        }
-      ]
-    },
-    {
-      "slug": "usg-aixplorer-airbag-medium",
-      "category": "protective-vests",
-      "name": "USG AIXPLORER - Airbag- Medium",
-      "brand": "USG",
-      "variants": [
+        },
         {
           "sku": "USG-AIX-AB-M",
-          "size": null,
+          "size": "Medium",
+          "color": null,
+          "price": 25000
+        },
+        {
+          "sku": "USG-AIX-AB-S",
+          "size": "Small",
           "color": null,
           "price": 25000
         }
       ]
     },
     {
-      "slug": "usg-aixplorer-airbag-x-large",
+      "slug": "usg-aixplorer-airbag-x",
       "category": "protective-vests",
-      "name": "USG AIXPLORER - Airbag- X-Large",
+      "name": "USG AIXPLORER - Airbag- X",
       "brand": "USG",
       "variants": [
         {
           "sku": "USG-AIX-AB-XL",
-          "size": null,
+          "size": "Large",
           "color": null,
           "price": 25000
-        }
-      ]
-    },
-    {
-      "slug": "usg-aixplorer-airbag-x-small",
-      "category": "protective-vests",
-      "name": "USG AIXPLORER - Airbag- X-Small",
-      "brand": "USG",
-      "variants": [
+        },
         {
           "sku": "USG-AIX-AB-XS",
-          "size": null,
+          "size": "Small",
           "color": null,
           "price": 25000
         }
       ]
     },
     {
-      "slug": "usg-aixplorer-airbag-small",
-      "category": "protective-vests",
-      "name": "USG AIXPLORER - Airbag-Small",
-      "brand": "USG",
-      "variants": [
-        {
-          "sku": "USG-AIX-AB-S",
-          "size": null,
-          "color": null,
-          "price": 25000
-        }
-      ]
-    },
-    {
-      "slug": "usg-aixplorer-softshell-cover-large",
+      "slug": "usg-aixplorer-softshell-cover",
       "category": "protective-vests-accessories",
-      "name": "USG AIXPLORER - Softshell Cover- Large",
+      "name": "USG AIXPLORER - Softshell Cover",
       "brand": "USG",
       "variants": [
         {
           "sku": "USG-AIX-C-L",
-          "size": null,
+          "size": "Large",
           "color": null,
           "price": 14000
-        }
-      ]
-    },
-    {
-      "slug": "usg-aixplorer-softshell-cover-medium",
-      "category": "protective-vests-accessories",
-      "name": "USG AIXPLORER - Softshell Cover- Medium",
-      "brand": "USG",
-      "variants": [
+        },
         {
           "sku": "USG-AIX-C-M",
-          "size": null,
+          "size": "Medium",
           "color": null,
           "price": 14000
-        }
-      ]
-    },
-    {
-      "slug": "usg-aixplorer-softshell-cover-small",
-      "category": "protective-vests-accessories",
-      "name": "USG AIXPLORER - Softshell Cover- Small",
-      "brand": "USG",
-      "variants": [
+        },
         {
           "sku": "USG-AIX-C-S",
-          "size": null,
+          "size": "Small",
           "color": null,
           "price": 14000
         }
       ]
     },
     {
-      "slug": "usg-aixplorer-softshell-cover-x-large",
+      "slug": "usg-aixplorer-softshell-cover-x-protective-vests-accessories",
       "category": "protective-vests-accessories",
-      "name": "USG AIXPLORER - Softshell Cover- X-Large",
+      "name": "USG AIXPLORER - Softshell Cover- X",
       "brand": "USG",
       "variants": [
         {
           "sku": "USG-AIX-C-XL",
-          "size": null,
+          "size": "Large",
           "color": null,
           "price": 14000
         }
       ]
     },
     {
-      "slug": "usg-aixplorer-softshell-cover-x-small",
+      "slug": "usg-aixplorer-softshell-cover-x-protective-vests-accessories-2",
       "category": "protective-vests-accessories",
-      "name": "USG AIXPLORER - Softshell Cover-X-Small",
+      "name": "USG AIXPLORER - Softshell Cover-X",
       "brand": "USG",
       "variants": [
         {
           "sku": "USG-AIX-C-XS",
-          "size": null,
+          "size": "Small",
           "color": null,
           "price": 14000
         }
@@ -31051,140 +29467,100 @@
       ]
     },
     {
-      "slug": "usg-aixplorer-airbag-vest-large",
+      "slug": "usg-aixplorer-airbag-vest",
       "category": "protective-vests",
-      "name": "USG AIXPLORER Airbag Vest Large",
+      "name": "USG AIXPLORER Airbag Vest",
       "brand": "USG",
       "variants": [
         {
           "sku": "USG-AIX-SS-L",
-          "size": null,
+          "size": "Large",
           "color": null,
           "price": 55000
-        }
-      ]
-    },
-    {
-      "slug": "usg-aixplorer-airbag-vest-medium",
-      "category": "protective-vests",
-      "name": "USG AIXPLORER Airbag Vest Medium",
-      "brand": "USG",
-      "variants": [
+        },
         {
           "sku": "USG-AIX-SS-M",
-          "size": null,
+          "size": "Medium",
           "color": null,
           "price": 55000
-        }
-      ]
-    },
-    {
-      "slug": "usg-aixplorer-airbag-vest-small",
-      "category": "protective-vests",
-      "name": "USG AIXPLORER Airbag Vest Small",
-      "brand": "USG",
-      "variants": [
+        },
         {
           "sku": "USG-AIX-SS-S",
-          "size": null,
+          "size": "Small",
           "color": null,
           "price": 55000
         }
       ]
     },
     {
-      "slug": "usg-aixplorer-airbag-vest-x-large",
+      "slug": "usg-aixplorer-airbag-vest-x",
       "category": "protective-vests",
-      "name": "USG AIXPLORER Airbag Vest X-Large",
+      "name": "USG AIXPLORER Airbag Vest X",
       "brand": "USG",
       "variants": [
         {
           "sku": "USG-AIX-SS-XL",
-          "size": null,
+          "size": "Large",
           "color": null,
           "price": 55000
-        }
-      ]
-    },
-    {
-      "slug": "usg-aixplorer-airbag-vest-x-small",
-      "category": "protective-vests",
-      "name": "USG AIXPLORER Airbag Vest X-Small",
-      "brand": "USG",
-      "variants": [
+        },
         {
           "sku": "USG-AIX-SS-XS",
-          "size": null,
+          "size": "Small",
           "color": null,
           "price": 55000
         }
       ]
     },
     {
-      "slug": "usg-back-protector-precto-dynamic-fit-large",
+      "slug": "usg-back-protector-precto-dynamic-fit",
       "category": "protective-vests",
-      "name": "USG Back Protector Precto Dynamic Fit- Large",
+      "name": "USG Back Protector Precto Dynamic Fit",
       "brand": "USG",
       "variants": [
         {
           "sku": "USG-BAPR-L",
-          "size": null,
+          "size": "Large",
           "color": null,
           "price": 12999
-        }
-      ]
-    },
-    {
-      "slug": "usg-back-protector-precto-dynamic-fit-medium",
-      "category": "protective-vests",
-      "name": "USG Back Protector Precto Dynamic Fit- Medium",
-      "brand": "USG",
-      "variants": [
+        },
         {
           "sku": "USG-BAPR-M",
-          "size": null,
+          "size": "Medium",
           "color": null,
           "price": 12999
-        }
-      ]
-    },
-    {
-      "slug": "usg-back-protector-precto-dynamic-fit-small",
-      "category": "protective-vests",
-      "name": "USG Back Protector Precto Dynamic Fit- Small",
-      "brand": "USG",
-      "variants": [
+        },
         {
           "sku": "USG-BAPR-S",
-          "size": null,
+          "size": "Small",
           "color": null,
           "price": 12999
         }
       ]
     },
     {
-      "slug": "usg-back-protector-precto-dynamic-fit-x-small",
+      "slug": "usg-back-protector-precto-dynamic-fit-x",
       "category": "protective-vests",
-      "name": "USG Back Protector Precto Dynamic Fit- X-Small",
+      "name": "USG Back Protector Precto Dynamic Fit- X",
       "brand": "USG",
       "variants": [
         {
           "sku": "USG-BAPR-XS",
-          "size": null,
+          "size": "Small",
           "color": null,
           "price": 12999
         }
       ]
     },
     {
-      "slug": "usg-back-protector-precto-dynamic-fit-xx-small",
+      "slug": "usg-back-protector-precto-dynamic-fit-xx",
       "category": "protective-vests",
-      "name": "USG Back Protector Precto Dynamic Fit- XX-Small",
+      "name": "USG Back Protector Precto Dynamic Fit- XX",
       "brand": "USG",
       "variants": [
         {
           "sku": "USG-BAPR-XXS",
-          "size": null,
+          "size": "Small",
           "color": null,
           "price": 12999
         }
@@ -31219,112 +29595,96 @@
       ]
     },
     {
-      "slug": "usg-flexi-guard-panel-body-protector-adult-medium",
+      "slug": "usg-flexi-guard-panel-body-protector-adult-protective-vests",
       "category": "protective-vests",
-      "name": "USG Flexi Guard Panel-Body Protector- Adult Medium",
+      "name": "USG Flexi Guard Panel-Body Protector- Adult",
       "brand": "USG",
       "variants": [
         {
           "sku": "USG-FLE-GUA-AM",
-          "size": null,
+          "size": "Medium",
           "color": null,
           "price": 19999
-        }
-      ]
-    },
-    {
-      "slug": "usg-flexi-guard-panel-body-protector-adult-small",
-      "category": "protective-vests",
-      "name": "USG Flexi Guard Panel-Body Protector- Adult Small",
-      "brand": "USG",
-      "variants": [
+        },
         {
           "sku": "USG-FLE-GUA-AS",
-          "size": null,
+          "size": "Small",
           "color": null,
           "price": 19999
         }
       ]
     },
     {
-      "slug": "usg-flexi-guard-panel-body-protector-adult-x-large",
+      "slug": "usg-flexi-guard-panel-body-protector-adult-x",
       "category": "protective-vests",
-      "name": "USG Flexi Guard Panel-Body Protector- Adult X-Large",
+      "name": "USG Flexi Guard Panel-Body Protector- Adult X",
       "brand": "USG",
       "variants": [
         {
           "sku": "USG-FLE-GUA-AXL",
-          "size": null,
+          "size": "Large",
           "color": null,
           "price": 19999
         }
       ]
     },
     {
-      "slug": "usg-flexi-guard-panel-body-protector-child-large",
+      "slug": "usg-flexi-guard-panel-body-protector-child-protective-vests",
       "category": "protective-vests",
-      "name": "USG Flexi Guard Panel-Body Protector- Child Large",
+      "name": "USG Flexi Guard Panel-Body Protector- Child",
       "brand": "USG",
       "variants": [
         {
           "sku": "USG-FLE-GUA-CL",
-          "size": null,
+          "size": "Large",
           "color": null,
           "price": 19999
-        }
-      ]
-    },
-    {
-      "slug": "usg-flexi-guard-panel-body-protector-child-medium",
-      "category": "protective-vests",
-      "name": "USG Flexi Guard Panel-Body Protector- Child Medium",
-      "brand": "USG",
-      "variants": [
+        },
         {
           "sku": "USG-FLE-GUA-CM",
-          "size": null,
+          "size": "Medium",
           "color": null,
           "price": 19999
         }
       ]
     },
     {
-      "slug": "usg-flexi-guard-panel-body-protector-child-x-large",
+      "slug": "usg-flexi-guard-panel-body-protector-child-x",
       "category": "protective-vests",
-      "name": "USG Flexi Guard Panel-Body Protector- Child X-Large",
+      "name": "USG Flexi Guard Panel-Body Protector- Child X",
       "brand": "USG",
       "variants": [
         {
           "sku": "USG-FLE-GUA-CXL",
-          "size": null,
+          "size": "Large",
           "color": null,
           "price": 19999
         }
       ]
     },
     {
-      "slug": "usg-flexi-guard-panel-body-protector-adult-large",
+      "slug": "usg-flexi-guard-panel-body-protector-adult-protective-vests-2",
       "category": "protective-vests",
-      "name": "USG Flexi Guard Panel-Body Protector-Adult Large",
+      "name": "USG Flexi Guard Panel-Body Protector-Adult",
       "brand": "USG",
       "variants": [
         {
           "sku": "USG-FLE-GUA-AL",
-          "size": null,
+          "size": "Large",
           "color": null,
           "price": 19999
         }
       ]
     },
     {
-      "slug": "usg-flexi-guard-panel-body-protector-child-small",
+      "slug": "usg-flexi-guard-panel-body-protector-child-protective-vests-2",
       "category": "protective-vests",
-      "name": "USG Flexi Guard Panel-Body Protector-Child Small",
+      "name": "USG Flexi Guard Panel-Body Protector-Child",
       "brand": "USG",
       "variants": [
         {
           "sku": "USG-FLE-GUA-CS",
-          "size": null,
+          "size": "Small",
           "color": null,
           "price": 19999
         }
