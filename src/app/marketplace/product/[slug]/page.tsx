@@ -2,7 +2,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import { Container } from "@/components/Container";
-import { ProductImagePlaceholder } from "@/components/ProductImagePlaceholder";
+import { ProductImage } from "@/components/ProductImage";
 import { ProductGrid } from "@/components/ProductGrid";
 import { EnquiryForm } from "@/components/EnquiryForm";
 import {
@@ -59,7 +59,7 @@ export default async function ProductPage({ params }: Props) {
 
           <div className="mt-10 grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
             <div className="lg:col-span-6">
-              <ProductImagePlaceholder product={product} size="detail" />
+              <ProductImage product={product} size="detail" />
             </div>
 
             <div className="lg:col-span-6">

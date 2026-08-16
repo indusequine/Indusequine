@@ -1,7 +1,7 @@
 import Link from "next/link";
 import type { Product } from "@/data/products";
 import { getCategory } from "@/data/products";
-import { ProductImagePlaceholder } from "@/components/ProductImagePlaceholder";
+import { ProductImage } from "@/components/ProductImage";
 
 export function ProductCard({ product }: { product: Product }) {
   const category = getCategory(product.category);
@@ -12,7 +12,7 @@ export function ProductCard({ product }: { product: Product }) {
       href={`/marketplace/product/${product.slug}`}
       className="group block border border-forest/15 bg-cream-soft hover:border-forest/40 transition-colors"
     >
-      <ProductImagePlaceholder product={product} />
+      <ProductImage product={product} />
       <div className="p-6">
         <h3 className="font-display text-xl text-forest leading-snug group-hover:text-oxblood transition-colors">
           {product.name}

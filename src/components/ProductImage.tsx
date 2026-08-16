@@ -3,12 +3,26 @@ import type { Product } from "@/data/products";
 import { getCategory } from "@/data/products";
 import { categoryTileClass } from "@/lib/categoryTileColor";
 
-type ProductImagePlaceholderProps = {
+type ProductImageProps = {
   product: Product;
   size?: "card" | "detail";
 };
 
-export function ProductImagePlaceholder({ product, size = "card" }: ProductImagePlaceholderProps) {
+export function ProductImage({ product, size = "card" }: ProductImageProps) {
+  if (product.image) {
+    return (
+      <div className="relative aspect-square overflow-hidden bg-cream-warm">
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src={product.image}
+          alt={product.name}
+          className="w-full h-full object-cover"
+          loading="lazy"
+        />
+      </div>
+    );
+  }
+
   const category = getCategory(product.category);
   const label = category?.name ?? "";
 

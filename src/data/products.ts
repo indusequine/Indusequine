@@ -1,4 +1,5 @@
 import catalogueRaw from "./catalogue.json";
+import productImages from "./product-images.json";
 
 export type Variant = {
   sku: string;
@@ -17,7 +18,7 @@ export type ProductRaw = {
   variants: Variant[];
 };
 
-export type Product = ProductRaw & { priceLabel: string };
+export type Product = ProductRaw & { priceLabel: string; image?: string };
 
 type CatalogueFile = {
   generatedAt: string;
@@ -46,10 +47,13 @@ function computePriceLabel(p: ProductRaw): string {
   return `From ${inr.format(Math.min(...known))}`;
 }
 
+const imageBySlug = productImages as Record<string, string>;
+
 export const categories: Category[] = catalogue.categories;
 export const products: Product[] = catalogue.products.map((p) => ({
   ...p,
   priceLabel: computePriceLabel(p),
+  image: imageBySlug[p.slug],
 }));
 
 const categoryBySlug = new Map(categories.map((c) => [c.slug, c]));

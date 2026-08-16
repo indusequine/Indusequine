@@ -1,0 +1,100 @@
+[
+  {
+    "slug": "samshield-alta-badia-downvest",
+    "name": "Samshield Alta Badia Downvest",
+    "match_name": "ALTA BADIA",
+    "match_image": "https://www.samshield.com/32504-large_default/alta-badia.jpg",
+    "score": 0.88
+  },
+  {
+    "slug": "samshield-breeches-adele",
+    "name": "Samshield Breeches Adele",
+    "match_name": "ADELE",
+    "match_image": "https://www.samshield.com/30752-large_default/adele.jpg",
+    "score": 0.88
+  },
+  {
+    "slug": "samshield-gloves-v-skin",
+    "name": "Samshield Gloves V-Skin",
+    "match_name": "V-SKIN",
+    "match_image": "https://www.samshield.com/10249-large_default/v-skin.webp",
+    "score": 0.88
+  },
+  {
+    "slug": "samshield-gloves-v-skin-blazon",
+    "name": "Samshield Gloves V-Skin Blazon",
+    "match_name": "V-SKIN BLAZON",
+    "match_image": "https://www.samshield.com/19739-large_default/-v-skin-blazon.webp",
+    "score": 0.88
+  },
+  {
+    "slug": "samshield-gloves-v-skin-hunter",
+    "name": "Samshield Gloves V-Skin Hunter",
+    "match_name": "V-SKIN HUNTER",
+    "match_image": "https://www.samshield.com/10244-large_default/v-skin-hunter.webp",
+    "score": 0.88
+  },
+  {
+    "slug": "samshield-gloves-v-skin-swarovski",
+    "name": "Samshield Gloves V-Skin Swarovski",
+    "match_name": "V-SKIN SWAROVSKI",
+    "match_image": "https://www.samshield.com/11517-large_default/v-skin-swarovski.webp",
+    "score": 0.88
+  },
+  {
+    "slug": "samshield-socks-balzane-cushion",
+    "name": "Samshield Socks Balzane Cushion",
+    "match_name": "BALZANE CUSHION",
+    "match_image": "https://www.samshield.com/14031-large_default/balzane-cushion.webp",
+    "score": 0.88
+  },
+  {
+    "slug": "samshield-beatrice-show-shirt",
+    "name": "Samshield Beatrice Show Shirt",
+    "match_name": "BEATRICE",
+    "match_image": "https://www.samshield.com/13869-large_default/beatrice.jpg",
+    "score": 0.76
+  },
+  {
+    "slug": "samshield-faustine-show-shirt",
+    "name": "Samshield Faustine Show Shirt",
+    "match_name": "FAUSTINE",
+    "match_image": "https://www.samshield.com/13860-large_default/faustine.jpg",
+    "score": 0.76
+  },
+  {
+    "slug": "samshield-shadowmatt-helmet-2-0",
+    "name": "Samshield Shadowmatt Helmet 2.0",
+    "match_name": "SAMSHIELD 2.0",
+    "match_image": "https://www.samshield.com/26309-large_default/samshield-20.webp",
+    "score": 0.76
+  },
+  {
+    "slug": "samshield-show-jacket-victorine",
+    "name": "Samshield Show Jacket Victorine",
+    "match_name": "VICTORINE",
+    "match_image": "https://www.samshield.com/13969-large_default/victorine.jpg",
+    "score": 0.76
+  },
+  {
+    "slug": "samshield-show-jacket-victorine-crystal-fabric",
+    "name": "Samshield Show Jacket Victorine Crystal Fabric",
+    "match_name": "VICTORINE CRYSTAL FABRIC",
+    "match_image": "https://www.samshield.com/13878-large_default/victorine-crystal-fabric.jpg",
+    "score": 0.76
+  },
+  {
+    "slug": "samshield-charles-polo-show-shirt",
+    "name": "Samshield Charles Polo Show Shirt",
+    "match_name": "CHARLES",
+    "match_image": "https://www.samshield.com/13854-large_default/charles.jpg",
+    "score": 0.64
+  },
+  {
+    "slug": "samshield-smith-polo-show-shirt",
+    "name": "Samshield Smith Polo Show Shirt",
+    "match_name": "SMITH",
+    "match_image": "https://www.samshield.com/13966-large_default/smith.jpg",
+    "score": 0.64
+  }
+]

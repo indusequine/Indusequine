@@ -1,0 +1,1041 @@
+{
+  "category:breeches": [
+    {
+      "id_product": "766",
+      "name": "MATHILDE",
+      "image": "https://www.samshield.com/13911-large_default/mathilde.jpg",
+      "url": null
+    },
+    {
+      "id_product": "768",
+      "name": "DIANE",
+      "image": "https://www.samshield.com/13923-large_default/diane.jpg",
+      "url": null
+    },
+    {
+      "id_product": "769",
+      "name": "CLARA",
+      "image": "https://www.samshield.com/20298-large_default/clara.webp",
+      "url": null
+    },
+    {
+      "id_product": "770",
+      "name": "CHLOE",
+      "image": "https://www.samshield.com/13950-large_default/chloe.jpg",
+      "url": null
+    },
+    {
+      "id_product": "772",
+      "name": "ADELE 2.0",
+      "image": "https://www.samshield.com/13953-large_default/adele-20.jpg",
+      "url": null
+    },
+    {
+      "id_product": "1965",
+      "name": "ADELE",
+      "image": "https://www.samshield.com/30752-large_default/adele.jpg",
+      "url": null
+    },
+    {
+      "id_product": "1966",
+      "name": "ALPHA COMFORT",
+      "image": "https://www.samshield.com/30803-large_default/alpha-comfort.jpg",
+      "url": null
+    },
+    {
+      "id_product": "1967",
+      "name": "AURELIE AIR",
+      "image": "https://www.samshield.com/30832-large_default/aurelie-air.jpg",
+      "url": null
+    },
+    {
+      "id_product": "1968",
+      "name": "CAPUCINE CRYSTAL FERNA",
+      "image": "https://www.samshield.com/30880-large_default/capucine-crystal-ferna.jpg",
+      "url": null
+    },
+    {
+      "id_product": "1969",
+      "name": "CELESTE",
+      "image": "https://www.samshield.com/30922-large_default/celeste.jpg",
+      "url": null
+    },
+    {
+      "id_product": "1970",
+      "name": "CHLOE METAL DOTS",
+      "image": "https://www.samshield.com/30964-large_default/chloe-metal-dots.jpg",
+      "url": null
+    },
+    {
+      "id_product": "1971",
+      "name": "CLARA AIR",
+      "image": "https://www.samshield.com/31042-large_default/clara-air.jpg",
+      "url": null
+    },
+    {
+      "id_product": "1972",
+      "name": "CLARA PREMIUM",
+      "image": "https://www.samshield.com/31093-large_default/clara-premium.jpg",
+      "url": null
+    },
+    {
+      "id_product": "1973",
+      "name": "CLARANOVA",
+      "image": "https://www.samshield.com/31194-large_default/claranova.jpg",
+      "url": null
+    },
+    {
+      "id_product": "1974",
+      "name": "DELICE CRYSTAL FERNA",
+      "image": "https://www.samshield.com/31296-large_default/delice-crystal-ferna.jpg",
+      "url": null
+    },
+    {
+      "id_product": "1975",
+      "name": "DIANE",
+      "image": "https://www.samshield.com/31347-large_default/diane.jpg",
+      "url": null
+    },
+    {
+      "id_product": "1978",
+      "name": "OMEGA",
+      "image": "https://www.samshield.com/31458-large_default/omega.jpg",
+      "url": null
+    },
+    {
+      "id_product": "1979",
+      "name": "OMEGA SPORT",
+      "image": "https://www.samshield.com/31505-large_default/omega-sport.jpg",
+      "url": null
+    },
+    {
+      "id_product": "1981",
+      "name": "SAKINA CRYSTAL FERNA",
+      "image": "https://www.samshield.com/31595-large_default/sakina-crystal-ferna.jpg",
+      "url": null
+    },
+    {
+      "id_product": "1982",
+      "name": "TALLIA COMFORT",
+      "image": "https://www.samshield.com/31619-large_default/tallia-comfort.jpg",
+      "url": null
+    }
+  ],
+  "category:jacket": [
+    {
+      "id_product": "763",
+      "name": "VICTORINE CRYSTAL FABRIC",
+      "image": "https://www.samshield.com/13878-large_default/victorine-crystal-fabric.jpg",
+      "url": null
+    },
+    {
+      "id_product": "764",
+      "name": "FRAC CRYSTAL FABRIC",
+      "image": "https://www.samshield.com/13884-large_default/frac-crystal-fabric.jpg",
+      "url": null
+    },
+    {
+      "id_product": "780",
+      "name": "VICTORINE",
+      "image": "https://www.samshield.com/13969-large_default/victorine.jpg",
+      "url": null
+    },
+    {
+      "id_product": "1983",
+      "name": "FRAC AIR",
+      "image": "https://www.samshield.com/31655-large_default/frac-air.jpg",
+      "url": null
+    },
+    {
+      "id_product": "1984",
+      "name": "FRAC AIR PREMIUM",
+      "image": "https://www.samshield.com/31667-large_default/frac-air-premium.jpg",
+      "url": null
+    },
+    {
+      "id_product": "1985",
+      "name": "FRAC CRYSTAL FABRIC",
+      "image": "https://www.samshield.com/31676-large_default/frac-crystal-fabric.jpg",
+      "url": null
+    },
+    {
+      "id_product": "1986",
+      "name": "FRAC CRYSTAL FERNA",
+      "image": "https://www.samshield.com/31685-large_default/frac-crystal-ferna.jpg",
+      "url": null
+    },
+    {
+      "id_product": "1988",
+      "name": "FRAC WELLINGTON",
+      "image": "https://www.samshield.com/31703-large_default/frac-wellington.jpg",
+      "url": null
+    },
+    {
+      "id_product": "1989",
+      "name": "FRAC WELLINGTON CRYSTAL",
+      "image": "https://www.samshield.com/31709-large_default/frac-wellington-crystal.jpg",
+      "url": null
+    },
+    {
+      "id_product": "1990",
+      "name": "SHORT FRAC CRYSTAL FABRIC",
+      "image": "https://www.samshield.com/31715-large_default/short-frac-crystal-fabric.jpg",
+      "url": null
+    },
+    {
+      "id_product": "1992",
+      "name": "ALIX",
+      "image": "https://www.samshield.com/31727-large_default/alix.jpg",
+      "url": null
+    },
+    {
+      "id_product": "1993",
+      "name": "ALIX AIR",
+      "image": "https://www.samshield.com/31739-large_default/alix-air.jpg",
+      "url": null
+    },
+    {
+      "id_product": "1996",
+      "name": "RAFAELLA CRYSTAL FABRIC",
+      "image": "https://www.samshield.com/31778-large_default/rafaella-crystal-fabric.jpg",
+      "url": null
+    },
+    {
+      "id_product": "1997",
+      "name": "VICTORINA",
+      "image": "https://www.samshield.com/31796-large_default/victorina.jpg",
+      "url": null
+    },
+    {
+      "id_product": "1998",
+      "name": "VICTORINA SPORT",
+      "image": "https://www.samshield.com/31817-large_default/victorina-sport.jpg",
+      "url": null
+    },
+    {
+      "id_product": "1999",
+      "name": "VICTORINE CRYSTAL FABRIC",
+      "image": "https://www.samshield.com/31829-large_default/victorine-crystal-fabric.jpg",
+      "url": null
+    },
+    {
+      "id_product": "2000",
+      "name": "VICTORINE CRYSTAL FERNA",
+      "image": "https://www.samshield.com/31859-large_default/victorine-crystal-ferna.jpg",
+      "url": null
+    },
+    {
+      "id_product": "2001",
+      "name": "VICTORY PREMIUM",
+      "image": "https://www.samshield.com/31877-large_default/victory-premium.jpg",
+      "url": null
+    },
+    {
+      "id_product": "2002",
+      "name": "WELLINGTON",
+      "image": "https://www.samshield.com/31907-large_default/wellington.jpg",
+      "url": null
+    },
+    {
+      "id_product": "2003",
+      "name": "WELLINGTON CRYSTAL",
+      "image": "https://www.samshield.com/31913-large_default/wellington-crystal.jpg",
+      "url": null
+    }
+  ],
+  "category:shirt": [
+    {
+      "id_product": "754",
+      "name": "JEANNE",
+      "image": "https://www.samshield.com/13836-large_default/jeanne.jpg",
+      "url": null
+    },
+    {
+      "id_product": "755",
+      "name": "APOLLINE",
+      "image": "https://www.samshield.com/13845-large_default/apolline.jpg",
+      "url": null
+    },
+    {
+      "id_product": "758",
+      "name": "FAUSTINE",
+      "image": "https://www.samshield.com/13860-large_default/faustine.jpg",
+      "url": null
+    },
+    {
+      "id_product": "760",
+      "name": "BEATRICE",
+      "image": "https://www.samshield.com/13869-large_default/beatrice.jpg",
+      "url": null
+    },
+    {
+      "id_product": "761",
+      "name": "ALOISE",
+      "image": "https://www.samshield.com/13872-large_default/aloise.jpg",
+      "url": null
+    },
+    {
+      "id_product": "2009",
+      "name": "ADELINE BOREAL",
+      "image": "https://www.samshield.com/31968-large_default/adeline-boreal.jpg",
+      "url": null
+    },
+    {
+      "id_product": "2010",
+      "name": "ALOISE",
+      "image": "https://www.samshield.com/32939-large_default/aloise.webp",
+      "url": null
+    },
+    {
+      "id_product": "2011",
+      "name": "ANNE-GAELLE",
+      "image": "https://www.samshield.com/32019-large_default/anne-gaelle.jpg",
+      "url": null
+    },
+    {
+      "id_product": "2012",
+      "name": "CALVIN",
+      "image": "https://www.samshield.com/32971-large_default/calvin.webp",
+      "url": null
+    },
+    {
+      "id_product": "2013",
+      "name": "CARLOTTA",
+      "image": "https://www.samshield.com/32055-large_default/carlotta.jpg",
+      "url": null
+    },
+    {
+      "id_product": "2016",
+      "name": "EIDEN",
+      "image": "https://www.samshield.com/32085-large_default/eiden.jpg",
+      "url": null
+    },
+    {
+      "id_product": "2017",
+      "name": "ELSA BOREAL",
+      "image": "https://www.samshield.com/32094-large_default/elsa-boreal.jpg",
+      "url": null
+    },
+    {
+      "id_product": "2018",
+      "name": "GRETTA METAL DOTS",
+      "image": "https://www.samshield.com/32100-large_default/gretta-metal-dots.jpg",
+      "url": null
+    },
+    {
+      "id_product": "2019",
+      "name": "LEA CRYSTAL FERNA",
+      "image": "https://www.samshield.com/32130-large_default/lea-crystal-ferna.jpg",
+      "url": null
+    },
+    {
+      "id_product": "2020",
+      "name": "LOU",
+      "image": "https://www.samshield.com/32154-large_default/lou.jpg",
+      "url": null
+    },
+    {
+      "id_product": "2021",
+      "name": "LOUISON AIR",
+      "image": "https://www.samshield.com/32190-large_default/louison-air.jpg",
+      "url": null
+    },
+    {
+      "id_product": "2022",
+      "name": "LUCIA METAL DOTS",
+      "image": "https://www.samshield.com/32214-large_default/lucia-metal-dots.jpg",
+      "url": null
+    },
+    {
+      "id_product": "2023",
+      "name": "MARINA",
+      "image": "https://www.samshield.com/32241-large_default/marina.jpg",
+      "url": null
+    },
+    {
+      "id_product": "2024",
+      "name": "PHILAE AIR",
+      "image": "https://www.samshield.com/32244-large_default/philae-air.jpg",
+      "url": null
+    },
+    {
+      "id_product": "2025",
+      "name": "ROXANNE PREMIUM",
+      "image": "https://www.samshield.com/32271-large_default/roxanne-premium.jpg",
+      "url": null
+    },
+    {
+      "id_product": "2026",
+      "name": "ROXY PREMIUM",
+      "image": "https://www.samshield.com/32298-large_default/roxy-premium.jpg",
+      "url": null
+    },
+    {
+      "id_product": "2027",
+      "name": "ROXY PREMIUM BOREAL",
+      "image": "https://www.samshield.com/32337-large_default/roxy-premium-boreal.jpg",
+      "url": null
+    },
+    {
+      "id_product": "2029",
+      "name": "VITA",
+      "image": "https://www.samshield.com/32364-large_default/vita.jpg",
+      "url": null
+    },
+    {
+      "id_product": "2081",
+      "name": "ALOISE WHITE",
+      "image": "https://www.samshield.com/32981-large_default/aloise-white.jpg",
+      "url": null
+    },
+    {
+      "id_product": "2082",
+      "name": "ANNE-GAELLE WHITE",
+      "image": "https://www.samshield.com/33373-large_default/anne-gaelle-white.webp",
+      "url": null
+    },
+    {
+      "id_product": "2083",
+      "name": "CALVIN WHITE",
+      "image": "https://www.samshield.com/33055-large_default/calvin-white.jpg",
+      "url": null
+    },
+    {
+      "id_product": "2084",
+      "name": "CARLOTTA WHITE",
+      "image": "https://www.samshield.com/33059-large_default/carlotta-white.jpg",
+      "url": null
+    },
+    {
+      "id_product": "2087",
+      "name": "EIDEN WHITE",
+      "image": "https://www.samshield.com/33092-large_default/eiden-white.jpg",
+      "url": null
+    },
+    {
+      "id_product": "2088",
+      "name": "GRETTA METAL DOTS WHITE",
+      "image": "https://www.samshield.com/33122-large_default/gretta-metal-dots-white.jpg",
+      "url": null
+    },
+    {
+      "id_product": "2089",
+      "name": "LEA CRYSTAL FERNA WHITE",
+      "image": "https://www.samshield.com/33146-large_default/lea-crystal-ferna-white.jpg",
+      "url": null
+    },
+    {
+      "id_product": "2090",
+      "name": "LOU WHITE",
+      "image": "https://www.samshield.com/33182-large_default/lou-white.jpg",
+      "url": null
+    },
+    {
+      "id_product": "2091",
+      "name": "LOUISON AIR WHITE",
+      "image": "https://www.samshield.com/33206-large_default/louison-air-white.jpg",
+      "url": null
+    },
+    {
+      "id_product": "2092",
+      "name": "LUCIA METAL DOTS WHITE",
+      "image": "https://www.samshield.com/33233-large_default/lucia-metal-dots-white.jpg",
+      "url": null
+    },
+    {
+      "id_product": "2093",
+      "name": "PHILAE AIR WHITE",
+      "image": "https://www.samshield.com/33260-large_default/philae-air-white.jpg",
+      "url": null
+    },
+    {
+      "id_product": "2094",
+      "name": "ROXANNE PREMIUM WHITE",
+      "image": "https://www.samshield.com/33287-large_default/roxanne-premium-white.jpg",
+      "url": null
+    },
+    {
+      "id_product": "2095",
+      "name": "ROXY PREMIUM BOREAL WHITE",
+      "image": "https://www.samshield.com/33302-large_default/roxy-premium-boreal-white.jpg",
+      "url": null
+    },
+    {
+      "id_product": "2096",
+      "name": "ROXY PREMIUM WHITE",
+      "image": "https://www.samshield.com/33344-large_default/roxy-premium-white.jpg",
+      "url": null
+    },
+    {
+      "id_product": "2098",
+      "name": "VITA WHITE",
+      "image": "https://www.samshield.com/33368-large_default/vita-white.jpg",
+      "url": null
+    }
+  ],
+  "category:pull-over-sweat-shirt": [
+    {
+      "id_product": "2037",
+      "name": "LIDY",
+      "image": "https://www.samshield.com/32408-large_default/lidy.jpg",
+      "url": null
+    },
+    {
+      "id_product": "2038",
+      "name": "LISA TWISTED",
+      "image": "https://www.samshield.com/32423-large_default/lisa-twisted.jpg",
+      "url": null
+    },
+    {
+      "id_product": "2039",
+      "name": "PHOEBE",
+      "image": "https://www.samshield.com/32441-large_default/phoebe.jpg",
+      "url": null
+    },
+    {
+      "id_product": "2040",
+      "name": "PHOEBE CRYSTAL FERNA",
+      "image": "https://www.samshield.com/32453-large_default/phoebe-crystal-ferna.jpg",
+      "url": null
+    },
+    {
+      "id_product": "2041",
+      "name": "ZOE",
+      "image": "https://www.samshield.com/32465-large_default/zoe.jpg",
+      "url": null
+    },
+    {
+      "id_product": "2055",
+      "name": "BASMA",
+      "image": "https://www.samshield.com/32573-large_default/basma.jpg",
+      "url": null
+    },
+    {
+      "id_product": "2057",
+      "name": "CAMILLA",
+      "image": "https://www.samshield.com/32582-large_default/camilla.jpg",
+      "url": null
+    },
+    {
+      "id_product": "2058",
+      "name": "CARMEN",
+      "image": "https://www.samshield.com/32884-large_default/carmen.webp",
+      "url": null
+    },
+    {
+      "id_product": "2078",
+      "name": "SAMIA",
+      "image": "https://www.samshield.com/32832-large_default/samia.jpg",
+      "url": null
+    }
+  ],
+  "category:t-shirt": [
+    {
+      "id_product": "2034",
+      "name": "MARYLIN",
+      "image": "https://www.samshield.com/32387-large_default/marylin.jpg",
+      "url": null
+    },
+    {
+      "id_product": "2070",
+      "name": "SYLVIA",
+      "image": "https://www.samshield.com/32788-large_default/sylvia.jpg",
+      "url": null
+    },
+    {
+      "id_product": "2071",
+      "name": "ARIANA",
+      "image": "https://www.samshield.com/32797-large_default/ariana.jpg",
+      "url": null
+    },
+    {
+      "id_product": "2072",
+      "name": "STELLA",
+      "image": "https://www.samshield.com/32809-large_default/stella.jpg",
+      "url": null
+    }
+  ],
+  "category:bomber-down-vest": [
+    {
+      "id_product": "781",
+      "name": "VAL D&#039;ISERE",
+      "image": "https://www.samshield.com/13975-large_default/val-d-isere.jpg",
+      "url": null
+    },
+    {
+      "id_product": "2043",
+      "name": "DAVOS",
+      "image": "https://www.samshield.com/32480-large_default/davos.jpg",
+      "url": null
+    },
+    {
+      "id_product": "2044",
+      "name": "DAVOS ICE",
+      "image": "https://www.samshield.com/32495-large_default/davos-ice.jpg",
+      "url": null
+    },
+    {
+      "id_product": "2045",
+      "name": "ALTA BADIA",
+      "image": "https://www.samshield.com/32504-large_default/alta-badia.jpg",
+      "url": null
+    },
+    {
+      "id_product": "2046",
+      "name": "ALTA BADIA ICE",
+      "image": "https://www.samshield.com/32519-large_default/alta-badia-ice.jpg",
+      "url": null
+    }
+  ],
+  "category:parka-softshell-raincoat": [
+    {
+      "id_product": "2048",
+      "name": "DELFINA",
+      "image": "https://www.samshield.com/32859-large_default/delfina.webp",
+      "url": null
+    },
+    {
+      "id_product": "2049",
+      "name": "ELFIDA",
+      "image": "https://www.samshield.com/32537-large_default/elfida.jpg",
+      "url": null
+    },
+    {
+      "id_product": "2050",
+      "name": "INES",
+      "image": "https://www.samshield.com/32869-large_default/ines.webp",
+      "url": null
+    },
+    {
+      "id_product": "2051",
+      "name": "LINA",
+      "image": "https://www.samshield.com/32543-large_default/lina.jpg",
+      "url": null
+    },
+    {
+      "id_product": "2052",
+      "name": "LIVIANA",
+      "image": "https://www.samshield.com/32552-large_default/liviana.jpg",
+      "url": null
+    },
+    {
+      "id_product": "2054",
+      "name": "VICTORIA CRYSTAL FERNA",
+      "image": "https://www.samshield.com/32570-large_default/victoria-crystal-ferna.jpg",
+      "url": null
+    }
+  ],
+  "category:accessoire": [
+    {
+      "id_product": "774",
+      "name": "BALZANE AIRFLOW SWAROVSKI",
+      "image": "https://www.samshield.com/13956-large_default/balzane-airflow-swarovski.jpg",
+      "url": null
+    },
+    {
+      "id_product": "2004",
+      "name": "PLASTRON CRYSTAL FABRIC",
+      "image": "https://www.samshield.com/31919-large_default/plastron-crystal-fabric.jpg",
+      "url": null
+    },
+    {
+      "id_product": "2005",
+      "name": "PLASTRON CRYSTAL FABRIC TRIANGLE",
+      "image": "https://www.samshield.com/31928-large_default/plastron-crystal-fabric-triangle.jpg",
+      "url": null
+    },
+    {
+      "id_product": "2006",
+      "name": "PLASTRON CRYSTAL FERNA",
+      "image": "https://www.samshield.com/31938-large_default/plastron-crystal-ferna.jpg",
+      "url": null
+    },
+    {
+      "id_product": "2007",
+      "name": "PLASTRON PREMIUM",
+      "image": "https://www.samshield.com/31948-large_default/plastron-premium.jpg",
+      "url": null
+    },
+    {
+      "id_product": "2008",
+      "name": "PLASTRON PREMIUM RAIN",
+      "image": "https://www.samshield.com/31958-large_default/plastron-premium-rain.jpg",
+      "url": null
+    },
+    {
+      "id_product": "2074",
+      "name": "BALZANE GLITTER",
+      "image": "https://www.samshield.com/32824-large_default/balzane-glitter.jpg",
+      "url": null
+    },
+    {
+      "id_product": "2075",
+      "name": "BALZANE CRYSTAL BLAZON",
+      "image": "https://www.samshield.com/32826-large_default/balzane-crystal-blazon.jpg",
+      "url": null
+    },
+    {
+      "id_product": "2076",
+      "name": "SADIE",
+      "image": "https://www.samshield.com/32927-large_default/sadie.webp",
+      "url": null
+    },
+    {
+      "id_product": "2077",
+      "name": "SASHA",
+      "image": "https://www.samshield.com/32831-large_default/sasha.jpg",
+      "url": null
+    },
+    {
+      "id_product": "2079",
+      "name": "BALZANE SEAMLESS BLAZON",
+      "image": "https://www.samshield.com/32841-large_default/balzane-seamless-blazon.jpg",
+      "url": null
+    },
+    {
+      "id_product": "2080",
+      "name": "BALZANE TRIO",
+      "image": "https://www.samshield.com/32850-large_default/balzane-trio.jpg",
+      "url": null
+    }
+  ],
+  "category:gloves": [
+    {
+      "id_product": "349",
+      "name": "GLOVES WARMERS",
+      "image": "https://www.samshield.com/11535-large_default/gloves-warmers.webp",
+      "url": null
+    },
+    {
+      "id_product": "473",
+      "name": "V-SKIN",
+      "image": "https://www.samshield.com/10249-large_default/v-skin.webp",
+      "url": null
+    },
+    {
+      "id_product": "1040",
+      "name": "V-SKIN BLAZON",
+      "image": "https://www.samshield.com/19739-large_default/-v-skin-blazon.webp",
+      "url": null
+    },
+    {
+      "id_product": "474",
+      "name": "V-SKIN HUNTER",
+      "image": "https://www.samshield.com/10244-large_default/v-skin-hunter.webp",
+      "url": null
+    },
+    {
+      "id_product": "1039",
+      "name": "V-SKIN HUNTER BLAZON",
+      "image": "https://www.samshield.com/19738-large_default/v-skin-hunter-blazon.webp",
+      "url": null
+    },
+    {
+      "id_product": "475",
+      "name": "V-SKIN SWAROVSKI",
+      "image": "https://www.samshield.com/11517-large_default/v-skin-swarovski.webp",
+      "url": null
+    }
+  ],
+  "category:horsewear": [
+    {
+      "id_product": "1837",
+      "name": "FLYSHIELD",
+      "image": "https://www.samshield.com/28455-large_default/flyshield.webp",
+      "url": null
+    },
+    {
+      "id_product": "1841",
+      "name": "SHIELD&#039;RUP STIRRUPS",
+      "image": "https://www.samshield.com/28552-large_default/shield-rup-stirrups.webp",
+      "url": null
+    },
+    {
+      "id_product": "1836",
+      "name": "SAMSHIELD SPINESHIELD",
+      "image": "https://www.samshield.com/28432-large_default/samshield-spineshield.webp",
+      "url": null
+    }
+  ],
+  "category:bags": [
+    {
+      "id_product": "2099",
+      "name": "PROTECTION BAG",
+      "image": "https://www.samshield.com/33374-large_default/protection-bag.jpg",
+      "url": null
+    },
+    {
+      "id_product": "1847",
+      "name": "PROTECTION BAG",
+      "image": "https://www.samshield.com/28623-large_default/protection-bag.webp",
+      "url": null
+    },
+    {
+      "id_product": "1843",
+      "name": "ICONPACK",
+      "image": "https://www.samshield.com/28585-large_default/iconpack.webp",
+      "url": null
+    }
+  ],
+  "search:helmet": [
+    {
+      "id_product": "1847",
+      "name": "PROTECTION BAG",
+      "image": "https://www.samshield.com/28623-large_default/protection-bag.webp",
+      "url": null
+    },
+    {
+      "id_product": "2099",
+      "name": "PROTECTION BAG",
+      "image": "https://www.samshield.com/33374-large_default/protection-bag.jpg",
+      "url": null
+    },
+    {
+      "id_product": "1831",
+      "name": "SAMSHIELD XJ",
+      "image": "https://www.samshield.com/26299-large_default/samshield-xj.webp",
+      "url": null
+    },
+    {
+      "id_product": "1832",
+      "name": "SAMSHIELD XJ MISS",
+      "image": "https://www.samshield.com/26304-large_default/samshield-xj-miss.webp",
+      "url": null
+    },
+    {
+      "id_product": "1833",
+      "name": "SAMSHIELD 2.0",
+      "image": "https://www.samshield.com/26309-large_default/samshield-20.webp",
+      "url": null
+    },
+    {
+      "id_product": "1834",
+      "name": "MISS SAMSHIELD 2.0",
+      "image": "https://www.samshield.com/26391-large_default/miss-samshield-20.webp",
+      "url": null
+    },
+    {
+      "id_product": "2049",
+      "name": "ELFIDA",
+      "image": "https://www.samshield.com/32537-large_default/elfida.jpg",
+      "url": null
+    },
+    {
+      "id_product": "1838",
+      "name": "SAMSHIELD 1.0",
+      "image": "https://www.samshield.com/28479-large_default/samshield-10.webp",
+      "url": null
+    },
+    {
+      "id_product": "1839",
+      "name": "SAMSHIELD 1.0 MISS",
+      "image": "https://www.samshield.com/28521-large_default/samshield-10-miss.webp",
+      "url": null
+    },
+    {
+      "id_product": "1840",
+      "name": "copy of SAMSHIELD XJ",
+      "image": "https://www.samshield.com/28541-large_default/samshield-xj.webp",
+      "url": null
+    },
+    {
+      "id_product": "1843",
+      "name": "ICONPACK",
+      "image": "https://www.samshield.com/28585-large_default/iconpack.webp",
+      "url": null
+    }
+  ],
+  "search:socks": [
+    {
+      "id_product": "2080",
+      "name": "BALZANE TRIO",
+      "image": "https://www.samshield.com/32850-large_default/balzane-trio.jpg",
+      "url": null
+    },
+    {
+      "id_product": "774",
+      "name": "BALZANE AIRFLOW SWAROVSKI",
+      "image": "https://www.samshield.com/13956-large_default/balzane-airflow-swarovski.jpg",
+      "url": null
+    },
+    {
+      "id_product": "775",
+      "name": "BALZANE AIRFLOW PRINT",
+      "image": "https://www.samshield.com/13959-large_default/balzane-airflow-print.jpg",
+      "url": null
+    },
+    {
+      "id_product": "776",
+      "name": "BALZANE CUSHION",
+      "image": "https://www.samshield.com/14031-large_default/balzane-cushion.webp",
+      "url": null
+    },
+    {
+      "id_product": "777",
+      "name": "BALZANE SOFT PRINT",
+      "image": "https://www.samshield.com/13960-large_default/balzane-soft-print.jpg",
+      "url": null
+    },
+    {
+      "id_product": "778",
+      "name": "BALZANE SOFT GLITTER",
+      "image": "https://www.samshield.com/13963-large_default/balzane-soft-glitter.jpg",
+      "url": null
+    },
+    {
+      "id_product": "779",
+      "name": "TIE",
+      "image": "https://www.samshield.com/13965-large_default/tie.jpg",
+      "url": null
+    },
+    {
+      "id_product": "2079",
+      "name": "BALZANE SEAMLESS BLAZON",
+      "image": "https://www.samshield.com/32841-large_default/balzane-seamless-blazon.jpg",
+      "url": null
+    },
+    {
+      "id_product": "1966",
+      "name": "ALPHA COMFORT",
+      "image": "https://www.samshield.com/30803-large_default/alpha-comfort.jpg",
+      "url": null
+    },
+    {
+      "id_product": "1970",
+      "name": "CHLOE METAL DOTS",
+      "image": "https://www.samshield.com/30964-large_default/chloe-metal-dots.jpg",
+      "url": null
+    },
+    {
+      "id_product": "1971",
+      "name": "CLARA AIR",
+      "image": "https://www.samshield.com/31042-large_default/clara-air.jpg",
+      "url": null
+    },
+    {
+      "id_product": "1979",
+      "name": "OMEGA SPORT",
+      "image": "https://www.samshield.com/31505-large_default/omega-sport.jpg",
+      "url": null
+    }
+  ],
+  "search:tie": [
+    {
+      "id_product": "779",
+      "name": "TIE",
+      "image": "https://www.samshield.com/13965-large_default/tie.jpg",
+      "url": null
+    },
+    {
+      "id_product": "2031",
+      "name": "WOVEN TIE",
+      "image": "https://www.samshield.com/32377-large_default/woven-tie.jpg",
+      "url": null
+    },
+    {
+      "id_product": "2083",
+      "name": "CALVIN WHITE",
+      "image": "https://www.samshield.com/33055-large_default/calvin-white.jpg",
+      "url": null
+    },
+    {
+      "id_product": "2085",
+      "name": "COME WHITE",
+      "image": "https://www.samshield.com/33071-large_default/come-white.jpg",
+      "url": null
+    },
+    {
+      "id_product": "2086",
+      "name": "CORENTIN WHITE",
+      "image": "https://www.samshield.com/33083-large_default/corentin-white.jpg",
+      "url": null
+    },
+    {
+      "id_product": "2097",
+      "name": "SMITH WHITE",
+      "image": "https://www.samshield.com/33356-large_default/smith-white.jpg",
+      "url": null
+    },
+    {
+      "id_product": "757",
+      "name": "CHARLES",
+      "image": "https://www.samshield.com/13854-large_default/charles.jpg",
+      "url": null
+    },
+    {
+      "id_product": "762",
+      "name": "SMITH",
+      "image": "https://www.samshield.com/13966-large_default/smith.jpg",
+      "url": null
+    },
+    {
+      "id_product": "1837",
+      "name": "FLYSHIELD",
+      "image": "https://www.samshield.com/28455-large_default/flyshield.webp",
+      "url": null
+    },
+    {
+      "id_product": "2012",
+      "name": "CALVIN",
+      "image": "https://www.samshield.com/32971-large_default/calvin.webp",
+      "url": null
+    },
+    {
+      "id_product": "2014",
+      "name": "COME",
+      "image": "https://www.samshield.com/32061-large_default/come.jpg",
+      "url": null
+    },
+    {
+      "id_product": "2015",
+      "name": "CORENTIN",
+      "image": "https://www.samshield.com/32073-large_default/corentin.jpg",
+      "url": null
+    }
+  ],
+  "search:cap": [
+    {
+      "id_product": "1968",
+      "name": "CAPUCINE CRYSTAL FERNA",
+      "image": "https://www.samshield.com/30880-large_default/capucine-crystal-ferna.jpg",
+      "url": null
+    },
+    {
+      "id_product": "2076",
+      "name": "SADIE",
+      "image": "https://www.samshield.com/32927-large_default/sadie.webp",
+      "url": null
+    },
+    {
+      "id_product": "2077",
+      "name": "SASHA",
+      "image": "https://www.samshield.com/32831-large_default/sasha.jpg",
+      "url": null
+    },
+    {
+      "id_product": "1847",
+      "name": "PROTECTION BAG",
+      "image": "https://www.samshield.com/28623-large_default/protection-bag.webp",
+      "url": null
+    },
+    {
+      "id_product": "1837",
+      "name": "FLYSHIELD",
+      "image": "https://www.samshield.com/28455-large_default/flyshield.webp",
+      "url": null
+    },
+    {
+      "id_product": "2048",
+      "name": "DELFINA",
+      "image": "https://www.samshield.com/32859-large_default/delfina.webp",
+      "url": null
+    },
+    {
+      "id_product": "2049",
+      "name": "ELFIDA",
+      "image": "https://www.samshield.com/32537-large_default/elfida.jpg",
+      "url": null
+    }
+  ],
+  "search:key chain": []
+}
