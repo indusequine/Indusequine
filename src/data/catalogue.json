@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-16T17:02:42.692981+05:30",
+  "generatedAt": "2026-08-16T17:09:27.818346+05:30",
   "sourceFile": "Tack-Shop_Inventory-List_13AUG26.xlsx",
   "categories": [
     {
@@ -5737,9 +5737,9 @@
       ]
     },
     {
-      "slug": "elt-ladies-orelie-riding-leggings-deep-blue-d36-in26",
+      "slug": "elt-ladies-orelie-riding-leggings",
       "category": "breeches-and-leggings",
-      "name": "ELT Ladies Orelie Riding Leggings-Deep Blue/D36/IN26",
+      "name": "ELT Ladies Orelie Riding Leggings",
       "brand": null,
       "variants": [
         {
@@ -5747,103 +5747,47 @@
           "size": null,
           "color": null,
           "price": 12999
-        }
-      ]
-    },
-    {
-      "slug": "elt-ladies-orelie-riding-leggings-deep-blue-d38-in28",
-      "category": "breeches-and-leggings",
-      "name": "ELT Ladies Orelie Riding Leggings-Deep Blue/D38/IN28",
-      "brand": null,
-      "variants": [
+        },
         {
           "sku": "ELT-LAD-ORLIRDLEG-DEEP-38-IN28",
           "size": null,
           "color": null,
           "price": 12999
-        }
-      ]
-    },
-    {
-      "slug": "elt-ladies-orelie-riding-leggings-deep-blue-d40-in30",
-      "category": "breeches-and-leggings",
-      "name": "ELT Ladies Orelie Riding Leggings-Deep Blue/D40/IN30",
-      "brand": null,
-      "variants": [
+        },
         {
           "sku": "ELT-LAD-ORLIRDLEG-DEEP-40-IN30",
           "size": null,
           "color": null,
           "price": 12999
-        }
-      ]
-    },
-    {
-      "slug": "elt-ladies-orelie-riding-leggings-deep-blue-d42-in32",
-      "category": "breeches-and-leggings",
-      "name": "ELT Ladies Orelie Riding Leggings-Deep Blue/D42/ IN32",
-      "brand": null,
-      "variants": [
+        },
         {
           "sku": "ELT-LAD-ORLIRDLEG-DEEP-42-IN32",
           "size": null,
           "color": null,
           "price": 12999
-        }
-      ]
-    },
-    {
-      "slug": "elt-ladies-orelie-riding-leggings-white-d36-in26",
-      "category": "breeches-and-leggings",
-      "name": "ELT Ladies Orelie Riding Leggings-White/D36/IN26",
-      "brand": null,
-      "variants": [
+        },
         {
           "sku": "ELT-LAD-ORLIRDLEG-WHIT-36-IN26",
           "size": null,
-          "color": null,
+          "color": "White",
           "price": 12999
-        }
-      ]
-    },
-    {
-      "slug": "elt-ladies-orelie-riding-leggings-white-d38-in28",
-      "category": "breeches-and-leggings",
-      "name": "ELT Ladies Orelie Riding Leggings-White/D38/IN28",
-      "brand": null,
-      "variants": [
+        },
         {
           "sku": "ELT-LAD-ORLIRDLEG-WHIT-38-IN28",
           "size": null,
-          "color": null,
+          "color": "White",
           "price": 12999
-        }
-      ]
-    },
-    {
-      "slug": "elt-ladies-orelie-riding-leggings-white-d40-in30",
-      "category": "breeches-and-leggings",
-      "name": "ELT Ladies Orelie Riding Leggings-White/D40/IN30",
-      "brand": null,
-      "variants": [
+        },
         {
           "sku": "ELT-LAD-ORLIRDLEG-WHIT-40-IN",
           "size": null,
-          "color": null,
+          "color": "White",
           "price": 12999
-        }
-      ]
-    },
-    {
-      "slug": "elt-ladies-orelie-riding-leggings-white-d42-in32",
-      "category": "breeches-and-leggings",
-      "name": "ELT Ladies Orelie Riding Leggings-White/D42/IN32",
-      "brand": null,
-      "variants": [
+        },
         {
           "sku": "ELT-LAD-ORLIRDLEG-WHIT-42-IN32",
           "size": null,
-          "color": null,
+          "color": "White",
           "price": 12999
         }
       ]
@@ -5971,9 +5915,9 @@
       ]
     },
     {
-      "slug": "elt-men-s-breeches-marc-silicone-dr46-in32",
+      "slug": "elt-men-s-breeches",
       "category": "breeches-and-leggings",
-      "name": "ELT Men's Breeches- Marc Silicone/DR46/IN32",
+      "name": "ELT Men's Breeches",
       "brand": null,
       "variants": [
         {
@@ -5987,15 +5931,7 @@
           "size": null,
           "color": "White",
           "price": 15749
-        }
-      ]
-    },
-    {
-      "slug": "elt-men-s-breeches-marc-silicone-dr48-in34",
-      "category": "breeches-and-leggings",
-      "name": "ELT Men's Breeches- Marc Silicone/DR48/IN34",
-      "brand": null,
-      "variants": [
+        },
         {
           "sku": "ELT-MNSBRCH-MARC-48-BLA-IN34",
           "size": null,
@@ -6007,29 +5943,13 @@
           "size": null,
           "color": "White",
           "price": 15749
-        }
-      ]
-    },
-    {
-      "slug": "elt-men-s-breeches-matteo-classic-d46-in32",
-      "category": "breeches-and-leggings",
-      "name": "ELT Men's Breeches-Matteo Classic/D46/IN32",
-      "brand": null,
-      "variants": [
+        },
         {
           "sku": "ELT-MNSBRCH-MATTE-46-BLA-IN32",
           "size": null,
           "color": "Black",
           "price": 15499
-        }
-      ]
-    },
-    {
-      "slug": "elt-men-s-breeches-matteo-classic-d48-in34",
-      "category": "breeches-and-leggings",
-      "name": "ELT Men's Breeches-Matteo Classic/D48/IN34",
-      "brand": null,
-      "variants": [
+        },
         {
           "sku": "ELT-MNSBRCH-MATTE-48-BLA-IN34",
           "size": null,
@@ -6039,9 +5959,9 @@
       ]
     },
     {
-      "slug": "elt-mens-breeches-mailo-silicone-knee-d46-in32",
+      "slug": "elt-mens-breeches",
       "category": "breeches-and-leggings",
-      "name": "ELT Mens Breeches-Mailo Silicone Knee/D46/IN32",
+      "name": "ELT Mens Breeches",
       "brand": null,
       "variants": [
         {
@@ -6051,33 +5971,17 @@
           "price": 13999
         },
         {
+          "sku": "ELT-MNSBRCH-MAILO-46-DEEP-IN32",
+          "size": null,
+          "color": null,
+          "price": 13999
+        },
+        {
           "sku": "ELT-MNSBRCH-MAILO-46-WHIT-IN32",
           "size": null,
           "color": "White",
           "price": 13999
-        }
-      ]
-    },
-    {
-      "slug": "elt-mens-breeches-mailo-silicone-knee-d46-in32-deep",
-      "category": "breeches-and-leggings",
-      "name": "ELT Mens Breeches-Mailo Silicone Knee/D46/IN32/Deep",
-      "brand": null,
-      "variants": [
-        {
-          "sku": "ELT-MNSBRCH-MAILO-46-DEEP-IN32",
-          "size": null,
-          "color": "Blue",
-          "price": 13999
-        }
-      ]
-    },
-    {
-      "slug": "elt-mens-breeches-mailo-silicone-knee-d48-in34",
-      "category": "breeches-and-leggings",
-      "name": "ELT Mens Breeches-Mailo Silicone Knee/D48/IN34",
-      "brand": null,
-      "variants": [
+        },
         {
           "sku": "ELT-MNSBRCH-MAILO-48-BLAC-IN34",
           "size": null,
@@ -6085,23 +5989,15 @@
           "price": 13999
         },
         {
+          "sku": "ELT-MNSBRCH-MAILO-48-DEEP-IN34",
+          "size": null,
+          "color": null,
+          "price": 13999
+        },
+        {
           "sku": "ELT-MNSBRCH-MAILO-48-WHIT-IN34",
           "size": null,
           "color": "White",
-          "price": 13999
-        }
-      ]
-    },
-    {
-      "slug": "elt-mens-breeches-mailo-silicone-knee-d48-in34-deep",
-      "category": "breeches-and-leggings",
-      "name": "ELT Mens Breeches-Mailo Silicone Knee/D48/IN34/Deep",
-      "brand": null,
-      "variants": [
-        {
-          "sku": "ELT-MNSBRCH-MAILO-48-DEEP-IN34",
-          "size": null,
-          "color": "Blue",
           "price": 13999
         }
       ]
@@ -6367,15 +6263,15 @@
       ]
     },
     {
-      "slug": "elt-pia-ladies-riding-leggings-black-d40-in30",
+      "slug": "elt-pia-ladies-riding-leggings",
       "category": "breeches-and-leggings",
-      "name": "ELT Pia Ladies Riding Leggings/ Black - D40/ IN30",
+      "name": "ELT Pia Ladies Riding Leggings",
       "brand": null,
       "variants": [
         {
           "sku": "ELT-LAD-PIARIDLEG",
           "size": null,
-          "color": null,
+          "color": "Black",
           "price": 9999
         }
       ]
@@ -9747,127 +9643,63 @@
       ]
     },
     {
-      "slug": "equitheme-eliot-pant-men-black-fr38-in28",
+      "slug": "equitheme-eliot-pant",
       "category": "breeches-and-leggings",
-      "name": "Equitheme Eliot Pant-MEN/Black/FR38/IN28",
+      "name": "Equitheme Eliot Pant",
       "brand": "Equitheme",
       "variants": [
         {
           "sku": "EQUI-ELIOTPNT-MEN-BLACK-38-IN28",
           "size": null,
-          "color": null,
+          "color": "Black",
           "price": 13499
-        }
-      ]
-    },
-    {
-      "slug": "equitheme-eliot-pant-men-black-fr40-in30",
-      "category": "breeches-and-leggings",
-      "name": "Equitheme Eliot Pant-MEN/Black/FR40/IN30",
-      "brand": "Equitheme",
-      "variants": [
+        },
         {
           "sku": "EQUI-ELIOTPNT-MEN-BLACK-40-IN30",
           "size": null,
-          "color": null,
+          "color": "Black",
           "price": 13499
-        }
-      ]
-    },
-    {
-      "slug": "equitheme-eliot-pant-men-black-fr42-in32",
-      "category": "breeches-and-leggings",
-      "name": "Equitheme Eliot Pant-MEN/Black/FR42/IN32",
-      "brand": "Equitheme",
-      "variants": [
+        },
         {
           "sku": "EQUI-ELIOTPNT-MEN-BLACK-42-IN32",
           "size": null,
-          "color": null,
+          "color": "Black",
           "price": 13499
-        }
-      ]
-    },
-    {
-      "slug": "equitheme-eliot-pant-men-navy-fr38-in28",
-      "category": "breeches-and-leggings",
-      "name": "Equitheme Eliot Pant-MEN/Navy/FR38/IN28",
-      "brand": "Equitheme",
-      "variants": [
+        },
         {
           "sku": "EQUI-ELIOTPNT-MEN-NAVY-38-IN28",
           "size": null,
-          "color": null,
+          "color": "Navy",
           "price": 13499
-        }
-      ]
-    },
-    {
-      "slug": "equitheme-eliot-pant-men-navy-fr40-in30",
-      "category": "breeches-and-leggings",
-      "name": "Equitheme Eliot Pant-MEN/Navy/FR40/IN30",
-      "brand": "Equitheme",
-      "variants": [
+        },
         {
           "sku": "EQUI-ELIOTPNT-MEN-NAVY-40-IN30",
           "size": null,
-          "color": null,
+          "color": "Navy",
           "price": 13499
-        }
-      ]
-    },
-    {
-      "slug": "equitheme-eliot-pant-men-navy-fr42-in32",
-      "category": "breeches-and-leggings",
-      "name": "Equitheme Eliot Pant-MEN/Navy/FR42/IN32",
-      "brand": "Equitheme",
-      "variants": [
+        },
         {
           "sku": "EQUI-ELIOTPNT-MEN-NAVY-42-IN32",
           "size": null,
-          "color": null,
+          "color": "Navy",
           "price": 13499
-        }
-      ]
-    },
-    {
-      "slug": "equitheme-eliot-pant-men-white-fr38-in28",
-      "category": "breeches-and-leggings",
-      "name": "Equitheme Eliot Pant-MEN/White/FR38/IN28",
-      "brand": "Equitheme",
-      "variants": [
+        },
         {
           "sku": "EQUI-ELIOTPNT-MEN-WHITE-38-IN28",
           "size": null,
-          "color": null,
+          "color": "White",
           "price": 13499
-        }
-      ]
-    },
-    {
-      "slug": "equitheme-eliot-pant-men-white-fr40-in30",
-      "category": "breeches-and-leggings",
-      "name": "Equitheme Eliot Pant-MEN/White/FR40/IN30",
-      "brand": "Equitheme",
-      "variants": [
+        },
         {
           "sku": "EQUI-ELIOTPNT-MEN-WHITE-40-IN30",
           "size": null,
-          "color": null,
+          "color": "White",
           "price": 13499
-        }
-      ]
-    },
-    {
-      "slug": "equitheme-eliot-pant-men-white-fr42-in32",
-      "category": "breeches-and-leggings",
-      "name": "Equitheme Eliot Pant-MEN/White/FR42/IN32",
-      "brand": "Equitheme",
-      "variants": [
+        },
         {
           "sku": "EQUI-ELIOTPNT-MEN-WHITE-42-IN32",
           "size": null,
-          "color": null,
+          "color": "White",
           "price": 13499
         }
       ]
@@ -10055,85 +9887,45 @@
       ]
     },
     {
-      "slug": "equitheme-pullon-brigette-sfs-women-breeches-black-fr36-in26",
+      "slug": "equitheme-pullon-brigette-sfs-women-breeches",
       "category": "breeches-and-leggings",
-      "name": "Equitheme Pullon Brigette SFS Women Breeches-Black/FR36/IN26",
+      "name": "Equitheme Pullon Brigette SFS Women Breeches",
       "brand": "Equitheme",
       "variants": [
         {
           "sku": "EQUI-PUBRGTWMNBRCH-BLACK-36-IN26",
           "size": null,
-          "color": null,
+          "color": "Black",
           "price": 5999
-        }
-      ]
-    },
-    {
-      "slug": "equitheme-pullon-brigette-sfs-women-breeches-black-fr38-in28",
-      "category": "breeches-and-leggings",
-      "name": "Equitheme Pullon Brigette SFS Women Breeches-Black/FR38/IN28",
-      "brand": "Equitheme",
-      "variants": [
+        },
         {
           "sku": "EQUI-PUBRGTWMNBRCH-BLACK-38-IN28",
           "size": null,
-          "color": null,
+          "color": "Black",
           "price": 5999
-        }
-      ]
-    },
-    {
-      "slug": "equitheme-pullon-brigette-sfs-women-breeches-bord-fr36-in26",
-      "category": "breeches-and-leggings",
-      "name": "Equitheme Pullon Brigette SFS Women Breeches-Bord/FR36/IN26",
-      "brand": "Equitheme",
-      "variants": [
+        },
         {
           "sku": "EQUI-PUBRGTWMNBRCH-BORD-36-IN26",
           "size": null,
           "color": null,
           "price": 5999
-        }
-      ]
-    },
-    {
-      "slug": "equitheme-pullon-brigette-sfs-women-breeches-bord-fr38-in28",
-      "category": "breeches-and-leggings",
-      "name": "Equitheme Pullon Brigette SFS Women Breeches-Bord/FR38/IN28",
-      "brand": "Equitheme",
-      "variants": [
+        },
         {
           "sku": "EQUI-PUBRGTWMNBRCH-BORD-38-IN28",
           "size": null,
           "color": null,
           "price": 5999
-        }
-      ]
-    },
-    {
-      "slug": "equitheme-pullon-brigette-sfs-women-breeches-white-fr36-in26",
-      "category": "breeches-and-leggings",
-      "name": "Equitheme Pullon Brigette SFS Women Breeches-White/FR36/IN26",
-      "brand": "Equitheme",
-      "variants": [
+        },
         {
           "sku": "EQUI-PUBRGTWMNBRCH-WHITE-36-IN26",
           "size": null,
-          "color": null,
+          "color": "White",
           "price": 5999
-        }
-      ]
-    },
-    {
-      "slug": "equitheme-pullon-brigette-sfs-women-breeches-white-fr38-in28",
-      "category": "breeches-and-leggings",
-      "name": "Equitheme Pullon Brigette SFS Women Breeches-White/FR38/IN28",
-      "brand": "Equitheme",
-      "variants": [
+        },
         {
           "sku": "EQUI-PUBRGTWMNBRCH-WHITE-38-IN28",
           "size": null,
-          "color": null,
+          "color": "White",
           "price": 5999
         }
       ]
@@ -10167,29 +9959,21 @@
       ]
     },
     {
-      "slug": "equitheme-sam-breeches-men-beige-fr38-in28",
+      "slug": "equitheme-sam-breeches",
       "category": "breeches-and-leggings",
-      "name": "Equitheme Sam Breeches-MEN/Beige/FR38/IN28",
+      "name": "Equitheme Sam Breeches",
       "brand": "Equitheme",
       "variants": [
         {
           "sku": "EQUI-SAMBRECHS-MEN-BEIGE-38-IN28",
           "size": null,
-          "color": null,
+          "color": "Beige",
           "price": 13499
-        }
-      ]
-    },
-    {
-      "slug": "equitheme-sam-breeches-men-beige-fr40-in30",
-      "category": "breeches-and-leggings",
-      "name": "Equitheme Sam Breeches-MEN/Beige/FR40/IN30",
-      "brand": "Equitheme",
-      "variants": [
+        },
         {
           "sku": "EQUI-SAMBRECHS-MEN-BEIGE-40-IN30",
           "size": null,
-          "color": null,
+          "color": "Beige",
           "price": 13499
         }
       ]
@@ -22203,793 +21987,631 @@
       ]
     },
     {
-      "slug": "samshield-breeches-adele-anthracite-fr30-in20",
+      "slug": "samshield-breeches-adele",
       "category": "breeches-and-leggings",
-      "name": "Samshield Breeches Adele-Anthracite/FR30/ IN20",
+      "name": "Samshield Breeches Adele",
       "brand": "Samshield",
       "variants": [
         {
           "sku": "SAM-BRCH-ADL-ANT-FR30-IN20",
           "size": null,
-          "color": null,
+          "color": "Anthracite",
           "price": 24999
-        }
-      ]
-    },
-    {
-      "slug": "samshield-breeches-adele-anthracite-fr32-in22",
-      "category": "breeches-and-leggings",
-      "name": "Samshield Breeches Adele-Anthracite/FR32/ IN22",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-BRCH-ADL-ANT-FR32-IN22",
           "size": null,
-          "color": null,
+          "color": "Anthracite",
           "price": 24999
-        }
-      ]
-    },
-    {
-      "slug": "samshield-breeches-adele-anthracite-fr34-in24",
-      "category": "breeches-and-leggings",
-      "name": "Samshield Breeches Adele-Anthracite/FR34/ IN24",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-BRCH-ADL-ANT-FR34-IN24",
           "size": null,
-          "color": null,
+          "color": "Anthracite",
           "price": 24999
-        }
-      ]
-    },
-    {
-      "slug": "samshield-breeches-adele-anthracite-fr36-in26",
-      "category": "breeches-and-leggings",
-      "name": "Samshield Breeches Adele-Anthracite/FR36/ IN26",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-BRCH-ADL-ANT-FR36-IN26",
           "size": null,
-          "color": null,
+          "color": "Anthracite",
           "price": 24999
-        }
-      ]
-    },
-    {
-      "slug": "samshield-breeches-adele-anthracite-fr38-in28",
-      "category": "breeches-and-leggings",
-      "name": "Samshield Breeches Adele-Anthracite/FR38/ IN28",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-BRCH-ADL-ANT-FR38-IN28",
           "size": null,
-          "color": null,
+          "color": "Anthracite",
           "price": 24999
-        }
-      ]
-    },
-    {
-      "slug": "samshield-breeches-adele-anthracite-fr40-in30",
-      "category": "breeches-and-leggings",
-      "name": "Samshield Breeches Adele-Anthracite/FR40/ IN30",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-BRCH-ADL-ANT-FR40-IN30",
           "size": null,
-          "color": null,
+          "color": "Anthracite",
           "price": 24999
-        }
-      ]
-    },
-    {
-      "slug": "samshield-breeches-adele-anthracite-fr42-in32",
-      "category": "breeches-and-leggings",
-      "name": "Samshield Breeches Adele-Anthracite/FR42/ IN32",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-BRCH-ADL-ANT-FR42-IN32",
           "size": null,
-          "color": null,
+          "color": "Anthracite",
           "price": 24999
-        }
-      ]
-    },
-    {
-      "slug": "samshield-breeches-adele-anthracite-fr44-in34",
-      "category": "breeches-and-leggings",
-      "name": "Samshield Breeches Adele-Anthracite/FR44/ IN34",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-BRCH-ADL-ANT-FR44-IN34",
           "size": null,
-          "color": null,
+          "color": "Anthracite",
           "price": 24999
-        }
-      ]
-    },
-    {
-      "slug": "samshield-breeches-adele-beige-fr30-in20",
-      "category": "breeches-and-leggings",
-      "name": "Samshield Breeches Adele-Beige/FR30/ IN20",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-BRCH-ADL-BEI-FR30-IN20",
           "size": null,
-          "color": null,
+          "color": "Beige",
           "price": 24999
-        }
-      ]
-    },
-    {
-      "slug": "samshield-breeches-adele-beige-fr32-in22",
-      "category": "breeches-and-leggings",
-      "name": "Samshield Breeches Adele-Beige/FR32/ IN22",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-BRCH-ADL-BEI-FR32-IN22",
           "size": null,
-          "color": null,
+          "color": "Beige",
           "price": 24999
-        }
-      ]
-    },
-    {
-      "slug": "samshield-breeches-adele-beige-fr34-in24",
-      "category": "breeches-and-leggings",
-      "name": "Samshield Breeches Adele-Beige/FR34/ IN24",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-BRCH-ADL-BEI-FR34-IN24",
           "size": null,
-          "color": null,
+          "color": "Beige",
           "price": 24999
-        }
-      ]
-    },
-    {
-      "slug": "samshield-breeches-adele-beige-fr36-in26",
-      "category": "breeches-and-leggings",
-      "name": "Samshield Breeches Adele-Beige/FR36/ IN26",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-BRCH-ADL-BEI-FR36-IN26",
           "size": null,
-          "color": null,
+          "color": "Beige",
           "price": 24999
-        }
-      ]
-    },
-    {
-      "slug": "samshield-breeches-adele-beige-fr38-in28",
-      "category": "breeches-and-leggings",
-      "name": "Samshield Breeches Adele-Beige/FR38/ IN28",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-BRCH-ADL-BEI-FR38-IN28",
           "size": null,
-          "color": null,
+          "color": "Beige",
           "price": 24999
-        }
-      ]
-    },
-    {
-      "slug": "samshield-breeches-adele-beige-fr40-in30",
-      "category": "breeches-and-leggings",
-      "name": "Samshield Breeches Adele-Beige/FR40/ IN30",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-BRCH-ADL-BEI-FR40-IN30",
           "size": null,
-          "color": null,
+          "color": "Beige",
           "price": 24999
-        }
-      ]
-    },
-    {
-      "slug": "samshield-breeches-adele-beige-fr42-in32",
-      "category": "breeches-and-leggings",
-      "name": "Samshield Breeches Adele-Beige/FR42/ IN32",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-BRCH-ADL-BEI-FR42-IN32",
           "size": null,
-          "color": null,
+          "color": "Beige",
           "price": 24999
-        }
-      ]
-    },
-    {
-      "slug": "samshield-breeches-adele-beige-fr44-in34",
-      "category": "breeches-and-leggings",
-      "name": "Samshield Breeches Adele-Beige/FR44/ IN34",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-BRCH-ADL-BEI-FR44-IN34",
           "size": null,
-          "color": null,
+          "color": "Beige",
           "price": 24999
-        }
-      ]
-    },
-    {
-      "slug": "samshield-breeches-adele-black-fr30-in20",
-      "category": "breeches-and-leggings",
-      "name": "Samshield Breeches Adele-Black/FR30/ IN20",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-BRCH-ADL-BLA-FR30-IN20",
           "size": null,
-          "color": null,
+          "color": "Black",
           "price": 24999
-        }
-      ]
-    },
-    {
-      "slug": "samshield-breeches-adele-black-fr32-in22",
-      "category": "breeches-and-leggings",
-      "name": "Samshield Breeches Adele-Black/FR32/ IN22",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-BRCH-ADL-BLA-FR32-IN22",
           "size": null,
-          "color": null,
+          "color": "Black",
           "price": 24999
-        }
-      ]
-    },
-    {
-      "slug": "samshield-breeches-adele-black-fr34-in24",
-      "category": "breeches-and-leggings",
-      "name": "Samshield Breeches Adele-Black/FR34/ IN24",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-BRCH-ADL-BLA-FR34-IN24",
           "size": null,
-          "color": null,
+          "color": "Black",
           "price": 24999
-        }
-      ]
-    },
-    {
-      "slug": "samshield-breeches-adele-black-fr36-in26",
-      "category": "breeches-and-leggings",
-      "name": "Samshield Breeches Adele-Black/FR36/ IN26",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-BRCH-ADL-BLA-FR36-IN26",
           "size": null,
-          "color": null,
+          "color": "Black",
           "price": 24999
-        }
-      ]
-    },
-    {
-      "slug": "samshield-breeches-adele-black-fr38-in28",
-      "category": "breeches-and-leggings",
-      "name": "Samshield Breeches Adele-Black/FR38/ IN28",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-BRCH-ADL-BLA-FR38-IN28",
           "size": null,
-          "color": null,
+          "color": "Black",
           "price": 24999
-        }
-      ]
-    },
-    {
-      "slug": "samshield-breeches-adele-black-fr40-in30",
-      "category": "breeches-and-leggings",
-      "name": "Samshield Breeches Adele-Black/FR40/ IN30",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-BRCH-ADL-BLA-FR40-IN30",
           "size": null,
-          "color": null,
+          "color": "Black",
           "price": 24999
-        }
-      ]
-    },
-    {
-      "slug": "samshield-breeches-adele-black-fr42-in32",
-      "category": "breeches-and-leggings",
-      "name": "Samshield Breeches Adele-Black/FR42/ IN32",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-BRCH-ADL-BLA-FR42-IN32",
           "size": null,
-          "color": null,
+          "color": "Black",
           "price": 24999
-        }
-      ]
-    },
-    {
-      "slug": "samshield-breeches-adele-black-fr44-in34",
-      "category": "breeches-and-leggings",
-      "name": "Samshield Breeches Adele-Black/FR44/ IN34",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-BRCH-ADL-BLA-FR44-IN34",
           "size": null,
-          "color": null,
+          "color": "Black",
           "price": 24999
-        }
-      ]
-    },
-    {
-      "slug": "samshield-breeches-adele-brown-fr30-in20",
-      "category": "breeches-and-leggings",
-      "name": "Samshield Breeches Adele-Brown/FR30/ IN20",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-BRCH-ADL-BRO-FR30-IN20",
           "size": null,
-          "color": null,
+          "color": "Brown",
           "price": 24999
-        }
-      ]
-    },
-    {
-      "slug": "samshield-breeches-adele-brown-fr32-in22",
-      "category": "breeches-and-leggings",
-      "name": "Samshield Breeches Adele-Brown/FR32/ IN22",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-BRCH-ADL-BRO-FR32-IN22",
           "size": null,
-          "color": null,
+          "color": "Brown",
           "price": 24999
-        }
-      ]
-    },
-    {
-      "slug": "samshield-breeches-adele-brown-fr34-in24",
-      "category": "breeches-and-leggings",
-      "name": "Samshield Breeches Adele-Brown/FR34/ IN24",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-BRCH-ADL-BRO-FR34-IN24",
           "size": null,
-          "color": null,
+          "color": "Brown",
           "price": 24999
-        }
-      ]
-    },
-    {
-      "slug": "samshield-breeches-adele-brown-fr36-in26",
-      "category": "breeches-and-leggings",
-      "name": "Samshield Breeches Adele-Brown/FR36/ IN26",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-BRCH-ADL-BRO-FR36-IN26",
           "size": null,
-          "color": null,
+          "color": "Brown",
           "price": 24999
-        }
-      ]
-    },
-    {
-      "slug": "samshield-breeches-adele-brown-fr38-in28",
-      "category": "breeches-and-leggings",
-      "name": "Samshield Breeches Adele-Brown/FR38/ IN28",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-BRCH-ADL-BRO-FR38-IN28",
           "size": null,
-          "color": null,
+          "color": "Brown",
           "price": 24999
-        }
-      ]
-    },
-    {
-      "slug": "samshield-breeches-adele-brown-fr40-in30",
-      "category": "breeches-and-leggings",
-      "name": "Samshield Breeches Adele-Brown/FR40/ IN30",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-BRCH-ADL-BRO-FR40-IN30",
           "size": null,
-          "color": null,
+          "color": "Brown",
           "price": 24999
-        }
-      ]
-    },
-    {
-      "slug": "samshield-breeches-adele-brown-fr42-in32",
-      "category": "breeches-and-leggings",
-      "name": "Samshield Breeches Adele-Brown/FR42/ IN32",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-BRCH-ADL-BRO-FR42-IN32",
           "size": null,
-          "color": null,
+          "color": "Brown",
           "price": 24999
-        }
-      ]
-    },
-    {
-      "slug": "samshield-breeches-adele-brown-fr44-in34",
-      "category": "breeches-and-leggings",
-      "name": "Samshield Breeches Adele-Brown/FR44/ IN34",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-BRCH-ADL-BRO-FR44-IN34",
           "size": null,
-          "color": null,
+          "color": "Brown",
           "price": 24999
-        }
-      ]
-    },
-    {
-      "slug": "samshield-breeches-adele-navy-fr30-in20",
-      "category": "breeches-and-leggings",
-      "name": "Samshield Breeches Adele-Navy/FR30/ IN20",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-BRCH-ADL-NAV-FR30-IN20",
           "size": null,
-          "color": null,
+          "color": "Navy",
           "price": 24999
-        }
-      ]
-    },
-    {
-      "slug": "samshield-breeches-adele-navy-fr32-in22",
-      "category": "breeches-and-leggings",
-      "name": "Samshield Breeches Adele-Navy/FR32/ IN22",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-BRCH-ADL-NAV-FR32-IN22",
           "size": null,
-          "color": null,
+          "color": "Navy",
           "price": 24999
-        }
-      ]
-    },
-    {
-      "slug": "samshield-breeches-adele-navy-fr34-in24",
-      "category": "breeches-and-leggings",
-      "name": "Samshield Breeches Adele-Navy/FR34/ IN24",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-BRCH-ADL-NAV-FR34-IN24",
           "size": null,
-          "color": null,
+          "color": "Navy",
           "price": 24999
-        }
-      ]
-    },
-    {
-      "slug": "samshield-breeches-adele-navy-fr36-in26",
-      "category": "breeches-and-leggings",
-      "name": "Samshield Breeches Adele-Navy/FR36/ IN26",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-BRCH-ADL-NAV-FR36-IN26",
           "size": null,
-          "color": null,
+          "color": "Navy",
           "price": 24999
-        }
-      ]
-    },
-    {
-      "slug": "samshield-breeches-adele-navy-fr38-in28",
-      "category": "breeches-and-leggings",
-      "name": "Samshield Breeches Adele-Navy/FR38/ IN28",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-BRCH-ADL-NAV-FR38-IN28",
           "size": null,
-          "color": null,
+          "color": "Navy",
           "price": 24999
-        }
-      ]
-    },
-    {
-      "slug": "samshield-breeches-adele-navy-fr40-in30",
-      "category": "breeches-and-leggings",
-      "name": "Samshield Breeches Adele-Navy/FR40/ IN30",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-BRCH-ADL-NAV-FR40-IN30",
           "size": null,
-          "color": null,
+          "color": "Navy",
           "price": 24999
-        }
-      ]
-    },
-    {
-      "slug": "samshield-breeches-adele-navy-fr42-in32",
-      "category": "breeches-and-leggings",
-      "name": "Samshield Breeches Adele-Navy/FR42/ IN32",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-BRCH-ADL-NAV-FR42-IN32",
           "size": null,
-          "color": null,
+          "color": "Navy",
           "price": 24999
-        }
-      ]
-    },
-    {
-      "slug": "samshield-breeches-adele-navy-fr44-in34",
-      "category": "breeches-and-leggings",
-      "name": "Samshield Breeches Adele-Navy/FR44/ IN34",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-BRCH-ADL-NAV-FR44-IN34",
           "size": null,
-          "color": null,
+          "color": "Navy",
           "price": 24999
-        }
-      ]
-    },
-    {
-      "slug": "samshield-breeches-adele-taupe-fr30-in20",
-      "category": "breeches-and-leggings",
-      "name": "Samshield Breeches Adele-Taupe/FR30/ IN20",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-BRCH-ADL-TAU-FR30-IN20",
           "size": null,
           "color": null,
           "price": 24999
-        }
-      ]
-    },
-    {
-      "slug": "samshield-breeches-adele-taupe-fr32-in22",
-      "category": "breeches-and-leggings",
-      "name": "Samshield Breeches Adele-Taupe/FR32/ IN22",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-BRCH-ADL-TAU-FR32-IN22",
           "size": null,
           "color": null,
           "price": 24999
-        }
-      ]
-    },
-    {
-      "slug": "samshield-breeches-adele-taupe-fr34-in24",
-      "category": "breeches-and-leggings",
-      "name": "Samshield Breeches Adele-Taupe/FR34/ IN24",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-BRCH-ADL-TAU-FR34-IN24",
           "size": null,
           "color": null,
           "price": 24999
-        }
-      ]
-    },
-    {
-      "slug": "samshield-breeches-adele-taupe-fr36-in26",
-      "category": "breeches-and-leggings",
-      "name": "Samshield Breeches Adele-Taupe/FR36/ IN26",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-BRCH-ADL-TAU-FR36-IN26",
           "size": null,
           "color": null,
           "price": 24999
-        }
-      ]
-    },
-    {
-      "slug": "samshield-breeches-adele-taupe-fr38-in28",
-      "category": "breeches-and-leggings",
-      "name": "Samshield Breeches Adele-Taupe/FR38/ IN28",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-BRCH-ADL-TAU-FR38-IN28",
           "size": null,
           "color": null,
           "price": 24999
-        }
-      ]
-    },
-    {
-      "slug": "samshield-breeches-adele-taupe-fr40-in30",
-      "category": "breeches-and-leggings",
-      "name": "Samshield Breeches Adele-Taupe/FR40/ IN30",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-BRCH-ADL-TAU-FR40-IN30",
           "size": null,
           "color": null,
           "price": 24999
-        }
-      ]
-    },
-    {
-      "slug": "samshield-breeches-adele-taupe-fr42-in32",
-      "category": "breeches-and-leggings",
-      "name": "Samshield Breeches Adele-Taupe/FR42/ IN32",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-BRCH-ADL-TAU-FR42-IN32",
           "size": null,
           "color": null,
           "price": 24999
-        }
-      ]
-    },
-    {
-      "slug": "samshield-breeches-adele-taupe-fr44-in34",
-      "category": "breeches-and-leggings",
-      "name": "Samshield Breeches Adele-Taupe/FR44/ IN34",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-BRCH-ADL-TAU-FR44-IN34",
           "size": null,
           "color": null,
           "price": 24999
-        }
-      ]
-    },
-    {
-      "slug": "samshield-breeches-adele-white-fr30-in20",
-      "category": "breeches-and-leggings",
-      "name": "Samshield Breeches Adele-White/FR30/ IN20",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-BRCH-ADL-WHI-FR30-IN20",
           "size": null,
-          "color": null,
+          "color": "White",
           "price": 24999
-        }
-      ]
-    },
-    {
-      "slug": "samshield-breeches-adele-white-fr32-in22",
-      "category": "breeches-and-leggings",
-      "name": "Samshield Breeches Adele-White/FR32/ IN22",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-BRCH-ADL-WHI-FR32-IN22",
           "size": null,
-          "color": null,
+          "color": "White",
           "price": 24999
-        }
-      ]
-    },
-    {
-      "slug": "samshield-breeches-adele-white-fr34-in24",
-      "category": "breeches-and-leggings",
-      "name": "Samshield Breeches Adele-White/FR34/ IN24",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-BRCH-ADL-WHI-FR34-IN24",
           "size": null,
-          "color": null,
+          "color": "White",
           "price": 24999
-        }
-      ]
-    },
-    {
-      "slug": "samshield-breeches-adele-white-fr36-in26",
-      "category": "breeches-and-leggings",
-      "name": "Samshield Breeches Adele-White/FR36/ IN26",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-BRCH-ADL-WHI-FR36-IN26",
           "size": null,
-          "color": null,
+          "color": "White",
           "price": 24999
-        }
-      ]
-    },
-    {
-      "slug": "samshield-breeches-adele-white-fr38-in28",
-      "category": "breeches-and-leggings",
-      "name": "Samshield Breeches Adele-White/FR38/ IN28",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-BRCH-ADL-WHI-FR38-IN28",
           "size": null,
-          "color": null,
+          "color": "White",
           "price": 24999
-        }
-      ]
-    },
-    {
-      "slug": "samshield-breeches-adele-white-fr40-in30",
-      "category": "breeches-and-leggings",
-      "name": "Samshield Breeches Adele-White/FR40/ IN30",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-BRCH-ADL-WHI-FR40-IN30",
           "size": null,
-          "color": null,
+          "color": "White",
           "price": 24999
-        }
-      ]
-    },
-    {
-      "slug": "samshield-breeches-adele-white-fr42-in32",
-      "category": "breeches-and-leggings",
-      "name": "Samshield Breeches Adele-White/FR42/ IN32",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-BRCH-ADL-WHI-FR42-IN32",
           "size": null,
-          "color": null,
+          "color": "White",
           "price": 24999
-        }
-      ]
-    },
-    {
-      "slug": "samshield-breeches-adele-white-fr44-in34",
-      "category": "breeches-and-leggings",
-      "name": "Samshield Breeches Adele-White/FR44/ IN34",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-BRCH-ADL-WHI-FR44-IN34/",
           "size": null,
-          "color": null,
+          "color": "White",
           "price": 24999
         }
       ]
     },
     {
-      "slug": "samshield-breeches-edouard-matt-full-grip-men-fr36-in26-breeches-and-leggings",
+      "slug": "samshield-breeches-edouard",
       "category": "breeches-and-leggings",
-      "name": "Samshield Breeches Edouard Matt Full Grip/Men-FR36/ IN26",
+      "name": "Samshield Breeches Edouard",
+      "brand": "Samshield",
+      "variants": [
+        {
+          "sku": "SAM-BECH-EDRD-BIE-36-IN26",
+          "size": null,
+          "color": null,
+          "price": 20999
+        },
+        {
+          "sku": "SAM-BECH-EDRD-BIE-38-IN28",
+          "size": null,
+          "color": null,
+          "price": 20999
+        },
+        {
+          "sku": "SAM-BECH-EDRD-BIE-40-IN30",
+          "size": null,
+          "color": null,
+          "price": 20999
+        },
+        {
+          "sku": "SAM-BECH-EDRD-BIE-42-IN32",
+          "size": null,
+          "color": null,
+          "price": 20999
+        },
+        {
+          "sku": "SAM-BECH-EDRD-BIE-44-IN34",
+          "size": null,
+          "color": null,
+          "price": 20999
+        },
+        {
+          "sku": "SAM-BECH-EDRD-BIE-46-IN36",
+          "size": null,
+          "color": null,
+          "price": 20999
+        },
+        {
+          "sku": "SAM-BECH-EDRD-BIE-48-IN38",
+          "size": null,
+          "color": null,
+          "price": 20999
+        },
+        {
+          "sku": "SAM-BECH-EDRD-BIE-50-IN40",
+          "size": null,
+          "color": null,
+          "price": 20999
+        },
+        {
+          "sku": "SAM-BECH-EDRD-BIE-52-IN42",
+          "size": null,
+          "color": null,
+          "price": 20999
+        },
+        {
+          "sku": "SAM-BECH-EDRD-BLA-36-IN26",
+          "size": null,
+          "color": "Black",
+          "price": 20999
+        },
+        {
+          "sku": "SAM-BECH-EDRD-BLA-38-IN28",
+          "size": null,
+          "color": "Black",
+          "price": 20999
+        },
+        {
+          "sku": "SAM-BECH-EDRD-BLA-40-IN30",
+          "size": null,
+          "color": "Black",
+          "price": 20999
+        },
+        {
+          "sku": "SAM-BECH-EDRD-BLA-42-IN32",
+          "size": null,
+          "color": "Black",
+          "price": 20999
+        },
+        {
+          "sku": "SAM-BECH-EDRD-BLA-44-IN34",
+          "size": null,
+          "color": "Black",
+          "price": 20999
+        },
+        {
+          "sku": "SAM-BECH-EDRD-BLA-46-IN36",
+          "size": null,
+          "color": "Black",
+          "price": 20999
+        },
+        {
+          "sku": "SAM-BECH-EDRD-BLA-48-IN38",
+          "size": null,
+          "color": "Black",
+          "price": 20999
+        },
+        {
+          "sku": "SAM-BECH-EDRD-BLA-50-IN40",
+          "size": null,
+          "color": "Black",
+          "price": 20999
+        },
+        {
+          "sku": "SAM-BECH-EDRD-BLA-52-IN42",
+          "size": null,
+          "color": "Black",
+          "price": 20999
+        },
+        {
+          "sku": "SAM-BECH-EDRD-NAV-36-IN26",
+          "size": null,
+          "color": "Navy",
+          "price": 20999
+        },
+        {
+          "sku": "SAM-BECH-EDRD-NAV-38-IN28",
+          "size": null,
+          "color": "Navy",
+          "price": 20999
+        },
+        {
+          "sku": "SAM-BECH-EDRD-NAV-40-IN30",
+          "size": null,
+          "color": "Navy",
+          "price": 20999
+        },
+        {
+          "sku": "SAM-BECH-EDRD-NAV-42-IN32",
+          "size": null,
+          "color": "Navy",
+          "price": 20999
+        },
+        {
+          "sku": "SAM-BECH-EDRD-NAV-44-IN34",
+          "size": null,
+          "color": "Navy",
+          "price": 20999
+        },
+        {
+          "sku": "SAM-BECH-EDRD-NAV-46-IN36",
+          "size": null,
+          "color": "Navy",
+          "price": 20999
+        },
+        {
+          "sku": "SAM-BECH-EDRD-NAV-48-IN38",
+          "size": null,
+          "color": "Navy",
+          "price": 20999
+        },
+        {
+          "sku": "SAM-BECH-EDRD-NAV-50-IN40",
+          "size": null,
+          "color": "Navy",
+          "price": 20999
+        },
+        {
+          "sku": "SAM-BECH-EDRD-NAV-52-IN42",
+          "size": null,
+          "color": "Navy",
+          "price": 20999
+        },
+        {
+          "sku": "SAM-BECH-EDRD-NIC-36-IN26",
+          "size": null,
+          "color": null,
+          "price": 20999
+        },
+        {
+          "sku": "SAM-BECH-EDRD-NIC-38-IN28",
+          "size": null,
+          "color": null,
+          "price": 20999
+        },
+        {
+          "sku": "SAM-BECH-EDRD-NIC-40-IN30",
+          "size": null,
+          "color": null,
+          "price": 20999
+        },
+        {
+          "sku": "SAM-BECH-EDRD-NIC-42-IN32",
+          "size": null,
+          "color": null,
+          "price": 20999
+        },
+        {
+          "sku": "SAM-BECH-EDRD-NIC-44-IN34",
+          "size": null,
+          "color": null,
+          "price": 20999
+        },
+        {
+          "sku": "SAM-BECH-EDRD-NIC-46-IN36",
+          "size": null,
+          "color": null,
+          "price": 20999
+        },
+        {
+          "sku": "SAM-BECH-EDRD-NIC-48-IN38",
+          "size": null,
+          "color": null,
+          "price": 20999
+        },
+        {
+          "sku": "SAM-BECH-EDRD-NIC-50-IN40",
+          "size": null,
+          "color": null,
+          "price": 20999
+        },
+        {
+          "sku": "SAM-BECH-EDRD-NIC-52-IN42",
+          "size": null,
+          "color": null,
+          "price": 20999
+        },
+        {
+          "sku": "SAM-BECH-EDRD-WHI-36-IN26",
+          "size": null,
+          "color": "White",
+          "price": 20999
+        },
+        {
+          "sku": "SAM-BECH-EDRD-WHI-38-IN28",
+          "size": null,
+          "color": "White",
+          "price": 20999
+        },
+        {
+          "sku": "SAM-BECH-EDRD-WHI-40-IN30",
+          "size": null,
+          "color": "White",
+          "price": 20999
+        },
+        {
+          "sku": "SAM-BECH-EDRD-WHI-42-IN32",
+          "size": null,
+          "color": "White",
+          "price": 20999
+        },
+        {
+          "sku": "SAM-BECH-EDRD-WHI-44-IN34",
+          "size": null,
+          "color": "White",
+          "price": 20999
+        },
+        {
+          "sku": "SAM-BECH-EDRD-WHI-46-IN36",
+          "size": null,
+          "color": "White",
+          "price": 20999
+        },
+        {
+          "sku": "SAM-BECH-EDRD-WHI-48-IN38",
+          "size": null,
+          "color": "White",
+          "price": 20999
+        },
+        {
+          "sku": "SAM-BECH-EDRD-WHI-50-IN40",
+          "size": null,
+          "color": "White",
+          "price": 20999
+        },
+        {
+          "sku": "SAM-BECH-EDRD-WHI-52-IN42",
+          "size": null,
+          "color": "White",
+          "price": 20999
+        }
+      ]
+    },
+    {
+      "slug": "samshield-breeches-edouard-matt-full-grip",
+      "category": "breeches-and-leggings",
+      "name": "Samshield Breeches Edouard Matt Full Grip",
       "brand": "Samshield",
       "variants": [
         {
@@ -22997,15 +22619,7 @@
           "size": null,
           "color": "Anthracite",
           "price": 20999
-        }
-      ]
-    },
-    {
-      "slug": "samshield-breeches-edouard-matt-full-grip-men-fr36-in26-breeches-and-leggings-2",
-      "category": "breeches-and-leggings",
-      "name": "Samshield Breeches Edouard Matt Full Grip/Men-FR36/IN26",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-BRCH-EDRD-MATT-FG-FR36-IN26-BLA",
           "size": null,
@@ -23019,9 +22633,21 @@
           "price": 20999
         },
         {
+          "sku": "SAM-BRCH-EDRD-MATT-FG-FR36-IN26-KAK",
+          "size": null,
+          "color": null,
+          "price": 20999
+        },
+        {
           "sku": "SAM-BRCH-EDRD-MATT-FG-FR36-IN26-NAV",
           "size": null,
           "color": "Navy",
+          "price": 20999
+        },
+        {
+          "sku": "SAM-BRCH-EDRD-MATT-FG-FR36-IN26-STE",
+          "size": null,
+          "color": null,
           "price": 20999
         },
         {
@@ -23029,43 +22655,7 @@
           "size": null,
           "color": "White",
           "price": 20999
-        }
-      ]
-    },
-    {
-      "slug": "samshield-breeches-edouard-matt-full-grip-men-fr36-in26-kaki",
-      "category": "breeches-and-leggings",
-      "name": "Samshield Breeches Edouard Matt Full Grip/Men-FR36/IN26/Kaki",
-      "brand": "Samshield",
-      "variants": [
-        {
-          "sku": "SAM-BRCH-EDRD-MATT-FG-FR36-IN26-KAK",
-          "size": null,
-          "color": null,
-          "price": 20999
-        }
-      ]
-    },
-    {
-      "slug": "samshield-breeches-edouard-matt-full-grip-men-fr36-in26-steel",
-      "category": "breeches-and-leggings",
-      "name": "Samshield Breeches Edouard Matt Full Grip/Men-FR36/IN26/Steel",
-      "brand": "Samshield",
-      "variants": [
-        {
-          "sku": "SAM-BRCH-EDRD-MATT-FG-FR36-IN26-STE",
-          "size": null,
-          "color": "Grey",
-          "price": 20999
-        }
-      ]
-    },
-    {
-      "slug": "samshield-breeches-edouard-matt-full-grip-men-fr38-in28",
-      "category": "breeches-and-leggings",
-      "name": "Samshield Breeches Edouard Matt Full Grip/Men-FR38/IN28",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-BRCH-EDRD-MATT-FG-FR38-IN28-ANT",
           "size": null,
@@ -23085,9 +22675,21 @@
           "price": 20999
         },
         {
+          "sku": "SAM-BRCH-EDRD-MATT-FG-FR38-IN28-KAK",
+          "size": null,
+          "color": null,
+          "price": 20999
+        },
+        {
           "sku": "SAM-BRCH-EDRD-MATT-FG-FR38-IN28-NAV",
           "size": null,
           "color": "Navy",
+          "price": 20999
+        },
+        {
+          "sku": "SAM-BRCH-EDRD-MATT-FG-FR38-IN28-STE",
+          "size": null,
+          "color": null,
           "price": 20999
         },
         {
@@ -23095,43 +22697,7 @@
           "size": null,
           "color": "White",
           "price": 20999
-        }
-      ]
-    },
-    {
-      "slug": "samshield-breeches-edouard-matt-full-grip-men-fr38-in28-kaki",
-      "category": "breeches-and-leggings",
-      "name": "Samshield Breeches Edouard Matt Full Grip/Men-FR38/IN28/Kaki",
-      "brand": "Samshield",
-      "variants": [
-        {
-          "sku": "SAM-BRCH-EDRD-MATT-FG-FR38-IN28-KAK",
-          "size": null,
-          "color": null,
-          "price": 20999
-        }
-      ]
-    },
-    {
-      "slug": "samshield-breeches-edouard-matt-full-grip-men-fr38-in28-steel",
-      "category": "breeches-and-leggings",
-      "name": "Samshield Breeches Edouard Matt Full Grip/Men-FR38/IN28/Steel",
-      "brand": "Samshield",
-      "variants": [
-        {
-          "sku": "SAM-BRCH-EDRD-MATT-FG-FR38-IN28-STE",
-          "size": null,
-          "color": "Grey",
-          "price": 20999
-        }
-      ]
-    },
-    {
-      "slug": "samshield-breeches-edouard-matt-full-grip-men-fr40-in30",
-      "category": "breeches-and-leggings",
-      "name": "Samshield Breeches Edouard Matt Full Grip/Men-FR40/IN30",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-BRCH-EDRD-MATT-FG-FR40-IN30-ANT",
           "size": null,
@@ -23151,9 +22717,21 @@
           "price": 20999
         },
         {
+          "sku": "SAM-BRCH-EDRD-MATT-FG-40-KAK-IN40",
+          "size": null,
+          "color": null,
+          "price": 20999
+        },
+        {
           "sku": "SAM-BRCH-EDRD-MATT-FG-40-NAV-IN30",
           "size": null,
           "color": "Navy",
+          "price": 20999
+        },
+        {
+          "sku": "SAM-BRCH-EDRD-MATT-FG-40-STE-IN30",
+          "size": null,
+          "color": null,
           "price": 20999
         },
         {
@@ -23161,43 +22739,7 @@
           "size": null,
           "color": "White",
           "price": 20999
-        }
-      ]
-    },
-    {
-      "slug": "samshield-breeches-edouard-matt-full-grip-men-fr40-in30-kaki",
-      "category": "breeches-and-leggings",
-      "name": "Samshield Breeches Edouard Matt Full Grip/Men-FR40/IN30/Kaki",
-      "brand": "Samshield",
-      "variants": [
-        {
-          "sku": "SAM-BRCH-EDRD-MATT-FG-40-KAK-IN40",
-          "size": null,
-          "color": null,
-          "price": 20999
-        }
-      ]
-    },
-    {
-      "slug": "samshield-breeches-edouard-matt-full-grip-men-fr40-in30-steel",
-      "category": "breeches-and-leggings",
-      "name": "Samshield Breeches Edouard Matt Full Grip/Men-FR40/IN30/Steel",
-      "brand": "Samshield",
-      "variants": [
-        {
-          "sku": "SAM-BRCH-EDRD-MATT-FG-40-STE-IN30",
-          "size": null,
-          "color": "Grey",
-          "price": 20999
-        }
-      ]
-    },
-    {
-      "slug": "samshield-breeches-edouard-matt-full-grip-men-fr42-in32",
-      "category": "breeches-and-leggings",
-      "name": "Samshield Breeches Edouard Matt Full Grip/Men-FR42/IN32",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-BRCH-EDRD-MATT-FG-42-ANT-IN32",
           "size": null,
@@ -23217,9 +22759,21 @@
           "price": 20999
         },
         {
+          "sku": "SAM-BRCH-EDRD-MATT-FG-42-KAK-IN32",
+          "size": null,
+          "color": null,
+          "price": 20999
+        },
+        {
           "sku": "SAM-BRCH-EDRD-MATT-FG-42-NAV-IN32",
           "size": null,
           "color": "Navy",
+          "price": 20999
+        },
+        {
+          "sku": "SAM-BRCH-EDRD-MATT-FG-42-STE-IN32",
+          "size": null,
+          "color": null,
           "price": 20999
         },
         {
@@ -23227,43 +22781,7 @@
           "size": null,
           "color": "White",
           "price": 20999
-        }
-      ]
-    },
-    {
-      "slug": "samshield-breeches-edouard-matt-full-grip-men-fr42-in32-kaki",
-      "category": "breeches-and-leggings",
-      "name": "Samshield Breeches Edouard Matt Full Grip/Men-FR42/IN32/Kaki",
-      "brand": "Samshield",
-      "variants": [
-        {
-          "sku": "SAM-BRCH-EDRD-MATT-FG-42-KAK-IN32",
-          "size": null,
-          "color": null,
-          "price": 20999
-        }
-      ]
-    },
-    {
-      "slug": "samshield-breeches-edouard-matt-full-grip-men-fr42-in32-steel",
-      "category": "breeches-and-leggings",
-      "name": "Samshield Breeches Edouard Matt Full Grip/Men-FR42/IN32/Steel",
-      "brand": "Samshield",
-      "variants": [
-        {
-          "sku": "SAM-BRCH-EDRD-MATT-FG-42-STE-IN32",
-          "size": null,
-          "color": "Grey",
-          "price": 20999
-        }
-      ]
-    },
-    {
-      "slug": "samshield-breeches-edouard-matt-full-grip-men-fr44-in34",
-      "category": "breeches-and-leggings",
-      "name": "Samshield Breeches Edouard Matt Full Grip/Men-FR44/IN34",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-BRCH-EDRD-MATT-FG-44-ANT-IN34",
           "size": null,
@@ -23283,9 +22801,21 @@
           "price": 20999
         },
         {
+          "sku": "SAM-BRCH-EDRD-MATT-FG-44-KAK-IN34",
+          "size": null,
+          "color": null,
+          "price": 20999
+        },
+        {
           "sku": "SAM-BRCH-EDRD-MATT-FG-44-NAV-IN34",
           "size": null,
           "color": "Navy",
+          "price": 20999
+        },
+        {
+          "sku": "SAM-BRCH-EDRD-MATT-FG-44-STE-IN34",
+          "size": null,
+          "color": null,
           "price": 20999
         },
         {
@@ -23293,43 +22823,7 @@
           "size": null,
           "color": "White",
           "price": 20999
-        }
-      ]
-    },
-    {
-      "slug": "samshield-breeches-edouard-matt-full-grip-men-fr44-in34-kaki",
-      "category": "breeches-and-leggings",
-      "name": "Samshield Breeches Edouard Matt Full Grip/Men-FR44/IN34/Kaki",
-      "brand": "Samshield",
-      "variants": [
-        {
-          "sku": "SAM-BRCH-EDRD-MATT-FG-44-KAK-IN34",
-          "size": null,
-          "color": null,
-          "price": 20999
-        }
-      ]
-    },
-    {
-      "slug": "samshield-breeches-edouard-matt-full-grip-men-fr44-in34-steel",
-      "category": "breeches-and-leggings",
-      "name": "Samshield Breeches Edouard Matt Full Grip/Men-FR44/IN34/Steel",
-      "brand": "Samshield",
-      "variants": [
-        {
-          "sku": "SAM-BRCH-EDRD-MATT-FG-44-STE-IN34",
-          "size": null,
-          "color": "Grey",
-          "price": 20999
-        }
-      ]
-    },
-    {
-      "slug": "samshield-breeches-edouard-matt-full-grip-men-fr46-in36",
-      "category": "breeches-and-leggings",
-      "name": "Samshield Breeches Edouard Matt Full Grip/Men-FR46/IN36",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-BRCH-EDRD-MATT-FG-46-ANT-IN36",
           "size": null,
@@ -23349,9 +22843,21 @@
           "price": 20999
         },
         {
+          "sku": "SAM-BRCH-EDRD-MATT-FG-46-KAK-IN36",
+          "size": null,
+          "color": null,
+          "price": 20999
+        },
+        {
           "sku": "SAM-BRCH-EDRD-MATT-FG-46-NAV-IN36",
           "size": null,
           "color": "Navy",
+          "price": 20999
+        },
+        {
+          "sku": "SAM-BRCH-EDRD-MATT-FG-46-STE-IN36",
+          "size": null,
+          "color": null,
           "price": 20999
         },
         {
@@ -23359,43 +22865,7 @@
           "size": null,
           "color": "White",
           "price": 20999
-        }
-      ]
-    },
-    {
-      "slug": "samshield-breeches-edouard-matt-full-grip-men-fr46-in36-kaki",
-      "category": "breeches-and-leggings",
-      "name": "Samshield Breeches Edouard Matt Full Grip/Men-FR46/IN36/Kaki",
-      "brand": "Samshield",
-      "variants": [
-        {
-          "sku": "SAM-BRCH-EDRD-MATT-FG-46-KAK-IN36",
-          "size": null,
-          "color": null,
-          "price": 20999
-        }
-      ]
-    },
-    {
-      "slug": "samshield-breeches-edouard-matt-full-grip-men-fr46-in36-steel",
-      "category": "breeches-and-leggings",
-      "name": "Samshield Breeches Edouard Matt Full Grip/Men-FR46/IN36/Steel",
-      "brand": "Samshield",
-      "variants": [
-        {
-          "sku": "SAM-BRCH-EDRD-MATT-FG-46-STE-IN36",
-          "size": null,
-          "color": "Grey",
-          "price": 20999
-        }
-      ]
-    },
-    {
-      "slug": "samshield-breeches-edouard-matt-full-grip-men-fr48-in38",
-      "category": "breeches-and-leggings",
-      "name": "Samshield Breeches Edouard Matt Full Grip/Men-FR48/IN38",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-BRCH-EDRD-MATT-FG-48-ANT-IN38",
           "size": null,
@@ -23415,9 +22885,21 @@
           "price": 20999
         },
         {
+          "sku": "SAM-BRCH-EDRD-MATT-FG-48-KAK-IN38",
+          "size": null,
+          "color": null,
+          "price": 20999
+        },
+        {
           "sku": "SAM-BRCH-EDRD-MATT-FG-48-NAV-IN38",
           "size": null,
           "color": "Navy",
+          "price": 20999
+        },
+        {
+          "sku": "SAM-BRCH-EDRD-MATT-FG-48-STE-IN38",
+          "size": null,
+          "color": null,
           "price": 20999
         },
         {
@@ -23425,43 +22907,7 @@
           "size": null,
           "color": "White",
           "price": 20999
-        }
-      ]
-    },
-    {
-      "slug": "samshield-breeches-edouard-matt-full-grip-men-fr48-in38-kaki",
-      "category": "breeches-and-leggings",
-      "name": "Samshield Breeches Edouard Matt Full Grip/Men-FR48/IN38/Kaki",
-      "brand": "Samshield",
-      "variants": [
-        {
-          "sku": "SAM-BRCH-EDRD-MATT-FG-48-KAK-IN38",
-          "size": null,
-          "color": null,
-          "price": 20999
-        }
-      ]
-    },
-    {
-      "slug": "samshield-breeches-edouard-matt-full-grip-men-fr48-in38-steel",
-      "category": "breeches-and-leggings",
-      "name": "Samshield Breeches Edouard Matt Full Grip/Men-FR48/IN38/Steel",
-      "brand": "Samshield",
-      "variants": [
-        {
-          "sku": "SAM-BRCH-EDRD-MATT-FG-48-STE-IN38",
-          "size": null,
-          "color": "Grey",
-          "price": 20999
-        }
-      ]
-    },
-    {
-      "slug": "samshield-breeches-edouard-matt-full-grip-men-fr50-in40",
-      "category": "breeches-and-leggings",
-      "name": "Samshield Breeches Edouard Matt Full Grip/Men-FR50/IN40",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-BRCH-EDRD-MATT-FG-50-ANT-IN40",
           "size": null,
@@ -23481,9 +22927,21 @@
           "price": 20999
         },
         {
+          "sku": "SAM-BRCH-EDRD-MATT-FG-50-KAK-IN40",
+          "size": null,
+          "color": null,
+          "price": 20999
+        },
+        {
           "sku": "SAM-BRCH-EDRD-MATT-FG-50-NAV-IN40",
           "size": null,
           "color": "Navy",
+          "price": 20999
+        },
+        {
+          "sku": "SAM-BRCH-EDRD-MATT-FG-50-STE-IN40",
+          "size": null,
+          "color": null,
           "price": 20999
         },
         {
@@ -23495,597 +22953,257 @@
       ]
     },
     {
-      "slug": "samshield-breeches-edouard-matt-full-grip-men-fr50-in40-kaki",
+      "slug": "samshield-breeches-edouard-matt-men",
       "category": "breeches-and-leggings",
-      "name": "Samshield Breeches Edouard Matt Full Grip/Men-FR50/IN40/Kaki",
-      "brand": "Samshield",
-      "variants": [
-        {
-          "sku": "SAM-BRCH-EDRD-MATT-FG-50-KAK-IN40",
-          "size": null,
-          "color": null,
-          "price": 20999
-        }
-      ]
-    },
-    {
-      "slug": "samshield-breeches-edouard-matt-full-grip-men-fr50-in40-steel",
-      "category": "breeches-and-leggings",
-      "name": "Samshield Breeches Edouard Matt Full Grip/Men-FR50/IN40/Steel",
-      "brand": "Samshield",
-      "variants": [
-        {
-          "sku": "SAM-BRCH-EDRD-MATT-FG-50-STE-IN40",
-          "size": null,
-          "color": "Grey",
-          "price": 20999
-        }
-      ]
-    },
-    {
-      "slug": "samshield-breeches-edouard-matt-men-black-fr36-in26",
-      "category": "breeches-and-leggings",
-      "name": "Samshield Breeches Edouard Matt Men-Black/FR36/IN26",
+      "name": "Samshield Breeches Edouard Matt Men",
       "brand": "Samshield",
       "variants": [
         {
           "sku": "SAM-BRCH-EDRD-BLA-FR36-IN26",
           "size": null,
-          "color": null,
+          "color": "Black",
           "price": 19999
-        }
-      ]
-    },
-    {
-      "slug": "samshield-breeches-edouard-matt-men-black-fr38-in28",
-      "category": "breeches-and-leggings",
-      "name": "Samshield Breeches Edouard Matt Men-Black/FR38/IN28",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-BRCH-EDRD-BLA-FR38-IN28",
           "size": null,
-          "color": null,
+          "color": "Black",
           "price": 19999
-        }
-      ]
-    },
-    {
-      "slug": "samshield-breeches-edouard-matt-men-black-fr40-in30",
-      "category": "breeches-and-leggings",
-      "name": "Samshield Breeches Edouard Matt Men-Black/FR40/IN30",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-BRCH-EDRD-BLA-FR40-IN30",
           "size": null,
-          "color": null,
+          "color": "Black",
           "price": 19999
-        }
-      ]
-    },
-    {
-      "slug": "samshield-breeches-edouard-matt-men-black-fr42-in32",
-      "category": "breeches-and-leggings",
-      "name": "Samshield Breeches Edouard Matt Men-Black/FR42/IN32",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-BRCH-EDRD-BLA-FR4-1-IN32",
           "size": null,
-          "color": null,
+          "color": "Black",
           "price": 19999
-        }
-      ]
-    },
-    {
-      "slug": "samshield-breeches-edouard-matt-men-black-fr44-in34",
-      "category": "breeches-and-leggings",
-      "name": "Samshield Breeches Edouard Matt Men-Black/FR44/IN34",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-BRCH-EDRD-BLA-FR4-2-IN34",
           "size": null,
-          "color": null,
+          "color": "Black",
           "price": 19999
-        }
-      ]
-    },
-    {
-      "slug": "samshield-breeches-edouard-matt-men-black-fr46-in36",
-      "category": "breeches-and-leggings",
-      "name": "Samshield Breeches Edouard Matt Men-Black/FR46/IN36",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-BRCH-EDRD-BLA-FR4-3-IN36",
           "size": null,
-          "color": null,
+          "color": "Black",
           "price": 19999
-        }
-      ]
-    },
-    {
-      "slug": "samshield-breeches-edouard-matt-men-black-fr48-in38",
-      "category": "breeches-and-leggings",
-      "name": "Samshield Breeches Edouard Matt Men-Black/FR48/IN38",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-BRCH-EDRD-BLA-FR4-4-IN38",
           "size": null,
-          "color": null,
+          "color": "Black",
           "price": 19999
-        }
-      ]
-    },
-    {
-      "slug": "samshield-breeches-edouard-matt-men-black-fr50-in40",
-      "category": "breeches-and-leggings",
-      "name": "Samshield Breeches Edouard Matt Men-Black/FR50/ IN40",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-BRCH-EDRD-BLA-FR5-IN40",
           "size": null,
-          "color": null,
+          "color": "Black",
           "price": 19999
-        }
-      ]
-    },
-    {
-      "slug": "samshield-breeches-edouard-matt-men-dark-shadow-fr36-in26",
-      "category": "breeches-and-leggings",
-      "name": "Samshield Breeches Edouard Matt Men-Dark Shadow/FR36/IN26",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-BRCH-EDRD-DAR-FR3-IN26",
           "size": null,
           "color": null,
           "price": 19999
-        }
-      ]
-    },
-    {
-      "slug": "samshield-breeches-edouard-matt-men-dark-shadow-fr38-in28",
-      "category": "breeches-and-leggings",
-      "name": "Samshield Breeches Edouard Matt Men-Dark Shadow/FR38/IN28",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-BRCH-EDRD-DAR-FR3-1-IN28",
           "size": null,
           "color": null,
           "price": 19999
-        }
-      ]
-    },
-    {
-      "slug": "samshield-breeches-edouard-matt-men-dark-shadow-fr40-in30",
-      "category": "breeches-and-leggings",
-      "name": "Samshield Breeches Edouard Matt Men-Dark Shadow/FR40/IN30",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-BRCH-EDRD-DAR-FR4-IN30",
           "size": null,
           "color": null,
           "price": 19999
-        }
-      ]
-    },
-    {
-      "slug": "samshield-breeches-edouard-matt-men-dark-shadow-fr42-in32",
-      "category": "breeches-and-leggings",
-      "name": "Samshield Breeches Edouard Matt Men-Dark Shadow/FR42/IN32",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-BRCH-EDRD-DAR-FR4-1-IN32",
           "size": null,
           "color": null,
           "price": 19999
-        }
-      ]
-    },
-    {
-      "slug": "samshield-breeches-edouard-matt-men-dark-shadow-fr44-in34",
-      "category": "breeches-and-leggings",
-      "name": "Samshield Breeches Edouard Matt Men-Dark Shadow/FR44/IN34",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-BRCH-EDRD-DAR-FR4-2-IN34",
           "size": null,
           "color": null,
           "price": 19999
-        }
-      ]
-    },
-    {
-      "slug": "samshield-breeches-edouard-matt-men-dark-shadow-fr46-in36",
-      "category": "breeches-and-leggings",
-      "name": "Samshield Breeches Edouard Matt Men-Dark Shadow/FR46/IN36",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-BRCH-EDRD-DAR-FR4-3-IN36",
           "size": null,
           "color": null,
           "price": 19999
-        }
-      ]
-    },
-    {
-      "slug": "samshield-breeches-edouard-matt-men-dark-shadow-fr48-in38",
-      "category": "breeches-and-leggings",
-      "name": "Samshield Breeches Edouard Matt Men-Dark Shadow/FR48/IN38",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-BRCH-EDRD-DAR-FR4-4-IN38",
           "size": null,
           "color": null,
           "price": 19999
-        }
-      ]
-    },
-    {
-      "slug": "samshield-breeches-edouard-matt-men-dark-shadow-fr50-in40",
-      "category": "breeches-and-leggings",
-      "name": "Samshield Breeches Edouard Matt Men-Dark Shadow/FR50/IN40",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-BRCH-EDRD-DAR-FR5-IN40",
           "size": null,
           "color": null,
           "price": 19999
-        }
-      ]
-    },
-    {
-      "slug": "samshield-breeches-edouard-matt-men-forest-green-fr36-in26",
-      "category": "breeches-and-leggings",
-      "name": "Samshield Breeches Edouard Matt Men-Forest Green/FR36/IN26",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-BRCH-EDRD-FOR-FR3-IN26",
           "size": null,
           "color": null,
           "price": 19999
-        }
-      ]
-    },
-    {
-      "slug": "samshield-breeches-edouard-matt-men-forest-green-fr38-in28",
-      "category": "breeches-and-leggings",
-      "name": "Samshield Breeches Edouard Matt Men-Forest Green/FR38/IN28",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-BRCH-EDRD-FOR-FR3-1-IN28",
           "size": null,
           "color": null,
           "price": 19999
-        }
-      ]
-    },
-    {
-      "slug": "samshield-breeches-edouard-matt-men-forest-green-fr40-in30",
-      "category": "breeches-and-leggings",
-      "name": "Samshield Breeches Edouard Matt Men-Forest Green/FR40/IN30",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-BRCH-EDRD-FOR-FR4-IN30",
           "size": null,
           "color": null,
           "price": 19999
-        }
-      ]
-    },
-    {
-      "slug": "samshield-breeches-edouard-matt-men-forest-green-fr42-in32",
-      "category": "breeches-and-leggings",
-      "name": "Samshield Breeches Edouard Matt Men-Forest Green/FR42/IN32",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-BRCH-EDRD-FOR-FR4-1-IN32",
           "size": null,
           "color": null,
           "price": 19999
-        }
-      ]
-    },
-    {
-      "slug": "samshield-breeches-edouard-matt-men-forest-green-fr46-in36",
-      "category": "breeches-and-leggings",
-      "name": "Samshield Breeches Edouard Matt Men-Forest Green/FR46/IN36",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-BRCH-EDRD-FOR-FR4-3-IN36",
           "size": null,
           "color": null,
           "price": 19999
-        }
-      ]
-    },
-    {
-      "slug": "samshield-breeches-edouard-matt-men-forest-green-fr48-in38",
-      "category": "breeches-and-leggings",
-      "name": "Samshield Breeches Edouard Matt Men-Forest Green/FR48/IN38",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-BRCH-EDRD-FOR-FR4-4-IN38",
           "size": null,
           "color": null,
           "price": 19999
-        }
-      ]
-    },
-    {
-      "slug": "samshield-breeches-edouard-matt-men-forest-green-fr50-in40",
-      "category": "breeches-and-leggings",
-      "name": "Samshield Breeches Edouard Matt Men-Forest Green/FR50/IN40",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-BRCH-EDRD-FOR-FR5-IN40",
           "size": null,
           "color": null,
           "price": 19999
-        }
-      ]
-    },
-    {
-      "slug": "samshield-breeches-edouard-matt-men-navy-fr36-in26",
-      "category": "breeches-and-leggings",
-      "name": "Samshield Breeches Edouard Matt Men-Navy/FR36/IN26",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-BRCH-EDRD-NAV-FR3-IN26",
           "size": null,
-          "color": null,
+          "color": "Navy",
           "price": 19999
-        }
-      ]
-    },
-    {
-      "slug": "samshield-breeches-edouard-matt-men-navy-fr38-in28",
-      "category": "breeches-and-leggings",
-      "name": "Samshield Breeches Edouard Matt Men-Navy/FR38/IN28",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-BRCH-EDRD-NAV-FR3-1-IN28",
           "size": null,
-          "color": null,
+          "color": "Navy",
           "price": 19999
-        }
-      ]
-    },
-    {
-      "slug": "samshield-breeches-edouard-matt-men-navy-fr40-in30",
-      "category": "breeches-and-leggings",
-      "name": "Samshield Breeches Edouard Matt Men-Navy/FR40/IN30",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-BRCH-EDRD-NAV-FR4-IN30",
           "size": null,
-          "color": null,
+          "color": "Navy",
           "price": 19999
-        }
-      ]
-    },
-    {
-      "slug": "samshield-breeches-edouard-matt-men-navy-fr42-in32",
-      "category": "breeches-and-leggings",
-      "name": "Samshield Breeches Edouard Matt Men-Navy/FR42/IN32",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-BRCH-EDRD-NAV-FR4-1-IN32",
           "size": null,
-          "color": null,
+          "color": "Navy",
           "price": 19999
-        }
-      ]
-    },
-    {
-      "slug": "samshield-breeches-edouard-matt-men-navy-fr44-in34",
-      "category": "breeches-and-leggings",
-      "name": "Samshield Breeches Edouard Matt Men-Navy/FR44/IN34",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-BRCH-EDRD-NAV-FR4-2-IN34",
           "size": null,
-          "color": null,
+          "color": "Navy",
           "price": 19999
-        }
-      ]
-    },
-    {
-      "slug": "samshield-breeches-edouard-matt-men-navy-fr46-in36",
-      "category": "breeches-and-leggings",
-      "name": "Samshield Breeches Edouard Matt Men-Navy/FR46/IN36",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-BRCH-EDRD-NAV-FR4-3-IN36",
           "size": null,
-          "color": null,
+          "color": "Navy",
           "price": 19999
-        }
-      ]
-    },
-    {
-      "slug": "samshield-breeches-edouard-matt-men-navy-fr48-in38",
-      "category": "breeches-and-leggings",
-      "name": "Samshield Breeches Edouard Matt Men-Navy/FR48/IN38",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-BRCH-EDRD-NAV-FR4-4-IN38",
           "size": null,
-          "color": null,
+          "color": "Navy",
           "price": 19999
-        }
-      ]
-    },
-    {
-      "slug": "samshield-breeches-edouard-matt-men-navy-fr50-in40",
-      "category": "breeches-and-leggings",
-      "name": "Samshield Breeches Edouard Matt Men-Navy/FR50/IN40",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-BRCH-EDRD-NAV-FR5-IN40",
           "size": null,
-          "color": null,
+          "color": "Navy",
           "price": 19999
-        }
-      ]
-    },
-    {
-      "slug": "samshield-breeches-edouard-matt-men-taupe-fr40-in30",
-      "category": "breeches-and-leggings",
-      "name": "Samshield Breeches Edouard Matt Men-Taupe/FR40/IN30",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-BRCH-EDRD-TPE-FR4-IN30",
           "size": null,
           "color": null,
           "price": 19999
-        }
-      ]
-    },
-    {
-      "slug": "samshield-breeches-edouard-matt-men-white-fr36-in26",
-      "category": "breeches-and-leggings",
-      "name": "Samshield Breeches Edouard Matt Men-White/FR36/IN26",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-BRCH-EDRD-WHI-FR3-IN26",
           "size": null,
-          "color": null,
+          "color": "White",
           "price": 19999
-        }
-      ]
-    },
-    {
-      "slug": "samshield-breeches-edouard-matt-men-white-fr38-in28",
-      "category": "breeches-and-leggings",
-      "name": "Samshield Breeches Edouard Matt Men-White/FR38/IN28",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-BRCH-EDRD-WHI-FR3-1-IN28",
           "size": null,
-          "color": null,
+          "color": "White",
           "price": 19999
-        }
-      ]
-    },
-    {
-      "slug": "samshield-breeches-edouard-matt-men-white-fr40-in30",
-      "category": "breeches-and-leggings",
-      "name": "Samshield Breeches Edouard Matt Men-White/FR40/IN30",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-BRCH-EDRD-WHI-FR4-IN30",
           "size": null,
-          "color": null,
+          "color": "White",
           "price": 19999
-        }
-      ]
-    },
-    {
-      "slug": "samshield-breeches-edouard-matt-men-white-fr42-in32",
-      "category": "breeches-and-leggings",
-      "name": "Samshield Breeches Edouard Matt Men-White/FR42/IN32",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-BRCH-EDRD-WHI-FR4-1-IN32",
           "size": null,
-          "color": null,
+          "color": "White",
           "price": 19999
-        }
-      ]
-    },
-    {
-      "slug": "samshield-breeches-edouard-matt-men-white-fr44-in34",
-      "category": "breeches-and-leggings",
-      "name": "Samshield Breeches Edouard Matt Men-White/FR44/IN34",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-BRCH-EDRD-WHI-FR4-2-IN34",
           "size": null,
-          "color": null,
+          "color": "White",
           "price": 19999
-        }
-      ]
-    },
-    {
-      "slug": "samshield-breeches-edouard-matt-men-white-fr46-in36",
-      "category": "breeches-and-leggings",
-      "name": "Samshield Breeches Edouard Matt Men-White/FR46/IN36",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-BRCH-EDRD-WHI-FR4-3-IN36",
           "size": null,
-          "color": null,
+          "color": "White",
           "price": 19999
-        }
-      ]
-    },
-    {
-      "slug": "samshield-breeches-edouard-matt-men-white-fr48-in38",
-      "category": "breeches-and-leggings",
-      "name": "Samshield Breeches Edouard Matt Men-White/FR48/IN38",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-BRCH-EDRD-WHI-FR4-4-IN38",
           "size": null,
-          "color": null,
+          "color": "White",
           "price": 19999
-        }
-      ]
-    },
-    {
-      "slug": "samshield-breeches-edouard-matt-men-white-fr50-in40",
-      "category": "breeches-and-leggings",
-      "name": "Samshield Breeches Edouard Matt Men-White/FR50/IN40",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-BRCH-EDRD-WHI-FR5-IN40",
           "size": null,
-          "color": null,
+          "color": "White",
           "price": 19999
         }
       ]
     },
     {
-      "slug": "samshield-breeches-edouard-mattmen-forest-green-fr44-in34",
+      "slug": "samshield-breeches-edouard-mattmen",
       "category": "breeches-and-leggings",
-      "name": "Samshield Breeches Edouard MattMen-Forest Green/FR44/IN34",
+      "name": "Samshield Breeches Edouard MattMen",
       "brand": "Samshield",
       "variants": [
         {
@@ -24097,639 +23215,9 @@
       ]
     },
     {
-      "slug": "samshield-breeches-edouard-biege-fr36-in26",
+      "slug": "samshield-breeches-maeceau",
       "category": "breeches-and-leggings",
-      "name": "Samshield Breeches Edouard-Biege/FR36/IN26",
-      "brand": "Samshield",
-      "variants": [
-        {
-          "sku": "SAM-BECH-EDRD-BIE-36-IN26",
-          "size": null,
-          "color": null,
-          "price": 20999
-        }
-      ]
-    },
-    {
-      "slug": "samshield-breeches-edouard-biege-fr38-in28",
-      "category": "breeches-and-leggings",
-      "name": "Samshield Breeches Edouard-Biege/FR38/IN28",
-      "brand": "Samshield",
-      "variants": [
-        {
-          "sku": "SAM-BECH-EDRD-BIE-38-IN28",
-          "size": null,
-          "color": null,
-          "price": 20999
-        }
-      ]
-    },
-    {
-      "slug": "samshield-breeches-edouard-biege-fr40-in30",
-      "category": "breeches-and-leggings",
-      "name": "Samshield Breeches Edouard-Biege/FR40/IN30",
-      "brand": "Samshield",
-      "variants": [
-        {
-          "sku": "SAM-BECH-EDRD-BIE-40-IN30",
-          "size": null,
-          "color": null,
-          "price": 20999
-        }
-      ]
-    },
-    {
-      "slug": "samshield-breeches-edouard-biege-fr42-in32",
-      "category": "breeches-and-leggings",
-      "name": "Samshield Breeches Edouard-Biege/FR42/IN32",
-      "brand": "Samshield",
-      "variants": [
-        {
-          "sku": "SAM-BECH-EDRD-BIE-42-IN32",
-          "size": null,
-          "color": null,
-          "price": 20999
-        }
-      ]
-    },
-    {
-      "slug": "samshield-breeches-edouard-biege-fr44-in34",
-      "category": "breeches-and-leggings",
-      "name": "Samshield Breeches Edouard-Biege/FR44/IN34",
-      "brand": "Samshield",
-      "variants": [
-        {
-          "sku": "SAM-BECH-EDRD-BIE-44-IN34",
-          "size": null,
-          "color": null,
-          "price": 20999
-        }
-      ]
-    },
-    {
-      "slug": "samshield-breeches-edouard-biege-fr46-in36",
-      "category": "breeches-and-leggings",
-      "name": "Samshield Breeches Edouard-Biege/FR46/IN36",
-      "brand": "Samshield",
-      "variants": [
-        {
-          "sku": "SAM-BECH-EDRD-BIE-46-IN36",
-          "size": null,
-          "color": null,
-          "price": 20999
-        }
-      ]
-    },
-    {
-      "slug": "samshield-breeches-edouard-biege-fr48-in38",
-      "category": "breeches-and-leggings",
-      "name": "Samshield Breeches Edouard-Biege/FR48/IN38",
-      "brand": "Samshield",
-      "variants": [
-        {
-          "sku": "SAM-BECH-EDRD-BIE-48-IN38",
-          "size": null,
-          "color": null,
-          "price": 20999
-        }
-      ]
-    },
-    {
-      "slug": "samshield-breeches-edouard-biege-fr50-in40",
-      "category": "breeches-and-leggings",
-      "name": "Samshield Breeches Edouard-Biege/FR50/IN40",
-      "brand": "Samshield",
-      "variants": [
-        {
-          "sku": "SAM-BECH-EDRD-BIE-50-IN40",
-          "size": null,
-          "color": null,
-          "price": 20999
-        }
-      ]
-    },
-    {
-      "slug": "samshield-breeches-edouard-biege-fr52-in42",
-      "category": "breeches-and-leggings",
-      "name": "Samshield Breeches Edouard-Biege/FR52/IN42",
-      "brand": "Samshield",
-      "variants": [
-        {
-          "sku": "SAM-BECH-EDRD-BIE-52-IN42",
-          "size": null,
-          "color": null,
-          "price": 20999
-        }
-      ]
-    },
-    {
-      "slug": "samshield-breeches-edouard-black-fr36-in26",
-      "category": "breeches-and-leggings",
-      "name": "Samshield Breeches Edouard-Black/FR36/IN26",
-      "brand": "Samshield",
-      "variants": [
-        {
-          "sku": "SAM-BECH-EDRD-BLA-36-IN26",
-          "size": null,
-          "color": null,
-          "price": 20999
-        }
-      ]
-    },
-    {
-      "slug": "samshield-breeches-edouard-black-fr38-in28",
-      "category": "breeches-and-leggings",
-      "name": "Samshield Breeches Edouard-Black/FR38/IN28",
-      "brand": "Samshield",
-      "variants": [
-        {
-          "sku": "SAM-BECH-EDRD-BLA-38-IN28",
-          "size": null,
-          "color": null,
-          "price": 20999
-        }
-      ]
-    },
-    {
-      "slug": "samshield-breeches-edouard-black-fr40-in30",
-      "category": "breeches-and-leggings",
-      "name": "Samshield Breeches Edouard-Black/FR40/IN30",
-      "brand": "Samshield",
-      "variants": [
-        {
-          "sku": "SAM-BECH-EDRD-BLA-40-IN30",
-          "size": null,
-          "color": null,
-          "price": 20999
-        }
-      ]
-    },
-    {
-      "slug": "samshield-breeches-edouard-black-fr42-in32",
-      "category": "breeches-and-leggings",
-      "name": "Samshield Breeches Edouard-Black/FR42/IN32",
-      "brand": "Samshield",
-      "variants": [
-        {
-          "sku": "SAM-BECH-EDRD-BLA-42-IN32",
-          "size": null,
-          "color": null,
-          "price": 20999
-        }
-      ]
-    },
-    {
-      "slug": "samshield-breeches-edouard-black-fr44-in34",
-      "category": "breeches-and-leggings",
-      "name": "Samshield Breeches Edouard-Black/FR44/IN34",
-      "brand": "Samshield",
-      "variants": [
-        {
-          "sku": "SAM-BECH-EDRD-BLA-44-IN34",
-          "size": null,
-          "color": null,
-          "price": 20999
-        }
-      ]
-    },
-    {
-      "slug": "samshield-breeches-edouard-black-fr46-in36",
-      "category": "breeches-and-leggings",
-      "name": "Samshield Breeches Edouard-Black/FR46/IN36",
-      "brand": "Samshield",
-      "variants": [
-        {
-          "sku": "SAM-BECH-EDRD-BLA-46-IN36",
-          "size": null,
-          "color": null,
-          "price": 20999
-        }
-      ]
-    },
-    {
-      "slug": "samshield-breeches-edouard-black-fr48-in38",
-      "category": "breeches-and-leggings",
-      "name": "Samshield Breeches Edouard-Black/FR48/IN38",
-      "brand": "Samshield",
-      "variants": [
-        {
-          "sku": "SAM-BECH-EDRD-BLA-48-IN38",
-          "size": null,
-          "color": null,
-          "price": 20999
-        }
-      ]
-    },
-    {
-      "slug": "samshield-breeches-edouard-black-fr50-in40",
-      "category": "breeches-and-leggings",
-      "name": "Samshield Breeches Edouard-Black/FR50/IN40",
-      "brand": "Samshield",
-      "variants": [
-        {
-          "sku": "SAM-BECH-EDRD-BLA-50-IN40",
-          "size": null,
-          "color": null,
-          "price": 20999
-        }
-      ]
-    },
-    {
-      "slug": "samshield-breeches-edouard-black-fr52-in42",
-      "category": "breeches-and-leggings",
-      "name": "Samshield Breeches Edouard-Black/FR52/IN42",
-      "brand": "Samshield",
-      "variants": [
-        {
-          "sku": "SAM-BECH-EDRD-BLA-52-IN42",
-          "size": null,
-          "color": null,
-          "price": 20999
-        }
-      ]
-    },
-    {
-      "slug": "samshield-breeches-edouard-navy-fr36-in26",
-      "category": "breeches-and-leggings",
-      "name": "Samshield Breeches Edouard-Navy/FR36/IN26",
-      "brand": "Samshield",
-      "variants": [
-        {
-          "sku": "SAM-BECH-EDRD-NAV-36-IN26",
-          "size": null,
-          "color": null,
-          "price": 20999
-        }
-      ]
-    },
-    {
-      "slug": "samshield-breeches-edouard-navy-fr38-in28",
-      "category": "breeches-and-leggings",
-      "name": "Samshield Breeches Edouard-Navy/FR38/IN28",
-      "brand": "Samshield",
-      "variants": [
-        {
-          "sku": "SAM-BECH-EDRD-NAV-38-IN28",
-          "size": null,
-          "color": null,
-          "price": 20999
-        }
-      ]
-    },
-    {
-      "slug": "samshield-breeches-edouard-navy-fr40-in30",
-      "category": "breeches-and-leggings",
-      "name": "Samshield Breeches Edouard-Navy/FR40/IN30",
-      "brand": "Samshield",
-      "variants": [
-        {
-          "sku": "SAM-BECH-EDRD-NAV-40-IN30",
-          "size": null,
-          "color": null,
-          "price": 20999
-        }
-      ]
-    },
-    {
-      "slug": "samshield-breeches-edouard-navy-fr42-in32",
-      "category": "breeches-and-leggings",
-      "name": "Samshield Breeches Edouard-Navy/FR42/IN32",
-      "brand": "Samshield",
-      "variants": [
-        {
-          "sku": "SAM-BECH-EDRD-NAV-42-IN32",
-          "size": null,
-          "color": null,
-          "price": 20999
-        }
-      ]
-    },
-    {
-      "slug": "samshield-breeches-edouard-navy-fr44-in34",
-      "category": "breeches-and-leggings",
-      "name": "Samshield Breeches Edouard-Navy/FR44/IN34",
-      "brand": "Samshield",
-      "variants": [
-        {
-          "sku": "SAM-BECH-EDRD-NAV-44-IN34",
-          "size": null,
-          "color": null,
-          "price": 20999
-        }
-      ]
-    },
-    {
-      "slug": "samshield-breeches-edouard-navy-fr46-in36",
-      "category": "breeches-and-leggings",
-      "name": "Samshield Breeches Edouard-Navy/FR46/IN36",
-      "brand": "Samshield",
-      "variants": [
-        {
-          "sku": "SAM-BECH-EDRD-NAV-46-IN36",
-          "size": null,
-          "color": null,
-          "price": 20999
-        }
-      ]
-    },
-    {
-      "slug": "samshield-breeches-edouard-navy-fr48-in38",
-      "category": "breeches-and-leggings",
-      "name": "Samshield Breeches Edouard-Navy/FR48/IN38",
-      "brand": "Samshield",
-      "variants": [
-        {
-          "sku": "SAM-BECH-EDRD-NAV-48-IN38",
-          "size": null,
-          "color": null,
-          "price": 20999
-        }
-      ]
-    },
-    {
-      "slug": "samshield-breeches-edouard-navy-fr50-in40",
-      "category": "breeches-and-leggings",
-      "name": "Samshield Breeches Edouard-Navy/FR50/IN40",
-      "brand": "Samshield",
-      "variants": [
-        {
-          "sku": "SAM-BECH-EDRD-NAV-50-IN40",
-          "size": null,
-          "color": null,
-          "price": 20999
-        }
-      ]
-    },
-    {
-      "slug": "samshield-breeches-edouard-navy-fr52-in42",
-      "category": "breeches-and-leggings",
-      "name": "Samshield Breeches Edouard-Navy/FR52/IN42",
-      "brand": "Samshield",
-      "variants": [
-        {
-          "sku": "SAM-BECH-EDRD-NAV-52-IN42",
-          "size": null,
-          "color": null,
-          "price": 20999
-        }
-      ]
-    },
-    {
-      "slug": "samshield-breeches-edouard-nickel-fr36-in26",
-      "category": "breeches-and-leggings",
-      "name": "Samshield Breeches Edouard-Nickel/FR36/IN26",
-      "brand": "Samshield",
-      "variants": [
-        {
-          "sku": "SAM-BECH-EDRD-NIC-36-IN26",
-          "size": null,
-          "color": null,
-          "price": 20999
-        }
-      ]
-    },
-    {
-      "slug": "samshield-breeches-edouard-nickel-fr38-in28",
-      "category": "breeches-and-leggings",
-      "name": "Samshield Breeches Edouard-Nickel/FR38/IN28",
-      "brand": "Samshield",
-      "variants": [
-        {
-          "sku": "SAM-BECH-EDRD-NIC-38-IN28",
-          "size": null,
-          "color": null,
-          "price": 20999
-        }
-      ]
-    },
-    {
-      "slug": "samshield-breeches-edouard-nickel-fr40-in30",
-      "category": "breeches-and-leggings",
-      "name": "Samshield Breeches Edouard-Nickel/FR40/IN30",
-      "brand": "Samshield",
-      "variants": [
-        {
-          "sku": "SAM-BECH-EDRD-NIC-40-IN30",
-          "size": null,
-          "color": null,
-          "price": 20999
-        }
-      ]
-    },
-    {
-      "slug": "samshield-breeches-edouard-nickel-fr42-in32",
-      "category": "breeches-and-leggings",
-      "name": "Samshield Breeches Edouard-Nickel/FR42/IN32",
-      "brand": "Samshield",
-      "variants": [
-        {
-          "sku": "SAM-BECH-EDRD-NIC-42-IN32",
-          "size": null,
-          "color": null,
-          "price": 20999
-        }
-      ]
-    },
-    {
-      "slug": "samshield-breeches-edouard-nickel-fr44-in34",
-      "category": "breeches-and-leggings",
-      "name": "Samshield Breeches Edouard-Nickel/FR44/IN34",
-      "brand": "Samshield",
-      "variants": [
-        {
-          "sku": "SAM-BECH-EDRD-NIC-44-IN34",
-          "size": null,
-          "color": null,
-          "price": 20999
-        }
-      ]
-    },
-    {
-      "slug": "samshield-breeches-edouard-nickel-fr46-in36",
-      "category": "breeches-and-leggings",
-      "name": "Samshield Breeches Edouard-Nickel/FR46/IN36",
-      "brand": "Samshield",
-      "variants": [
-        {
-          "sku": "SAM-BECH-EDRD-NIC-46-IN36",
-          "size": null,
-          "color": null,
-          "price": 20999
-        }
-      ]
-    },
-    {
-      "slug": "samshield-breeches-edouard-nickel-fr48-in38",
-      "category": "breeches-and-leggings",
-      "name": "Samshield Breeches Edouard-Nickel/FR48/IN38",
-      "brand": "Samshield",
-      "variants": [
-        {
-          "sku": "SAM-BECH-EDRD-NIC-48-IN38",
-          "size": null,
-          "color": null,
-          "price": 20999
-        }
-      ]
-    },
-    {
-      "slug": "samshield-breeches-edouard-nickel-fr50-in40",
-      "category": "breeches-and-leggings",
-      "name": "Samshield Breeches Edouard-Nickel/FR50/IN40",
-      "brand": "Samshield",
-      "variants": [
-        {
-          "sku": "SAM-BECH-EDRD-NIC-50-IN40",
-          "size": null,
-          "color": null,
-          "price": 20999
-        }
-      ]
-    },
-    {
-      "slug": "samshield-breeches-edouard-nickel-fr52-in42",
-      "category": "breeches-and-leggings",
-      "name": "Samshield Breeches Edouard-Nickel/FR52/IN42",
-      "brand": "Samshield",
-      "variants": [
-        {
-          "sku": "SAM-BECH-EDRD-NIC-52-IN42",
-          "size": null,
-          "color": null,
-          "price": 20999
-        }
-      ]
-    },
-    {
-      "slug": "samshield-breeches-edouard-white-fr36-in26",
-      "category": "breeches-and-leggings",
-      "name": "Samshield Breeches Edouard-White/FR36/IN26",
-      "brand": "Samshield",
-      "variants": [
-        {
-          "sku": "SAM-BECH-EDRD-WHI-36-IN26",
-          "size": null,
-          "color": null,
-          "price": 20999
-        }
-      ]
-    },
-    {
-      "slug": "samshield-breeches-edouard-white-fr38-in28",
-      "category": "breeches-and-leggings",
-      "name": "Samshield Breeches Edouard-White/FR38/IN28",
-      "brand": "Samshield",
-      "variants": [
-        {
-          "sku": "SAM-BECH-EDRD-WHI-38-IN28",
-          "size": null,
-          "color": null,
-          "price": 20999
-        }
-      ]
-    },
-    {
-      "slug": "samshield-breeches-edouard-white-fr40-in30",
-      "category": "breeches-and-leggings",
-      "name": "Samshield Breeches Edouard-White/FR40/IN30",
-      "brand": "Samshield",
-      "variants": [
-        {
-          "sku": "SAM-BECH-EDRD-WHI-40-IN30",
-          "size": null,
-          "color": null,
-          "price": 20999
-        }
-      ]
-    },
-    {
-      "slug": "samshield-breeches-edouard-white-fr42-in32",
-      "category": "breeches-and-leggings",
-      "name": "Samshield Breeches Edouard-White/FR42/IN32",
-      "brand": "Samshield",
-      "variants": [
-        {
-          "sku": "SAM-BECH-EDRD-WHI-42-IN32",
-          "size": null,
-          "color": null,
-          "price": 20999
-        }
-      ]
-    },
-    {
-      "slug": "samshield-breeches-edouard-white-fr44-in34",
-      "category": "breeches-and-leggings",
-      "name": "Samshield Breeches Edouard-White/FR44/IN34",
-      "brand": "Samshield",
-      "variants": [
-        {
-          "sku": "SAM-BECH-EDRD-WHI-44-IN34",
-          "size": null,
-          "color": null,
-          "price": 20999
-        }
-      ]
-    },
-    {
-      "slug": "samshield-breeches-edouard-white-fr46-in36",
-      "category": "breeches-and-leggings",
-      "name": "Samshield Breeches Edouard-White/FR46/IN36",
-      "brand": "Samshield",
-      "variants": [
-        {
-          "sku": "SAM-BECH-EDRD-WHI-46-IN36",
-          "size": null,
-          "color": null,
-          "price": 20999
-        }
-      ]
-    },
-    {
-      "slug": "samshield-breeches-edouard-white-fr48-in38",
-      "category": "breeches-and-leggings",
-      "name": "Samshield Breeches Edouard-White/FR48/IN38",
-      "brand": "Samshield",
-      "variants": [
-        {
-          "sku": "SAM-BECH-EDRD-WHI-48-IN38",
-          "size": null,
-          "color": null,
-          "price": 20999
-        }
-      ]
-    },
-    {
-      "slug": "samshield-breeches-edouard-white-fr50-in40",
-      "category": "breeches-and-leggings",
-      "name": "Samshield Breeches Edouard-White/FR50/IN40",
-      "brand": "Samshield",
-      "variants": [
-        {
-          "sku": "SAM-BECH-EDRD-WHI-50-IN40",
-          "size": null,
-          "color": null,
-          "price": 20999
-        }
-      ]
-    },
-    {
-      "slug": "samshield-breeches-edouard-white-fr52-in42",
-      "category": "breeches-and-leggings",
-      "name": "Samshield Breeches Edouard-White/FR52/IN42",
-      "brand": "Samshield",
-      "variants": [
-        {
-          "sku": "SAM-BECH-EDRD-WHI-52-IN42",
-          "size": null,
-          "color": null,
-          "price": 20999
-        }
-      ]
-    },
-    {
-      "slug": "samshield-breeches-maeceau-pine-green-fr40-in30",
-      "category": "breeches-and-leggings",
-      "name": "Samshield Breeches Maeceau/Pine Green/FR40/ IN30",
+      "name": "Samshield Breeches Maeceau",
       "brand": "Samshield",
       "variants": [
         {
@@ -24741,11 +23229,277 @@
       ]
     },
     {
-      "slug": "samshield-breeches-marceau-2-0-perm-fr36-in26",
+      "slug": "samshield-breeches-marceau",
       "category": "breeches-and-leggings",
-      "name": "Samshield Breeches Marceau 2.0 Perm-FR36/IN26",
+      "name": "Samshield Breeches Marceau",
       "brand": "Samshield",
       "variants": [
+        {
+          "sku": "SAM-BRCH-MRC-BEI-FR36-IN26",
+          "size": null,
+          "color": "Beige",
+          "price": 25999
+        },
+        {
+          "sku": "SAM-BRCH-MRC-BEI-FR38-IN28",
+          "size": null,
+          "color": "Beige",
+          "price": 25999
+        },
+        {
+          "sku": "SAM-BRCH-MRC-BEI-FR40-IN30",
+          "size": null,
+          "color": "Beige",
+          "price": 25999
+        },
+        {
+          "sku": "SAM-BRCH-MRC-BEI-FR42-IN32",
+          "size": null,
+          "color": "Beige",
+          "price": 25999
+        },
+        {
+          "sku": "SAM-BRCH-MRC-BEI-FR44-IN34",
+          "size": null,
+          "color": "Beige",
+          "price": 25999
+        },
+        {
+          "sku": "SAM-BRCH-MRC-BEI-FR46-IN36",
+          "size": null,
+          "color": "Beige",
+          "price": 25999
+        },
+        {
+          "sku": "SAM-BRCH-MRC-BEI-FR48-IN38",
+          "size": null,
+          "color": "Beige",
+          "price": 25999
+        },
+        {
+          "sku": "SAM-BRCH-MRC-BEI-FR50-IN40",
+          "size": null,
+          "color": "Beige",
+          "price": 25999
+        },
+        {
+          "sku": "SAM-BRCH-MRC-BLA-FR36-IN26",
+          "size": null,
+          "color": "Black",
+          "price": 25999
+        },
+        {
+          "sku": "SAM-BRCH-MRC-BLA-FR38-IN28",
+          "size": null,
+          "color": "Black",
+          "price": 25999
+        },
+        {
+          "sku": "SAM-BRCH-MRC-BLA-FR40-IN30",
+          "size": null,
+          "color": "Black",
+          "price": 25999
+        },
+        {
+          "sku": "SAM-BRCH-MRC-BLA-FR42-IN32",
+          "size": null,
+          "color": "Black",
+          "price": 25999
+        },
+        {
+          "sku": "SAM-BRCH-MRC-BLA-FR44-IN34",
+          "size": null,
+          "color": "Black",
+          "price": 25999
+        },
+        {
+          "sku": "SAM-BRCH-MRC-BLA-FR46-IN36",
+          "size": null,
+          "color": "Black",
+          "price": 25999
+        },
+        {
+          "sku": "SAM-BRCH-MRC-BLA-FR48-IN38",
+          "size": null,
+          "color": "Black",
+          "price": 25999
+        },
+        {
+          "sku": "SAM-BRCH-MRC-BLA-FR50-IN40",
+          "size": null,
+          "color": "Black",
+          "price": 25999
+        },
+        {
+          "sku": "SAM-BRCH-MRC-NAV-FR36-IN26",
+          "size": null,
+          "color": "Navy",
+          "price": 25999
+        },
+        {
+          "sku": "SAM-BRCH-MRC-NAV-FR38-IN28",
+          "size": null,
+          "color": "Navy",
+          "price": 25999
+        },
+        {
+          "sku": "SAM-BRCH-MRC-NAV-FR40-IN30",
+          "size": null,
+          "color": "Navy",
+          "price": 25999
+        },
+        {
+          "sku": "SAM-BRCH-MRC-NAV-FR42-IN32",
+          "size": null,
+          "color": "Navy",
+          "price": 25999
+        },
+        {
+          "sku": "SAM-BRCH-MRC-NAV-FR44-IN34",
+          "size": null,
+          "color": "Navy",
+          "price": 25999
+        },
+        {
+          "sku": "SAM-BRCH-MRC-NAV-FR46-IN36",
+          "size": null,
+          "color": "Navy",
+          "price": 25999
+        },
+        {
+          "sku": "SAM-BRCH-MRC-NAV-FR48-IN38",
+          "size": null,
+          "color": "Navy",
+          "price": 25999
+        },
+        {
+          "sku": "SAM-BRCH-MRC-NAV-FR50-IN40",
+          "size": null,
+          "color": "Navy",
+          "price": 25999
+        },
+        {
+          "sku": "SAM-BRCH-MRC-TAU-FR36-IN26",
+          "size": null,
+          "color": null,
+          "price": 25999
+        },
+        {
+          "sku": "SAM-BRCH-MRC-TAU-FR38-IN28",
+          "size": null,
+          "color": null,
+          "price": 25999
+        },
+        {
+          "sku": "SAM-BRCH-MRC-TAU-FR40-IN30",
+          "size": null,
+          "color": null,
+          "price": 25999
+        },
+        {
+          "sku": "SAM-BRCH-MRC-TAU-FR42-IN32",
+          "size": null,
+          "color": null,
+          "price": 25999
+        },
+        {
+          "sku": "SAM-BRCH-MRC-TAU-FR44-IN34",
+          "size": null,
+          "color": null,
+          "price": 25999
+        },
+        {
+          "sku": "SAM-BRCH-MRC-TAU-FR46-IN36",
+          "size": null,
+          "color": null,
+          "price": 25999
+        },
+        {
+          "sku": "SAM-BRCH-MRC-TAU-FR48-IN38",
+          "size": null,
+          "color": null,
+          "price": 25999
+        },
+        {
+          "sku": "SAM-BRCH-MRC-TAU-FR50-IN40",
+          "size": null,
+          "color": null,
+          "price": 25999
+        },
+        {
+          "sku": "SAM-BRCH-MRC-WHI-FR36-IN26",
+          "size": null,
+          "color": "White",
+          "price": 25999
+        },
+        {
+          "sku": "SAM-BRCH-MRC-WHI-FR38-IN28",
+          "size": null,
+          "color": "White",
+          "price": 25999
+        },
+        {
+          "sku": "SAM-BRCH-MRC-WHI-FR40-IN30",
+          "size": null,
+          "color": "White",
+          "price": 25999
+        },
+        {
+          "sku": "SAM-BRCH-MRC-WHI-FR42-IN32",
+          "size": null,
+          "color": "White",
+          "price": 25999
+        },
+        {
+          "sku": "SAM-BRCH-MRC-WHI-FR44-IN34",
+          "size": null,
+          "color": "White",
+          "price": 25999
+        },
+        {
+          "sku": "SAM-BRCH-MRC-WHI-FR46-IN36",
+          "size": null,
+          "color": "White",
+          "price": 25999
+        },
+        {
+          "sku": "SAM-BRCH-MRC-WHI-FR48-IN38",
+          "size": null,
+          "color": "White",
+          "price": 25999
+        },
+        {
+          "sku": "SAM-BRCH-MRC-WHI-FR50-IN40",
+          "size": null,
+          "color": "White",
+          "price": 25999
+        },
+        {
+          "sku": "SAM-BRCH-MRC-LGR-FR40-IN30",
+          "size": null,
+          "color": null,
+          "price": 25999
+        },
+        {
+          "sku": "SAM-BRCH-ADL-PTBL-FR40-IN30",
+          "size": null,
+          "color": null,
+          "price": 25999
+        }
+      ]
+    },
+    {
+      "slug": "samshield-breeches-marceau-2-0-perm",
+      "category": "breeches-and-leggings",
+      "name": "Samshield Breeches Marceau 2.0 Perm",
+      "brand": "Samshield",
+      "variants": [
+        {
+          "sku": "SAM-BRCH-MRCU-PERM-FR36-BIE-IN26",
+          "size": null,
+          "color": null,
+          "price": 24999
+        },
         {
           "sku": "SAM-BRCH-MRCU-PERM-FR36-BLA-IN26",
           "size": null,
@@ -24759,47 +23513,23 @@
           "price": 24999
         },
         {
-          "sku": "SAM-BRCH-MRCU-PERM-36-WHI-IN26",
-          "size": null,
-          "color": "White",
-          "price": 24999
-        }
-      ]
-    },
-    {
-      "slug": "samshield-breeches-marceau-2-0-perm-fr36-in26-biege",
-      "category": "breeches-and-leggings",
-      "name": "Samshield Breeches Marceau 2.0 Perm-FR36/IN26/Biege",
-      "brand": "Samshield",
-      "variants": [
-        {
-          "sku": "SAM-BRCH-MRCU-PERM-FR36-BIE-IN26",
-          "size": null,
-          "color": null,
-          "price": 24999
-        }
-      ]
-    },
-    {
-      "slug": "samshield-breeches-marceau-2-0-perm-fr36-in26-taupe",
-      "category": "breeches-and-leggings",
-      "name": "Samshield Breeches Marceau 2.0 Perm-FR36/IN26/Taupe",
-      "brand": "Samshield",
-      "variants": [
-        {
           "sku": "SAM-BRCH-MRCU-PERM-36-TAU-IN26",
           "size": null,
           "color": null,
           "price": 24999
-        }
-      ]
-    },
-    {
-      "slug": "samshield-breeches-marceau-2-0-perm-fr38-in28",
-      "category": "breeches-and-leggings",
-      "name": "Samshield Breeches Marceau 2.0 Perm-FR38/IN28",
-      "brand": "Samshield",
-      "variants": [
+        },
+        {
+          "sku": "SAM-BRCH-MRCU-PERM-36-WHI-IN26",
+          "size": null,
+          "color": "White",
+          "price": 24999
+        },
+        {
+          "sku": "SAM-BRCH-MRCU-PERM-38-BIE-IN28",
+          "size": null,
+          "color": null,
+          "price": 24999
+        },
         {
           "sku": "SAM-BRCH-MRCU-PERM-38-BLA-IN28",
           "size": null,
@@ -24813,47 +23543,23 @@
           "price": 24999
         },
         {
-          "sku": "SAM-BRCH-MRCU-PERM-38-WHI-IN28",
-          "size": null,
-          "color": "White",
-          "price": 24999
-        }
-      ]
-    },
-    {
-      "slug": "samshield-breeches-marceau-2-0-perm-fr38-in28-biege",
-      "category": "breeches-and-leggings",
-      "name": "Samshield Breeches Marceau 2.0 Perm-FR38/IN28/Biege",
-      "brand": "Samshield",
-      "variants": [
-        {
-          "sku": "SAM-BRCH-MRCU-PERM-38-BIE-IN28",
-          "size": null,
-          "color": null,
-          "price": 24999
-        }
-      ]
-    },
-    {
-      "slug": "samshield-breeches-marceau-2-0-perm-fr38-in28-taupe",
-      "category": "breeches-and-leggings",
-      "name": "Samshield Breeches Marceau 2.0 Perm-FR38/IN28/Taupe",
-      "brand": "Samshield",
-      "variants": [
-        {
           "sku": "SAM-BRCH-MRCU-PERM-38-TAU-IN28",
           "size": null,
           "color": null,
           "price": 24999
-        }
-      ]
-    },
-    {
-      "slug": "samshield-breeches-marceau-2-0-perm-fr40-in30",
-      "category": "breeches-and-leggings",
-      "name": "Samshield Breeches Marceau 2.0 Perm-FR40/IN30",
-      "brand": "Samshield",
-      "variants": [
+        },
+        {
+          "sku": "SAM-BRCH-MRCU-PERM-38-WHI-IN28",
+          "size": null,
+          "color": "White",
+          "price": 24999
+        },
+        {
+          "sku": "SAM-BRCH-MRCU-PERM-40-BIE-IN30",
+          "size": null,
+          "color": null,
+          "price": 24999
+        },
         {
           "sku": "SAM-BRCH-MRCU-PERM-40-BLA-IN30",
           "size": null,
@@ -24867,47 +23573,23 @@
           "price": 24999
         },
         {
-          "sku": "SAM-BRCH-MRCU-PERM-40-WHI-IN30",
-          "size": null,
-          "color": "White",
-          "price": 24999
-        }
-      ]
-    },
-    {
-      "slug": "samshield-breeches-marceau-2-0-perm-fr40-in30-biege",
-      "category": "breeches-and-leggings",
-      "name": "Samshield Breeches Marceau 2.0 Perm-FR40/IN30/Biege",
-      "brand": "Samshield",
-      "variants": [
-        {
-          "sku": "SAM-BRCH-MRCU-PERM-40-BIE-IN30",
-          "size": null,
-          "color": null,
-          "price": 24999
-        }
-      ]
-    },
-    {
-      "slug": "samshield-breeches-marceau-2-0-perm-fr40-in30-taupe",
-      "category": "breeches-and-leggings",
-      "name": "Samshield Breeches Marceau 2.0 Perm-FR40/IN30/Taupe",
-      "brand": "Samshield",
-      "variants": [
-        {
           "sku": "SAM-BRCH-MRCU-PERM-40-TAU-IN30",
           "size": null,
           "color": null,
           "price": 24999
-        }
-      ]
-    },
-    {
-      "slug": "samshield-breeches-marceau-2-0-perm-fr42-in32",
-      "category": "breeches-and-leggings",
-      "name": "Samshield Breeches Marceau 2.0 Perm-FR42/IN32",
-      "brand": "Samshield",
-      "variants": [
+        },
+        {
+          "sku": "SAM-BRCH-MRCU-PERM-40-WHI-IN30",
+          "size": null,
+          "color": "White",
+          "price": 24999
+        },
+        {
+          "sku": "SAM-BRCH-MRCU-PERM-42-BIE-IN32",
+          "size": null,
+          "color": null,
+          "price": 24999
+        },
         {
           "sku": "SAM-BRCH-MRCU-PERM-42-BLA-IN32",
           "size": null,
@@ -24921,47 +23603,23 @@
           "price": 24999
         },
         {
-          "sku": "SAM-BRCH-MRCU-PERM-42-WHI-IN32",
-          "size": null,
-          "color": "White",
-          "price": 24999
-        }
-      ]
-    },
-    {
-      "slug": "samshield-breeches-marceau-2-0-perm-fr42-in32-biege",
-      "category": "breeches-and-leggings",
-      "name": "Samshield Breeches Marceau 2.0 Perm-FR42/IN32/Biege",
-      "brand": "Samshield",
-      "variants": [
-        {
-          "sku": "SAM-BRCH-MRCU-PERM-42-BIE-IN32",
-          "size": null,
-          "color": null,
-          "price": 24999
-        }
-      ]
-    },
-    {
-      "slug": "samshield-breeches-marceau-2-0-perm-fr42-in32-taupe",
-      "category": "breeches-and-leggings",
-      "name": "Samshield Breeches Marceau 2.0 Perm-FR42/IN32/Taupe",
-      "brand": "Samshield",
-      "variants": [
-        {
           "sku": "SAM-BRCH-MRCU-PERM-42-TAU-IN32",
           "size": null,
           "color": null,
           "price": 24999
-        }
-      ]
-    },
-    {
-      "slug": "samshield-breeches-marceau-2-0-perm-fr44-in34",
-      "category": "breeches-and-leggings",
-      "name": "Samshield Breeches Marceau 2.0 Perm-FR44/IN34",
-      "brand": "Samshield",
-      "variants": [
+        },
+        {
+          "sku": "SAM-BRCH-MRCU-PERM-42-WHI-IN32",
+          "size": null,
+          "color": "White",
+          "price": 24999
+        },
+        {
+          "sku": "SAM-BRCH-MRCU-PERM-44-BIE-IN34",
+          "size": null,
+          "color": null,
+          "price": 24999
+        },
         {
           "sku": "SAM-BRCH-MRCU-PERM-44-BLA-IN34",
           "size": null,
@@ -24975,47 +23633,23 @@
           "price": 24999
         },
         {
-          "sku": "SAM-BRCH-MRCU-PERM-44-WHI-IN34",
-          "size": null,
-          "color": "White",
-          "price": 24999
-        }
-      ]
-    },
-    {
-      "slug": "samshield-breeches-marceau-2-0-perm-fr44-in34-biege",
-      "category": "breeches-and-leggings",
-      "name": "Samshield Breeches Marceau 2.0 Perm-FR44/IN34/Biege",
-      "brand": "Samshield",
-      "variants": [
-        {
-          "sku": "SAM-BRCH-MRCU-PERM-44-BIE-IN34",
-          "size": null,
-          "color": null,
-          "price": 24999
-        }
-      ]
-    },
-    {
-      "slug": "samshield-breeches-marceau-2-0-perm-fr44-in34-taupe",
-      "category": "breeches-and-leggings",
-      "name": "Samshield Breeches Marceau 2.0 Perm-FR44/IN34/Taupe",
-      "brand": "Samshield",
-      "variants": [
-        {
           "sku": "SAM-BRCH-MRCU-PERM-44-TAU-IN34",
           "size": null,
           "color": null,
           "price": 24999
-        }
-      ]
-    },
-    {
-      "slug": "samshield-breeches-marceau-2-0-perm-fr46-in36",
-      "category": "breeches-and-leggings",
-      "name": "Samshield Breeches Marceau 2.0 Perm-FR46/IN36",
-      "brand": "Samshield",
-      "variants": [
+        },
+        {
+          "sku": "SAM-BRCH-MRCU-PERM-44-WHI-IN34",
+          "size": null,
+          "color": "White",
+          "price": 24999
+        },
+        {
+          "sku": "SAM-BRCH-MRCU-PERM-46-BIE-IN36",
+          "size": null,
+          "color": null,
+          "price": 24999
+        },
         {
           "sku": "SAM-BRCH-MRCU-PERM-46-BLA-IN36",
           "size": null,
@@ -25029,47 +23663,23 @@
           "price": 24999
         },
         {
-          "sku": "SAM-BRCH-MRCU-PERM-46-WHI-IN36",
-          "size": null,
-          "color": "White",
-          "price": 24999
-        }
-      ]
-    },
-    {
-      "slug": "samshield-breeches-marceau-2-0-perm-fr46-in36-biege",
-      "category": "breeches-and-leggings",
-      "name": "Samshield Breeches Marceau 2.0 Perm-FR46/IN36/Biege",
-      "brand": "Samshield",
-      "variants": [
-        {
-          "sku": "SAM-BRCH-MRCU-PERM-46-BIE-IN36",
-          "size": null,
-          "color": null,
-          "price": 24999
-        }
-      ]
-    },
-    {
-      "slug": "samshield-breeches-marceau-2-0-perm-fr46-in36-taupe",
-      "category": "breeches-and-leggings",
-      "name": "Samshield Breeches Marceau 2.0 Perm-FR46/IN36/Taupe",
-      "brand": "Samshield",
-      "variants": [
-        {
           "sku": "SAM-BRCH-MRCU-PERM-46-TAU-IN36",
           "size": null,
           "color": null,
           "price": 24999
-        }
-      ]
-    },
-    {
-      "slug": "samshield-breeches-marceau-2-0-perm-fr48-in38",
-      "category": "breeches-and-leggings",
-      "name": "Samshield Breeches Marceau 2.0 Perm-FR48/IN38",
-      "brand": "Samshield",
-      "variants": [
+        },
+        {
+          "sku": "SAM-BRCH-MRCU-PERM-46-WHI-IN36",
+          "size": null,
+          "color": "White",
+          "price": 24999
+        },
+        {
+          "sku": "SAM-BRCH-MRCU-PERM-48-BIE-IN38",
+          "size": null,
+          "color": null,
+          "price": 24999
+        },
         {
           "sku": "SAM-BRCH-MRCU-PERM-48-BLA-IN38",
           "size": null,
@@ -25083,47 +23693,23 @@
           "price": 24999
         },
         {
-          "sku": "SAM-BRCH-MRCU-PERM-48-WHI-IN38",
-          "size": null,
-          "color": "White",
-          "price": 24999
-        }
-      ]
-    },
-    {
-      "slug": "samshield-breeches-marceau-2-0-perm-fr48-in38-biege",
-      "category": "breeches-and-leggings",
-      "name": "Samshield Breeches Marceau 2.0 Perm-FR48/IN38/Biege",
-      "brand": "Samshield",
-      "variants": [
-        {
-          "sku": "SAM-BRCH-MRCU-PERM-48-BIE-IN38",
-          "size": null,
-          "color": null,
-          "price": 24999
-        }
-      ]
-    },
-    {
-      "slug": "samshield-breeches-marceau-2-0-perm-fr48-in38-taupe",
-      "category": "breeches-and-leggings",
-      "name": "Samshield Breeches Marceau 2.0 Perm-FR48/IN38/Taupe",
-      "brand": "Samshield",
-      "variants": [
-        {
           "sku": "SAM-BRCH-MRCU-PERM-48-TAU-IN38",
           "size": null,
           "color": null,
           "price": 24999
-        }
-      ]
-    },
-    {
-      "slug": "samshield-breeches-marceau-2-0-perm-fr50-in40",
-      "category": "breeches-and-leggings",
-      "name": "Samshield Breeches Marceau 2.0 Perm-FR50/IN40",
-      "brand": "Samshield",
-      "variants": [
+        },
+        {
+          "sku": "SAM-BRCH-MRCU-PERM-48-WHI-IN38",
+          "size": null,
+          "color": "White",
+          "price": 24999
+        },
+        {
+          "sku": "SAM-BRCH-MRCU-PERM-50-BIE-IN40",
+          "size": null,
+          "color": null,
+          "price": 24999
+        },
         {
           "sku": "SAM-BRCH-MRCU-PERM-50-BLA-IN40",
           "size": null,
@@ -25137,47 +23723,23 @@
           "price": 24999
         },
         {
-          "sku": "SAM-BRCH-MRCU-PERM-50-WHI-IN40",
-          "size": null,
-          "color": "White",
-          "price": 24999
-        }
-      ]
-    },
-    {
-      "slug": "samshield-breeches-marceau-2-0-perm-fr50-in40-biege",
-      "category": "breeches-and-leggings",
-      "name": "Samshield Breeches Marceau 2.0 Perm-FR50/IN40/Biege",
-      "brand": "Samshield",
-      "variants": [
-        {
-          "sku": "SAM-BRCH-MRCU-PERM-50-BIE-IN40",
-          "size": null,
-          "color": null,
-          "price": 24999
-        }
-      ]
-    },
-    {
-      "slug": "samshield-breeches-marceau-2-0-perm-fr50-in40-taupe",
-      "category": "breeches-and-leggings",
-      "name": "Samshield Breeches Marceau 2.0 Perm-FR50/IN40/Taupe",
-      "brand": "Samshield",
-      "variants": [
-        {
           "sku": "SAM-BRCH-MRCU-PERM-50-TAU-IN40",
           "size": null,
           "color": null,
           "price": 24999
-        }
-      ]
-    },
-    {
-      "slug": "samshield-breeches-marceau-2-0-perm-fr52-in42",
-      "category": "breeches-and-leggings",
-      "name": "Samshield Breeches Marceau 2.0 Perm-FR52/IN42",
-      "brand": "Samshield",
-      "variants": [
+        },
+        {
+          "sku": "SAM-BRCH-MRCU-PERM-50-WHI-IN40",
+          "size": null,
+          "color": "White",
+          "price": 24999
+        },
+        {
+          "sku": "SAM-BRCH-MRCU-PERM-52-BIE-IN42",
+          "size": null,
+          "color": null,
+          "price": 24999
+        },
         {
           "sku": "SAM-BRCH-MRCU-PERM-52-BLA-IN42",
           "size": null,
@@ -25191,6 +23753,12 @@
           "price": 24999
         },
         {
+          "sku": "SAM-BRCH-MRCU-PERM-52-TAU-IN42",
+          "size": null,
+          "color": null,
+          "price": 24999
+        },
+        {
           "sku": "SAM-BRCH-MRCU-PERM-52-WHI-IN42",
           "size": null,
           "color": "White",
@@ -25199,625 +23767,9 @@
       ]
     },
     {
-      "slug": "samshield-breeches-marceau-2-0-perm-fr52-in42-biege",
+      "slug": "samshield-breeches-raphael",
       "category": "breeches-and-leggings",
-      "name": "Samshield Breeches Marceau 2.0 Perm-FR52/IN42/Biege",
-      "brand": "Samshield",
-      "variants": [
-        {
-          "sku": "SAM-BRCH-MRCU-PERM-52-BIE-IN42",
-          "size": null,
-          "color": null,
-          "price": 24999
-        }
-      ]
-    },
-    {
-      "slug": "samshield-breeches-marceau-2-0-perm-fr52-in42-taupe",
-      "category": "breeches-and-leggings",
-      "name": "Samshield Breeches Marceau 2.0 Perm-FR52/IN42/Taupe",
-      "brand": "Samshield",
-      "variants": [
-        {
-          "sku": "SAM-BRCH-MRCU-PERM-52-TAU-IN42",
-          "size": null,
-          "color": null,
-          "price": 24999
-        }
-      ]
-    },
-    {
-      "slug": "samshield-breeches-marceau-beige-fr36-in26",
-      "category": "breeches-and-leggings",
-      "name": "Samshield Breeches Marceau-Beige/FR36/ IN26",
-      "brand": "Samshield",
-      "variants": [
-        {
-          "sku": "SAM-BRCH-MRC-BEI-FR36-IN26",
-          "size": null,
-          "color": null,
-          "price": 25999
-        }
-      ]
-    },
-    {
-      "slug": "samshield-breeches-marceau-beige-fr38-in28",
-      "category": "breeches-and-leggings",
-      "name": "Samshield Breeches Marceau-Beige/FR38/ IN28",
-      "brand": "Samshield",
-      "variants": [
-        {
-          "sku": "SAM-BRCH-MRC-BEI-FR38-IN28",
-          "size": null,
-          "color": null,
-          "price": 25999
-        }
-      ]
-    },
-    {
-      "slug": "samshield-breeches-marceau-beige-fr40-in30",
-      "category": "breeches-and-leggings",
-      "name": "Samshield Breeches Marceau-Beige/FR40/ IN30",
-      "brand": "Samshield",
-      "variants": [
-        {
-          "sku": "SAM-BRCH-MRC-BEI-FR40-IN30",
-          "size": null,
-          "color": null,
-          "price": 25999
-        }
-      ]
-    },
-    {
-      "slug": "samshield-breeches-marceau-beige-fr42-in32",
-      "category": "breeches-and-leggings",
-      "name": "Samshield Breeches Marceau-Beige/FR42/IN32",
-      "brand": "Samshield",
-      "variants": [
-        {
-          "sku": "SAM-BRCH-MRC-BEI-FR42-IN32",
-          "size": null,
-          "color": null,
-          "price": 25999
-        }
-      ]
-    },
-    {
-      "slug": "samshield-breeches-marceau-beige-fr44-in34",
-      "category": "breeches-and-leggings",
-      "name": "Samshield Breeches Marceau-Beige/FR44/ IN34",
-      "brand": "Samshield",
-      "variants": [
-        {
-          "sku": "SAM-BRCH-MRC-BEI-FR44-IN34",
-          "size": null,
-          "color": null,
-          "price": 25999
-        }
-      ]
-    },
-    {
-      "slug": "samshield-breeches-marceau-beige-fr46-in36",
-      "category": "breeches-and-leggings",
-      "name": "Samshield Breeches Marceau-Beige/FR46/ IN36",
-      "brand": "Samshield",
-      "variants": [
-        {
-          "sku": "SAM-BRCH-MRC-BEI-FR46-IN36",
-          "size": null,
-          "color": null,
-          "price": 25999
-        }
-      ]
-    },
-    {
-      "slug": "samshield-breeches-marceau-beige-fr48-in38",
-      "category": "breeches-and-leggings",
-      "name": "Samshield Breeches Marceau-Beige/FR48/ IN38",
-      "brand": "Samshield",
-      "variants": [
-        {
-          "sku": "SAM-BRCH-MRC-BEI-FR48-IN38",
-          "size": null,
-          "color": null,
-          "price": 25999
-        }
-      ]
-    },
-    {
-      "slug": "samshield-breeches-marceau-beige-fr50-in40",
-      "category": "breeches-and-leggings",
-      "name": "Samshield Breeches Marceau-Beige/FR50/ IN40",
-      "brand": "Samshield",
-      "variants": [
-        {
-          "sku": "SAM-BRCH-MRC-BEI-FR50-IN40",
-          "size": null,
-          "color": null,
-          "price": 25999
-        }
-      ]
-    },
-    {
-      "slug": "samshield-breeches-marceau-black-fr36-in26",
-      "category": "breeches-and-leggings",
-      "name": "Samshield Breeches Marceau-Black/FR36/ IN26",
-      "brand": "Samshield",
-      "variants": [
-        {
-          "sku": "SAM-BRCH-MRC-BLA-FR36-IN26",
-          "size": null,
-          "color": null,
-          "price": 25999
-        }
-      ]
-    },
-    {
-      "slug": "samshield-breeches-marceau-black-fr38-in28",
-      "category": "breeches-and-leggings",
-      "name": "Samshield Breeches Marceau-Black/FR38/ IN28",
-      "brand": "Samshield",
-      "variants": [
-        {
-          "sku": "SAM-BRCH-MRC-BLA-FR38-IN28",
-          "size": null,
-          "color": null,
-          "price": 25999
-        }
-      ]
-    },
-    {
-      "slug": "samshield-breeches-marceau-black-fr40-in30",
-      "category": "breeches-and-leggings",
-      "name": "Samshield Breeches Marceau-Black/FR40/ IN30",
-      "brand": "Samshield",
-      "variants": [
-        {
-          "sku": "SAM-BRCH-MRC-BLA-FR40-IN30",
-          "size": null,
-          "color": null,
-          "price": 25999
-        }
-      ]
-    },
-    {
-      "slug": "samshield-breeches-marceau-black-fr42-in32",
-      "category": "breeches-and-leggings",
-      "name": "Samshield Breeches Marceau-Black/FR42/ IN32",
-      "brand": "Samshield",
-      "variants": [
-        {
-          "sku": "SAM-BRCH-MRC-BLA-FR42-IN32",
-          "size": null,
-          "color": null,
-          "price": 25999
-        }
-      ]
-    },
-    {
-      "slug": "samshield-breeches-marceau-black-fr44-in34",
-      "category": "breeches-and-leggings",
-      "name": "Samshield Breeches Marceau-Black/FR44/ IN34",
-      "brand": "Samshield",
-      "variants": [
-        {
-          "sku": "SAM-BRCH-MRC-BLA-FR44-IN34",
-          "size": null,
-          "color": null,
-          "price": 25999
-        }
-      ]
-    },
-    {
-      "slug": "samshield-breeches-marceau-black-fr46-in36",
-      "category": "breeches-and-leggings",
-      "name": "Samshield Breeches Marceau-Black/FR46/ IN36",
-      "brand": "Samshield",
-      "variants": [
-        {
-          "sku": "SAM-BRCH-MRC-BLA-FR46-IN36",
-          "size": null,
-          "color": null,
-          "price": 25999
-        }
-      ]
-    },
-    {
-      "slug": "samshield-breeches-marceau-black-fr48-in38",
-      "category": "breeches-and-leggings",
-      "name": "Samshield Breeches Marceau-Black/FR48/ IN38",
-      "brand": "Samshield",
-      "variants": [
-        {
-          "sku": "SAM-BRCH-MRC-BLA-FR48-IN38",
-          "size": null,
-          "color": null,
-          "price": 25999
-        }
-      ]
-    },
-    {
-      "slug": "samshield-breeches-marceau-black-fr50-in40",
-      "category": "breeches-and-leggings",
-      "name": "Samshield Breeches Marceau-Black/FR50/ IN40",
-      "brand": "Samshield",
-      "variants": [
-        {
-          "sku": "SAM-BRCH-MRC-BLA-FR50-IN40",
-          "size": null,
-          "color": null,
-          "price": 25999
-        }
-      ]
-    },
-    {
-      "slug": "samshield-breeches-marceau-navy-fr36-in26",
-      "category": "breeches-and-leggings",
-      "name": "Samshield Breeches Marceau-Navy/FR36/ IN26",
-      "brand": "Samshield",
-      "variants": [
-        {
-          "sku": "SAM-BRCH-MRC-NAV-FR36-IN26",
-          "size": null,
-          "color": null,
-          "price": 25999
-        }
-      ]
-    },
-    {
-      "slug": "samshield-breeches-marceau-navy-fr38-in28",
-      "category": "breeches-and-leggings",
-      "name": "Samshield Breeches Marceau-Navy/FR38/ IN28",
-      "brand": "Samshield",
-      "variants": [
-        {
-          "sku": "SAM-BRCH-MRC-NAV-FR38-IN28",
-          "size": null,
-          "color": null,
-          "price": 25999
-        }
-      ]
-    },
-    {
-      "slug": "samshield-breeches-marceau-navy-fr40-in30",
-      "category": "breeches-and-leggings",
-      "name": "Samshield Breeches Marceau-Navy/FR40/ IN30",
-      "brand": "Samshield",
-      "variants": [
-        {
-          "sku": "SAM-BRCH-MRC-NAV-FR40-IN30",
-          "size": null,
-          "color": null,
-          "price": 25999
-        }
-      ]
-    },
-    {
-      "slug": "samshield-breeches-marceau-navy-fr42-in32",
-      "category": "breeches-and-leggings",
-      "name": "Samshield Breeches Marceau-Navy/FR42/ IN32",
-      "brand": "Samshield",
-      "variants": [
-        {
-          "sku": "SAM-BRCH-MRC-NAV-FR42-IN32",
-          "size": null,
-          "color": null,
-          "price": 25999
-        }
-      ]
-    },
-    {
-      "slug": "samshield-breeches-marceau-navy-fr44-in34",
-      "category": "breeches-and-leggings",
-      "name": "Samshield Breeches Marceau-Navy/FR44/ IN34",
-      "brand": "Samshield",
-      "variants": [
-        {
-          "sku": "SAM-BRCH-MRC-NAV-FR44-IN34",
-          "size": null,
-          "color": null,
-          "price": 25999
-        }
-      ]
-    },
-    {
-      "slug": "samshield-breeches-marceau-navy-fr46-in36",
-      "category": "breeches-and-leggings",
-      "name": "Samshield Breeches Marceau-Navy/FR46/ IN36",
-      "brand": "Samshield",
-      "variants": [
-        {
-          "sku": "SAM-BRCH-MRC-NAV-FR46-IN36",
-          "size": null,
-          "color": null,
-          "price": 25999
-        }
-      ]
-    },
-    {
-      "slug": "samshield-breeches-marceau-navy-fr48-in38",
-      "category": "breeches-and-leggings",
-      "name": "Samshield Breeches Marceau-Navy/FR48/ IN38",
-      "brand": "Samshield",
-      "variants": [
-        {
-          "sku": "SAM-BRCH-MRC-NAV-FR48-IN38",
-          "size": null,
-          "color": null,
-          "price": 25999
-        }
-      ]
-    },
-    {
-      "slug": "samshield-breeches-marceau-navy-fr50-in40",
-      "category": "breeches-and-leggings",
-      "name": "Samshield Breeches Marceau-Navy/FR50/ IN40",
-      "brand": "Samshield",
-      "variants": [
-        {
-          "sku": "SAM-BRCH-MRC-NAV-FR50-IN40",
-          "size": null,
-          "color": null,
-          "price": 25999
-        }
-      ]
-    },
-    {
-      "slug": "samshield-breeches-marceau-taupe-fr36-in26",
-      "category": "breeches-and-leggings",
-      "name": "Samshield Breeches Marceau-Taupe/FR36/ IN26",
-      "brand": "Samshield",
-      "variants": [
-        {
-          "sku": "SAM-BRCH-MRC-TAU-FR36-IN26",
-          "size": null,
-          "color": null,
-          "price": 25999
-        }
-      ]
-    },
-    {
-      "slug": "samshield-breeches-marceau-taupe-fr38-in28",
-      "category": "breeches-and-leggings",
-      "name": "Samshield Breeches Marceau-Taupe/FR38/ IN28",
-      "brand": "Samshield",
-      "variants": [
-        {
-          "sku": "SAM-BRCH-MRC-TAU-FR38-IN28",
-          "size": null,
-          "color": null,
-          "price": 25999
-        }
-      ]
-    },
-    {
-      "slug": "samshield-breeches-marceau-taupe-fr40-in30",
-      "category": "breeches-and-leggings",
-      "name": "Samshield Breeches Marceau-Taupe/FR40/ IN30",
-      "brand": "Samshield",
-      "variants": [
-        {
-          "sku": "SAM-BRCH-MRC-TAU-FR40-IN30",
-          "size": null,
-          "color": null,
-          "price": 25999
-        }
-      ]
-    },
-    {
-      "slug": "samshield-breeches-marceau-taupe-fr42-in32",
-      "category": "breeches-and-leggings",
-      "name": "Samshield Breeches Marceau-Taupe/FR42/ IN32",
-      "brand": "Samshield",
-      "variants": [
-        {
-          "sku": "SAM-BRCH-MRC-TAU-FR42-IN32",
-          "size": null,
-          "color": null,
-          "price": 25999
-        }
-      ]
-    },
-    {
-      "slug": "samshield-breeches-marceau-taupe-fr44-in34",
-      "category": "breeches-and-leggings",
-      "name": "Samshield Breeches Marceau-Taupe/FR44/ IN34",
-      "brand": "Samshield",
-      "variants": [
-        {
-          "sku": "SAM-BRCH-MRC-TAU-FR44-IN34",
-          "size": null,
-          "color": null,
-          "price": 25999
-        }
-      ]
-    },
-    {
-      "slug": "samshield-breeches-marceau-taupe-fr46-in36",
-      "category": "breeches-and-leggings",
-      "name": "Samshield Breeches Marceau-Taupe/FR46/ IN36",
-      "brand": "Samshield",
-      "variants": [
-        {
-          "sku": "SAM-BRCH-MRC-TAU-FR46-IN36",
-          "size": null,
-          "color": null,
-          "price": 25999
-        }
-      ]
-    },
-    {
-      "slug": "samshield-breeches-marceau-taupe-fr48-in38",
-      "category": "breeches-and-leggings",
-      "name": "Samshield Breeches Marceau-Taupe/FR48/ IN38",
-      "brand": "Samshield",
-      "variants": [
-        {
-          "sku": "SAM-BRCH-MRC-TAU-FR48-IN38",
-          "size": null,
-          "color": null,
-          "price": 25999
-        }
-      ]
-    },
-    {
-      "slug": "samshield-breeches-marceau-taupe-fr50-in40",
-      "category": "breeches-and-leggings",
-      "name": "Samshield Breeches Marceau-Taupe/FR50/ IN40",
-      "brand": "Samshield",
-      "variants": [
-        {
-          "sku": "SAM-BRCH-MRC-TAU-FR50-IN40",
-          "size": null,
-          "color": null,
-          "price": 25999
-        }
-      ]
-    },
-    {
-      "slug": "samshield-breeches-marceau-white-fr36-in26",
-      "category": "breeches-and-leggings",
-      "name": "Samshield Breeches Marceau-White/FR36/ IN26",
-      "brand": "Samshield",
-      "variants": [
-        {
-          "sku": "SAM-BRCH-MRC-WHI-FR36-IN26",
-          "size": null,
-          "color": null,
-          "price": 25999
-        }
-      ]
-    },
-    {
-      "slug": "samshield-breeches-marceau-white-fr38-in28",
-      "category": "breeches-and-leggings",
-      "name": "Samshield Breeches Marceau-White/FR38/ IN28",
-      "brand": "Samshield",
-      "variants": [
-        {
-          "sku": "SAM-BRCH-MRC-WHI-FR38-IN28",
-          "size": null,
-          "color": null,
-          "price": 25999
-        }
-      ]
-    },
-    {
-      "slug": "samshield-breeches-marceau-white-fr40-in30",
-      "category": "breeches-and-leggings",
-      "name": "Samshield Breeches Marceau-White/FR40/ IN30",
-      "brand": "Samshield",
-      "variants": [
-        {
-          "sku": "SAM-BRCH-MRC-WHI-FR40-IN30",
-          "size": null,
-          "color": null,
-          "price": 25999
-        }
-      ]
-    },
-    {
-      "slug": "samshield-breeches-marceau-white-fr42-in32",
-      "category": "breeches-and-leggings",
-      "name": "Samshield Breeches Marceau-White/FR42/ IN32",
-      "brand": "Samshield",
-      "variants": [
-        {
-          "sku": "SAM-BRCH-MRC-WHI-FR42-IN32",
-          "size": null,
-          "color": null,
-          "price": 25999
-        }
-      ]
-    },
-    {
-      "slug": "samshield-breeches-marceau-white-fr44-in34",
-      "category": "breeches-and-leggings",
-      "name": "Samshield Breeches Marceau-White/FR44/ IN34",
-      "brand": "Samshield",
-      "variants": [
-        {
-          "sku": "SAM-BRCH-MRC-WHI-FR44-IN34",
-          "size": null,
-          "color": null,
-          "price": 25999
-        }
-      ]
-    },
-    {
-      "slug": "samshield-breeches-marceau-white-fr46-in36",
-      "category": "breeches-and-leggings",
-      "name": "Samshield Breeches Marceau-White/FR46/ IN36",
-      "brand": "Samshield",
-      "variants": [
-        {
-          "sku": "SAM-BRCH-MRC-WHI-FR46-IN36",
-          "size": null,
-          "color": null,
-          "price": 25999
-        }
-      ]
-    },
-    {
-      "slug": "samshield-breeches-marceau-white-fr48-in38",
-      "category": "breeches-and-leggings",
-      "name": "Samshield Breeches Marceau-White/FR48/ IN38",
-      "brand": "Samshield",
-      "variants": [
-        {
-          "sku": "SAM-BRCH-MRC-WHI-FR48-IN38",
-          "size": null,
-          "color": null,
-          "price": 25999
-        }
-      ]
-    },
-    {
-      "slug": "samshield-breeches-marceau-white-fr50-in40",
-      "category": "breeches-and-leggings",
-      "name": "Samshield Breeches Marceau-White/FR50/ IN40",
-      "brand": "Samshield",
-      "variants": [
-        {
-          "sku": "SAM-BRCH-MRC-WHI-FR50-IN40",
-          "size": null,
-          "color": null,
-          "price": 25999
-        }
-      ]
-    },
-    {
-      "slug": "samshield-breeches-marceau-light-grey-fr4o-in30",
-      "category": "breeches-and-leggings",
-      "name": "Samshield Breeches Marceau/Light Grey/FR4O/ IN30",
-      "brand": "Samshield",
-      "variants": [
-        {
-          "sku": "SAM-BRCH-MRC-LGR-FR40-IN30",
-          "size": null,
-          "color": null,
-          "price": 25999
-        }
-      ]
-    },
-    {
-      "slug": "samshield-breeches-marceau-petrol-blue-fr40-in30",
-      "category": "breeches-and-leggings",
-      "name": "Samshield Breeches Marceau/Petrol Blue/FR40/ IN30",
-      "brand": "Samshield",
-      "variants": [
-        {
-          "sku": "SAM-BRCH-ADL-PTBL-FR40-IN30",
-          "size": null,
-          "color": null,
-          "price": 25999
-        }
-      ]
-    },
-    {
-      "slug": "samshield-breeches-raphael-knee-grip-slate-grey-fr40-in30",
-      "category": "breeches-and-leggings",
-      "name": "Samshield Breeches Raphael/Knee Grip/Slate Grey/FR40/ IN30",
+      "name": "Samshield Breeches Raphael",
       "brand": "Samshield",
       "variants": [
         {
@@ -25825,19 +23777,11 @@
           "size": null,
           "color": null,
           "price": 22999
-        }
-      ]
-    },
-    {
-      "slug": "samshield-breeches-raphael-knee-grip-white-fr40-in30",
-      "category": "breeches-and-leggings",
-      "name": "Samshield Breeches Raphael/Knee Grip/White/FR40/ IN30",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-BRCH-RPL-WT-FR40-IN30",
           "size": null,
-          "color": null,
+          "color": "White",
           "price": 22999
         }
       ]
@@ -29679,9 +27623,9 @@
       ]
     },
     {
-      "slug": "samshield-show-jacket-louis-air-black-forest-fr44",
+      "slug": "samshield-show-jacket-louis-air",
       "category": "show-jacket",
-      "name": "Samshield Show Jacket Louis Air-Black Forest/FR44",
+      "name": "Samshield Show Jacket Louis Air",
       "brand": "Samshield",
       "variants": [
         {
@@ -29689,407 +27633,175 @@
           "size": null,
           "color": null,
           "price": 47499
-        }
-      ]
-    },
-    {
-      "slug": "samshield-show-jacket-louis-air-black-fr32",
-      "category": "show-jacket",
-      "name": "Samshield Show Jacket Louis Air-Black/FR32",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-SJ-LO-BLA-FR32",
           "size": null,
-          "color": null,
+          "color": "Black",
           "price": 47499
-        }
-      ]
-    },
-    {
-      "slug": "samshield-show-jacket-louis-air-black-fr34",
-      "category": "show-jacket",
-      "name": "Samshield Show Jacket Louis Air-Black/FR34",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-SJ-LO-BLA-FR34",
           "size": null,
-          "color": null,
+          "color": "Black",
           "price": 47499
-        }
-      ]
-    },
-    {
-      "slug": "samshield-show-jacket-louis-air-black-fr36",
-      "category": "show-jacket",
-      "name": "Samshield Show Jacket Louis Air-Black/FR36",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-SJ-LO-BLA-FR36",
           "size": null,
-          "color": null,
+          "color": "Black",
           "price": 47499
-        }
-      ]
-    },
-    {
-      "slug": "samshield-show-jacket-louis-air-black-fr38",
-      "category": "show-jacket",
-      "name": "Samshield Show Jacket Louis Air-Black/FR38",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-SJ-LO-BLA-FR38",
           "size": null,
-          "color": null,
+          "color": "Black",
           "price": 47499
-        }
-      ]
-    },
-    {
-      "slug": "samshield-show-jacket-louis-air-black-fr40",
-      "category": "show-jacket",
-      "name": "Samshield Show Jacket Louis Air-Black/FR40",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-SJ-LO-BLA-FR40",
           "size": null,
-          "color": null,
+          "color": "Black",
           "price": 47499
-        }
-      ]
-    },
-    {
-      "slug": "samshield-show-jacket-louis-air-black-fr42",
-      "category": "show-jacket",
-      "name": "Samshield Show Jacket Louis Air-Black/FR42",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-SJ-LO-BLA-FR42",
           "size": null,
-          "color": null,
+          "color": "Black",
           "price": 47499
-        }
-      ]
-    },
-    {
-      "slug": "samshield-show-jacket-louis-air-black-fr44",
-      "category": "show-jacket",
-      "name": "Samshield Show Jacket Louis Air-Black/FR44",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-SJ-LO-BLA-FR44",
           "size": null,
-          "color": null,
+          "color": "Black",
           "price": 47499
-        }
-      ]
-    },
-    {
-      "slug": "samshield-show-jacket-louis-air-black-fr46",
-      "category": "show-jacket",
-      "name": "Samshield Show Jacket Louis Air-Black/FR46",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-SJ-LO-BLA-FR46",
           "size": null,
-          "color": null,
+          "color": "Black",
           "price": 47499
-        }
-      ]
-    },
-    {
-      "slug": "samshield-show-jacket-louis-air-black-fr48",
-      "category": "show-jacket",
-      "name": "Samshield Show Jacket Louis Air-Black/FR48",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-SJ-LO-BLA-FR48",
           "size": null,
-          "color": null,
+          "color": "Black",
           "price": 47499
-        }
-      ]
-    },
-    {
-      "slug": "samshield-show-jacket-louis-air-light-navy-fr32",
-      "category": "show-jacket",
-      "name": "Samshield Show Jacket Louis Air-Light Navy/FR32",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-SJ-LO-LIG-FR32",
           "size": null,
           "color": null,
           "price": 47499
-        }
-      ]
-    },
-    {
-      "slug": "samshield-show-jacket-louis-air-light-navy-fr34",
-      "category": "show-jacket",
-      "name": "Samshield Show Jacket Louis Air-Light Navy/FR34",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-SJ-LO-LIG-FR34",
           "size": null,
           "color": null,
           "price": 47499
-        }
-      ]
-    },
-    {
-      "slug": "samshield-show-jacket-louis-air-light-navy-fr36",
-      "category": "show-jacket",
-      "name": "Samshield Show Jacket Louis Air-Light Navy/FR36",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-SJ-LO-LIG-FR36",
           "size": null,
           "color": null,
           "price": 47499
-        }
-      ]
-    },
-    {
-      "slug": "samshield-show-jacket-louis-air-light-navy-fr38",
-      "category": "show-jacket",
-      "name": "Samshield Show Jacket Louis Air-Light Navy/FR38",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-SJ-LO-LIG-FR38",
           "size": null,
           "color": null,
           "price": 47499
-        }
-      ]
-    },
-    {
-      "slug": "samshield-show-jacket-louis-air-light-navy-fr40",
-      "category": "show-jacket",
-      "name": "Samshield Show Jacket Louis Air-Light Navy/FR40",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-SJ-LO-LIG-FR40",
           "size": null,
           "color": null,
           "price": 47499
-        }
-      ]
-    },
-    {
-      "slug": "samshield-show-jacket-louis-air-light-navy-fr42",
-      "category": "show-jacket",
-      "name": "Samshield Show Jacket Louis Air-Light Navy/FR42",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-SJ-LO-LIG-FR42",
           "size": null,
           "color": null,
           "price": 47499
-        }
-      ]
-    },
-    {
-      "slug": "samshield-show-jacket-louis-air-light-navy-fr44",
-      "category": "show-jacket",
-      "name": "Samshield Show Jacket Louis Air-Light Navy/FR44",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-SJ-LO-LIG-FR44",
           "size": null,
           "color": null,
           "price": 47499
-        }
-      ]
-    },
-    {
-      "slug": "samshield-show-jacket-louis-air-light-navy-fr46",
-      "category": "show-jacket",
-      "name": "Samshield Show Jacket Louis Air-Light Navy/FR46",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-SJ-LO-LIG-FR46",
           "size": null,
           "color": null,
           "price": 47499
-        }
-      ]
-    },
-    {
-      "slug": "samshield-show-jacket-louis-air-light-navy-fr48",
-      "category": "show-jacket",
-      "name": "Samshield Show Jacket Louis Air-Light Navy/FR48",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-SJ-LO-LIG-FR48",
           "size": null,
           "color": null,
           "price": 47499
-        }
-      ]
-    },
-    {
-      "slug": "samshield-show-jacket-louis-air-magnet-fr42",
-      "category": "show-jacket",
-      "name": "Samshield Show Jacket Louis Air-Magnet/FR42",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-SHJCKT-LOIS-MGNT-42",
           "size": null,
           "color": null,
           "price": 47499
-        }
-      ]
-    },
-    {
-      "slug": "samshield-show-jacket-louis-air-magnet-fr46",
-      "category": "show-jacket",
-      "name": "Samshield Show Jacket Louis Air-Magnet/FR46",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-SHJCKT-LOIS-AR-MGT-46",
           "size": null,
           "color": null,
           "price": 47499
-        }
-      ]
-    },
-    {
-      "slug": "samshield-show-jacket-louis-air-navy-fr32",
-      "category": "show-jacket",
-      "name": "Samshield Show Jacket Louis Air-Navy/FR32",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-SJ-LO-NAV-FR32",
           "size": null,
-          "color": null,
+          "color": "Navy",
           "price": 47499
-        }
-      ]
-    },
-    {
-      "slug": "samshield-show-jacket-louis-air-navy-fr34",
-      "category": "show-jacket",
-      "name": "Samshield Show Jacket Louis Air-Navy/FR34",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-SJ-LO-NAV-FR34",
           "size": null,
-          "color": null,
+          "color": "Navy",
           "price": 47499
-        }
-      ]
-    },
-    {
-      "slug": "samshield-show-jacket-louis-air-navy-fr36",
-      "category": "show-jacket",
-      "name": "Samshield Show Jacket Louis Air-Navy/FR36",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-SJ-LO-NAV-FR36",
           "size": null,
-          "color": null,
+          "color": "Navy",
           "price": 47499
-        }
-      ]
-    },
-    {
-      "slug": "samshield-show-jacket-louis-air-navy-fr38",
-      "category": "show-jacket",
-      "name": "Samshield Show Jacket Louis Air-Navy/FR38",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-SJ-LO-NAV-FR38",
           "size": null,
-          "color": null,
+          "color": "Navy",
           "price": 47499
-        }
-      ]
-    },
-    {
-      "slug": "samshield-show-jacket-louis-air-navy-fr40",
-      "category": "show-jacket",
-      "name": "Samshield Show Jacket Louis Air-Navy/FR40",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-SJ-LO-NAV-FR40",
           "size": null,
-          "color": null,
+          "color": "Navy",
           "price": 47499
-        }
-      ]
-    },
-    {
-      "slug": "samshield-show-jacket-louis-air-navy-fr46",
-      "category": "show-jacket",
-      "name": "Samshield Show Jacket Louis Air-Navy/FR46",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-SJ-LO-NAV-FR46",
           "size": null,
-          "color": null,
+          "color": "Navy",
           "price": 47499
-        }
-      ]
-    },
-    {
-      "slug": "samshield-show-jacket-louis-air-navy-fr48",
-      "category": "show-jacket",
-      "name": "Samshield Show Jacket Louis Air-Navy/FR48",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-SJ-LO-NAV-FR48",
           "size": null,
-          "color": null,
+          "color": "Navy",
           "price": 47499
-        }
-      ]
-    },
-    {
-      "slug": "samshield-show-jacket-louis-air-night-blue-fr50",
-      "category": "show-jacket",
-      "name": "Samshield Show Jacket Louis Air-Night Blue/FR50",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-SJ-LO-NIG-50",
           "size": null,
           "color": null,
           "price": 47499
-        }
-      ]
-    },
-    {
-      "slug": "samshield-show-jacket-louis-air-night-blue-fr52",
-      "category": "show-jacket",
-      "name": "Samshield Show Jacket Louis Air-Night Blue/FR52",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-SJ-LO-NIG-52",
           "size": null,
@@ -30499,9 +28211,161 @@
       ]
     },
     {
-      "slug": "samshield-show-jacket-victorine-crystal-fabric-black-rose-gold-fr38",
+      "slug": "samshield-show-jacket-victorine",
       "category": "show-jacket",
-      "name": "Samshield Show Jacket Victorine Crystal Fabric-Black Rose Gold/FR38",
+      "name": "Samshield Show Jacket Victorine",
+      "brand": "Samshield",
+      "variants": [
+        {
+          "sku": "SAM-SJ-VIC-BLA-FR32",
+          "size": null,
+          "color": "Black",
+          "price": 45000
+        },
+        {
+          "sku": "SAM-SJ-VIC-BLA-FR34",
+          "size": null,
+          "color": "Black",
+          "price": 45000
+        },
+        {
+          "sku": "SAM-SJ-VIC-BLA-FR36",
+          "size": null,
+          "color": "Black",
+          "price": 45000
+        },
+        {
+          "sku": "SAM-SJ-VIC-BLA-FR38",
+          "size": null,
+          "color": "Black",
+          "price": 45000
+        },
+        {
+          "sku": "SAM-SJ-VIC-BLA-FR40",
+          "size": null,
+          "color": "Black",
+          "price": 45000
+        },
+        {
+          "sku": "SAM-SJ-VIC-BLA-FR42",
+          "size": null,
+          "color": "Black",
+          "price": 45000
+        },
+        {
+          "sku": "SAM-SJ-VIC-BLA-FR44",
+          "size": null,
+          "color": "Black",
+          "price": 45000
+        },
+        {
+          "sku": "SAM-SJ-VIC-BLA-FR48",
+          "size": null,
+          "color": "Black",
+          "price": 45000
+        },
+        {
+          "sku": "SAM-SJ-VIC-LIG-FR32",
+          "size": null,
+          "color": null,
+          "price": 45000
+        },
+        {
+          "sku": "SAM-SJ-VIC-LIG-FR34",
+          "size": null,
+          "color": null,
+          "price": 45000
+        },
+        {
+          "sku": "SAM-SJ-VIC-LIG-FR36",
+          "size": null,
+          "color": null,
+          "price": 45000
+        },
+        {
+          "sku": "SAM-SJ-VIC-LIG-FR38",
+          "size": null,
+          "color": null,
+          "price": 45000
+        },
+        {
+          "sku": "SAM-SJ-VIC-LIG-FR40",
+          "size": null,
+          "color": null,
+          "price": 45000
+        },
+        {
+          "sku": "SAM-SJ-VIC-LIG-FR42",
+          "size": null,
+          "color": null,
+          "price": 45000
+        },
+        {
+          "sku": "SAM-SJ-VIC-LIG-FR44",
+          "size": null,
+          "color": null,
+          "price": 45000
+        },
+        {
+          "sku": "SAM-SJ-VIC-LIG-FR48",
+          "size": null,
+          "color": null,
+          "price": 45000
+        },
+        {
+          "sku": "SAM-SJ-VIC-NAV-FR32",
+          "size": null,
+          "color": "Navy",
+          "price": 45000
+        },
+        {
+          "sku": "SAM-SJ-VIC-NAV-FR34",
+          "size": null,
+          "color": "Navy",
+          "price": 45000
+        },
+        {
+          "sku": "SAM-SJ-VIC-NAV-FR36",
+          "size": null,
+          "color": "Navy",
+          "price": 45000
+        },
+        {
+          "sku": "SAM-SJ-VIC-NAV-FR38",
+          "size": null,
+          "color": "Navy",
+          "price": 45000
+        },
+        {
+          "sku": "SAM-SJ-VIC-NAV-FR40",
+          "size": null,
+          "color": "Navy",
+          "price": 45000
+        },
+        {
+          "sku": "SAM-SJ-VIC-NAV-FR42",
+          "size": null,
+          "color": "Navy",
+          "price": 45000
+        },
+        {
+          "sku": "SAM-SJ-VIC-NAV-FR44",
+          "size": null,
+          "color": "Navy",
+          "price": 45000
+        },
+        {
+          "sku": "SAM-SJ-VIC-NAV-FR48",
+          "size": null,
+          "color": "Navy",
+          "price": 45000
+        }
+      ]
+    },
+    {
+      "slug": "samshield-show-jacket-victorine-crystal-fabric",
+      "category": "show-jacket",
+      "name": "Samshield Show Jacket Victorine Crystal Fabric",
       "brand": "Samshield",
       "variants": [
         {
@@ -30509,664 +28373,144 @@
           "size": null,
           "color": null,
           "price": 47499
-        }
-      ]
-    },
-    {
-      "slug": "samshield-show-jacket-victorine-crystal-fabric-black-fr32",
-      "category": "show-jacket",
-      "name": "Samshield Show Jacket Victorine Crystal Fabric-Black/FR32",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-SJ-VCF-BLA-FR32",
           "size": null,
-          "color": null,
+          "color": "Black",
           "price": 47499
-        }
-      ]
-    },
-    {
-      "slug": "samshield-show-jacket-victorine-crystal-fabric-black-fr34",
-      "category": "show-jacket",
-      "name": "Samshield Show Jacket Victorine Crystal Fabric-Black/FR34",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-SJ-VCF-BLA-FR34",
           "size": null,
-          "color": null,
+          "color": "Black",
           "price": 47499
-        }
-      ]
-    },
-    {
-      "slug": "samshield-show-jacket-victorine-crystal-fabric-black-fr36",
-      "category": "show-jacket",
-      "name": "Samshield Show Jacket Victorine Crystal Fabric-Black/FR36",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-SJ-VCF-BLA-FR36",
           "size": null,
-          "color": null,
+          "color": "Black",
           "price": 47499
-        }
-      ]
-    },
-    {
-      "slug": "samshield-show-jacket-victorine-crystal-fabric-black-fr40",
-      "category": "show-jacket",
-      "name": "Samshield Show Jacket Victorine Crystal Fabric-Black/FR40",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-SJ-VCF-BLA-FR40",
           "size": null,
-          "color": null,
+          "color": "Black",
           "price": 47499
-        }
-      ]
-    },
-    {
-      "slug": "samshield-show-jacket-victorine-crystal-fabric-black-fr42",
-      "category": "show-jacket",
-      "name": "Samshield Show Jacket Victorine Crystal Fabric-Black/FR42",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-SJ-VCF-BLA-FR42",
           "size": null,
-          "color": null,
+          "color": "Black",
           "price": 47499
-        }
-      ]
-    },
-    {
-      "slug": "samshield-show-jacket-victorine-crystal-fabric-black-fr44",
-      "category": "show-jacket",
-      "name": "Samshield Show Jacket Victorine Crystal Fabric-Black/FR44",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-SJ-VCF-BLA-FR44",
           "size": null,
-          "color": null,
+          "color": "Black",
           "price": 47499
-        }
-      ]
-    },
-    {
-      "slug": "samshield-show-jacket-victorine-crystal-fabric-black-fr46",
-      "category": "show-jacket",
-      "name": "Samshield Show Jacket Victorine Crystal Fabric-Black/FR46",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-SJ-VCF-BLA-FR46",
           "size": null,
-          "color": null,
+          "color": "Black",
           "price": 47499
-        }
-      ]
-    },
-    {
-      "slug": "samshield-show-jacket-victorine-crystal-fabric-light-navy-fr32",
-      "category": "show-jacket",
-      "name": "Samshield Show Jacket Victorine Crystal Fabric-Light Navy/FR32",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-SJ-VCF-LIG-FR32",
           "size": null,
           "color": null,
           "price": 47499
-        }
-      ]
-    },
-    {
-      "slug": "samshield-show-jacket-victorine-crystal-fabric-light-navy-fr34",
-      "category": "show-jacket",
-      "name": "Samshield Show Jacket Victorine Crystal Fabric-Light Navy/FR34",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-SJ-VCF-LIG-FR34",
           "size": null,
           "color": null,
           "price": 47499
-        }
-      ]
-    },
-    {
-      "slug": "samshield-show-jacket-victorine-crystal-fabric-light-navy-fr36",
-      "category": "show-jacket",
-      "name": "Samshield Show Jacket Victorine Crystal Fabric-Light Navy/FR36",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-SJ-VCF-LIG-FR36",
           "size": null,
           "color": null,
           "price": 47499
-        }
-      ]
-    },
-    {
-      "slug": "samshield-show-jacket-victorine-crystal-fabric-light-navy-fr40",
-      "category": "show-jacket",
-      "name": "Samshield Show Jacket Victorine Crystal Fabric-Light Navy/FR40",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-SJ-VCF-LIG-FR40",
           "size": null,
           "color": null,
           "price": 47499
-        }
-      ]
-    },
-    {
-      "slug": "samshield-show-jacket-victorine-crystal-fabric-light-navy-fr42",
-      "category": "show-jacket",
-      "name": "Samshield Show Jacket Victorine Crystal Fabric-Light Navy/FR42",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-SJ-VCF-LIG-FR42",
           "size": null,
           "color": null,
           "price": 47499
-        }
-      ]
-    },
-    {
-      "slug": "samshield-show-jacket-victorine-crystal-fabric-light-navy-fr44",
-      "category": "show-jacket",
-      "name": "Samshield Show Jacket Victorine Crystal Fabric-Light Navy/FR44",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-SJ-VCF-LIG-FR44",
           "size": null,
           "color": null,
           "price": 47499
-        }
-      ]
-    },
-    {
-      "slug": "samshield-show-jacket-victorine-crystal-fabric-light-navy-fr46",
-      "category": "show-jacket",
-      "name": "Samshield Show Jacket Victorine Crystal Fabric-Light Navy/FR46",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-SJ-VCF-LIG-FR46",
           "size": null,
           "color": null,
           "price": 47499
-        }
-      ]
-    },
-    {
-      "slug": "samshield-show-jacket-victorine-crystal-fabric-navy-rose-gold-fr38",
-      "category": "show-jacket",
-      "name": "Samshield Show Jacket Victorine Crystal Fabric-Navy Rose Gold/FR38",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-SJ-VCF-LIG-FR38",
           "size": null,
           "color": null,
           "price": 47499
-        }
-      ]
-    },
-    {
-      "slug": "samshield-show-jacket-victorine-crystal-fabric-navy-fr32",
-      "category": "show-jacket",
-      "name": "Samshield Show Jacket Victorine Crystal Fabric-Navy/FR32",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-SJ-VCF-NAV-FR32",
           "size": null,
-          "color": null,
+          "color": "Navy",
           "price": 47499
-        }
-      ]
-    },
-    {
-      "slug": "samshield-show-jacket-victorine-crystal-fabric-navy-fr34",
-      "category": "show-jacket",
-      "name": "Samshield Show Jacket Victorine Crystal Fabric-Navy/FR34",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-SJ-VCF-NAV-FR34",
           "size": null,
-          "color": null,
+          "color": "Navy",
           "price": 47499
-        }
-      ]
-    },
-    {
-      "slug": "samshield-show-jacket-victorine-crystal-fabric-navy-fr36",
-      "category": "show-jacket",
-      "name": "Samshield Show Jacket Victorine Crystal Fabric-Navy/FR36",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-SJ-VCF-NAV-FR36",
           "size": null,
-          "color": null,
+          "color": "Navy",
           "price": 47499
-        }
-      ]
-    },
-    {
-      "slug": "samshield-show-jacket-victorine-crystal-fabric-navy-fr38",
-      "category": "show-jacket",
-      "name": "Samshield Show Jacket Victorine Crystal Fabric-Navy/FR38",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-SJ-VCF-NAV-FR38",
           "size": null,
-          "color": null,
+          "color": "Navy",
           "price": 47499
-        }
-      ]
-    },
-    {
-      "slug": "samshield-show-jacket-victorine-crystal-fabric-navy-fr40",
-      "category": "show-jacket",
-      "name": "Samshield Show Jacket Victorine Crystal Fabric-Navy/FR40",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-SJ-VCF-NAV-FR40",
           "size": null,
-          "color": null,
+          "color": "Navy",
           "price": 47499
-        }
-      ]
-    },
-    {
-      "slug": "samshield-show-jacket-victorine-crystal-fabric-navy-fr42",
-      "category": "show-jacket",
-      "name": "Samshield Show Jacket Victorine Crystal Fabric-Navy/FR42",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-SJ-VCF-NAV-FR42",
           "size": null,
-          "color": null,
+          "color": "Navy",
           "price": 47499
-        }
-      ]
-    },
-    {
-      "slug": "samshield-show-jacket-victorine-crystal-fabric-navy-fr44",
-      "category": "show-jacket",
-      "name": "Samshield Show Jacket Victorine Crystal Fabric-Navy/FR44",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-SJ-VCF-NAV-FR44",
           "size": null,
-          "color": null,
+          "color": "Navy",
           "price": 47499
-        }
-      ]
-    },
-    {
-      "slug": "samshield-show-jacket-victorine-crystal-fabric-navy-fr46",
-      "category": "show-jacket",
-      "name": "Samshield Show Jacket Victorine Crystal Fabric-Navy/FR46",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-SJ-VCF-NAV-FR46",
           "size": null,
-          "color": null,
+          "color": "Navy",
           "price": 47499
-        }
-      ]
-    },
-    {
-      "slug": "samshield-show-jacket-victorine-black-fr32",
-      "category": "show-jacket",
-      "name": "Samshield Show Jacket Victorine-Black/FR32",
-      "brand": "Samshield",
-      "variants": [
-        {
-          "sku": "SAM-SJ-VIC-BLA-FR32",
-          "size": null,
-          "color": null,
-          "price": 45000
-        }
-      ]
-    },
-    {
-      "slug": "samshield-show-jacket-victorine-black-fr34",
-      "category": "show-jacket",
-      "name": "Samshield Show Jacket Victorine-Black/FR34",
-      "brand": "Samshield",
-      "variants": [
-        {
-          "sku": "SAM-SJ-VIC-BLA-FR34",
-          "size": null,
-          "color": null,
-          "price": 45000
-        }
-      ]
-    },
-    {
-      "slug": "samshield-show-jacket-victorine-black-fr36",
-      "category": "show-jacket",
-      "name": "Samshield Show Jacket Victorine-Black/FR36",
-      "brand": "Samshield",
-      "variants": [
-        {
-          "sku": "SAM-SJ-VIC-BLA-FR36",
-          "size": null,
-          "color": null,
-          "price": 45000
-        }
-      ]
-    },
-    {
-      "slug": "samshield-show-jacket-victorine-black-fr38",
-      "category": "show-jacket",
-      "name": "Samshield Show Jacket Victorine-Black/FR38",
-      "brand": "Samshield",
-      "variants": [
-        {
-          "sku": "SAM-SJ-VIC-BLA-FR38",
-          "size": null,
-          "color": null,
-          "price": 45000
-        }
-      ]
-    },
-    {
-      "slug": "samshield-show-jacket-victorine-black-fr40",
-      "category": "show-jacket",
-      "name": "Samshield Show Jacket Victorine-Black/FR40",
-      "brand": "Samshield",
-      "variants": [
-        {
-          "sku": "SAM-SJ-VIC-BLA-FR40",
-          "size": null,
-          "color": null,
-          "price": 45000
-        }
-      ]
-    },
-    {
-      "slug": "samshield-show-jacket-victorine-black-fr42",
-      "category": "show-jacket",
-      "name": "Samshield Show Jacket Victorine-Black/FR42",
-      "brand": "Samshield",
-      "variants": [
-        {
-          "sku": "SAM-SJ-VIC-BLA-FR42",
-          "size": null,
-          "color": null,
-          "price": 45000
-        }
-      ]
-    },
-    {
-      "slug": "samshield-show-jacket-victorine-black-fr44",
-      "category": "show-jacket",
-      "name": "Samshield Show Jacket Victorine-Black/FR44",
-      "brand": "Samshield",
-      "variants": [
-        {
-          "sku": "SAM-SJ-VIC-BLA-FR44",
-          "size": null,
-          "color": null,
-          "price": 45000
-        }
-      ]
-    },
-    {
-      "slug": "samshield-show-jacket-victorine-black-fr48",
-      "category": "show-jacket",
-      "name": "Samshield Show Jacket Victorine-Black/FR48",
-      "brand": "Samshield",
-      "variants": [
-        {
-          "sku": "SAM-SJ-VIC-BLA-FR48",
-          "size": null,
-          "color": null,
-          "price": 45000
-        }
-      ]
-    },
-    {
-      "slug": "samshield-show-jacket-victorine-light-navy-fr32",
-      "category": "show-jacket",
-      "name": "Samshield Show Jacket Victorine-Light Navy/FR32",
-      "brand": "Samshield",
-      "variants": [
-        {
-          "sku": "SAM-SJ-VIC-LIG-FR32",
-          "size": null,
-          "color": null,
-          "price": 45000
-        }
-      ]
-    },
-    {
-      "slug": "samshield-show-jacket-victorine-light-navy-fr34",
-      "category": "show-jacket",
-      "name": "Samshield Show Jacket Victorine-Light Navy/FR34",
-      "brand": "Samshield",
-      "variants": [
-        {
-          "sku": "SAM-SJ-VIC-LIG-FR34",
-          "size": null,
-          "color": null,
-          "price": 45000
-        }
-      ]
-    },
-    {
-      "slug": "samshield-show-jacket-victorine-light-navy-fr36",
-      "category": "show-jacket",
-      "name": "Samshield Show Jacket Victorine-Light Navy/FR36",
-      "brand": "Samshield",
-      "variants": [
-        {
-          "sku": "SAM-SJ-VIC-LIG-FR36",
-          "size": null,
-          "color": null,
-          "price": 45000
-        }
-      ]
-    },
-    {
-      "slug": "samshield-show-jacket-victorine-light-navy-fr38",
-      "category": "show-jacket",
-      "name": "Samshield Show Jacket Victorine-Light Navy/FR38",
-      "brand": "Samshield",
-      "variants": [
-        {
-          "sku": "SAM-SJ-VIC-LIG-FR38",
-          "size": null,
-          "color": null,
-          "price": 45000
-        }
-      ]
-    },
-    {
-      "slug": "samshield-show-jacket-victorine-light-navy-fr40",
-      "category": "show-jacket",
-      "name": "Samshield Show Jacket Victorine-Light Navy/FR40",
-      "brand": "Samshield",
-      "variants": [
-        {
-          "sku": "SAM-SJ-VIC-LIG-FR40",
-          "size": null,
-          "color": null,
-          "price": 45000
-        }
-      ]
-    },
-    {
-      "slug": "samshield-show-jacket-victorine-light-navy-fr42",
-      "category": "show-jacket",
-      "name": "Samshield Show Jacket Victorine-Light Navy/FR42",
-      "brand": "Samshield",
-      "variants": [
-        {
-          "sku": "SAM-SJ-VIC-LIG-FR42",
-          "size": null,
-          "color": null,
-          "price": 45000
-        }
-      ]
-    },
-    {
-      "slug": "samshield-show-jacket-victorine-light-navy-fr44",
-      "category": "show-jacket",
-      "name": "Samshield Show Jacket Victorine-Light Navy/FR44",
-      "brand": "Samshield",
-      "variants": [
-        {
-          "sku": "SAM-SJ-VIC-LIG-FR44",
-          "size": null,
-          "color": null,
-          "price": 45000
-        }
-      ]
-    },
-    {
-      "slug": "samshield-show-jacket-victorine-light-navy-fr48",
-      "category": "show-jacket",
-      "name": "Samshield Show Jacket Victorine-Light Navy/FR48",
-      "brand": "Samshield",
-      "variants": [
-        {
-          "sku": "SAM-SJ-VIC-LIG-FR48",
-          "size": null,
-          "color": null,
-          "price": 45000
-        }
-      ]
-    },
-    {
-      "slug": "samshield-show-jacket-victorine-navy-fr32",
-      "category": "show-jacket",
-      "name": "Samshield Show Jacket Victorine-Navy/FR32",
-      "brand": "Samshield",
-      "variants": [
-        {
-          "sku": "SAM-SJ-VIC-NAV-FR32",
-          "size": null,
-          "color": null,
-          "price": 45000
-        }
-      ]
-    },
-    {
-      "slug": "samshield-show-jacket-victorine-navy-fr34",
-      "category": "show-jacket",
-      "name": "Samshield Show Jacket Victorine-Navy/FR34",
-      "brand": "Samshield",
-      "variants": [
-        {
-          "sku": "SAM-SJ-VIC-NAV-FR34",
-          "size": null,
-          "color": null,
-          "price": 45000
-        }
-      ]
-    },
-    {
-      "slug": "samshield-show-jacket-victorine-navy-fr36",
-      "category": "show-jacket",
-      "name": "Samshield Show Jacket Victorine-Navy/FR36",
-      "brand": "Samshield",
-      "variants": [
-        {
-          "sku": "SAM-SJ-VIC-NAV-FR36",
-          "size": null,
-          "color": null,
-          "price": 45000
-        }
-      ]
-    },
-    {
-      "slug": "samshield-show-jacket-victorine-navy-fr38",
-      "category": "show-jacket",
-      "name": "Samshield Show Jacket Victorine-Navy/FR38",
-      "brand": "Samshield",
-      "variants": [
-        {
-          "sku": "SAM-SJ-VIC-NAV-FR38",
-          "size": null,
-          "color": null,
-          "price": 45000
-        }
-      ]
-    },
-    {
-      "slug": "samshield-show-jacket-victorine-navy-fr40",
-      "category": "show-jacket",
-      "name": "Samshield Show Jacket Victorine-Navy/FR40",
-      "brand": "Samshield",
-      "variants": [
-        {
-          "sku": "SAM-SJ-VIC-NAV-FR40",
-          "size": null,
-          "color": null,
-          "price": 45000
-        }
-      ]
-    },
-    {
-      "slug": "samshield-show-jacket-victorine-navy-fr42",
-      "category": "show-jacket",
-      "name": "Samshield Show Jacket Victorine-Navy/FR42",
-      "brand": "Samshield",
-      "variants": [
-        {
-          "sku": "SAM-SJ-VIC-NAV-FR42",
-          "size": null,
-          "color": null,
-          "price": 45000
-        }
-      ]
-    },
-    {
-      "slug": "samshield-show-jacket-victorine-navy-fr44",
-      "category": "show-jacket",
-      "name": "Samshield Show Jacket Victorine-Navy/FR44",
-      "brand": "Samshield",
-      "variants": [
-        {
-          "sku": "SAM-SJ-VIC-NAV-FR44",
-          "size": null,
-          "color": null,
-          "price": 45000
-        }
-      ]
-    },
-    {
-      "slug": "samshield-show-jacket-victorine-navy-fr48",
-      "category": "show-jacket",
-      "name": "Samshield Show Jacket Victorine-Navy/FR48",
-      "brand": "Samshield",
-      "variants": [
-        {
-          "sku": "SAM-SJ-VIC-NAV-FR48",
-          "size": null,
-          "color": null,
-          "price": 45000
         }
       ]
     },
