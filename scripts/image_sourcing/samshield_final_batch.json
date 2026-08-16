@@ -96,5 +96,29 @@
     "match_name": "SMITH",
     "match_image": "https://www.samshield.com/13966-large_default/smith.jpg",
     "score": 0.64
+  },
+  {
+    "slug": "samshield-breeches-marceau",
+    "match_name": "MARCEAU"
+  },
+  {
+    "slug": "samshield-breeches-marceau-2-0-perm",
+    "match_name": "MARCEAU 2.0"
+  },
+  {
+    "slug": "samshield-show-jacket-alban-air",
+    "match_name": "ALBAN AIR"
+  },
+  {
+    "slug": "samshield-aspen-downvest",
+    "match_name": "ASPEN"
+  },
+  {
+    "slug": "samshield-show-jacket-louis",
+    "match_name": "LOUIS"
+  },
+  {
+    "slug": "samshield-helmet-bag",
+    "match_name": "PROTECTION BAG"
   }
 ]
