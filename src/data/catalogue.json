@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-16T17:17:27.522147+05:30",
+  "generatedAt": "2026-08-16T18:09:14.677091+05:30",
   "sourceFile": "Tack-Shop_Inventory-List_13AUG26.xlsx",
   "categories": [
     {
@@ -25761,630 +25761,294 @@
       ]
     },
     {
-      "slug": "samshield-premium-high-liner-55l",
+      "slug": "samshield-premium-high-liner",
       "category": "helmet-accessories",
-      "name": "Samshield Premium High Liner-55L",
+      "name": "Samshield Premium High Liner",
       "brand": "Samshield",
       "variants": [
         {
           "sku": "SAM-PHL-55L",
-          "size": null,
+          "size": "55L",
           "color": null,
           "price": 3699
-        }
-      ]
-    },
-    {
-      "slug": "samshield-premium-high-liner-55m",
-      "category": "helmet-accessories",
-      "name": "Samshield Premium High Liner-55M",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-PHL-55M",
-          "size": null,
+          "size": "55M",
           "color": null,
           "price": 3699
-        }
-      ]
-    },
-    {
-      "slug": "samshield-premium-high-liner-56l",
-      "category": "helmet-accessories",
-      "name": "Samshield Premium High Liner-56L",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-PHL-56L",
-          "size": null,
+          "size": "56L",
           "color": null,
           "price": 3699
-        }
-      ]
-    },
-    {
-      "slug": "samshield-premium-high-liner-56m",
-      "category": "helmet-accessories",
-      "name": "Samshield Premium High Liner-56M",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-PHL-56M",
-          "size": null,
+          "size": "56M",
           "color": null,
           "price": 3699
-        }
-      ]
-    },
-    {
-      "slug": "samshield-premium-high-liner-56s",
-      "category": "helmet-accessories",
-      "name": "Samshield Premium High Liner-56S",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-PHL-56S",
-          "size": null,
+          "size": "56S",
           "color": null,
           "price": 3699
-        }
-      ]
-    },
-    {
-      "slug": "samshield-premium-high-liner-57l",
-      "category": "helmet-accessories",
-      "name": "Samshield Premium High Liner-57L",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-PHL-57L",
-          "size": null,
+          "size": "57L",
           "color": null,
           "price": 3699
-        }
-      ]
-    },
-    {
-      "slug": "samshield-premium-high-liner-57m",
-      "category": "helmet-accessories",
-      "name": "Samshield Premium High Liner-57M",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-PHL-57M",
-          "size": null,
+          "size": "57M",
           "color": null,
           "price": 3699
-        }
-      ]
-    },
-    {
-      "slug": "samshield-premium-high-liner-57s",
-      "category": "helmet-accessories",
-      "name": "Samshield Premium High Liner-57S",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-PHL-57S",
-          "size": null,
+          "size": "57S",
           "color": null,
           "price": 3699
-        }
-      ]
-    },
-    {
-      "slug": "samshield-premium-high-liner-58l",
-      "category": "helmet-accessories",
-      "name": "Samshield Premium High Liner-58L",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-PHL-58L",
-          "size": null,
+          "size": "58L",
           "color": null,
           "price": 3699
-        }
-      ]
-    },
-    {
-      "slug": "samshield-premium-high-liner-58m",
-      "category": "helmet-accessories",
-      "name": "Samshield Premium High Liner-58M",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-PHL-58M",
-          "size": null,
+          "size": "58M",
           "color": null,
           "price": 3699
-        }
-      ]
-    },
-    {
-      "slug": "samshield-premium-high-liner-58s",
-      "category": "helmet-accessories",
-      "name": "Samshield Premium High Liner-58S",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-PHL-58S",
-          "size": null,
+          "size": "58S",
           "color": null,
           "price": 3699
-        }
-      ]
-    },
-    {
-      "slug": "samshield-premium-high-liner-59l",
-      "category": "helmet-accessories",
-      "name": "Samshield Premium High Liner-59L",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-PHL-59L",
-          "size": null,
+          "size": "59L",
           "color": null,
           "price": 3699
-        }
-      ]
-    },
-    {
-      "slug": "samshield-premium-high-liner-59m",
-      "category": "helmet-accessories",
-      "name": "Samshield Premium High Liner-59M",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-PHL-59M",
-          "size": null,
+          "size": "59M",
           "color": null,
           "price": 3699
-        }
-      ]
-    },
-    {
-      "slug": "samshield-premium-high-liner-59s",
-      "category": "helmet-accessories",
-      "name": "Samshield Premium High Liner-59S",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-PHL-59S",
-          "size": null,
+          "size": "59S",
           "color": null,
           "price": 3699
-        }
-      ]
-    },
-    {
-      "slug": "samshield-premium-high-liner-60l",
-      "category": "helmet-accessories",
-      "name": "Samshield Premium High Liner-60L",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-PHL-60L",
-          "size": null,
+          "size": "60L",
           "color": null,
           "price": 3699
-        }
-      ]
-    },
-    {
-      "slug": "samshield-premium-high-liner-60m",
-      "category": "helmet-accessories",
-      "name": "Samshield Premium High Liner-60M",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-PHL-60M",
-          "size": null,
+          "size": "60M",
           "color": null,
           "price": 3699
-        }
-      ]
-    },
-    {
-      "slug": "samshield-premium-high-liner-60s",
-      "category": "helmet-accessories",
-      "name": "Samshield Premium High Liner-60S",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-PHL-60S",
-          "size": null,
+          "size": "60S",
           "color": null,
           "price": 3699
         }
       ]
     },
     {
-      "slug": "samshield-shadow-liner-asian-52s",
+      "slug": "samshield-shadow-liner",
       "category": "helmet-accessories",
-      "name": "Samshield Shadow Liner Asian-52S",
-      "brand": "Samshield",
-      "variants": [
-        {
-          "sku": "SAM-SHDW-LNR-52S",
-          "size": null,
-          "color": null,
-          "price": 3499
-        }
-      ]
-    },
-    {
-      "slug": "samshield-shadow-liner-asian-53s",
-      "category": "helmet-accessories",
-      "name": "Samshield Shadow Liner Asian-53S",
-      "brand": "Samshield",
-      "variants": [
-        {
-          "sku": "SAM-SHDW-LNR-53S",
-          "size": null,
-          "color": null,
-          "price": 3499
-        }
-      ]
-    },
-    {
-      "slug": "samshield-shadow-liner-asian-54s",
-      "category": "helmet-accessories",
-      "name": "Samshield Shadow Liner Asian-54S",
-      "brand": "Samshield",
-      "variants": [
-        {
-          "sku": "SAM-SHDW-LNR-54S",
-          "size": null,
-          "color": null,
-          "price": 3499
-        }
-      ]
-    },
-    {
-      "slug": "samshield-shadow-liner-asian-55m",
-      "category": "helmet-accessories",
-      "name": "Samshield Shadow Liner Asian-55M",
-      "brand": "Samshield",
-      "variants": [
-        {
-          "sku": "SAM-SHDW-LNR-55M",
-          "size": null,
-          "color": null,
-          "price": 3499
-        }
-      ]
-    },
-    {
-      "slug": "samshield-shadow-liner-asian-55s",
-      "category": "helmet-accessories",
-      "name": "Samshield Shadow Liner Asian-55S",
-      "brand": "Samshield",
-      "variants": [
-        {
-          "sku": "SAM-SHDW-LNR-55S",
-          "size": null,
-          "color": null,
-          "price": 3499
-        }
-      ]
-    },
-    {
-      "slug": "samshield-shadow-liner-asian-56m",
-      "category": "helmet-accessories",
-      "name": "Samshield Shadow Liner Asian-56M",
-      "brand": "Samshield",
-      "variants": [
-        {
-          "sku": "SAM-SHDW-LNR-56M",
-          "size": null,
-          "color": null,
-          "price": 3499
-        }
-      ]
-    },
-    {
-      "slug": "samshield-shadow-liner-asian-56s",
-      "category": "helmet-accessories",
-      "name": "Samshield Shadow Liner Asian-56S",
-      "brand": "Samshield",
-      "variants": [
-        {
-          "sku": "SAM-SHDW-LNR-56S",
-          "size": null,
-          "color": null,
-          "price": 3499
-        }
-      ]
-    },
-    {
-      "slug": "samshield-shadow-liner-asian-57l",
-      "category": "helmet-accessories",
-      "name": "Samshield Shadow Liner Asian-57L",
-      "brand": "Samshield",
-      "variants": [
-        {
-          "sku": "SAM-SHDW-LNR-57L",
-          "size": null,
-          "color": null,
-          "price": 3499
-        }
-      ]
-    },
-    {
-      "slug": "samshield-shadow-liner-asian-57m",
-      "category": "helmet-accessories",
-      "name": "Samshield Shadow Liner Asian-57M",
-      "brand": "Samshield",
-      "variants": [
-        {
-          "sku": "SAM-SHDW-LNR-57M",
-          "size": null,
-          "color": null,
-          "price": 3499
-        }
-      ]
-    },
-    {
-      "slug": "samshield-shadow-liner-asian-58l",
-      "category": "helmet-accessories",
-      "name": "Samshield Shadow Liner Asian-58L",
-      "brand": "Samshield",
-      "variants": [
-        {
-          "sku": "SAM-SHDW-LNR-58L",
-          "size": null,
-          "color": null,
-          "price": 3499
-        }
-      ]
-    },
-    {
-      "slug": "samshield-shadow-liner-asian-58m",
-      "category": "helmet-accessories",
-      "name": "Samshield Shadow Liner Asian-58M",
-      "brand": "Samshield",
-      "variants": [
-        {
-          "sku": "SAM-SHDW-LNR-58M",
-          "size": null,
-          "color": null,
-          "price": 3499
-        }
-      ]
-    },
-    {
-      "slug": "samshield-shadow-liner-asian-59l",
-      "category": "helmet-accessories",
-      "name": "Samshield Shadow Liner Asian-59L",
-      "brand": "Samshield",
-      "variants": [
-        {
-          "sku": "SAM-SHDW-LNR-59L",
-          "size": null,
-          "color": null,
-          "price": 3499
-        }
-      ]
-    },
-    {
-      "slug": "samshield-shadow-liner-asian-60l",
-      "category": "helmet-accessories",
-      "name": "Samshield Shadow Liner Asian-60L",
-      "brand": "Samshield",
-      "variants": [
-        {
-          "sku": "SAM-SHDW-LNR-60L",
-          "size": null,
-          "color": null,
-          "price": 3499
-        }
-      ]
-    },
-    {
-      "slug": "samshield-shadow-liner-asian-61l",
-      "category": "helmet-accessories",
-      "name": "Samshield Shadow Liner Asian-61L",
-      "brand": "Samshield",
-      "variants": [
-        {
-          "sku": "SAM-SHDW-LNR-61L",
-          "size": null,
-          "color": null,
-          "price": 3499
-        }
-      ]
-    },
-    {
-      "slug": "samshield-shadow-liner-52s",
-      "category": "helmet-accessories",
-      "name": "Samshield Shadow Liner-52S",
+      "name": "Samshield Shadow Liner",
       "brand": "Samshield",
       "variants": [
         {
           "sku": "SAM-SL-52S",
-          "size": null,
+          "size": "52S",
           "color": null,
           "price": 3499
-        }
-      ]
-    },
-    {
-      "slug": "samshield-shadow-liner-53s",
-      "category": "helmet-accessories",
-      "name": "Samshield Shadow Liner-53S",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-SL-53S",
-          "size": null,
+          "size": "53S",
           "color": null,
           "price": 3499
-        }
-      ]
-    },
-    {
-      "slug": "samshield-shadow-liner-54s",
-      "category": "helmet-accessories",
-      "name": "Samshield Shadow Liner-54S",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-SL-54S",
-          "size": null,
+          "size": "54S",
           "color": null,
           "price": 3499
-        }
-      ]
-    },
-    {
-      "slug": "samshield-shadow-liner-55m",
-      "category": "helmet-accessories",
-      "name": "Samshield Shadow Liner-55M",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-SL-55M",
-          "size": null,
+          "size": "55M",
           "color": null,
           "price": 3499
-        }
-      ]
-    },
-    {
-      "slug": "samshield-shadow-liner-55s",
-      "category": "helmet-accessories",
-      "name": "Samshield Shadow Liner-55S",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-SL-55S",
-          "size": null,
+          "size": "55S",
           "color": null,
           "price": 3499
-        }
-      ]
-    },
-    {
-      "slug": "samshield-shadow-liner-56m",
-      "category": "helmet-accessories",
-      "name": "Samshield Shadow Liner-56M",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-SL-56M",
-          "size": null,
+          "size": "56M",
           "color": null,
           "price": 3499
-        }
-      ]
-    },
-    {
-      "slug": "samshield-shadow-liner-56s",
-      "category": "helmet-accessories",
-      "name": "Samshield Shadow Liner-56S",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-SL-56S",
-          "size": null,
+          "size": "56S",
           "color": null,
           "price": 3499
-        }
-      ]
-    },
-    {
-      "slug": "samshield-shadow-liner-57l",
-      "category": "helmet-accessories",
-      "name": "Samshield Shadow Liner-57L",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-SL-57L",
-          "size": null,
+          "size": "57L",
           "color": null,
           "price": 3499
-        }
-      ]
-    },
-    {
-      "slug": "samshield-shadow-liner-57m",
-      "category": "helmet-accessories",
-      "name": "Samshield Shadow Liner-57M",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-SL-57M",
-          "size": null,
+          "size": "57M",
           "color": null,
           "price": 3499
-        }
-      ]
-    },
-    {
-      "slug": "samshield-shadow-liner-58l",
-      "category": "helmet-accessories",
-      "name": "Samshield Shadow Liner-58L",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-SL-58L",
-          "size": null,
+          "size": "58L",
           "color": null,
           "price": 3499
-        }
-      ]
-    },
-    {
-      "slug": "samshield-shadow-liner-58m",
-      "category": "helmet-accessories",
-      "name": "Samshield Shadow Liner-58M",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-SL-58M",
-          "size": null,
+          "size": "58M",
           "color": null,
           "price": 3499
-        }
-      ]
-    },
-    {
-      "slug": "samshield-shadow-liner-59l",
-      "category": "helmet-accessories",
-      "name": "Samshield Shadow Liner-59L",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-SL-59L",
-          "size": null,
+          "size": "59L",
           "color": null,
           "price": 3499
-        }
-      ]
-    },
-    {
-      "slug": "samshield-shadow-liner-60l",
-      "category": "helmet-accessories",
-      "name": "Samshield Shadow Liner-60L",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-SL-60L",
-          "size": null,
+          "size": "60L",
+          "color": null,
+          "price": 3499
+        },
+        {
+          "sku": "SAM-SL-61L",
+          "size": "61L",
           "color": null,
           "price": 3499
         }
       ]
     },
     {
-      "slug": "samshield-shadow-liner-61l",
+      "slug": "samshield-shadow-liner-asian",
       "category": "helmet-accessories",
-      "name": "Samshield Shadow Liner-61L",
+      "name": "Samshield Shadow Liner Asian",
       "brand": "Samshield",
       "variants": [
         {
-          "sku": "SAM-SL-61L",
-          "size": null,
+          "sku": "SAM-SHDW-LNR-52S",
+          "size": "52S",
+          "color": null,
+          "price": 3499
+        },
+        {
+          "sku": "SAM-SHDW-LNR-53S",
+          "size": "53S",
+          "color": null,
+          "price": 3499
+        },
+        {
+          "sku": "SAM-SHDW-LNR-54S",
+          "size": "54S",
+          "color": null,
+          "price": 3499
+        },
+        {
+          "sku": "SAM-SHDW-LNR-55M",
+          "size": "55M",
+          "color": null,
+          "price": 3499
+        },
+        {
+          "sku": "SAM-SHDW-LNR-55S",
+          "size": "55S",
+          "color": null,
+          "price": 3499
+        },
+        {
+          "sku": "SAM-SHDW-LNR-56M",
+          "size": "56M",
+          "color": null,
+          "price": 3499
+        },
+        {
+          "sku": "SAM-SHDW-LNR-56S",
+          "size": "56S",
+          "color": null,
+          "price": 3499
+        },
+        {
+          "sku": "SAM-SHDW-LNR-57L",
+          "size": "57L",
+          "color": null,
+          "price": 3499
+        },
+        {
+          "sku": "SAM-SHDW-LNR-57M",
+          "size": "57M",
+          "color": null,
+          "price": 3499
+        },
+        {
+          "sku": "SAM-SHDW-LNR-58L",
+          "size": "58L",
+          "color": null,
+          "price": 3499
+        },
+        {
+          "sku": "SAM-SHDW-LNR-58M",
+          "size": "58M",
+          "color": null,
+          "price": 3499
+        },
+        {
+          "sku": "SAM-SHDW-LNR-59L",
+          "size": "59L",
+          "color": null,
+          "price": 3499
+        },
+        {
+          "sku": "SAM-SHDW-LNR-60L",
+          "size": "60L",
+          "color": null,
+          "price": 3499
+        },
+        {
+          "sku": "SAM-SHDW-LNR-61L",
+          "size": "61L",
           "color": null,
           "price": 3499
         }
@@ -28317,322 +27981,154 @@
       ]
     },
     {
-      "slug": "samshield-xc-xj-liner-closed-53s",
+      "slug": "samshield-xc-xj-liner-closed",
       "category": "helmet-accessories",
-      "name": "Samshield XC/ XJ Liner (Closed)-53S",
+      "name": "Samshield XC/ XJ Liner (Closed)",
       "brand": "Samshield",
       "variants": [
         {
           "sku": "SAM-XJL-53S",
-          "size": null,
+          "size": "53S",
           "color": null,
           "price": 4999
-        }
-      ]
-    },
-    {
-      "slug": "samshield-xc-xj-liner-closed-54s",
-      "category": "helmet-accessories",
-      "name": "Samshield XC/ XJ Liner (Closed)-54S",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-XJL-54S",
-          "size": null,
+          "size": "54S",
           "color": null,
           "price": 4999
-        }
-      ]
-    },
-    {
-      "slug": "samshield-xc-xj-liner-closed-55m",
-      "category": "helmet-accessories",
-      "name": "Samshield XC/ XJ Liner (Closed)-55M",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-XJL-55M",
-          "size": null,
+          "size": "55M",
           "color": null,
           "price": 4999
-        }
-      ]
-    },
-    {
-      "slug": "samshield-xc-xj-liner-closed-56m",
-      "category": "helmet-accessories",
-      "name": "Samshield XC/ XJ Liner (Closed)-56M",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-XJL-56M",
-          "size": null,
+          "size": "56M",
           "color": null,
           "price": 4999
-        }
-      ]
-    },
-    {
-      "slug": "samshield-xc-xj-liner-closed-57l",
-      "category": "helmet-accessories",
-      "name": "Samshield XC/ XJ Liner (Closed)-57L",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-XJL-57L",
-          "size": null,
+          "size": "57L",
           "color": null,
           "price": 4999
-        }
-      ]
-    },
-    {
-      "slug": "samshield-xc-xj-liner-closed-57m",
-      "category": "helmet-accessories",
-      "name": "Samshield XC/ XJ Liner (Closed)-57M",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-XJL-57M",
-          "size": null,
+          "size": "57M",
           "color": null,
           "price": 4999
-        }
-      ]
-    },
-    {
-      "slug": "samshield-xc-xj-liner-closed-58l",
-      "category": "helmet-accessories",
-      "name": "Samshield XC/ XJ Liner (Closed)-58L",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-XJL-58L",
-          "size": null,
+          "size": "58L",
           "color": null,
           "price": 4999
-        }
-      ]
-    },
-    {
-      "slug": "samshield-xc-xj-liner-closed-58m",
-      "category": "helmet-accessories",
-      "name": "Samshield XC/ XJ Liner (Closed)-58M",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-XJL-58M",
-          "size": null,
+          "size": "58M",
           "color": null,
           "price": 4999
-        }
-      ]
-    },
-    {
-      "slug": "samshield-xc-xj-liner-closed-59l",
-      "category": "helmet-accessories",
-      "name": "Samshield XC/ XJ Liner (Closed)-59L",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-XJL-59L",
-          "size": null,
+          "size": "59L",
           "color": null,
           "price": 4999
-        }
-      ]
-    },
-    {
-      "slug": "samshield-xc-xj-liner-closed-60l",
-      "category": "helmet-accessories",
-      "name": "Samshield XC/ XJ Liner (Closed)-60L",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-XJL-60L",
-          "size": null,
+          "size": "60L",
           "color": null,
           "price": 4999
-        }
-      ]
-    },
-    {
-      "slug": "samshield-xc-xj-liner-closed-61l",
-      "category": "helmet-accessories",
-      "name": "Samshield XC/ XJ Liner (Closed)-61L",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-XJL-61L",
-          "size": null,
+          "size": "61L",
           "color": null,
           "price": 4999
         }
       ]
     },
     {
-      "slug": "samshield-xc-xj-liner-open-53s",
+      "slug": "samshield-xc-xj-liner-open",
       "category": "helmet-accessories",
-      "name": "Samshield XC/ XJ Liner (Open)-53S",
+      "name": "Samshield XC/ XJ Liner (Open)",
       "brand": "Samshield",
       "variants": [
         {
           "sku": "SAM-XCJ-LNR-OPN-53S",
-          "size": null,
+          "size": "53S",
           "color": null,
           "price": 4449
-        }
-      ]
-    },
-    {
-      "slug": "samshield-xc-xj-liner-open-54s",
-      "category": "helmet-accessories",
-      "name": "Samshield XC/ XJ Liner (Open)-54S",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-XCJ-LNR-OPN-54S",
-          "size": null,
+          "size": "54S",
           "color": null,
           "price": 4449
-        }
-      ]
-    },
-    {
-      "slug": "samshield-xc-xj-liner-open-55m",
-      "category": "helmet-accessories",
-      "name": "Samshield XC/ XJ Liner (Open)-55M",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-XCJ-LNR-OPN-55M",
-          "size": null,
+          "size": "55M",
           "color": null,
           "price": 4449
-        }
-      ]
-    },
-    {
-      "slug": "samshield-xc-xj-liner-open-55s",
-      "category": "helmet-accessories",
-      "name": "Samshield XC/ XJ Liner (Open)-55S",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-XCJ-LNR-OPN-55S",
-          "size": null,
+          "size": "55S",
           "color": null,
           "price": 4449
-        }
-      ]
-    },
-    {
-      "slug": "samshield-xc-xj-liner-open-56m",
-      "category": "helmet-accessories",
-      "name": "Samshield XC/ XJ Liner (Open)-56M",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-XCJ-LNR-OPN-56M",
-          "size": null,
+          "size": "56M",
           "color": null,
           "price": 4449
-        }
-      ]
-    },
-    {
-      "slug": "samshield-xc-xj-liner-open-57l",
-      "category": "helmet-accessories",
-      "name": "Samshield XC/ XJ Liner (Open)-57L",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-XCJ-LNR-OPN-57L",
-          "size": null,
+          "size": "57L",
           "color": null,
           "price": 4449
-        }
-      ]
-    },
-    {
-      "slug": "samshield-xc-xj-liner-open-57m",
-      "category": "helmet-accessories",
-      "name": "Samshield XC/ XJ Liner (Open)-57M",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-XCJ-LNR-OPN-57M",
-          "size": null,
+          "size": "57M",
           "color": null,
           "price": 4449
-        }
-      ]
-    },
-    {
-      "slug": "samshield-xc-xj-liner-open-58l",
-      "category": "helmet-accessories",
-      "name": "Samshield XC/ XJ Liner (Open)-58L",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-XCJ-LNR-OPN-58L",
-          "size": null,
+          "size": "58L",
           "color": null,
           "price": 4449
-        }
-      ]
-    },
-    {
-      "slug": "samshield-xc-xj-liner-open-58m",
-      "category": "helmet-accessories",
-      "name": "Samshield XC/ XJ Liner (Open)-58M",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-XCJ-LNR-OPN-58M",
-          "size": null,
+          "size": "58M",
           "color": null,
           "price": 4449
-        }
-      ]
-    },
-    {
-      "slug": "samshield-xc-xj-liner-open-59l",
-      "category": "helmet-accessories",
-      "name": "Samshield XC/ XJ Liner (Open)-59L",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-XCJ-LNR-OPN-59L",
-          "size": null,
+          "size": "59L",
           "color": null,
           "price": 4449
-        }
-      ]
-    },
-    {
-      "slug": "samshield-xc-xj-liner-open-60l",
-      "category": "helmet-accessories",
-      "name": "Samshield XC/ XJ Liner (Open)-60L",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-XCJ-LNR-OPN-60L",
-          "size": null,
+          "size": "60L",
           "color": null,
           "price": 4449
-        }
-      ]
-    },
-    {
-      "slug": "samshield-xc-xj-liner-open-61l",
-      "category": "helmet-accessories",
-      "name": "Samshield XC/ XJ Liner (Open)-61L",
-      "brand": "Samshield",
-      "variants": [
+        },
         {
           "sku": "SAM-XCJ-LNR-OPN-61L",
-          "size": null,
+          "size": "61L",
           "color": null,
           "price": 4449
         }

@@ -56,6 +56,8 @@ def is_variant_token(token: str) -> bool:
         return True
     if re.fullmatch(r"\d+(\.\d+)?\"?", t):
         return True
+    if re.fullmatch(r"\d{2,3}[sml]", t):  # helmet-liner head size + fit ("55L", "56M")
+        return True
     return False
 
 
@@ -66,6 +68,7 @@ _SIZE_TOKEN = re.compile(
     r"small|medium|large|xlarge|xsmall|xxlarge|"
     r"cob|full|pony|x-full|xfull|shetland|yearling|extra-full|warmblood|osfa|os|"
     r"fr[0-9]{2,3}|in[0-9]{2,3}|"  # European clothing size ("FR36") / inseam-inches ("IN26")
+    r"[0-9]{2,3}[sml]|"  # helmet-liner head size + fit ("55L", "56M")
     r'[0-9]{1,3}(\.[0-9])?"?)$',
     re.I,
 )
@@ -160,7 +163,7 @@ def extract_variant_descriptor(full_name: str, base: str) -> tuple[str | None, s
         low = t.lower()
         if low in COLOR_WORDS or low in {c.replace("-", "") for c in COLOR_WORDS}:
             color = t
-        elif low in SIZE_WORDS or re.fullmatch(r"\d+(\.\d+)?\"?", low):
+        elif low in SIZE_WORDS or re.fullmatch(r"\d+(\.\d+)?\"?", low) or re.fullmatch(r"\d{2,3}[sml]", low):
             size = t
     return size, color
 
