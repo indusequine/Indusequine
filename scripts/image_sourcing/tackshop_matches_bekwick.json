@@ -1,0 +1,243 @@
+{
+  "prefix": [
+    {
+      "slug": "bekwick-amino-energy-gold-1-5kg",
+      "name": "Bekwick Amino Energy Gold-1.5kg",
+      "match_name": "Bekwick Amino Energy Gold",
+      "match_image": "https://www.tackshop.in/product-images/Bekwick+Amino+Energy+Gold.png/1134286000004353474/1100x1100",
+      "coverage": 0.667
+    },
+    {
+      "slug": "bekwick-amino-energy-gold-5kg",
+      "name": "Bekwick Amino Energy Gold-5kg",
+      "match_name": "Bekwick Amino Energy Gold",
+      "match_image": "https://www.tackshop.in/product-images/Bekwick+Amino+Energy+Gold.png/1134286000004353474/1100x1100",
+      "coverage": 0.8
+    },
+    {
+      "slug": "bekwick-amino-quick-charge-1-5kg",
+      "name": "Bekwick Amino Quick Charge-1.5kg",
+      "match_name": "Bekwick Amino Quick Charge",
+      "match_image": "https://www.tackshop.in/product-images/Bekwick+Amino+Quick+Charge.png/1134286000004353502/1100x1100",
+      "coverage": 0.667
+    },
+    {
+      "slug": "bekwick-amino-quick-charge-2-5kg",
+      "name": "Bekwick Amino Quick Charge-2.5kg",
+      "match_name": "Bekwick Amino Quick Charge",
+      "match_image": "https://www.tackshop.in/product-images/Bekwick+Amino+Quick+Charge.png/1134286000004353502/1100x1100",
+      "coverage": 0.667
+    },
+    {
+      "slug": "bekwick-bioflavit-plus-1kg",
+      "name": "Bekwick Bioflavit Plus - 1Kg",
+      "match_name": "Bekwick Bioflavit Plus - 1Kg",
+      "match_image": "https://www.tackshop.in/product-images/Bekwick+Bioflavit+Plus.png/1134286000004353518/1100x1100",
+      "coverage": 1.0
+    },
+    {
+      "slug": "bekwick-biotin-hoof-support-1kg",
+      "name": "Bekwick Biotin Hoof Support-1kg",
+      "match_name": "Bekwick Biotin Hoof Support",
+      "match_image": "https://www.tackshop.in/product-images/Bekwick+Biotin+Hoof+Support.png/1134286000004353528/1100x1100",
+      "coverage": 0.8
+    },
+    {
+      "slug": "bekwick-biotin-hoof-support-5kg",
+      "name": "Bekwick Biotin Hoof Support-5kg",
+      "match_name": "Bekwick Biotin Hoof Support",
+      "match_image": "https://www.tackshop.in/product-images/Bekwick+Biotin+Hoof+Support.png/1134286000004353528/1100x1100",
+      "coverage": 0.8
+    },
+    {
+      "slug": "bekwick-calcitrate-10kg",
+      "name": "Bekwick Calcitrate-10kg",
+      "match_name": "Bekwick Calcitrate",
+      "match_image": "https://www.tackshop.in/product-images/Bekwick+Calcitrate.png/1134286000004353765/1100x1100",
+      "coverage": 0.667
+    },
+    {
+      "slug": "bekwick-calcitrate-5kg",
+      "name": "Bekwick Calcitrate-5kg",
+      "match_name": "Bekwick Calcitrate",
+      "match_image": "https://www.tackshop.in/product-images/Bekwick+Calcitrate.png/1134286000004353765/1100x1100",
+      "coverage": 0.667
+    },
+    {
+      "slug": "bekwick-calphos-gold-10kg",
+      "name": "Bekwick Calphos Gold-10kg",
+      "match_name": "Bekwick Calphos Gold",
+      "match_image": "https://www.tackshop.in/product-images/Bekwick+Calphous+Gold.png/1134286000004353538/1100x1100",
+      "coverage": 0.75
+    },
+    {
+      "slug": "bekwick-calphos-gold-20kg",
+      "name": "Bekwick Calphos Gold-20kg",
+      "match_name": "Bekwick Calphos Gold",
+      "match_image": "https://www.tackshop.in/product-images/Bekwick+Calphous+Gold.png/1134286000004353538/1100x1100",
+      "coverage": 0.75
+    },
+    {
+      "slug": "bekwick-carbolite-plus-5kg",
+      "name": "Bekwick Carbolite Plus - 5Kg",
+      "match_name": "Bekwick Carbolite Plus - 5Kg",
+      "match_image": "https://www.tackshop.in/product-images/Bekwick+Carbolite+Plus.png/1134286000004353550/1100x1100",
+      "coverage": 1.0
+    },
+    {
+      "slug": "bekwick-carti-flex-500gm",
+      "name": "Bekwick Carti Flex - 500Gm",
+      "match_name": "Bekwick Carti Flex - 500Gm",
+      "match_image": "https://www.tackshop.in/product-images/Bekwick+Carti-Flex.png/1134286000004353562/1100x1100",
+      "coverage": 1.0
+    },
+    {
+      "slug": "bekwick-copper-plus-10kg",
+      "name": "Bekwick Copper Plus - 10Kg",
+      "match_name": "Bekwick Copper Plus - 10Kg",
+      "match_image": "https://www.tackshop.in/product-images/Bekwick+Copper+Plus.png/1134286000004353574/1100x1100",
+      "coverage": 1.0
+    },
+    {
+      "slug": "bekwick-e-6000-10kg",
+      "name": "Bekwick E 6000 - 10kg",
+      "match_name": "Bekwick E 6000 - 10kg",
+      "match_image": "https://www.tackshop.in/product-images/Bekwick+E6000.png/1134286000004353586/1100x1100",
+      "coverage": 1.0
+    },
+    {
+      "slug": "bekwick-electrosal-5kg",
+      "name": "Bekwick Electrosal - 5Kg",
+      "match_name": "Bekwick Electrosal - 5Kg",
+      "match_image": "https://www.tackshop.in/product-images/Bekwick+Electrosal.png/1134286000004353596/1100x1100",
+      "coverage": 1.0
+    },
+    {
+      "slug": "bekwick-equine-joint-premium-5kg",
+      "name": "Bekwick Equine Joint Premium - 5Kg",
+      "match_name": "Bekwick Equine Joint Premium - 5Kg",
+      "match_image": "https://www.tackshop.in/product-images/Bekwick+Equine+Joint+Premium.png/1134286000004353608/1100x1100",
+      "coverage": 1.0
+    },
+    {
+      "slug": "bekwick-equine-plus-10kg",
+      "name": "Bekwick Equine Plus-10kg",
+      "match_name": "Bekwick Equine Plus",
+      "match_image": "https://www.tackshop.in/product-images/Bekwick+Equine+Plus.png/1134286000004353618/1100x1100",
+      "coverage": 0.75
+    },
+    {
+      "slug": "bekwick-equine-plus-5kg",
+      "name": "Bekwick Equine Plus-5kg",
+      "match_name": "Bekwick Equine Plus",
+      "match_image": "https://www.tackshop.in/product-images/Bekwick+Equine+Plus.png/1134286000004353618/1100x1100",
+      "coverage": 0.75
+    },
+    {
+      "slug": "bekwick-foal-milk-plus-10kg",
+      "name": "Bekwick Foal Milk Plus-10kg",
+      "match_name": "Bekwick Foal Milk Plus",
+      "match_image": "https://www.tackshop.in/product-images/Bekwick+Foal+Milk+Plus.png/1134286000004353628/1100x1100",
+      "coverage": 0.8
+    },
+    {
+      "slug": "bekwick-foal-milk-plus-25kg",
+      "name": "Bekwick Foal Milk Plus-25kg",
+      "match_name": "Bekwick Foal Milk Plus",
+      "match_image": "https://www.tackshop.in/product-images/Bekwick+Foal+Milk+Plus.png/1134286000004353628/1100x1100",
+      "coverage": 0.8
+    },
+    {
+      "slug": "bekwick-glutamine-1kg",
+      "name": "Bekwick Glutamine - 1Kg",
+      "match_name": "Bekwick Glutamine - 1Kg",
+      "match_image": "https://www.tackshop.in/product-images/Bekwick+Glutamine.png/1134286000004353777/1100x1100",
+      "coverage": 1.0
+    },
+    {
+      "slug": "bekwick-hind-gut-plus-1kg",
+      "name": "Bekwick Hind Gut Plus - 1KG",
+      "match_name": "Bekwick Hind Gut Plus - 1KG",
+      "match_image": "https://www.tackshop.in/product-images/Bekwick+Hind+Gut+Plus.png/1134286000004353789/1100x1100",
+      "coverage": 1.0
+    },
+    {
+      "slug": "bekwick-hoof-cream-1kg",
+      "name": "Bekwick Hoof Cream - 1Kg",
+      "match_name": "Bekwick Hoof Cream - 1Kg",
+      "match_image": "https://www.tackshop.in/product-images/Bekwick+Hoof+Cream.png/1134286000004353640/1100x1100",
+      "coverage": 1.0
+    },
+    {
+      "slug": "bekwick-iron-power-5kg",
+      "name": "Bekwick Iron Power - 5Kg",
+      "match_name": "Bekwick Iron Power - 5Kg",
+      "match_image": "https://www.tackshop.in/product-images/Bekwick+Iron+Power.png/1134286000004353653/1100x1100",
+      "coverage": 1.0
+    },
+    {
+      "slug": "bekwick-msm-aloe-gel-1kg",
+      "name": "Bekwick MSM Aloe Gel - 1KG",
+      "match_name": "Bekwick MSM Aloe Gel - 1KG",
+      "match_image": "https://www.tackshop.in/product-images/Bekwick+MSM+Aloe+Gel.png/1134286000004353685/1100x1100",
+      "coverage": 1.0
+    },
+    {
+      "slug": "bekwick-msm-plus-1kg",
+      "name": "Bekwick MSM Plus - 1Kg",
+      "match_name": "Bekwick MSM Plus - 1Kg",
+      "match_image": "https://www.tackshop.in/product-images/Bekwick+MSM+Plus.png/1134286000004353697/1100x1100",
+      "coverage": 1.0
+    },
+    {
+      "slug": "bekwick-minerovit-plus-10kg",
+      "name": "Bekwick Minerovit Plus -10kg",
+      "match_name": "Bekwick Minerovit Plus ",
+      "match_image": "https://www.tackshop.in/product-images/Bekwick+Minerovit+Plus.png/1134286000004353669/1100x1100",
+      "coverage": 0.75
+    },
+    {
+      "slug": "bekwick-minerovit-plus-5kg",
+      "name": "Bekwick Minerovit Plus -5kg",
+      "match_name": "Bekwick Minerovit Plus ",
+      "match_image": "https://www.tackshop.in/product-images/Bekwick+Minerovit+Plus.png/1134286000004353669/1100x1100",
+      "coverage": 0.75
+    },
+    {
+      "slug": "bekwick-muscle-build-plus-5kg",
+      "name": "Bekwick Muscle Build Plus - 5Kg",
+      "match_name": "Bekwick Muscle Build Plus - 5Kg",
+      "match_image": "https://www.tackshop.in/product-images/Bekwick+Muscle+Build.png/1134286000004353709/1100x1100",
+      "coverage": 1.0
+    },
+    {
+      "slug": "bekwick-omega-369-plus-10ltr",
+      "name": "Bekwick Omega - 369 Plus / 10Ltr",
+      "match_name": "Bekwick Omega - 369 Plus / 10Ltr",
+      "match_image": "https://www.tackshop.in/product-images/Bekwick+Omega+369.png/1134286000004353721/1100x1100",
+      "coverage": 1.0
+    },
+    {
+      "slug": "bekwick-sel-vit-e-5kg",
+      "name": "Bekwick SEL-VIT E - 5Kg",
+      "match_name": "Bekwick SEL-VIT E - 5Kg",
+      "match_image": "https://www.tackshop.in/product-images/Bekwick+Sel+Vit+-+E.png/1134286000004353733/1100x1100",
+      "coverage": 1.0
+    },
+    {
+      "slug": "bekwick-silequin-plus-10kg",
+      "name": "Bekwick Silequin Plus - 10KG",
+      "match_name": "Bekwick Silequin Plus - 10KG",
+      "match_image": "https://www.tackshop.in/product-images/Bekwick+Silequin.png/1134286000004353745/1100x1100",
+      "coverage": 1.0
+    },
+    {
+      "slug": "bekwick-sweat-easy-1kg",
+      "name": "Bekwick Sweat Easy - 1Kg",
+      "match_name": "Bekwick Sweat Easy - 1Kg",
+      "match_image": "https://www.tackshop.in/product-images/Bekwick+Sweat+Easy.png/1134286000004353755/1100x1100",
+      "coverage": 1.0
+    }
+  ],
+  "fuzzy": []
+}
