@@ -1,0 +1,454 @@
+{
+  "prefix": [
+    {
+      "slug": "waldhausen-body-brush-synthetic",
+      "name": "Waldhausen Body Brush Synthetic",
+      "match_name": "Waldhausen Body Brush Synthetic",
+      "match_image": "https://www.tackshop.in/product-images/Body+brush+synthetic+blk2.png/1134286000007366544/1100x1100",
+      "coverage": 1.0
+    },
+    {
+      "slug": "waldhausen-body-brush-synthetic-fir",
+      "name": "Waldhausen Body Brush Synthetic-Fir",
+      "match_name": "Waldhausen Body Brush Synthetic",
+      "match_image": "https://www.tackshop.in/product-images/Body+brush+synthetic+blk2.png/1134286000007366544/1100x1100",
+      "coverage": 0.8
+    },
+    {
+      "slug": "waldhausen-bridle-rack-metal",
+      "name": "Waldhausen Bridle Rack metal",
+      "match_name": "Waldhausen Bridle Rack - Metal",
+      "match_image": "https://www.tackshop.in/product-images/Bridle+Rack+metal+blk.png/1134286000007366666/1100x1100",
+      "coverage": 1.0
+    },
+    {
+      "slug": "waldhausen-bridle-rack-metal-azure",
+      "name": "Waldhausen Bridle Rack metal-Azure",
+      "match_name": "Waldhausen Bridle Rack - Metal",
+      "match_image": "https://www.tackshop.in/product-images/Bridle+Rack+metal+blk.png/1134286000007366666/1100x1100",
+      "coverage": 0.8
+    },
+    {
+      "slug": "waldhausen-copper-snaffle-bit-12-5cm",
+      "name": "Waldhausen Copper Snaffle Bit - 12.5cm",
+      "match_name": "Waldhausen Copper Snaffle Bit",
+      "match_image": "https://www.tackshop.in/product-images/Cupris+jointed+snaffle+1.png/1134286000007363434/1100x1100",
+      "coverage": 0.667
+    },
+    {
+      "slug": "waldhausen-copper-snaffle-bit-13-5cm",
+      "name": "Waldhausen Copper Snaffle Bit - 13.5cm",
+      "match_name": "Waldhausen Copper Snaffle Bit",
+      "match_image": "https://www.tackshop.in/product-images/Cupris+jointed+snaffle+1.png/1134286000007363434/1100x1100",
+      "coverage": 0.667
+    },
+    {
+      "slug": "waldhausen-copper-snaffle-bit-14-5cm",
+      "name": "Waldhausen Copper Snaffle Bit - 14.5cm",
+      "match_name": "Waldhausen Copper Snaffle Bit",
+      "match_image": "https://www.tackshop.in/product-images/Cupris+jointed+snaffle+1.png/1134286000007363434/1100x1100",
+      "coverage": 0.667
+    },
+    {
+      "slug": "waldhausen-copper-snaffle-bit-double-jointed-12-5cm",
+      "name": "Waldhausen Copper Snaffle Bit Double Jointed-12.5cm",
+      "match_name": "Waldhausen Copper Snaffle Bit, Double Jointed",
+      "match_image": "https://www.tackshop.in/product-images/Cupris+Snaffle+bit+double+jointed1.png/1134286000007363496/1100x1100",
+      "coverage": 0.75
+    },
+    {
+      "slug": "waldhausen-copper-snaffle-bit-double-jointed-13-5cm",
+      "name": "Waldhausen Copper Snaffle Bit Double Jointed-13.5cm",
+      "match_name": "Waldhausen Copper Snaffle Bit, Double Jointed",
+      "match_image": "https://www.tackshop.in/product-images/Cupris+Snaffle+bit+double+jointed1.png/1134286000007363496/1100x1100",
+      "coverage": 0.75
+    },
+    {
+      "slug": "waldhausen-copper-snaffle-bit-double-jointed-14-5cm",
+      "name": "Waldhausen Copper Snaffle Bit Double Jointed-14.5cm",
+      "match_name": "Waldhausen Copper Snaffle Bit, Double Jointed",
+      "match_image": "https://www.tackshop.in/product-images/Cupris+Snaffle+bit+double+jointed1.png/1134286000007363496/1100x1100",
+      "coverage": 0.75
+    },
+    {
+      "slug": "waldhausen-flex-grooming-brush",
+      "name": "Waldhausen Flex Grooming Brush",
+      "match_name": "Waldhausen Flex Grooming Brush Horsehair - Black/ Grey",
+      "match_image": "https://www.tackshop.in/product-images/Flex+grooming+brush+horsehair+blkgrey2.png/1134286000007367006/1100x1100",
+      "coverage": 0.571
+    },
+    {
+      "slug": "waldhausen-flex-grooming-brush-horsehair",
+      "name": "Waldhausen Flex Grooming Brush Horsehair",
+      "match_name": "Waldhausen Flex Grooming Brush Horsehair - Black/ Grey",
+      "match_image": "https://www.tackshop.in/product-images/Flex+grooming+brush+horsehair+blkgrey2.png/1134286000007367006/1100x1100",
+      "coverage": 0.714
+    },
+    {
+      "slug": "waldhausen-full-cheek-snaffle-bit-double-jointed-12-5cm",
+      "name": "Waldhausen Full Cheek Snaffle Bit Double Jointed-12.5cm",
+      "match_name": "Waldhausen Full Cheek Snaffle Bit, Double Jointed",
+      "match_image": "https://www.tackshop.in/product-images/Snaffle+bit+with+cheeks+double+jointed1.png/1134286000007363682/1100x1100",
+      "coverage": 0.778
+    },
+    {
+      "slug": "waldhausen-full-cheek-snaffle-bit-double-jointed-13-5cm",
+      "name": "Waldhausen Full Cheek Snaffle Bit Double Jointed-13.5cm",
+      "match_name": "Waldhausen Full Cheek Snaffle Bit, Double Jointed",
+      "match_image": "https://www.tackshop.in/product-images/Snaffle+bit+with+cheeks+double+jointed1.png/1134286000007363682/1100x1100",
+      "coverage": 0.778
+    },
+    {
+      "slug": "waldhausen-full-cheek-snaffle-bit-double-jointed-14-5cm",
+      "name": "Waldhausen Full Cheek Snaffle Bit Double Jointed-14.5cm",
+      "match_name": "Waldhausen Full Cheek Snaffle Bit, Double Jointed",
+      "match_image": "https://www.tackshop.in/product-images/Snaffle+bit+with+cheeks+double+jointed1.png/1134286000007363682/1100x1100",
+      "coverage": 0.778
+    },
+    {
+      "slug": "waldhausen-gel-pad-basic",
+      "name": "Waldhausen Gel Pad Basic",
+      "match_name": "Waldhausen Gel Pad Basic - Black",
+      "match_image": "https://www.tackshop.in/product-images/Gel+pad+Basic+blk1.png/1134286000007367171/1100x1100",
+      "coverage": 0.8
+    },
+    {
+      "slug": "waldhausen-hairnet-with-pearls",
+      "name": "Waldhausen Hairnet with Pearls",
+      "match_name": "Waldhausen Hairnet with Pearls",
+      "match_image": "https://www.tackshop.in/product-images/Hairnet+set+with+pearls+blk.png/1134286000007364193/1100x1100",
+      "coverage": 1.0
+    },
+    {
+      "slug": "waldhausen-health-care-cooling-boots",
+      "name": "Waldhausen Health + Care Cooling Boots",
+      "match_name": "Waldhausen Health + Care Cooling Boots",
+      "match_image": "https://www.tackshop.in/product-images/Waldhausen+Health+%2B+Care+cooling+boot+1.png/1134286000007368125/1100x1100",
+      "coverage": 1.0
+    },
+    {
+      "slug": "waldhausen-health-care-water-bell-boots",
+      "name": "Waldhausen Health + Care Water Bell Boots",
+      "match_name": "Waldhausen Health + Care Water Bell Boots",
+      "match_image": "https://www.tackshop.in/product-images/Waldhausen+Health+%2B+Care+Water+bell+boots1.png/1134286000007368197/1100x1100",
+      "coverage": 1.0
+    },
+    {
+      "slug": "waldhausen-lunging-aid-system-red-grey",
+      "name": "Waldhausen Lunging Aid System (Red/Grey)",
+      "match_name": "Waldhausen Lunging Aid System (Red/Grey) - Full",
+      "match_image": "https://www.tackshop.in/product-images/Lunging+Aid+redgry2.png/1134286000007367350/1100x1100",
+      "coverage": 0.857
+    },
+    {
+      "slug": "waldhausen-modern-ros-fly-veil",
+      "name": "Waldhausen Modern Ros\u00e9 Fly Veil",
+      "match_name": "Waldhausen Modern Ros\u00e9 Fly Veil",
+      "match_image": "https://www.tackshop.in/product-images/Modern+Ros%C3%A9+Fly+Veil+blk1.png/1134286000007367481/1100x1100",
+      "coverage": 1.0
+    },
+    {
+      "slug": "waldhausen-nepal-fly-veil",
+      "name": "Waldhausen Nepal Fly Veil",
+      "match_name": "Waldhausen Nepal Fly Veil",
+      "match_image": "https://www.tackshop.in/product-images/Nepal+fly+veil+blk1.png/1134286000007367739/1100x1100",
+      "coverage": 1.0
+    },
+    {
+      "slug": "waldhausen-pro-safety-stirrups-grey-12cm",
+      "name": "Waldhausen Pro Safety Stirrups/Grey - 12CM",
+      "match_name": "Waldhausen Pro Safety Stirrups/Grey - 12CM",
+      "match_image": "https://www.tackshop.in/product-images/Pro+safety+stirrups+gre2.png/1134286000007367923/1100x1100",
+      "coverage": 1.0
+    },
+    {
+      "slug": "waldhausen-rubber-snaffle-bit-double-jointed-12-5cm",
+      "name": "Waldhausen Rubber Snaffle Bit Double Jointed-12.5cm",
+      "match_name": "Waldhausen Rubber Snaffle Bit, Double Jointed",
+      "match_image": "https://www.tackshop.in/product-images/Rubber+Snaffle+Bit+double+jointed1.png/1134286000007363558/1100x1100",
+      "coverage": 0.75
+    },
+    {
+      "slug": "waldhausen-rubber-snaffle-bit-double-jointed-13-5cm",
+      "name": "Waldhausen Rubber Snaffle Bit Double Jointed-13.5cm",
+      "match_name": "Waldhausen Rubber Snaffle Bit, Double Jointed",
+      "match_image": "https://www.tackshop.in/product-images/Rubber+Snaffle+Bit+double+jointed1.png/1134286000007363558/1100x1100",
+      "coverage": 0.75
+    },
+    {
+      "slug": "waldhausen-rubber-snaffle-bit-double-jointed-14-5cm",
+      "name": "Waldhausen Rubber Snaffle Bit Double Jointed-14.5cm",
+      "match_name": "Waldhausen Rubber Snaffle Bit, Double Jointed",
+      "match_image": "https://www.tackshop.in/product-images/Rubber+Snaffle+Bit+double+jointed1.png/1134286000007363558/1100x1100",
+      "coverage": 0.75
+    },
+    {
+      "slug": "waldhausen-set-of-spurs-with-spur-guard-for-men-20mm",
+      "name": "Waldhausen Set of Spurs with Spur Guard For Men - 20mm",
+      "match_name": "Waldhausen Set of Spurs with Spur Guard For Men",
+      "match_image": "https://www.tackshop.in/product-images/Waldhausen+Set+of+spurs+with+spur+guard+for+Men.png/1134286000011891096/1100x1100",
+      "coverage": 0.875
+    },
+    {
+      "slug": "waldhausen-set-of-spurs-with-spur-guard-for-men-30mm",
+      "name": "Waldhausen Set of Spurs with Spur Guard For Men - 30mm",
+      "match_name": "Waldhausen Set of Spurs with Spur Guard For Men",
+      "match_image": "https://www.tackshop.in/product-images/Waldhausen+Set+of+spurs+with+spur+guard+for+Men.png/1134286000011891096/1100x1100",
+      "coverage": 0.875
+    },
+    {
+      "slug": "waldhausen-set-of-spurs-with-spur-guard-for-women-20mm",
+      "name": "Waldhausen Set of Spurs with Spur Guard For Women - 20mm",
+      "match_name": "Waldhausen Set of Spurs with Spur Guard For Women",
+      "match_image": "https://www.tackshop.in/product-images/Waldhausen+Set+of+spurs+with+spur+guard+for+Men.png/1134286000011891193/1100x1100",
+      "coverage": 0.875
+    },
+    {
+      "slug": "waldhausen-set-of-spurs-with-spur-guard-for-women-30mm",
+      "name": "Waldhausen Set of Spurs with Spur Guard For Women - 30mm",
+      "match_name": "Waldhausen Set of Spurs with Spur Guard For Women",
+      "match_image": "https://www.tackshop.in/product-images/Waldhausen+Set+of+spurs+with+spur+guard+for+Men.png/1134286000011891193/1100x1100",
+      "coverage": 0.875
+    },
+    {
+      "slug": "waldhausen-snaffle-bit-double-jointed-anatomical-12-5cm",
+      "name": "Waldhausen Snaffle Bit Double Jointed Anatomical - 12.5cm",
+      "match_name": "Waldhausen Snaffle Bit, Double Jointed, Anatomical",
+      "match_image": "https://www.tackshop.in/product-images/Snaffle+bit+double+jointed+1.png/1134286000007363620/1100x1100",
+      "coverage": 0.75
+    },
+    {
+      "slug": "waldhausen-snaffle-bit-double-jointed-anatomical-13-5cm",
+      "name": "Waldhausen Snaffle Bit Double Jointed Anatomical - 13.5cm",
+      "match_name": "Waldhausen Snaffle Bit, Double Jointed, Anatomical",
+      "match_image": "https://www.tackshop.in/product-images/Snaffle+bit+double+jointed+1.png/1134286000007363620/1100x1100",
+      "coverage": 0.75
+    },
+    {
+      "slug": "waldhausen-snaffle-bit-double-jointed-anatomical-14-5cm",
+      "name": "Waldhausen Snaffle Bit Double Jointed Anatomical - 14.5cm",
+      "match_name": "Waldhausen Snaffle Bit, Double Jointed, Anatomical",
+      "match_image": "https://www.tackshop.in/product-images/Snaffle+bit+double+jointed+1.png/1134286000007363620/1100x1100",
+      "coverage": 0.75
+    },
+    {
+      "slug": "waldhausen-snaffle-bit-double-jointed-sweet-iron-anatomical-12-5cm",
+      "name": "Waldhausen Snaffle Bit Double Jointed Sweet Iron Anatomical - 12.5cm",
+      "match_name": "Waldhausen Snaffle Bit, Double Jointed, Sweet Iron, Anatomical",
+      "match_image": "https://www.tackshop.in/product-images/Sweet+Iron+snaffle+double+jointed+anatomical1.png/1134286000007363876/1100x1100",
+      "coverage": 0.8
+    },
+    {
+      "slug": "waldhausen-snaffle-bit-double-jointed-sweet-iron-anatomical-13-5cm",
+      "name": "Waldhausen Snaffle Bit Double Jointed Sweet Iron Anatomical - 13.5cm",
+      "match_name": "Waldhausen Snaffle Bit, Double Jointed, Sweet Iron, Anatomical",
+      "match_image": "https://www.tackshop.in/product-images/Sweet+Iron+snaffle+double+jointed+anatomical1.png/1134286000007363876/1100x1100",
+      "coverage": 0.8
+    },
+    {
+      "slug": "waldhausen-snaffle-bit-double-jointed-sweet-iron-anatomical-14-5cm",
+      "name": "Waldhausen Snaffle Bit Double Jointed Sweet Iron Anatomical - 14.5cm",
+      "match_name": "Waldhausen Snaffle Bit, Double Jointed, Sweet Iron, Anatomical",
+      "match_image": "https://www.tackshop.in/product-images/Sweet+Iron+snaffle+double+jointed+anatomical1.png/1134286000007363876/1100x1100",
+      "coverage": 0.8
+    },
+    {
+      "slug": "waldhausen-snaffle-bit-sweet-iron-anatomical-12-5cm",
+      "name": "Waldhausen Snaffle Bit Sweet Iron Anatomical - 12.5cm",
+      "match_name": "Waldhausen Snaffle Bit, Sweet Iron, Anatomical",
+      "match_image": "https://www.tackshop.in/product-images/Sweet+Iron+snaffle+single+jointed+anatomical1.png/1134286000007363938/1100x1100",
+      "coverage": 0.75
+    },
+    {
+      "slug": "waldhausen-snaffle-bit-sweet-iron-anatomical-13-5cm",
+      "name": "Waldhausen Snaffle Bit Sweet Iron Anatomical - 13.5cm",
+      "match_name": "Waldhausen Snaffle Bit, Sweet Iron, Anatomical",
+      "match_image": "https://www.tackshop.in/product-images/Sweet+Iron+snaffle+single+jointed+anatomical1.png/1134286000007363938/1100x1100",
+      "coverage": 0.75
+    },
+    {
+      "slug": "waldhausen-snaffle-bit-sweet-iron-anatomical-14-5cm",
+      "name": "Waldhausen Snaffle Bit Sweet Iron Anatomical - 14.5cm",
+      "match_name": "Waldhausen Snaffle Bit, Sweet Iron, Anatomical",
+      "match_image": "https://www.tackshop.in/product-images/Sweet+Iron+snaffle+single+jointed+anatomical1.png/1134286000007363938/1100x1100",
+      "coverage": 0.75
+    },
+    {
+      "slug": "waldhausen-spur-set-for-men-10mm",
+      "name": "Waldhausen Spur Set For Men-10mm",
+      "match_name": "Waldhausen Spur Set For Men",
+      "match_image": "https://www.tackshop.in/product-images/Waldhausen+Spur+Set+for+Men.png/1134286000011892064/1100x1100",
+      "coverage": 0.8
+    },
+    {
+      "slug": "waldhausen-spur-set-for-men-20mm",
+      "name": "Waldhausen Spur Set For Men-20mm",
+      "match_name": "Waldhausen Spur Set For Men",
+      "match_image": "https://www.tackshop.in/product-images/Waldhausen+Spur+Set+for+Men.png/1134286000011892064/1100x1100",
+      "coverage": 0.8
+    },
+    {
+      "slug": "waldhausen-spur-set-for-men-30mm",
+      "name": "Waldhausen Spur Set For Men-30mm",
+      "match_name": "Waldhausen Spur Set For Men",
+      "match_image": "https://www.tackshop.in/product-images/Waldhausen+Spur+Set+for+Men.png/1134286000011892064/1100x1100",
+      "coverage": 0.8
+    },
+    {
+      "slug": "waldhausen-spur-set-for-women-10mm",
+      "name": "Waldhausen Spur Set for Women-10mm",
+      "match_name": "Waldhausen Spur Set For Women",
+      "match_image": "https://www.tackshop.in/product-images/Waldhausen+Spur+Set+for+Men.png/1134286000011892213/1100x1100",
+      "coverage": 0.8
+    },
+    {
+      "slug": "waldhausen-spur-set-for-women-20mm",
+      "name": "Waldhausen Spur Set for Women-20mm",
+      "match_name": "Waldhausen Spur Set For Women",
+      "match_image": "https://www.tackshop.in/product-images/Waldhausen+Spur+Set+for+Men.png/1134286000011892213/1100x1100",
+      "coverage": 0.8
+    },
+    {
+      "slug": "waldhausen-spur-set-for-women-30mm",
+      "name": "Waldhausen Spur Set for Women-30mm",
+      "match_name": "Waldhausen Spur Set For Women",
+      "match_image": "https://www.tackshop.in/product-images/Waldhausen+Spur+Set+for+Men.png/1134286000011892213/1100x1100",
+      "coverage": 0.8
+    },
+    {
+      "slug": "waldhausen-spurs-gentle-contact-grey-15mm",
+      "name": "Waldhausen Spurs Gentle Contact/ Grey - 15mm",
+      "match_name": "Waldhausen Spurs Gentle Contact/ Grey - 15mm",
+      "match_image": "https://www.tackshop.in/product-images/Waldhausen+Spurs+Gentle+Contact+%282%29.png/1134286000011810060/1100x1100",
+      "coverage": 1.0
+    },
+    {
+      "slug": "waldhausen-spurs-with-perlon-spur-straps-children-15mm",
+      "name": "Waldhausen Spurs With Perlon Spur Straps Children/ 15mm",
+      "match_name": "Waldhausen Spurs With Perlon Spur Straps Children/ 15mm",
+      "match_image": "https://www.tackshop.in/product-images/Waldhausen+Spurs+with+Perlon+Straps+Children.png/1134286000011891017/1100x1100",
+      "coverage": 1.0
+    },
+    {
+      "slug": "waldhausen-sweet-iron-d-ring-bit-double-broken-anatomical-12-5cm",
+      "name": "Waldhausen Sweet Iron D-Ring Bit Double Broken Anatomical-12.5cm",
+      "match_name": "Waldhausen Sweet Iron D-Ring Bit Double Broken Anatomical",
+      "match_image": "https://www.tackshop.in/product-images/Sweet+Iron+D-Ring+bit+double+broken%2C+anatomical1.png/1134286000007363744/1100x1100",
+      "coverage": 0.818
+    },
+    {
+      "slug": "waldhausen-sweet-iron-d-ring-bit-double-broken-anatomical-13-5cm",
+      "name": "Waldhausen Sweet Iron D-Ring Bit Double Broken Anatomical-13.5cm",
+      "match_name": "Waldhausen Sweet Iron D-Ring Bit Double Broken Anatomical",
+      "match_image": "https://www.tackshop.in/product-images/Sweet+Iron+D-Ring+bit+double+broken%2C+anatomical1.png/1134286000007363744/1100x1100",
+      "coverage": 0.818
+    },
+    {
+      "slug": "waldhausen-sweet-iron-d-ring-bit-double-broken-anatomical-14-5cm",
+      "name": "Waldhausen Sweet Iron D-Ring Bit Double Broken Anatomical-14.5cm",
+      "match_name": "Waldhausen Sweet Iron D-Ring Bit Double Broken Anatomical",
+      "match_image": "https://www.tackshop.in/product-images/Sweet+Iron+D-Ring+bit+double+broken%2C+anatomical1.png/1134286000007363744/1100x1100",
+      "coverage": 0.818
+    },
+    {
+      "slug": "waldhausen-sweet-iron-d-ring-bit-single-jointed-anatomical-12-5cm",
+      "name": "Waldhausen Sweet Iron D-Ring Bit Single Jointed Anatomical-12.5cm",
+      "match_name": "Waldhausen Sweet Iron D-Ring Bit Single Jointed Anatomical",
+      "match_image": "https://www.tackshop.in/product-images/Sweet+Iron+D-Ring+bit+single+jointed+anatomical1.png/1134286000007363814/1100x1100",
+      "coverage": 0.818
+    },
+    {
+      "slug": "waldhausen-sweet-iron-d-ring-bit-single-jointed-anatomical-13-5cm",
+      "name": "Waldhausen Sweet Iron D-Ring Bit Single Jointed Anatomical-13.5cm",
+      "match_name": "Waldhausen Sweet Iron D-Ring Bit Single Jointed Anatomical",
+      "match_image": "https://www.tackshop.in/product-images/Sweet+Iron+D-Ring+bit+single+jointed+anatomical1.png/1134286000007363814/1100x1100",
+      "coverage": 0.818
+    },
+    {
+      "slug": "waldhausen-sweet-iron-d-ring-bit-single-jointed-anatomical-14-5cm",
+      "name": "Waldhausen Sweet Iron D-Ring Bit Single Jointed Anatomical-14.5cm",
+      "match_name": "Waldhausen Sweet Iron D-Ring Bit Single Jointed Anatomical",
+      "match_image": "https://www.tackshop.in/product-images/Sweet+Iron+D-Ring+bit+single+jointed+anatomical1.png/1134286000007363814/1100x1100",
+      "coverage": 0.818
+    },
+    {
+      "slug": "waldhausen-three-ring-snaffle-bit-double-jointed-solid-12-5cm",
+      "name": "Waldhausen Three-Ring Snaffle Bit Double Jointed Solid -12.5cm",
+      "match_name": "Waldhausen Three-Ring Snaffle Bit, Double Jointed, Solid",
+      "match_image": "https://www.tackshop.in/product-images/Three-Ring+Bit+double+jointed+solid1.png/1134286000007375022/1100x1100",
+      "coverage": 0.8
+    },
+    {
+      "slug": "waldhausen-three-ring-snaffle-bit-double-jointed-solid-13-5cm",
+      "name": "Waldhausen Three-Ring Snaffle Bit Double Jointed Solid -13.5cm",
+      "match_name": "Waldhausen Three-Ring Snaffle Bit, Double Jointed, Solid",
+      "match_image": "https://www.tackshop.in/product-images/Three-Ring+Bit+double+jointed+solid1.png/1134286000007375022/1100x1100",
+      "coverage": 0.8
+    },
+    {
+      "slug": "waldhausen-three-ring-snaffle-bit-double-jointed-solid-14-5cm",
+      "name": "Waldhausen Three-Ring Snaffle Bit Double Jointed Solid -14.5cm",
+      "match_name": "Waldhausen Three-Ring Snaffle Bit, Double Jointed, Solid",
+      "match_image": "https://www.tackshop.in/product-images/Three-Ring+Bit+double+jointed+solid1.png/1134286000007375022/1100x1100",
+      "coverage": 0.8
+    }
+  ],
+  "fuzzy": [
+    {
+      "slug": "waldhausen-anatomical-ss-snaffle-bit-double-jointed-12-5cm",
+      "name": "Waldhausen Anatomical SS Snaffle Bit Double Jointed-12.5cm",
+      "match_name": "Waldhausen Snaffle Bit, Double Jointed, Anatomical",
+      "match_image": "https://www.tackshop.in/product-images/Snaffle+bit+double+jointed+1.png/1134286000007363620/1100x1100",
+      "score": 0.64
+    },
+    {
+      "slug": "waldhausen-anatomical-ss-snaffle-bit-double-jointed-13-5cm",
+      "name": "Waldhausen Anatomical SS Snaffle Bit Double Jointed-13.5cm",
+      "match_name": "Waldhausen Snaffle Bit, Double Jointed, Anatomical",
+      "match_image": "https://www.tackshop.in/product-images/Snaffle+bit+double+jointed+1.png/1134286000007363620/1100x1100",
+      "score": 0.64
+    },
+    {
+      "slug": "waldhausen-anatomical-ss-snaffle-bit-double-jointed-14-5cm",
+      "name": "Waldhausen Anatomical SS Snaffle Bit Double Jointed-14.5cm",
+      "match_name": "Waldhausen Snaffle Bit, Double Jointed, Anatomical",
+      "match_image": "https://www.tackshop.in/product-images/Snaffle+bit+double+jointed+1.png/1134286000007363620/1100x1100",
+      "score": 0.64
+    },
+    {
+      "slug": "waldhausen-bit-cheek-guard",
+      "name": "Waldhausen Bit Cheek Guard",
+      "match_name": "Waldhausen Bit Cheek Guards",
+      "match_image": "https://www.tackshop.in/product-images/Bit+Guards+blk1.png/1134286000007363316/1100x1100",
+      "score": 0.63
+    },
+    {
+      "slug": "waldhausen-set-of-spurs-for-women",
+      "name": "Waldhausen Set of Spurs for Women",
+      "match_name": "Waldhausen Set of Spurs with Spur Guard For Women",
+      "match_image": "https://www.tackshop.in/product-images/Waldhausen+Set+of+spurs+with+spur+guard+for+Men.png/1134286000011891193/1100x1100",
+      "score": 0.76
+    },
+    {
+      "slug": "waldhausen-spur-10mm-grand-prix-roller-spurs",
+      "name": "Waldhausen Spur-10MM/Grand Prix Roller Spurs",
+      "match_name": "Waldhausen Grand Prix Roller Spurs",
+      "match_image": "https://www.tackshop.in/product-images/Waldhausen+Grand+Prix+Roller+Spurs.png/1134286000011931042/1100x1100",
+      "score": 0.76
+    },
+    {
+      "slug": "waldhausen-spur-20mm-grand-prix-roller-spurs",
+      "name": "Waldhausen Spur-20MM/Grand Prix Roller Spurs",
+      "match_name": "Waldhausen Grand Prix Roller Spurs",
+      "match_image": "https://www.tackshop.in/product-images/Waldhausen+Grand+Prix+Roller+Spurs.png/1134286000011931042/1100x1100",
+      "score": 0.76
+    },
+    {
+      "slug": "waldhausen-spur-30mm-grand-prix-roller-spurs",
+      "name": "Waldhausen Spur-30MM/Grand Prix Roller Spurs",
+      "match_name": "Waldhausen Grand Prix Roller Spurs",
+      "match_image": "https://www.tackshop.in/product-images/Waldhausen+Grand+Prix+Roller+Spurs.png/1134286000011931042/1100x1100",
+      "score": 0.76
+    }
+  ]
+}
