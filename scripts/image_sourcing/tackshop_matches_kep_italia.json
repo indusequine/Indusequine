@@ -1,0 +1,118 @@
+{
+  "prefix": [
+    {
+      "slug": "kep-italia-cap-paris-collection",
+      "name": "KEP Italia Cap - Paris Collection",
+      "match_name": "KEP Italia Cap - Paris Collection",
+      "match_image": "https://www.tackshop.in/product-images/Kep+Italia+Cap+Paris+Collection+-+White+01.png/1134286000004745092/1100x1100",
+      "coverage": 1.0
+    },
+    {
+      "slug": "kep-italia-cromo-textile-polish-front",
+      "name": "KEP Italia Cromo Textile Polish front",
+      "match_name": "Kep Italia Cromo Textile",
+      "match_image": "https://www.tackshop.in/product-images/KEP+Italia+Cromo+Textile+Helmet+-+Black.png/1134286000005069235/1100x1100",
+      "coverage": 0.667
+    },
+    {
+      "slug": "kep-italia-cromo-2-0-helmet-liner-black",
+      "name": "Kep Italia Cromo 2.0 Helmet Liner-Black",
+      "match_name": "Kep Italia Cromo 2.0 Helmet Liner",
+      "match_image": "https://www.tackshop.in/product-images/Kep+Italia+Cromo+2.0+Liner.png/1134286000005080846/1100x1100",
+      "coverage": 0.875
+    },
+    {
+      "slug": "kep-italia-cromo-2-0-polish",
+      "name": "Kep Italia Cromo 2.0 Polish",
+      "match_name": "Kep Italia Cromo 2.0 Polish",
+      "match_image": "https://www.tackshop.in/product-images/Kep+Cromo+2.0+Polish+Helmet+Black.png/1134286000005069487/1100x1100",
+      "coverage": 1.0
+    },
+    {
+      "slug": "kep-italia-cromo-2-0-shine",
+      "name": "Kep Italia Cromo 2.0 Shine",
+      "match_name": "KEP Italia Cromo 2.0 Shine",
+      "match_image": "https://www.tackshop.in/product-images/Kep+Cromo+2.0+Shine+Helmet+Black.png/1134286000005069341/1100x1100",
+      "coverage": 1.0
+    },
+    {
+      "slug": "kep-italia-cromo-helmet-liner",
+      "name": "Kep Italia Cromo Helmet Liner",
+      "match_name": "Kep Italia Cromo Helmet Liner",
+      "match_image": "https://www.tackshop.in/product-images/KEP+Italia+Cromo+Liner.png/1134286000005087032/1100x1100",
+      "coverage": 1.0
+    },
+    {
+      "slug": "kep-italia-cromo-matt",
+      "name": "Kep Italia Cromo Matt",
+      "match_name": "Kep Italia Cromo Matt",
+      "match_image": "https://www.tackshop.in/product-images/KEP+Italia+Cromo+Matt+-+Black.png/1134286000005069027/1100x1100",
+      "coverage": 1.0
+    },
+    {
+      "slug": "kep-italia-cromo-polish",
+      "name": "Kep Italia Cromo Polish",
+      "match_name": "Kep Italia Cromo Polish",
+      "match_image": "https://www.tackshop.in/product-images/KEP+Italia+Cromo+Polish+-+Blue+01.png/1134286000005069105/1100x1100",
+      "coverage": 1.0
+    },
+    {
+      "slug": "kep-italia-cromo-shine",
+      "name": "Kep Italia Cromo Shine",
+      "match_name": "Kep Italia Cromo Shine",
+      "match_image": "https://www.tackshop.in/product-images/KEP+Italia+Cromo+Shine+-+Black.png/1134286000005069153/1100x1100",
+      "coverage": 1.0
+    },
+    {
+      "slug": "kep-italia-cromo-textile",
+      "name": "Kep Italia Cromo Textile",
+      "match_name": "Kep Italia Cromo Textile",
+      "match_image": "https://www.tackshop.in/product-images/KEP+Italia+Cromo+Textile+Helmet+-+Black.png/1134286000005069235/1100x1100",
+      "coverage": 1.0
+    },
+    {
+      "slug": "kep-italia-keppy-helmet",
+      "name": "Kep Italia Keppy Helmet",
+      "match_name": "Kep Italia Keppy Helmet",
+      "match_image": "https://www.tackshop.in/product-images/Keppy_Full.png/1134286000008226246/1100x1100",
+      "coverage": 1.0
+    },
+    {
+      "slug": "kep-italia-keppy-insert-kit",
+      "name": "Kep Italia Keppy Insert Kit",
+      "match_name": "Kep Italia Keppy Insert Kit",
+      "match_image": "https://www.tackshop.in/product-images/KEP+Italia+Keppy+Insert+Kit+-+Black.png/1134286000005087246/1100x1100",
+      "coverage": 1.0
+    },
+    {
+      "slug": "kep-italia-keppy-insert-kit-dark",
+      "name": "Kep Italia Keppy Insert Kit-Dark",
+      "match_name": "Kep Italia Keppy Insert Kit",
+      "match_image": "https://www.tackshop.in/product-images/KEP+Italia+Keppy+Insert+Kit+-+Black.png/1134286000005087246/1100x1100",
+      "coverage": 0.833
+    },
+    {
+      "slug": "kep-italia-keppy-insert-kit-fluorescent",
+      "name": "Kep Italia Keppy Insert Kit-Fluorescent",
+      "match_name": "Kep Italia Keppy Insert Kit",
+      "match_image": "https://www.tackshop.in/product-images/KEP+Italia+Keppy+Insert+Kit+-+Black.png/1134286000005087246/1100x1100",
+      "coverage": 0.833
+    },
+    {
+      "slug": "kep-italia-keppy-liners",
+      "name": "Kep Italia Keppy Liners",
+      "match_name": "Kep Italia Keppy Liners",
+      "match_image": "https://www.tackshop.in/product-images/Keppy+Inner+Pad.png/1134286000005087389/1100x1100",
+      "coverage": 1.0
+    }
+  ],
+  "fuzzy": [
+    {
+      "slug": "kep-italia-cromo-2-0-helmet-bag",
+      "name": "Kep Italia Cromo 2.0 Helmet Bag",
+      "match_name": "Kep Italia Cromo 2.0 Helmet Liner",
+      "match_image": "https://www.tackshop.in/product-images/Kep+Italia+Cromo+2.0+Liner.png/1134286000005080846/1100x1100",
+      "score": 0.737
+    }
+  ]
+}
