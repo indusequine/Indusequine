@@ -1,0 +1,47 @@
+{
+  "prefix": [
+    {
+      "slug": "mustad-copper-nails-box",
+      "name": "Mustad Copper Nails Box",
+      "match_name": "Mustad Copper Nails Box/3",
+      "match_image": "https://www.tackshop.in/product-images/Mst_MX-Copper_45_3Dcombi__59931.jpg/1134286000003783375/1100x1100",
+      "coverage": 0.8
+    },
+    {
+      "slug": "mustad-equilibrium-air-horse-shoes-horse-shoe",
+      "name": "Mustad Equilibrium Air Horse Shoes",
+      "match_name": "Mustad Equilibrium Air Horse Shoes",
+      "match_image": "https://www.tackshop.in/product-images/Mustad+Equilibrium+Air.png/1134286000008491721/1100x1100",
+      "coverage": 1.0
+    },
+    {
+      "slug": "mustad-equilibrium-air-horse-shoes-others",
+      "name": "Mustad Equilibrium Air Horse Shoes",
+      "match_name": "Mustad Equilibrium Air Horse Shoes",
+      "match_image": "https://www.tackshop.in/product-images/Mustad+Equilibrium+Air.png/1134286000008491721/1100x1100",
+      "coverage": 1.0
+    },
+    {
+      "slug": "mustad-horse-shoe-libero-concave-horse-shoe",
+      "name": "Mustad Horse Shoe-Libero Concave",
+      "match_name": "Mustad Horse Shoe-Libero Concave - Double Clip / Front / 4",
+      "match_image": "https://www.tackshop.in/product-images/Mustad_LiBero_3Dtop_0.jpg/1134286000003783333/1100x1100",
+      "coverage": 0.556
+    },
+    {
+      "slug": "mustad-horse-shoe-libero-concave-others",
+      "name": "Mustad Horse Shoe-Libero Concave",
+      "match_name": "Mustad Horse Shoe-Libero Concave - Double Clip / Front / 4",
+      "match_image": "https://www.tackshop.in/product-images/Mustad_LiBero_3Dtop_0.jpg/1134286000003783333/1100x1100",
+      "coverage": 0.556
+    },
+    {
+      "slug": "mustad-nails-box",
+      "name": "Mustad Nails Box",
+      "match_name": "Mustad Nails Box/ 2",
+      "match_image": "https://www.tackshop.in/product-images/Mustad+Horse+Shoe+Nail.png/1134286000008491915/1100x1100",
+      "coverage": 0.75
+    }
+  ],
+  "fuzzy": []
+}

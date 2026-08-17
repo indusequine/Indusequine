@@ -1,0 +1,41 @@
+{
+  "prefix": [
+    {
+      "slug": "winderen-bit-double-broken-mullen-mouth",
+      "name": "Winderen Bit - Double Broken Mullen Mouth",
+      "match_name": "Winderen Bit - Double Broken Mullen Mouth",
+      "match_image": "https://www.tackshop.in/product-images/Pastel+Modern+Fashion+New+Collection+Pinterest+Pin+Post+%281%29.png/1134286000004224039/1100x1100",
+      "coverage": 1.0
+    },
+    {
+      "slug": "winderen-bit-flexi-mullen-mouth",
+      "name": "Winderen Bit - Flexi Mullen Mouth",
+      "match_name": "Winderen Bit - Flexi Mullen Mouth",
+      "match_image": "https://www.tackshop.in/product-images/Pastel+Modern+Fashion+New+Collection+Pinterest+Pin+Post+-+2025-04-07T131233.319.png/1134286000003545465/1100x1100",
+      "coverage": 1.0
+    },
+    {
+      "slug": "winderen-saddle-half-pad-jumping-correction-comfort-18mm",
+      "name": "Winderen Saddle Half Pad Jumping Correction Comfort 18mm",
+      "match_name": "Winderen Saddle Half Pad Jumping Correction Comfort 18mm",
+      "match_image": "https://www.tackshop.in/product-images/Pastel+Modern+Fashion+New+Collection+Pinterest+Pin+Post+-+2025-04-07T130641.586.png/1134286000003545435/1100x1100",
+      "coverage": 1.0
+    },
+    {
+      "slug": "winderen-saddle-half-pad-jumping-slim",
+      "name": "Winderen Saddle Half Pad Jumping Slim",
+      "match_name": "Winderen Saddle Half Pad Jumping Slim 10mm",
+      "match_image": "https://www.tackshop.in/product-images/Pastel+Modern+Fashion+New+Collection+Pinterest+Pin+Post+-+2025-04-07T115825.443.png/1134286000003545592/1100x1100",
+      "coverage": 0.857
+    }
+  ],
+  "fuzzy": [
+    {
+      "slug": "winderen-saddle-half-pad-jumping-comfort-18mm",
+      "name": "Winderen Saddle Half Pad Jumping Comfort 18mm",
+      "match_name": "Winderen Saddle Half Pad Jumping Correction Comfort 18mm",
+      "match_image": "https://www.tackshop.in/product-images/Pastel+Modern+Fashion+New+Collection+Pinterest+Pin+Post+-+2025-04-07T130641.586.png/1134286000003545435/1100x1100",
+      "score": 0.88
+    }
+  ]
+}

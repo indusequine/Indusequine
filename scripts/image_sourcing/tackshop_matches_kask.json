@@ -1,0 +1,76 @@
+{
+  "prefix": [
+    {
+      "slug": "kask-dogma-inner-padding",
+      "name": "KASK Dogma Inner-Padding",
+      "match_name": "KASK Dogma Inner-Padding",
+      "match_image": "https://www.tackshop.in/zs-common/images/no-preview-image.jpg/1100x1100",
+      "coverage": 1.0
+    },
+    {
+      "slug": "kask-helmet-kooki-matt",
+      "name": "KASK Helmet - Kooki Matt",
+      "match_name": "KASK Helmet - Kooki Matt",
+      "match_image": "https://www.tackshop.in/product-images/KASK+Kookie+Black+Matt.png/1134286000010117061/1100x1100",
+      "coverage": 1.0
+    },
+    {
+      "slug": "kask-helmet-kooki-shine",
+      "name": "KASK Helmet - Kooki Shine",
+      "match_name": "KASK Helmet - Kooki Shine",
+      "match_image": "https://www.tackshop.in/product-images/KASK+Kookie+Black+Shine.png/1134286000010117173/1100x1100",
+      "coverage": 1.0
+    },
+    {
+      "slug": "kask-helmet-kooki-black-shadow",
+      "name": "KASK Helmet Kooki Black Shadow",
+      "match_name": "KASK Helmet - Kooki Black Shadow",
+      "match_image": "https://www.tackshop.in/product-images/KASK+Kookie+Black+Shadow.png/1134286000010117017/1100x1100",
+      "coverage": 1.0
+    },
+    {
+      "slug": "kask-dogma-helmet",
+      "name": "Kask Dogma Helmet",
+      "match_name": "Kask Dogma Helmet",
+      "match_image": "https://www.tackshop.in/product-images/KASK+Dogma+Anthracite+%281%29.png/1134286000011778027/1100x1100",
+      "coverage": 1.0
+    },
+    {
+      "slug": "kask-hats",
+      "name": "Kask Hats",
+      "match_name": "Kask Hats",
+      "match_image": "https://www.tackshop.in/product-images/kooki+cap+lime.png/1134286000007125945/1100x1100",
+      "coverage": 1.0
+    },
+    {
+      "slug": "kask-hats-lime",
+      "name": "Kask Hats-Lime",
+      "match_name": "Kask Hats",
+      "match_image": "https://www.tackshop.in/product-images/kooki+cap+lime.png/1134286000007125945/1100x1100",
+      "coverage": 0.667
+    },
+    {
+      "slug": "kask-hoodies",
+      "name": "Kask Hoodies",
+      "match_name": "Kask Hoodies",
+      "match_image": "https://www.tackshop.in/product-images/KASK+Hoodie+%282%29.png/1134286000012896279/1100x1100",
+      "coverage": 1.0
+    },
+    {
+      "slug": "kask-kooki-inner-padding",
+      "name": "Kask Kooki Inner Padding",
+      "match_name": "Kask Kooki Inner Padding",
+      "match_image": "https://www.tackshop.in/product-images/kooi+linner+pad.png/1134286000007128001/1100x1100",
+      "coverage": 1.0
+    }
+  ],
+  "fuzzy": [
+    {
+      "slug": "kask-helmet-dogma-pure-shine",
+      "name": "KASK Helmet - Dogma Pure Shine",
+      "match_name": "Kask Dogma Helmet",
+      "match_image": "https://www.tackshop.in/product-images/KASK+Dogma+Anthracite+%281%29.png/1134286000011778027/1100x1100",
+      "score": 0.76
+    }
+  ]
+}
