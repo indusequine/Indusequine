@@ -1,0 +1,173 @@
+{
+  "prefix": [
+    {
+      "slug": "helite-airjacket-airbag-adult",
+      "name": "Helite AirJacket AirBag Adult",
+      "match_name": "Helite AirJacket AirBag Adult",
+      "match_image": "https://www.tackshop.in/product-images/Helite+Airjacket+Airbag+Adult.png/1134286000005072938/1100x1100",
+      "coverage": 1.0
+    },
+    {
+      "slug": "helite-airjacket-airbag-child",
+      "name": "Helite AirJacket AirBag Child",
+      "match_name": "Helite AirJacket AirBag Child",
+      "match_image": "https://www.tackshop.in/product-images/Helite+Airjacket+Airbag+Adult.png/1134286000005080175/1100x1100",
+      "coverage": 1.0
+    },
+    {
+      "slug": "helite-co2-cartridge-equestrian-100cc",
+      "name": "Helite CO2 Cartridge Equestrian-100CC",
+      "match_name": "Helite CO2 Cartridge Equestrian",
+      "match_image": "https://www.tackshop.in/product-images/Helite+CO2+Cartridge+50cc.png/1134286000004956913/1100x1100",
+      "coverage": 0.8
+    },
+    {
+      "slug": "helite-co2-cartridge-equestrian-60cc",
+      "name": "Helite CO2 Cartridge Equestrian-60CC",
+      "match_name": "Helite CO2 Cartridge Equestrian",
+      "match_image": "https://www.tackshop.in/product-images/Helite+CO2+Cartridge+50cc.png/1134286000004956913/1100x1100",
+      "coverage": 0.8
+    },
+    {
+      "slug": "helite-co2-cartridge-equestrian-85cc",
+      "name": "Helite CO2 Cartridge Equestrian-85CC",
+      "match_name": "Helite CO2 Cartridge Equestrian",
+      "match_image": "https://www.tackshop.in/product-images/Helite+CO2+Cartridge+50cc.png/1134286000004956913/1100x1100",
+      "coverage": 0.8
+    },
+    {
+      "slug": "helite-key-ball-lanyard-airbag-equestrian",
+      "name": "Helite Key-Ball Lanyard AirBag Equestrian",
+      "match_name": "Helite Key-Ball Lanyard AirBag Equestrian",
+      "match_image": "https://www.tackshop.in/product-images/Helite+Keyball+Lanyard.png/1134286000005087816/1100x1100",
+      "coverage": 1.0
+    },
+    {
+      "slug": "helite-replacement-end-cap",
+      "name": "Helite Replacement End Cap",
+      "match_name": "Helite Replacement End Cap",
+      "match_image": "https://www.tackshop.in/product-images/Helite+Replacement+End+Cap.png/1134286000005094044/1100x1100",
+      "coverage": 1.0
+    },
+    {
+      "slug": "helite-replacement-piston",
+      "name": "Helite Replacement Piston",
+      "match_name": "Helite Replacement Piston",
+      "match_image": "https://www.tackshop.in/product-images/Helite+Replacement+Piston.png/1134286000005087992/1100x1100",
+      "coverage": 1.0
+    },
+    {
+      "slug": "helite-replacement-spring",
+      "name": "Helite Replacement Spring",
+      "match_name": "Helite Replacement Spring",
+      "match_image": "https://www.tackshop.in/product-images/Helite+Replacement+Spring.png/1134286000005094018/1100x1100",
+      "coverage": 1.0
+    },
+    {
+      "slug": "helite-saddle-strap",
+      "name": "Helite Saddle Strap",
+      "match_name": "Helite Saddle Strap",
+      "match_image": "https://www.tackshop.in/product-images/Helite+Saddle+Strap.png/1134286000005087844/1100x1100",
+      "coverage": 1.0
+    },
+    {
+      "slug": "helite-show-jacket-airjump",
+      "name": "Helite Show Jacket AirJump",
+      "match_name": "Helite Show Jacket AirJump",
+      "match_image": "https://www.tackshop.in/product-images/Pastel+Modern+Fashion+New+Collection+Pinterest+Pin+Post+-+2025-04-08T111556.050.png/1134286000003553707/1100x1100",
+      "coverage": 1.0
+    },
+    {
+      "slug": "helite-show-jacket-airjump-black-2xl",
+      "name": "Helite Show Jacket AirJump-Black/2XL",
+      "match_name": "Helite Show Jacket AirJump",
+      "match_image": "https://www.tackshop.in/product-images/Pastel+Modern+Fashion+New+Collection+Pinterest+Pin+Post+-+2025-04-08T111556.050.png/1134286000003553707/1100x1100",
+      "coverage": 0.667
+    },
+    {
+      "slug": "helite-show-jacket-airjump-black-cl",
+      "name": "Helite Show Jacket AirJump-Black/CL",
+      "match_name": "Helite Show Jacket AirJump",
+      "match_image": "https://www.tackshop.in/product-images/Pastel+Modern+Fashion+New+Collection+Pinterest+Pin+Post+-+2025-04-08T111556.050.png/1134286000003553707/1100x1100",
+      "coverage": 0.667
+    },
+    {
+      "slug": "helite-vest",
+      "name": "Helite Vest",
+      "match_name": "Helite Vest AirShell",
+      "match_image": "https://www.tackshop.in/product-images/Pastel+Modern+Fashion+New+Collection+Pinterest+Pin+Post+-+2025-04-08T115102.780.png/1134286000003553769/1100x1100",
+      "coverage": 0.667
+    },
+    {
+      "slug": "helite-vest-airshell",
+      "name": "Helite Vest AirShell",
+      "match_name": "Helite Vest AirShell",
+      "match_image": "https://www.tackshop.in/product-images/Pastel+Modern+Fashion+New+Collection+Pinterest+Pin+Post+-+2025-04-08T115102.780.png/1134286000003553769/1100x1100",
+      "coverage": 1.0
+    },
+    {
+      "slug": "helite-vest-airshell-black-blue-2xl",
+      "name": "Helite Vest AirShell-Black/Blue/2XL",
+      "match_name": "Helite Vest AirShell",
+      "match_image": "https://www.tackshop.in/product-images/Pastel+Modern+Fashion+New+Collection+Pinterest+Pin+Post+-+2025-04-08T115102.780.png/1134286000003553769/1100x1100",
+      "coverage": 0.5
+    },
+    {
+      "slug": "helite-vest-airshell-black-blue-cl",
+      "name": "Helite Vest AirShell-Black/Blue/CL",
+      "match_name": "Helite Vest AirShell",
+      "match_image": "https://www.tackshop.in/product-images/Pastel+Modern+Fashion+New+Collection+Pinterest+Pin+Post+-+2025-04-08T115102.780.png/1134286000003553769/1100x1100",
+      "coverage": 0.5
+    },
+    {
+      "slug": "helite-vest-airshell-black-gray-2xl",
+      "name": "Helite Vest AirShell-Black/Gray/2XL",
+      "match_name": "Helite Vest AirShell",
+      "match_image": "https://www.tackshop.in/product-images/Pastel+Modern+Fashion+New+Collection+Pinterest+Pin+Post+-+2025-04-08T115102.780.png/1134286000003553769/1100x1100",
+      "coverage": 0.5
+    },
+    {
+      "slug": "helite-vest-airshell-black-gray-cl",
+      "name": "Helite Vest AirShell-Black/Gray/CL",
+      "match_name": "Helite Vest AirShell",
+      "match_image": "https://www.tackshop.in/product-images/Pastel+Modern+Fashion+New+Collection+Pinterest+Pin+Post+-+2025-04-08T115102.780.png/1134286000003553769/1100x1100",
+      "coverage": 0.5
+    },
+    {
+      "slug": "helite-vest-prestige-blue",
+      "name": "Helite Vest Prestige-Blue",
+      "match_name": "Helite Vest Prestige",
+      "match_image": "https://www.tackshop.in/product-images/Pastel+Modern+Fashion+New+Collection+Pinterest+Pin+Post+-+2025-04-08T112014.877.png/1134286000003553727/1100x1100",
+      "coverage": 0.75
+    },
+    {
+      "slug": "helite-vest-prestige-blue-black-white-line-2xl",
+      "name": "Helite Vest Prestige-Blue/Black-White line/2XL",
+      "match_name": "Helite Vest Prestige",
+      "match_image": "https://www.tackshop.in/product-images/Pastel+Modern+Fashion+New+Collection+Pinterest+Pin+Post+-+2025-04-08T112014.877.png/1134286000003553727/1100x1100",
+      "coverage": 0.375
+    },
+    {
+      "slug": "helite-vest-prestige-blue-black-white-line-cl",
+      "name": "Helite Vest Prestige-Blue/Black-White line/CL",
+      "match_name": "Helite Vest Prestige",
+      "match_image": "https://www.tackshop.in/product-images/Pastel+Modern+Fashion+New+Collection+Pinterest+Pin+Post+-+2025-04-08T112014.877.png/1134286000003553727/1100x1100",
+      "coverage": 0.375
+    },
+    {
+      "slug": "helite-vest-prestige-blue-red-white-line-2xl",
+      "name": "Helite Vest Prestige-Blue/Red-White line/2XL",
+      "match_name": "Helite Vest Prestige",
+      "match_image": "https://www.tackshop.in/product-images/Pastel+Modern+Fashion+New+Collection+Pinterest+Pin+Post+-+2025-04-08T112014.877.png/1134286000003553727/1100x1100",
+      "coverage": 0.375
+    },
+    {
+      "slug": "helite-vest-prestige-blue-red-white-line-cl",
+      "name": "Helite Vest Prestige-Blue/Red-White line/CL",
+      "match_name": "Helite Vest Prestige",
+      "match_image": "https://www.tackshop.in/product-images/Pastel+Modern+Fashion+New+Collection+Pinterest+Pin+Post+-+2025-04-08T112014.877.png/1134286000003553727/1100x1100",
+      "coverage": 0.375
+    }
+  ],
+  "fuzzy": []
+}
