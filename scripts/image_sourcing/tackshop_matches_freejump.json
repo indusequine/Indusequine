@@ -1,0 +1,503 @@
+{
+  "prefix": [
+    {
+      "slug": "freejump-saddle-pad-saddle-pads",
+      "name": "FreeJump Saddle Pad",
+      "match_name": "Freejump Saddle Pad",
+      "match_image": "https://www.tackshop.in/product-images/Pastel+Modern+Fashion+New+Collection+Pinterest+Pin+Post+-+2025-04-07T233730.388.png/1134286000003545918/1100x1100",
+      "coverage": 1.0
+    },
+    {
+      "slug": "freejump-air-s-stirrups-angled-blu-inclined-grip",
+      "name": "Freejump Air's Stirrups- Angled/ BLU/ Inclined Grip",
+      "match_name": "Freejump  Air's Stirrups",
+      "match_image": "https://www.tackshop.in/product-images/Pastel+Modern+Fashion+New+Collection+Pinterest+Pin+Post+-+2025-04-08T002052.484.png/1134286000003553176/1100x1100",
+      "coverage": 0.5
+    },
+    {
+      "slug": "freejump-air-s-stirrups-angled-blu-flat-grip",
+      "name": "Freejump Air's Stirrups- Angled/ BLU/Flat Grip",
+      "match_name": "Freejump  Air's Stirrups",
+      "match_image": "https://www.tackshop.in/product-images/Pastel+Modern+Fashion+New+Collection+Pinterest+Pin+Post+-+2025-04-08T002052.484.png/1134286000003553176/1100x1100",
+      "coverage": 0.5
+    },
+    {
+      "slug": "freejump-air-s-stirrups-angled-bs-inclined-grip",
+      "name": "Freejump Air's Stirrups- Angled/ BS/ Inclined Grip",
+      "match_name": "Freejump  Air's Stirrups",
+      "match_image": "https://www.tackshop.in/product-images/Pastel+Modern+Fashion+New+Collection+Pinterest+Pin+Post+-+2025-04-08T002052.484.png/1134286000003553176/1100x1100",
+      "coverage": 0.5
+    },
+    {
+      "slug": "freejump-air-s-stirrups-angled-bs-flat-grip",
+      "name": "Freejump Air's Stirrups- Angled/ BS/Flat Grip",
+      "match_name": "Freejump  Air's Stirrups",
+      "match_image": "https://www.tackshop.in/product-images/Pastel+Modern+Fashion+New+Collection+Pinterest+Pin+Post+-+2025-04-08T002052.484.png/1134286000003553176/1100x1100",
+      "coverage": 0.5
+    },
+    {
+      "slug": "freejump-air-s-stirrups-angled-nn-inclined-grip",
+      "name": "Freejump Air's Stirrups- Angled/ NN/ Inclined Grip",
+      "match_name": "Freejump  Air's Stirrups",
+      "match_image": "https://www.tackshop.in/product-images/Pastel+Modern+Fashion+New+Collection+Pinterest+Pin+Post+-+2025-04-08T002052.484.png/1134286000003553176/1100x1100",
+      "coverage": 0.5
+    },
+    {
+      "slug": "freejump-air-s-stirrups-angled-nn-flat-grip",
+      "name": "Freejump Air's Stirrups- Angled/ NN/Flat Grip",
+      "match_name": "Freejump  Air's Stirrups",
+      "match_image": "https://www.tackshop.in/product-images/Pastel+Modern+Fashion+New+Collection+Pinterest+Pin+Post+-+2025-04-08T002052.484.png/1134286000003553176/1100x1100",
+      "coverage": 0.5
+    },
+    {
+      "slug": "freejump-air-s-stirrups-angled-rr-inclined-grip",
+      "name": "Freejump Air's Stirrups- Angled/ RR/ Inclined Grip",
+      "match_name": "Freejump  Air's Stirrups",
+      "match_image": "https://www.tackshop.in/product-images/Pastel+Modern+Fashion+New+Collection+Pinterest+Pin+Post+-+2025-04-08T002052.484.png/1134286000003553176/1100x1100",
+      "coverage": 0.5
+    },
+    {
+      "slug": "freejump-air-s-stirrups-angled-rr-flat-grip",
+      "name": "Freejump Air's Stirrups- Angled/ RR/Flat Grip",
+      "match_name": "Freejump  Air's Stirrups",
+      "match_image": "https://www.tackshop.in/product-images/Pastel+Modern+Fashion+New+Collection+Pinterest+Pin+Post+-+2025-04-08T002052.484.png/1134286000003553176/1100x1100",
+      "coverage": 0.5
+    },
+    {
+      "slug": "freejump-air-s-stirrups-straight-blu-inclined-grip",
+      "name": "Freejump Air's Stirrups-Straight/ BLU/ Inclined Grip",
+      "match_name": "Freejump  Air's Stirrups",
+      "match_image": "https://www.tackshop.in/product-images/Pastel+Modern+Fashion+New+Collection+Pinterest+Pin+Post+-+2025-04-08T002052.484.png/1134286000003553176/1100x1100",
+      "coverage": 0.5
+    },
+    {
+      "slug": "freejump-air-s-stirrups-straight-blu-flat-grip",
+      "name": "Freejump Air's Stirrups-Straight/ BLU/Flat Grip",
+      "match_name": "Freejump  Air's Stirrups",
+      "match_image": "https://www.tackshop.in/product-images/Pastel+Modern+Fashion+New+Collection+Pinterest+Pin+Post+-+2025-04-08T002052.484.png/1134286000003553176/1100x1100",
+      "coverage": 0.5
+    },
+    {
+      "slug": "freejump-air-s-stirrups-straight-bs-inclined-grip",
+      "name": "Freejump Air's Stirrups-Straight/ BS/ Inclined Grip",
+      "match_name": "Freejump  Air's Stirrups",
+      "match_image": "https://www.tackshop.in/product-images/Pastel+Modern+Fashion+New+Collection+Pinterest+Pin+Post+-+2025-04-08T002052.484.png/1134286000003553176/1100x1100",
+      "coverage": 0.5
+    },
+    {
+      "slug": "freejump-air-s-stirrups-straight-bs-flat-grip",
+      "name": "Freejump Air's Stirrups-Straight/ BS/Flat Grip",
+      "match_name": "Freejump  Air's Stirrups",
+      "match_image": "https://www.tackshop.in/product-images/Pastel+Modern+Fashion+New+Collection+Pinterest+Pin+Post+-+2025-04-08T002052.484.png/1134286000003553176/1100x1100",
+      "coverage": 0.5
+    },
+    {
+      "slug": "freejump-air-s-stirrups-straight-ch-flat-grip",
+      "name": "Freejump Air's Stirrups-Straight/ CH/Flat Grip",
+      "match_name": "Freejump  Air's Stirrups",
+      "match_image": "https://www.tackshop.in/product-images/Pastel+Modern+Fashion+New+Collection+Pinterest+Pin+Post+-+2025-04-08T002052.484.png/1134286000003553176/1100x1100",
+      "coverage": 0.5
+    },
+    {
+      "slug": "freejump-air-s-stirrups-straight-nn-inclined-grip",
+      "name": "Freejump Air's Stirrups-Straight/ NN/ Inclined Grip",
+      "match_name": "Freejump  Air's Stirrups",
+      "match_image": "https://www.tackshop.in/product-images/Pastel+Modern+Fashion+New+Collection+Pinterest+Pin+Post+-+2025-04-08T002052.484.png/1134286000003553176/1100x1100",
+      "coverage": 0.5
+    },
+    {
+      "slug": "freejump-air-s-stirrups-straight-rr-inclined-grip",
+      "name": "Freejump Air's Stirrups-Straight/ RR/ Inclined Grip",
+      "match_name": "Freejump  Air's Stirrups",
+      "match_image": "https://www.tackshop.in/product-images/Pastel+Modern+Fashion+New+Collection+Pinterest+Pin+Post+-+2025-04-08T002052.484.png/1134286000003553176/1100x1100",
+      "coverage": 0.5
+    },
+    {
+      "slug": "freejump-air-s-stirrups-straight-rr-flat-grip",
+      "name": "Freejump Air's Stirrups-Straight/ RR/Flat Grip",
+      "match_name": "Freejump  Air's Stirrups",
+      "match_image": "https://www.tackshop.in/product-images/Pastel+Modern+Fashion+New+Collection+Pinterest+Pin+Post+-+2025-04-08T002052.484.png/1134286000003553176/1100x1100",
+      "coverage": 0.5
+    },
+    {
+      "slug": "freejump-airbag",
+      "name": "Freejump Airbag",
+      "match_name": "Freejump Airbag",
+      "match_image": "https://www.tackshop.in/product-images/Freejump+Airbag+Air+Vest.png/1134286000005072758/1100x1100",
+      "coverage": 1.0
+    },
+    {
+      "slug": "freejump-airbag-active-cleaner-200ml",
+      "name": "Freejump Airbag Active Cleaner (200ml)",
+      "match_name": "Freejump Airbag Active Cleaner (200ml)",
+      "match_image": "https://www.tackshop.in/product-images/Freejump+Hey+Airbag+Active+Cleaner.png/1134286000014240014/1100x1100",
+      "coverage": 1.0
+    },
+    {
+      "slug": "freejump-airbag-child",
+      "name": "Freejump Airbag Child",
+      "match_name": "Freejump Airbag Child",
+      "match_image": "https://www.tackshop.in/product-images/Freejump+Airbag+Air+Vest+Child+%282%29.png/1134286000005072811/1100x1100",
+      "coverage": 1.0
+    },
+    {
+      "slug": "freejump-airbag-xst",
+      "name": "Freejump Airbag- XST",
+      "match_name": "Freejump Airbag",
+      "match_image": "https://www.tackshop.in/product-images/Freejump+Airbag+Air+Vest.png/1134286000005072758/1100x1100",
+      "coverage": 0.667
+    },
+    {
+      "slug": "freejump-america-chaps",
+      "name": "Freejump America Chaps",
+      "match_name": "Freejump America Chaps",
+      "match_image": "https://www.tackshop.in/product-images/Pastel+Modern+Fashion+New+Collection+Pinterest+Pin+Post+-+2025-04-07T145345.062.png/1134286000003545890/1100x1100",
+      "coverage": 1.0
+    },
+    {
+      "slug": "freejump-america-chaps-xss",
+      "name": "Freejump America Chaps-XSS",
+      "match_name": "Freejump America Chaps",
+      "match_image": "https://www.tackshop.in/product-images/Pastel+Modern+Fashion+New+Collection+Pinterest+Pin+Post+-+2025-04-07T145345.062.png/1134286000003545890/1100x1100",
+      "coverage": 0.75
+    },
+    {
+      "slug": "freejump-america-chaps-xst",
+      "name": "Freejump America Chaps-XST",
+      "match_name": "Freejump America Chaps",
+      "match_image": "https://www.tackshop.in/product-images/Pastel+Modern+Fashion+New+Collection+Pinterest+Pin+Post+-+2025-04-07T145345.062.png/1134286000003545890/1100x1100",
+      "coverage": 0.75
+    },
+    {
+      "slug": "freejump-cartridge-50cc",
+      "name": "Freejump Cartridge 50CC",
+      "match_name": "Freejump Cartridge",
+      "match_image": "https://www.tackshop.in/product-images/Freejump+Canister.png/1134286000008244865/1100x1100",
+      "coverage": 0.667
+    },
+    {
+      "slug": "freejump-cartridge-60cc",
+      "name": "Freejump Cartridge 60CC",
+      "match_name": "Freejump Cartridge",
+      "match_image": "https://www.tackshop.in/product-images/Freejump+Canister.png/1134286000008244865/1100x1100",
+      "coverage": 0.667
+    },
+    {
+      "slug": "freejump-cartridge-85cc",
+      "name": "Freejump Cartridge 85CC",
+      "match_name": "Freejump Cartridge",
+      "match_image": "https://www.tackshop.in/product-images/Freejump+Canister.png/1134286000008244865/1100x1100",
+      "coverage": 0.667
+    },
+    {
+      "slug": "freejump-ear-bonnet",
+      "name": "Freejump Ear Bonnet",
+      "match_name": "Freejump Ear Bonnet",
+      "match_image": "https://www.tackshop.in/product-images/Freejump+Ear+Bonnet+Black-Red.png/1134286000004956793/1100x1100",
+      "coverage": 1.0
+    },
+    {
+      "slug": "freejump-ear-bonnet-choco-choco",
+      "name": "Freejump Ear Bonnet-Choco/Choco",
+      "match_name": "Freejump Ear Bonnet",
+      "match_image": "https://www.tackshop.in/product-images/Freejump+Ear+Bonnet+Black-Red.png/1134286000004956793/1100x1100",
+      "coverage": 0.6
+    },
+    {
+      "slug": "freejump-key-ball-lanyard",
+      "name": "Freejump Key-Ball Lanyard",
+      "match_name": "Freejump Key-Ball Lanyard",
+      "match_image": "https://www.tackshop.in/product-images/Freejump+Keyball+Lanyard.png/1134286000005087966/1100x1100",
+      "coverage": 1.0
+    },
+    {
+      "slug": "freejump-liberty-chaps",
+      "name": "Freejump Liberty+ Chaps",
+      "match_name": "Freejump Liberty+ Chaps",
+      "match_image": "https://www.tackshop.in/product-images/Pastel+Modern+Fashion+New+Collection+Pinterest+Pin+Post+-+2025-04-08T003314.495.png/1134286000003553274/1100x1100",
+      "coverage": 1.0
+    },
+    {
+      "slug": "freejump-liberty-chaps-xst",
+      "name": "Freejump Liberty+ Chaps -XST",
+      "match_name": "Freejump Liberty+ Chaps",
+      "match_image": "https://www.tackshop.in/product-images/Pastel+Modern+Fashion+New+Collection+Pinterest+Pin+Post+-+2025-04-08T003314.495.png/1134286000003553274/1100x1100",
+      "coverage": 0.75
+    },
+    {
+      "slug": "freejump-liberty-shoes",
+      "name": "Freejump Liberty+ Shoes",
+      "match_name": "Freejump Liberty+ Shoes",
+      "match_image": "https://www.tackshop.in/product-images/Pastel+Modern+Fashion+New+Collection+Pinterest+Pin+Post+-+2025-04-08T003638.561.png/1134286000003553290/1100x1100",
+      "coverage": 1.0
+    },
+    {
+      "slug": "freejump-pro-kit-1key-18-studs",
+      "name": "Freejump Pro Kit ( 1Key + 18 Studs )",
+      "match_name": "Freejump Pro Kit ( 1Key + 18 Studs )",
+      "match_image": "https://www.tackshop.in/product-images/Freejump+Pro%2B+Kit+-+1.png/1134286000004956883/1100x1100",
+      "coverage": 1.0
+    },
+    {
+      "slug": "freejump-saddle-pad-saddle-pads-2",
+      "name": "Freejump Saddle Pad",
+      "match_name": "Freejump Saddle Pad",
+      "match_image": "https://www.tackshop.in/product-images/Pastel+Modern+Fashion+New+Collection+Pinterest+Pin+Post+-+2025-04-07T233730.388.png/1134286000003545918/1100x1100",
+      "coverage": 1.0
+    },
+    {
+      "slug": "freejump-saddle-strap",
+      "name": "Freejump Saddle Strap",
+      "match_name": "Freejump Saddle Strap",
+      "match_image": "https://www.tackshop.in/product-images/Freejump+Saddle+Strap+Y+Safety+Lanyard.png/1134286000005087876/1100x1100",
+      "coverage": 1.0
+    },
+    {
+      "slug": "freejump-soft-up-pro-stirrups",
+      "name": "Freejump Soft'Up Pro + Stirrups",
+      "match_name": "Freejump Soft'Up Pro + Stirrups",
+      "match_image": "https://www.tackshop.in/product-images/Pastel+Modern+Fashion+New+Collection+Pinterest+Pin+Post+-+2025-04-08T004805.989.png/1134286000003553346/1100x1100",
+      "coverage": 1.0
+    },
+    {
+      "slug": "freejump-soft-up-pro-stirrups-bordeaux",
+      "name": "Freejump Soft'Up Pro + Stirrups- Bordeaux",
+      "match_name": "Freejump Soft'Up Pro + Stirrups",
+      "match_image": "https://www.tackshop.in/product-images/Pastel+Modern+Fashion+New+Collection+Pinterest+Pin+Post+-+2025-04-08T004805.989.png/1134286000003553346/1100x1100",
+      "coverage": 0.833
+    },
+    {
+      "slug": "freejump-soft-up-pro-stirrups-choco",
+      "name": "Freejump Soft'Up Pro + Stirrups- Choco",
+      "match_name": "Freejump Soft'Up Pro + Stirrups",
+      "match_image": "https://www.tackshop.in/product-images/Pastel+Modern+Fashion+New+Collection+Pinterest+Pin+Post+-+2025-04-08T004805.989.png/1134286000003553346/1100x1100",
+      "coverage": 0.833
+    },
+    {
+      "slug": "freejump-soft-up-pro-stirrups-silver-premium-edition",
+      "name": "Freejump Soft'Up Pro + Stirrups- Silver Premium Edition",
+      "match_name": "Freejump Soft'Up Pro + Stirrups",
+      "match_image": "https://www.tackshop.in/product-images/Pastel+Modern+Fashion+New+Collection+Pinterest+Pin+Post+-+2025-04-08T004805.989.png/1134286000003553346/1100x1100",
+      "coverage": 0.625
+    },
+    {
+      "slug": "freejump-spur-straps",
+      "name": "Freejump Spur Straps",
+      "match_name": "Freejump Spur Straps",
+      "match_image": "https://www.tackshop.in/product-images/Pastel+Modern+Fashion+New+Collection+Pinterest+Pin+Post+-+2025-04-08T005112.450.png/1134286000003553392/1100x1100",
+      "coverage": 1.0
+    },
+    {
+      "slug": "freejump-spur-one-disc",
+      "name": "Freejump Spur'One-Disc",
+      "match_name": "Freejump Spur'One",
+      "match_image": "https://www.tackshop.in/product-images/Pastel+Modern+Fashion+New+Collection+Pinterest+Pin+Post+%2839%29.png/1134286000004224445/1100x1100",
+      "coverage": 0.75
+    },
+    {
+      "slug": "freejump-spur-one-disc-black-pearl",
+      "name": "Freejump Spur'One-Disc/Black/Pearl",
+      "match_name": "Freejump Spur'One",
+      "match_image": "https://www.tackshop.in/product-images/Pastel+Modern+Fashion+New+Collection+Pinterest+Pin+Post+%2839%29.png/1134286000004224445/1100x1100",
+      "coverage": 0.5
+    },
+    {
+      "slug": "freejump-spur-one-extra-long",
+      "name": "Freejump Spur'One-Extra Long",
+      "match_name": "Freejump Spur'One",
+      "match_image": "https://www.tackshop.in/product-images/Pastel+Modern+Fashion+New+Collection+Pinterest+Pin+Post+%2839%29.png/1134286000004224445/1100x1100",
+      "coverage": 0.6
+    },
+    {
+      "slug": "freejump-spur-one-extra-long-black-pearl",
+      "name": "Freejump Spur'One-Extra Long/Black/Pearl",
+      "match_name": "Freejump Spur'One",
+      "match_image": "https://www.tackshop.in/product-images/Pastel+Modern+Fashion+New+Collection+Pinterest+Pin+Post+%2839%29.png/1134286000004224445/1100x1100",
+      "coverage": 0.429
+    },
+    {
+      "slug": "freejump-spur-one-hammer",
+      "name": "Freejump Spur'One-Hammer",
+      "match_name": "Freejump Spur'One",
+      "match_image": "https://www.tackshop.in/product-images/Pastel+Modern+Fashion+New+Collection+Pinterest+Pin+Post+%2839%29.png/1134286000004224445/1100x1100",
+      "coverage": 0.75
+    },
+    {
+      "slug": "freejump-spur-one-hammer-black-pearl",
+      "name": "Freejump Spur'One-Hammer/Black/Pearl",
+      "match_name": "Freejump Spur'One",
+      "match_image": "https://www.tackshop.in/product-images/Pastel+Modern+Fashion+New+Collection+Pinterest+Pin+Post+%2839%29.png/1134286000004224445/1100x1100",
+      "coverage": 0.5
+    },
+    {
+      "slug": "freejump-spur-one-prince-of-wales",
+      "name": "Freejump Spur'One-Prince Of Wales",
+      "match_name": "Freejump Spur'One",
+      "match_image": "https://www.tackshop.in/product-images/Pastel+Modern+Fashion+New+Collection+Pinterest+Pin+Post+%2839%29.png/1134286000004224445/1100x1100",
+      "coverage": 0.5
+    },
+    {
+      "slug": "freejump-spur-one-prince-of-wales-black-pearl",
+      "name": "Freejump Spur'One-Prince Of Wales/Black/Pearl",
+      "match_name": "Freejump Spur'One",
+      "match_image": "https://www.tackshop.in/product-images/Pastel+Modern+Fashion+New+Collection+Pinterest+Pin+Post+%2839%29.png/1134286000004224445/1100x1100",
+      "coverage": 0.375
+    },
+    {
+      "slug": "freejump-spur-one-round-end",
+      "name": "Freejump Spur'One-Round End",
+      "match_name": "Freejump Spur'One",
+      "match_image": "https://www.tackshop.in/product-images/Pastel+Modern+Fashion+New+Collection+Pinterest+Pin+Post+%2839%29.png/1134286000004224445/1100x1100",
+      "coverage": 0.6
+    },
+    {
+      "slug": "freejump-spur-one-round-end-black-pearl",
+      "name": "Freejump Spur'One-Round End/Black/Pearl",
+      "match_name": "Freejump Spur'One",
+      "match_image": "https://www.tackshop.in/product-images/Pastel+Modern+Fashion+New+Collection+Pinterest+Pin+Post+%2839%29.png/1134286000004224445/1100x1100",
+      "coverage": 0.429
+    },
+    {
+      "slug": "freejump-stirrups-air-s-dressage-edition-gold-dressage-edition-angled-eye",
+      "name": "Freejump Stirrups - Air's Dressage Edition-Gold Dressage Edition/Angled Eye",
+      "match_name": "Freejump Stirrups - Air's Dressage Edition",
+      "match_image": "https://www.tackshop.in/product-images/Pastel+Modern+Fashion+New+Collection+Pinterest+Pin+Post+-+2025-04-07T234218.056.png/1134286000003545974/1100x1100",
+      "coverage": 0.545
+    },
+    {
+      "slug": "freejump-stirrups-air-s-dressage-edition-gold-dressage-edition-straight-eye",
+      "name": "Freejump Stirrups - Air's Dressage Edition-Gold Dressage Edition/Straight Eye",
+      "match_name": "Freejump Stirrups - Air's Dressage Edition",
+      "match_image": "https://www.tackshop.in/product-images/Pastel+Modern+Fashion+New+Collection+Pinterest+Pin+Post+-+2025-04-07T234218.056.png/1134286000003545974/1100x1100",
+      "coverage": 0.545
+    },
+    {
+      "slug": "freejump-stirrups-air-s-dressage-edition-silver-dressage-edition-angled-eye",
+      "name": "Freejump Stirrups - Air's Dressage Edition-Silver Dressage Edition/Angled Eye",
+      "match_name": "Freejump Stirrups - Air's Dressage Edition",
+      "match_image": "https://www.tackshop.in/product-images/Pastel+Modern+Fashion+New+Collection+Pinterest+Pin+Post+-+2025-04-07T234218.056.png/1134286000003545974/1100x1100",
+      "coverage": 0.545
+    },
+    {
+      "slug": "freejump-stirrups-air-s-dressage-edition-silver-dressage-edition-straight-eye",
+      "name": "Freejump Stirrups - Air's Dressage Edition-Silver Dressage Edition/Straight Eye",
+      "match_name": "Freejump Stirrups - Air's Dressage Edition",
+      "match_image": "https://www.tackshop.in/product-images/Pastel+Modern+Fashion+New+Collection+Pinterest+Pin+Post+-+2025-04-07T234218.056.png/1134286000003545974/1100x1100",
+      "coverage": 0.545
+    },
+    {
+      "slug": "freejump-technical-horse-riding-socks",
+      "name": "Freejump Technical Horse-Riding Socks",
+      "match_name": "Freejump Technical Horse-Riding Socks",
+      "match_image": "https://www.tackshop.in/product-images/Freejump+Technical+Horse+Riding+Socks+%282%29.png/1134286000008523627/1100x1100",
+      "coverage": 1.0
+    },
+    {
+      "slug": "freejump-voronoi-ear-foams",
+      "name": "Freejump Voronoi Ear Foams",
+      "match_name": "Freejump Voronoi Ear Foams",
+      "match_image": "https://www.tackshop.in/product-images/Freejump+Voronoi+Ear+Foams.png/1134286000005080635/1100x1100",
+      "coverage": 1.0
+    },
+    {
+      "slug": "freejump-voronoi-lining-l60",
+      "name": "Freejump Voronoi Lining-L60",
+      "match_name": "Freejump Voronoi Lining",
+      "match_image": "https://www.tackshop.in/product-images/Freejump+Voronoi+Helmet+Liner.png/1134286000005080702/1100x1100",
+      "coverage": 0.75
+    },
+    {
+      "slug": "freejump-voronoi-lining-l61",
+      "name": "Freejump Voronoi Lining-L61",
+      "match_name": "Freejump Voronoi Lining",
+      "match_image": "https://www.tackshop.in/product-images/Freejump+Voronoi+Helmet+Liner.png/1134286000005080702/1100x1100",
+      "coverage": 0.75
+    },
+    {
+      "slug": "freejump-voronoi-lining-l62",
+      "name": "Freejump Voronoi Lining-L62",
+      "match_name": "Freejump Voronoi Lining",
+      "match_image": "https://www.tackshop.in/product-images/Freejump+Voronoi+Helmet+Liner.png/1134286000005080702/1100x1100",
+      "coverage": 0.75
+    },
+    {
+      "slug": "freejump-voronoi-lining-m56",
+      "name": "Freejump Voronoi Lining-M56",
+      "match_name": "Freejump Voronoi Lining",
+      "match_image": "https://www.tackshop.in/product-images/Freejump+Voronoi+Helmet+Liner.png/1134286000005080702/1100x1100",
+      "coverage": 0.75
+    },
+    {
+      "slug": "freejump-voronoi-lining-m57",
+      "name": "Freejump Voronoi Lining-M57",
+      "match_name": "Freejump Voronoi Lining",
+      "match_image": "https://www.tackshop.in/product-images/Freejump+Voronoi+Helmet+Liner.png/1134286000005080702/1100x1100",
+      "coverage": 0.75
+    },
+    {
+      "slug": "freejump-voronoi-lining-m58",
+      "name": "Freejump Voronoi Lining-M58",
+      "match_name": "Freejump Voronoi Lining",
+      "match_image": "https://www.tackshop.in/product-images/Freejump+Voronoi+Helmet+Liner.png/1134286000005080702/1100x1100",
+      "coverage": 0.75
+    },
+    {
+      "slug": "freejump-voronoi-lining-m59",
+      "name": "Freejump Voronoi Lining-M59",
+      "match_name": "Freejump Voronoi Lining",
+      "match_image": "https://www.tackshop.in/product-images/Freejump+Voronoi+Helmet+Liner.png/1134286000005080702/1100x1100",
+      "coverage": 0.75
+    },
+    {
+      "slug": "freejump-voronoi-lining-s52",
+      "name": "Freejump Voronoi Lining-S52",
+      "match_name": "Freejump Voronoi Lining",
+      "match_image": "https://www.tackshop.in/product-images/Freejump+Voronoi+Helmet+Liner.png/1134286000005080702/1100x1100",
+      "coverage": 0.75
+    },
+    {
+      "slug": "freejump-voronoi-lining-s53",
+      "name": "Freejump Voronoi Lining-S53",
+      "match_name": "Freejump Voronoi Lining",
+      "match_image": "https://www.tackshop.in/product-images/Freejump+Voronoi+Helmet+Liner.png/1134286000005080702/1100x1100",
+      "coverage": 0.75
+    },
+    {
+      "slug": "freejump-voronoi-lining-s54",
+      "name": "Freejump Voronoi Lining-S54",
+      "match_name": "Freejump Voronoi Lining",
+      "match_image": "https://www.tackshop.in/product-images/Freejump+Voronoi+Helmet+Liner.png/1134286000005080702/1100x1100",
+      "coverage": 0.75
+    },
+    {
+      "slug": "freejump-voronoi-lining-s55",
+      "name": "Freejump Voronoi Lining-S55",
+      "match_name": "Freejump Voronoi Lining",
+      "match_image": "https://www.tackshop.in/product-images/Freejump+Voronoi+Helmet+Liner.png/1134286000005080702/1100x1100",
+      "coverage": 0.75
+    },
+    {
+      "slug": "freejump-voronoi-lining-s56",
+      "name": "Freejump Voronoi Lining-S56",
+      "match_name": "Freejump Voronoi Lining",
+      "match_image": "https://www.tackshop.in/product-images/Freejump+Voronoi+Helmet+Liner.png/1134286000005080702/1100x1100",
+      "coverage": 0.75
+    }
+  ],
+  "fuzzy": [
+    {
+      "slug": "freejump-voronoi-helmet-with-temple-protection",
+      "name": "Freejump Voronoi Helmet With Temple Protection",
+      "match_name": "Freejump Voronoi Carbon Helmet With Temple Protection",
+      "match_image": "https://www.tackshop.in/product-images/Freejump+Voronoi+Helmet+-+Black.png/1134286000005072302/1100x1100",
+      "score": 0.88
+    },
+    {
+      "slug": "freejump-voronoi-temple-protection",
+      "name": "Freejump Voronoi Temple Protection",
+      "match_name": "Freejump Voronoi Carbon Temple Protection",
+      "match_image": "https://www.tackshop.in/product-images/Freejump+Voronoi+Temple+Protection+%282%29.png/1134286000005087696/1100x1100",
+      "score": 0.88
+    }
+  ]
+}
