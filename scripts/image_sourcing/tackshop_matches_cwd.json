@@ -1,0 +1,845 @@
+{
+  "prefix": [
+    {
+      "slug": "cwd-2gs-saddle-cover",
+      "name": "CWD 2GS Saddle Cover",
+      "match_name": "CWD 2GS Saddle Cover-Red",
+      "match_image": "https://www.tackshop.in/product-images/CWD+Saddle+Cover+-+02.png/1134286000004956565/1100x1100",
+      "coverage": 0.8
+    },
+    {
+      "slug": "cwd-breastplate-adjustable-bridge",
+      "name": "CWD Breastplate Adjustable Bridge",
+      "match_name": "CWD Breastplate Adjustable Bridge",
+      "match_image": "https://www.tackshop.in/product-images/Pastel+Modern+Fashion+New+Collection+Pinterest+Pin+Post+-+2025-04-18T002327.918.png/1134286000003777165/1100x1100",
+      "coverage": 1.0
+    },
+    {
+      "slug": "cwd-breastplate-adjustable-bridge-black-extra",
+      "name": "CWD Breastplate Adjustable Bridge - Black/Extra",
+      "match_name": "CWD Breastplate Adjustable Bridge",
+      "match_image": "https://www.tackshop.in/product-images/Pastel+Modern+Fashion+New+Collection+Pinterest+Pin+Post+-+2025-04-18T002327.918.png/1134286000003777165/1100x1100",
+      "coverage": 0.667
+    },
+    {
+      "slug": "cwd-breastplate-adjustable-bridge-brown-extra",
+      "name": "CWD Breastplate Adjustable Bridge - Brown/Extra",
+      "match_name": "CWD Breastplate Adjustable Bridge",
+      "match_image": "https://www.tackshop.in/product-images/Pastel+Modern+Fashion+New+Collection+Pinterest+Pin+Post+-+2025-04-18T002327.918.png/1134286000003777165/1100x1100",
+      "coverage": 0.667
+    },
+    {
+      "slug": "cwd-cap",
+      "name": "CWD Cap",
+      "match_name": "CWD Cap",
+      "match_image": "https://www.tackshop.in/product-images/Pastel+Modern+Fashion+New+Collection+Pinterest+Pin+Post+-+2025-04-17T175529.764.png/1134286000003761839/1100x1100",
+      "coverage": 1.0
+    },
+    {
+      "slug": "cwd-figure-8-bridle-anatomic",
+      "name": "CWD Figure 8 Bridle-Anatomic",
+      "match_name": "CWD Figure 8 Bridle",
+      "match_image": "https://www.tackshop.in/product-images/Pastel+Modern+Fashion+New+Collection+Pinterest+Pin+Post+-+2025-04-18T004446.554.png/1134286000003777483/1100x1100",
+      "coverage": 0.8
+    },
+    {
+      "slug": "cwd-figure-8-bridle-anatomic-fancy-stitching",
+      "name": "CWD Figure 8 Bridle-Anatomic Fancy Stitching",
+      "match_name": "CWD Figure 8 Bridle",
+      "match_image": "https://www.tackshop.in/product-images/Pastel+Modern+Fashion+New+Collection+Pinterest+Pin+Post+-+2025-04-18T004446.554.png/1134286000003777483/1100x1100",
+      "coverage": 0.571
+    },
+    {
+      "slug": "cwd-figure-8-bridle-anatomic-fancy-stitching-black-extra",
+      "name": "CWD Figure 8 Bridle-Anatomic Fancy Stitching-Black-Extra",
+      "match_name": "CWD Figure 8 Bridle",
+      "match_image": "https://www.tackshop.in/product-images/Pastel+Modern+Fashion+New+Collection+Pinterest+Pin+Post+-+2025-04-18T004446.554.png/1134286000003777483/1100x1100",
+      "coverage": 0.444
+    },
+    {
+      "slug": "cwd-figure-8-bridle-anatomic-fancy-stitching-brown-extra",
+      "name": "CWD Figure 8 Bridle-Anatomic Fancy Stitching-Brown-Extra",
+      "match_name": "CWD Figure 8 Bridle",
+      "match_image": "https://www.tackshop.in/product-images/Pastel+Modern+Fashion+New+Collection+Pinterest+Pin+Post+-+2025-04-18T004446.554.png/1134286000003777483/1100x1100",
+      "coverage": 0.444
+    },
+    {
+      "slug": "cwd-figure-8-bridle-anatomic-black-extra",
+      "name": "CWD Figure 8 Bridle-Anatomic-Black-Extra",
+      "match_name": "CWD Figure 8 Bridle",
+      "match_image": "https://www.tackshop.in/product-images/Pastel+Modern+Fashion+New+Collection+Pinterest+Pin+Post+-+2025-04-18T004446.554.png/1134286000003777483/1100x1100",
+      "coverage": 0.571
+    },
+    {
+      "slug": "cwd-figure-8-bridle-anatomic-brown-extra",
+      "name": "CWD Figure 8 Bridle-Anatomic-Brown-Extra",
+      "match_name": "CWD Figure 8 Bridle",
+      "match_image": "https://www.tackshop.in/product-images/Pastel+Modern+Fashion+New+Collection+Pinterest+Pin+Post+-+2025-04-18T004446.554.png/1134286000003777483/1100x1100",
+      "coverage": 0.571
+    },
+    {
+      "slug": "cwd-figure-8-bridle-fancy-stitching",
+      "name": "CWD Figure 8 Bridle-Fancy Stitching",
+      "match_name": "CWD Figure 8 Bridle",
+      "match_image": "https://www.tackshop.in/product-images/Pastel+Modern+Fashion+New+Collection+Pinterest+Pin+Post+-+2025-04-18T004446.554.png/1134286000003777483/1100x1100",
+      "coverage": 0.667
+    },
+    {
+      "slug": "cwd-figure-8-bridle-fancy-stitching-black-extra",
+      "name": "CWD Figure 8 Bridle-Fancy Stitching-Black-Extra",
+      "match_name": "CWD Figure 8 Bridle",
+      "match_image": "https://www.tackshop.in/product-images/Pastel+Modern+Fashion+New+Collection+Pinterest+Pin+Post+-+2025-04-18T004446.554.png/1134286000003777483/1100x1100",
+      "coverage": 0.5
+    },
+    {
+      "slug": "cwd-figure-8-bridle-fancy-stitching-brown-extra",
+      "name": "CWD Figure 8 Bridle-Fancy Stitching-Brown-Extra",
+      "match_name": "CWD Figure 8 Bridle",
+      "match_image": "https://www.tackshop.in/product-images/Pastel+Modern+Fashion+New+Collection+Pinterest+Pin+Post+-+2025-04-18T004446.554.png/1134286000003777483/1100x1100",
+      "coverage": 0.5
+    },
+    {
+      "slug": "cwd-figure-8-bridle-regular",
+      "name": "CWD Figure 8 Bridle-Regular",
+      "match_name": "CWD Figure 8 Bridle",
+      "match_image": "https://www.tackshop.in/product-images/Pastel+Modern+Fashion+New+Collection+Pinterest+Pin+Post+-+2025-04-18T004446.554.png/1134286000003777483/1100x1100",
+      "coverage": 0.8
+    },
+    {
+      "slug": "cwd-figure-8-bridle-regular-black-extra",
+      "name": "CWD Figure 8 Bridle-Regular-Black-Extra",
+      "match_name": "CWD Figure 8 Bridle",
+      "match_image": "https://www.tackshop.in/product-images/Pastel+Modern+Fashion+New+Collection+Pinterest+Pin+Post+-+2025-04-18T004446.554.png/1134286000003777483/1100x1100",
+      "coverage": 0.571
+    },
+    {
+      "slug": "cwd-figure-8-bridle-regular-brown-extra",
+      "name": "CWD Figure 8 Bridle-Regular-Brown-Extra",
+      "match_name": "CWD Figure 8 Bridle",
+      "match_image": "https://www.tackshop.in/product-images/Pastel+Modern+Fashion+New+Collection+Pinterest+Pin+Post+-+2025-04-18T004446.554.png/1134286000003777483/1100x1100",
+      "coverage": 0.571
+    },
+    {
+      "slug": "cwd-french-nose-band-bridle",
+      "name": "CWD French Nose Band Bridle",
+      "match_name": "CWD French Nose Band Bridle",
+      "match_image": "https://www.tackshop.in/product-images/Pastel+Modern+Fashion+New+Collection+Pinterest+Pin+Post+-+2025-04-18T091527.807.png/1134286000003783151/1100x1100",
+      "coverage": 1.0
+    },
+    {
+      "slug": "cwd-french-nose-band-bridle-anatomic",
+      "name": "CWD French Nose Band Bridle-Anatomic",
+      "match_name": "CWD French Nose Band Bridle",
+      "match_image": "https://www.tackshop.in/product-images/Pastel+Modern+Fashion+New+Collection+Pinterest+Pin+Post+-+2025-04-18T091527.807.png/1134286000003783151/1100x1100",
+      "coverage": 0.833
+    },
+    {
+      "slug": "cwd-french-nose-band-bridle-anatomic-fancy-stitching",
+      "name": "CWD French Nose Band Bridle-Anatomic Fancy Stitching",
+      "match_name": "CWD French Nose Band Bridle",
+      "match_image": "https://www.tackshop.in/product-images/Pastel+Modern+Fashion+New+Collection+Pinterest+Pin+Post+-+2025-04-18T091527.807.png/1134286000003783151/1100x1100",
+      "coverage": 0.625
+    },
+    {
+      "slug": "cwd-french-nose-band-bridle-anatomic-fancy-stitching-black-extra",
+      "name": "CWD French Nose Band Bridle-Anatomic Fancy Stitching-Black-Extra",
+      "match_name": "CWD French Nose Band Bridle",
+      "match_image": "https://www.tackshop.in/product-images/Pastel+Modern+Fashion+New+Collection+Pinterest+Pin+Post+-+2025-04-18T091527.807.png/1134286000003783151/1100x1100",
+      "coverage": 0.5
+    },
+    {
+      "slug": "cwd-french-nose-band-bridle-anatomic-fancy-stitching-brown-extra",
+      "name": "CWD French Nose Band Bridle-Anatomic Fancy Stitching-Brown-Extra",
+      "match_name": "CWD French Nose Band Bridle",
+      "match_image": "https://www.tackshop.in/product-images/Pastel+Modern+Fashion+New+Collection+Pinterest+Pin+Post+-+2025-04-18T091527.807.png/1134286000003783151/1100x1100",
+      "coverage": 0.5
+    },
+    {
+      "slug": "cwd-french-nose-band-bridle-anatomic-black-extra",
+      "name": "CWD French Nose Band Bridle-Anatomic-Black-Extra",
+      "match_name": "CWD French Nose Band Bridle",
+      "match_image": "https://www.tackshop.in/product-images/Pastel+Modern+Fashion+New+Collection+Pinterest+Pin+Post+-+2025-04-18T091527.807.png/1134286000003783151/1100x1100",
+      "coverage": 0.625
+    },
+    {
+      "slug": "cwd-french-nose-band-bridle-anatomic-brown-extra",
+      "name": "CWD French Nose Band Bridle-Anatomic-Brown-Extra",
+      "match_name": "CWD French Nose Band Bridle",
+      "match_image": "https://www.tackshop.in/product-images/Pastel+Modern+Fashion+New+Collection+Pinterest+Pin+Post+-+2025-04-18T091527.807.png/1134286000003783151/1100x1100",
+      "coverage": 0.625
+    },
+    {
+      "slug": "cwd-french-nose-band-bridle-regular",
+      "name": "CWD French Nose Band Bridle-Regular",
+      "match_name": "CWD French Nose Band Bridle",
+      "match_image": "https://www.tackshop.in/product-images/Pastel+Modern+Fashion+New+Collection+Pinterest+Pin+Post+-+2025-04-18T091527.807.png/1134286000003783151/1100x1100",
+      "coverage": 0.833
+    },
+    {
+      "slug": "cwd-french-nose-band-bridle-regular-black-extra",
+      "name": "CWD French Nose Band Bridle-Regular-Black-Extra",
+      "match_name": "CWD French Nose Band Bridle",
+      "match_image": "https://www.tackshop.in/product-images/Pastel+Modern+Fashion+New+Collection+Pinterest+Pin+Post+-+2025-04-18T091527.807.png/1134286000003783151/1100x1100",
+      "coverage": 0.625
+    },
+    {
+      "slug": "cwd-french-nose-band-bridle-regular-brown-extra",
+      "name": "CWD French Nose Band Bridle-Regular-Brown-Extra",
+      "match_name": "CWD French Nose Band Bridle",
+      "match_image": "https://www.tackshop.in/product-images/Pastel+Modern+Fashion+New+Collection+Pinterest+Pin+Post+-+2025-04-18T091527.807.png/1134286000003783151/1100x1100",
+      "coverage": 0.625
+    },
+    {
+      "slug": "cwd-glycerine-soap-250ml",
+      "name": "CWD Glycerine Soap-250ml",
+      "match_name": "CWD Glycerine Soap-250ml",
+      "match_image": "https://www.tackshop.in/product-images/Pastel+Modern+Fashion+New+Collection+Pinterest+Pin+Post+-+2025-04-17T174820.074.png/1134286000003761683/1100x1100",
+      "coverage": 1.0
+    },
+    {
+      "slug": "cwd-grooms-backpack",
+      "name": "CWD Grooms Backpack",
+      "match_name": "CWD Grooms Backpack",
+      "match_image": "https://www.tackshop.in/product-images/CWD+Groom%27s+Back+Pack.png/1134286000004956135/1100x1100",
+      "coverage": 1.0
+    },
+    {
+      "slug": "cwd-ipulse-girth",
+      "name": "CWD IPulse Girth",
+      "match_name": "CWD IPulse Girth",
+      "match_image": "https://www.tackshop.in/product-images/Pastel+Modern+Fashion+New+Collection+Pinterest+Pin+Post+-+2025-04-18T091204.316.png/1134286000003783183/1100x1100",
+      "coverage": 1.0
+    },
+    {
+      "slug": "cwd-jumping-ear-bonnet-black",
+      "name": "CWD Jumping Ear Bonnet - Black &",
+      "match_name": "CWD Jumping Ear Bonnet - Black &amp; Red",
+      "match_image": "https://www.tackshop.in/product-images/Pastel+Modern+Fashion+New+Collection+Pinterest+Pin+Post+-+2025-04-17T180643.602.png/1134286000003777009/1100x1100",
+      "coverage": 0.714
+    },
+    {
+      "slug": "cwd-leather-conditioner-250ml",
+      "name": "CWD Leather Conditioner-250ml",
+      "match_name": "CWD Leather Conditioner-250ml",
+      "match_image": "https://www.tackshop.in/product-images/Pastel+Modern+Fashion+New+Collection+Pinterest+Pin+Post+-+2025-04-17T180437.889.png/1134286000003777127/1100x1100",
+      "coverage": 1.0
+    },
+    {
+      "slug": "cwd-loop-leather-reins",
+      "name": "CWD Loop Leather Reins",
+      "match_name": "CWD Loop Leather Reins",
+      "match_image": "https://www.tackshop.in/product-images/Pastel+Modern+Fashion+New+Collection+Pinterest+Pin+Post+-+2025-04-18T010231.143.png/1134286000003777801/1100x1100",
+      "coverage": 1.0
+    },
+    {
+      "slug": "cwd-paris-black-cap",
+      "name": "CWD Paris Black Cap",
+      "match_name": "CWD Paris Black Cap",
+      "match_image": "https://www.tackshop.in/product-images/CWD+Paris+Black+Cap.png/1134286000005001009/1100x1100",
+      "coverage": 1.0
+    },
+    {
+      "slug": "cwd-rain-quarter-sheet",
+      "name": "CWD Rain Quarter Sheet",
+      "match_name": "CWD Rain Quarter Sheet",
+      "match_image": "https://www.tackshop.in/product-images/Pastel+Modern+Fashion+New+Collection+Pinterest+Pin+Post+-+2025-04-17T180503.021.png/1134286000003777059/1100x1100",
+      "coverage": 1.0
+    },
+    {
+      "slug": "cwd-saddle-care-kit",
+      "name": "CWD Saddle Care Kit",
+      "match_name": "CWD Saddle Care Kit/Red",
+      "match_image": "https://www.tackshop.in/product-images/Pastel+Modern+Fashion+New+Collection+Pinterest+Pin+Post+-+2025-04-17T180352.185.png/1134286000003777085/1100x1100",
+      "coverage": 0.8
+    },
+    {
+      "slug": "cwd-saddle-dynamick-2gs-x-tend-fc-bl-17-2c",
+      "name": "CWD Saddle Dynamick 2Gs X-Tend-FC BL-17-2C",
+      "match_name": "CWD Saddle Dynamick 2Gs X-Tend",
+      "match_image": "https://www.tackshop.in/product-images/Pastel+Modern+Fashion+New+Collection+Pinterest+Pin+Post+-+2025-04-18T004832.563.png/1134286000003777619/1100x1100",
+      "coverage": 0.6
+    },
+    {
+      "slug": "cwd-saddle-dynamick-2gs-x-tend-fc-bl-17-2l",
+      "name": "CWD Saddle Dynamick 2Gs X-Tend-FC BL-17-2L",
+      "match_name": "CWD Saddle Dynamick 2Gs X-Tend",
+      "match_image": "https://www.tackshop.in/product-images/Pastel+Modern+Fashion+New+Collection+Pinterest+Pin+Post+-+2025-04-18T004832.563.png/1134286000003777619/1100x1100",
+      "coverage": 0.6
+    },
+    {
+      "slug": "cwd-saddle-dynamick-2gs-x-tend-fc-bl-17-3c",
+      "name": "CWD Saddle Dynamick 2Gs X-Tend-FC BL-17-3C",
+      "match_name": "CWD Saddle Dynamick 2Gs X-Tend",
+      "match_image": "https://www.tackshop.in/product-images/Pastel+Modern+Fashion+New+Collection+Pinterest+Pin+Post+-+2025-04-18T004832.563.png/1134286000003777619/1100x1100",
+      "coverage": 0.6
+    },
+    {
+      "slug": "cwd-saddle-dynamick-2gs-x-tend-fc-bl-17-3l",
+      "name": "CWD Saddle Dynamick 2Gs X-Tend-FC BL-17-3L",
+      "match_name": "CWD Saddle Dynamick 2Gs X-Tend",
+      "match_image": "https://www.tackshop.in/product-images/Pastel+Modern+Fashion+New+Collection+Pinterest+Pin+Post+-+2025-04-18T004832.563.png/1134286000003777619/1100x1100",
+      "coverage": 0.6
+    },
+    {
+      "slug": "cwd-saddle-dynamick-2gs-x-tend-fc-bl-17-5-2c",
+      "name": "CWD Saddle Dynamick 2Gs X-Tend-FC BL-17.5-2C",
+      "match_name": "CWD Saddle Dynamick 2Gs X-Tend",
+      "match_image": "https://www.tackshop.in/product-images/Pastel+Modern+Fashion+New+Collection+Pinterest+Pin+Post+-+2025-04-18T004832.563.png/1134286000003777619/1100x1100",
+      "coverage": 0.545
+    },
+    {
+      "slug": "cwd-saddle-dynamick-2gs-x-tend-fc-bl-17-5-2l",
+      "name": "CWD Saddle Dynamick 2Gs X-Tend-FC BL-17.5-2L",
+      "match_name": "CWD Saddle Dynamick 2Gs X-Tend",
+      "match_image": "https://www.tackshop.in/product-images/Pastel+Modern+Fashion+New+Collection+Pinterest+Pin+Post+-+2025-04-18T004832.563.png/1134286000003777619/1100x1100",
+      "coverage": 0.545
+    },
+    {
+      "slug": "cwd-saddle-dynamick-2gs-x-tend-fc-bl-17-5-3c",
+      "name": "CWD Saddle Dynamick 2Gs X-Tend-FC BL-17.5-3C",
+      "match_name": "CWD Saddle Dynamick 2Gs X-Tend",
+      "match_image": "https://www.tackshop.in/product-images/Pastel+Modern+Fashion+New+Collection+Pinterest+Pin+Post+-+2025-04-18T004832.563.png/1134286000003777619/1100x1100",
+      "coverage": 0.545
+    },
+    {
+      "slug": "cwd-saddle-dynamick-2gs-x-tend-fc-bl-17-5-3l",
+      "name": "CWD Saddle Dynamick 2Gs X-Tend-FC BL-17.5-3L",
+      "match_name": "CWD Saddle Dynamick 2Gs X-Tend",
+      "match_image": "https://www.tackshop.in/product-images/Pastel+Modern+Fashion+New+Collection+Pinterest+Pin+Post+-+2025-04-18T004832.563.png/1134286000003777619/1100x1100",
+      "coverage": 0.545
+    },
+    {
+      "slug": "cwd-saddle-dynamick-2gs-x-tend-fc-bl-18-2c",
+      "name": "CWD Saddle Dynamick 2Gs X-Tend-FC BL-18-2C",
+      "match_name": "CWD Saddle Dynamick 2Gs X-Tend",
+      "match_image": "https://www.tackshop.in/product-images/Pastel+Modern+Fashion+New+Collection+Pinterest+Pin+Post+-+2025-04-18T004832.563.png/1134286000003777619/1100x1100",
+      "coverage": 0.6
+    },
+    {
+      "slug": "cwd-saddle-dynamick-2gs-x-tend-fc-bl-18-2l",
+      "name": "CWD Saddle Dynamick 2Gs X-Tend-FC BL-18-2L",
+      "match_name": "CWD Saddle Dynamick 2Gs X-Tend",
+      "match_image": "https://www.tackshop.in/product-images/Pastel+Modern+Fashion+New+Collection+Pinterest+Pin+Post+-+2025-04-18T004832.563.png/1134286000003777619/1100x1100",
+      "coverage": 0.6
+    },
+    {
+      "slug": "cwd-saddle-dynamick-2gs-x-tend-fc-bl-18-3c",
+      "name": "CWD Saddle Dynamick 2Gs X-Tend-FC BL-18-3C",
+      "match_name": "CWD Saddle Dynamick 2Gs X-Tend",
+      "match_image": "https://www.tackshop.in/product-images/Pastel+Modern+Fashion+New+Collection+Pinterest+Pin+Post+-+2025-04-18T004832.563.png/1134286000003777619/1100x1100",
+      "coverage": 0.6
+    },
+    {
+      "slug": "cwd-saddle-dynamick-2gs-x-tend-fc-bl-18-3l",
+      "name": "CWD Saddle Dynamick 2Gs X-Tend-FC BL-18-3L",
+      "match_name": "CWD Saddle Dynamick 2Gs X-Tend",
+      "match_image": "https://www.tackshop.in/product-images/Pastel+Modern+Fashion+New+Collection+Pinterest+Pin+Post+-+2025-04-18T004832.563.png/1134286000003777619/1100x1100",
+      "coverage": 0.6
+    },
+    {
+      "slug": "cwd-saddle-dynamick-2gs-x-tend-fc-br-17-2c",
+      "name": "CWD Saddle Dynamick 2Gs X-Tend-FC BR-17-2C",
+      "match_name": "CWD Saddle Dynamick 2Gs X-Tend",
+      "match_image": "https://www.tackshop.in/product-images/Pastel+Modern+Fashion+New+Collection+Pinterest+Pin+Post+-+2025-04-18T004832.563.png/1134286000003777619/1100x1100",
+      "coverage": 0.6
+    },
+    {
+      "slug": "cwd-saddle-dynamick-2gs-x-tend-fc-br-17-2l",
+      "name": "CWD Saddle Dynamick 2Gs X-Tend-FC BR-17-2L",
+      "match_name": "CWD Saddle Dynamick 2Gs X-Tend",
+      "match_image": "https://www.tackshop.in/product-images/Pastel+Modern+Fashion+New+Collection+Pinterest+Pin+Post+-+2025-04-18T004832.563.png/1134286000003777619/1100x1100",
+      "coverage": 0.6
+    },
+    {
+      "slug": "cwd-saddle-dynamick-2gs-x-tend-fc-br-17-3c",
+      "name": "CWD Saddle Dynamick 2Gs X-Tend-FC BR-17-3C",
+      "match_name": "CWD Saddle Dynamick 2Gs X-Tend",
+      "match_image": "https://www.tackshop.in/product-images/Pastel+Modern+Fashion+New+Collection+Pinterest+Pin+Post+-+2025-04-18T004832.563.png/1134286000003777619/1100x1100",
+      "coverage": 0.6
+    },
+    {
+      "slug": "cwd-saddle-dynamick-2gs-x-tend-fc-br-17-3l",
+      "name": "CWD Saddle Dynamick 2Gs X-Tend-FC BR-17-3L",
+      "match_name": "CWD Saddle Dynamick 2Gs X-Tend",
+      "match_image": "https://www.tackshop.in/product-images/Pastel+Modern+Fashion+New+Collection+Pinterest+Pin+Post+-+2025-04-18T004832.563.png/1134286000003777619/1100x1100",
+      "coverage": 0.6
+    },
+    {
+      "slug": "cwd-saddle-dynamick-2gs-x-tend-fc-br-17-5-2c",
+      "name": "CWD Saddle Dynamick 2Gs X-Tend-FC BR-17.5-2C",
+      "match_name": "CWD Saddle Dynamick 2Gs X-Tend",
+      "match_image": "https://www.tackshop.in/product-images/Pastel+Modern+Fashion+New+Collection+Pinterest+Pin+Post+-+2025-04-18T004832.563.png/1134286000003777619/1100x1100",
+      "coverage": 0.545
+    },
+    {
+      "slug": "cwd-saddle-dynamick-2gs-x-tend-fc-br-17-5-2l",
+      "name": "CWD Saddle Dynamick 2Gs X-Tend-FC BR-17.5-2L",
+      "match_name": "CWD Saddle Dynamick 2Gs X-Tend",
+      "match_image": "https://www.tackshop.in/product-images/Pastel+Modern+Fashion+New+Collection+Pinterest+Pin+Post+-+2025-04-18T004832.563.png/1134286000003777619/1100x1100",
+      "coverage": 0.545
+    },
+    {
+      "slug": "cwd-saddle-dynamick-2gs-x-tend-fc-br-17-5-3c",
+      "name": "CWD Saddle Dynamick 2Gs X-Tend-FC BR-17.5-3C",
+      "match_name": "CWD Saddle Dynamick 2Gs X-Tend",
+      "match_image": "https://www.tackshop.in/product-images/Pastel+Modern+Fashion+New+Collection+Pinterest+Pin+Post+-+2025-04-18T004832.563.png/1134286000003777619/1100x1100",
+      "coverage": 0.545
+    },
+    {
+      "slug": "cwd-saddle-dynamick-2gs-x-tend-fc-br-17-5-3l",
+      "name": "CWD Saddle Dynamick 2Gs X-Tend-FC BR-17.5-3L",
+      "match_name": "CWD Saddle Dynamick 2Gs X-Tend",
+      "match_image": "https://www.tackshop.in/product-images/Pastel+Modern+Fashion+New+Collection+Pinterest+Pin+Post+-+2025-04-18T004832.563.png/1134286000003777619/1100x1100",
+      "coverage": 0.545
+    },
+    {
+      "slug": "cwd-saddle-dynamick-2gs-x-tend-fc-br-18-2c",
+      "name": "CWD Saddle Dynamick 2Gs X-Tend-FC BR-18-2C",
+      "match_name": "CWD Saddle Dynamick 2Gs X-Tend",
+      "match_image": "https://www.tackshop.in/product-images/Pastel+Modern+Fashion+New+Collection+Pinterest+Pin+Post+-+2025-04-18T004832.563.png/1134286000003777619/1100x1100",
+      "coverage": 0.6
+    },
+    {
+      "slug": "cwd-saddle-dynamick-2gs-x-tend-fc-br-18-2l",
+      "name": "CWD Saddle Dynamick 2Gs X-Tend-FC BR-18-2L",
+      "match_name": "CWD Saddle Dynamick 2Gs X-Tend",
+      "match_image": "https://www.tackshop.in/product-images/Pastel+Modern+Fashion+New+Collection+Pinterest+Pin+Post+-+2025-04-18T004832.563.png/1134286000003777619/1100x1100",
+      "coverage": 0.6
+    },
+    {
+      "slug": "cwd-saddle-dynamick-2gs-x-tend-fc-br-18-3c",
+      "name": "CWD Saddle Dynamick 2Gs X-Tend-FC BR-18-3C",
+      "match_name": "CWD Saddle Dynamick 2Gs X-Tend",
+      "match_image": "https://www.tackshop.in/product-images/Pastel+Modern+Fashion+New+Collection+Pinterest+Pin+Post+-+2025-04-18T004832.563.png/1134286000003777619/1100x1100",
+      "coverage": 0.6
+    },
+    {
+      "slug": "cwd-saddle-dynamick-2gs-x-tend-fc-br-18-3l",
+      "name": "CWD Saddle Dynamick 2Gs X-Tend-FC BR-18-3L",
+      "match_name": "CWD Saddle Dynamick 2Gs X-Tend",
+      "match_image": "https://www.tackshop.in/product-images/Pastel+Modern+Fashion+New+Collection+Pinterest+Pin+Post+-+2025-04-18T004832.563.png/1134286000003777619/1100x1100",
+      "coverage": 0.6
+    },
+    {
+      "slug": "cwd-saddle-dynamick-2gs-x-tend-gc-bl-17-2c",
+      "name": "CWD Saddle Dynamick 2Gs X-Tend-GC BL-17-2C",
+      "match_name": "CWD Saddle Dynamick 2Gs X-Tend",
+      "match_image": "https://www.tackshop.in/product-images/Pastel+Modern+Fashion+New+Collection+Pinterest+Pin+Post+-+2025-04-18T004832.563.png/1134286000003777619/1100x1100",
+      "coverage": 0.6
+    },
+    {
+      "slug": "cwd-saddle-dynamick-2gs-x-tend-gc-bl-17-2l",
+      "name": "CWD Saddle Dynamick 2Gs X-Tend-GC BL-17-2L",
+      "match_name": "CWD Saddle Dynamick 2Gs X-Tend",
+      "match_image": "https://www.tackshop.in/product-images/Pastel+Modern+Fashion+New+Collection+Pinterest+Pin+Post+-+2025-04-18T004832.563.png/1134286000003777619/1100x1100",
+      "coverage": 0.6
+    },
+    {
+      "slug": "cwd-saddle-dynamick-2gs-x-tend-gc-bl-17-3c",
+      "name": "CWD Saddle Dynamick 2Gs X-Tend-GC BL-17-3C",
+      "match_name": "CWD Saddle Dynamick 2Gs X-Tend",
+      "match_image": "https://www.tackshop.in/product-images/Pastel+Modern+Fashion+New+Collection+Pinterest+Pin+Post+-+2025-04-18T004832.563.png/1134286000003777619/1100x1100",
+      "coverage": 0.6
+    },
+    {
+      "slug": "cwd-saddle-dynamick-2gs-x-tend-gc-bl-17-3l",
+      "name": "CWD Saddle Dynamick 2Gs X-Tend-GC BL-17-3L",
+      "match_name": "CWD Saddle Dynamick 2Gs X-Tend",
+      "match_image": "https://www.tackshop.in/product-images/Pastel+Modern+Fashion+New+Collection+Pinterest+Pin+Post+-+2025-04-18T004832.563.png/1134286000003777619/1100x1100",
+      "coverage": 0.6
+    },
+    {
+      "slug": "cwd-saddle-dynamick-2gs-x-tend-gc-bl-17-5-2c",
+      "name": "CWD Saddle Dynamick 2Gs X-Tend-GC BL-17.5-2C",
+      "match_name": "CWD Saddle Dynamick 2Gs X-Tend",
+      "match_image": "https://www.tackshop.in/product-images/Pastel+Modern+Fashion+New+Collection+Pinterest+Pin+Post+-+2025-04-18T004832.563.png/1134286000003777619/1100x1100",
+      "coverage": 0.545
+    },
+    {
+      "slug": "cwd-saddle-dynamick-2gs-x-tend-gc-bl-17-5-2l",
+      "name": "CWD Saddle Dynamick 2Gs X-Tend-GC BL-17.5-2L",
+      "match_name": "CWD Saddle Dynamick 2Gs X-Tend",
+      "match_image": "https://www.tackshop.in/product-images/Pastel+Modern+Fashion+New+Collection+Pinterest+Pin+Post+-+2025-04-18T004832.563.png/1134286000003777619/1100x1100",
+      "coverage": 0.545
+    },
+    {
+      "slug": "cwd-saddle-dynamick-2gs-x-tend-gc-bl-17-5-3c",
+      "name": "CWD Saddle Dynamick 2Gs X-Tend-GC BL-17.5-3C",
+      "match_name": "CWD Saddle Dynamick 2Gs X-Tend",
+      "match_image": "https://www.tackshop.in/product-images/Pastel+Modern+Fashion+New+Collection+Pinterest+Pin+Post+-+2025-04-18T004832.563.png/1134286000003777619/1100x1100",
+      "coverage": 0.545
+    },
+    {
+      "slug": "cwd-saddle-dynamick-2gs-x-tend-gc-bl-17-5-3l",
+      "name": "CWD Saddle Dynamick 2Gs X-Tend-GC BL-17.5-3L",
+      "match_name": "CWD Saddle Dynamick 2Gs X-Tend",
+      "match_image": "https://www.tackshop.in/product-images/Pastel+Modern+Fashion+New+Collection+Pinterest+Pin+Post+-+2025-04-18T004832.563.png/1134286000003777619/1100x1100",
+      "coverage": 0.545
+    },
+    {
+      "slug": "cwd-saddle-dynamick-2gs-x-tend-gc-bl-18-2c",
+      "name": "CWD Saddle Dynamick 2Gs X-Tend-GC BL-18-2C",
+      "match_name": "CWD Saddle Dynamick 2Gs X-Tend",
+      "match_image": "https://www.tackshop.in/product-images/Pastel+Modern+Fashion+New+Collection+Pinterest+Pin+Post+-+2025-04-18T004832.563.png/1134286000003777619/1100x1100",
+      "coverage": 0.6
+    },
+    {
+      "slug": "cwd-saddle-dynamick-2gs-x-tend-gc-bl-18-2l",
+      "name": "CWD Saddle Dynamick 2Gs X-Tend-GC BL-18-2L",
+      "match_name": "CWD Saddle Dynamick 2Gs X-Tend",
+      "match_image": "https://www.tackshop.in/product-images/Pastel+Modern+Fashion+New+Collection+Pinterest+Pin+Post+-+2025-04-18T004832.563.png/1134286000003777619/1100x1100",
+      "coverage": 0.6
+    },
+    {
+      "slug": "cwd-saddle-dynamick-2gs-x-tend-gc-bl-18-3c",
+      "name": "CWD Saddle Dynamick 2Gs X-Tend-GC BL-18-3C",
+      "match_name": "CWD Saddle Dynamick 2Gs X-Tend",
+      "match_image": "https://www.tackshop.in/product-images/Pastel+Modern+Fashion+New+Collection+Pinterest+Pin+Post+-+2025-04-18T004832.563.png/1134286000003777619/1100x1100",
+      "coverage": 0.6
+    },
+    {
+      "slug": "cwd-saddle-dynamick-2gs-x-tend-gc-bl-18-3l",
+      "name": "CWD Saddle Dynamick 2Gs X-Tend-GC BL-18-3L",
+      "match_name": "CWD Saddle Dynamick 2Gs X-Tend",
+      "match_image": "https://www.tackshop.in/product-images/Pastel+Modern+Fashion+New+Collection+Pinterest+Pin+Post+-+2025-04-18T004832.563.png/1134286000003777619/1100x1100",
+      "coverage": 0.6
+    },
+    {
+      "slug": "cwd-saddle-dynamick-2gs-x-tend-gc-br-17-2l",
+      "name": "CWD Saddle Dynamick 2Gs X-Tend-GC BR-17-2L",
+      "match_name": "CWD Saddle Dynamick 2Gs X-Tend",
+      "match_image": "https://www.tackshop.in/product-images/Pastel+Modern+Fashion+New+Collection+Pinterest+Pin+Post+-+2025-04-18T004832.563.png/1134286000003777619/1100x1100",
+      "coverage": 0.6
+    },
+    {
+      "slug": "cwd-saddle-dynamick-2gs-x-tend-gc-br-17-3c",
+      "name": "CWD Saddle Dynamick 2Gs X-Tend-GC BR-17-3C",
+      "match_name": "CWD Saddle Dynamick 2Gs X-Tend",
+      "match_image": "https://www.tackshop.in/product-images/Pastel+Modern+Fashion+New+Collection+Pinterest+Pin+Post+-+2025-04-18T004832.563.png/1134286000003777619/1100x1100",
+      "coverage": 0.6
+    },
+    {
+      "slug": "cwd-saddle-dynamick-2gs-x-tend-gc-br-17-3l",
+      "name": "CWD Saddle Dynamick 2Gs X-Tend-GC BR-17-3L",
+      "match_name": "CWD Saddle Dynamick 2Gs X-Tend",
+      "match_image": "https://www.tackshop.in/product-images/Pastel+Modern+Fashion+New+Collection+Pinterest+Pin+Post+-+2025-04-18T004832.563.png/1134286000003777619/1100x1100",
+      "coverage": 0.6
+    },
+    {
+      "slug": "cwd-saddle-dynamick-2gs-x-tend-gc-br-17-5-2c",
+      "name": "CWD Saddle Dynamick 2Gs X-Tend-GC BR-17.5-2C",
+      "match_name": "CWD Saddle Dynamick 2Gs X-Tend",
+      "match_image": "https://www.tackshop.in/product-images/Pastel+Modern+Fashion+New+Collection+Pinterest+Pin+Post+-+2025-04-18T004832.563.png/1134286000003777619/1100x1100",
+      "coverage": 0.545
+    },
+    {
+      "slug": "cwd-saddle-dynamick-2gs-x-tend-gc-br-17-5-2l",
+      "name": "CWD Saddle Dynamick 2Gs X-Tend-GC BR-17.5-2L",
+      "match_name": "CWD Saddle Dynamick 2Gs X-Tend",
+      "match_image": "https://www.tackshop.in/product-images/Pastel+Modern+Fashion+New+Collection+Pinterest+Pin+Post+-+2025-04-18T004832.563.png/1134286000003777619/1100x1100",
+      "coverage": 0.545
+    },
+    {
+      "slug": "cwd-saddle-dynamick-2gs-x-tend-gc-br-17-5-3c",
+      "name": "CWD Saddle Dynamick 2Gs X-Tend-GC BR-17.5-3C",
+      "match_name": "CWD Saddle Dynamick 2Gs X-Tend",
+      "match_image": "https://www.tackshop.in/product-images/Pastel+Modern+Fashion+New+Collection+Pinterest+Pin+Post+-+2025-04-18T004832.563.png/1134286000003777619/1100x1100",
+      "coverage": 0.545
+    },
+    {
+      "slug": "cwd-saddle-dynamick-2gs-x-tend-gc-br-17-5-3l",
+      "name": "CWD Saddle Dynamick 2Gs X-Tend-GC BR-17.5-3L",
+      "match_name": "CWD Saddle Dynamick 2Gs X-Tend",
+      "match_image": "https://www.tackshop.in/product-images/Pastel+Modern+Fashion+New+Collection+Pinterest+Pin+Post+-+2025-04-18T004832.563.png/1134286000003777619/1100x1100",
+      "coverage": 0.545
+    },
+    {
+      "slug": "cwd-saddle-dynamick-2gs-x-tend-gc-br-18-2c",
+      "name": "CWD Saddle Dynamick 2Gs X-Tend-GC BR-18-2C",
+      "match_name": "CWD Saddle Dynamick 2Gs X-Tend",
+      "match_image": "https://www.tackshop.in/product-images/Pastel+Modern+Fashion+New+Collection+Pinterest+Pin+Post+-+2025-04-18T004832.563.png/1134286000003777619/1100x1100",
+      "coverage": 0.6
+    },
+    {
+      "slug": "cwd-saddle-dynamick-2gs-x-tend-gc-br-18-2l",
+      "name": "CWD Saddle Dynamick 2Gs X-Tend-GC BR-18-2L",
+      "match_name": "CWD Saddle Dynamick 2Gs X-Tend",
+      "match_image": "https://www.tackshop.in/product-images/Pastel+Modern+Fashion+New+Collection+Pinterest+Pin+Post+-+2025-04-18T004832.563.png/1134286000003777619/1100x1100",
+      "coverage": 0.6
+    },
+    {
+      "slug": "cwd-saddle-dynamick-2gs-x-tend-gc-br-18-3c",
+      "name": "CWD Saddle Dynamick 2Gs X-Tend-GC BR-18-3C",
+      "match_name": "CWD Saddle Dynamick 2Gs X-Tend",
+      "match_image": "https://www.tackshop.in/product-images/Pastel+Modern+Fashion+New+Collection+Pinterest+Pin+Post+-+2025-04-18T004832.563.png/1134286000003777619/1100x1100",
+      "coverage": 0.6
+    },
+    {
+      "slug": "cwd-saddle-dynamick-2gs-x-tend-gc-br-18-3l",
+      "name": "CWD Saddle Dynamick 2Gs X-Tend-GC BR-18-3L",
+      "match_name": "CWD Saddle Dynamick 2Gs X-Tend",
+      "match_image": "https://www.tackshop.in/product-images/Pastel+Modern+Fashion+New+Collection+Pinterest+Pin+Post+-+2025-04-18T004832.563.png/1134286000003777619/1100x1100",
+      "coverage": 0.6
+    },
+    {
+      "slug": "cwd-saddle-pad",
+      "name": "CWD Saddle Pad",
+      "match_name": "CWD Saddle Pad-Full/Black&amp;Red",
+      "match_image": "https://www.tackshop.in/product-images/Pastel+Modern+Fashion+New+Collection+Pinterest+Pin+Post+-+2025-04-17T180252.239.png/1134286000003777097/1100x1100",
+      "coverage": 0.429
+    },
+    {
+      "slug": "cwd-softshell-jacket-unisex",
+      "name": "CWD Softshell Jacket Unisex",
+      "match_name": "CWD Softshell Jacket Unisex",
+      "match_image": "https://www.tackshop.in/product-images/CWD+Soft-Shell+Jacket+%284%29.png/1134286000004954494/1100x1100",
+      "coverage": 1.0
+    },
+    {
+      "slug": "cwd-spur-covers",
+      "name": "CWD Spur Covers",
+      "match_name": "CWD Spur Covers",
+      "match_image": "https://www.tackshop.in/product-images/Pastel+Modern+Fashion+New+Collection+Pinterest+Pin+Post+-+2025-04-18T092011.901+-+Copy.png/1134286000003783229/1100x1100",
+      "coverage": 1.0
+    },
+    {
+      "slug": "cwd-spur-covers-dark",
+      "name": "CWD Spur Covers-Dark",
+      "match_name": "CWD Spur Covers",
+      "match_image": "https://www.tackshop.in/product-images/Pastel+Modern+Fashion+New+Collection+Pinterest+Pin+Post+-+2025-04-18T092011.901+-+Copy.png/1134286000003783229/1100x1100",
+      "coverage": 0.75
+    },
+    {
+      "slug": "cwd-spur-covers-emerald",
+      "name": "CWD Spur Covers-Emerald",
+      "match_name": "CWD Spur Covers",
+      "match_image": "https://www.tackshop.in/product-images/Pastel+Modern+Fashion+New+Collection+Pinterest+Pin+Post+-+2025-04-18T092011.901+-+Copy.png/1134286000003783229/1100x1100",
+      "coverage": 0.75
+    },
+    {
+      "slug": "cwd-spur-covers-fuschia",
+      "name": "CWD Spur Covers-Fuschia",
+      "match_name": "CWD Spur Covers",
+      "match_image": "https://www.tackshop.in/product-images/Pastel+Modern+Fashion+New+Collection+Pinterest+Pin+Post+-+2025-04-18T092011.901+-+Copy.png/1134286000003783229/1100x1100",
+      "coverage": 0.75
+    },
+    {
+      "slug": "cwd-stirrup-leathers-nylon-lined-black-105cm",
+      "name": "CWD Stirrup Leathers Nylon Lined-Black-105cm",
+      "match_name": "CWD Stirrup Leathers Nylon Lined",
+      "match_image": "https://www.tackshop.in/product-images/Pastel+Modern+Fashion+New+Collection+Pinterest+Pin+Post+-+2025-04-18T010014.589.png/1134286000003777857/1100x1100",
+      "coverage": 0.714
+    },
+    {
+      "slug": "cwd-stirrup-leathers-nylon-lined-black-110cm",
+      "name": "CWD Stirrup Leathers Nylon Lined-Black-110cm",
+      "match_name": "CWD Stirrup Leathers Nylon Lined",
+      "match_image": "https://www.tackshop.in/product-images/Pastel+Modern+Fashion+New+Collection+Pinterest+Pin+Post+-+2025-04-18T010014.589.png/1134286000003777857/1100x1100",
+      "coverage": 0.714
+    },
+    {
+      "slug": "cwd-stirrup-leathers-nylon-lined-black-115cm",
+      "name": "CWD Stirrup Leathers Nylon Lined-Black-115cm",
+      "match_name": "CWD Stirrup Leathers Nylon Lined",
+      "match_image": "https://www.tackshop.in/product-images/Pastel+Modern+Fashion+New+Collection+Pinterest+Pin+Post+-+2025-04-18T010014.589.png/1134286000003777857/1100x1100",
+      "coverage": 0.714
+    },
+    {
+      "slug": "cwd-stirrup-leathers-nylon-lined-black-120cm",
+      "name": "CWD Stirrup Leathers Nylon Lined-Black-120cm",
+      "match_name": "CWD Stirrup Leathers Nylon Lined",
+      "match_image": "https://www.tackshop.in/product-images/Pastel+Modern+Fashion+New+Collection+Pinterest+Pin+Post+-+2025-04-18T010014.589.png/1134286000003777857/1100x1100",
+      "coverage": 0.714
+    },
+    {
+      "slug": "cwd-stirrup-leathers-nylon-lined-black-125cm",
+      "name": "CWD Stirrup Leathers Nylon Lined-Black-125cm",
+      "match_name": "CWD Stirrup Leathers Nylon Lined",
+      "match_image": "https://www.tackshop.in/product-images/Pastel+Modern+Fashion+New+Collection+Pinterest+Pin+Post+-+2025-04-18T010014.589.png/1134286000003777857/1100x1100",
+      "coverage": 0.714
+    },
+    {
+      "slug": "cwd-stirrup-leathers-nylon-lined-black-130cm",
+      "name": "CWD Stirrup Leathers Nylon Lined-Black-130cm",
+      "match_name": "CWD Stirrup Leathers Nylon Lined",
+      "match_image": "https://www.tackshop.in/product-images/Pastel+Modern+Fashion+New+Collection+Pinterest+Pin+Post+-+2025-04-18T010014.589.png/1134286000003777857/1100x1100",
+      "coverage": 0.714
+    },
+    {
+      "slug": "cwd-stirrup-leathers-nylon-lined-black-135cm",
+      "name": "CWD Stirrup Leathers Nylon Lined-Black-135cm",
+      "match_name": "CWD Stirrup Leathers Nylon Lined",
+      "match_image": "https://www.tackshop.in/product-images/Pastel+Modern+Fashion+New+Collection+Pinterest+Pin+Post+-+2025-04-18T010014.589.png/1134286000003777857/1100x1100",
+      "coverage": 0.714
+    },
+    {
+      "slug": "cwd-stirrup-leathers-nylon-lined-black-140cm",
+      "name": "CWD Stirrup Leathers Nylon Lined-Black-140cm",
+      "match_name": "CWD Stirrup Leathers Nylon Lined",
+      "match_image": "https://www.tackshop.in/product-images/Pastel+Modern+Fashion+New+Collection+Pinterest+Pin+Post+-+2025-04-18T010014.589.png/1134286000003777857/1100x1100",
+      "coverage": 0.714
+    },
+    {
+      "slug": "cwd-stirrup-leathers-nylon-lined-black-145cm",
+      "name": "CWD Stirrup Leathers Nylon Lined-Black-145cm",
+      "match_name": "CWD Stirrup Leathers Nylon Lined",
+      "match_image": "https://www.tackshop.in/product-images/Pastel+Modern+Fashion+New+Collection+Pinterest+Pin+Post+-+2025-04-18T010014.589.png/1134286000003777857/1100x1100",
+      "coverage": 0.714
+    },
+    {
+      "slug": "cwd-stirrup-leathers-nylon-lined-brown-105cm",
+      "name": "CWD Stirrup Leathers Nylon Lined-Brown-105cm",
+      "match_name": "CWD Stirrup Leathers Nylon Lined",
+      "match_image": "https://www.tackshop.in/product-images/Pastel+Modern+Fashion+New+Collection+Pinterest+Pin+Post+-+2025-04-18T010014.589.png/1134286000003777857/1100x1100",
+      "coverage": 0.714
+    },
+    {
+      "slug": "cwd-stirrup-leathers-nylon-lined-brown-110cm",
+      "name": "CWD Stirrup Leathers Nylon Lined-Brown-110cm",
+      "match_name": "CWD Stirrup Leathers Nylon Lined",
+      "match_image": "https://www.tackshop.in/product-images/Pastel+Modern+Fashion+New+Collection+Pinterest+Pin+Post+-+2025-04-18T010014.589.png/1134286000003777857/1100x1100",
+      "coverage": 0.714
+    },
+    {
+      "slug": "cwd-stirrup-leathers-nylon-lined-brown-115cm",
+      "name": "CWD Stirrup Leathers Nylon Lined-Brown-115cm",
+      "match_name": "CWD Stirrup Leathers Nylon Lined",
+      "match_image": "https://www.tackshop.in/product-images/Pastel+Modern+Fashion+New+Collection+Pinterest+Pin+Post+-+2025-04-18T010014.589.png/1134286000003777857/1100x1100",
+      "coverage": 0.714
+    },
+    {
+      "slug": "cwd-stirrup-leathers-nylon-lined-brown-120cm",
+      "name": "CWD Stirrup Leathers Nylon Lined-Brown-120cm",
+      "match_name": "CWD Stirrup Leathers Nylon Lined",
+      "match_image": "https://www.tackshop.in/product-images/Pastel+Modern+Fashion+New+Collection+Pinterest+Pin+Post+-+2025-04-18T010014.589.png/1134286000003777857/1100x1100",
+      "coverage": 0.714
+    },
+    {
+      "slug": "cwd-stirrup-leathers-nylon-lined-brown-125cm",
+      "name": "CWD Stirrup Leathers Nylon Lined-Brown-125cm",
+      "match_name": "CWD Stirrup Leathers Nylon Lined",
+      "match_image": "https://www.tackshop.in/product-images/Pastel+Modern+Fashion+New+Collection+Pinterest+Pin+Post+-+2025-04-18T010014.589.png/1134286000003777857/1100x1100",
+      "coverage": 0.714
+    },
+    {
+      "slug": "cwd-stirrup-leathers-nylon-lined-brown-130cm",
+      "name": "CWD Stirrup Leathers Nylon Lined-Brown-130cm",
+      "match_name": "CWD Stirrup Leathers Nylon Lined",
+      "match_image": "https://www.tackshop.in/product-images/Pastel+Modern+Fashion+New+Collection+Pinterest+Pin+Post+-+2025-04-18T010014.589.png/1134286000003777857/1100x1100",
+      "coverage": 0.714
+    },
+    {
+      "slug": "cwd-stirrup-leathers-nylon-lined-brown-135cm",
+      "name": "CWD Stirrup Leathers Nylon Lined-Brown-135cm",
+      "match_name": "CWD Stirrup Leathers Nylon Lined",
+      "match_image": "https://www.tackshop.in/product-images/Pastel+Modern+Fashion+New+Collection+Pinterest+Pin+Post+-+2025-04-18T010014.589.png/1134286000003777857/1100x1100",
+      "coverage": 0.714
+    },
+    {
+      "slug": "cwd-stirrup-leathers-nylon-lined-brown-140cm",
+      "name": "CWD Stirrup Leathers Nylon Lined-Brown-140cm",
+      "match_name": "CWD Stirrup Leathers Nylon Lined",
+      "match_image": "https://www.tackshop.in/product-images/Pastel+Modern+Fashion+New+Collection+Pinterest+Pin+Post+-+2025-04-18T010014.589.png/1134286000003777857/1100x1100",
+      "coverage": 0.714
+    },
+    {
+      "slug": "cwd-stirrup-leathers-nylon-lined-brown-145cm",
+      "name": "CWD Stirrup Leathers Nylon Lined-Brown-145cm",
+      "match_name": "CWD Stirrup Leathers Nylon Lined",
+      "match_image": "https://www.tackshop.in/product-images/Pastel+Modern+Fashion+New+Collection+Pinterest+Pin+Post+-+2025-04-18T010014.589.png/1134286000003777857/1100x1100",
+      "coverage": 0.714
+    },
+    {
+      "slug": "cwd-stirrup-leathers-sojump",
+      "name": "CWD Stirrup Leathers SoJump",
+      "match_name": "CWD Stirrup Leathers SoJump",
+      "match_image": "https://www.tackshop.in/product-images/Pastel+Modern+Fashion+New+Collection+Pinterest+Pin+Post+-+2025-04-18T003731.867.png/1134286000003777375/1100x1100",
+      "coverage": 1.0
+    },
+    {
+      "slug": "cwd-t-shirt-unisex",
+      "name": "CWD T-Shirt Unisex",
+      "match_name": "CWD T-Shirt -Unisex",
+      "match_image": "https://www.tackshop.in/product-images/CWD+T+Shirt+-+01.png/1134286000004745030/1100x1100",
+      "coverage": 1.0
+    },
+    {
+      "slug": "cwd-t-shirt-women",
+      "name": "CWD T-Shirt Women",
+      "match_name": "CWD T-Shirt Women",
+      "match_image": "https://www.tackshop.in/product-images/CWD+White+T+Shirt+Women+-+01.png/1134286000004956770/1100x1100",
+      "coverage": 1.0
+    },
+    {
+      "slug": "cwd-velcro-fetlock-boots",
+      "name": "CWD Velcro Fetlock Boots",
+      "match_name": "CWD Velcro Fetlock Boots",
+      "match_image": "https://www.tackshop.in/product-images/Pastel+Modern+Fashion+New+Collection+Pinterest+Pin+Post+-+2025-04-18T003221.987.png/1134286000003777289/1100x1100",
+      "coverage": 1.0
+    },
+    {
+      "slug": "cwd-velcro-fetlock-boots-black-extra",
+      "name": "CWD Velcro Fetlock Boots-Black/Extra",
+      "match_name": "CWD Velcro Fetlock Boots",
+      "match_image": "https://www.tackshop.in/product-images/Pastel+Modern+Fashion+New+Collection+Pinterest+Pin+Post+-+2025-04-18T003221.987.png/1134286000003777289/1100x1100",
+      "coverage": 0.667
+    },
+    {
+      "slug": "cwd-velcro-fetlock-boots-brown-extra",
+      "name": "CWD Velcro Fetlock Boots-Brown/Extra",
+      "match_name": "CWD Velcro Fetlock Boots",
+      "match_image": "https://www.tackshop.in/product-images/Pastel+Modern+Fashion+New+Collection+Pinterest+Pin+Post+-+2025-04-18T003221.987.png/1134286000003777289/1100x1100",
+      "coverage": 0.667
+    },
+    {
+      "slug": "cwd-velcro-tendon-boots",
+      "name": "CWD Velcro Tendon Boots",
+      "match_name": "CWD Velcro Tendon Boots",
+      "match_image": "https://www.tackshop.in/product-images/Pastel+Modern+Fashion+New+Collection+Pinterest+Pin+Post+-+2025-04-18T003852.826.png/1134286000003777415/1100x1100",
+      "coverage": 1.0
+    },
+    {
+      "slug": "cwd-velcro-tendon-boots-extra",
+      "name": "CWD Velcro Tendon Boots-Extra",
+      "match_name": "CWD Velcro Tendon Boots",
+      "match_image": "https://www.tackshop.in/product-images/Pastel+Modern+Fashion+New+Collection+Pinterest+Pin+Post+-+2025-04-18T003852.826.png/1134286000003777415/1100x1100",
+      "coverage": 0.8
+    },
+    {
+      "slug": "cwd-weighted-fetlock-boots",
+      "name": "CWD Weighted Fetlock Boots",
+      "match_name": "CWD Weighted Fetlock Boots",
+      "match_image": "https://www.tackshop.in/product-images/Pastel+Modern+Fashion+New+Collection+Pinterest+Pin+Post+-+2025-04-18T013001.368.png/1134286000003782173/1100x1100",
+      "coverage": 1.0
+    },
+    {
+      "slug": "cwd-weighted-fetlock-boots-black-extra",
+      "name": "CWD Weighted Fetlock Boots-Black/Extra",
+      "match_name": "CWD Weighted Fetlock Boots",
+      "match_image": "https://www.tackshop.in/product-images/Pastel+Modern+Fashion+New+Collection+Pinterest+Pin+Post+-+2025-04-18T013001.368.png/1134286000003782173/1100x1100",
+      "coverage": 0.667
+    },
+    {
+      "slug": "cwd-weighted-fetlock-boots-brown-extra",
+      "name": "CWD Weighted Fetlock Boots-Brown/Extra",
+      "match_name": "CWD Weighted Fetlock Boots",
+      "match_image": "https://www.tackshop.in/product-images/Pastel+Modern+Fashion+New+Collection+Pinterest+Pin+Post+-+2025-04-18T013001.368.png/1134286000003782173/1100x1100",
+      "coverage": 0.667
+    },
+    {
+      "slug": "cwd-white-polo-shirt-men",
+      "name": "CWD White Polo Shirt Men",
+      "match_name": "CWD White Polo Shirt Men",
+      "match_image": "https://www.tackshop.in/product-images/CWD+White+Polo+Shirt+Men.png/1134286000004945297/1100x1100",
+      "coverage": 1.0
+    },
+    {
+      "slug": "cwd-white-polo-shirt-women",
+      "name": "CWD White Polo Shirt Women",
+      "match_name": "CWD White Polo Shirt Women",
+      "match_image": "https://www.tackshop.in/product-images/CWD+White+Polo+Shirt+Women+3.png/1134286000004956492/1100x1100",
+      "coverage": 1.0
+    }
+  ],
+  "fuzzy": []
+}
