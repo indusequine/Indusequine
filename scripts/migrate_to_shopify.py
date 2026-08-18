@@ -145,8 +145,8 @@ class ShopifyClient:
 
 
 PRODUCT_SET_MUTATION = """
-mutation($input: ProductSetInput!, $synchronous: Boolean!) {
-  productSet(input: $input, synchronous: $synchronous) {
+mutation($input: ProductSetInput!, $synchronous: Boolean!, $identifier: ProductSetIdentifiers!) {
+  productSet(input: $input, synchronous: $synchronous, identifier: $identifier) {
     product { id handle }
     userErrors { field message }
   }
@@ -338,6 +338,21 @@ def main():
                 # without a collection assignment -- not worth aborting for
                 print(f"  WARNING: collection setup failed for {cat_slug}: {e}")
 
+        # A collection has to be published to the storefront channel to be
+        # visible via the Storefront API -- same requirement as products,
+        # easy to miss since collectionCreate succeeding gives no hint of it.
+        for cat_slug, gid in collection_gid_by_category.items():
+            try:
+                pub_result = client.query(PUBLISH_MUTATION, {
+                    "id": gid,
+                    "input": [{"publicationId": client.headless_publication_id()}],
+                })
+                pub_errors = pub_result.get("data", {}).get("publishablePublish", {}).get("userErrors")
+                if pub_errors:
+                    print(f"  WARNING: collection publish failed for {cat_slug}: {pub_errors}")
+            except Exception as e:
+                print(f"  WARNING: collection publish failed for {cat_slug}: {e}")
+
     # --- unique image files: dedupe so identical bytes aren't referenced redundantly ---
     # (informational only for now -- Shopify dedupes on its own side by URL anyway)
 
@@ -369,7 +384,11 @@ def main():
             continue
 
         try:
-            result = client.query(PRODUCT_SET_MUTATION, {"input": input_obj, "synchronous": True})
+            result = client.query(PRODUCT_SET_MUTATION, {
+                "input": input_obj,
+                "synchronous": True,
+                "identifier": {"handle": slug},
+            })
             payload = result.get("data", {}).get("productSet") if result.get("data") else None
             top_errors = result.get("errors")
             user_errors = payload.get("userErrors") if payload else None
