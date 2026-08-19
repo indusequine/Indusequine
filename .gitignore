@@ -46,3 +46,6 @@ next-env.d.ts
 # src/data/catalogue.json is what's committed, never the spreadsheet)
 *.xlsx
 *.xls
+
+# one-off script run logs
+/scripts/migration_output/
