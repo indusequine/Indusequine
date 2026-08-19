@@ -1,11 +1,9 @@
 import Link from "next/link";
 import type { Product } from "@/data/products";
-import { getCategory } from "@/data/products";
 import { ProductImage } from "@/components/ProductImage";
 
 export function ProductCard({ product }: { product: Product }) {
-  const category = getCategory(product.category);
-  const subtitle = [product.brand, category?.name].filter(Boolean).join(" · ");
+  const subtitle = [product.brand, product.categoryName].filter(Boolean).join(" · ");
 
   return (
     <Link

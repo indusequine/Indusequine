@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import { Container } from "@/components/Container";
 import { LogoMarkPattern } from "@/components/Logo";
 import { CategoryTile } from "@/components/CategoryTile";
-import { categories, getProductsByCategory } from "@/data/products";
+import { getCategoriesWithCounts } from "@/data/products";
 
 export const metadata: Metadata = {
   title: "The Marketplace",
@@ -11,10 +11,13 @@ export const metadata: Metadata = {
     "A curated equestrian marketplace for India — premium products for riders, horses, and stables. From saddlery and tack to rugs, apparel, and grooming.",
 };
 
-export default function MarketplacePage() {
-  const sortedCategories = [...categories].sort(
-    (a, b) => getProductsByCategory(b.slug).length - getProductsByCategory(a.slug).length,
-  );
+// Next.js requires route segment config to be a static literal, so this
+// can't import REVALIDATE_SECONDS from lib/shopify/client.ts — keep in sync.
+export const revalidate = 3600;
+
+export default async function MarketplacePage() {
+  const categories = await getCategoriesWithCounts();
+  const sortedCategories = [...categories].sort((a, b) => b.count - a.count);
 
   return (
     <>
@@ -27,7 +30,7 @@ export default function MarketplacePage() {
               <CategoryTile
                 key={category.slug}
                 category={category}
-                count={getProductsByCategory(category.slug).length}
+                count={category.count}
                 href={`/marketplace/category/${category.slug}`}
               />
             ))}

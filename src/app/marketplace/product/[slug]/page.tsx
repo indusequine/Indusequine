@@ -5,30 +5,27 @@ import { Container } from "@/components/Container";
 import { ProductImage } from "@/components/ProductImage";
 import { ProductGrid } from "@/components/ProductGrid";
 import { EnquiryForm } from "@/components/EnquiryForm";
-import {
-  products,
-  getProductBySlug,
-  getProductsByCategory,
-  getCategory,
-  formatPrice,
-} from "@/data/products";
+import { getAllProductSlugs, getProductBySlug, getProductsByCategory, formatPrice } from "@/data/products";
 
 const RELATED_LIMIT = 8;
 
-export function generateStaticParams() {
-  return products.map((p) => ({ slug: p.slug }));
+export async function generateStaticParams() {
+  const slugs = await getAllProductSlugs();
+  return slugs.map((slug) => ({ slug }));
 }
 
-export const dynamicParams = false;
+export const dynamicParams = true;
+// Next.js requires route segment config to be a static literal, so this
+// can't import REVALIDATE_SECONDS from lib/shopify/client.ts — keep in sync.
+export const revalidate = 3600;
 
 type Props = { params: Promise<{ slug: string }> };
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
-  const product = getProductBySlug(slug);
+  const product = await getProductBySlug(slug);
   if (!product) return {};
-  const category = getCategory(product.category);
-  const bits = [product.brand, category?.name, product.priceLabel].filter(Boolean);
+  const bits = [product.brand, product.categoryName, product.priceLabel].filter(Boolean);
   return {
     title: product.name,
     description: `${product.name}. ${bits.join(" — ")}.`,
@@ -37,24 +34,22 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 export default async function ProductPage({ params }: Props) {
   const { slug } = await params;
-  const product = getProductBySlug(slug);
+  const product = await getProductBySlug(slug);
   if (!product) notFound();
 
-  const category = getCategory(product.category)!;
-  const related = getProductsByCategory(product.category)
-    .filter((p) => p.slug !== product.slug)
-    .slice(0, RELATED_LIMIT);
-  const totalInCategory = getProductsByCategory(product.category).length;
+  const categoryProducts = await getProductsByCategory(product.category);
+  const related = categoryProducts.filter((p) => p.slug !== product.slug).slice(0, RELATED_LIMIT);
+  const totalInCategory = categoryProducts.length;
 
   return (
     <>
       <section className="bg-cream-soft py-16 md:py-20 border-b border-forest/10">
         <Container size="wide">
           <Link
-            href={`/marketplace/category/${category.slug}`}
+            href={`/marketplace/category/${product.category}`}
             className="eyebrow text-brass-deep hover:text-oxblood transition-colors"
           >
-            ← {category.name}
+            ← {product.categoryName}
           </Link>
 
           <div className="mt-10 grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
@@ -69,7 +64,7 @@ export default async function ProductPage({ params }: Props) {
               <h1 className="font-display text-4xl md:text-5xl text-forest leading-tight mt-3">
                 {product.name}
               </h1>
-              <p className="mt-3 text-sm text-stone">{category.name}</p>
+              <p className="mt-3 text-sm text-stone">{product.categoryName}</p>
 
               <p className="mt-8 eyebrow text-brass-deep text-base">{product.priceLabel}</p>
 
@@ -84,7 +79,9 @@ export default async function ProductPage({ params }: Props) {
                         <dt className="text-stone">
                           {[v.size, v.color].filter(Boolean).join(" / ") || v.sku}
                         </dt>
-                        <dd className="text-ink text-right">{formatPrice(v.price)}</dd>
+                        <dd className="text-ink text-right">
+                          {product.priceOnRequest ? "Price on request" : formatPrice(v.price)}
+                        </dd>
                       </div>
                     ))}
                   </div>
@@ -113,13 +110,13 @@ export default async function ProductPage({ params }: Props) {
         <section className="bg-cream-soft py-16 md:py-20 border-t border-forest/10">
           <Container size="wide">
             <div className="flex items-baseline justify-between gap-4 flex-wrap">
-              <p className="eyebrow text-brass-deep">More in {category.name}</p>
+              <p className="eyebrow text-brass-deep">More in {product.categoryName}</p>
               {totalInCategory > RELATED_LIMIT + 1 && (
                 <Link
-                  href={`/marketplace/category/${category.slug}`}
+                  href={`/marketplace/category/${product.category}`}
                   className="text-sm text-forest hover:text-oxblood underline underline-offset-4"
                 >
-                  View all {totalInCategory} in {category.name}
+                  View all {totalInCategory} in {product.categoryName}
                 </Link>
               )}
             </div>

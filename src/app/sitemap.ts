@@ -1,12 +1,12 @@
 import type { MetadataRoute } from "next";
-import { products, categories } from "@/data/products";
-
-export const dynamic = "force-static";
+import { getCategories, getAllProductSlugs } from "@/data/products";
 
 const BASE_URL = "https://indusequine.com";
 
-export default function sitemap(): MetadataRoute.Sitemap {
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const now = new Date();
+  const [categories, productSlugs] = await Promise.all([getCategories(), getAllProductSlugs()]);
+
   return [
     { url: `${BASE_URL}/`, lastModified: now, changeFrequency: "weekly", priority: 1.0 },
     { url: `${BASE_URL}/marketplace`, lastModified: now, changeFrequency: "weekly", priority: 0.9 },
@@ -21,8 +21,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "weekly" as const,
       priority: 0.7,
     })),
-    ...products.map((p) => ({
-      url: `${BASE_URL}/marketplace/product/${p.slug}`,
+    ...productSlugs.map((slug) => ({
+      url: `${BASE_URL}/marketplace/product/${slug}`,
       lastModified: now,
       changeFrequency: "monthly" as const,
       priority: 0.5,

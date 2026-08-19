@@ -1,6 +1,5 @@
 import { LogoMarkPattern } from "@/components/Logo";
 import type { Product } from "@/data/products";
-import { getCategory } from "@/data/products";
 import { categoryTileClass } from "@/lib/categoryTileColor";
 
 type ProductImageProps = {
@@ -23,8 +22,7 @@ export function ProductImage({ product, size = "card" }: ProductImageProps) {
     );
   }
 
-  const category = getCategory(product.category);
-  const label = category?.name ?? "";
+  const label = product.categoryName ?? "";
 
   return (
     <div

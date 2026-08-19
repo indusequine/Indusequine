@@ -3,8 +3,8 @@ import { Logo } from "./Logo";
 import { Container } from "./Container";
 import { getTopCategories } from "@/data/products";
 
-export function Footer() {
-  const topCategories = getTopCategories(4);
+export async function Footer() {
+  const topCategories = await getTopCategories(4);
 
   return (
     <footer className="bg-forest-deep text-cream-soft/80 mt-24">
