@@ -2,7 +2,6 @@ import Link from "next/link";
 import { Logo } from "./Logo";
 import { Container } from "./Container";
 import { getTopCategories } from "@/data/products";
-import { categories as discoverCategories } from "@/data/discover";
 
 export function Footer() {
   const topCategories = getTopCategories(4);
@@ -39,14 +38,10 @@ export function Footer() {
           <div className="md:col-span-2">
             <p className="eyebrow text-cream-soft/50 mb-4">Discover</p>
             <ul className="space-y-3 text-sm">
-              <li><Link href="/discover" className="hover:text-brass-light">All Categories</Link></li>
-              {discoverCategories.map((c) => (
-                <li key={c.slug}>
-                  <Link href={`/discover/category/${c.slug}`} className="hover:text-brass-light">
-                    {c.name}
-                  </Link>
-                </li>
-              ))}
+              <li><Link href="/discover#equine-therapy" className="hover:text-brass-light">Equine Therapy</Link></li>
+              <li><Link href="/discover#clinics" className="hover:text-brass-light">Clinics</Link></li>
+              <li><Link href="/discover#training-programmes" className="hover:text-brass-light">Training Programmes</Link></li>
+              <li><Link href="/discover#shows" className="hover:text-brass-light">Shows</Link></li>
             </ul>
           </div>
 

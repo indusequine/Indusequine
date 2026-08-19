@@ -1,6 +1,5 @@
 import type { MetadataRoute } from "next";
 import { products, categories } from "@/data/products";
-import { entries as discoverEntries, categories as discoverCategories } from "@/data/discover";
 
 export const dynamic = "force-static";
 
@@ -24,18 +23,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     })),
     ...products.map((p) => ({
       url: `${BASE_URL}/marketplace/product/${p.slug}`,
-      lastModified: now,
-      changeFrequency: "monthly" as const,
-      priority: 0.5,
-    })),
-    ...discoverCategories.map((c) => ({
-      url: `${BASE_URL}/discover/category/${c.slug}`,
-      lastModified: now,
-      changeFrequency: "weekly" as const,
-      priority: 0.7,
-    })),
-    ...discoverEntries.map((e) => ({
-      url: `${BASE_URL}/discover/profile/${e.slug}`,
       lastModified: now,
       changeFrequency: "monthly" as const,
       priority: 0.5,
