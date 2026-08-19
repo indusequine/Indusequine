@@ -28,6 +28,7 @@ export default function MarketplacePage() {
                 key={category.slug}
                 category={category}
                 count={getProductsByCategory(category.slug).length}
+                href={`/marketplace/category/${category.slug}`}
               />
             ))}
           </div>

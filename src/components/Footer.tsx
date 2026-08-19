@@ -2,6 +2,7 @@ import Link from "next/link";
 import { Logo } from "./Logo";
 import { Container } from "./Container";
 import { getTopCategories } from "@/data/products";
+import { categories as discoverCategories } from "@/data/discover";
 
 export function Footer() {
   const topCategories = getTopCategories(4);
@@ -10,7 +11,7 @@ export function Footer() {
     <footer className="bg-forest-deep text-cream-soft/80 mt-24">
       <Container size="wide" className="py-16">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-10">
-          <div className="md:col-span-5">
+          <div className="md:col-span-4">
             <Logo variant="cream" size="md" />
             <p className="mt-6 text-cream-soft/70 max-w-md leading-relaxed">
               India&rsquo;s first dedicated equestrian marketplace. A curated home for
@@ -36,6 +37,20 @@ export function Footer() {
           </div>
 
           <div className="md:col-span-2">
+            <p className="eyebrow text-cream-soft/50 mb-4">Discover</p>
+            <ul className="space-y-3 text-sm">
+              <li><Link href="/discover" className="hover:text-brass-light">All Categories</Link></li>
+              {discoverCategories.map((c) => (
+                <li key={c.slug}>
+                  <Link href={`/discover/category/${c.slug}`} className="hover:text-brass-light">
+                    {c.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div className="md:col-span-2">
             <p className="eyebrow text-cream-soft/50 mb-4">Services</p>
             <ul className="space-y-3 text-sm">
               <li><Link href="/services#coaches" className="hover:text-brass-light">Coaches</Link></li>
@@ -44,7 +59,7 @@ export function Footer() {
             </ul>
           </div>
 
-          <div className="md:col-span-3">
+          <div className="md:col-span-2">
             <p className="eyebrow text-cream-soft/50 mb-4">Company</p>
             <ul className="space-y-3 text-sm">
               <li><Link href="/story" className="hover:text-brass-light">Our Story</Link></li>

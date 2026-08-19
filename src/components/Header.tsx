@@ -7,6 +7,7 @@ import { Container } from "./Container";
 
 const navLinks = [
   { href: "/marketplace", label: "Marketplace" },
+  { href: "/discover", label: "Discover" },
   { href: "/services", label: "Services" },
   { href: "/story", label: "Our Story" },
   { href: "/contact", label: "Partner With Us" },
