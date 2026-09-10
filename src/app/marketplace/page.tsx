@@ -100,17 +100,17 @@ function PageHero() {
       <div className="absolute inset-0 opacity-[0.07] pointer-events-none text-brass-light">
         <LogoMarkPattern />
       </div>
-      <Container className="relative">
+      <Container className="relative text-center">
         <p className="eyebrow text-brass-light">The Marketplace</p>
-        <h1 className="font-display text-5xl md:text-7xl mt-6 leading-[1.05] max-w-4xl">
+        <h1 className="font-display text-5xl md:text-7xl mt-6 leading-[1.05] max-w-4xl mx-auto">
           Every product, for every kind of ride.
         </h1>
-        <p className="mt-8 text-lg md:text-xl text-cream-soft/80 leading-relaxed max-w-2xl">
+        <p className="mt-8 text-lg md:text-xl text-cream-soft/80 leading-relaxed max-w-2xl mx-auto">
           The brands you&rsquo;ve struggled to find in India — and the ones
           you&rsquo;ve only heard of from friends abroad. All under one
           well-tended roof.
         </p>
-        <p className="mt-4 text-sm text-cream-soft/50 max-w-2xl">
+        <p className="mt-4 text-sm text-cream-soft/50 max-w-2xl mx-auto">
           Real listings, real prices — product photography is on its way.
         </p>
       </Container>
