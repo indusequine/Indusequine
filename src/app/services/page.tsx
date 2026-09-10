@@ -90,19 +90,19 @@ function PageHero() {
       <div className="absolute inset-0 opacity-[0.07] pointer-events-none text-brass-light">
         <LogoMarkPattern />
       </div>
-      <Container className="relative">
+      <Container className="relative text-center">
         <p className="eyebrow text-brass-light">
           The Services Directory
         </p>
-        <h1 className="font-display text-5xl md:text-7xl mt-6 leading-[1.05] max-w-4xl">
+        <h1 className="font-display text-5xl md:text-7xl mt-6 leading-[1.05] max-w-4xl mx-auto">
           The professionals you trust, brought into the light.
         </h1>
-        <p className="mt-8 text-lg md:text-xl text-cream-soft/80 leading-relaxed max-w-2xl">
+        <p className="mt-8 text-lg md:text-xl text-cream-soft/80 leading-relaxed max-w-2xl mx-auto">
           Coaches, vets, and farriers across India — verified, rated, and
           reachable. Built from the ground up with the stables, federations,
           and riders who already know each other.
         </p>
-        <div className="mt-12 flex flex-wrap gap-3">
+        <div className="mt-12 flex flex-wrap justify-center gap-3">
           {services.map((s) => (
             <Link
               key={s.id}

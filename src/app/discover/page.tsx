@@ -115,17 +115,17 @@ function PageHero() {
         className="absolute inset-0 w-full h-full object-cover opacity-30"
       />
       <div className="absolute inset-0 bg-forest-deep/60" />
-      <Container className="relative">
+      <Container className="relative text-center">
         <p className="eyebrow text-brass-light">Discover</p>
-        <h1 className="font-display text-5xl md:text-7xl mt-6 leading-[1.05] max-w-4xl text-cream-soft">
+        <h1 className="font-display text-5xl md:text-7xl mt-6 leading-[1.05] max-w-4xl mx-auto text-cream-soft">
           Beyond the tack room.
         </h1>
-        <p className="mt-8 text-lg md:text-xl text-cream-soft/80 leading-relaxed max-w-2xl">
+        <p className="mt-8 text-lg md:text-xl text-cream-soft/80 leading-relaxed max-w-2xl mx-auto">
           Equine therapy, clinics, training programmes, and shows — the care
           and coaching that keep horses and riders at their best. We&rsquo;re
           building the booking, one verified partner at a time.
         </p>
-        <div className="mt-12 flex flex-wrap gap-3">
+        <div className="mt-12 flex flex-wrap justify-center gap-3">
           {categories.map((c) => (
             <Link
               key={c.id}

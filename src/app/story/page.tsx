@@ -29,16 +29,16 @@ function PageHero() {
       <div className="absolute inset-0 opacity-[0.07] pointer-events-none text-brass-light">
         <LogoMarkPattern />
       </div>
-      <Container className="relative">
+      <Container className="relative text-center">
         <p className="eyebrow text-brass-light">
           Our Story
         </p>
-        <h1 className="font-display text-5xl md:text-7xl mt-6 leading-[1.05] max-w-4xl italic">
+        <h1 className="font-display text-5xl md:text-7xl mt-6 leading-[1.05] max-w-4xl mx-auto italic">
           One of the world&rsquo;s oldest equestrian traditions.
           <br />
           <span className="text-brass-light not-italic">One of its most fragmented modern markets.</span>
         </h1>
-        <p className="mt-8 text-lg md:text-xl text-cream-soft/80 leading-relaxed max-w-2xl">
+        <p className="mt-8 text-lg md:text-xl text-cream-soft/80 leading-relaxed max-w-2xl mx-auto">
           Indusequine exists to bridge them.
         </p>
       </Container>
