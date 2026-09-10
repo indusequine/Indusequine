@@ -67,7 +67,11 @@ export async function Footer() {
         </div>
 
         <div className="mt-16 pt-8 border-t border-cream-soft/10 flex flex-col md:flex-row justify-between gap-4 text-xs text-cream-soft/50">
-          <p>© {new Date().getFullYear()} Indusequine. All rights reserved.</p>
+          <p className="flex flex-wrap gap-x-4 gap-y-1">
+            <span>© {new Date().getFullYear()} Indusequine. All rights reserved.</span>
+            <Link href="/privacy" className="hover:text-brass-light underline underline-offset-4">Privacy Policy</Link>
+            <Link href="/terms" className="hover:text-brass-light underline underline-offset-4">Terms of Service</Link>
+          </p>
           <p className="tracking-wider uppercase">Made in India · For India&rsquo;s Riders</p>
         </div>
       </Container>
