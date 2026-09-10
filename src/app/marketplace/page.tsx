@@ -2,7 +2,8 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import { Container } from "@/components/Container";
 import { LogoMarkPattern } from "@/components/Logo";
-import { CategoryTile } from "@/components/CategoryTile";
+import { CategoryGroupTile } from "@/components/CategoryGroupTile";
+import { categoryGroups, otherCategorySlugs } from "@/lib/categoryGroups";
 import { getCategoriesWithCounts } from "@/data/products";
 
 export const metadata: Metadata = {
@@ -17,7 +18,10 @@ export const revalidate = 3600;
 
 export default async function MarketplacePage() {
   const categories = await getCategoriesWithCounts();
-  const sortedCategories = [...categories].sort((a, b) => b.count - a.count);
+  const countBySlug = new Map(categories.map((c) => [c.slug, c.count]));
+  const totalProducts = categories.reduce((sum, c) => sum + c.count, 0);
+
+  const otherCategories = categories.filter((c) => otherCategorySlugs.includes(c.slug));
 
   return (
     <>
@@ -25,21 +29,68 @@ export default async function MarketplacePage() {
 
       <section className="bg-cream-soft py-16 md:py-20">
         <Container size="wide">
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
-            {sortedCategories.map((category) => (
-              <CategoryTile
-                key={category.slug}
-                category={category}
-                count={category.count}
-                href={`/marketplace/category/${category.slug}`}
-              />
-            ))}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            {categoryGroups.map((group) => {
+              const productCount = group.categorySlugs.reduce(
+                (sum, slug) => sum + (countBySlug.get(slug) ?? 0),
+                0,
+              );
+              return (
+                <CategoryGroupTile key={group.slug} group={group} productCount={productCount} />
+              );
+            })}
           </div>
+
+          {otherCategories.length > 0 && (
+            <div className="mt-10 pt-8 border-t border-forest/10 flex flex-wrap items-center gap-x-8 gap-y-3">
+              <p className="eyebrow text-brass-deep">Also Browse</p>
+              {otherCategories.map((c) => (
+                <Link
+                  key={c.slug}
+                  href={`/marketplace/category/${c.slug}`}
+                  className="text-sm text-charcoal hover:text-oxblood underline underline-offset-4"
+                >
+                  {c.name}
+                </Link>
+              ))}
+            </div>
+          )}
         </Container>
       </section>
 
+      <TrustBadges totalProducts={totalProducts} totalCategories={categories.length} />
+
       <BrandsCTA />
     </>
+  );
+}
+
+function TrustBadges({
+  totalProducts,
+  totalCategories,
+}: {
+  totalProducts: number;
+  totalCategories: number;
+}) {
+  const badges = [
+    { label: "Products Listed", value: `${totalProducts.toLocaleString("en-IN")}+` },
+    { label: "Categories", value: `${totalCategories}` },
+    { label: "Brands", value: "Verified" },
+    { label: "Support", value: "Direct Enquiry" },
+  ];
+  return (
+    <section className="bg-cream py-10 border-y border-forest/10">
+      <Container size="wide">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+          {badges.map((b) => (
+            <div key={b.label}>
+              <p className="font-display text-2xl md:text-3xl text-forest">{b.value}</p>
+              <p className="mt-1 text-xs tracking-wide uppercase text-stone">{b.label}</p>
+            </div>
+          ))}
+        </div>
+      </Container>
+    </section>
   );
 }
 

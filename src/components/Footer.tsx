@@ -1,11 +1,9 @@
 import Link from "next/link";
 import { Logo } from "./Logo";
 import { Container } from "./Container";
-import { getTopCategories } from "@/data/products";
+import { categoryGroups } from "@/lib/categoryGroups";
 
-export async function Footer() {
-  const topCategories = await getTopCategories(4);
-
+export function Footer() {
   return (
     <footer className="bg-forest-deep text-cream-soft/80 mt-24">
       <Container size="wide" className="py-16">
@@ -22,10 +20,10 @@ export async function Footer() {
             <p className="eyebrow text-cream-soft/50 mb-4">Marketplace</p>
             <ul className="space-y-3 text-sm">
               <li><Link href="/marketplace" className="hover:text-brass-light">All Categories</Link></li>
-              {topCategories.map((c) => (
-                <li key={c.slug}>
-                  <Link href={`/marketplace/category/${c.slug}`} className="hover:text-brass-light">
-                    {c.name}
+              {categoryGroups.map((g) => (
+                <li key={g.slug}>
+                  <Link href={`/marketplace/group/${g.slug}`} className="hover:text-brass-light">
+                    {g.name}
                   </Link>
                 </li>
               ))}
