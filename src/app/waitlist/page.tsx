@@ -3,9 +3,9 @@ import { Container } from "@/components/Container";
 import { WaitlistForm } from "@/components/WaitlistForm";
 
 export const metadata: Metadata = {
-  title: "Join the Waitlist",
+  title: "Get Updates",
   description:
-    "Be among the first to step into Indusequine — India's first equestrian marketplace. Early access, founder updates, and a curated welcome.",
+    "The occasional, considered update from Indusequine — India's first equestrian marketplace. New brands, new professionals, real milestones.",
 };
 
 export default function WaitlistPage() {
@@ -14,14 +14,14 @@ export default function WaitlistPage() {
       <section className="bg-forest-deep text-cream-soft py-20 md:py-28 border-b border-brass/20">
         <Container size="narrow" className="text-center">
           <p className="eyebrow text-brass-light">
-            Launching Soon
+            Stay Updated
           </p>
           <h1 className="font-display text-5xl md:text-6xl lg:text-7xl mt-6 leading-[1.05]">
-            Be the first in the saddle.
+            Stay close to the herd.
           </h1>
           <p className="mt-8 text-lg md:text-xl text-cream-soft/80 leading-relaxed">
-            Early access. Founder updates. A hand-picked welcome when we
-            open the gates.
+            Founder updates. New brands and professionals as we add them.
+            Nothing else.
           </p>
         </Container>
       </section>
@@ -53,8 +53,8 @@ export default function WaitlistPage() {
             />
             <Step
               n="03"
-              title="First access, when we open"
-              body="Waitlist members get the gates opened to them first — with founder pricing on the products that matter most."
+              title="A voice in what we build next"
+              body="Subscribers are often the first we ask when we're deciding what to add next — a new brand, a new category, a new feature."
             />
           </ol>
         </Container>

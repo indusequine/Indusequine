@@ -36,10 +36,10 @@ export function Header() {
 
           <div className="hidden md:flex items-center">
             <Link
-              href="/waitlist"
+              href="/marketplace"
               className="inline-flex items-center px-5 py-2.5 text-sm tracking-wide bg-forest text-cream-soft hover:bg-forest-deep transition-colors"
             >
-              Join the Waitlist
+              Shop the Marketplace
             </Link>
           </div>
 
@@ -78,11 +78,11 @@ export function Header() {
                 </Link>
               ))}
               <Link
-                href="/waitlist"
+                href="/marketplace"
                 onClick={() => setOpen(false)}
                 className="mt-2 inline-flex items-center justify-center px-5 py-3 text-sm tracking-wide bg-forest text-cream-soft"
               >
-                Join the Waitlist
+                Shop the Marketplace
               </Link>
             </nav>
           </div>

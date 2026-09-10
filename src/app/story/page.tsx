@@ -231,17 +231,18 @@ function CTA() {
     <section className="bg-oxblood text-cream-soft">
       <Container className="py-20 md:py-24 text-center">
         <h2 className="font-display text-4xl md:text-5xl leading-tight">
-          Ride with us from the beginning.
+          Ride with us as we grow.
         </h2>
         <p className="mt-6 text-cream-soft/80 max-w-xl mx-auto leading-relaxed">
-          Join the waitlist for early access and founder updates. The first
-          riders shape the platform.
+          Get the occasional, considered update — new brands, new
+          professionals, real milestones. The riders who join now help
+          shape what comes next.
         </p>
         <Link
           href="/waitlist"
           className="mt-10 inline-flex items-center justify-center px-10 py-4 bg-cream-soft text-oxblood hover:bg-cream transition-colors text-sm tracking-[0.18em] uppercase"
         >
-          Join the Waitlist
+          Get Updates
         </Link>
       </Container>
     </section>

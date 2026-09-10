@@ -15,7 +15,7 @@ export default function HomePage() {
       <SectionDivider />
       <ServicesSplit />
       <FoundersQuote />
-      <LaunchingSoon />
+      <NowOpen />
     </>
   );
 }
@@ -216,7 +216,7 @@ function FoundersQuote() {
   );
 }
 
-function LaunchingSoon() {
+function NowOpen() {
   return (
     <section className="relative h-[90vh] min-h-[640px] overflow-hidden bg-forest-deep">
       {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -230,23 +230,31 @@ function LaunchingSoon() {
       <Container size="narrow" className="relative h-full flex items-center justify-center text-cream-soft text-center">
         <div>
           <p className="eyebrow text-brass-light">
-            Launching Soon
+            Now Open
           </p>
           <h2 className="font-display text-5xl md:text-7xl lg:text-8xl mt-8 leading-[1.02]">
-            Be the first
+            You&rsquo;re already
             <br />
             <span className="italic text-brass-light">in the saddle.</span>
           </h2>
           <p className="mt-10 text-cream-soft/85 max-w-lg mx-auto leading-relaxed">
-            Join the waitlist for early access, founder updates, and a hand-picked
-            welcome when we open the gates.
+            Real products, real prices, real brands — riders across India
+            are already browsing.
           </p>
           <Link
-            href="/waitlist"
+            href="/marketplace"
             className="mt-12 inline-flex items-center justify-center px-12 py-4 bg-cream-soft text-forest-deep hover:bg-cream transition-colors text-sm tracking-[0.18em] uppercase"
           >
-            Join the Waitlist
+            Shop the Marketplace
           </Link>
+          <div className="mt-6">
+            <Link
+              href="/waitlist"
+              className="text-sm text-cream-soft/70 hover:text-brass-light underline underline-offset-4"
+            >
+              Or get occasional updates as we grow
+            </Link>
+          </div>
         </div>
       </Container>
     </section>

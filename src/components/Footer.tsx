@@ -16,9 +16,6 @@ export async function Footer() {
               India&rsquo;s first dedicated equestrian marketplace. A curated home for
               riders, horses, stables, and the professionals who serve them.
             </p>
-            <p className="mt-6 eyebrow text-brass-light">
-              Launching Soon
-            </p>
           </div>
 
           <div className="md:col-span-2">
@@ -58,7 +55,7 @@ export async function Footer() {
             <p className="eyebrow text-cream-soft/50 mb-4">Company</p>
             <ul className="space-y-3 text-sm">
               <li><Link href="/story" className="hover:text-brass-light">Our Story</Link></li>
-              <li><Link href="/waitlist" className="hover:text-brass-light">Join the Waitlist</Link></li>
+              <li><Link href="/waitlist" className="hover:text-brass-light">Get Updates</Link></li>
               <li><Link href="/contact" className="hover:text-brass-light">Partner With Us</Link></li>
               <li>
                 <a href="mailto:hello@indusequine.com" className="hover:text-brass-light">

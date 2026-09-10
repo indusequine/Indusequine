@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     template: "%s · Indusequine",
   },
   description:
-    "India's first dedicated equestrian marketplace. Premium products for riders, horses and stables. Trusted coaches, vets and farriers. Launching soon.",
+    "India's first dedicated equestrian marketplace. Premium products for riders, horses and stables. Trusted coaches, vets and farriers.",
   keywords: [
     "equestrian India",
     "horse riding equipment India",
