@@ -30,6 +30,7 @@ export const PRODUCT_BY_HANDLE_QUERY = /* GraphQL */ `
   query ProductByHandle($handle: String!) {
     productByHandle(handle: $handle) {
       ...ProductFields
+      description
     }
   }
 `;

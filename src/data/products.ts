@@ -37,6 +37,7 @@ export type Product = {
   priceLabel: string;
   priceOnRequest: boolean;
   image?: string; // Shopify CDN URL
+  description?: string | null; // only populated by getProductBySlug
 };
 
 const PAGE_SIZE = 250;
@@ -107,6 +108,7 @@ function mapProduct(node: ShopifyProductNode, categoryName: string): Product {
     priceLabel: computePriceLabel(variants, priceOnRequest),
     priceOnRequest,
     image: node.featuredImage?.url,
+    description: node.description?.trim() || null,
   };
 }
 

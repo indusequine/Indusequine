@@ -68,6 +68,10 @@ export default async function ProductPage({ params }: Props) {
 
               <p className="mt-8 eyebrow text-brass-deep text-base">{product.priceLabel}</p>
 
+              {product.description && (
+                <p className="mt-6 text-charcoal leading-relaxed">{product.description}</p>
+              )}
+
               {product.variants.length > 1 ? (
                 <div className="mt-6 border-t border-forest/10 pt-6">
                   <p className="eyebrow text-charcoal mb-3">
