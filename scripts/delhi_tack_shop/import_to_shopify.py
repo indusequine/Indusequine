@@ -1,29 +1,41 @@
 #!/usr/bin/env python3
-"""Import Delhi Tack Shop's scraped catalogue into Shopify.
+"""Sync Delhi Tack Shop's scraped catalogue into Shopify.
 
-Reads output/scraped.json (from scrape.py) and mapping.json, and creates or
-updates one Shopify product per supplier product -- reusing the original
-catalogue migration's Shopify client and variant builder.
+Reads output/scraped.json (from scrape.py) and mapping.json, and brings
+Shopify in line with his site -- reusing the original catalogue migration's
+Shopify client and variant builder. Runs unattended on a schedule
+(.github/workflows/sync-delhi-tack-shop.yml), and by hand the same way.
+
+Each run:
+  - creates products new on his site, and updates prices/variants/names of existing ones
+  - hides (status DRAFT) products that are fully out of stock, and shows them
+    again once he restocks -- made-to-order items always stay visible
+  - hides products he has removed from his site, or that mapping.json skips
+  - skips and reports a product it can't place (e.g. a new category not yet
+    in mapping.json) instead of failing the whole run
+
+Nothing is ever deleted -- hiding is reversible. If the scrape looks broken
+(any failed pages, or far fewer products than are live), the hiding step is
+skipped entirely so a bad scrape can't empty the marketplace.
 
 Every product is tagged `supplier:delhi-tack-shop` and `supplier-code:<code>`,
-so an enquiry can be routed back to him, and the whole batch can be found (or
-removed) with one Shopify admin search. Re-running updates products in place:
-existing ones are matched by their supplier-code tag, so a renamed product on
-his site doesn't turn into a duplicate here.
+so an enquiry can be routed back to him. Existing products are matched by that
+code tag, so a product renamed on his site updates in place.
 
 Usage:
     python3 scripts/delhi_tack_shop/import_to_shopify.py --dry-run
-    python3 scripts/delhi_tack_shop/import_to_shopify.py --limit 3
     python3 scripts/delhi_tack_shop/import_to_shopify.py
-    python3 scripts/delhi_tack_shop/import_to_shopify.py --refresh-images   # re-sync photos too
+    python3 scripts/delhi_tack_shop/import_to_shopify.py --only-code "470451,PO-TMP"
+    python3 scripts/delhi_tack_shop/import_to_shopify.py --refresh-images   # re-send photos too
 
-Credentials come from .env, same as scripts/migrate_to_shopify.py.
+Credentials come from .env, or the environment in CI.
 """
 from __future__ import annotations
 
 import argparse
 import html
 import json
+import os
 import re
 import sys
 from collections import defaultdict
@@ -57,13 +69,26 @@ SMALL_WORDS = {"a", "an", "and", "or", "of", "with", "for", "the", "in", "on", "
 PRODUCTS_BY_TAG_QUERY = """
 query($cursor: String, $q: String!) {
   products(first: 250, after: $cursor, query: $q) {
-    edges { node { handle tags } }
+    edges { node { id handle status tags } }
     pageInfo { hasNextPage endCursor }
   }
 }
 """
 
+PRODUCT_STATUS_MUTATION = """
+mutation($product: ProductUpdateInput!) {
+  productUpdate(product: $product) {
+    product { id status }
+    userErrors { field message }
+  }
+}
+"""
+
 COLLECTION_BY_HANDLE_QUERY = "query($handle: String!) { collectionByHandle(handle: $handle) { id } }"
+
+# Below this share of currently-synced products, a scrape is treated as broken
+# and nothing gets hidden -- better a stale product than an empty marketplace.
+MIN_HEALTHY_SCRAPE_RATIO = 0.8
 
 
 def case_part(part: str) -> str:
@@ -199,6 +224,7 @@ def build(p: dict, m: dict, valid_categories: set[str]) -> dict:
     if p.get("madeToOrder"):
         tags.append("made-to-order")
 
+    in_stock = any((v.get("quantity") or 0) > 0 for v in p["variants"])
     return {
         "code": p["code"],
         "name": resolve_name(p, m),
@@ -208,31 +234,71 @@ def build(p: dict, m: dict, valid_categories: set[str]) -> dict:
         "images": image_urls(p),
         "variants": variants,
         "tags": tags,
+        "visible": in_stock or bool(p.get("madeToOrder")),
     }
 
 
-def fetch_existing_handles(client: ShopifyClient) -> dict[str, str]:
-    """supplier code -> Shopify handle, for products imported on a previous run."""
+def fetch_existing(client: ShopifyClient) -> dict[str, dict]:
+    """supplier code -> {id, handle, status}, for products synced on a previous run."""
     out, cursor = {}, None
     while True:
         result = client.query(PRODUCTS_BY_TAG_QUERY, {"cursor": cursor, "q": f"tag:'{SUPPLIER_TAG}'"})
         conn = result["data"]["products"]
         for edge in conn["edges"]:
-            for tag in edge["node"]["tags"]:
+            node = edge["node"]
+            for tag in node["tags"]:
                 if tag.startswith("supplier-code:"):
-                    out[tag[len("supplier-code:"):]] = edge["node"]["handle"]
+                    out[tag[len("supplier-code:"):]] = {"id": node["id"], "handle": node["handle"], "status": node["status"]}
         if not conn["pageInfo"]["hasNextPage"]:
             return out
         cursor = conn["pageInfo"]["endCursor"]
 
 
+def write_product(client: ShopifyClient, input_obj: dict, handle: str, publish: bool) -> str:
+    result = client.query(PRODUCT_SET_MUTATION, {"input": input_obj, "synchronous": True, "identifier": {"handle": handle}})
+    payload = (result.get("data") or {}).get("productSet") or {}
+    errors = result.get("errors") or payload.get("userErrors")
+    if errors or not payload.get("product"):
+        raise RuntimeError(errors or "no product returned")
+    gid = payload["product"]["id"]
+    if publish:
+        pub = client.query(PUBLISH_MUTATION, {"id": gid, "input": [{"publicationId": client.headless_publication_id()}]})
+        pub_errors = (pub.get("data") or {}).get("publishablePublish", {}).get("userErrors")
+        if pub_errors:
+            raise RuntimeError(f"publish failed: {pub_errors}")
+    return gid
+
+
+def hide_product(client: ShopifyClient, gid: str) -> None:
+    result = client.query(PRODUCT_STATUS_MUTATION, {"product": {"id": gid, "status": "DRAFT"}})
+    payload = (result.get("data") or {}).get("productUpdate") or {}
+    errors = result.get("errors") or payload.get("userErrors")
+    if errors:
+        raise RuntimeError(errors)
+
+
+def report(summary: dict, problems: list[str], dry_run: bool) -> None:
+    lines = [f"## Delhi Tack Shop sync{' (dry run)' if dry_run else ''}", ""]
+    lines += [f"- **{label}:** {len(items)}" + (f" — {', '.join(items[:12])}{' …' if len(items) > 12 else ''}" if items and label != "Updated" else "")
+              for label, items in summary.items()]
+    if problems:
+        lines += ["", "### Needs attention", ""] + [f"- {p}" for p in problems]
+    text = "\n".join(lines)
+    print("\n" + text)
+    step_summary = os.environ.get("GITHUB_STEP_SUMMARY")
+    if step_summary:
+        with open(step_summary, "a") as f:
+            f.write(text + "\n")
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     parser.add_argument("--dry-run", action="store_true", help="validate against the live store, write nothing")
-    parser.add_argument("--limit", type=int, default=None, help="only process the first N products")
-    parser.add_argument("--only-code", type=str, default=None, help="only process these supplier product codes (comma-separated)")
+    parser.add_argument("--limit", type=int, default=None, help="only process the first N products (no hiding step)")
+    parser.add_argument("--only-code", type=str, default=None, help="only process these supplier codes, comma-separated (no hiding step)")
     parser.add_argument("--refresh-images", action="store_true", help="re-send photos for products that already exist")
     args = parser.parse_args()
+    partial_run = bool(args.limit or args.only_code)
 
     scraped = json.loads(SCRAPED_PATH.read_text())
     m = json.loads(MAPPING_PATH.read_text())
@@ -244,58 +310,56 @@ def main():
     if args.only_code:
         wanted = set(args.only_code.split(","))
         products = [p for p in products if p["code"] in wanted]
-    skipped = [{"code": p["code"], "name": p["name"], "reason": m["skip"][p["code"]]} for p in products if p["code"] in m["skip"]]
     products = [p for p in products if p["code"] not in m["skip"]]
     if args.limit:
         products = products[: args.limit]
 
-    built, build_errors = [], []
+    problems: list[str] = []
+    built = []
     for p in products:
         try:
             built.append(build(p, m, valid_categories))
         except Exception as e:
-            build_errors.append({"code": p["code"], "name": p["name"], "error": str(e)})
+            problems.append(f"`{p['code']}` {p['name']}: {e}")
 
     by_name = defaultdict(list)
     for b in built:
         by_name[b["name"]].append(b["code"])
-    duplicate_names = {n: codes for n, codes in by_name.items() if len(codes) > 1}
+    for name, codes in by_name.items():
+        if len(codes) > 1:
+            problems.append(f"{len(codes)} products share the name {name!r} ({', '.join(codes)}) -- add nameOverrides in mapping.json")
 
     client = ShopifyClient(load_env())
-    existing = fetch_existing_handles(client)
+    existing = fetch_existing(client)
 
     collection_gids: dict[str, str] = {}
     for cat in sorted({b["category"] for b in built}):
-        found = client.query(COLLECTION_BY_HANDLE_QUERY, {"handle": cat}).get("data", {}).get("collectionByHandle")
+        found = (client.query(COLLECTION_BY_HANDLE_QUERY, {"handle": cat}).get("data") or {}).get("collectionByHandle")
         if found:
             collection_gids[cat] = found["id"]
         else:
-            build_errors.append({"code": "*", "name": cat, "error": f"no Shopify collection for category {cat!r}"})
+            problems.append(f"no Shopify collection for category {cat!r} -- its products were skipped")
+    built = [b for b in built if b["category"] in collection_gids]
 
-    print(f"{len(built)} to import, {len(skipped)} skipped, {len(build_errors)} build error(s), "
-          f"{len(existing)} already in Shopify{' [DRY RUN]' if args.dry_run else ''}")
-    for e in build_errors:
-        print(f"  ERROR {e['code']} {e['name']}: {e['error']}")
-    for n, codes in duplicate_names.items():
-        print(f"  DUPLICATE NAME {n!r}: {codes} -- add nameOverrides to tell them apart")
-    if build_errors or duplicate_names:
-        print("fix the above in mapping.json before importing")
-        sys.exit(1)
+    summary: dict[str, list[str]] = {
+        "New": [], "Updated": [], "Hidden — out of stock": [], "Shown again — back in stock": [],
+        "Hidden — removed from his site": [], "Hidden — skipped in mapping.json": [], "Failed": [],
+    }
 
-    results = []
     for i, b in enumerate(built, 1):
+        prior = existing.get(b["code"])
         name_slug, code_slug = slugify(b["name"]), slugify(b["code"])
-        handle = existing.get(b["code"]) or (name_slug if name_slug.endswith(code_slug) else f"{name_slug}-{code_slug}")
+        handle = prior["handle"] if prior else (name_slug if name_slug.endswith(code_slug) else f"{name_slug}-{code_slug}")
         if handle in original_handles:
             raise SystemExit(f"refusing to write {handle!r}: it belongs to an existing catalogue product")
-        is_update = b["code"] in existing
 
-        product_options, variant_inputs, notes = build_options_and_variants(b)
+        status = "ACTIVE" if b["visible"] else "DRAFT"
+        product_options, variant_inputs, _ = build_options_and_variants(b)
         input_obj = {
             "handle": handle,
             "title": b["name"],
             "vendor": b["brand"] or "Indusequine",
-            "status": "ACTIVE",
+            "status": status,
             "tags": b["tags"],
             "productOptions": product_options,
             "variants": variant_inputs,
@@ -303,38 +367,61 @@ def main():
         }
         if b["description"]:
             input_obj["descriptionHtml"] = f"<p>{html.escape(b['description'])}</p>"
-        if b["images"] and (not is_update or args.refresh_images):
+        if b["images"] and (not prior or args.refresh_images):
             input_obj["files"] = [{"originalSource": u, "contentType": "IMAGE", "alt": b["name"]} for u in b["images"]]
 
-        label = f"[{i}/{len(built)}] {b['code']} -> {handle}"
-        if args.dry_run:
-            print(f"{label}: {b['name']!r} | {b['brand'] or '-'} | {b['category']} | "
-                  f"{len(variant_inputs)} variant(s) | {len(b['images'])} image(s){' | UPDATE' if is_update else ''}")
-            continue
+        if not prior:
+            outcome = "New"
+        elif prior["status"] == "ACTIVE" and status == "DRAFT":
+            outcome = "Hidden — out of stock"
+        elif prior["status"] != "ACTIVE" and status == "ACTIVE":
+            outcome = "Shown again — back in stock"
+        else:
+            outcome = "Updated"
 
-        try:
-            result = client.query(PRODUCT_SET_MUTATION, {"input": input_obj, "synchronous": True, "identifier": {"handle": handle}})
-            payload = (result.get("data") or {}).get("productSet") or {}
-            errors = result.get("errors") or payload.get("userErrors")
-            if errors or not payload.get("product"):
-                raise RuntimeError(errors or "no product returned")
-            gid = payload["product"]["id"]
-            pub = client.query(PUBLISH_MUTATION, {"id": gid, "input": [{"publicationId": client.headless_publication_id()}]})
-            pub_errors = (pub.get("data") or {}).get("publishablePublish", {}).get("userErrors")
-            if pub_errors:
-                raise RuntimeError(f"publish failed: {pub_errors}")
-            results.append({"code": b["code"], "handle": handle, "shopify_id": gid, "updated": is_update, "notes": notes})
-            print(f"{label}: OK{' (updated)' if is_update else ''}")
-        except Exception as e:
-            results.append({"code": b["code"], "handle": handle, "error": str(e)})
-            print(f"{label}: FAILED - {e}")
+        label = f"[{i}/{len(built)}] {b['code']} -> {handle}"
+        if not args.dry_run:
+            try:
+                write_product(client, input_obj, handle, publish=(status == "ACTIVE"))
+            except Exception as e:
+                summary["Failed"].append(b["name"])
+                problems.append(f"`{b['code']}` {b['name']}: write failed -- {e}")
+                print(f"{label}: FAILED - {e}")
+                continue
+        summary[outcome].append(b["name"])
+        print(f"{label}: {outcome}{' (planned)' if args.dry_run else ''}")
+
+    # Hide what's no longer on his site (or newly skipped) -- full runs only, and
+    # only when the scrape looks complete, so a broken scrape can't hide everything.
+    if not partial_run:
+        scraped_codes = {p["code"] for p in scraped["products"]}
+        healthy = not scraped["failures"] and len(scraped_codes) >= MIN_HEALTHY_SCRAPE_RATIO * len(existing)
+        to_hide = [
+            (code, info, "Hidden — removed from his site" if code not in scraped_codes else "Hidden — skipped in mapping.json")
+            for code, info in existing.items()
+            if info["status"] == "ACTIVE" and (code not in scraped_codes or code in m["skip"])
+        ]
+        if to_hide and not healthy:
+            problems.append(
+                f"scrape looks incomplete ({len(scraped_codes)} products, {len(scraped['failures'])} failed pages, "
+                f"{len(existing)} live) -- skipped hiding {len(to_hide)} product(s) to be safe"
+            )
+        elif to_hide:
+            for code, info, bucket in to_hide:
+                if not args.dry_run:
+                    try:
+                        hide_product(client, info["id"])
+                    except Exception as e:
+                        problems.append(f"`{code}` {info['handle']}: hide failed -- {e}")
+                        continue
+                summary[bucket].append(info["handle"])
+                print(f"{code} -> {info['handle']}: {bucket}{' (planned)' if args.dry_run else ''}")
 
     if not args.dry_run:
-        LOG_PATH.write_text(json.dumps({"results": results, "skipped": skipped}, indent=2, ensure_ascii=False))
-        ok = sum(1 for r in results if "error" not in r)
-        print(f"\n{ok} succeeded, {len(results) - ok} failed -> {LOG_PATH}")
-        if ok < len(results):
-            sys.exit(1)
+        LOG_PATH.write_text(json.dumps({"summary": summary, "problems": problems}, indent=2, ensure_ascii=False))
+    report(summary, problems, args.dry_run)
+    if problems:
+        sys.exit(1)
 
 
 if __name__ == "__main__":

@@ -24,6 +24,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import os
 import re
 import sys
 import time
@@ -49,21 +50,23 @@ SIZE_WORDS = {
 
 
 def load_env() -> dict:
+    """Credentials from .env when present (local runs), else from the environment (CI)."""
     env = {}
     env_path = ROOT / ".env"
-    if not env_path.exists():
-        print("error: .env not found at", env_path, file=sys.stderr)
-        sys.exit(1)
-    with open(env_path) as f:
-        for line in f:
-            line = line.strip()
-            if line and "=" in line and not line.startswith("#"):
-                k, v = line.split("=", 1)
-                env[k.strip()] = v.strip()
+    if env_path.exists():
+        with open(env_path) as f:
+            for line in f:
+                line = line.strip()
+                if line and "=" in line and not line.startswith("#"):
+                    k, v = line.split("=", 1)
+                    env[k.strip()] = v.strip()
     required = ["SHOPIFY_ADMIN_CLIENT_ID", "SHOPIFY_ADMIN_CLIENT_SECRET", "SHOPIFY_STORE_DOMAIN"]
+    for k in required:
+        if not env.get(k) and os.environ.get(k):
+            env[k] = os.environ[k]
     missing = [k for k in required if not env.get(k)]
     if missing:
-        print("error: missing required .env keys:", missing, file=sys.stderr)
+        print("error: missing Shopify credentials (set in .env or the environment):", missing, file=sys.stderr)
         sys.exit(1)
     return env
 

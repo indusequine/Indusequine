@@ -1,0 +1,37 @@
+name: Sync Delhi Tack Shop
+
+# Keeps Delhi Tack Shop's products on Indusequine in line with his website:
+# new products, price changes, out-of-stock / back-in-stock, removals.
+# See scripts/delhi_tack_shop/import_to_shopify.py for exactly what a run does.
+
+on:
+  schedule:
+    - cron: "17 */6 * * *" # every 6 hours (UTC); off the hour to avoid GitHub's peak queue
+  workflow_dispatch: # "Run workflow" button in the Actions tab
+
+concurrency:
+  group: sync-delhi-tack-shop
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v5
+
+      - name: Read his catalogue
+        run: python3 scripts/delhi_tack_shop/scrape.py
+
+      # Runs even if a few pages failed to load -- the sync still updates what it
+      # got, and skips hiding anything when the scrape is incomplete.
+      - name: Sync into Shopify
+        if: ${{ !cancelled() && hashFiles('scripts/delhi_tack_shop/output/scraped.json') != '' }}
+        env:
+          SHOPIFY_ADMIN_CLIENT_ID: ${{ secrets.SHOPIFY_ADMIN_CLIENT_ID }}
+          SHOPIFY_ADMIN_CLIENT_SECRET: ${{ secrets.SHOPIFY_ADMIN_CLIENT_SECRET }}
+          SHOPIFY_STORE_DOMAIN: ${{ secrets.SHOPIFY_STORE_DOMAIN }}
+        run: python3 scripts/delhi_tack_shop/import_to_shopify.py
