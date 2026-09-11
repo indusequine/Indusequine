@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useState } from "react";
 
 export type PickerVariant = {
   size: string | null;
@@ -42,8 +42,7 @@ function sizeKey(size: string): [number, number, number] {
 }
 
 function sortedSizes(labels: string[]): string[] {
-  const unique = [...new Set(labels)];
-  return unique
+  return [...new Set(labels)]
     .map((s, i) => ({ s, i, k: sizeKey(s) }))
     .sort((a, b) => a.k[0] - b.k[0] || a.k[1] - b.k[1] || a.k[2] - b.k[2] || a.i - b.i)
     .map((x) => x.s);
@@ -53,117 +52,103 @@ function distinct(values: string[]): string[] {
   return [...new Set(values)];
 }
 
-// showPrice is false when the whole product has one price -- it's already
-// shown above the picker, so repeating it here is just noise.
-function Options({ variants, showPrice }: { variants: PickerVariant[]; showPrice: boolean }) {
-  const prices = distinct(variants.map((v) => v.priceText));
-  const colors = distinct(variants.map((v) => v.color).filter((c): c is string => Boolean(c)));
-  const uniform = prices.length === 1;
-
-  return (
-    <div>
-      {showPrice && (uniform || colors.length === 0) && (
-        <p className="eyebrow text-brass-deep text-base">{prices.join(" / ")}</p>
-      )}
-      {colors.length > 0 && (
-        <>
-          <p className={`eyebrow text-charcoal ${showPrice && uniform ? "mt-5" : ""}`}>
-            {colors.length === 1 ? "Colour" : `${colors.length} Colours`}
-          </p>
-          <ul className="mt-3 flex flex-wrap gap-2">
-            {colors.map((c) => (
-              <li key={c} className="px-3 py-1.5 border border-forest/15 bg-cream text-sm text-charcoal">
-                {c}
-                {!uniform && (
-                  <span className="text-stone">
-                    {" · "}
-                    {distinct(variants.filter((v) => v.color === c).map((v) => v.priceText)).join(" / ")}
-                  </span>
-                )}
-              </li>
-            ))}
-          </ul>
-        </>
-      )}
-    </div>
-  );
+// Price per value (per size, or per colour) -- only when each value has exactly
+// one price and they don't all match; otherwise the price label above covers it.
+function pricesBy(variants: PickerVariant[], key: "size" | "color", values: string[]): Map<string, string> | null {
+  const map = new Map<string, string>();
+  for (const value of values) {
+    const prices = distinct(variants.filter((v) => v[key] === value).map((v) => v.priceText));
+    if (prices.length !== 1) return null;
+    map.set(value, prices[0]);
+  }
+  return distinct([...map.values()]).length > 1 ? map : null;
 }
 
-export function VariantPicker({ variants }: { variants: PickerVariant[] }) {
-  const hasSizes = variants.some((v) => v.size);
+const chip = "px-4 py-2 border text-sm transition-colors";
+
+export function VariantPicker({ variants: raw }: { variants: PickerVariant[] }) {
+  const hasSizes = raw.some((v) => v.size);
   // A variant with no size alongside sized ones is the product's one-size option.
-  const labelled = useMemo(
-    () => variants.map((v) => ({ ...v, size: hasSizes ? (v.size ?? "One Size") : null })),
-    [variants, hasSizes],
-  );
-  const sizes = useMemo(() => sortedSizes(labelled.flatMap((v) => (v.size ? [v.size] : []))), [labelled]);
-  const [selected, setSelected] = useState<string | null>(sizes.length === 1 ? sizes[0] : null);
+  const variants = raw.map((v) => ({ ...v, size: hasSizes ? (v.size ?? "One Size") : null }));
+  const sizes = sortedSizes(variants.flatMap((v) => (v.size ? [v.size] : [])));
+  const colors = distinct(variants.flatMap((v) => (v.color ? [v.color] : [])));
 
-  const singlePrice = distinct(variants.map((v) => v.priceText)).length === 1;
-  const hasColors = variants.some((v) => v.color);
+  const sizePrices = pricesBy(variants, "size", sizes);
+  const colorPrices = sizePrices ? null : pricesBy(variants, "color", colors);
 
-  if (!hasSizes) {
-    return (
-      <div className="mt-6 border-t border-forest/10 pt-6">
-        <Options variants={labelled} showPrice={!singlePrice} />
-      </div>
-    );
-  }
+  // Only when some size doesn't come in every colour is there anything to learn
+  // by tapping a size -- otherwise both lists already tell the whole story.
+  const combos = new Set(variants.map((v) => `${v.size}|${v.color}`));
+  const everyComboExists = sizes.every((s) => colors.every((c) => combos.has(`${s}|${c}`)));
+  const tappable = sizes.length > 1 && colors.length > 1 && !everyComboExists;
 
-  const sizeLabel = (
-    <p className="eyebrow text-charcoal">{sizes.length === 1 ? "Size" : `${sizes.length} Sizes`}</p>
-  );
-
-  // Nothing differs between sizes (no colours, one price) -- nothing to reveal,
-  // so show the sizes as plain labels rather than buttons that do nothing.
-  if (!hasColors && singlePrice) {
-    return (
-      <div className="mt-6 border-t border-forest/10 pt-6">
-        {sizeLabel}
-        <ul className="mt-3 flex flex-wrap gap-2">
-          {sizes.map((s) => (
-            <li key={s} className="px-4 py-2 border border-forest/20 bg-cream-soft text-sm text-ink">{s}</li>
-          ))}
-        </ul>
-      </div>
-    );
-  }
-
-  const hint = hasColors
-    ? singlePrice ? "Select a size to see colours" : "Select a size to see colours and price"
-    : "Select a size to see its price";
+  const [selected, setSelected] = useState<string | null>(null);
+  const colorsInSelected = selected ? new Set(variants.filter((v) => v.size === selected).map((v) => v.color)) : null;
 
   return (
-    <div className="mt-6 border-t border-forest/10 pt-6">
-      <div className="flex items-baseline justify-between gap-4">
-        {sizeLabel}
-        {!selected && <p className="text-xs text-stone">{hint}</p>}
-      </div>
+    <div className="mt-6 border-t border-forest/10 pt-6 space-y-6">
+      {sizes.length > 0 && (
+        <div>
+          <div className="flex items-baseline justify-between gap-4">
+            <p className="eyebrow text-charcoal">{sizes.length === 1 ? "Size" : `${sizes.length} Sizes`}</p>
+            {tappable && (
+              <p className="text-xs text-stone">
+                {selected ? "Tap again to show all colours" : "Tap a size to check its colours"}
+              </p>
+            )}
+          </div>
+          <ul className="mt-3 flex flex-wrap gap-2">
+            {sizes.map((s) => {
+              const label = sizePrices ? `${s} · ${sizePrices.get(s)}` : s;
+              if (!tappable) {
+                return (
+                  <li key={s} className={`${chip} border-forest/20 bg-cream-soft text-ink`}>
+                    {label}
+                  </li>
+                );
+              }
+              const active = selected === s;
+              return (
+                <li key={s}>
+                  <button
+                    type="button"
+                    aria-pressed={active}
+                    onClick={() => setSelected(active ? null : s)}
+                    className={`${chip} focus:outline-none focus-visible:ring-2 focus-visible:ring-forest/40 ${
+                      active
+                        ? "bg-forest border-forest text-cream-soft"
+                        : "bg-cream-soft border-forest/20 text-ink hover:border-forest"
+                    }`}
+                  >
+                    {label}
+                  </button>
+                </li>
+              );
+            })}
+          </ul>
+        </div>
+      )}
 
-      <div className="mt-3 flex flex-wrap gap-2">
-        {sizes.map((s) => {
-          const active = selected === s;
-          return (
-            <button
-              key={s}
-              type="button"
-              aria-pressed={active}
-              onClick={() => setSelected(active ? null : s)}
-              className={`px-4 py-2 border text-sm transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-forest/40 ${
-                active
-                  ? "bg-forest border-forest text-cream-soft"
-                  : "bg-cream-soft border-forest/20 text-ink hover:border-forest"
-              }`}
-            >
-              {s}
-            </button>
-          );
-        })}
-      </div>
-
-      <div aria-live="polite" className="mt-5">
-        {selected && <Options variants={labelled.filter((v) => v.size === selected)} showPrice={!singlePrice} />}
-      </div>
+      {colors.length > 0 && (
+        <div>
+          <p className="eyebrow text-charcoal">{colors.length === 1 ? "Colour" : `${colors.length} Colours`}</p>
+          <ul className="mt-3 flex flex-wrap gap-2" aria-live="polite">
+            {colors.map((c) => {
+              const unavailable = colorsInSelected !== null && !colorsInSelected.has(c);
+              return (
+                <li
+                  key={c}
+                  className={`${chip} border-forest/15 bg-cream text-charcoal ${unavailable ? "opacity-35 line-through" : ""}`}
+                >
+                  {c}
+                  {colorPrices && <span className="text-stone"> · {colorPrices.get(c)}</span>}
+                  {unavailable && <span className="sr-only"> (not available in {selected})</span>}
+                </li>
+              );
+            })}
+          </ul>
+        </div>
+      )}
     </div>
   );
 }
