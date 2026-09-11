@@ -5,6 +5,7 @@ import { Container } from "@/components/Container";
 import { ProductImage } from "@/components/ProductImage";
 import { ProductGrid } from "@/components/ProductGrid";
 import { EnquiryForm } from "@/components/EnquiryForm";
+import { VariantPicker } from "@/components/VariantPicker";
 import { getAllProductSlugs, getProductBySlug, getProductsByCategory, formatPrice } from "@/data/products";
 
 const RELATED_LIMIT = 8;
@@ -73,23 +74,13 @@ export default async function ProductPage({ params }: Props) {
               )}
 
               {product.variants.length > 1 ? (
-                <div className="mt-6 border-t border-forest/10 pt-6">
-                  <p className="eyebrow text-charcoal mb-3">
-                    {product.variants.length} Options
-                  </p>
-                  <div className="divide-y divide-forest/10">
-                    {product.variants.map((v) => (
-                      <div key={v.sku} className="flex justify-between gap-6 py-2 text-sm">
-                        <dt className="text-stone">
-                          {[v.size, v.color].filter(Boolean).join(" / ") || v.sku}
-                        </dt>
-                        <dd className="text-ink text-right">
-                          {product.priceOnRequest ? "Price on request" : formatPrice(v.price)}
-                        </dd>
-                      </div>
-                    ))}
-                  </div>
-                </div>
+                <VariantPicker
+                  variants={product.variants.map((v) => ({
+                    size: v.size ?? null,
+                    color: v.color ?? null,
+                    priceText: product.priceOnRequest ? "Price on request" : formatPrice(v.price),
+                  }))}
+                />
               ) : (
                 <p className="mt-6 text-xs text-stone">SKU: {product.variants[0]?.sku}</p>
               )}
