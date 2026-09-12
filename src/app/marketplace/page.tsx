@@ -36,7 +36,9 @@ export default async function MarketplacePage() {
                 0,
               );
               return (
-                <CategoryGroupTile key={group.slug} group={group} productCount={productCount} />
+                <div key={group.slug} className="reveal">
+                  <CategoryGroupTile group={group} productCount={productCount} />
+                </div>
               );
             })}
           </div>
@@ -72,22 +74,29 @@ function TrustBadges({
   totalProducts: number;
   totalCategories: number;
 }) {
-  const badges = [
-    { label: "Products Listed", value: `${totalProducts.toLocaleString("en-IN")}+` },
+  // Only real figures get the display treatment -- a word set at 7xl wraps and
+  // drops off the shared baseline, so the qualitative claims are prose instead.
+  const figures = [
+    { label: "Products Listed", value: totalProducts.toLocaleString("en-IN") },
     { label: "Categories", value: `${totalCategories}` },
-    { label: "Brands", value: "Verified" },
-    { label: "Support", value: "Direct Enquiry" },
   ];
   return (
-    <section className="bg-cream py-10 border-y border-forest/10">
+    <section className="bg-cream py-16 md:py-20 border-y border-forest/10">
       <Container size="wide">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-          {badges.map((b) => (
-            <div key={b.label}>
-              <p className="font-display text-2xl md:text-3xl text-forest">{b.value}</p>
-              <p className="mt-1 text-xs tracking-wide uppercase text-stone">{b.label}</p>
+        <div className="reveal grid grid-cols-1 md:grid-cols-12 gap-10 md:gap-8 items-end">
+          {figures.map((f) => (
+            <div key={f.label} className="md:col-span-3">
+              <p className="font-display text-6xl md:text-7xl text-forest leading-none tabular-nums">
+                {f.value}
+              </p>
+              <p className="eyebrow text-brass-deep mt-3">{f.label}</p>
             </div>
           ))}
+          <p className="md:col-span-5 md:col-start-8 text-charcoal leading-relaxed md:text-right">
+            Every listing is a real product from a verified brand, at the price
+            you&rsquo;d pay. Questions go straight to us — answered by enquiry,
+            not a chatbot.
+          </p>
         </div>
       </Container>
     </section>
@@ -110,10 +119,13 @@ function PageHero() {
           you&rsquo;ve only heard of from friends abroad. All under one
           well-tended roof.
         </p>
-        <p className="mt-4 text-sm text-cream-soft/50 max-w-2xl mx-auto">
-          Real listings, real prices — product photography is on its way.
-        </p>
       </Container>
+
+      {/* The practical facts sit in the margins, leaving the centre for one statement. */}
+      <div className="hidden md:flex absolute inset-x-0 bottom-8 px-10 lg:px-16 justify-between text-cream-soft/45">
+        <p className="eyebrow">Real listings, real prices</p>
+        <p className="eyebrow">Photography on its way</p>
+      </div>
     </section>
   );
 }

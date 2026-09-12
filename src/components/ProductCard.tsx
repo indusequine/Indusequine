@@ -8,7 +8,7 @@ export function ProductCard({ product }: { product: Product }) {
   return (
     <Link
       href={`/marketplace/product/${product.slug}`}
-      className="group block border border-forest/15 bg-cream-soft hover:border-forest/40 transition-colors"
+      className="reveal group block border border-forest/15 bg-cream-soft hover:border-forest/40 transition-colors"
     >
       <ProductImage product={product} />
       <div className="p-6">

@@ -146,7 +146,9 @@ function DiscoverSection({ category }: { category: (typeof categories)[number] }
     <section id={category.id} className="py-24 md:py-32 scroll-mt-24 bg-cream-soft odd:bg-cream">
       <Container>
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
-          <div className="lg:col-span-7">
+          {/* Only the prose column reveals -- the card beside it is sticky, and a
+              transform on its ancestor would fight the sticky positioning. */}
+          <div className="reveal lg:col-span-7">
             <p className="eyebrow text-brass-deep">{category.eyebrow}</p>
             <h2 className="font-display text-4xl md:text-5xl mt-4 text-forest leading-tight">
               {category.title}

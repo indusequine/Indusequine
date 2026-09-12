@@ -94,7 +94,7 @@ function CinematicHero() {
 function Whisper() {
   return (
     <section className="bg-cream-soft py-32 md:py-48">
-      <Container size="narrow" className="text-center">
+      <Container size="narrow" className="reveal text-center">
         <p className="eyebrow text-brass-deep">
           What is Indusequine
         </p>
@@ -115,7 +115,7 @@ function Whisper() {
 function MarketplaceSplit() {
   return (
     <section className="bg-cream py-24 md:py-32">
-      <Container size="wide">
+      <Container size="wide" className="reveal">
         <p className="md:hidden eyebrow text-brass-deep text-center text-lg font-bold tracking-[0.32em] mb-10">
           The Marketplace
         </p>
@@ -156,7 +156,7 @@ function MarketplaceSplit() {
 function ServicesSplit() {
   return (
     <section className="bg-cream py-24 md:py-32">
-      <Container size="wide">
+      <Container size="wide" className="reveal">
         <p className="md:hidden eyebrow text-brass-deep text-center text-lg font-bold tracking-[0.32em] mb-10">
           The Services
         </p>
@@ -196,7 +196,7 @@ function ServicesSplit() {
 function FoundersQuote() {
   return (
     <section className="bg-cream-soft py-32 md:py-48 border-t border-b border-forest/10">
-      <Container size="narrow" className="text-center">
+      <Container size="narrow" className="reveal text-center">
         <p className="eyebrow text-brass-deep">A Note From The Founders</p>
         <blockquote className="mt-14 font-display text-2xl md:text-3xl lg:text-4xl text-forest leading-[1.35] italic">
           &ldquo;India has one of the world&rsquo;s oldest equestrian

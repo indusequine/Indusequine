@@ -18,6 +18,7 @@
 
   --font-display: var(--font-cormorant), "Cormorant Garamond", "Times New Roman", serif;
   --font-body: var(--font-inter), "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-mono: var(--font-mono-dm), "DM Mono", ui-monospace, "SF Mono", Menlo, monospace;
 }
 
 html {
@@ -45,22 +46,34 @@ h1, h2, h3, h4, h5, h6, .font-display {
   color: var(--color-cream-soft);
 }
 
-.eyebrow {
-  font-family: var(--font-body);
-  font-size: 0.75rem;
-  letter-spacing: 0.22em;
-  text-transform: uppercase;
-  font-weight: 500;
-}
+/* These sit in the components layer so Tailwind utilities still win -- a few
+   places set their own size or tracking on top of .eyebrow, and unlayered CSS
+   would silently beat those utilities. */
+@layer components {
+  /* Small labels -- categories, counts, SKUs, section eyebrows -- sit in mono.
+     Mono is already wide, so it needs less tracking than Inter did. */
+  .eyebrow {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    font-weight: 400;
+  }
 
-.rule {
-  display: inline-block;
-  width: 2rem;
-  height: 1px;
-  background: currentColor;
-  vertical-align: middle;
-  margin-right: 0.75rem;
-  opacity: 0.5;
+  .mono {
+    font-family: var(--font-mono);
+    font-variant-numeric: tabular-nums;
+  }
+
+  .rule {
+    display: inline-block;
+    width: 2rem;
+    height: 1px;
+    background: currentColor;
+    vertical-align: middle;
+    margin-right: 0.75rem;
+    opacity: 0.5;
+  }
 }
 
 @keyframes fadeInUp {
@@ -70,4 +83,23 @@ h1, h2, h3, h4, h5, h6, .font-display {
 
 .fade-in-up {
   animation: fadeInUp 0.8s ease-out backwards;
+}
+
+@keyframes revealUp {
+  from { opacity: 0; transform: translateY(28px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* One reveal, used everywhere: fade in while rising as the element enters view.
+   Scroll-driven and CSS-only, so there's no JavaScript, nothing is ever parked
+   invisible waiting on a script, and browsers without support simply show the
+   content as normal. */
+@media (prefers-reduced-motion: no-preference) {
+  @supports (animation-timeline: view()) {
+    .reveal {
+      animation: revealUp linear both;
+      animation-timeline: view();
+      animation-range: entry 0% entry 55%;
+    }
+  }
 }
