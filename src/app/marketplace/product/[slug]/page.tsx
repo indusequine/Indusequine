@@ -75,6 +75,17 @@ export default async function ProductPage({ params }: Props) {
 
               <p className="mt-8 eyebrow text-brass-deep text-base">{product.priceLabel}</p>
 
+              {/* Who sells it, next to the price -- the same product can come
+                  from more than one of our sellers, at different prices. */}
+              {product.seller && (
+                <p className="mt-3 text-sm text-charcoal">
+                  Sold by{" "}
+                  <span className="text-forest border-b border-forest/25">
+                    {product.seller.name}
+                  </span>
+                </p>
+              )}
+
               {product.description && (
                 <p className="mt-6 text-charcoal leading-relaxed">{product.description}</p>
               )}

@@ -1,6 +1,7 @@
 import { shopifyFetch, fetchAllPages } from "@/lib/shopify/client";
 import { brandSlug } from "@/lib/brands";
 import { categoryTileProduct } from "@/lib/categoryImages";
+import { sellerFromTags, type Seller } from "@/lib/sellers";
 import {
   PRODUCT_BY_HANDLE_QUERY,
   COLLECTION_BY_HANDLE_QUERY,
@@ -44,6 +45,7 @@ export type Product = {
   priceOnRequest: boolean;
   image?: string; // Shopify CDN URL
   description?: string | null; // only populated by getProductBySlug
+  seller?: Seller | null; // who sells it, as distinct from who makes it
 };
 
 const PAGE_SIZE = 250;
@@ -115,6 +117,7 @@ function mapProduct(node: ShopifyProductNode, categoryName: string): Product {
     priceOnRequest,
     image: node.featuredImage?.url,
     description: node.description?.trim() || null,
+    seller: sellerFromTags(node.tags),
   };
 }
 
