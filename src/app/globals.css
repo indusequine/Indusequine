@@ -26,6 +26,38 @@ html {
   color: var(--color-ink);
 }
 
+/* An experiment: the marketplace in Emmers' palette, lifted from their own
+   theme tokens -- burnt orange #b35800, dark brown #4b2d11, warm sand #f4e6d9,
+   off-white #fbf5f0, near-black #252321.
+
+   This redefines the existing colour tokens inside the marketplace rather than
+   rewriting every component, so it can be tried and dropped in one block. The
+   consequence is that the names stop describing the colours in here: "forest"
+   is a near-black and "brass" is orange. Fine for judging the palette, worth
+   renaming properly if we keep it. */
+.theme-emmers {
+  --color-forest-deep: #4b2d11;
+  --color-forest: #252321;
+  --color-forest-soft: #565350;
+
+  --color-brass: #b35800;
+  --color-brass-light: #d98b3f;
+  --color-brass-deep: #b35800;
+
+  --color-cream-soft: #fbf5f0;
+  --color-cream: #f4e6d9;
+  --color-cream-warm: #f4e6d9;
+
+  --color-oxblood: #b35800;
+  --color-oxblood-deep: #8a4300;
+
+  --color-ink: #252321;
+  --color-charcoal: #565350;
+  --color-stone: #7a736c;
+
+  background: var(--color-cream-soft);
+}
+
 body {
   font-family: var(--font-body);
   background: var(--color-cream-soft);
