@@ -95,26 +95,26 @@ const categories = [
 
 export default function DiscoverPage() {
   return (
-    <div className="theme-discover">
+    <>
       <PageHero />
       {categories.map((c) => (
         <DiscoverSection key={c.id} category={c} />
       ))}
       <DiscoverCTA />
-    </div>
+    </>
   );
 }
 
 function PageHero() {
   return (
-    <section className="relative py-24 md:py-32 overflow-hidden bg-ground-deep border-b border-accent/30">
+    <section className="relative py-24 md:py-32 overflow-hidden bg-forest-deep border-b border-brass/20">
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <img
         src={HERO_PHOTO}
         alt="Riders and horses warming up before a session"
         className="absolute inset-0 w-full h-full object-cover opacity-30"
       />
-      <div className="absolute inset-0 bg-ground-deep/65" />
+      <div className="absolute inset-0 bg-forest-deep/60" />
       <Container className="relative text-center">
         <p className="eyebrow text-brass-light">Discover</p>
         <h1 className="font-display text-5xl md:text-7xl mt-6 leading-[1.05] max-w-4xl mx-auto text-cream-soft">
@@ -130,7 +130,7 @@ function PageHero() {
             <Link
               key={c.id}
               href={`#${c.id}`}
-              className="px-5 py-2.5 border border-cream-soft/30 hover:border-accent-bright hover:text-accent-bright transition-colors text-sm tracking-wide text-cream-soft"
+              className="px-5 py-2.5 border border-cream-soft/30 hover:border-brass-light hover:text-brass-light transition-colors text-sm tracking-wide text-cream-soft"
             >
               {c.eyebrow}
             </Link>
@@ -149,7 +149,7 @@ function DiscoverSection({ category }: { category: (typeof categories)[number] }
           {/* Only the prose column reveals -- the card beside it is sticky, and a
               transform on its ancestor would fight the sticky positioning. */}
           <div className="reveal lg:col-span-7">
-            <p className="eyebrow text-accent">{category.eyebrow}</p>
+            <p className="eyebrow text-brass-deep">{category.eyebrow}</p>
             <h2 className="font-display text-4xl md:text-5xl mt-4 text-forest leading-tight">
               {category.title}
             </h2>
@@ -159,7 +159,7 @@ function DiscoverSection({ category }: { category: (typeof categories)[number] }
             <ul className="mt-8 space-y-3">
               {category.bullets.map((b) => (
                 <li key={b} className="flex items-start gap-3 text-charcoal leading-relaxed">
-                  <span className="mt-2.5 w-1.5 h-1.5 bg-accent-dot shrink-0 rounded-full"></span>
+                  <span className="mt-2.5 w-1.5 h-1.5 bg-brass shrink-0 rounded-full"></span>
                   <span>{b}</span>
                 </li>
               ))}
@@ -168,7 +168,7 @@ function DiscoverSection({ category }: { category: (typeof categories)[number] }
 
           <div className="lg:col-span-5">
             <div className="border border-forest/15 bg-cream-soft p-8 sticky top-32">
-              <p className="eyebrow text-accent">{category.promiseEyebrow}</p>
+              <p className="eyebrow text-brass-deep">{category.promiseEyebrow}</p>
               <ul className="mt-5 space-y-3">
                 {category.promiseItems.map((p) => (
                   <li key={p} className="flex items-start gap-3 text-ink">
@@ -199,7 +199,7 @@ function Checkmark() {
 
 function DiscoverCTA() {
   return (
-    <section className="bg-forest text-cream-soft py-24 md:py-28">
+    <section className="bg-oxblood text-cream-soft py-24 md:py-28">
       <Container size="narrow" className="text-center">
         <p className="eyebrow text-brass-light">
           For Centres, Coaches & Show Organisers
