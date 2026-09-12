@@ -68,7 +68,7 @@ function Chevron({ open }: { open: boolean }) {
   return (
     <svg
       width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"
-      className={`shrink-0 text-forest transition-transform ${open ? "rotate-180" : ""}`}
+      className={`shrink-0 text-forest transition-transform duration-300 ease-out motion-reduce:transition-none ${open ? "rotate-180" : ""}`}
     >
       <path d="M3 6 L8 11 L13 6" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
     </svg>
@@ -103,8 +103,21 @@ function Dropdown({
         <Chevron open={open} />
       </button>
 
-      {open && (
-        <div className="px-4 pb-4 pt-3 border-t border-forest/10">
+      {/* 0fr -> 1fr animates to the panel's natural height, whatever it is.
+          Kept mounted so it can animate, but inert while closed so it's not
+          reachable by keyboard or screen readers. */}
+      <div
+        inert={!open}
+        className={`grid transition-[grid-template-rows] duration-300 ease-out motion-reduce:transition-none ${
+          open ? "grid-rows-[1fr]" : "grid-rows-[0fr]"
+        }`}
+      >
+        <div className="overflow-hidden">
+          <div
+            className={`px-4 pb-4 pt-3 border-t border-forest/10 transition-opacity duration-200 ease-out motion-reduce:transition-none ${
+              open ? "opacity-100" : "opacity-0"
+            }`}
+          >
           <ul className="flex flex-wrap gap-2">
             {options.map((option) => {
               const off = unavailable?.has(option) ?? false;
@@ -134,17 +147,18 @@ function Dropdown({
               );
             })}
           </ul>
-          {selected && (
-            <button
-              type="button"
-              onClick={() => { onSelect(null); setOpen(false); }}
-              className="mt-3 text-xs text-stone hover:text-oxblood underline underline-offset-4"
-            >
-              Clear
-            </button>
-          )}
+            {selected && (
+              <button
+                type="button"
+                onClick={() => { onSelect(null); setOpen(false); }}
+                className="mt-3 text-xs text-stone hover:text-oxblood underline underline-offset-4"
+              >
+                Clear
+              </button>
+            )}
+          </div>
         </div>
-      )}
+      </div>
     </div>
   );
 }
