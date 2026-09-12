@@ -3,8 +3,9 @@ import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import { Container } from "@/components/Container";
 import { CategoryTile } from "@/components/CategoryTile";
+import { BrandMarquee } from "@/components/BrandMarquee";
 import { categoryGroups, getGroupBySlug } from "@/lib/categoryGroups";
-import { getCategoriesWithCounts } from "@/data/products";
+import { getBrandsForCategorySlugs, getCategoriesWithCounts } from "@/data/products";
 
 export function generateStaticParams() {
   return categoryGroups.map((g) => ({ slug: g.slug }));
@@ -30,36 +31,56 @@ export default async function GroupPage({ params }: Props) {
   const group = getGroupBySlug(slug);
   if (!group) notFound();
 
-  const allCategories = await getCategoriesWithCounts();
+  const [allCategories, brands] = await Promise.all([
+    getCategoriesWithCounts(),
+    getBrandsForCategorySlugs(group.categorySlugs),
+  ]);
   const categories = allCategories.filter((c) => group.categorySlugs.includes(c.slug));
   const totalProducts = categories.reduce((sum, c) => sum + c.count, 0);
 
   return (
-    <section className="bg-cream-soft py-16 md:py-24">
-      <Container size="wide">
-        <Link href="/marketplace" className="eyebrow text-brass-deep hover:text-oxblood transition-colors">
-          ← The Marketplace
-        </Link>
+    <>
+      <section className="bg-forest-deep text-cream-soft pt-16 md:pt-20 pb-10 md:pb-12 border-b border-brass/20">
+        <Container size="wide">
+          <Link
+            href="/marketplace"
+            className="eyebrow text-brass-light hover:text-cream-soft transition-colors"
+          >
+            ← The Marketplace
+          </Link>
 
-        <h1 className="font-display text-4xl md:text-5xl mt-6 text-forest leading-tight">
-          {group.name}
-        </h1>
-        <p className="mt-3 text-charcoal leading-relaxed max-w-xl">{group.tagline}</p>
-        <p className="mt-2 text-sm text-stone">
-          {totalProducts} products across {categories.length} categories
-        </p>
+          <h1 className="font-display text-5xl md:text-7xl mt-6 leading-[1.05]">
+            {group.name}
+          </h1>
+          <p className="mt-4 text-lg text-cream-soft/75 leading-relaxed max-w-xl">
+            {group.tagline}
+          </p>
+          <p className="eyebrow text-brass-light mt-6">
+            {totalProducts.toLocaleString("en-IN")} products · {categories.length} categories
+            {brands.length > 0 && ` · ${brands.length} brands`}
+          </p>
+        </Container>
 
-        <div className="mt-12 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
-          {categories.map((category) => (
-            <CategoryTile
-              key={category.slug}
-              category={category}
-              count={category.count}
-              href={`/marketplace/category/${category.slug}`}
-            />
-          ))}
+        {/* Full-bleed, so the names really do travel the width of the screen. */}
+        <div className="mt-12 md:mt-14 border-t border-brass/15 pt-8 md:pt-10">
+          <BrandMarquee brands={brands} />
         </div>
-      </Container>
-    </section>
+      </section>
+
+      <section className="bg-cream-soft py-16 md:py-24">
+        <Container size="wide">
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
+            {categories.map((category) => (
+              <CategoryTile
+                key={category.slug}
+                category={category}
+                count={category.count}
+                href={`/marketplace/category/${category.slug}`}
+              />
+            ))}
+          </div>
+        </Container>
+      </section>
+    </>
   );
 }

@@ -85,21 +85,62 @@ h1, h2, h3, h4, h5, h6, .font-display {
   animation: fadeInUp 0.8s ease-out backwards;
 }
 
-@keyframes revealUp {
-  from { opacity: 0; transform: translateY(28px); }
-  to { opacity: 1; transform: translateY(0); }
+/* Brand marquee. Two identical halves sit side by side and the pair slides by
+   exactly half its width, so the moment the first half leaves, the second is
+   already in its place -- the loop has no seam. Pure CSS, so it costs no
+   JavaScript and never blocks paint. The edges fade out rather than cutting
+   names in half at the viewport boundary. */
+@keyframes marqueeSlide {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
 }
 
-/* One reveal, used everywhere: fade in while rising as the element enters view.
-   Scroll-driven and CSS-only, so there's no JavaScript, nothing is ever parked
-   invisible waiting on a script, and browsers without support simply show the
-   content as normal. */
+.marquee {
+  overflow: hidden;
+  mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
+}
+
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: marqueeSlide linear infinite;
+}
+
+.marquee:hover .marquee-track {
+  animation-play-state: paused;
+}
+
+/* Reduce-motion gets the list standing still, scrollable by hand. */
+@media (prefers-reduced-motion: reduce) {
+  .marquee {
+    overflow-x: auto;
+    mask-image: none;
+  }
+  .marquee-track {
+    animation: none;
+  }
+}
+
+@keyframes revealUp {
+  from { transform: translateY(18px); }
+  to { transform: translateY(0); }
+}
+
+/* One reveal, used everywhere: content settles up into place as it enters view.
+   Deliberately no opacity. A scroll-driven fade leaves anything already
+   half-on-screen when the page loads sitting part-faded, which reads as the
+   page still loading -- nothing here is ever hidden, it only moves.
+
+   Scroll-driven and CSS-only, so there's no JavaScript, nothing waits on a
+   script, and browsers without support show the content at rest. ease-out puts
+   most of the travel at the start of the range, so an element has settled well
+   before it reaches the middle of the viewport. */
 @media (prefers-reduced-motion: no-preference) {
   @supports (animation-timeline: view()) {
     .reveal {
-      animation: revealUp linear both;
+      animation: revealUp ease-out both;
       animation-timeline: view();
-      animation-range: entry 0% entry 55%;
+      animation-range: entry 0% entry 40%;
     }
   }
 }

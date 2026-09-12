@@ -91,6 +91,7 @@ export const PRODUCTS_LEAN_QUERY = /* GraphQL */ `
         node {
           handle
           tags
+          vendor
         }
       }
       pageInfo {

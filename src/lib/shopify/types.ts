@@ -21,6 +21,7 @@ export type ShopifyProductNode = {
 export type ShopifyProductLeanNode = {
   handle: string;
   tags: string[];
+  vendor: string;
 };
 
 export type ShopifyCollectionNode = { handle: string; title: string };

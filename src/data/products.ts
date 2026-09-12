@@ -170,6 +170,28 @@ export async function getCategoriesWithCounts(): Promise<CategoryWithCount[]> {
   return categories.map((c) => ({ ...c, count: counts.get(c.slug) ?? 0 }));
 }
 
+// Brands stocked across a set of categories, busiest first. Vendor rides along
+// on the lean query, so this costs no extra round trip beyond what the category
+// counts already fetch. The migration set vendor = brand ?? "Indusequine", so
+// that sentinel is dropped the same way mapProduct drops it.
+export async function getBrandsForCategorySlugs(
+  categorySlugs: string[],
+): Promise<string[]> {
+  const wanted = new Set(categorySlugs);
+  const nodes = await fetchAllProductsLean();
+  const counts = new Map<string, number>();
+  for (const n of nodes) {
+    const slug = categorySlugFromTags(n.tags);
+    if (!slug || !wanted.has(slug)) continue;
+    const brand = n.vendor === "Indusequine" ? null : n.vendor?.trim();
+    if (!brand) continue;
+    counts.set(brand, (counts.get(brand) ?? 0) + 1);
+  }
+  return [...counts.entries()]
+    .sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]))
+    .map(([brand]) => brand);
+}
+
 export async function getTopCategories(n: number): Promise<Category[]> {
   const withCounts = await getCategoriesWithCounts();
   return withCounts
