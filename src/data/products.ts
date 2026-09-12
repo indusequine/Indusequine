@@ -215,6 +215,48 @@ export async function getBrandBySlug(slug: string): Promise<Brand | undefined> {
   return brands.find((b) => b.slug === slug);
 }
 
+// The categories one brand actually stocks, busiest first. Read off the lean
+// pass, so a brand's landing page never has to pull full product records --
+// images and variants are only fetched once the rider picks a category.
+export async function getBrandCategories(brandName: string): Promise<CategoryWithCount[]> {
+  const [nodes, categories] = await Promise.all([fetchAllProductsLean(), getCategories()]);
+  const nameBySlug = new Map(categories.map((c) => [c.slug, c.name]));
+
+  const counts = new Map<string, number>();
+  for (const n of nodes) {
+    if (n.vendor !== brandName) continue;
+    const slug = categorySlugFromTags(n.tags);
+    if (!slug || !nameBySlug.has(slug)) continue;
+    counts.set(slug, (counts.get(slug) ?? 0) + 1);
+  }
+
+  return [...counts.entries()]
+    .map(([slug, count]) => ({ slug, name: nameBySlug.get(slug)!, count }))
+    .sort((a, b) => b.count - a.count || a.name.localeCompare(b.name));
+}
+
+// Every brand/category pair in the catalogue, for generateStaticParams. One
+// lean pass covers all of them rather than a fetch per brand.
+export async function getBrandCategoryPairs(): Promise<
+  { brandSlug: string; categorySlug: string }[]
+> {
+  const [nodes, categories] = await Promise.all([fetchAllProductsLean(), getCategories()]);
+  const known = new Set(categories.map((c) => c.slug));
+
+  const pairs = new Set<string>();
+  for (const n of nodes) {
+    const brand = n.vendor === "Indusequine" ? null : n.vendor?.trim();
+    const slug = categorySlugFromTags(n.tags);
+    if (!brand || !slug || !known.has(slug)) continue;
+    pairs.add(`${brandSlug(brand)}|${slug}`);
+  }
+
+  return [...pairs].map((p) => {
+    const [b, c] = p.split("|");
+    return { brandSlug: b, categorySlug: c };
+  });
+}
+
 export async function getProductsByBrand(brandName: string): Promise<Product[]> {
   const categories = await getCategories();
   const nameBySlug = new Map(categories.map((c) => [c.slug, c.name]));
