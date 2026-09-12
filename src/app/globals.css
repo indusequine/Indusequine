@@ -76,13 +76,14 @@ h1, h2, h3, h4, h5, h6, .font-display {
   }
 }
 
-/* The intro curtain. Hidden by default -- it only ever appears where motion is
-   welcome, so anyone on reduced motion goes straight to the site.
+/* The intro curtain. Hidden outright where motion isn't welcome, so anyone on
+   reduced motion goes straight to the site.
 
-   The dismissal is part of the same animation that shows it, and runs with
-   `forwards`, so there is no state in which the curtain stays up: no script
-   has to run for it to lift. visibility:hidden at the end takes it out of the
-   hit-testing path entirely, so it cannot swallow a click afterwards. */
+   The animation below is a failsafe, not the mechanism: it lifts the curtain on
+   its own by 2.9s, so a visitor whose JavaScript never arrives is never shut
+   out. When the script does run it removes that animation and drives the
+   curtain from real load progress instead. Belt and braces, because a stuck
+   curtain is a worse failure than the slow paint it exists to cover. */
 .intro-curtain {
   display: none;
 }
@@ -95,25 +96,55 @@ h1, h2, h3, h4, h5, h6, .font-display {
     inset: 0;
     z-index: 100;
     background: var(--color-forest-deep);
-    animation: introLift 1.25s ease-in-out forwards;
+    /* Outlasts the script's 2.6s ceiling, and holds fully opaque until 2.3s,
+       so a late-hydrating bundle can never catch it mid-fade. */
+    animation: introFailsafe 2.9s ease-in-out forwards;
   }
 
-  .intro-curtain-mark {
-    color: var(--color-brass-light);
-    animation: introMark 1.25s ease-out forwards;
+  /* What the script uses once it has taken the failsafe off. */
+  .intro-curtain-done {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.55s ease-in-out, visibility 0s linear 0.55s;
   }
 }
 
-@keyframes introLift {
-  0%, 45% { opacity: 1; visibility: visible; }
+.intro-curtain-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.75rem;
+  color: var(--color-brass-light);
+}
+
+.intro-curtain-track {
+  width: clamp(120px, 22vw, 190px);
+  height: 1px;
+  background: color-mix(in srgb, var(--color-brass-light) 25%, transparent);
+  overflow: hidden;
+}
+
+.intro-curtain-bar {
+  height: 100%;
+  background: var(--color-brass-light);
+  transform-origin: left center;
+  transform: scaleX(0);
+  /* Transform only -- a width animation would relayout on every frame. */
+  transition: transform 0.25s ease-out;
+  animation: introBar 2.3s ease-out forwards;
+}
+
+@keyframes introFailsafe {
+  0%, 80% { opacity: 1; visibility: visible; }
   100% { opacity: 0; visibility: hidden; }
 }
 
-@keyframes introMark {
-  0% { opacity: 0; transform: translateY(8px) scale(0.98); }
-  35% { opacity: 1; transform: translateY(0) scale(1); }
-  70% { opacity: 1; }
-  100% { opacity: 0; }
+/* The bar advances before the bundle arrives, so the loader never sits at zero
+   while JavaScript is still on its way. The script removes this animation when
+   it takes over, otherwise its inline transform would lose to it. */
+@keyframes introBar {
+  from { transform: scaleX(0); }
+  to { transform: scaleX(0.92); }
 }
 
 @keyframes fadeInUp {
