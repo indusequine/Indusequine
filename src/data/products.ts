@@ -1,5 +1,6 @@
 import { shopifyFetch, fetchAllPages } from "@/lib/shopify/client";
 import { brandSlug } from "@/lib/brands";
+import { categoryTileProduct } from "@/lib/categoryImages";
 import {
   PRODUCT_BY_HANDLE_QUERY,
   COLLECTION_BY_HANDLE_QUERY,
@@ -213,6 +214,36 @@ export async function getAllBrands(): Promise<Brand[]> {
 export async function getBrandBySlug(slug: string): Promise<Brand | undefined> {
   const brands = await getAllBrands();
   return brands.find((b) => b.slug === slug);
+}
+
+// One representative photograph per category, for the category tiles. Pass a
+// brand to draw from that brand's own stock, so CWD's Saddle tile shows a CWD
+// saddle rather than whichever saddle the catalogue happens to list first.
+//
+// Read off the lean pass, which already carries featuredImage, so this costs no
+// extra round trip. Categories whose products have no photography yet are
+// absent from the map and their tiles fall back to the flat colour.
+export async function getCategoryImages(
+  brandName?: string,
+): Promise<Map<string, string>> {
+  const nodes = await fetchAllProductsLean();
+  const images = new Map<string, string>();
+  const pinned = new Map<string, string>();
+
+  for (const n of nodes) {
+    if (brandName && n.vendor !== brandName) continue;
+    const url = n.featuredImage?.url;
+    if (!url) continue;
+    const slug = categorySlugFromTags(n.tags);
+    if (!slug) continue;
+
+    if (categoryTileProduct[slug] === n.handle) pinned.set(slug, url);
+    else if (!images.has(slug)) images.set(slug, url);
+  }
+
+  // A pinned choice wins over the first-found one.
+  for (const [slug, url] of pinned) images.set(slug, url);
+  return images;
 }
 
 // The categories one brand actually stocks, busiest first. Read off the lean

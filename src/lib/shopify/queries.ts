@@ -112,6 +112,9 @@ export const PRODUCTS_LEAN_QUERY = /* GraphQL */ `
           handle
           tags
           vendor
+          featuredImage {
+            url
+          }
         }
       }
       pageInfo {

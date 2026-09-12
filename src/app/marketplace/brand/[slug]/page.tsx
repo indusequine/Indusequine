@@ -3,7 +3,12 @@ import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import { Container } from "@/components/Container";
 import { CategoryTile } from "@/components/CategoryTile";
-import { getAllBrands, getBrandBySlug, getBrandCategories } from "@/data/products";
+import {
+  getAllBrands,
+  getBrandBySlug,
+  getBrandCategories,
+  getCategoryImages,
+} from "@/data/products";
 
 export async function generateStaticParams() {
   const brands = await getAllBrands();
@@ -31,7 +36,11 @@ export default async function BrandPage({ params }: Props) {
   const brand = await getBrandBySlug(slug);
   if (!brand) notFound();
 
-  const categories = await getBrandCategories(brand.name);
+  const [categories, images] = await Promise.all([
+    getBrandCategories(brand.name),
+    // Drawn from this brand's own stock, so CWD's Saddle tile shows a CWD saddle.
+    getCategoryImages(brand.name),
+  ]);
   const total = categories.reduce((sum, c) => sum + c.count, 0);
 
   return (
@@ -61,6 +70,7 @@ export default async function BrandPage({ params }: Props) {
                 key={category.slug}
                 category={category}
                 count={category.count}
+                image={images.get(category.slug)}
                 href={`/marketplace/brand/${brand.slug}/${category.slug}`}
               />
             ))}

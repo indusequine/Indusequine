@@ -5,7 +5,11 @@ import { Container } from "@/components/Container";
 import { CategoryTile } from "@/components/CategoryTile";
 import { BrandMarquee } from "@/components/BrandMarquee";
 import { categoryGroups, getGroupBySlug } from "@/lib/categoryGroups";
-import { getBrandsForCategorySlugs, getCategoriesWithCounts } from "@/data/products";
+import {
+  getBrandsForCategorySlugs,
+  getCategoriesWithCounts,
+  getCategoryImages,
+} from "@/data/products";
 
 export function generateStaticParams() {
   return categoryGroups.map((g) => ({ slug: g.slug }));
@@ -31,9 +35,10 @@ export default async function GroupPage({ params }: Props) {
   const group = getGroupBySlug(slug);
   if (!group) notFound();
 
-  const [allCategories, brands] = await Promise.all([
+  const [allCategories, brands, images] = await Promise.all([
     getCategoriesWithCounts(),
     getBrandsForCategorySlugs(group.categorySlugs),
+    getCategoryImages(),
   ]);
   const categories = allCategories.filter((c) => group.categorySlugs.includes(c.slug));
   const totalProducts = categories.reduce((sum, c) => sum + c.count, 0);
@@ -75,6 +80,7 @@ export default async function GroupPage({ params }: Props) {
                 key={category.slug}
                 category={category}
                 count={category.count}
+                image={images.get(category.slug)}
                 href={`/marketplace/category/${category.slug}`}
               />
             ))}

@@ -22,6 +22,7 @@ export type ShopifyProductLeanNode = {
   handle: string;
   tags: string[];
   vendor: string;
+  featuredImage: { url: string } | null;
 };
 
 export type ShopifyCollectionNode = { handle: string; title: string };
