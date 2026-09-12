@@ -1,3 +1,6 @@
+import Link from "next/link";
+import { brandSlug } from "@/lib/brands";
+
 type Props = {
   brands: string[];
   /** Seconds for one full pass. Scaled by content so speed reads the same
@@ -31,9 +34,14 @@ export function BrandMarquee({ brands, secondsPerBrand = 3 }: Props) {
           >
             {half.map((brand, i) => (
               <li key={`${copy}-${i}`} className="flex items-center">
-                <span className="font-display text-2xl md:text-3xl text-cream-soft/75 whitespace-nowrap">
+                <Link
+                  href={`/marketplace/brand/${brandSlug(brand)}`}
+                  // The duplicate half is decorative, so keep it off the tab order.
+                  tabIndex={copy === 1 ? -1 : undefined}
+                  className="font-display text-2xl md:text-3xl text-cream-soft/75 whitespace-nowrap hover:text-brass-light transition-colors"
+                >
                   {brand}
-                </span>
+                </Link>
                 <span className="mx-8 md:mx-10 w-1.5 h-1.5 rotate-45 bg-brass/60 shrink-0" />
               </li>
             ))}

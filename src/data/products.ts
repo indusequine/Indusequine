@@ -1,10 +1,12 @@
 import { shopifyFetch, fetchAllPages } from "@/lib/shopify/client";
+import { brandSlug } from "@/lib/brands";
 import {
   PRODUCT_BY_HANDLE_QUERY,
   COLLECTION_BY_HANDLE_QUERY,
   COLLECTION_PRODUCTS_QUERY,
   COLLECTIONS_QUERY,
   PRODUCTS_LEAN_QUERY,
+  PRODUCTS_BY_VENDOR_QUERY,
 } from "@/lib/shopify/queries";
 import type {
   ProductByHandleData,
@@ -12,6 +14,7 @@ import type {
   CollectionProductsData,
   CollectionsData,
   ProductsLeanData,
+  ProductsByVendorData,
   ShopifyProductNode,
   ShopifyProductLeanNode,
   ShopifyVariantNode,
@@ -26,6 +29,8 @@ export type Variant = {
 
 export type Category = { slug: string; name: string };
 export type CategoryWithCount = Category & { count: number };
+
+export type Brand = { slug: string; name: string; count: number };
 
 export type Product = {
   slug: string;
@@ -190,6 +195,53 @@ export async function getBrandsForCategorySlugs(
   return [...counts.entries()]
     .sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]))
     .map(([brand]) => brand);
+}
+
+export async function getAllBrands(): Promise<Brand[]> {
+  const nodes = await fetchAllProductsLean();
+  const counts = new Map<string, number>();
+  for (const n of nodes) {
+    const brand = n.vendor === "Indusequine" ? null : n.vendor?.trim();
+    if (!brand) continue;
+    counts.set(brand, (counts.get(brand) ?? 0) + 1);
+  }
+  return [...counts.entries()]
+    .map(([name, count]) => ({ name, slug: brandSlug(name), count }))
+    .sort((a, b) => b.count - a.count || a.name.localeCompare(b.name));
+}
+
+export async function getBrandBySlug(slug: string): Promise<Brand | undefined> {
+  const brands = await getAllBrands();
+  return brands.find((b) => b.slug === slug);
+}
+
+export async function getProductsByBrand(brandName: string): Promise<Product[]> {
+  const categories = await getCategories();
+  const nameBySlug = new Map(categories.map((c) => [c.slug, c.name]));
+
+  const nodes = await fetchAllPages<ShopifyProductNode>(async (cursor) => {
+    const data = await shopifyFetch<ProductsByVendorData>(PRODUCTS_BY_VENDOR_QUERY, {
+      // Single-quoted so a multi-word vendor matches as one term.
+      query: `vendor:'${brandName.replace(/'/g, "\\'")}'`,
+      first: PAGE_SIZE,
+      after: cursor,
+    });
+    return {
+      nodes: data.products.edges.map((e) => e.node),
+      hasNextPage: data.products.pageInfo.hasNextPage,
+      endCursor: data.products.pageInfo.endCursor,
+    };
+  });
+
+  // The vendor: filter is Shopify's own search, which can be fuzzy across
+  // similar vendor names -- keep only exact matches so one brand's page never
+  // shows another's stock.
+  return nodes
+    .filter((n) => n.vendor === brandName)
+    .map((n) => {
+      const slug = categorySlugFromTags(n.tags);
+      return mapProduct(n, (slug && nameBySlug.get(slug)) || "");
+    });
 }
 
 export async function getTopCategories(n: number): Promise<Category[]> {

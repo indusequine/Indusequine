@@ -113,7 +113,10 @@ h1, h2, h3, h4, h5, h6, .font-display {
   animation: marqueeSlide linear infinite;
 }
 
-.marquee:hover .marquee-track {
+/* Pause on hover so a name is easy to click, and on focus-within so keyboard
+   users are never chasing a moving target. */
+.marquee:hover .marquee-track,
+.marquee:focus-within .marquee-track {
   animation-play-state: paused;
 }
 

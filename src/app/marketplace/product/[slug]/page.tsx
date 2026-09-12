@@ -7,6 +7,7 @@ import { ProductGrid } from "@/components/ProductGrid";
 import { EnquiryForm } from "@/components/EnquiryForm";
 import { VariantPicker } from "@/components/VariantPicker";
 import { getAllProductSlugs, getProductBySlug, getProductsByCategory, formatPrice } from "@/data/products";
+import { brandSlug } from "@/lib/brands";
 
 const RELATED_LIMIT = 8;
 
@@ -60,7 +61,12 @@ export default async function ProductPage({ params }: Props) {
 
             <div className="lg:col-span-6">
               {product.brand && (
-                <p className="eyebrow text-brass-deep">{product.brand}</p>
+                <Link
+                  href={`/marketplace/brand/${brandSlug(product.brand)}`}
+                  className="eyebrow text-brass-deep hover:text-oxblood transition-colors"
+                >
+                  {product.brand}
+                </Link>
               )}
               <h1 className="font-display text-4xl md:text-5xl text-forest leading-tight mt-3">
                 {product.name}

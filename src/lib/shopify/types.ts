@@ -44,3 +44,5 @@ export type CollectionProductsData = {
 export type CollectionsData = { collections: ShopifyConnection<ShopifyCollectionNode> };
 
 export type ProductsLeanData = { products: ShopifyConnection<ShopifyProductLeanNode> };
+
+export type ProductsByVendorData = { products: ShopifyConnection<ShopifyProductNode> };

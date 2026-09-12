@@ -1,12 +1,16 @@
 import type { MetadataRoute } from "next";
-import { getCategories, getAllProductSlugs } from "@/data/products";
+import { getCategories, getAllProductSlugs, getAllBrands } from "@/data/products";
 import { categoryGroups } from "@/lib/categoryGroups";
 
 const BASE_URL = "https://indusequine.com";
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const now = new Date();
-  const [categories, productSlugs] = await Promise.all([getCategories(), getAllProductSlugs()]);
+  const [categories, productSlugs, brands] = await Promise.all([
+    getCategories(),
+    getAllProductSlugs(),
+    getAllBrands(),
+  ]);
 
   return [
     { url: `${BASE_URL}/`, lastModified: now, changeFrequency: "weekly", priority: 1.0 },
@@ -20,6 +24,12 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     { url: `${BASE_URL}/terms`, lastModified: now, changeFrequency: "yearly", priority: 0.3 },
     ...categoryGroups.map((g) => ({
       url: `${BASE_URL}/marketplace/group/${g.slug}`,
+      lastModified: now,
+      changeFrequency: "weekly" as const,
+      priority: 0.7,
+    })),
+    ...brands.map((b) => ({
+      url: `${BASE_URL}/marketplace/brand/${b.slug}`,
       lastModified: now,
       changeFrequency: "weekly" as const,
       priority: 0.7,
