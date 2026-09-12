@@ -14,6 +14,8 @@ export function CategoryGroupTile({ group, productCount }: CategoryGroupTileProp
     >
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <img
+        loading="lazy"
+        decoding="async"
         src={group.image}
         alt={group.name}
         className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"

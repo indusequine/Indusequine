@@ -123,6 +123,8 @@ function MarketplaceSplit() {
           <div className="md:col-span-7">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
+              loading="lazy"
+              decoding="async"
               src={MARKETPLACE_PHOTO}
               alt="A portrait of a horse"
               className="w-full aspect-[4/5] object-cover"
@@ -182,6 +184,8 @@ function ServicesSplit() {
           <div className="md:col-span-7 md:order-2 order-1">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
+              loading="lazy"
+              decoding="async"
               src={SERVICES_PHOTO}
               alt="A rider with her horse, a medal at her chest"
               className="w-full aspect-[4/5] object-cover"
@@ -221,6 +225,8 @@ function NowOpen() {
     <section className="relative h-[90vh] min-h-[640px] overflow-hidden bg-forest-deep">
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <img
+        loading="lazy"
+        decoding="async"
         src={CLOSER_PHOTO}
         alt="A rider walking with their horse"
         className="absolute inset-0 w-full h-full object-cover opacity-55"

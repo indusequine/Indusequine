@@ -8,7 +8,10 @@ export function ProductCard({ product }: { product: Product }) {
   return (
     <Link
       href={`/marketplace/product/${product.slug}`}
-      className="reveal group block border border-forest/15 bg-cream-soft hover:border-forest/40 transition-colors"
+      // No reveal here on purpose: a category page renders up to 95 of these,
+      // and 95 scroll-driven animations is a lot of work for an effect nobody
+      // can follow in a dense grid. Reveals stay on sections and tiles.
+      className="group block border border-forest/15 bg-cream-soft hover:border-forest/40 transition-colors"
     >
       <ProductImage product={product} />
       <div className="p-6">

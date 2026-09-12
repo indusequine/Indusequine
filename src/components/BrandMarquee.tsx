@@ -16,7 +16,10 @@ const MIN_ITEMS_PER_HALF = 12;
 export function BrandMarquee({ brands, secondsPerBrand = 3 }: Props) {
   if (brands.length === 0) return null;
 
-  const reps = Math.max(2, Math.ceil(MIN_ITEMS_PER_HALF / brands.length));
+  // max(1, ...), not max(2, ...): Rider stocks 22 brands, which already spans a
+  // wide screen several times over, so forcing a second copy made the animated
+  // element 16,000px wide for no reason -- that is real compositing work.
+  const reps = Math.max(1, Math.ceil(MIN_ITEMS_PER_HALF / brands.length));
   const half = Array.from({ length: reps }, () => brands).flat();
   const duration = half.length * secondsPerBrand;
 

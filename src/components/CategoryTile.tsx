@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { LogoMarkPattern } from "@/components/Logo";
 import { categoryTileClass } from "@/lib/categoryTileColor";
-import { shopifyImage } from "@/lib/categoryImages";
+import { shopifyImage } from "@/lib/imageUrl";
 
 type CategoryTileProps = {
   category: { slug: string; name: string };

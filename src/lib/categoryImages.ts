@@ -12,10 +12,3 @@ export const categoryTileProduct: Record<string, string> = {
   // which is a poor face for the category. Pin an actual saddle.
   saddle: "cwd-saddle-dynamick-2gs-x-tend-fc-bl-17-2c",
 };
-
-// Shopify's CDN resizes on request. Tiles are never rendered wider than about
-// 600px, so asking for the full-size original wastes most of the download.
-export function shopifyImage(url: string, width: number): string {
-  const sep = url.includes("?") ? "&" : "?";
-  return `${url}${sep}width=${width}`;
-}
