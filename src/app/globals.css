@@ -16,6 +16,16 @@
   --color-charcoal: #3a3a3a;
   --color-stone: #6b6258;
 
+  /* Section accents. One palette across the site, but each section can shift
+     its accent and the ground its dark panels sit on, so Marketplace, Discover
+     and Services don't all read at the same temperature. Tailwind emits these
+     as var(--color-accent) etc., so overriding them on a wrapper re-colours
+     everything inside it -- see .theme-discover below. */
+  --color-accent: var(--color-brass-deep);
+  --color-accent-bright: var(--color-brass-light);
+  --color-accent-dot: var(--color-brass);
+  --color-ground-deep: var(--color-forest-deep);
+
   --font-display: var(--font-cormorant), "Cormorant Garamond", "Times New Roman", serif;
   --font-body: var(--font-inter), "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   --font-mono: var(--font-mono-dm), "DM Mono", ui-monospace, "SF Mono", Menlo, monospace;
@@ -24,6 +34,17 @@
 html {
   background: var(--color-cream-soft);
   color: var(--color-ink);
+}
+
+/* Discover is editorial rather than commercial, so it runs warmer: oxblood
+   where the rest of the site uses brass, and its dark panels sit on oxblood
+   rather than forest. Headings stay forest -- red type at that size reads as
+   an alert, not as a voice. */
+.theme-discover {
+  --color-accent: var(--color-oxblood);
+  --color-accent-bright: var(--color-brass-light);
+  --color-accent-dot: var(--color-oxblood);
+  --color-ground-deep: var(--color-oxblood-deep);
 }
 
 body {
