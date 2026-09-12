@@ -5,6 +5,7 @@ import { SpeedInsights } from "@vercel/speed-insights/next";
 import "./globals.css";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { IntroCurtain } from "@/components/IntroCurtain";
 
 const cormorant = Cormorant_Garamond({
   variable: "--font-cormorant",
@@ -79,6 +80,7 @@ export default function RootLayout({
       className={`${cormorant.variable} ${inter.variable} ${dmMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col bg-cream-soft text-ink">
+        <IntroCurtain />
         <Header />
         <main className="flex-1">{children}</main>
         <Footer />

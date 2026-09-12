@@ -76,6 +76,46 @@ h1, h2, h3, h4, h5, h6, .font-display {
   }
 }
 
+/* The intro curtain. Hidden by default -- it only ever appears where motion is
+   welcome, so anyone on reduced motion goes straight to the site.
+
+   The dismissal is part of the same animation that shows it, and runs with
+   `forwards`, so there is no state in which the curtain stays up: no script
+   has to run for it to lift. visibility:hidden at the end takes it out of the
+   hit-testing path entirely, so it cannot swallow a click afterwards. */
+.intro-curtain {
+  display: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .intro-curtain {
+    display: grid;
+    place-items: center;
+    position: fixed;
+    inset: 0;
+    z-index: 100;
+    background: var(--color-forest-deep);
+    animation: introLift 1.25s ease-in-out forwards;
+  }
+
+  .intro-curtain-mark {
+    color: var(--color-brass-light);
+    animation: introMark 1.25s ease-out forwards;
+  }
+}
+
+@keyframes introLift {
+  0%, 45% { opacity: 1; visibility: visible; }
+  100% { opacity: 0; visibility: hidden; }
+}
+
+@keyframes introMark {
+  0% { opacity: 0; transform: translateY(8px) scale(0.98); }
+  35% { opacity: 1; transform: translateY(0) scale(1); }
+  70% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
 @keyframes fadeInUp {
   from { opacity: 0; transform: translateY(12px); }
   to { opacity: 1; transform: translateY(0); }
