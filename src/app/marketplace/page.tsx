@@ -9,7 +9,7 @@ import { getCategoriesWithCounts } from "@/data/products";
 export const metadata: Metadata = {
   title: "The Marketplace",
   description:
-    "A curated equestrian marketplace for India — premium products for riders, horses, and stables. From saddlery and tack to rugs, apparel, and grooming.",
+    "Premium equestrian products for India: saddlery, tack, rugs, apparel and grooming, for riders, horses and stables.",
 };
 
 // Next.js requires route segment config to be a static literal, so this
@@ -93,9 +93,9 @@ function TrustBadges({
             </div>
           ))}
           <p className="md:col-span-5 md:col-start-8 text-charcoal leading-relaxed md:text-right">
-            Every listing is a real product from a verified brand, at the price
-            you&rsquo;d pay. Questions go straight to us — answered by enquiry,
-            not a chatbot.
+            Every listing is a real product from a brand we&rsquo;ve checked, at
+            the price you&rsquo;d pay. Questions come straight to us. A person
+            answers them, not a chatbot.
           </p>
         </div>
       </Container>
@@ -115,9 +115,9 @@ function PageHero() {
           Every product, for every kind of ride.
         </h1>
         <p className="mt-8 text-lg md:text-xl text-cream-soft/80 leading-relaxed max-w-2xl mx-auto">
-          The brands you&rsquo;ve struggled to find in India — and the ones
-          you&rsquo;ve only heard of from friends abroad. All under one
-          well-tended roof.
+          The brands you&rsquo;ve struggled to find in India, and the ones
+          you&rsquo;ve only heard about from friends abroad. All under one
+          roof.
         </p>
       </Container>
 
@@ -139,9 +139,9 @@ function BrandsCTA() {
           Bring your brand to India&rsquo;s riders.
         </h2>
         <p className="mt-6 text-cream-soft/80 leading-relaxed">
-          Indian, regional, and global brands — if your work belongs alongside
-          the best in the world, we&rsquo;d like to talk. We&rsquo;re building
-          this marketplace with the makers who care, not the catalogues that
+          Indian, regional and global. If your work belongs alongside the best
+          in the world, we&rsquo;d like to talk. We&rsquo;re building this
+          marketplace with the makers who care, not the catalogues that
           don&rsquo;t.
         </p>
         <Link

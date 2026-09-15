@@ -99,13 +99,13 @@ function Whisper() {
           What is Indusequine
         </p>
         <h2 className="font-display text-4xl md:text-5xl lg:text-6xl mt-10 text-forest leading-[1.15]">
-          A curated platform for India&rsquo;s equestrian community.
+          One place for everyone who rides in India.
         </h2>
         <p className="mt-10 text-charcoal leading-relaxed text-lg max-w-2xl mx-auto">
-          India&rsquo;s rich equestrian culture, finally with the home it
-          deserves. Products for the rider, the horse, and the stable. A
-          directory of verified coaches, vets, and farriers. Built with the
-          community, for the community.
+          India has one of the oldest riding cultures in the world and no
+          single place to buy for it. Products for the rider, the horse and the
+          stable. Coaches, vets and farriers whose credentials we check
+          ourselves. We&rsquo;re building it with the riders who use it.
         </p>
       </Container>
     </section>
@@ -138,9 +138,9 @@ function MarketplaceSplit() {
               Every product, for every kind of ride.
             </h2>
             <p className="mt-8 text-charcoal leading-relaxed text-lg">
-              The brands you&rsquo;ve struggled to find in India — and the ones
-              you&rsquo;ve only heard of from friends abroad. All under one
-              well-tended roof.
+              The brands you&rsquo;ve struggled to find in India, and the ones
+              you&rsquo;ve only heard about from friends abroad. All under one
+              roof.
             </p>
             <Link
               href="/marketplace"
@@ -171,8 +171,9 @@ function ServicesSplit() {
               The professionals you trust, brought into the light.
             </h2>
             <p className="mt-8 text-charcoal leading-relaxed text-lg">
-              Coaches, vets, and farriers across India — verified credentials,
-              transparent fees, honest reviews. A network you can actually find.
+              Coaches, vets and farriers across India. We check credentials,
+              publish fees, and keep the reviews honest. A network you can
+              actually find.
             </p>
             <Link
               href="/services"
@@ -204,8 +205,8 @@ function FoundersQuote() {
         <p className="eyebrow text-brass-deep">A Note From The Founders</p>
         <blockquote className="mt-14 font-display text-2xl md:text-3xl lg:text-4xl text-forest leading-[1.35] italic">
           &ldquo;India has one of the world&rsquo;s oldest equestrian
-          traditions — and one of its most fragmented modern markets. We grew
-          up between the two. Indusequine is our attempt to bridge them.&rdquo;
+          traditions and one of its most fragmented modern markets. We grew up
+          between the two. Indusequine is our attempt to bridge them.&rdquo;
         </blockquote>
         <div className="mt-14">
           <Link
@@ -244,8 +245,8 @@ function NowOpen() {
             <span className="italic text-brass-light">in the saddle.</span>
           </h2>
           <p className="mt-10 text-cream-soft/85 max-w-lg mx-auto leading-relaxed">
-            Real products, real prices, real brands — riders across India
-            are already browsing.
+            Real products at real prices, from brands you know. Riders across
+            India are already browsing.
           </p>
           <Link
             href="/marketplace"

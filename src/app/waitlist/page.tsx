@@ -5,7 +5,7 @@ import { WaitlistForm } from "@/components/WaitlistForm";
 export const metadata: Metadata = {
   title: "Get Updates",
   description:
-    "The occasional, considered update from Indusequine — India's first equestrian marketplace. New brands, new professionals, real milestones.",
+    "The occasional, considered update from Indusequine, India's first equestrian marketplace. New brands, new professionals, real milestones.",
 };
 
 export default function WaitlistPage() {
@@ -54,7 +54,7 @@ export default function WaitlistPage() {
             <Step
               n="03"
               title="A voice in what we build next"
-              body="Subscribers are often the first we ask when we're deciding what to add next — a new brand, a new category, a new feature."
+              body="Subscribers are often the first we ask when we're deciding what to add next: a new brand, a new category, a new feature."
             />
           </ol>
         </Container>

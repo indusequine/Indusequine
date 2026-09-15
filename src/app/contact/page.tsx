@@ -45,7 +45,7 @@ export default function ContactPage() {
                 />
                 <ContactBlock
                   eyebrow="For coaches, vets & farriers"
-                  title="List your practice — free for verified professionals."
+                  title="List your practice, free for verified professionals."
                   email="professionals@indusequine.com"
                 />
                 <ContactBlock

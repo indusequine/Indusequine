@@ -32,7 +32,7 @@ const dmMono = DM_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL("https://indusequine.com"),
   title: {
-    default: "Indusequine — India's First Equestrian Marketplace",
+    default: "Indusequine: India's First Equestrian Marketplace",
     template: "%s · Indusequine",
   },
   description:
@@ -50,18 +50,18 @@ export const metadata: Metadata = {
     "farrier India",
   ],
   openGraph: {
-    title: "Indusequine — India's First Equestrian Marketplace",
+    title: "Indusequine: India's First Equestrian Marketplace",
     description:
-      "A curated home for riders, horses, stables, and the professionals who serve them. Organising India's equestrian community for the first time.",
+      "One home for riders, horses, stables and the professionals who serve them. Organising India's equestrian community for the first time.",
     type: "website",
     locale: "en_IN",
     siteName: "Indusequine",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Indusequine — India's First Equestrian Marketplace",
+    title: "Indusequine: India's First Equestrian Marketplace",
     description:
-      "A curated home for riders, horses, stables, and the professionals who serve them.",
+      "One home for riders, horses, stables and the professionals who serve them.",
   },
   robots: {
     index: true,

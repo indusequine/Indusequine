@@ -6,7 +6,7 @@ import { LogoMarkPattern } from "@/components/Logo";
 export const metadata: Metadata = {
   title: "Our Story",
   description:
-    "Why we're building Indusequine — India's first dedicated equestrian marketplace. Organising one of the world's oldest equestrian traditions into one trusted modern home.",
+    "Why we're building Indusequine, India's first dedicated equestrian marketplace. Organising one of the world's oldest riding traditions into one trusted modern home.",
 };
 
 export default function StoryPage() {
@@ -61,8 +61,8 @@ function Problem() {
             India has cavalry regiments older than the Republic. Polo grounds
             in Jaipur, Calcutta, and Delhi that have hosted the sport for
             generations. Stud farms in Punjab, riding schools in every metro,
-            and indigenous breeds — the Marwari, the Kathiawari — that are
-            woven into the country&rsquo;s history.
+            and indigenous breeds like the Marwari and the Kathiawari, woven
+            into the country&rsquo;s history.
           </p>
           <p>
             And yet, in 2026, buying a well-fitting saddle in India still
@@ -92,21 +92,21 @@ function Mission() {
           Our Mission
         </p>
         <h2 className="font-display text-4xl md:text-5xl mt-4 leading-tight">
-          To organise the unorganised — without losing what makes it good.
+          To organise the unorganised without losing what makes it good.
         </h2>
         <div className="mt-8 space-y-6 text-cream-soft/85 leading-relaxed text-lg">
           <p>
             Indusequine is India&rsquo;s first dedicated equestrian
-            marketplace. One trusted home for the products, professionals,
-            and stables that India&rsquo;s riders rely on — built with the
-            community that already knows the territory.
+            marketplace. One trusted home for the products, professionals and
+            stables that India&rsquo;s riders rely on, built with the community
+            that already knows the territory.
           </p>
           <p>
             Two halves, working together. A <em className="text-brass-light not-italic font-medium">marketplace</em>{" "}
-            of considered, curated products for riders, horses, and
-            stables. A <em className="text-brass-light not-italic font-medium">services directory</em> of verified
-            coaches, vets, and farriers — the people who keep the whole
-            thing standing.
+            of considered products for riders, horses and stables. A{" "}
+            <em className="text-brass-light not-italic font-medium">services directory</em> of verified
+            coaches, vets and farriers, the people who keep the whole thing
+            standing.
           </p>
           <p>
             What we won&rsquo;t do is reduce a craft community to a
@@ -124,15 +124,15 @@ function Why() {
   const pillars = [
     {
       title: "Why now",
-      body: "A new generation is entering the sport — through schools, polo, and the leisure riding boom. They expect to discover, evaluate, and book online. The infrastructure simply isn't there yet.",
+      body: "A new generation is entering the sport through schools, polo and the leisure riding boom. They expect to discover, evaluate and book online. The infrastructure simply isn't there yet.",
     },
     {
       title: "Why India",
-      body: "No one has built this yet. There is no trusted home for the category — no name a rider, a stable, or a brand already turns to. The early mover with the right standards — vetted brands, verified professionals, fair fees — sets the bar for the next decade.",
+      body: "No one has built this yet. There is no trusted home for the category, no name a rider, a stable or a brand already turns to. Whoever moves first with the right standards, meaning vetted brands, verified professionals and fair fees, sets the bar for the next decade.",
     },
     {
       title: "Why us",
-      body: "We grew up between the saddle and the spreadsheet. We know the riders, the stables, the federations, and what's actually broken — because we've lived with it.",
+      body: "We grew up between the saddle and the spreadsheet. We know the riders, the stables, the federations, and what's actually broken, because we've lived with it.",
     },
   ];
 
@@ -179,7 +179,7 @@ function Promise() {
           />
           <Pact
             to="To the professional"
-            text="Your reputation is your livelihood. We will protect it as if it were our own — verified credentials, honest reviews, real recourse."
+            text="Your reputation is your livelihood. We will protect it as if it were our own: verified credentials, honest reviews, real recourse."
           />
         </div>
       </Container>
@@ -211,7 +211,7 @@ function FoundersNote() {
           <p className="mt-6">
             &ldquo;Indusequine is the version of that conversation that
             scales. The same trust, the same standards, the same hand-picked
-            quality — built for everyone in the country to share, not just
+            quality, built for everyone in the country to share rather than
             the dozen of us who already know each other.&rdquo;
           </p>
           <p className="mt-6 text-brass-light">
@@ -234,7 +234,7 @@ function CTA() {
           Ride with us as we grow.
         </h2>
         <p className="mt-6 text-cream-soft/80 max-w-xl mx-auto leading-relaxed">
-          Get the occasional, considered update — new brands, new
+          Get the occasional, considered update: new brands, new
           professionals, real milestones. The riders who join now help
           shape what comes next.
         </p>

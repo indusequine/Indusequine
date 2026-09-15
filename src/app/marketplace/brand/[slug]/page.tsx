@@ -27,7 +27,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!brand) return {};
   return {
     title: brand.name,
-    description: `Shop ${brand.name} on Indusequine — ${brand.count} products, with real prices, for riders across India.`,
+    description: `Shop ${brand.name} on Indusequine. ${brand.count} products, with real prices, for riders across India.`,
   };
 }
 

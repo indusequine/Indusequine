@@ -6,7 +6,7 @@ import { LogoMarkPattern } from "@/components/Logo";
 export const metadata: Metadata = {
   title: "Services",
   description:
-    "Find verified equestrian professionals across India — riding coaches, equine vets, and farriers. Credentials, disciplines, reviews, and direct contact.",
+    "Find verified equestrian professionals across India: riding coaches, equine vets and farriers. Credentials, disciplines, reviews and direct contact.",
 };
 
 const services = [
@@ -15,7 +15,7 @@ const services = [
     eyebrow: "Coaches",
     title: "The right instructor for the ride you want.",
     intro:
-      "India has world-class coaches, but they live in stables and WhatsApp groups, not on the open web. We're bringing them together — discipline, qualification, experience, fees, and student reviews — so finding the right teacher feels less like a treasure hunt.",
+      "India has excellent coaches. They live in stables and WhatsApp groups, not on the open web. Indusequine puts them in one place, with discipline, qualification, experience, fees and student reviews, so finding the right teacher stops being a treasure hunt.",
     bullets: [
       "Disciplines: dressage, show jumping, eventing, polo, endurance, vaulting, hacking",
       "Levels: from first-lesson learners to international competitors",
@@ -35,7 +35,7 @@ const services = [
     eyebrow: "Equine Vets",
     title: "Care your horse can count on.",
     intro:
-      "Equine medicine is a specialism — and a small one in India. We're mapping every qualified equine vet in the country, so whether it's a routine vaccination, a pre-purchase exam, or an emergency at midnight, you know exactly who to call.",
+      "Equine medicine is a specialism, and a small one in India. We're mapping every qualified equine vet in the country, so a routine vaccination, a pre-purchase exam or an emergency at midnight all start with knowing who to call.",
     bullets: [
       "Routine care: vaccinations, deworming, dentistry, nutrition",
       "Performance work: lameness, gait analysis, joint injections, pre-purchase exams",
@@ -53,9 +53,9 @@ const services = [
   {
     id: "farriers",
     eyebrow: "Farriers",
-    title: "Shoeing you — and your horse — can trust.",
+    title: "Shoeing you and your horse can trust.",
     intro:
-      "Good farriery keeps a horse sound. Poor farriery breaks one. The farrier community in India is tight, talented, and largely invisible outside the stables where each works. We're putting their work — and your stable's experience of it — into the open.",
+      "Good farriery keeps a horse sound. Poor farriery breaks one. India's farriers are tight-knit and talented, and largely invisible outside the stables where each of them works. Their work, and your stable's experience of it, belongs in the open.",
     bullets: [
       "Disciplines: hot shoeing, cold shoeing, corrective work, barefoot trims",
       "Specialisms: sport horses, polo ponies, Marwari & indigenous breeds, foals",
@@ -98,9 +98,9 @@ function PageHero() {
           The professionals you trust, brought into the light.
         </h1>
         <p className="mt-8 text-lg md:text-xl text-cream-soft/80 leading-relaxed max-w-2xl mx-auto">
-          Coaches, vets, and farriers across India — verified, rated, and
-          reachable. Built from the ground up with the stables, federations,
-          and riders who already know each other.
+          Coaches, vets and farriers across India, verified and reachable.
+          Built with the stables, federations and riders who already know
+          each other.
         </p>
         <div className="mt-12 flex flex-wrap justify-center gap-3">
           {services.map((s) => (
@@ -185,7 +185,7 @@ function ProviderCTA() {
           Be listed where India&rsquo;s riders are already looking.
         </h2>
         <p className="mt-6 text-cream-soft/80 leading-relaxed">
-          A profile on Indusequine is free for verified professionals — and
+          A profile on Indusequine is free for verified professionals, and
           built to bring you the clients you actually want. Tell us about your
           practice and we&rsquo;ll be in touch when we begin onboarding.
         </p>

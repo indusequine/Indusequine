@@ -30,7 +30,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const bits = [product.brand, product.categoryName, product.priceLabel].filter(Boolean);
   return {
     title: product.name,
-    description: `${product.name}. ${bits.join(" — ")}.`,
+    description: `${product.name}. ${bits.join(" · ")}.`,
   };
 }
 
