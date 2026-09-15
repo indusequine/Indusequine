@@ -9,7 +9,7 @@ import { getCategoriesWithCounts } from "@/data/products";
 export const metadata: Metadata = {
   title: "The Marketplace",
   description:
-    "A curated equestrian marketplace for India — premium products for riders, horses, and stables. From saddlery and tack to rugs, apparel, and grooming.",
+    "Premium equestrian products for India: saddlery, tack, rugs, apparel and grooming, for riders, horses and stables.",
 };
 
 // Next.js requires route segment config to be a static literal, so this
@@ -106,12 +106,12 @@ function PageHero() {
           Every product, for every kind of ride.
         </h1>
         <p className="mt-8 text-lg md:text-xl text-cream-soft/80 leading-relaxed max-w-2xl mx-auto">
-          The brands you&rsquo;ve struggled to find in India — and the ones
-          you&rsquo;ve only heard of from friends abroad. All under one
-          well-tended roof.
+          The brands you&rsquo;ve struggled to find in India, and the ones
+          you&rsquo;ve only heard about from friends abroad. All under one
+          roof.
         </p>
         <p className="mt-4 text-sm text-cream-soft/50 max-w-2xl mx-auto">
-          Real listings, real prices — product photography is on its way.
+          Real listings, real prices. Product photography is on its way.
         </p>
       </Container>
     </section>
@@ -127,9 +127,9 @@ function BrandsCTA() {
           Bring your brand to India&rsquo;s riders.
         </h2>
         <p className="mt-6 text-cream-soft/80 leading-relaxed">
-          Indian, regional, and global brands — if your work belongs alongside
-          the best in the world, we&rsquo;d like to talk. We&rsquo;re building
-          this marketplace with the makers who care, not the catalogues that
+          Indian, regional and global. If your work belongs alongside the best
+          in the world, we&rsquo;d like to talk. We&rsquo;re building this
+          marketplace with the makers who care, not the catalogues that
           don&rsquo;t.
         </p>
         <Link

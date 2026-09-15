@@ -5,7 +5,7 @@ import { Container } from "@/components/Container";
 export const metadata: Metadata = {
   title: "Discover",
   description:
-    "Equine therapy, clinics, training programmes, and shows across India — booked directly through Indusequine.",
+    "Equine therapy, clinics, training programmes and shows across India, booked directly through Indusequine.",
 };
 
 const HERO_PHOTO = "/images/discover-hero.jpg";
@@ -16,7 +16,7 @@ const categories = [
     eyebrow: "Equine Therapy",
     title: "Recovery and conditioning, one booked session at a time.",
     intro:
-      "From post-injury rehabilitation to routine conditioning, equine therapy keeps horses sound and performing. India's therapy centres are real, but they live in stables and word of mouth, not on the open web. We're bringing them onto Indusequine so you can see what's on offer nearby and book a session directly.",
+      "From post-injury rehabilitation to routine conditioning, equine therapy keeps horses sound and performing. India's therapy centres are real, but most are known only by word of mouth. Indusequine brings them into one place, so you can see what's on offer nearby and book a session directly.",
     bullets: [
       "Post-injury rehabilitation and hydrotherapy",
       "Soft-tissue therapy and massage",
@@ -28,7 +28,7 @@ const categories = [
       "Browse centres by location and specialism",
       "See real availability before you travel",
       "Book directly through Indusequine",
-      "Verified centres only — reviewed before listing",
+      "Verified centres only, reviewed before listing",
     ],
   },
   {
@@ -48,7 +48,7 @@ const categories = [
       "Browse clinics by location and specialism",
       "See real availability before you travel",
       "Book directly through Indusequine",
-      "Verified clinics only — reviewed before listing",
+      "Verified clinics only, reviewed before listing",
     ],
   },
   {
@@ -56,7 +56,7 @@ const categories = [
     eyebrow: "Training Programmes",
     title: "Structured coaching, from your first lesson to your next show.",
     intro:
-      "Good training is a season-long commitment, not a single lesson. We're bringing India's training programmes — junior, amateur, and professional — onto Indusequine, so you can find a curriculum built for where you actually are, and book straight in.",
+      "Good training is a season-long commitment, not a single lesson. India's training programmes are coming onto Indusequine at every level, junior to professional, so you can find a curriculum built for where you actually are and book straight in.",
     bullets: [
       "Season-long curricula with clear progression",
       "Junior, amateur, and professional tracks",
@@ -68,7 +68,7 @@ const categories = [
       "Browse programmes by discipline and level",
       "See real availability before you commit",
       "Book directly through Indusequine",
-      "Verified coaches only — reviewed before listing",
+      "Verified coaches only, reviewed before listing",
     ],
   },
   {
@@ -76,7 +76,7 @@ const categories = [
     eyebrow: "Shows",
     title: "Enter the ring. We'll handle the paperwork.",
     intro:
-      "In this sport, a competition is a show — the two words mean the same thing. We're building a single place to see every show happening across India and abroad, and to register your entry directly through Indusequine instead of chasing down a form.",
+      "In this sport, a competition is a show. The two words mean the same thing. We're building one place to see every show happening across India and abroad, and to register your entry through Indusequine instead of chasing down a form.",
     bullets: [
       "National and international show calendars",
       "Entry registration handled directly on Indusequine",
@@ -88,7 +88,7 @@ const categories = [
       "Browse shows by date, region, and discipline",
       "See entry requirements before you commit",
       "Register and pay directly through Indusequine",
-      "Verified organisers only — reviewed before listing",
+      "Verified organisers only, reviewed before listing",
     ],
   },
 ];
@@ -121,8 +121,8 @@ function PageHero() {
           Beyond the tack room.
         </h1>
         <p className="mt-8 text-lg md:text-xl text-cream-soft/80 leading-relaxed max-w-2xl mx-auto">
-          Equine therapy, clinics, training programmes, and shows — the care
-          and coaching that keep horses and riders at their best. We&rsquo;re
+          Equine therapy, clinics, training programmes and shows. The care and
+          coaching that keep horses and riders at their best. We&rsquo;re
           building the booking, one verified partner at a time.
         </p>
         <div className="mt-12 flex flex-wrap justify-center gap-3">
@@ -176,7 +176,7 @@ function DiscoverSection({ category }: { category: (typeof categories)[number] }
                 ))}
               </ul>
               <p className="mt-6 pt-6 border-t border-forest/15 text-sm text-stone leading-relaxed">
-                Booking isn&rsquo;t live yet — we&rsquo;re verifying partners
+                Booking isn&rsquo;t live yet. We&rsquo;re verifying partners
                 first. Join the waitlist to hear the moment it opens.
               </p>
             </div>
@@ -206,9 +206,9 @@ function DiscoverCTA() {
           Be where India&rsquo;s riders are already looking.
         </h2>
         <p className="mt-6 text-cream-soft/80 leading-relaxed">
-          A listing on Indusequine is free while we onboard our first
-          partners — bookings and entries route straight through us. Tell us
-          what you offer and we&rsquo;ll be in touch.
+          A listing on Indusequine is free while we onboard our first partners,
+          and bookings and entries route straight through us. Tell us what you
+          offer and we&rsquo;ll be in touch.
         </p>
         <Link
           href="/contact"

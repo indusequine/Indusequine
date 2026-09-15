@@ -11,8 +11,8 @@ export function Footer() {
           <div className="md:col-span-4">
             <Logo variant="cream" size="md" />
             <p className="mt-6 text-cream-soft/70 max-w-md leading-relaxed">
-              India&rsquo;s first dedicated equestrian marketplace. A curated home for
-              riders, horses, stables, and the professionals who serve them.
+              India&rsquo;s first dedicated equestrian marketplace. One home for
+              riders, horses, stables and the professionals who serve them.
             </p>
           </div>
 

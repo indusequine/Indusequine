@@ -27,7 +27,7 @@ export function ProductImage({ product, size = "card" }: ProductImageProps) {
   return (
     <div
       role="img"
-      aria-label={`${product.name} — photography coming soon`}
+      aria-label={`${product.name}: photography coming soon`}
       className={`relative aspect-square overflow-hidden flex items-center justify-center ${categoryTileClass(product.category)}`}
     >
       <div className="absolute inset-0 opacity-[0.08] pointer-events-none">

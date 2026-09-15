@@ -91,7 +91,7 @@ export function ContactForm() {
           Thank you.
         </h3>
         <p className="mt-4 text-charcoal leading-relaxed max-w-xl mx-auto">
-          Thank you — we&rsquo;ve received your note and will reply soon.
+          Thank you. We&rsquo;ve received your note and will reply soon.
         </p>
       </div>
     );

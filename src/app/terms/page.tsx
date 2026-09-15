@@ -28,8 +28,8 @@ export default function TermsPage() {
               <p>
                 Indusequine is a marketplace and directory connecting
                 India&rsquo;s riders with equestrian products, brands, and
-                verified professionals — coaches, vets, and farriers. By
-                using indusequine.com, you agree to these terms.
+                verified professionals: coaches, vets and farriers. By using
+                indusequine.com, you agree to these terms.
               </p>
             </Section>
 
@@ -37,10 +37,10 @@ export default function TermsPage() {
               <p>
                 Product listings on Indusequine show real products and real
                 prices, sourced from our brand partners. Right now,
-                Indusequine is <strong>enquiry-based, not transactional</strong>
-                — when you enquire about a product, we pass your request to
-                the relevant brand or partner, who handles the sale directly
-                with you. Indusequine does not process payments and is not a
+                Indusequine is <strong>enquiry-based, not transactional</strong>.
+                When you enquire about a product, we pass your request to the
+                relevant brand or partner, who handles the sale directly with
+                you. Indusequine does not process payments and is not a
                 party to the resulting sale.
               </p>
               <p>
@@ -65,7 +65,7 @@ export default function TermsPage() {
                 Our Discover section is an informational directory of
                 equine therapy centres, clinics, training programmes, and
                 shows. It is not currently a booking or registration
-                platform — entries are for discovery, not transaction.
+                platform. Entries are for discovery, not transaction.
               </p>
             </Section>
 
@@ -95,8 +95,8 @@ export default function TermsPage() {
                 provided &ldquo;as is&rdquo;, without warranties of any
                 kind. We&rsquo;re not liable for the products, services, or
                 conduct of the brands, professionals, or organisations
-                listed on the site — only for our own direct role in
-                connecting you with them.
+                listed on the site, only for our own direct role in connecting
+                you with them.
               </p>
             </Section>
 
@@ -109,8 +109,8 @@ export default function TermsPage() {
 
             <Section title="Changes to these terms">
               <p>
-                We may update these terms as the platform grows — for
-                example, as we introduce direct checkout or booking. If we
+                We may update these terms as the platform grows, for example
+                as we introduce direct checkout or booking. If we
                 make a meaningful change, we&rsquo;ll update the effective
                 date above.
               </p>

@@ -39,30 +39,30 @@ export default function PrivacyPage() {
               <p>We collect information only when you choose to give it to us, through one of three forms on the site:</p>
               <ul>
                 <li>
-                  <strong>Product enquiries</strong> — your name, email,
+                  <strong>Product enquiries</strong>: your name, email,
                   optional phone number, and message, along with the product
                   you enquired about.
                 </li>
                 <li>
-                  <strong>Contact form</strong> — your name, email, optional
+                  <strong>Contact form</strong>: your name, email, optional
                   organisation, the nature of your enquiry, and your message.
                 </li>
                 <li>
-                  <strong>Updates signup</strong> — your name, email, how you
+                  <strong>Updates signup</strong>: your name, email, how you
                   ride with us, and an optional city and phone number.
                 </li>
               </ul>
               <p>
                 We also use Vercel Analytics, a cookieless, privacy-first
-                analytics tool that reports aggregated traffic patterns —
-                which pages are visited, roughly how much traffic, from
-                which country — without identifying you personally or
-                tracking you across other websites.
+                analytics tool that reports aggregated traffic patterns: which
+                pages are visited, roughly how much traffic, and from which
+                country. It does not identify you personally or track you
+                across other websites.
               </p>
               <p>
                 We do not use advertising cookies, third-party trackers, or
                 sell any data to ad networks. We do not collect payment card
-                details — the site does not process payments.
+                details, because the site does not process payments.
               </p>
             </Section>
 
@@ -73,7 +73,7 @@ export default function PrivacyPage() {
                 <li>Connect you with the relevant brand, stable, or professional</li>
                 <li>
                   Send you occasional updates, only if you&rsquo;ve signed up
-                  to receive them — you can ask to stop at any time
+                  to receive them, and you can ask to stop at any time
                 </li>
                 <li>Understand, in aggregate, how people use the site, so we can improve it</li>
               </ul>
@@ -85,16 +85,16 @@ export default function PrivacyPage() {
                 accessible only to the Indusequine team. Analytics data is
                 aggregated and stored by Vercel, our hosting provider. We do
                 not share the information you submit with any other third
-                party, except where necessary to fulfil your specific request
-                — for example, passing your enquiry to the brand or
-                professional you asked about.
+                party, except where necessary to fulfil your specific request,
+                for example passing your enquiry to the brand or professional
+                you asked about.
               </p>
             </Section>
 
             <Section title="Your rights">
               <p>
                 You can ask us to show you what information we hold about
-                you, correct it, or delete it, at any time — just email{" "}
+                you, correct it, or delete it, at any time. Just email{" "}
                 <a href="mailto:hello@indusequine.com" className="text-forest underline underline-offset-4">
                   hello@indusequine.com
                 </a>
@@ -106,9 +106,9 @@ export default function PrivacyPage() {
 
             <Section title="Third-party services we use">
               <ul>
-                <li><strong>Google</strong> — form submissions are stored via Google Sheets</li>
-                <li><strong>Vercel</strong> — hosting and cookieless analytics</li>
-                <li><strong>Shopify</strong> — powers our product catalogue; no personal information you submit is shared with Shopify</li>
+                <li><strong>Google</strong>: form submissions are stored via Google Sheets</li>
+                <li><strong>Vercel</strong>: hosting and cookieless analytics</li>
+                <li><strong>Shopify</strong>: powers our product catalogue; no personal information you submit is shared with Shopify</li>
               </ul>
             </Section>
 
