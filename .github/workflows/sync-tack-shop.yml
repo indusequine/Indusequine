@@ -1,0 +1,33 @@
+name: Sync The Tack Shop
+
+# Keeps The Tack Shop's products on Indusequine in line with tackshop.in:
+# photos, brands and descriptions where we lack them, live selling prices, and
+# out-of-stock / back-in-stock. Reads their public Zoho Commerce API directly,
+# so unlike Delhi there is no separate scrape step.
+# See scripts/tack_shop/sync.py for exactly what a run does.
+
+on:
+  schedule:
+    - cron: "47 */6 * * *" # every 6 hours (UTC); 30 min off Delhi's run so the two never overlap
+  workflow_dispatch: # "Run workflow" button in the Actions tab
+
+concurrency:
+  group: sync-tack-shop
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v5
+
+      - name: Sync into Shopify
+        env:
+          SHOPIFY_ADMIN_CLIENT_ID: ${{ secrets.SHOPIFY_ADMIN_CLIENT_ID }}
+          SHOPIFY_ADMIN_CLIENT_SECRET: ${{ secrets.SHOPIFY_ADMIN_CLIENT_SECRET }}
+          SHOPIFY_STORE_DOMAIN: ${{ secrets.SHOPIFY_STORE_DOMAIN }}
+        run: python3 scripts/tack_shop/sync.py
