@@ -191,6 +191,30 @@ def main():
             print(f"[{i}/{len(product_codes)}] {code}: FAILED - {e}")
         time.sleep(REQUEST_DELAY)
 
+    # One more go at anything that failed, now that minutes have passed. fetch()
+    # already retries four times, but those retries land within about seven
+    # seconds of each other -- too soon to outlast a slow patch on his server.
+    # On 2026-09-17 a single timed-out page out of 235 failed the whole run and
+    # emailed the founder, then succeeded on the next scheduled run. A late
+    # second pass absorbs that kind of blip; a page that STILL fails is a real
+    # problem and still fails the run.
+    if failures:
+        print(f"\nretrying {len(failures)} failed page(s) after a pause...")
+        time.sleep(30)
+        still = []
+        for f in failures:
+            try:
+                product = parse_product(fetch(f["url"]))
+                product["url"] = f["url"]
+                product["brand"] = brands.get(f["code"].lower())
+                products.append(product)
+                print(f"  {f['code']}: recovered - {product['name']}")
+            except Exception as e:
+                still.append({**f, "error": str(e)})
+                print(f"  {f['code']}: still failing - {e}")
+            time.sleep(REQUEST_DELAY)
+        failures = still
+
     OUT_PATH.parent.mkdir(parents=True, exist_ok=True)
     OUT_PATH.write_text(json.dumps({
         "source": BASE_URL,
