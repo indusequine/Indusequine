@@ -1,5 +1,5 @@
 import { shopifyFetch, fetchAllPages } from "@/lib/shopify/client";
-import { brandSlug } from "@/lib/brands";
+import { brandSlug, brandFromVendor } from "@/lib/brands";
 import { categoryTileProduct } from "@/lib/categoryImages";
 import { sellerFromTags, type Seller } from "@/lib/sellers";
 import {
@@ -103,8 +103,7 @@ function mapProduct(node: ShopifyProductNode, categoryName: string): Product {
   const category = categorySlugFromTags(node.tags) ?? "";
   const priceOnRequest = node.tags.includes("price-on-request");
   const variants = node.variants.edges.map((e) => mapVariant(e.node));
-  // Migration set vendor = brand ?? "Indusequine"; reverse that fallback.
-  const brand = node.vendor === "Indusequine" ? null : node.vendor;
+  const brand = brandFromVendor(node.vendor);
 
   return {
     slug: node.handle,
@@ -181,8 +180,8 @@ export async function getCategoriesWithCounts(): Promise<CategoryWithCount[]> {
 
 // Brands stocked across a set of categories, busiest first. Vendor rides along
 // on the lean query, so this costs no extra round trip beyond what the category
-// counts already fetch. The migration set vendor = brand ?? "Indusequine", so
-// that sentinel is dropped the same way mapProduct drops it.
+// counts already fetch. Vendors that stand for "no brand" are dropped by
+// brandFromVendor, the same way mapProduct drops them.
 export async function getBrandsForCategorySlugs(
   categorySlugs: string[],
 ): Promise<string[]> {
@@ -192,7 +191,7 @@ export async function getBrandsForCategorySlugs(
   for (const n of nodes) {
     const slug = categorySlugFromTags(n.tags);
     if (!slug || !wanted.has(slug)) continue;
-    const brand = n.vendor === "Indusequine" ? null : n.vendor?.trim();
+    const brand = brandFromVendor(n.vendor);
     if (!brand) continue;
     counts.set(brand, (counts.get(brand) ?? 0) + 1);
   }
@@ -205,7 +204,7 @@ export async function getAllBrands(): Promise<Brand[]> {
   const nodes = await fetchAllProductsLean();
   const counts = new Map<string, number>();
   for (const n of nodes) {
-    const brand = n.vendor === "Indusequine" ? null : n.vendor?.trim();
+    const brand = brandFromVendor(n.vendor);
     if (!brand) continue;
     counts.set(brand, (counts.get(brand) ?? 0) + 1);
   }
@@ -279,7 +278,7 @@ export async function getBrandCategoryPairs(): Promise<
 
   const pairs = new Set<string>();
   for (const n of nodes) {
-    const brand = n.vendor === "Indusequine" ? null : n.vendor?.trim();
+    const brand = brandFromVendor(n.vendor);
     const slug = categorySlugFromTags(n.tags);
     if (!brand || !slug || !known.has(slug)) continue;
     pairs.add(`${brandSlug(brand)}|${slug}`);
