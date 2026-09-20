@@ -81,6 +81,26 @@ export const COLLECTIONS_QUERY = /* GraphQL */ `
   }
 `;
 
+// Every product from one brand. Shopify's vendor: filter wants the value in
+// single quotes so multi-word brands ("Kep Italia") match as one term rather
+// than as two loose words.
+export const PRODUCTS_BY_VENDOR_QUERY = /* GraphQL */ `
+  ${PRODUCT_FIELDS_FRAGMENT}
+  query ProductsByVendor($query: String!, $first: Int!, $after: String) {
+    products(first: $first, after: $after, query: $query) {
+      edges {
+        node {
+          ...ProductFields
+        }
+      }
+      pageInfo {
+        hasNextPage
+        endCursor
+      }
+    }
+  }
+`;
+
 // Lean pass over the full catalogue — handle + tags only, no variants/images.
 // Backs both getAllProductSlugs() (reads .handle) and getTopCategories() (reads .tags),
 // since a shared query lets identical page fetches hit Next's fetch cache for both callers.
@@ -91,6 +111,10 @@ export const PRODUCTS_LEAN_QUERY = /* GraphQL */ `
         node {
           handle
           tags
+          vendor
+          featuredImage {
+            url
+          }
         }
       }
       pageInfo {

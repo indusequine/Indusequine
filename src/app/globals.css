@@ -18,6 +18,7 @@
 
   --font-display: var(--font-cormorant), "Cormorant Garamond", "Times New Roman", serif;
   --font-body: var(--font-inter), "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-mono: var(--font-mono-dm), "DM Mono", ui-monospace, "SF Mono", Menlo, monospace;
 }
 
 html {
@@ -45,22 +46,105 @@ h1, h2, h3, h4, h5, h6, .font-display {
   color: var(--color-cream-soft);
 }
 
-.eyebrow {
-  font-family: var(--font-body);
-  font-size: 0.75rem;
-  letter-spacing: 0.22em;
-  text-transform: uppercase;
-  font-weight: 500;
+/* These sit in the components layer so Tailwind utilities still win -- a few
+   places set their own size or tracking on top of .eyebrow, and unlayered CSS
+   would silently beat those utilities. */
+@layer components {
+  /* Small labels -- categories, counts, SKUs, section eyebrows -- sit in mono.
+     Mono is already wide, so it needs less tracking than Inter did. */
+  .eyebrow {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    font-weight: 400;
+  }
+
+  .mono {
+    font-family: var(--font-mono);
+    font-variant-numeric: tabular-nums;
+  }
+
+  .rule {
+    display: inline-block;
+    width: 2rem;
+    height: 1px;
+    background: currentColor;
+    vertical-align: middle;
+    margin-right: 0.75rem;
+    opacity: 0.5;
+  }
 }
 
-.rule {
-  display: inline-block;
-  width: 2rem;
+/* The intro curtain. Hidden outright where motion isn't welcome, so anyone on
+   reduced motion goes straight to the site.
+
+   The animation below is a failsafe, not the mechanism: it lifts the curtain on
+   its own by 2.9s, so a visitor whose JavaScript never arrives is never shut
+   out. When the script does run it removes that animation and drives the
+   curtain from real load progress instead. Belt and braces, because a stuck
+   curtain is a worse failure than the slow paint it exists to cover. */
+.intro-curtain {
+  display: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .intro-curtain {
+    display: grid;
+    place-items: center;
+    position: fixed;
+    inset: 0;
+    z-index: 100;
+    background: var(--color-forest-deep);
+    /* Outlasts the script's 2.6s ceiling, and holds fully opaque until 2.3s,
+       so a late-hydrating bundle can never catch it mid-fade. */
+    animation: introFailsafe 2.9s ease-in-out forwards;
+  }
+
+  /* What the script uses once it has taken the failsafe off. */
+  .intro-curtain-done {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.55s ease-in-out, visibility 0s linear 0.55s;
+  }
+}
+
+.intro-curtain-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.75rem;
+  color: var(--color-brass-light);
+}
+
+.intro-curtain-track {
+  width: clamp(120px, 22vw, 190px);
   height: 1px;
-  background: currentColor;
-  vertical-align: middle;
-  margin-right: 0.75rem;
-  opacity: 0.5;
+  background: color-mix(in srgb, var(--color-brass-light) 25%, transparent);
+  overflow: hidden;
+}
+
+.intro-curtain-bar {
+  height: 100%;
+  background: var(--color-brass-light);
+  transform-origin: left center;
+  transform: scaleX(0);
+  /* Transform only -- a width animation would relayout on every frame. */
+  transition: transform 0.25s ease-out;
+  animation: introBar 2.3s ease-out forwards;
+}
+
+@keyframes introFailsafe {
+  0%, 80% { opacity: 1; visibility: visible; }
+  100% { opacity: 0; visibility: hidden; }
+}
+
+/* The bar advances before the bundle arrives, so the loader never sits at zero
+   while JavaScript is still on its way. The script removes this animation when
+   it takes over, otherwise its inline transform would lose to it. */
+@keyframes introBar {
+  from { transform: scaleX(0); }
+  to { transform: scaleX(0.92); }
 }
 
 @keyframes fadeInUp {
@@ -68,6 +152,76 @@ h1, h2, h3, h4, h5, h6, .font-display {
   to { opacity: 1; transform: translateY(0); }
 }
 
-.fade-in-up {
-  animation: fadeInUp 0.8s ease-out backwards;
+/* The hero entrance. `backwards` holds the element at opacity 0 through its
+   delay, so this is the one thing on the site that genuinely does paint late --
+   and it was running for everyone, including people who have asked their system
+   for less motion. It now only runs when motion is welcome; otherwise the hero
+   is simply there. */
+@media (prefers-reduced-motion: no-preference) {
+  .fade-in-up {
+    animation: fadeInUp 0.8s ease-out backwards;
+  }
+}
+
+/* Brand marquee. Two identical halves sit side by side and the pair slides by
+   exactly half its width, so the moment the first half leaves, the second is
+   already in its place -- the loop has no seam. Pure CSS, so it costs no
+   JavaScript and never blocks paint. The edges fade out rather than cutting
+   names in half at the viewport boundary. */
+@keyframes marqueeSlide {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+.marquee {
+  overflow: hidden;
+  mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
+}
+
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: marqueeSlide linear infinite;
+}
+
+/* Pause on hover so a name is easy to click, and on focus-within so keyboard
+   users are never chasing a moving target. */
+.marquee:hover .marquee-track,
+.marquee:focus-within .marquee-track {
+  animation-play-state: paused;
+}
+
+/* Reduce-motion gets the list standing still, scrollable by hand. */
+@media (prefers-reduced-motion: reduce) {
+  .marquee {
+    overflow-x: auto;
+    mask-image: none;
+  }
+  .marquee-track {
+    animation: none;
+  }
+}
+
+@keyframes revealUp {
+  from { transform: translateY(18px); }
+  to { transform: translateY(0); }
+}
+
+/* One reveal, used everywhere: content settles up into place as it enters view.
+   Deliberately no opacity. A scroll-driven fade leaves anything already
+   half-on-screen when the page loads sitting part-faded, which reads as the
+   page still loading -- nothing here is ever hidden, it only moves.
+
+   Scroll-driven and CSS-only, so there's no JavaScript, nothing waits on a
+   script, and browsers without support show the content at rest. ease-out puts
+   most of the travel at the start of the range, so an element has settled well
+   before it reaches the middle of the viewport. */
+@media (prefers-reduced-motion: no-preference) {
+  @supports (animation-timeline: view()) {
+    .reveal {
+      animation: revealUp ease-out both;
+      animation-timeline: view();
+      animation-range: entry 0% entry 40%;
+    }
+  }
 }
