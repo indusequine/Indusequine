@@ -56,7 +56,7 @@ export function Footer() {
               <li><Link href="/waitlist" className="hover:text-brass-light">Get Updates</Link></li>
               <li><Link href="/contact" className="hover:text-brass-light">Partner With Us</Link></li>
               <li>
-                <a href="mailto:hello@indusequine.com" className="hover:text-brass-light">
+                <a href="mailto:hello@indusequine.com" className="hover:text-brass-light break-words">
                   hello@indusequine.com
                 </a>
               </li>

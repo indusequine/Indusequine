@@ -40,6 +40,8 @@ const menus = [
   },
 ];
 
+// Company links ride on the same bar as the shopping links, set quieter and to
+// the right, rather than on a second row of their own.
 const utilityLinks = [
   { href: "/story", label: "Our Story" },
   { href: "/contact", label: "Partner With Us" },
@@ -54,24 +56,12 @@ export function Header() {
 
   return (
     <header className="site-header sticky top-0 z-40">
-      <div className="hidden md:block border-b border-black/5 bg-white">
-        <Container size="wide">
-          <div className="flex h-9 items-center justify-end gap-7">
-            {utilityLinks.map((link) => (
-              <Link key={link.href} href={link.href} className="site-header__utility">
-                {link.label}
-              </Link>
-            ))}
-          </div>
-        </Container>
-      </div>
-
       <div className="bg-white border-b border-black/10">
         <Container size="wide">
-          <div className="flex h-16 items-center gap-8">
+          <div className="flex h-16 items-center gap-5 lg:gap-7">
             <Logo size="md" />
 
-            <nav className="hidden md:flex items-center gap-7" aria-label="Main">
+            <nav className="hidden xl:flex items-center gap-6" aria-label="Main">
               {shopLinks.map((link) => (
                 <Link key={link.href} href={link.href} className="site-header__link">
                   {link.label}
@@ -115,7 +105,12 @@ export function Header() {
               ))}
             </nav>
 
-            <div className="ml-auto hidden md:flex items-center gap-4">
+            <div className="ml-auto hidden xl:flex items-center gap-5">
+              {utilityLinks.map((link) => (
+                <Link key={link.href} href={link.href} className="site-header__utility">
+                  {link.label}
+                </Link>
+              ))}
               <Link href="/contact" className="site-header__cta">
                 Enquire
               </Link>
@@ -123,7 +118,7 @@ export function Header() {
 
             <button
               type="button"
-              className="ml-auto md:hidden p-2 -mr-2"
+              className="ml-auto xl:hidden p-2 -mr-2"
               aria-label={open ? "Close menu" : "Open menu"}
               aria-expanded={open}
               onClick={() => setOpen(!open)}
@@ -137,7 +132,7 @@ export function Header() {
       </div>
 
       {open && (
-        <div className="md:hidden bg-white border-b border-black/10">
+        <div className="xl:hidden bg-white border-b border-black/10">
           <Container size="wide">
             <nav className="py-4 flex flex-col" aria-label="Main">
               {[...shopLinks, ...menus.map((m) => ({ href: m.href, label: m.label })), ...utilityLinks].map(
