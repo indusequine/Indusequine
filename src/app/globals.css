@@ -333,6 +333,12 @@ h1, h2, h3, h4, h5, h6, .font-display {
    happens to be bright. */
 .campaign-hero {
   position: relative;
+  /* Plain vh first: a browser that does not know svh drops that line and keeps
+     this one, rather than dropping both and collapsing the hero to the height
+     of its own text, which lets the next section show above the fold. svh then
+     wins where it is understood, so a phone's address bar cannot crop the
+     buttons off the bottom. */
+  height: 100vh;
   height: 100svh;
   min-height: 600px;
   overflow: hidden;
