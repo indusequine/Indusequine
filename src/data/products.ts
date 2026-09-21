@@ -46,7 +46,17 @@ export type Product = {
   image?: string; // Shopify CDN URL
   description?: string | null; // only populated by getProductBySlug
   seller?: Seller | null; // who sells it, as distinct from who makes it
+  inStock: boolean;
 };
+
+// Stock is not tracked in Shopify: our suppliers hold it, and each sync marks
+// what their site reports. An unmarked product is taken to be in stock, so a
+// product that has never been synced reads as available rather than sold out.
+const OUT_OF_STOCK_TAGS = ["sync:tack-shop-out-of-stock", "sync:out-of-stock"];
+
+export function inStockFromTags(tags: string[]): boolean {
+  return !tags.some((t) => OUT_OF_STOCK_TAGS.includes(t));
+}
 
 const PAGE_SIZE = 250;
 
@@ -117,6 +127,7 @@ function mapProduct(node: ShopifyProductNode, categoryName: string): Product {
     image: node.featuredImage?.url,
     description: node.description?.trim() || null,
     seller: sellerFromTags(node.tags),
+    inStock: inStockFromTags(node.tags),
   };
 }
 

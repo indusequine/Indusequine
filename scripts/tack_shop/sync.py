@@ -10,16 +10,21 @@ Each run, for our ACTIVE Tack Shop products that appear on their site:
   - fills in the brand where we have none
   - fills in the description where we have none
   - sets each variant's price to their live selling_price
-  - hides a product that is fully out of stock on their site, and shows it
-    again once they restock
+  - marks a product that is fully out of stock on their site with OOS_TAG,
+    and clears the tag once they restock
+
+Out of stock is marked, not hidden. A rider searching for a stirrup we carry
+should find it and see that it is out of stock, rather than be told we have
+no such thing. Products this script hid for stock in earlier runs are
+brought back live and carry the tag instead.
 
 It never touches a product that is DRAFT for any other reason -- the merge
-fragments, or the discontinued lines retired by --retire-discontinued. Only
-products this script hid for being out of stock (tag OOS_TAG) are ever shown
-again, so a sync can't resurrect something hidden on purpose.
+fragments, or the discontinued lines retired by --retire-discontinued -- so
+a sync can't resurrect something hidden on purpose.
 
 Nothing is deleted. If their API returns far fewer products than usual, the
-hide step is skipped entirely, so a broken fetch can't empty the catalogue.
+marking step is skipped entirely, so a broken fetch can't flag the catalogue
+as sold out.
 
 Lessons carried over from earlier sessions, deliberately:
   - never productSet. It upserts by handle and replaces the variant list
@@ -59,7 +64,7 @@ UA = ("Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 "
       "(KHTML, like Gecko) Chrome/124 Safari/537.36")
 
 SUPPLIER_TAG = "supplier:the-tack-shop"
-OOS_TAG = "sync:tack-shop-out-of-stock"           # hidden by this script; may come back
+OOS_TAG = "sync:tack-shop-out-of-stock"           # marked out of stock; stays on the site
 RETIRED_TAG = "sync:tack-shop-discontinued"        # retired once; never auto-shown
 SENTINEL_VENDOR = "Indusequine"                    # the migration's "no brand" marker
 FILLER = ("Pastel+Modern+Fashion", "no-preview-image")
@@ -203,7 +208,7 @@ def sync(client: ShopifyClient, dry: bool) -> int:
               "skipping ALL hiding this run")
 
     ours = fetch_ours(client)
-    n = dict(photo=0, brand=0, desc=0, price=0, hide=0, show=0, fail=0)
+    n = dict(photo=0, brand=0, desc=0, price=0, mark_oos=0, back_in_stock=0, show=0, fail=0)
 
     for p in ours:
         hits = [by_sku[v["sku"]] for v in p["variants"] if v["sku"] in by_sku]
@@ -240,11 +245,19 @@ def sync(client: ShopifyClient, dry: bool) -> int:
             acts.append(("price", PRICES, "productVariantsBulkUpdate", "userErrors",
                          {"productId": p["id"], "variants": moved}))
 
+        # Out of stock is shown, not hidden: a rider looking for a Freejump
+        # stirrup should see that we carry it and that it is out of stock,
+        # rather than be told the catalogue has no such thing. The tag is what
+        # the site reads; the product stays live either way.
         all_oos = all(x["product_oos"] for x in hits)
-        if healthy and all_oos and p["status"] == "ACTIVE":
-            acts.append(("hide", UPDATE, "productUpdate", "userErrors",
-                         {"input": {"id": p["id"], "status": "DRAFT"}}))
-        elif oos_hidden and not all_oos:
+        if healthy and all_oos and OOS_TAG not in p["tags"]:
+            acts.append(("mark_oos", TAGS_ADD, "tagsAdd", "userErrors",
+                         {"id": p["id"], "tags": [OOS_TAG]}))
+        elif OOS_TAG in p["tags"] and not all_oos:
+            acts.append(("back_in_stock", TAGS_REMOVE, "tagsRemove", "userErrors",
+                         {"id": p["id"], "tags": [OOS_TAG]}))
+        # Anything this script hid for stock in an earlier run comes back.
+        if p["status"] != "ACTIVE" and oos_hidden:
             acts.append(("show", UPDATE, "productUpdate", "userErrors",
                          {"input": {"id": p["id"], "status": "ACTIVE"}}))
 
@@ -257,14 +270,13 @@ def sync(client: ShopifyClient, dry: bool) -> int:
                 n["fail"] += 1
                 print(f"  FAILED {kind} {p['handle']}: {str(e)[:140]}")
                 continue
-            if kind == "hide":
-                client.query(TAGS_ADD, {"id": p["id"], "tags": [OOS_TAG]})
-            elif kind == "show":
-                client.query(TAGS_REMOVE, {"id": p["id"], "tags": [OOS_TAG]})
+            # The tag is applied by the action itself now, so nothing to
+            # follow up with here.
 
     verb = "would" if dry else "did"
     print(f"\n{verb}: +{n['photo']} photos, +{n['brand']} brands, +{n['desc']} descriptions, "
-          f"{n['price']} price updates, hide {n['hide']} (out of stock), show {n['show']} (restocked)"
+          f"{n['price']} price updates, {n['mark_oos']} marked out of stock, "
+          f"{n['back_in_stock']} back in stock, {n['show']} un-hidden"
           + (f", {n['fail']} failures" if n["fail"] else ""))
     return 1 if n["fail"] else 0
 

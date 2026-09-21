@@ -69,6 +69,17 @@ export default async function ProductPage({ params }: Props) {
 
               <p className="mt-8 eyebrow text-brass-deep text-base">{product.priceLabel}</p>
 
+              {/* Stock is the supplier's, reported at the last sync. Out of
+                  stock is said plainly rather than hiding the product, and the
+                  enquiry form below still works: a rider can ask us to get it
+                  in, which is how most of this catalogue is bought anyway. */}
+              {!product.inStock && (
+                <p className="mt-4 inline-flex items-center gap-2 text-sm text-charcoal border border-forest/20 bg-cream-warm px-3 py-2">
+                  <span className="font-semibold uppercase tracking-wider text-xs">Out of stock</span>
+                  <span className="text-stone">Ask us when it is back</span>
+                </p>
+              )}
+
               {product.description && (
                 <p className="mt-6 text-charcoal leading-relaxed">{product.description}</p>
               )}

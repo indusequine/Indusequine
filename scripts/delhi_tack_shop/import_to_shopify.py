@@ -8,8 +8,9 @@ Shopify client and variant builder. Runs unattended on a schedule
 
 Each run:
   - creates products new on his site, and updates prices/variants/names of existing ones
-  - hides (status DRAFT) products that are fully out of stock, and shows them
-    again once he restocks -- made-to-order items always stay visible
+  - marks products that are fully out of stock with OOS_TAG and leaves them
+    live, so a rider still finds them and sees the stock state -- the tag
+    clears once he restocks, and made-to-order is never out of stock
   - hides products he has removed from his site, or that mapping.json skips
   - skips and reports a product it can't place (e.g. a new category not yet
     in mapping.json) instead of failing the whole run
@@ -57,6 +58,7 @@ SCRAPED_PATH = HERE / "output" / "scraped.json"
 MAPPING_PATH = HERE / "mapping.json"
 LOG_PATH = HERE / "output" / "import_log.json"
 SUPPLIER_TAG = "supplier:delhi-tack-shop"
+OOS_TAG = "sync:out-of-stock"       # shown on the site, marked out of stock
 
 KEEP_UPPER = {
     "XXS", "XS", "S", "M", "L", "XL", "XXL", "XXXL", "2XL", "3XL", "CC", "CM", "MM", "KG",
@@ -224,6 +226,10 @@ def build(p: dict, m: dict, valid_categories: set[str]) -> dict:
         })
 
     tags = [f"category:{category}", SUPPLIER_TAG, f"supplier-code:{p['code']}"]
+    # Out of stock is shown and marked, not hidden, so a rider still finds the
+    # product and learns we carry it. Made-to-order is never out of stock.
+    if not (in_stock or p.get("madeToOrder")):
+        tags.append(OOS_TAG)
     if p.get("madeToOrder"):
         tags.append("made-to-order")
 
@@ -366,7 +372,10 @@ def main():
         # silently un-brands those products on every sync.
         vendor = b["brand"] or (prior or {}).get("vendor") or "Indusequine"
 
-        status = "ACTIVE" if b["visible"] else "DRAFT"
+        # Everything his site still lists stays live; the out-of-stock ones
+        # carry OOS_TAG instead of being hidden. Hiding is reserved for
+        # products he has dropped, further down.
+        status = "ACTIVE"
         product_options, variant_inputs, _ = build_options_and_variants(b)
         input_obj = {
             "handle": handle,

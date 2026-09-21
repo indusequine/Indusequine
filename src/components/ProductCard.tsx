@@ -10,7 +10,14 @@ export function ProductCard({ product }: { product: Product }) {
       href={`/marketplace/product/${product.slug}`}
       className="group block border border-forest/15 bg-cream-soft hover:border-forest/40 transition-colors"
     >
-      <ProductImage product={product} />
+      <div className="relative">
+        <ProductImage product={product} />
+        {!product.inStock && (
+          <span className="absolute top-3 left-3 bg-cream-soft/95 text-charcoal text-[0.6875rem] font-semibold uppercase tracking-wider px-2.5 py-1 border border-forest/15">
+            Out of stock
+          </span>
+        )}
+      </div>
       <div className="p-6">
         <h3 className="font-display text-xl text-forest leading-snug group-hover:text-oxblood transition-colors">
           {product.name}
