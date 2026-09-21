@@ -1,7 +1,6 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import { Container } from "@/components/Container";
-import { LogoMarkPattern } from "@/components/Logo";
 import { CategoryGroupTile } from "@/components/CategoryGroupTile";
 import { categoryGroups, otherCategorySlugs } from "@/lib/categoryGroups";
 import { getCategoriesWithCounts } from "@/data/products";
@@ -25,10 +24,15 @@ export default async function MarketplacePage() {
 
   return (
     <>
-      <PageHero />
-
-      <section className="bg-cream-soft py-16 md:py-20">
+      <section className="bg-cream-soft pt-10 md:pt-14 pb-16 md:pb-20">
         <Container size="wide">
+          {/* The campaign belongs on the homepage. Here a rider has already
+              chosen to shop, so the page opens on the three groups. The heading
+              stays because a page needs one, but it keeps out of the way. */}
+          <h1 className="font-display text-3xl md:text-4xl text-forest-deep mb-8">
+            Shop all
+          </h1>
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             {categoryGroups.map((group) => {
               const productCount = group.categorySlugs.reduce(
@@ -89,30 +93,6 @@ function TrustBadges({
             </div>
           ))}
         </div>
-      </Container>
-    </section>
-  );
-}
-
-function PageHero() {
-  return (
-    <section className="bg-forest-deep text-cream-soft py-24 md:py-32 relative overflow-hidden border-b border-brass/20">
-      <div className="absolute inset-0 opacity-[0.07] pointer-events-none text-brass-light">
-        <LogoMarkPattern />
-      </div>
-      <Container className="relative text-center">
-        <p className="eyebrow text-brass-light">The Marketplace</p>
-        <h1 className="font-display text-5xl md:text-7xl mt-6 leading-[1.05] max-w-4xl mx-auto">
-          Every product, for every kind of ride.
-        </h1>
-        <p className="mt-8 text-lg md:text-xl text-cream-soft/80 leading-relaxed max-w-2xl mx-auto">
-          The brands you&rsquo;ve struggled to find in India, and the ones
-          you&rsquo;ve only heard about from friends abroad. All under one
-          roof.
-        </p>
-        <p className="mt-4 text-sm text-cream-soft/50 max-w-2xl mx-auto">
-          Real listings, real prices. Product photography is on its way.
-        </p>
       </Container>
     </section>
   );
