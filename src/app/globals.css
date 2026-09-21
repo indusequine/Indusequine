@@ -603,22 +603,17 @@ h1, h2, h3, h4, h5, h6, .font-display {
 .bento__tile:hover > img { transform: scale(1.03); }
 
 /* A product shot is a cut-out on white, not a photograph that can be cropped,
-   so its tile is laid out rather than layered: the shot takes the room that is
-   left and the caption sits under it. Absolute positioning worked at desktop
-   widths and collapsed the shot to a few pixels on a phone, where the caption
-   runs to three lines. */
+   so it sits inside its tile rather than filling it. */
 .bento__tile--product,
 .bento__tile--cover:has(.bento__shot) {
   background: #fff;
   border: 1px solid rgba(0, 0, 0, 0.08);
-  display: flex;
-  flex-direction: column;
 }
 
 .bento__shot {
-  position: relative;
-  flex: 1;
-  min-height: 7rem;
+  position: absolute;
+  inset: 0;
+  bottom: 4.5rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -658,27 +653,42 @@ h1, h2, h3, h4, h5, h6, .font-display {
   margin-bottom: 0.25rem;
 }
 
-/* In a laid-out tile the caption is part of the flow, not an overlay. */
 .bento__caption--dark {
-  position: relative;
   color: var(--color-ink);
   background: none;
   font-size: 0.9375rem;
-  padding-top: 0;
 }
 
 .bento__caption--dark small { color: var(--color-stone); opacity: 1; }
 
-/* On a phone two 4:3 tiles side by side leave a photograph about 120px tall,
-   which reads as a thumbnail rather than a collection. The banner and the
-   product run the full width instead, and the three groups pair up square. */
+/* Phones only. Two 4:3 tiles side by side leave a photograph about 120px tall,
+   and a caption that runs to three lines on a narrow screen leaves an
+   absolutely positioned shot with almost no room -- it was 8px. So on a phone
+   the banner and the product run full width and lay their shot out above the
+   caption instead of behind it. The desktop grid above is untouched. */
 @media (max-width: 899px) {
   .bento__tile--cover,
   .bento__tile--product {
     grid-column: span 2;
+    display: flex;
+    flex-direction: column;
+    aspect-ratio: auto;
+    min-height: 17rem;
   }
-  .bento__tile--cover { aspect-ratio: 4 / 3; }
-  .bento__tile--product { aspect-ratio: auto; min-height: 16rem; }
+
+  .bento__tile--cover .bento__shot,
+  .bento__tile--product .bento__shot {
+    position: relative;
+    inset: auto;
+    flex: 1;
+    min-height: 9rem;
+  }
+
+  .bento__tile--cover .bento__caption--dark,
+  .bento__tile--product .bento__caption--dark {
+    position: relative;
+  }
+
   .bento__tile:not(.bento__tile--cover):not(.bento__tile--product) {
     aspect-ratio: 1 / 1;
   }
