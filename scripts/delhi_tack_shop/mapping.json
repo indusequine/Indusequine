@@ -1,6 +1,5 @@
 {
   "_about": "Hand-curated mapping from Delhi Tack Shop's catalogue onto Indusequine's categories. Edit and re-run import_to_shopify.py to apply. New supplier categories not listed here fail loudly in --dry-run rather than being guessed.",
-
   "categoryDefaults": {
     "air-vests": "protective-vests",
     "apparel-men-s-blazers": "show-jacket",
@@ -46,7 +45,6 @@
     "whips-lunging-whip": "whips",
     "whips-polo-whips": "whips"
   },
-
   "productCategoryOverrides": {
     "F02203": "protective-vests-accessories",
     "2008": "recovery",
@@ -78,13 +76,11 @@
     "BSB": "wraps-and-bandages",
     "9727": "bags"
   },
-
   "skip": {
     "F02251": "Same product already listed from the existing supplier (freejump-airbag)",
     "F02228": "Same product already listed from the existing supplier (freejump-key-ball-lanyard)",
     "F02227": "Same product already listed from the existing supplier (freejump-saddle-strap)"
   },
-
   "nameOverrides": {
     "CT B": "Cavalleria Toscana Saddle Pad - Black",
     "CT W": "Cavalleria Toscana Saddle Pad - White",
@@ -113,7 +109,6 @@
     "2009060GR": "Carbon Graphite Ultralight Jumping Whip",
     "2009060RG": "Rose Gold Carbon Graphite Ultralight Jumping Whip"
   },
-
   "brandAliases": {
     "Shires Equestrian": "Shires",
     "Kingsland Equestrian": "Kingsland",
@@ -122,27 +117,31 @@
     "Equilibrium Products": "Equilibrium",
     "Professional's Choice": "Professional's Choice"
   },
-
   "brandFromNamePrefix": {
     "CAVALLERIA TOSCANA": "Cavalleria Toscana",
     "ONEK": "One K",
     "WINTEC": "Wintec",
     "PROFESSIONAL CHOICE": "Professional's Choice",
-    "EGO 7": "EGO7"
+    "EGO 7": "EGO7",
+    "VELOCITY": "Velocity",
+    "EQ PRO": "EQ Pro",
+    "ALBACON": "Albacon"
   },
-
   "brandFromCode": {
     "POLO-UOMO": "Cavalleria Toscana",
     "CT B": "Cavalleria Toscana",
     "CT W": "Cavalleria Toscana",
     "464489": "Centaur"
   },
-
   "modelIsBrand": {
     "WALDHAUSEN": "Waldhausen",
     "CENTAUR": "Centaur",
     "EQUILIBRIUM": "Equilibrium",
     "COMPOSITI": "Compositi",
     "COMPOSITI ULTRA LIGHT": "Compositi"
+  },
+  "brandFromNameContains": {
+    "MCL": "MCL",
+    "CYPRESS HILL": "Cypress Hill"
   }
 }

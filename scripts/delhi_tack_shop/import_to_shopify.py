@@ -69,7 +69,7 @@ SMALL_WORDS = {"a", "an", "and", "or", "of", "with", "for", "the", "in", "on", "
 PRODUCTS_BY_TAG_QUERY = """
 query($cursor: String, $q: String!) {
   products(first: 250, after: $cursor, query: $q) {
-    edges { node { id handle status tags } }
+    edges { node { id handle status tags vendor } }
     pageInfo { hasNextPage endCursor }
   }
 }
@@ -136,6 +136,9 @@ def resolve_brand(p: dict, m: dict) -> str | None:
     name = p["name"].upper()
     for prefix, brand in m["brandFromNamePrefix"].items():
         if name.startswith(prefix):
+            return brand
+    for needle, brand in m.get("brandFromNameContains", {}).items():
+        if needle in name:
             return brand
     return None
 
@@ -239,7 +242,7 @@ def build(p: dict, m: dict, valid_categories: set[str]) -> dict:
 
 
 def fetch_existing(client: ShopifyClient) -> dict[str, dict]:
-    """supplier code -> {id, handle, status}, for products synced on a previous run."""
+    """supplier code -> {id, handle, status, vendor}, for products synced before."""
     out, cursor = {}, None
     while True:
         result = client.query(PRODUCTS_BY_TAG_QUERY, {"cursor": cursor, "q": f"tag:'{SUPPLIER_TAG}'"})
@@ -248,7 +251,10 @@ def fetch_existing(client: ShopifyClient) -> dict[str, dict]:
             node = edge["node"]
             for tag in node["tags"]:
                 if tag.startswith("supplier-code:"):
-                    out[tag[len("supplier-code:"):]] = {"id": node["id"], "handle": node["handle"], "status": node["status"]}
+                    out[tag[len("supplier-code:"):]] = {
+                        "id": node["id"], "handle": node["handle"],
+                        "status": node["status"], "vendor": node["vendor"],
+                    }
         if not conn["pageInfo"]["hasNextPage"]:
             return out
         cursor = conn["pageInfo"]["endCursor"]
@@ -353,12 +359,19 @@ def main():
         if handle in original_handles:
             raise SystemExit(f"refusing to write {handle!r}: it belongs to an existing catalogue product")
 
+        # His site carries no brand for a good part of his catalogue, so the
+        # rules in mapping.json cannot name one for every product. Where they
+        # can't, keep whatever brand Shopify already holds: it was either set by
+        # hand or read off a product title, and overwriting it with the sentinel
+        # silently un-brands those products on every sync.
+        vendor = b["brand"] or (prior or {}).get("vendor") or "Indusequine"
+
         status = "ACTIVE" if b["visible"] else "DRAFT"
         product_options, variant_inputs, _ = build_options_and_variants(b)
         input_obj = {
             "handle": handle,
             "title": b["name"],
-            "vendor": b["brand"] or "Indusequine",
+            "vendor": vendor,
             "status": status,
             "tags": b["tags"],
             "productOptions": product_options,
