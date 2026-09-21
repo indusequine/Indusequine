@@ -3,7 +3,6 @@
 import Link from "next/link";
 import { useState } from "react";
 import { Logo } from "./Logo";
-import { Container } from "./Container";
 
 // Shopping sits on the bar itself, because that is what riders come for.
 // Services and Discover hang off it in menus: they matter, but not on the way
@@ -57,7 +56,7 @@ export function Header() {
   return (
     <header className="site-header sticky top-0 z-40">
       <div className="bg-white border-b border-black/10">
-        <Container size="wide">
+        <div className="w-full px-6 md:px-10">
           <div className="flex h-16 items-center gap-5 lg:gap-7">
             <Logo size="md" />
 
@@ -128,12 +127,12 @@ export function Header() {
               <span className="block w-6 h-px bg-ink" />
             </button>
           </div>
-        </Container>
+        </div>
       </div>
 
       {open && (
         <div className="xl:hidden bg-white border-b border-black/10">
-          <Container size="wide">
+          <div className="w-full px-6 md:px-10">
             <nav className="py-4 flex flex-col" aria-label="Main">
               {[...shopLinks, ...menus.map((m) => ({ href: m.href, label: m.label })), ...utilityLinks].map(
                 (link) => (
@@ -148,7 +147,7 @@ export function Header() {
                 ),
               )}
             </nav>
-          </Container>
+          </div>
         </div>
       )}
     </header>
