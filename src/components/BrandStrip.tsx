@@ -47,6 +47,7 @@ function BrandLink({ brand }: { brand: Brand }) {
             alt={brand.name}
             width={260}
             height={LOGO_HEIGHT}
+            loading="eager"
             style={{ maxHeight: `${brandLogoScale(brand.name) * 100}%` }}
           />
         ) : (
@@ -64,19 +65,9 @@ export default function BrandStrip({ brands }: { brands: Brand[] }) {
   return (
     <section className="bg-white py-12 md:py-16" aria-labelledby="brand-strip-heading">
       <Container size="wide">
-        <div className="mb-8 flex items-baseline justify-between gap-4">
-          <h2
-            id="brand-strip-heading"
-            className="font-display text-2xl md:text-3xl text-forest-deep"
-          >
-            Shop by brand
-          </h2>
-          <Link
-            href="/marketplace/brands"
-            className="text-sm font-semibold text-forest underline underline-offset-4 whitespace-nowrap hover:text-forest-deep"
-          >
-            All brands
-          </Link>
+        <div className="home__head">
+          <h2 id="brand-strip-heading">Shop by brand</h2>
+          <Link href="/marketplace/brands">All brands</Link>
         </div>
       </Container>
       {/* The list is duplicated so the drift can loop seamlessly; the copy is
