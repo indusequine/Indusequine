@@ -133,9 +133,9 @@ export function Header() {
               aria-expanded={open}
               onClick={() => setOpen(!open)}
             >
-              <span className="block w-6 h-px bg-ink mb-1.5" />
-              <span className="block w-6 h-px bg-ink mb-1.5" />
-              <span className="block w-6 h-px bg-ink" />
+              <span className={`block w-6 h-px mb-1.5 ${overlay ? "bg-white" : "bg-ink"}`} />
+              <span className={`block w-6 h-px mb-1.5 ${overlay ? "bg-white" : "bg-ink"}`} />
+              <span className={`block w-6 h-px ${overlay ? "bg-white" : "bg-ink"}`} />
             </button>
           </div>
         </div>
