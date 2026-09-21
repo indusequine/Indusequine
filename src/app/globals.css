@@ -545,7 +545,7 @@ h1, h2, h3, h4, h5, h6, .font-display {
 /* The homepage runs on white with a sans face, which is the direction the
    marketplace is moving in. The older pages still carry the cream and serif,
    so this is scoped here rather than changed globally mid-move. */
-.home { background: #fff; }
+.home { background: #fff; flex: 1; padding-bottom: 2rem; }
 
 .home__section { padding: 3rem 0; }
 
@@ -604,7 +604,15 @@ h1, h2, h3, h4, h5, h6, .font-display {
 
 /* A product shot is a cut-out on white, not a photograph that can be cropped,
    so it sits inside its tile rather than filling it. */
-.bento__tile--product { background: #fff; border: 1px solid rgba(0, 0, 0, 0.08); }
+.bento__tile--product,
+.bento__tile--cover:has(.bento__shot--cover) {
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+/* The banner carries a single product, so its shot gets the room a photograph
+   would have taken. */
+.bento__shot--cover { padding: clamp(1.25rem, 2.2vw, 2.25rem); }
 
 .bento__shot {
   position: absolute;

@@ -5,7 +5,7 @@ import { categoryGroups } from "@/lib/categoryGroups";
 
 export function Footer() {
   return (
-    <footer className="bg-forest-deep text-cream-soft/80 mt-24">
+    <footer className="bg-forest-deep text-cream-soft/80">
       <Container size="wide" className="py-16">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-10">
           <div className="md:col-span-4">

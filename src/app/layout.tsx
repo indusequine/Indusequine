@@ -82,7 +82,7 @@ export default function RootLayout({
       <body className="min-h-full flex flex-col bg-cream-soft text-ink">
         <IntroCurtain />
         <Header />
-        <main className="flex-1">{children}</main>
+        <main className="flex-1 flex flex-col">{children}</main>
         <Footer />
         <Analytics />
         <SpeedInsights />

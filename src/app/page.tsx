@@ -3,14 +3,13 @@ import type { Metadata } from "next";
 import { Container } from "@/components/Container";
 import CampaignHero, { type Campaign } from "@/components/CampaignHero";
 import BrandStrip from "@/components/BrandStrip";
-import { ProductCard } from "@/components/ProductCard";
 import { categoryGroups } from "@/lib/categoryGroups";
 import { shopifyImage } from "@/lib/imageUrl";
+import { brandSlug } from "@/lib/brands";
 import {
   getAllBrands,
   getCategoriesWithCounts,
   getProductsByBrand,
-  getProductsByCategory,
 } from "@/data/products";
 
 export const metadata: Metadata = {
@@ -54,29 +53,56 @@ const campaigns: Campaign[] = [
   },
 ];
 
-// The bento's cover tile. A real brand with real depth behind it, so the
-// biggest thing on the page leads somewhere worth landing.
-const COVER = {
-  eyebrow: "Saddlery",
-  title: "CWD",
-  href: "/marketplace/brand/cwd",
-  image: "/images/rider-embrace.jpg",
-};
+// The banner shows one real product from one brand, and moves on. Each pairing
+// is a brand and a category we hold photographed stock in, so the biggest tile
+// on the page is always something a rider can actually buy. It turns over with
+// the hourly revalidation rather than on every request, so the page stays
+// static and two people looking at once see the same thing.
+const BANNERS = [
+  { brand: "CWD", category: "bridle-and-reins" },
+  { brand: "Kep Italia", category: "helmet" },
+  { brand: "Freejump", category: "stirrup-and-stirrup-leathers" },
+  { brand: "Fleck", category: "whips" },
+  { brand: "Roeckl", category: "gloves" },
+  { brand: "Samshield", category: "show-jacket" },
+  { brand: "Horseware", category: "fly-sheet" },
+];
 
-const RAIL_CATEGORY = "helmet";
+async function pickBanner(categoryName: (slug: string) => string) {
+  // Walk from this hour's pairing, so a brand that has lost its photography
+  // hands over to the next one instead of leaving the tile empty.
+  const start = Math.floor(Date.now() / 3_600_000) % BANNERS.length;
+  for (let step = 0; step < BANNERS.length; step += 1) {
+    const choice = BANNERS[(start + step) % BANNERS.length];
+    const products = await getProductsByBrand(choice.brand);
+    const product = products.find((p) => p.category === choice.category && p.image);
+    if (product?.image) {
+      return {
+        eyebrow: categoryName(choice.category),
+        title: choice.brand,
+        href: `/marketplace/brand/${brandSlug(choice.brand)}/${choice.category}`,
+        image: product.image,
+        alt: product.name,
+      };
+    }
+  }
+  return null;
+}
 
 export default async function HomePage() {
-  const [brands, categories, railProducts, coverProducts] = await Promise.all([
+  const [brands, categories, trendingProducts] = await Promise.all([
     getAllBrands(),
     getCategoriesWithCounts(),
-    getProductsByCategory(RAIL_CATEGORY),
     getProductsByBrand("Freejump"),
   ]);
 
-  const rail = railProducts.filter((p) => p.image).slice(0, 4);
-  const railName = categories.find((c) => c.slug === RAIL_CATEGORY)?.name ?? "New in";
+  const nameFor = (slug: string) =>
+    categories.find((c) => c.slug === slug)?.name ?? slug.replace(/-/g, " ");
+  const banner = await pickBanner(nameFor);
   // Narrowed here so the tile below can rely on the image being there.
-  const spotlight = coverProducts.find((p): p is typeof p & { image: string } => Boolean(p.image));
+  const trending = trendingProducts.find((p): p is typeof p & { image: string } =>
+    Boolean(p.image),
+  );
 
   return (
     <div className="home">
@@ -92,14 +118,18 @@ export default async function HomePage() {
           </div>
 
           <div className="bento">
-            <Link href={COVER.href} className="bento__tile bento__tile--cover">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src={COVER.image} alt="" />
-              <span className="bento__caption">
-                <small>{COVER.eyebrow}</small>
-                {COVER.title}
-              </span>
-            </Link>
+            {banner && (
+              <Link href={banner.href} className="bento__tile bento__tile--cover">
+                <span className="bento__shot bento__shot--cover">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img src={shopifyImage(banner.image, 1400)} alt={banner.alt} />
+                </span>
+                <span className="bento__caption bento__caption--dark">
+                  <small>{banner.eyebrow}</small>
+                  {banner.title}
+                </span>
+              </Link>
+            )}
 
             {categoryGroups.map((group) => (
               <Link
@@ -113,20 +143,20 @@ export default async function HomePage() {
               </Link>
             ))}
 
-            {spotlight && (
+            {trending && (
               <Link
-                href={`/marketplace/product/${spotlight.slug}`}
+                href={`/marketplace/product/${trending.slug}`}
                 className="bento__tile bento__tile--product"
               >
                 <span className="bento__shot">
                   {/* Shopify-hosted, so it goes through the same resizing helper
                       the product cards use rather than next/image. */}
                   {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img src={shopifyImage(spotlight.image, 760)} alt="" loading="lazy" />
+                  <img src={shopifyImage(trending.image, 760)} alt="" loading="lazy" />
                 </span>
                 <span className="bento__caption bento__caption--dark">
-                  <small>{spotlight.brand}</small>
-                  {spotlight.name}
+                  <small>Trending now</small>
+                  {trending.name}
                 </span>
               </Link>
             )}
@@ -134,21 +164,6 @@ export default async function HomePage() {
         </Container>
       </section>
 
-      {rail.length > 0 && (
-        <section className="home__section">
-          <Container size="wide">
-            <div className="home__head">
-              <h2>{railName}</h2>
-              <Link href={`/marketplace/category/${RAIL_CATEGORY}`}>See all</Link>
-            </div>
-            <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
-              {rail.map((product) => (
-                <ProductCard key={product.slug} product={product} />
-              ))}
-            </div>
-          </Container>
-        </section>
-      )}
     </div>
   );
 }
