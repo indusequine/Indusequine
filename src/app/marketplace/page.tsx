@@ -20,18 +20,18 @@ export default async function MarketplacePage() {
   const countBySlug = new Map(categories.map((c) => [c.slug, c.count]));
   const totalProducts = categories.reduce((sum, c) => sum + c.count, 0);
 
-  const otherCategories = categories.filter((c) => otherCategorySlugs.includes(c.slug));
+  const otherCategories = categories.filter(
+    (c) => otherCategorySlugs.includes(c.slug) && c.count > 0,
+  );
 
   return (
     <>
       <section className="bg-cream-soft pt-10 md:pt-14 pb-16 md:pb-20">
         <Container size="wide">
-          {/* The campaign belongs on the homepage. Here a rider has already
-              chosen to shop, so the page opens on the three groups. The heading
-              stays because a page needs one, but it keeps out of the way. */}
-          <h1 className="font-display text-3xl md:text-4xl text-forest-deep mb-8">
-            Shop all
-          </h1>
+          {/* The campaign belongs on the homepage; a rider here has already
+              chosen to shop. The heading is carried for screen readers and
+              search engines without taking a line of the page. */}
+          <h1 className="sr-only">Shop all</h1>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             {categoryGroups.map((group) => {

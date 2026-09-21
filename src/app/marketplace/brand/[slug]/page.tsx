@@ -36,11 +36,17 @@ export default async function BrandPage({ params }: Props) {
   const brand = await getBrandBySlug(slug);
   if (!brand) notFound();
 
-  const [categories, images] = await Promise.all([
+  const [rawCategories, images] = await Promise.all([
     getBrandCategories(brand.name),
     // Drawn from this brand's own stock, so CWD's Saddle tile shows a CWD saddle.
     getCategoryImages(brand.name),
   ]);
+  // Photographed categories lead here too, so a brand page opens on its stock
+  // rather than on a block of flat colour.
+  const categories = [...rawCategories].sort((a, b) => {
+    const byPhoto = Number(Boolean(images.get(b.slug))) - Number(Boolean(images.get(a.slug)));
+    return byPhoto || b.count - a.count;
+  });
   const total = categories.reduce((sum, c) => sum + c.count, 0);
 
   return (

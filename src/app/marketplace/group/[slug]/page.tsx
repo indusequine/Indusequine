@@ -35,7 +35,15 @@ export default async function GroupPage({ params }: Props) {
     getCategoriesWithCounts(),
     getCategoryImages(),
   ]);
-  const categories = allCategories.filter((c) => group.categorySlugs.includes(c.slug));
+  // A category with nothing live in it is a dead end, so it is not offered.
+  // Photographed ones lead, because a wall of flat colour tiles reads as a
+  // site that has not been finished.
+  const categories = allCategories
+    .filter((c) => group.categorySlugs.includes(c.slug) && c.count > 0)
+    .sort((a, b) => {
+      const byPhoto = Number(Boolean(images.get(b.slug))) - Number(Boolean(images.get(a.slug)));
+      return byPhoto || b.count - a.count;
+    });
   const totalProducts = categories.reduce((sum, c) => sum + c.count, 0);
 
   return (
