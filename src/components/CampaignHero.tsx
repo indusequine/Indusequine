@@ -1,7 +1,6 @@
 "use client";
 
 import { useCallback, useEffect, useRef, useState } from "react";
-import Image from "next/image";
 import Link from "next/link";
 
 export type Campaign = {
@@ -82,13 +81,16 @@ export default function CampaignHero({ campaigns }: { campaigns: Campaign[] }) {
             aria-hidden={!showing}
             inert={!showing}
           >
-            <Image
+            {/* Plain img, like the rest of the site: these are photographs we
+                ship ourselves, and next/image would put them through Vercel's
+                optimiser for nothing. */}
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
               src={campaign.image}
               alt=""
-              fill
-              priority={campaign.priority}
-              sizes="100vw"
               className="campaign-hero__media"
+              fetchPriority={campaign.priority ? "high" : "auto"}
+              loading={campaign.priority ? "eager" : "lazy"}
             />
             <div className="campaign-hero__shade" />
             <div className="campaign-hero__copy">

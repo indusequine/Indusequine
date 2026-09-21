@@ -1,5 +1,4 @@
 import Link from "next/link";
-import Image from "next/image";
 import type { Metadata } from "next";
 import { Container } from "@/components/Container";
 import CampaignHero, { type Campaign } from "@/components/CampaignHero";
@@ -94,7 +93,8 @@ export default async function HomePage() {
 
           <div className="bento">
             <Link href={COVER.href} className="bento__tile bento__tile--cover">
-              <Image src={COVER.image} alt="" fill sizes="(max-width: 900px) 100vw, 50vw" />
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src={COVER.image} alt="" />
               <span className="bento__caption">
                 <small>{COVER.eyebrow}</small>
                 {COVER.title}
@@ -107,7 +107,8 @@ export default async function HomePage() {
                 href={`/marketplace/group/${group.slug}`}
                 className="bento__tile"
               >
-                <Image src={group.image} alt="" fill sizes="(max-width: 900px) 50vw, 25vw" />
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src={group.image} alt="" />
                 <span className="bento__caption">{group.name}</span>
               </Link>
             ))}

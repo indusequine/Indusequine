@@ -1,11 +1,8 @@
 import Link from "next/link";
-import Image from "next/image";
 import { Container } from "@/components/Container";
 import { brandSlug } from "@/lib/brands";
 import { brandLogo, brandLogoScale } from "@/lib/brandLogos";
 import type { Brand } from "@/data/products";
-
-const LOGO_HEIGHT = 50;
 
 /**
  * Deal the brands that have artwork together with the ones that don't, so the
@@ -42,11 +39,10 @@ function BrandLink({ brand }: { brand: Brand }) {
     >
       <span className="brand-strip__box">
         {logo ? (
-          <Image
+          /* eslint-disable-next-line @next/next/no-img-element */
+          <img
             src={logo}
             alt={brand.name}
-            width={260}
-            height={LOGO_HEIGHT}
             loading="eager"
             style={{ maxHeight: `${brandLogoScale(brand.name) * 100}%` }}
           />

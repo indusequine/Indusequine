@@ -1,5 +1,4 @@
 import Link from "next/link";
-import Image from "next/image";
 import type { Metadata } from "next";
 import { Container } from "@/components/Container";
 import { brandLogo, brandLogoScale } from "@/lib/brandLogos";
@@ -39,12 +38,11 @@ export default async function BrandsPage() {
                   >
                     <span className="flex h-12 items-center justify-center">
                       {logo ? (
-                        <Image
+                        /* eslint-disable-next-line @next/next/no-img-element */
+                        <img
                           src={logo}
                           alt={brand.name}
-                          width={240}
-                          height={48}
-                          className="w-auto object-contain"
+                          className="w-auto max-w-full object-contain"
                           style={{ maxHeight: `${brandLogoScale(brand.name) * 100}%` }}
                         />
                       ) : (

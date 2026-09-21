@@ -353,7 +353,13 @@ h1, h2, h3, h4, h5, h6, .font-display {
   z-index: 1;
 }
 
+/* A plain img needs to be told to fill its slide; next/image's fill prop used
+   to do this. */
 .campaign-hero__media {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
 }
 
@@ -591,12 +597,16 @@ h1, h2, h3, h4, h5, h6, .font-display {
   aspect-ratio: 4 / 3;
 }
 
-.bento__tile img {
+.bento__tile > img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
   transition: transform 0.4s ease;
 }
 
-.bento__tile:hover img { transform: scale(1.03); }
+.bento__tile:hover > img { transform: scale(1.03); }
 
 /* A product shot is a cut-out on white, not a photograph that can be cropped,
    so it sits inside its tile rather than filling it. */
@@ -618,7 +628,7 @@ h1, h2, h3, h4, h5, h6, .font-display {
   object-fit: contain;
 }
 
-.bento__tile--product:hover img { transform: none; }
+.bento__tile--product:hover > img { transform: none; }
 
 .bento__caption {
   position: absolute;
@@ -661,5 +671,5 @@ h1, h2, h3, h4, h5, h6, .font-display {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .bento__tile img, .bento__tile:hover img { transition: none; transform: none; }
+  .bento__tile > img, .bento__tile:hover > img { transition: none; transform: none; }
 }
