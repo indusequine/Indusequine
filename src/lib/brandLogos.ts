@@ -5,9 +5,9 @@ import { brandSlug } from "@/lib/brands";
 // artwork falls back to its name rather than requesting a file that isn't
 // there, which is most of the small Indian makers we stock.
 //
-// To add one: drop <brand-slug>.png into public/images/brands, trimmed to the
+// To add one: drop <brand-slug>.webp into public/images/brands, trimmed to the
 // artwork with no surrounding whitespace and no taller than 180px, and add its
-// slug here.
+// slug here. WebP because the strip loads all of them at once.
 const WITH_LOGO = new Set([
   "animo-italia",
   "ariat",
@@ -44,7 +44,7 @@ const WITH_LOGO = new Set([
 
 export function brandLogo(name: string): string | null {
   const slug = brandSlug(name);
-  return WITH_LOGO.has(slug) ? `/images/brands/${slug}.png` : null;
+  return WITH_LOGO.has(slug) ? `/images/brands/${slug}.webp` : null;
 }
 
 // A few marks are square where most are long wordmarks. At one shared height
