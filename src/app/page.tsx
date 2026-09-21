@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { Container } from "@/components/Container";
 import CampaignHero, { type Campaign } from "@/components/CampaignHero";
 import BrandStrip from "@/components/BrandStrip";
+import CollectionBanner, { type BannerItem } from "@/components/CollectionBanner";
 import { categoryGroups } from "@/lib/categoryGroups";
 import { shopifyImage } from "@/lib/imageUrl";
 import { brandSlug } from "@/lib/brands";
@@ -68,25 +69,29 @@ const BANNERS = [
   { brand: "Horseware", category: "fly-sheet" },
 ];
 
-async function pickBanner(categoryName: (slug: string) => string) {
-  // Walk from this hour's pairing, so a brand that has lost its photography
-  // hands over to the next one instead of leaving the tile empty.
-  const start = Math.floor(Date.now() / 3_600_000) % BANNERS.length;
-  for (let step = 0; step < BANNERS.length; step += 1) {
-    const choice = BANNERS[(start + step) % BANNERS.length];
-    const products = await getProductsByBrand(choice.brand);
-    const product = products.find((p) => p.category === choice.category && p.image);
-    if (product?.image) {
-      return {
+// Two photographed products from each pairing, so the tile has a dozen or so
+// to move through. A pairing whose photography has gone contributes nothing
+// rather than leaving a gap.
+const PER_PAIRING = 2;
+
+async function collectBanners(categoryName: (slug: string) => string): Promise<BannerItem[]> {
+  const lists = await Promise.all(BANNERS.map((b) => getProductsByBrand(b.brand)));
+  const items: BannerItem[] = [];
+  BANNERS.forEach((choice, index) => {
+    const matching = lists[index]
+      .filter((p) => p.category === choice.category && p.image)
+      .slice(0, PER_PAIRING);
+    for (const product of matching) {
+      items.push({
         eyebrow: categoryName(choice.category),
         title: choice.brand,
         href: `/marketplace/brand/${brandSlug(choice.brand)}/${choice.category}`,
-        image: product.image,
+        image: product.image!,
         alt: product.name,
-      };
+      });
     }
-  }
-  return null;
+  });
+  return items;
 }
 
 export default async function HomePage() {
@@ -98,7 +103,7 @@ export default async function HomePage() {
 
   const nameFor = (slug: string) =>
     categories.find((c) => c.slug === slug)?.name ?? slug.replace(/-/g, " ");
-  const banner = await pickBanner(nameFor);
+  const banners = await collectBanners(nameFor);
   // Narrowed here so the tile below can rely on the image being there.
   const trending = trendingProducts.find((p): p is typeof p & { image: string } =>
     Boolean(p.image),
@@ -118,18 +123,7 @@ export default async function HomePage() {
           </div>
 
           <div className="bento">
-            {banner && (
-              <Link href={banner.href} className="bento__tile bento__tile--cover">
-                <span className="bento__shot bento__shot--cover">
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img src={shopifyImage(banner.image, 1400)} alt={banner.alt} />
-                </span>
-                <span className="bento__caption bento__caption--dark">
-                  <small>{banner.eyebrow}</small>
-                  {banner.title}
-                </span>
-              </Link>
-            )}
+            <CollectionBanner items={banners} />
 
             {categoryGroups.map((group) => (
               <Link

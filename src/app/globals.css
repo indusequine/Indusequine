@@ -628,6 +628,27 @@ h1, h2, h3, h4, h5, h6, .font-display {
 
 .bento__shot--cover { padding: clamp(1.25rem, 2.2vw, 2.25rem); }
 
+/* The banner moves through a dozen products, so each one is a layer inside the
+   tile and they cross-fade. Only the one showing takes pointer or keyboard
+   focus; the rest are inert. */
+.bento__rotator {
+  position: absolute;
+  inset: 0;
+  display: block;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.5s ease;
+}
+
+.bento__rotator.is-showing {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .bento__rotator { transition: none; }
+}
+
 .bento__tile--product:hover > img { transform: none; }
 
 .bento__caption {
@@ -674,6 +695,11 @@ h1, h2, h3, h4, h5, h6, .font-display {
     flex-direction: column;
     aspect-ratio: auto;
     min-height: 17rem;
+  }
+
+  .bento__rotator {
+    display: flex;
+    flex-direction: column;
   }
 
   .bento__tile--cover .bento__shot,
