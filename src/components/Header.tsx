@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useState } from "react";
+import { usePathname } from "next/navigation";
 import { Logo } from "./Logo";
 
 // Shopping sits on the bar itself, because that is what riders come for.
@@ -49,18 +50,28 @@ const utilityLinks = [
 
 export function Header() {
   const [open, setOpen] = useState(false);
+  // On the homepage the bar sits over the campaign photograph in white, the way
+  // the design has it. Everywhere else the page starts with white, so it takes
+  // its solid form instead.
+  const overlay = usePathname() === "/";
   // Which menu is down. Tracked rather than left to :hover so the same markup
   // works for a keyboard, where there is no pointer to hover with.
   const [menu, setMenu] = useState<string | null>(null);
 
   return (
-    <header className="site-header sticky top-0 z-40">
-      <div className="bg-white border-b border-black/10">
-        <div className="w-full px-6 md:px-10">
-          <div className="flex h-16 items-center gap-5 lg:gap-7">
-            <Logo size="md" />
+    <header
+      className={
+        overlay
+          ? "site-header site-header--overlay absolute inset-x-0 top-0 z-40"
+          : "site-header sticky top-0 z-40"
+      }
+    >
+      <div className={overlay ? "border-b border-white/20" : "bg-white border-b border-black/10"}>
+        <div className="site-header__bar">
+          <div className="flex items-center gap-5 lg:gap-7 h-16 min-[1400px]:h-[6.375rem]">
+            <Logo size="md" variant={overlay ? "white" : "forest"} />
 
-            <nav className="hidden xl:flex items-center gap-6" aria-label="Main">
+            <nav className="hidden min-[1400px]:flex items-center gap-6" aria-label="Main">
               {shopLinks.map((link) => (
                 <Link key={link.href} href={link.href} className="site-header__link">
                   {link.label}
@@ -104,7 +115,7 @@ export function Header() {
               ))}
             </nav>
 
-            <div className="ml-auto hidden xl:flex items-center gap-5">
+            <div className="ml-auto hidden min-[1400px]:flex items-center gap-5">
               {utilityLinks.map((link) => (
                 <Link key={link.href} href={link.href} className="site-header__utility">
                   {link.label}
@@ -117,7 +128,7 @@ export function Header() {
 
             <button
               type="button"
-              className="ml-auto xl:hidden p-2 -mr-2"
+              className="ml-auto min-[1400px]:hidden p-2 -mr-2"
               aria-label={open ? "Close menu" : "Open menu"}
               aria-expanded={open}
               onClick={() => setOpen(!open)}
@@ -131,7 +142,7 @@ export function Header() {
       </div>
 
       {open && (
-        <div className="xl:hidden bg-white border-b border-black/10">
+        <div className="min-[1400px]:hidden bg-white border-b border-black/10">
           <div className="w-full px-6 md:px-10">
             <nav className="py-4 flex flex-col" aria-label="Main">
               {[...shopLinks, ...menus.map((m) => ({ href: m.href, label: m.label })), ...utilityLinks].map(

@@ -327,15 +327,16 @@ h1, h2, h3, h4, h5, h6, .font-display {
   }
 }
 
-/* The campaign hero: three full-bleed campaigns that cross-fade in place.
-   Fading rather than sliding keeps the eye on the photograph instead of on the
-   movement, and every slide except the one showing is inert so keyboard focus
-   cannot land on a button nobody can see. */
+/* The campaign hero, built to the designer's comp (measured at 1920x1080):
+   a full-height photograph, a serif headline near 125px over a 47px gutter,
+   and a dark wash to the left so white type reads wherever the photograph
+   happens to be bright. */
 .campaign-hero {
   position: relative;
-  height: 560px;
+  height: 100svh;
+  min-height: 600px;
   overflow: hidden;
-  background: var(--color-forest-deep);
+  background: #000;
   color: #fff;
 }
 
@@ -345,7 +346,7 @@ h1, h2, h3, h4, h5, h6, .font-display {
   display: flex;
   align-items: center;
   opacity: 0;
-  transition: opacity 0.45s ease;
+  transition: opacity 0.6s ease;
 }
 
 .campaign-hero__slide.is-showing {
@@ -353,8 +354,6 @@ h1, h2, h3, h4, h5, h6, .font-display {
   z-index: 1;
 }
 
-/* A plain img needs to be told to fill its slide; next/image's fill prop used
-   to do this. */
 .campaign-hero__media {
   position: absolute;
   inset: 0;
@@ -366,46 +365,47 @@ h1, h2, h3, h4, h5, h6, .font-display {
 .campaign-hero__shade {
   position: absolute;
   inset: 0;
-  background: linear-gradient(90deg, rgba(0, 0, 0, 0.62), rgba(0, 0, 0, 0.05) 70%);
+  background:
+    linear-gradient(90deg, rgba(0,0,0,0.88) 0%, rgba(0,0,0,0.55) 38%, rgba(0,0,0,0.12) 72%, rgba(0,0,0,0.32) 100%),
+    linear-gradient(180deg, rgba(0,0,0,0.45) 0%, transparent 22%);
 }
 
 .campaign-hero__copy {
   position: relative;
   z-index: 2;
   width: 100%;
-  max-width: 1400px;
-  margin: 0 auto;
-  /* clears the left arrow, which sits at the edge on wide screens */
-  padding: 2.5rem 1.5rem 2.5rem 5.75rem;
+  padding-inline: clamp(1.5rem, 3.9vw, 4.6875rem);
+  padding-block: 7rem 4rem;
 }
 
 .campaign-hero__eyebrow {
   font-family: var(--font-body);
-  font-size: 0.8125rem;
-  font-weight: 600;
-  letter-spacing: 0.12em;
+  font-size: clamp(0.75rem, 0.94vw, 1.125rem);
+  font-weight: 400;
+  letter-spacing: 0.2em;
   text-transform: uppercase;
-  margin: 0;
+  margin: 0 0 clamp(1.25rem, 3.1vw, 3.75rem);
 }
 
 .campaign-hero__title {
-  /* The marketplace runs on the sans face; the serif belongs to the older
-     editorial pages. Set explicitly because h1-h6 default to the display face. */
-  font-family: var(--font-body);
-  font-size: clamp(2.125rem, 5vw, 3.125rem);
-  font-weight: 700;
-  letter-spacing: -0.02em;
-  line-height: 1.05;
-  text-wrap: balance;
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: clamp(2.75rem, 6.5vw, 7.8125rem);
+  line-height: 1.23;
+  letter-spacing: -0.005em;
+  margin: 0 0 clamp(2rem, 6.3vw, 7.5rem);
+  /* Each campaign sets its own line break, because where a headline turns is a
+     typographic decision in the comp, not something to leave to the measure. */
+  white-space: pre-line;
   max-width: 16ch;
-  margin: 0.625rem 0 0.75rem;
 }
 
 .campaign-hero__body {
-  font-size: 1.0625rem;
-  opacity: 0.92;
-  max-width: 44ch;
-  margin: 0 0 1.5rem;
+  font-family: var(--font-body);
+  font-size: clamp(1rem, 1.3vw, 1.5625rem);
+  line-height: 1.55;
+  margin: 0 0 clamp(1.25rem, 1.7vw, 2rem);
+  max-width: 28ch;
 }
 
 .campaign-hero__actions {
@@ -414,60 +414,47 @@ h1, h2, h3, h4, h5, h6, .font-display {
   gap: 0.75rem;
 }
 
+/* Square and white, the same 64px height as the bar's button. */
 .campaign-hero__button {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: clamp(3rem, 3.3vw, 4rem);
+  padding-inline: clamp(1.5rem, 2.45vw, 2.9375rem);
   background: #fff;
-  color: var(--color-forest-deep);
-  font-size: 0.9375rem;
+  color: var(--color-ink);
+  font-family: var(--font-body);
+  font-size: clamp(0.9375rem, 0.89vw, 1.0625rem);
   font-weight: 600;
-  padding: 0.75rem 1.5rem;
-  border-radius: 999px;
   transition: background 0.2s ease;
 }
 
-.campaign-hero__button:hover {
-  background: var(--color-cream-soft);
-}
+.campaign-hero__button:hover { background: rgba(255,255,255,0.86); }
 
-.campaign-hero__arrow {
+.campaign-hero__dots {
   position: absolute;
-  top: 50%;
-  z-index: 4;
-  transform: translateY(-50%);
-  width: 46px;
-  height: 46px;
+  left: 0;
+  right: 0;
+  bottom: clamp(1.5rem, 2.8vw, 3rem);
+  z-index: 3;
+  display: flex;
+  justify-content: center;
+  gap: 0.6875rem;
+}
+
+.campaign-hero__dot {
+  width: 9px;
+  height: 9px;
   border-radius: 50%;
-  border: 1px solid rgba(255, 255, 255, 0.45);
-  background: rgba(0, 0, 0, 0.22);
-  color: #fff;
-  display: grid;
-  place-items: center;
+  border: 1px solid rgba(255,255,255,0.85);
+  background: transparent;
+  padding: 0;
   cursor: pointer;
-  opacity: 0.7;
-  transition: opacity 0.2s ease, background 0.2s ease;
 }
 
-.campaign-hero__arrow.is-previous { left: 1.25rem; }
-.campaign-hero__arrow.is-next { right: 1.25rem; }
+.campaign-hero__dot[aria-current="true"] { background: #fff; }
 
-.campaign-hero__arrow:hover {
-  opacity: 1;
-  background: rgba(0, 0, 0, 0.45);
-}
-
-.campaign-hero__arrow:focus-visible {
-  outline: 2px solid #fff;
-  outline-offset: 3px;
-  opacity: 1;
-}
-
-/* On a narrow screen the arrows would sit on top of the headline, so they give
-   way to swiping, which is what a thumb reaches for there anyway. */
-@media (max-width: 900px) {
-  .campaign-hero { height: 480px; }
-  .campaign-hero__arrow { display: none; }
-  .campaign-hero__copy { padding-left: 1.5rem; }
-}
+.campaign-hero__dot:focus-visible { outline: 2px solid #fff; outline-offset: 3px; }
 
 @media (prefers-reduced-motion: reduce) {
   .campaign-hero__slide { transition: none; }
@@ -673,4 +660,57 @@ h1, h2, h3, h4, h5, h6, .font-display {
 
 @media (prefers-reduced-motion: reduce) {
   .bento__tile > img, .bento__tile:hover > img { transition: none; transform: none; }
+}
+
+/* The header bar, to the same comp: 102px tall on a wide screen, a 47px
+   gutter, 44px between navigation items, and white type over the photograph
+   on the homepage. */
+.site-header__bar {
+  width: 100%;
+  padding-inline: clamp(1.25rem, 2.45vw, 2.9375rem);
+}
+
+.site-header--overlay .site-header__link,
+.site-header--overlay .site-header__utility,
+.site-header--overlay .site-header__link--muted {
+  color: rgba(255, 255, 255, 0.82);
+  font-weight: 400;
+}
+
+.site-header--overlay .site-header__link:hover,
+.site-header--overlay .site-header__utility:hover {
+  color: #fff;
+}
+
+/* Square and white, like the hero's buttons, not the dark pill inner pages use. */
+.site-header--overlay .site-header__cta {
+  background: #fff;
+  color: var(--color-ink);
+  border-radius: 0;
+  min-height: 4rem;
+  padding-inline: 2rem;
+  font-size: 1rem;
+}
+
+.site-header--overlay .site-header__cta:hover { background: rgba(255,255,255,0.86); }
+
+.site-header--overlay .site-header__panel {
+  background: rgba(10, 10, 10, 0.94);
+  border-color: rgba(255, 255, 255, 0.14);
+}
+
+.site-header--overlay .site-header__panel-heading { color: rgba(255,255,255,0.55); }
+.site-header--overlay .site-header__panel-link { color: rgba(255,255,255,0.85); }
+.site-header--overlay .site-header__panel-link:hover { color: #fff; }
+
+@media (min-width: 1400px) {
+  .site-header__link,
+  .site-header__utility { font-size: 0.9375rem; }
+  /* The comp's 44px between items is measured at 1920. Our bar carries eleven
+     links rather than four, so it takes that spacing only once there is room. */
+  .site-header--overlay nav { gap: 1.625rem; }
+}
+
+@media (min-width: 1650px) {
+  .site-header--overlay nav { gap: 2.75rem; }
 }

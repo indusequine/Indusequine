@@ -110,40 +110,20 @@ export default function CampaignHero({ campaigns }: { campaigns: Campaign[] }) {
       })}
 
       {campaigns.length > 1 && (
-        <>
-          <button
-            type="button"
-            className="campaign-hero__arrow is-previous"
-            aria-label="Previous campaign"
-            onClick={() => go(current - 1)}
-          >
-            <Chevron direction="left" />
-          </button>
-          <button
-            type="button"
-            className="campaign-hero__arrow is-next"
-            aria-label="Next campaign"
-            onClick={() => go(current + 1)}
-          >
-            <Chevron direction="right" />
-          </button>
-        </>
+        <div className="campaign-hero__dots" role="tablist" aria-label="Choose a campaign">
+          {campaigns.map((campaign, index) => (
+            <button
+              key={campaign.title}
+              type="button"
+              role="tab"
+              className="campaign-hero__dot"
+              aria-current={index === current}
+              aria-label={campaign.eyebrow}
+              onClick={() => go(index)}
+            />
+          ))}
+        </div>
       )}
     </section>
-  );
-}
-
-function Chevron({ direction }: { direction: "left" | "right" }) {
-  return (
-    <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true">
-      <path
-        d={direction === "left" ? "M15 5 L8 12 L15 19" : "M9 5 L16 12 L9 19"}
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="2"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-    </svg>
   );
 }
