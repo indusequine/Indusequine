@@ -67,8 +67,8 @@ export function Header() {
       }
     >
       <div className={overlay ? "border-b border-white/20" : "bg-white border-b border-black/10"}>
-        <div className="site-header__bar">
-          <div className="flex items-center gap-5 lg:gap-7 h-16 min-[1400px]:h-[6.375rem]">
+        <div className={overlay ? "site-header__bar" : "site-header__bar site-header__bar--tight"}>
+          <div className={`flex items-center gap-5 lg:gap-7 h-16 ${overlay ? "min-[1400px]:h-[6.375rem]" : ""}`}>
             <Logo size="md" variant={overlay ? "white" : "forest"} />
 
             <nav className="hidden min-[1400px]:flex items-center gap-6" aria-label="Main">

@@ -741,6 +741,10 @@ h1, h2, h3, h4, h5, h6, .font-display {
   padding-inline: clamp(1.25rem, 2.45vw, 2.9375rem);
 }
 
+/* Inner pages keep the gutter they had before the comp work, which was written
+   for the homepage. */
+.site-header__bar--tight { padding-inline: clamp(1.25rem, 2vw, 2.5rem); }
+
 .site-header--overlay .site-header__link,
 .site-header--overlay .site-header__utility,
 .site-header--overlay .site-header__link--muted {
