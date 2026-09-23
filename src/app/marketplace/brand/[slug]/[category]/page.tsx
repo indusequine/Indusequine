@@ -2,7 +2,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import { Container } from "@/components/Container";
-import { ProductGrid } from "@/components/ProductGrid";
+import { CategoryProductBrowser } from "@/components/CategoryProductBrowser";
 import {
   getBrandBySlug,
   getBrandCategories,
@@ -76,7 +76,7 @@ export default async function BrandCategoryPage({ params }: Props) {
 
       <section className="bg-cream-soft py-14 md:py-20">
         <Container size="wide">
-          <ProductGrid products={products} />
+          <CategoryProductBrowser products={products} />
         </Container>
       </section>
 
