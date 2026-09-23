@@ -13,6 +13,14 @@ const SELLER_NAMES: Record<string, string> = {
 
 export const SUPPLIER_TAG_PREFIX = "supplier:";
 
+/** The code the supplier knows this product by, carried on the product as
+ *  "supplier-code:<code>". Delhi Tack Shop's importer writes it; The Tack Shop
+ *  is matched on SKU instead, so its products have none. */
+export function supplierCodeFromTags(tags: string[]): string | null {
+  const tag = tags.find((t) => t.startsWith("supplier-code:"));
+  return tag ? tag.slice("supplier-code:".length) : null;
+}
+
 export function sellerFromTags(tags: string[]): Seller | null {
   const tag = tags.find((t) => t.startsWith(SUPPLIER_TAG_PREFIX));
   if (!tag) return null;

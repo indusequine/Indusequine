@@ -107,7 +107,13 @@ export default async function ProductPage({ params }: Props) {
             Ask us about the {product.name}.
           </h2>
           <div className="mt-10">
-            <EnquiryForm productSlug={product.slug} productName={product.name} />
+            <EnquiryForm
+              productSlug={product.slug}
+              productName={product.name}
+              seller={product.seller}
+              supplierCode={product.supplierCode}
+              sku={product.variants[0]?.sku}
+            />
           </div>
         </Container>
       </section>
