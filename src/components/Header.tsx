@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { usePathname } from "next/navigation";
 import { Logo } from "./Logo";
 
@@ -57,6 +57,19 @@ export function Header() {
   // Which menu is down. Tracked rather than left to :hover so the same markup
   // works for a keyboard, where there is no pointer to hover with.
   const [menu, setMenu] = useState<string | null>(null);
+  // Closing waits a moment, so a cursor that clips a corner on its way to an
+  // item does not shut the panel under it.
+  const closing = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+  const openMenu = (label: string) => {
+    if (closing.current) clearTimeout(closing.current);
+    setMenu(label);
+  };
+
+  const closeMenu = () => {
+    if (closing.current) clearTimeout(closing.current);
+    closing.current = setTimeout(() => setMenu(null), 150);
+  };
 
   return (
     <header
@@ -84,11 +97,11 @@ export function Header() {
                 <div
                   key={item.label}
                   className="site-header__menu"
-                  onMouseEnter={() => setMenu(item.label)}
-                  onMouseLeave={() => setMenu(null)}
-                  onFocus={() => setMenu(item.label)}
+                  onMouseEnter={() => openMenu(item.label)}
+                  onMouseLeave={closeMenu}
+                  onFocus={() => openMenu(item.label)}
                   onBlur={(event) => {
-                    if (!event.currentTarget.contains(event.relatedTarget as Node)) setMenu(null);
+                    if (!event.currentTarget.contains(event.relatedTarget as Node)) closeMenu();
                   }}
                 >
                   <Link

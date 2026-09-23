@@ -492,7 +492,15 @@ h1, h2, h3, h4, h5, h6, .font-display {
   align-items: center;
 }
 
-.site-header__menu { position: relative; }
+/* The panel hangs 12px below the link. Without this the cursor leaves the menu
+   while crossing that gap and the panel shuts before the reader reaches it, so
+   the hover area is extended over the gap and pulled back with a negative
+   margin, which leaves the bar's layout untouched. */
+.site-header__menu {
+  position: relative;
+  padding-bottom: 0.75rem;
+  margin-bottom: -0.75rem;
+}
 
 /* Anchored to the bar rather than to the link, so the panel lines up with the
    navigation no matter how wide its trigger is. */
