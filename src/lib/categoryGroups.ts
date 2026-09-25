@@ -93,9 +93,9 @@ export const categoryGroups: CategoryGroup[] = [
     slug: "stable",
     name: "Stable",
     tagline: "For the yard and the arena, not the horse.",
-    // A stable interior from Wikimedia Commons, released CC0, until we have a
-    // photograph of a yard of our own. Source: "Lipica, interior of the
-    // Velbanca stables".
+    // A barn aisle with stalls either side, released CC0 (via Openverse), so
+    // it carries no credit or conditions. A placeholder until we have a
+    // photograph of a yard of our own.
     image: "/images/stable-yard.jpg",
     categorySlugs: ["jumps", "racks"],
   },
