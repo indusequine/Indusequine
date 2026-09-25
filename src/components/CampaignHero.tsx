@@ -2,6 +2,7 @@
 
 import { useCallback, useEffect, useRef, useState } from "react";
 import Link from "next/link";
+import { isSlowConnection, useSlowConnection } from "@/lib/useSlowConnection";
 
 export type Campaign = {
   eyebrow: string;
@@ -21,6 +22,25 @@ export default function CampaignHero({ campaigns }: { campaigns: Campaign[] }) {
   const [current, setCurrent] = useState(0);
   const [holding, setHolding] = useState(false);
   const [animate, setAnimate] = useState(false);
+  // On a poor connection the campaign stops rotating and the other two
+  // photographs are never fetched: three full-bleed images for one that can be
+  // seen is the most expensive thing on the page.
+  const slow = useSlowConnection();
+  const root = useRef<HTMLElement>(null);
+
+  // The campaigns behind the first one ship without a src, so the browser
+  // cannot start fetching them from the markup. On a good connection they are
+  // handed their src as soon as the page is interactive, which is seconds
+  // before the first rotation, so nothing is different to look at. On a poor
+  // one they are never fetched at all.
+  useEffect(() => {
+    if (isSlowConnection()) return;
+    const waiting = root.current?.querySelectorAll<HTMLImageElement>("img[data-src]");
+    waiting?.forEach((img) => {
+      img.src = img.dataset.src!;
+      delete img.dataset.src;
+    });
+  }, [slow]);
   const touchStart = useRef<number | null>(null);
 
   // Rotation is opt-in: it starts only once we know the reader has not asked
@@ -42,15 +62,16 @@ export default function CampaignHero({ campaigns }: { campaigns: Campaign[] }) {
   // Any move, by hand or on its own, restarts the full interval, so a campaign
   // someone just chose is not replaced a moment later.
   useEffect(() => {
-    if (!animate || holding || campaigns.length < 2) return;
+    if (slow || !animate || holding || campaigns.length < 2) return;
     const timer = setTimeout(() => go(current + 1), INTERVAL);
     return () => clearTimeout(timer);
-  }, [animate, holding, current, campaigns.length, go]);
+  }, [slow, animate, holding, current, campaigns.length, go]);
 
   if (!campaigns.length) return null;
 
   return (
     <section
+      ref={root}
       className="campaign-hero"
       aria-roledescription="carousel"
       aria-label="Campaigns"
@@ -86,11 +107,11 @@ export default function CampaignHero({ campaigns }: { campaigns: Campaign[] }) {
                 optimiser for nothing. */}
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              src={campaign.image}
+              {...(index === 0 ? { src: campaign.image } : { "data-src": campaign.image })}
               alt=""
               className="campaign-hero__media"
-              fetchPriority={campaign.priority ? "high" : "auto"}
-              loading={campaign.priority ? "eager" : "lazy"}
+              fetchPriority={index === 0 ? "high" : "auto"}
+              loading={index === 0 ? "eager" : "lazy"}
             />
             <div className="campaign-hero__shade" />
             <div className="campaign-hero__copy">
@@ -109,7 +130,7 @@ export default function CampaignHero({ campaigns }: { campaigns: Campaign[] }) {
         );
       })}
 
-      {campaigns.length > 1 && (
+      {campaigns.length > 1 && !slow && (
         <div className="campaign-hero__dots" role="tablist" aria-label="Choose a campaign">
           {campaigns.map((campaign, index) => (
             <button

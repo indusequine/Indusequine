@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { shopifyImage } from "@/lib/imageUrl";
+import { isSlowConnection, useSlowConnection } from "@/lib/useSlowConnection";
 
 export type BannerItem = {
   eyebrow: string;
@@ -35,9 +36,24 @@ export default function CollectionBanner({ items }: { items: BannerItem[] }) {
   const [current, setCurrent] = useState(0);
   const [holding, setHolding] = useState(false);
   const shuffledOnce = useRef(false);
+  // Fourteen product photographs for one tile is fine on a good connection and
+  // absurd on a bad one, so there it holds still and fetches one.
+  const slow = useSlowConnection();
+  const root = useRef<HTMLDivElement>(null);
+
+  // Only the product on screen ships with a src. The other thirteen are handed
+  // theirs once the page is interactive, and on a poor connection never.
+  useEffect(() => {
+    if (isSlowConnection()) return;
+    const waiting = root.current?.querySelectorAll<HTMLImageElement>("img[data-src]");
+    waiting?.forEach((img) => {
+      img.src = img.dataset.src!;
+      delete img.dataset.src;
+    });
+  }, [slow, order]);
 
   useEffect(() => {
-    if (holding || order.length < 2) return;
+    if (slow || holding || order.length < 2) return;
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
 
     const timer = setTimeout(() => {
@@ -55,28 +71,32 @@ export default function CollectionBanner({ items }: { items: BannerItem[] }) {
     }, INTERVAL);
 
     return () => clearTimeout(timer);
-  }, [holding, current, order]);
+  }, [slow, holding, current, order]);
 
   if (!order.length) return null;
 
   return (
     <div
+      ref={root}
       className="bento__tile bento__tile--cover"
       onMouseEnter={() => setHolding(true)}
       onMouseLeave={() => setHolding(false)}
     >
-      {order.map((item, index) => (
+      {(slow ? order.slice(0, 1) : order).map((item, index) => (
         <Link
           key={item.href + item.alt}
           href={item.href}
           className={`bento__rotator${index === current ? " is-showing" : ""}`}
+          prefetch={slow ? false : undefined}
           aria-hidden={index !== current}
           inert={index !== current}
         >
           <span className="bento__shot bento__shot--cover">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              src={shopifyImage(item.image, 1200)}
+              {...(index === 0
+                ? { src: shopifyImage(item.image, 760) }
+                : { "data-src": shopifyImage(item.image, 760) })}
               alt={item.alt}
               loading={index === 0 ? "eager" : "lazy"}
             />

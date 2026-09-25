@@ -297,6 +297,23 @@ h1, h2, h3, h4, h5, h6, .font-display {
     animation: brandDrift 90s linear infinite;
   }
 
+  /* Held still for a reader on a poor connection, where the second row that
+     makes the loop seamless is not loaded at all. */
+  .brand-strip__viewport.is-still .brand-strip__track {
+    animation: none;
+    width: auto;
+  }
+
+  .brand-strip__viewport.is-still {
+    -webkit-mask-image: none;
+    mask-image: none;
+  }
+
+  .brand-strip__viewport.is-still .brand-strip__row {
+    flex-wrap: wrap;
+    gap: 2rem 2.5rem;
+  }
+
   .brand-strip__viewport:hover .brand-strip__track,
   .brand-strip__viewport:focus-within .brand-strip__track {
     animation-play-state: paused;

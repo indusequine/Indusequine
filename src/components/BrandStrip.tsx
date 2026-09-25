@@ -1,6 +1,9 @@
+"use client";
+
 import Link from "next/link";
 import { Container } from "@/components/Container";
 import { brandSlug } from "@/lib/brands";
+import { useSlowConnection } from "@/lib/useSlowConnection";
 import { brandLogo, brandLogoScale } from "@/lib/brandLogos";
 import type { Brand } from "@/data/products";
 
@@ -29,13 +32,14 @@ function interleave(brands: Brand[]): Brand[] {
   return [...out, ...queue];
 }
 
-function BrandLink({ brand }: { brand: Brand }) {
+function BrandLink({ brand, prefetch }: { brand: Brand; prefetch?: false }) {
   const logo = brandLogo(brand.name);
   return (
     <Link
       href={`/marketplace/brand/${brandSlug(brand.name)}`}
       className="brand-strip__item"
       title={brand.name}
+      prefetch={prefetch}
     >
       <span className="brand-strip__box">
         {logo ? (
@@ -55,7 +59,12 @@ function BrandLink({ brand }: { brand: Brand }) {
 }
 
 export default function BrandStrip({ brands }: { brands: Brand[] }) {
-  const ordered = interleave(brands);
+  // Thirty-one logos, each its own request, and a duplicate row so the drift
+  // can loop. On a poor connection the strip holds still and shows the twelve
+  // busiest brands, which is one row and no second copy.
+  const slow = useSlowConnection();
+  const all = interleave(brands);
+  const ordered = slow ? all.slice(0, 12) : all;
   if (!ordered.length) return null;
 
   return (
@@ -68,22 +77,24 @@ export default function BrandStrip({ brands }: { brands: Brand[] }) {
       </Container>
       {/* The list is duplicated so the drift can loop seamlessly; the copy is
           hidden from screen readers and from keyboard focus. */}
-      <div className="brand-strip__viewport">
+      <div className={`brand-strip__viewport${slow ? " is-still" : ""}`}>
         <div className="brand-strip__track">
           <ul className="brand-strip__row">
             {ordered.map((brand) => (
               <li key={brand.slug}>
-                <BrandLink brand={brand} />
+                <BrandLink brand={brand} prefetch={slow ? false : undefined} />
               </li>
             ))}
           </ul>
-          <ul className="brand-strip__row" aria-hidden="true" inert>
-            {ordered.map((brand) => (
-              <li key={`${brand.slug}-repeat`}>
-                <BrandLink brand={brand} />
-              </li>
-            ))}
-          </ul>
+          {!slow && (
+            <ul className="brand-strip__row" aria-hidden="true" inert>
+              {ordered.map((brand) => (
+                <li key={`${brand.slug}-repeat`}>
+                  <BrandLink brand={brand} prefetch={slow ? false : undefined} />
+                </li>
+              ))}
+            </ul>
+          )}
         </div>
       </div>
     </section>
