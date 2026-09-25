@@ -564,14 +564,18 @@ h1, h2, h3, h4, h5, h6, .font-display {
   border-color: var(--color-forest);
 }
 
+/* The bar sits over a photograph whose right side is bright and busy, which a
+   translucent white field disappears into. A dark fill and a firmer border
+   keep it readable wherever the photograph happens to be light. */
 .site-header--overlay .site-header__search {
-  border-color: rgba(255, 255, 255, 0.4);
-  background: rgba(255, 255, 255, 0.08);
-  color: rgba(255, 255, 255, 0.75);
+  border-color: rgba(255, 255, 255, 0.55);
+  background: rgba(0, 0, 0, 0.42);
+  color: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(2px);
 }
 
 .site-header--overlay .site-header__search input { color: #fff; }
-.site-header--overlay .site-header__search input::placeholder { color: rgba(255, 255, 255, 0.65); }
+.site-header--overlay .site-header__search input::placeholder { color: rgba(255, 255, 255, 0.8); }
 .site-header--overlay .site-header__search:focus-within { border-color: #fff; }
 
 /* The menu button, which holds the pages a rider needs least often. */
@@ -597,7 +601,11 @@ h1, h2, h3, h4, h5, h6, .font-display {
 
 .site-header__more:hover { border-color: rgba(0, 0, 0, 0.3); }
 
-.site-header--overlay .site-header__more { border-color: rgba(255, 255, 255, 0.4); }
+.site-header--overlay .site-header__more {
+  border-color: rgba(255, 255, 255, 0.55);
+  background: rgba(0, 0, 0, 0.42);
+  backdrop-filter: blur(2px);
+}
 .site-header--overlay .site-header__more span { background: #fff; }
 .site-header--overlay .site-header__more:hover { border-color: #fff; }
 
