@@ -398,6 +398,18 @@ export type SearchHit = {
  * a category match, so searching "Kask" leads with Kask's own products rather
  * than with everything tagged Helmet.
  */
+/** The forms of a word worth trying: what was typed, its singular, and its
+ *  plural. A rider typing "saddles" means the Saddle category, and typing
+ *  "brush" means the brushes. */
+function wordForms(word: string): string[] {
+  const forms = new Set([word]);
+  if (word.endsWith("ies") && word.length > 4) forms.add(`${word.slice(0, -3)}y`);
+  if (word.endsWith("es") && word.length > 3) forms.add(word.slice(0, -2));
+  if (word.endsWith("s") && word.length > 3) forms.add(word.slice(0, -1));
+  forms.add(`${word}s`);
+  return [...forms];
+}
+
 export async function searchCatalogue(query: string, limit = 60): Promise<SearchHit[]> {
   const words = query.toLowerCase().split(/\s+/).filter(Boolean);
   if (!words.length) return [];
@@ -415,7 +427,8 @@ export async function searchCatalogue(query: string, limit = 60): Promise<Search
 
     let score = 0;
     const matchedAll = words.every((word) => {
-      const where = haystacks.findIndex((h) => h.includes(word));
+      const forms = wordForms(word);
+      const where = haystacks.findIndex((h) => forms.some((f) => h.includes(f)));
       if (where === -1) return false;
       if (where === 0) score += name.startsWith(word) ? 6 : 4;
       else if (where === 1) score += 3;

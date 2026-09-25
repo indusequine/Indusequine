@@ -64,6 +64,15 @@ export const siteSections: SiteSection[] = [
   },
 ];
 
+/** "farriers" and "farrier" have to reach the same place. */
+function forms(word: string): string[] {
+  const out = new Set([word, `${word}s`]);
+  if (word.endsWith("ies") && word.length > 4) out.add(`${word.slice(0, -3)}y`);
+  if (word.endsWith("es") && word.length > 3) out.add(word.slice(0, -2));
+  if (word.endsWith("s") && word.length > 3) out.add(word.slice(0, -1));
+  return [...out];
+}
+
 export function matchSections(query: string): SiteSection[] {
   const words = query.toLowerCase().split(/\s+/).filter(Boolean);
   if (!words.length) return [];
@@ -71,6 +80,6 @@ export function matchSections(query: string): SiteSection[] {
     const haystack = [section.title, section.blurb, ...section.keywords].join(" ").toLowerCase();
     // Any word is enough here: there are seven sections, so a near miss is
     // better than sending a rider away with nothing.
-    return words.some((word) => haystack.includes(word));
+    return words.some((word) => forms(word).some((f) => haystack.includes(f)));
   });
 }
