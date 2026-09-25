@@ -37,6 +37,7 @@ export const categoryGroups: CategoryGroup[] = [
       "socks-and-ties",
       "softshell-jacket",
       "spurs-and-spur-straps",
+      "sunglasses",
       "t-shirt",
       "whips",
     ],
@@ -63,6 +64,7 @@ export const categoryGroups: CategoryGroup[] = [
       "rugs-and-blankets",
       "saddle",
       "saddle-pads",
+      "stable",
       "stirrup-and-stirrup-leathers",
       "tack",
       "tendon-boots",
@@ -93,7 +95,9 @@ export const categoryGroups: CategoryGroup[] = [
 
 // Small tail — real categories, but too few products to warrant a big
 // photo tile of their own. Shown as a text-link row instead.
-export const otherCategorySlugs: string[] = ["dog", "gift-card", "gifts", "others", "toys"];
+// The three that belong to no group: a dog rug is not rider, horse or horse
+// care, and gifts and toys are bought for people rather than for riding.
+export const otherCategorySlugs: string[] = ["dog", "gifts", "toys"];
 
 export function getGroupForCategorySlug(slug: string): CategoryGroup | undefined {
   return categoryGroups.find((g) => g.categorySlugs.includes(slug));
