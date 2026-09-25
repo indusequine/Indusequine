@@ -5,15 +5,11 @@ import { useRef, useState } from "react";
 import { usePathname } from "next/navigation";
 import { Logo } from "./Logo";
 
-// Shopping sits on the bar itself, because that is what riders come for.
-// Services and Discover hang off it in menus: they matter, but not on the way
-// to a girth.
-const shopLinks = [
+// Shopping and the two other areas sit on the bar. Rider, Horse, Horse Care
+// and Stable are the four tiles on Shop All, one click in, rather than a menu
+// hanging off it.
+const barLinks = [
   { href: "/marketplace", label: "Shop All" },
-  { href: "/marketplace/group/rider", label: "Rider" },
-  { href: "/marketplace/group/horse", label: "Horse" },
-  { href: "/marketplace/group/horse-care", label: "Horse Care" },
-  { href: "/marketplace/group/stable", label: "Stable" },
   { href: "/marketplace/brands", label: "Brands" },
 ];
 
@@ -41,23 +37,19 @@ const menus = [
   },
 ];
 
-// Company links ride on the same bar as the shopping links, set quieter and to
-// the right, rather than on a second row of their own.
-const utilityLinks = [
+// Behind the menu button: the pages a rider needs least often.
+const moreLinks = [
   { href: "/story", label: "Our Story" },
   { href: "/contact", label: "Partner With Us" },
   { href: "/waitlist", label: "Get Updates" },
 ];
 
 export function Header() {
-  const [open, setOpen] = useState(false);
-  // On the homepage the bar sits over the campaign photograph in white, the way
-  // the design has it. Everywhere else the page starts with white, so it takes
-  // its solid form instead.
+  // On the homepage the bar sits over the campaign photograph in white. Every
+  // other page starts with white, so it takes its solid form instead.
   const overlay = usePathname() === "/";
-  // Which menu is down. Tracked rather than left to :hover so the same markup
-  // works for a keyboard, where there is no pointer to hover with.
   const [menu, setMenu] = useState<string | null>(null);
+  const [open, setOpen] = useState(false);
   // Closing waits a moment, so a cursor that clips a corner on its way to an
   // item does not shut the panel under it.
   const closing = useRef<ReturnType<typeof setTimeout> | null>(null);
@@ -66,7 +58,6 @@ export function Header() {
     if (closing.current) clearTimeout(closing.current);
     setMenu(label);
   };
-
   const closeMenu = () => {
     if (closing.current) clearTimeout(closing.current);
     closing.current = setTimeout(() => setMenu(null), 150);
@@ -81,96 +72,130 @@ export function Header() {
       }
     >
       <div className={overlay ? "border-b border-white/20" : "bg-white border-b border-black/10"}>
-        <div className={overlay ? "site-header__bar" : "site-header__bar site-header__bar--tight"}>
-          <div className={`flex items-center gap-5 lg:gap-7 h-16 ${overlay ? "min-[1400px]:h-[6.375rem]" : ""}`}>
-            <Logo size="md" variant={overlay ? "white" : "forest"} />
+        <div className="site-header__bar">
+          <div className="flex items-center h-16 min-[1100px]:h-[4.5rem]">
+            {/* left end: the logo and the four places to go */}
+            <div className="flex items-center gap-7">
+              <Logo size="md" variant={overlay ? "white" : "forest"} />
 
-            <nav className="hidden min-[1400px]:flex items-center gap-6" aria-label="Main">
-              {shopLinks.map((link) => (
-                <Link key={link.href} href={link.href} className="site-header__link">
-                  {link.label}
-                </Link>
-              ))}
-
-              <span className="h-5 w-px bg-black/10" aria-hidden="true" />
-
-              {menus.map((item) => (
-                <div
-                  key={item.label}
-                  className="site-header__menu"
-                  onMouseEnter={() => openMenu(item.label)}
-                  onMouseLeave={closeMenu}
-                  onFocus={() => openMenu(item.label)}
-                  onBlur={(event) => {
-                    if (!event.currentTarget.contains(event.relatedTarget as Node)) closeMenu();
-                  }}
-                >
-                  <Link
-                    href={item.href}
-                    className="site-header__link site-header__link--muted"
-                    aria-expanded={menu === item.label}
-                  >
-                    {item.label}
-                    <Caret />
+              <nav className="hidden min-[1100px]:flex items-center gap-7" aria-label="Main">
+                {barLinks.map((link) => (
+                  <Link key={link.href} href={link.href} className="site-header__link">
+                    {link.label}
                   </Link>
-                  <div
-                    className="site-header__panel"
-                    data-open={menu === item.label ? "true" : "false"}
-                    hidden={menu !== item.label}
-                  >
-                    <p className="site-header__panel-heading">{item.heading}</p>
-                    {item.links.map((link) => (
-                      <Link key={link.href} href={link.href} className="site-header__panel-link">
-                        {link.label}
-                      </Link>
-                    ))}
-                  </div>
-                </div>
-              ))}
-            </nav>
+                ))}
 
-            <div className="ml-auto hidden min-[1400px]:flex items-center gap-5">
-              {utilityLinks.map((link) => (
-                <Link key={link.href} href={link.href} className="site-header__utility">
-                  {link.label}
-                </Link>
-              ))}
-              <Link href="/contact" className="site-header__cta">
-                Enquire
-              </Link>
+                {menus.map((item) => (
+                  <div
+                    key={item.label}
+                    className="site-header__menu"
+                    onMouseEnter={() => openMenu(item.label)}
+                    onMouseLeave={closeMenu}
+                    onFocus={() => openMenu(item.label)}
+                    onBlur={(event) => {
+                      if (!event.currentTarget.contains(event.relatedTarget as Node)) closeMenu();
+                    }}
+                  >
+                    <Link
+                      href={item.href}
+                      className="site-header__link site-header__link--muted"
+                      aria-expanded={menu === item.label}
+                    >
+                      {item.label}
+                      <Caret />
+                    </Link>
+                    <div className="site-header__panel" hidden={menu !== item.label}>
+                      <p className="site-header__panel-heading">{item.heading}</p>
+                      {item.links.map((link) => (
+                        <Link key={link.href} href={link.href} className="site-header__panel-link">
+                          {link.label}
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+                ))}
+              </nav>
             </div>
 
-            <button
-              type="button"
-              className="ml-auto min-[1400px]:hidden p-2 -mr-2"
-              aria-label={open ? "Close menu" : "Open menu"}
-              aria-expanded={open}
-              onClick={() => setOpen(!open)}
-            >
-              <span className={`block w-6 h-px mb-1.5 ${overlay ? "bg-white" : "bg-ink"}`} />
-              <span className={`block w-6 h-px mb-1.5 ${overlay ? "bg-white" : "bg-ink"}`} />
-              <span className={`block w-6 h-px ${overlay ? "bg-white" : "bg-ink"}`} />
-            </button>
+            {/* right end: a small search and the menu button, nothing else */}
+            <div className="ml-auto flex items-center gap-3">
+              <form action="/search" className="site-header__search hidden sm:flex" role="search">
+                <SearchGlyph />
+                <input type="search" name="q" placeholder="Search" aria-label="Search the site" />
+              </form>
+
+              <div
+                className="site-header__menu"
+                onMouseEnter={() => openMenu("more")}
+                onMouseLeave={closeMenu}
+                onFocus={() => openMenu("more")}
+                onBlur={(event) => {
+                  if (!event.currentTarget.contains(event.relatedTarget as Node)) closeMenu();
+                }}
+              >
+                <button
+                  type="button"
+                  className="site-header__more"
+                  aria-label={open ? "Close menu" : "Open menu"}
+                  aria-expanded={menu === "more" || open}
+                  onClick={() => {
+                    // Wide screens open the small panel; narrow ones open the
+                    // full menu underneath, which carries everything.
+                    if (window.matchMedia("(min-width: 1100px)").matches) {
+                      setMenu(menu === "more" ? null : "more");
+                    } else {
+                      setOpen(!open);
+                    }
+                  }}
+                >
+                  <span />
+                  <span />
+                  <span />
+                </button>
+                <div
+                  className="site-header__panel site-header__panel--right hidden min-[1100px]:block"
+                  hidden={menu !== "more"}
+                >
+                  <p className="site-header__panel-heading">Indusequine</p>
+                  {moreLinks.map((link) => (
+                    <Link key={link.href} href={link.href} className="site-header__panel-link">
+                      {link.label}
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
 
       {open && (
-        <div className="min-[1400px]:hidden bg-white border-b border-black/10">
-          <div className="w-full px-6 md:px-10">
-            <nav className="py-4 flex flex-col" aria-label="Main">
-              {[...shopLinks, ...menus.map((m) => ({ href: m.href, label: m.label })), ...utilityLinks].map(
-                (link) => (
-                  <Link
-                    key={link.href}
-                    href={link.href}
-                    className="py-2.5 text-sm text-ink"
-                    onClick={() => setOpen(false)}
-                  >
-                    {link.label}
-                  </Link>
-                ),
-              )}
+        <div className="min-[1100px]:hidden bg-white border-b border-black/10">
+          <div className="site-header__bar">
+            <form action="/search" className="site-header__search my-4 w-full" role="search">
+              <SearchGlyph />
+              <input
+                type="search"
+                name="q"
+                placeholder="Search the site"
+                aria-label="Search the site"
+              />
+            </form>
+            <nav className="pb-4 flex flex-col" aria-label="Main">
+              {[
+                ...barLinks,
+                ...menus.map((m) => ({ href: m.href, label: m.label })),
+                ...moreLinks,
+              ].map((link) => (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className="py-2.5 text-sm text-ink"
+                  onClick={() => setOpen(false)}
+                >
+                  {link.label}
+                </Link>
+              ))}
             </nav>
           </div>
         </div>
@@ -183,6 +208,23 @@ function Caret() {
   return (
     <svg width="9" height="9" viewBox="0 0 10 10" aria-hidden="true" className="ml-1 inline-block">
       <path d="M2 4 L5 7 L8 4" fill="none" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" />
+    </svg>
+  );
+}
+
+function SearchGlyph() {
+  return (
+    <svg
+      width="14"
+      height="14"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      aria-hidden="true"
+    >
+      <circle cx="11" cy="11" r="7" />
+      <path d="M20 20 L16.2 16.2" strokeLinecap="round" />
     </svg>
   );
 }

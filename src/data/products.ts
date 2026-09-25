@@ -378,3 +378,68 @@ export async function getProductBySlug(slug: string): Promise<Product | undefine
   const category = categorySlug ? await getCategory(categorySlug) : undefined;
   return mapProduct(node, category?.name ?? "");
 }
+
+export type SearchHit = {
+  slug: string;
+  name: string;
+  brand: string | null;
+  categoryName: string;
+  categorySlug: string;
+  image?: string;
+  inStock: boolean;
+};
+
+/**
+ * Search the catalogue by name, brand and category, off the lean pass that the
+ * category counts already fetch, so it costs no extra round trip.
+ *
+ * Every word has to match somewhere, which is what makes "kep helmet" and
+ * "helmet kep" both work. Ranking puts a name match above a brand match above
+ * a category match, so searching "Kask" leads with Kask's own products rather
+ * than with everything tagged Helmet.
+ */
+export async function searchCatalogue(query: string, limit = 60): Promise<SearchHit[]> {
+  const words = query.toLowerCase().split(/\s+/).filter(Boolean);
+  if (!words.length) return [];
+
+  const [nodes, categories] = await Promise.all([fetchAllProductsLean(), getCategories()]);
+  const nameBySlug = new Map(categories.map((c) => [c.slug, c.name]));
+  const scored: { hit: SearchHit; score: number }[] = [];
+
+  for (const node of nodes) {
+    const slug = categorySlugFromTags(node.tags);
+    const categoryName = (slug && nameBySlug.get(slug)) || "";
+    const brand = brandFromVendor(node.vendor);
+    const name = node.title.toLowerCase();
+    const haystacks = [name, (brand ?? "").toLowerCase(), categoryName.toLowerCase()];
+
+    let score = 0;
+    const matchedAll = words.every((word) => {
+      const where = haystacks.findIndex((h) => h.includes(word));
+      if (where === -1) return false;
+      if (where === 0) score += name.startsWith(word) ? 6 : 4;
+      else if (where === 1) score += 3;
+      else score += 1;
+      return true;
+    });
+    if (!matchedAll) continue;
+
+    scored.push({
+      score,
+      hit: {
+        slug: node.handle,
+        name: node.title,
+        brand,
+        categoryName,
+        categorySlug: slug ?? "",
+        image: node.featuredImage?.url,
+        inStock: inStockFromTags(node.tags),
+      },
+    });
+  }
+
+  return scored
+    .sort((a, b) => b.score - a.score || a.hit.name.localeCompare(b.hit.name))
+    .slice(0, limit)
+    .map((s) => s.hit);
+}

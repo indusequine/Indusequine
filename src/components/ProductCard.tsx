@@ -28,7 +28,9 @@ export function ProductCard({ product }: { product: Product }) {
         {product.variants.length > 1 && (
           <p className="mt-1 text-xs text-stone">{product.variants.length} options</p>
         )}
-        <p className="mt-4 eyebrow text-brass-deep">{product.priceLabel}</p>
+        {product.priceLabel && (
+          <p className="mt-4 eyebrow text-brass-deep">{product.priceLabel}</p>
+        )}
       </div>
     </Link>
   );

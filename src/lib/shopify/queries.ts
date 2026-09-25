@@ -110,6 +110,7 @@ export const PRODUCTS_LEAN_QUERY = /* GraphQL */ `
       edges {
         node {
           handle
+          title
           tags
           vendor
           featuredImage {
