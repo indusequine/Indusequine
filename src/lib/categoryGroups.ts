@@ -75,7 +75,7 @@ export const categoryGroups: CategoryGroup[] = [
     slug: "horse-care",
     name: "Horse Care",
     tagline: "Grooming, supplements, and health essentials.",
-    image: "/images/rider-embrace.jpg",
+    image: "/images/horse-arena.jpg",
     categorySlugs: [
       "chew-toy",
       "grooming",
@@ -93,9 +93,10 @@ export const categoryGroups: CategoryGroup[] = [
     slug: "stable",
     name: "Stable",
     tagline: "For the yard and the arena, not the horse.",
-    // The arena photograph, which is the closest thing we own to a yard. Horse
-    // Care took the rider-and-horse close-up in its place.
-    image: "/images/horse-arena.jpg",
+    // A stable interior from Wikimedia Commons, released CC0, until we have a
+    // photograph of a yard of our own. Source: "Lipica, interior of the
+    // Velbanca stables".
+    image: "/images/stable-yard.jpg",
     categorySlugs: ["jumps", "racks"],
   },
 ];
