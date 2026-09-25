@@ -582,7 +582,9 @@ h1, h2, h3, h4, h5, h6, .font-display {
 .site-header__more {
   width: 36px;
   height: 36px;
-  border-radius: 50%;
+  /* Squared off, like the hero's buttons, rather than the round badge a phone
+     menu usually wears. */
+  border-radius: 0;
   border: 1px solid rgba(0, 0, 0, 0.12);
   background: transparent;
   display: grid;
