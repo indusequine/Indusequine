@@ -33,7 +33,7 @@ export default async function MarketplacePage() {
               search engines without taking a line of the page. */}
           <h1 className="sr-only">Shop all</h1>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
             {categoryGroups.map((group) => {
               const productCount = group.categorySlugs.reduce(
                 (sum, slug) => sum + (countBySlug.get(slug) ?? 0),

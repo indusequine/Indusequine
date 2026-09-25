@@ -125,7 +125,10 @@ export default async function HomePage() {
           <div className="bento">
             <CollectionBanner items={banners} />
 
-            {categoryGroups.map((group) => (
+            {/* Three, not four: the banner and the trending product take the
+                other two places in this block. Stable is on Shop All and in
+                the navigation. */}
+            {categoryGroups.slice(0, 3).map((group) => (
               <Link
                 key={group.slug}
                 href={`/marketplace/group/${group.slug}`}

@@ -13,6 +13,7 @@ const shopLinks = [
   { href: "/marketplace/group/rider", label: "Rider" },
   { href: "/marketplace/group/horse", label: "Horse" },
   { href: "/marketplace/group/horse-care", label: "Horse Care" },
+  { href: "/marketplace/group/stable", label: "Stable" },
   { href: "/marketplace/brands", label: "Brands" },
 ];
 

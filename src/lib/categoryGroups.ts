@@ -59,12 +59,10 @@ export const categoryGroups: CategoryGroup[] = [
       "girth",
       "halter-and-lead-rope",
       "horse-shoe",
-      "racks",
       "reins",
       "rugs-and-blankets",
       "saddle",
       "saddle-pads",
-      "stable",
       "stirrup-and-stirrup-leathers",
       "tack",
       "tendon-boots",
@@ -77,7 +75,7 @@ export const categoryGroups: CategoryGroup[] = [
     slug: "horse-care",
     name: "Horse Care",
     tagline: "Grooming, supplements, and health essentials.",
-    image: "/images/horse-arena.jpg",
+    image: "/images/rider-embrace.jpg",
     categorySlugs: [
       "chew-toy",
       "grooming",
@@ -90,6 +88,15 @@ export const categoryGroups: CategoryGroup[] = [
       "supplements",
       "treats",
     ],
+  },
+  {
+    slug: "stable",
+    name: "Stable",
+    tagline: "For the yard and the arena, not the horse.",
+    // The arena photograph, which is the closest thing we own to a yard. Horse
+    // Care took the rider-and-horse close-up in its place.
+    image: "/images/horse-arena.jpg",
+    categorySlugs: ["jumps", "racks"],
   },
 ];
 
