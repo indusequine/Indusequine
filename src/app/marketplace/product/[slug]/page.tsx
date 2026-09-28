@@ -4,6 +4,8 @@ import type { Metadata } from "next";
 import { Container } from "@/components/Container";
 import { ProductImage } from "@/components/ProductImage";
 import { ProductGallery } from "@/components/ProductGallery";
+import { SizeChart } from "@/components/SizeChart";
+import { sizeChartFor } from "@/data/sizeCharts";
 import { ProductGrid } from "@/components/ProductGrid";
 import { EnquiryForm } from "@/components/EnquiryForm";
 import { VariantPicker } from "@/components/VariantPicker";
@@ -42,6 +44,8 @@ export default async function ProductPage({ params }: Props) {
   const categoryProducts = await getProductsByCategory(product.category);
   const related = categoryProducts.filter((p) => p.slug !== product.slug).slice(0, RELATED_LIMIT);
   const totalInCategory = categoryProducts.length;
+  // Only apparel we hold measurements for; everything else renders as before.
+  const sizeRows = sizeChartFor(slug);
 
   return (
     <>
@@ -89,6 +93,8 @@ export default async function ProductPage({ params }: Props) {
               {product.description && (
                 <p className="mt-6 text-charcoal leading-relaxed">{product.description}</p>
               )}
+
+              {sizeRows && <SizeChart rows={sizeRows} />}
 
               {product.variants.length > 1 ? (
                 <VariantPicker
