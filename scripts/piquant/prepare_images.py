@@ -100,6 +100,14 @@ def content_box(im: Image.Image, bg: tuple[int, int, int]) -> tuple[int, int, in
     for y in range(0, h, 2):
         for x in range(0, w, 2):
             r, g, b = sp[x, y][:3]
+            # The gutter between the two panels is brighter than the backdrop
+            # around them, so measuring against the backdrop alone counts it as
+            # content and leaves a pale band down one edge of the finished
+            # square. Near-white is backdrop too. The garments' white collars
+            # and cuffs sit inside the coloured body, so ignoring them here
+            # does not move the bounding box.
+            if r > 244 and g > 244 and b > 244:
+                continue
             if abs(r - bg[0]) + abs(g - bg[1]) + abs(b - bg[2]) > 40:
                 mp[x, y] = 255
     return mask.getbbox()

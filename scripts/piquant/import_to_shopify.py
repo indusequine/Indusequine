@@ -90,6 +90,36 @@ query($cursor: String) {
 }
 """
 
+DELETE_MEDIA = """
+mutation($productId: ID!, $mediaIds: [ID!]!) {
+  productDeleteMedia(productId: $productId, mediaIds: $mediaIds) {
+    deletedMediaIds
+    mediaUserErrors { field message }
+  }
+}
+"""
+
+CREATE_MEDIA = """
+mutation($productId: ID!, $media: [CreateMediaInput!]!) {
+  productCreateMedia(productId: $productId, media: $media) {
+    media { ... on MediaImage { id alt } }
+    mediaUserErrors { field message }
+  }
+}
+"""
+
+PRODUCT_MEDIA_QUERY = """
+query($handle: String!) {
+  products(first: 1, query: $handle) {
+    nodes {
+      id handle
+      media(first: 60) { nodes { id ... on MediaImage { alt } } }
+      variants(first: 250) { nodes { id selectedOptions { name value } } }
+    }
+  }
+}
+"""
+
 PRODUCT_UPDATE = """
 mutation($product: ProductUpdateInput!) {
   productUpdate(product: $product) { product { handle } userErrors { field message } }
@@ -274,6 +304,8 @@ def main() -> int:
     ap.add_argument("--only", help="comma-separated product codes")
     ap.add_argument("--descriptions", action="store_true",
                     help="rewrite descriptions on products already created")
+    ap.add_argument("--images", action="store_true",
+                    help="replace the photography on products already created")
     args = ap.parse_args()
 
     cat = json.loads(CATALOGUE.read_text())
@@ -298,6 +330,52 @@ def main() -> int:
         return 0
 
     client = ShopifyClient(load_env())
+
+    if args.images:
+        urls = upload(client, sorted({n for p in plans for n in p["images"]}))
+        for i, p in enumerate(plans, 1):
+            res = client.query(PRODUCT_MEDIA_QUERY, {"handle": f"handle:{p['handle']}"})
+            node = next(iter(res["data"]["products"]["nodes"]), None)
+            if not node:
+                print(f"[{i}/{len(plans)}] not found: {p['handle']}")
+                continue
+            gid = node["id"]
+
+            old = [m["id"] for m in node["media"]["nodes"]]
+            if old:
+                client.query(DELETE_MEDIA, {"productId": gid, "mediaIds": old})
+
+            r = client.query(CREATE_MEDIA, {
+                "productId": gid,
+                "media": [
+                    {"originalSource": urls[n], "mediaContentType": "IMAGE", "alt": n}
+                    for n in p["images"]
+                ],
+            })
+            payload = (r.get("data") or {}).get("productCreateMedia") or {}
+            errs = r.get("errors") or payload.get("mediaUserErrors")
+            if errs:
+                print(f"[{i}/{len(plans)}] FAILED {p['handle']}: {str(errs)[:160]}")
+                continue
+
+            if p["by_colour"]:
+                media = {m["alt"]: m["id"] for m in payload["media"]}
+                updates = []
+                for v in node["variants"]["nodes"]:
+                    colour = next(
+                        (o["value"] for o in v["selectedOptions"] if o["name"] == "Color"), None
+                    )
+                    mid = media.get(p["by_colour"].get(colour, ""))
+                    if mid:
+                        updates.append({"id": v["id"], "mediaId": mid})
+                if updates:
+                    u = client.query(VARIANTS_UPDATE, {"productId": gid, "variants": updates})
+                    e = (u.get("errors")
+                         or ((u.get("data") or {}).get("productVariantsBulkUpdate") or {}).get("userErrors"))
+                    if e:
+                        print(f"    warning: variant images not set: {str(e)[:140]}")
+            print(f"[{i}/{len(plans)}] refreshed {p['handle']} ({len(p['images'])} images)")
+        return 0
 
     if args.descriptions:
         # productUpdate, never productSet: productSet replaces the variant list
