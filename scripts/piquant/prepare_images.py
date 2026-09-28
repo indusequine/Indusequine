@@ -40,16 +40,18 @@ STYLES = {
     ("H_S", False): "hs-normal",    # H_S, no G
 }
 
-# Piquant's catalogue prints Mauve and Red; their file names say Pink and Wine.
-# The catalogue is what a rider sees, so it wins.
+# Piquant's catalogue prints Mauve and Red where their file names say Pink and
+# Wine. Mauve follows the catalogue; Wine follows the file name, because the
+# garment is plainly wine rather than red and the founder chose to sell it as
+# what it looks like.
 COLOURS = {
     "black": "black",
     "navy blue": "navy",
     "navy": "navy",
     "pink": "mauve",
     "sky blue": "sky-blue",
-    "wine red": "red",
-    "wine": "red",
+    "wine red": "wine",
+    "wine": "wine",
 }
 
 SHAMPOOS = {

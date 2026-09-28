@@ -35,7 +35,6 @@ const CHARTS: Record<string, SizeRow[]> = {
       { size: "Men S", length: 65, shoulder: 38 },
       { size: "Men M", length: 67, shoulder: 40 },
       { size: "Men L", length: 69, shoulder: 42 },
-      { size: "Men XL", length: 71, shoulder: 44 },
   ],
   "piquant-full-sleeve-high-collar-t-shirt": [
       { size: "Kids M", length: 50, shoulder: 32 },
@@ -55,7 +54,6 @@ const CHARTS: Record<string, SizeRow[]> = {
       { size: "Men S", length: 65, shoulder: 38 },
       { size: "Men M", length: 67, shoulder: 40 },
       { size: "Men L", length: 69, shoulder: 42 },
-      { size: "Men XL", length: 71, shoulder: 44 },
   ],
 };
 

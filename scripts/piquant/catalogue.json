@@ -58,10 +58,6 @@
     "Men L": [
       69,
       42
-    ],
-    "Men XL": [
-      71,
-      44
     ]
   },
   "products": [
@@ -78,7 +74,7 @@
         "Black",
         "Sky Blue",
         "Mauve",
-        "Red"
+        "Wine"
       ],
       "sizes": [
         "Kids M",
@@ -99,15 +95,15 @@
           "lace-sky-blue-back",
           "lace-mauve",
           "lace-mauve-back",
-          "lace-red",
-          "lace-red-back"
+          "lace-wine",
+          "lace-wine-back"
         ],
         "by_colour": {
           "Navy": "lace-navy",
           "Black": "lace-black",
           "Sky Blue": "lace-sky-blue",
           "Mauve": "lace-mauve",
-          "Red": "lace-red"
+          "Wine": "lace-wine"
         }
       },
       "blurb": "A show shirt cut for the ring, with lace sleeves and a zip that does not fight you at the collar.",
@@ -130,7 +126,7 @@
         "Navy",
         "Black",
         "Mauve",
-        "Red"
+        "Wine"
       ],
       "sizes": [
         "Kids M",
@@ -140,8 +136,7 @@
         "Teens M",
         "Men S",
         "Men M",
-        "Men L",
-        "Men XL"
+        "Men L"
       ],
       "images": {
         "main": "fs-normal-navy",
@@ -151,14 +146,14 @@
           "fs-normal-black-back",
           "fs-normal-mauve",
           "fs-normal-mauve-back",
-          "fs-normal-red",
-          "fs-normal-red-back"
+          "fs-normal-wine",
+          "fs-normal-wine-back"
         ],
         "by_colour": {
           "Navy": "fs-normal-navy",
           "Black": "fs-normal-black",
           "Mauve": "fs-normal-mauve",
-          "Red": "fs-normal-red"
+          "Wine": "fs-normal-wine"
         }
       },
       "blurb": "The classic collar, long in the sleeve, with a tie holder for the days the ring asks for one.",
@@ -181,7 +176,7 @@
         "Navy",
         "Black",
         "Mauve",
-        "Red"
+        "Wine"
       ],
       "sizes": [
         "Kids M",
@@ -200,14 +195,14 @@
           "fs-high-black-back",
           "fs-high-mauve",
           "fs-high-mauve-back",
-          "fs-high-red",
-          "fs-high-red-back"
+          "fs-high-wine",
+          "fs-high-wine-back"
         ],
         "by_colour": {
           "Navy": "fs-high-navy",
           "Black": "fs-high-black",
           "Mauve": "fs-high-mauve",
-          "Red": "fs-high-red"
+          "Wine": "fs-high-wine"
         }
       },
       "blurb": "A high collar and a long sleeve, for the rider who wants the neck covered and the arm free.",
@@ -230,7 +225,7 @@
         "Black",
         "Sky Blue",
         "Mauve",
-        "Red"
+        "Wine"
       ],
       "sizes": [
         "Kids M",
@@ -240,8 +235,7 @@
         "Teens M",
         "Men S",
         "Men M",
-        "Men L",
-        "Men XL"
+        "Men L"
       ],
       "images": {
         "main": "hs-normal-navy",
@@ -253,15 +247,15 @@
           "hs-normal-sky-blue-back",
           "hs-normal-mauve",
           "hs-normal-mauve-back",
-          "hs-normal-red",
-          "hs-normal-red-back"
+          "hs-normal-wine",
+          "hs-normal-wine-back"
         ],
         "by_colour": {
           "Navy": "hs-normal-navy",
           "Black": "hs-normal-black",
           "Sky Blue": "hs-normal-sky-blue",
           "Mauve": "hs-normal-mauve",
-          "Red": "hs-normal-red"
+          "Wine": "hs-normal-wine"
         }
       },
       "blurb": "Short in the sleeve and vented down the sides, for a warm day in the collecting ring.",
