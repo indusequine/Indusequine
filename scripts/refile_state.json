@@ -1,0 +1,60 @@
+{
+ "moved": [
+  {
+   "id": "gid://shopify/Product/7740524298327",
+   "handle": "equitheme-competition-wellington-polo-kids",
+   "title": "Equitheme Competition Wellington Polo - Kids",
+   "from": "t-shirt",
+   "to": "show-shirt",
+   "why": "white stand-up collar with a tie loop"
+  },
+  {
+   "id": "gid://shopify/Product/7740524265559",
+   "handle": "equitheme-competition-victor-polo-men",
+   "title": "Equitheme Competition Victor Polo - Men",
+   "from": "t-shirt",
+   "to": "show-shirt",
+   "why": "competition collar, buttoned closure"
+  },
+  {
+   "id": "gid://shopify/Product/7771234566231",
+   "handle": "toscan-unisex-riding-shirts-polo-uomo",
+   "title": "Cavalleria Toscana Unisex Shirts Polo Uomo",
+   "from": "show-shirt",
+   "to": "t-shirt",
+   "why": "its own description says training and casual wear"
+  },
+  {
+   "id": "gid://shopify/Product/7771235057751",
+   "handle": "kingsland-ladies-riding-shirts-klharriet-2410202522",
+   "title": "Kingsland Ladies Riding Shirts KLHarriet",
+   "from": "show-shirt",
+   "to": "t-shirt",
+   "why": "a riding shirt rather than a show shirt"
+  },
+  {
+   "id": "gid://shopify/Product/7771234500695",
+   "handle": "kingsland-mens-riding-shirts-klharbour-2410202523",
+   "title": "Kingsland Mens Riding Shirts Klharbour",
+   "from": "show-shirt",
+   "to": "t-shirt",
+   "why": "a riding shirt rather than a show shirt"
+  },
+  {
+   "id": "gid://shopify/Product/7772439609431",
+   "handle": "fly-mask-nylon-fm",
+   "title": "Fly Mask Nylon",
+   "from": "saddle-pads",
+   "to": "fly-mask",
+   "why": "it is a fly mask"
+  },
+  {
+   "id": "gid://shopify/Product/7772439642199",
+   "handle": "nylon-halter-with-lead-rope-nhl",
+   "title": "Nylon Halter with Lead Rope",
+   "from": "saddle-pads",
+   "to": "halter-and-lead-rope",
+   "why": "it is a halter"
+  }
+ ]
+}
