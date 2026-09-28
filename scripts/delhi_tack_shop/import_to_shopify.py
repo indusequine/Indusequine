@@ -8,8 +8,9 @@ Shopify client and variant builder. Runs unattended on a schedule
 
 Each run:
   - creates products new on his site, and updates prices/variants/names of existing ones
-  - hides (status DRAFT) products that are fully out of stock, and shows them
-    again once he restocks -- made-to-order items always stay visible
+  - marks products that are fully out of stock with OOS_TAG and leaves them
+    live, so a rider still finds them and sees the stock state -- the tag
+    clears once he restocks, and made-to-order is never out of stock
   - hides products he has removed from his site, or that mapping.json skips
   - skips and reports a product it can't place (e.g. a new category not yet
     in mapping.json) instead of failing the whole run
@@ -57,6 +58,7 @@ SCRAPED_PATH = HERE / "output" / "scraped.json"
 MAPPING_PATH = HERE / "mapping.json"
 LOG_PATH = HERE / "output" / "import_log.json"
 SUPPLIER_TAG = "supplier:delhi-tack-shop"
+OOS_TAG = "sync:out-of-stock"       # shown on the site, marked out of stock
 
 KEEP_UPPER = {
     "XXS", "XS", "S", "M", "L", "XL", "XXL", "XXXL", "2XL", "3XL", "CC", "CM", "MM", "KG",
@@ -69,7 +71,7 @@ SMALL_WORDS = {"a", "an", "and", "or", "of", "with", "for", "the", "in", "on", "
 PRODUCTS_BY_TAG_QUERY = """
 query($cursor: String, $q: String!) {
   products(first: 250, after: $cursor, query: $q) {
-    edges { node { id handle status tags } }
+    edges { node { id handle status tags vendor } }
     pageInfo { hasNextPage endCursor }
   }
 }
@@ -136,6 +138,9 @@ def resolve_brand(p: dict, m: dict) -> str | None:
     name = p["name"].upper()
     for prefix, brand in m["brandFromNamePrefix"].items():
         if name.startswith(prefix):
+            return brand
+    for needle, brand in m.get("brandFromNameContains", {}).items():
+        if needle in name:
             return brand
     return None
 
@@ -221,6 +226,10 @@ def build(p: dict, m: dict, valid_categories: set[str]) -> dict:
         })
 
     tags = [f"category:{category}", SUPPLIER_TAG, f"supplier-code:{p['code']}"]
+    # Out of stock is shown and marked, not hidden, so a rider still finds the
+    # product and learns we carry it. Made-to-order is never out of stock.
+    if not (in_stock or p.get("madeToOrder")):
+        tags.append(OOS_TAG)
     if p.get("madeToOrder"):
         tags.append("made-to-order")
 
@@ -239,7 +248,7 @@ def build(p: dict, m: dict, valid_categories: set[str]) -> dict:
 
 
 def fetch_existing(client: ShopifyClient) -> dict[str, dict]:
-    """supplier code -> {id, handle, status}, for products synced on a previous run."""
+    """supplier code -> {id, handle, status, vendor}, for products synced before."""
     out, cursor = {}, None
     while True:
         result = client.query(PRODUCTS_BY_TAG_QUERY, {"cursor": cursor, "q": f"tag:'{SUPPLIER_TAG}'"})
@@ -248,7 +257,10 @@ def fetch_existing(client: ShopifyClient) -> dict[str, dict]:
             node = edge["node"]
             for tag in node["tags"]:
                 if tag.startswith("supplier-code:"):
-                    out[tag[len("supplier-code:"):]] = {"id": node["id"], "handle": node["handle"], "status": node["status"]}
+                    out[tag[len("supplier-code:"):]] = {
+                        "id": node["id"], "handle": node["handle"],
+                        "status": node["status"], "vendor": node["vendor"],
+                    }
         if not conn["pageInfo"]["hasNextPage"]:
             return out
         cursor = conn["pageInfo"]["endCursor"]
@@ -353,12 +365,22 @@ def main():
         if handle in original_handles:
             raise SystemExit(f"refusing to write {handle!r}: it belongs to an existing catalogue product")
 
-        status = "ACTIVE" if b["visible"] else "DRAFT"
+        # His site carries no brand for a good part of his catalogue, so the
+        # rules in mapping.json cannot name one for every product. Where they
+        # can't, keep whatever brand Shopify already holds: it was either set by
+        # hand or read off a product title, and overwriting it with the sentinel
+        # silently un-brands those products on every sync.
+        vendor = b["brand"] or (prior or {}).get("vendor") or "Indusequine"
+
+        # Everything his site still lists stays live; the out-of-stock ones
+        # carry OOS_TAG instead of being hidden. Hiding is reserved for
+        # products he has dropped, further down.
+        status = "ACTIVE"
         product_options, variant_inputs, _ = build_options_and_variants(b)
         input_obj = {
             "handle": handle,
             "title": b["name"],
-            "vendor": b["brand"] or "Indusequine",
+            "vendor": vendor,
             "status": status,
             "tags": b["tags"],
             "productOptions": product_options,

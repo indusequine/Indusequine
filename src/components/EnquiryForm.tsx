@@ -17,9 +17,17 @@ function validEmail(email: string): boolean {
 export function EnquiryForm({
   productSlug,
   productName,
+  seller,
+  supplierCode,
+  sku,
 }: {
   productSlug: string;
   productName: string;
+  /** Who has to fulfil this, so the enquiry can be routed without anyone
+      looking the product up by hand. */
+  seller?: { slug: string; name: string } | null;
+  supplierCode?: string | null;
+  sku?: string | null;
 }) {
   const [status, setStatus] = useState<Status>({ kind: "idle" });
 
@@ -44,6 +52,10 @@ export function EnquiryForm({
       timestamp: new Date().toISOString(),
       productId: productSlug,
       productName,
+      supplier: seller?.name ?? "",
+      supplierSlug: seller?.slug ?? "",
+      supplierCode: supplierCode ?? "",
+      sku: sku ?? "",
       name,
       email,
       phone,

@@ -4,7 +4,7 @@ import type { Metadata } from "next";
 import { Container } from "@/components/Container";
 import { CategoryTile } from "@/components/CategoryTile";
 import { categoryGroups, getGroupBySlug } from "@/lib/categoryGroups";
-import { getCategoriesWithCounts } from "@/data/products";
+import { getCategoriesWithCounts, getCategoryImages } from "@/data/products";
 
 export function generateStaticParams() {
   return categoryGroups.map((g) => ({ slug: g.slug }));
@@ -30,8 +30,20 @@ export default async function GroupPage({ params }: Props) {
   const group = getGroupBySlug(slug);
   if (!group) notFound();
 
-  const allCategories = await getCategoriesWithCounts();
-  const categories = allCategories.filter((c) => group.categorySlugs.includes(c.slug));
+  // Both read the same lean pass, so the photographs cost no extra round trip.
+  const [allCategories, images] = await Promise.all([
+    getCategoriesWithCounts(),
+    getCategoryImages(),
+  ]);
+  // A category with nothing live in it is a dead end, so it is not offered.
+  // Photographed ones lead, because a wall of flat colour tiles reads as a
+  // site that has not been finished.
+  const categories = allCategories
+    .filter((c) => group.categorySlugs.includes(c.slug) && c.count > 0)
+    .sort((a, b) => {
+      const byPhoto = Number(Boolean(images.get(b.slug))) - Number(Boolean(images.get(a.slug)));
+      return byPhoto || b.count - a.count;
+    });
   const totalProducts = categories.reduce((sum, c) => sum + c.count, 0);
 
   return (
@@ -56,6 +68,7 @@ export default async function GroupPage({ params }: Props) {
               category={category}
               count={category.count}
               href={`/marketplace/category/${category.slug}`}
+              image={images.get(category.slug)}
             />
           ))}
         </div>

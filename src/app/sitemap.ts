@@ -1,12 +1,22 @@
 import type { MetadataRoute } from "next";
-import { getCategories, getAllProductSlugs } from "@/data/products";
+import {
+  getCategories,
+  getAllProductSlugs,
+  getAllBrands,
+  getBrandCategoryPairs,
+} from "@/data/products";
 import { categoryGroups } from "@/lib/categoryGroups";
 
 const BASE_URL = "https://indusequine.com";
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const now = new Date();
-  const [categories, productSlugs] = await Promise.all([getCategories(), getAllProductSlugs()]);
+  const [categories, productSlugs, brands, brandCategories] = await Promise.all([
+    getCategories(),
+    getAllProductSlugs(),
+    getAllBrands(),
+    getBrandCategoryPairs(),
+  ]);
 
   return [
     { url: `${BASE_URL}/`, lastModified: now, changeFrequency: "weekly", priority: 1.0 },
@@ -23,6 +33,18 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       lastModified: now,
       changeFrequency: "weekly" as const,
       priority: 0.7,
+    })),
+    ...brands.map((b) => ({
+      url: `${BASE_URL}/marketplace/brand/${b.slug}`,
+      lastModified: now,
+      changeFrequency: "weekly" as const,
+      priority: 0.7,
+    })),
+    ...brandCategories.map((p) => ({
+      url: `${BASE_URL}/marketplace/brand/${p.brandSlug}/${p.categorySlug}`,
+      lastModified: now,
+      changeFrequency: "weekly" as const,
+      priority: 0.6,
     })),
     ...categories.map((c) => ({
       url: `${BASE_URL}/marketplace/category/${c.slug}`,

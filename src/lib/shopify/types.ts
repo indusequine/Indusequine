@@ -20,7 +20,10 @@ export type ShopifyProductNode = {
 
 export type ShopifyProductLeanNode = {
   handle: string;
+  title: string;
   tags: string[];
+  vendor: string;
+  featuredImage: { url: string } | null;
 };
 
 export type ShopifyCollectionNode = { handle: string; title: string };
@@ -43,3 +46,5 @@ export type CollectionProductsData = {
 export type CollectionsData = { collections: ShopifyConnection<ShopifyCollectionNode> };
 
 export type ProductsLeanData = { products: ShopifyConnection<ShopifyProductLeanNode> };
+
+export type ProductsByVendorData = { products: ShopifyConnection<ShopifyProductNode> };

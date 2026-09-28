@@ -37,6 +37,7 @@ export const categoryGroups: CategoryGroup[] = [
       "socks-and-ties",
       "softshell-jacket",
       "spurs-and-spur-straps",
+      "sunglasses",
       "t-shirt",
       "whips",
     ],
@@ -58,7 +59,6 @@ export const categoryGroups: CategoryGroup[] = [
       "girth",
       "halter-and-lead-rope",
       "horse-shoe",
-      "racks",
       "reins",
       "rugs-and-blankets",
       "saddle",
@@ -89,11 +89,23 @@ export const categoryGroups: CategoryGroup[] = [
       "treats",
     ],
   },
+  {
+    slug: "stable",
+    name: "Stable",
+    tagline: "For the yard and the arena, not the horse.",
+    // A barn aisle with stalls either side, released CC0 (via Openverse), so
+    // it carries no credit or conditions. A placeholder until we have a
+    // photograph of a yard of our own.
+    image: "/images/stable-yard.jpg",
+    categorySlugs: ["jumps", "racks"],
+  },
 ];
 
 // Small tail — real categories, but too few products to warrant a big
 // photo tile of their own. Shown as a text-link row instead.
-export const otherCategorySlugs: string[] = ["dog", "gift-card", "gifts", "others", "toys"];
+// The three that belong to no group: a dog rug is not rider, horse or horse
+// care, and gifts and toys are bought for people rather than for riding.
+export const otherCategorySlugs: string[] = ["dog", "gifts", "toys"];
 
 export function getGroupForCategorySlug(slug: string): CategoryGroup | undefined {
   return categoryGroups.find((g) => g.categorySlugs.includes(slug));
