@@ -158,22 +158,15 @@ query($q: String!) {
 
 
 def shirt_description(p: dict, chart: dict) -> str:
-    """Prose, not markup.
+    """Prose, and nothing else.
 
     The product page renders Shopify's plain-text `description`, which Shopify
-    derives from the HTML by stripping every tag. A list or a table sent here
-    arrives as one run-on paragraph with the cells jammed together, so the
-    measurements have to read as a sentence to survive the trip.
+    derives by stripping every tag, so anything structured arrives as a run-on
+    paragraph. The measurements used to be pasted in here for that reason and
+    read as a wall of numbers. They belong in a size chart, not in the copy a
+    rider reads first.
     """
-    features = ". ".join(p["features"])
-    sizes = ", ".join(
-        f"{s} {chart[key(p, s)][0]} by {chart[key(p, s)][1]}" for s in p["sizes"]
-    )
-    return (
-        f"<p>{p['blurb']}</p>\n"
-        f"<p>{features}.</p>\n"
-        f"<p>Measurements in centimetres, length by shoulder: {sizes}.</p>"
-    )
+    return f"<p>{p['blurb']}</p>\n<p>{'. '.join(p['features'])}.</p>"
 
 
 def key(p: dict, size: str) -> str:
@@ -220,7 +213,12 @@ def plan_for(p: dict, cat: dict) -> dict:
             for s in p["sizes"]
         ]
         description = shirt_description(p, cat["size_chart"])
-        images = [p["images"]["main"], *p["images"]["extra"], *p["images"]["by_colour"].values()]
+        # by_colour points at shots already in main/extra, so listing it again
+        # put every colourway in the gallery twice. dict.fromkeys keeps the
+        # first occurrence and the order.
+        images = list(dict.fromkeys(
+            [p["images"]["main"], *p["images"]["extra"], *p["images"]["by_colour"].values()]
+        ))
     else:
         options = [{"name": "Size", "values": [{"name": f"{ml} ml"} for ml in p["sizes_ml"]]}]
         variants = [

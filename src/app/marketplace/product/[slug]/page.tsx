@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import { Container } from "@/components/Container";
 import { ProductImage } from "@/components/ProductImage";
+import { ProductGallery } from "@/components/ProductGallery";
 import { ProductGrid } from "@/components/ProductGrid";
 import { EnquiryForm } from "@/components/EnquiryForm";
 import { VariantPicker } from "@/components/VariantPicker";
@@ -55,7 +56,12 @@ export default async function ProductPage({ params }: Props) {
 
           <div className="mt-10 grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
             <div className="lg:col-span-6">
-              <ProductImage product={product} size="detail" />
+              {/* Most products have one photograph and keep the plain image. */}
+              {product.images && product.images.length > 1 ? (
+                <ProductGallery images={product.images} name={product.name} />
+              ) : (
+                <ProductImage product={product} size="detail" />
+              )}
             </div>
 
             <div className="lg:col-span-6">

@@ -45,6 +45,7 @@ export type Product = {
   priceOnRequest: boolean;
   image?: string; // Shopify CDN URL
   description?: string | null; // only populated by getProductBySlug
+  images?: string[]; // likewise: every photograph, featured one first
   seller?: Seller | null; // who sells it, as distinct from who makes it
   supplierCode?: string | null; // what that seller calls it in their own system
   inStock: boolean;
@@ -376,7 +377,17 @@ export async function getProductBySlug(slug: string): Promise<Product | undefine
   const node = data.productByHandle;
   const categorySlug = categorySlugFromTags(node.tags);
   const category = categorySlug ? await getCategory(categorySlug) : undefined;
-  return mapProduct(node, category?.name ?? "");
+  const product = mapProduct(node, category?.name ?? "");
+
+  // Shopify returns the gallery in its own order, which does not necessarily
+  // lead with the featured image. The detail page opens on the featured one,
+  // so lift it to the front rather than let the two disagree.
+  const gallery = node.images?.edges.map((e) => e.node.url) ?? [];
+  const images = product.image
+    ? [product.image, ...gallery.filter((url) => url !== product.image)]
+    : gallery;
+
+  return { ...product, images };
 }
 
 export type SearchHit = {

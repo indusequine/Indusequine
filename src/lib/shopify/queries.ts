@@ -31,6 +31,16 @@ export const PRODUCT_BY_HANDLE_QUERY = /* GraphQL */ `
     productByHandle(handle: $handle) {
       ...ProductFields
       description
+      # Only the detail page shows a gallery, so this sits here rather than in
+      # the shared fragment, which every listing query also pays for.
+      images(first: 24) {
+        edges {
+          node {
+            url
+            altText
+          }
+        }
+      }
     }
   }
 `;

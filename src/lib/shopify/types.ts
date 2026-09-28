@@ -16,6 +16,7 @@ export type ShopifyProductNode = {
   featuredImage: { url: string; altText: string | null } | null;
   variants: { edges: { node: ShopifyVariantNode }[] };
   description?: string; // only requested by the single-product query
+  images?: { edges: { node: { url: string; altText: string | null } }[] }; // likewise
 };
 
 export type ShopifyProductLeanNode = {
