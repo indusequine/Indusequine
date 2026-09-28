@@ -5,6 +5,7 @@ import { Container } from "@/components/Container";
 import { ProductImage } from "@/components/ProductImage";
 import { ProductGallery } from "@/components/ProductGallery";
 import { SizeChart } from "@/components/SizeChart";
+import { ProductSelection } from "@/components/ProductSelection";
 import { sizeChartFor } from "@/data/sizeCharts";
 import { ProductGrid } from "@/components/ProductGrid";
 import { EnquiryForm } from "@/components/EnquiryForm";
@@ -58,11 +59,17 @@ export default async function ProductPage({ params }: Props) {
             ← {product.categoryName}
           </Link>
 
+          {/* Wraps both columns so picking a colour can move the gallery. */}
+          <ProductSelection>
           <div className="mt-10 grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
             <div className="lg:col-span-6">
               {/* Most products have one photograph and keep the plain image. */}
               {product.images && product.images.length > 1 ? (
-                <ProductGallery images={product.images} name={product.name} />
+                <ProductGallery
+                  images={product.images}
+                  name={product.name}
+                  imagesByColor={product.imagesByColor}
+                />
               ) : (
                 <ProductImage product={product} size="detail" />
               )}
@@ -109,6 +116,7 @@ export default async function ProductPage({ params }: Props) {
               )}
             </div>
           </div>
+          </ProductSelection>
         </Container>
       </section>
 

@@ -41,6 +41,20 @@ export const PRODUCT_BY_HANDLE_QUERY = /* GraphQL */ `
           }
         }
       }
+      # Aliased so it does not collide with the fragment's own variants, and
+      # kept out of the fragment because a listing would then fetch a photo
+      # for every variant of every product it shows.
+      variantPhotos: variants(first: 250) {
+        nodes {
+          image {
+            url
+          }
+          selectedOptions {
+            name
+            value
+          }
+        }
+      }
     }
   }
 `;
