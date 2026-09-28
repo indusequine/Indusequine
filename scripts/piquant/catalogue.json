@@ -140,7 +140,8 @@
         "Teens M",
         "Men S",
         "Men M",
-        "Men L"
+        "Men L",
+        "Men XL"
       ],
       "images": {
         "main": "fs-normal-navy",
@@ -239,7 +240,8 @@
         "Teens M",
         "Men S",
         "Men M",
-        "Men L"
+        "Men L",
+        "Men XL"
       ],
       "images": {
         "main": "hs-normal-navy",

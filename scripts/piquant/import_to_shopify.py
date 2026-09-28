@@ -90,6 +90,24 @@ query($cursor: String) {
 }
 """
 
+OPTION_ADD_VALUES = """
+mutation($productId: ID!, $option: OptionUpdateInput!, $add: [OptionValueCreateInput!]) {
+  productOptionUpdate(productId: $productId, option: $option, optionValuesToAdd: $add) {
+    product { id options { name optionValues { name } } }
+    userErrors { field message }
+  }
+}
+"""
+
+VARIANTS_CREATE = """
+mutation($productId: ID!, $variants: [ProductVariantsBulkInput!]!) {
+  productVariantsBulkCreate(productId: $productId, variants: $variants) {
+    productVariants { sku }
+    userErrors { field message }
+  }
+}
+"""
+
 DELETE_MEDIA = """
 mutation($productId: ID!, $mediaIds: [ID!]!) {
   productDeleteMedia(productId: $productId, mediaIds: $mediaIds) {
@@ -109,12 +127,14 @@ mutation($productId: ID!, $media: [CreateMediaInput!]!) {
 """
 
 PRODUCT_MEDIA_QUERY = """
-query($handle: String!) {
-  products(first: 1, query: $handle) {
+query($q: String!) {
+  products(first: 1, query: $q) {
     nodes {
       id handle
       media(first: 60) { nodes { id ... on MediaImage { alt } } }
-      variants(first: 250) { nodes { id selectedOptions { name value } } }
+      variants(first: 250) {
+        nodes { id selectedOptions { name value } media(first: 1) { nodes { id } } }
+      }
     }
   }
 }
@@ -298,6 +318,32 @@ def multipart(fields: list[tuple[str, str]], content: bytes, filename: str) -> t
 # --------------------------------------------------------------------------
 
 
+def pin_colours(client: ShopifyClient, node: dict, plan: dict) -> None:
+    """Give every colour variant the shot of that colour.
+
+    Run after variants are added as well as at import, since a variant created
+    later starts with no image and would otherwise fall back to the product's
+    first photo, showing navy to someone who picked red.
+    """
+    if not plan["by_colour"]:
+        return
+    media = {m.get("alt"): m["id"] for m in node["media"]["nodes"]}
+    updates = []
+    for v in node["variants"]["nodes"]:
+        if v["media"]["nodes"]:
+            continue
+        colour = next((o["value"] for o in v["selectedOptions"] if o["name"] == "Color"), None)
+        mid = media.get(plan["by_colour"].get(colour, ""))
+        if mid:
+            updates.append({"id": v["id"], "mediaId": mid})
+    if not updates:
+        return
+    r = client.query(VARIANTS_UPDATE, {"productId": node["id"], "variants": updates})
+    e = (r.get("errors")
+         or ((r.get("data") or {}).get("productVariantsBulkUpdate") or {}).get("userErrors"))
+    print(f"    {'FAILED pinning: ' + str(e)[:120] if e else f'pinned {len(updates)} variant images'}")
+
+
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--apply", action="store_true", help="write to Shopify")
@@ -306,6 +352,8 @@ def main() -> int:
                     help="rewrite descriptions on products already created")
     ap.add_argument("--images", action="store_true",
                     help="replace the photography on products already created")
+    ap.add_argument("--variants", action="store_true",
+                    help="add variants the catalogue gained, on products already created")
     args = ap.parse_args()
 
     cat = json.loads(CATALOGUE.read_text())
@@ -331,10 +379,81 @@ def main() -> int:
 
     client = ShopifyClient(load_env())
 
+    if args.variants:
+        # Only ever adds. A variant that exists in Shopify but not in the
+        # catalogue is left alone: removing one would take its orders and its
+        # history with it, and that is never what a size being added means.
+        for i, p in enumerate(plans, 1):
+            res = client.query(PRODUCT_MEDIA_QUERY, {"q": f"handle:{p['handle']}"})
+            node = next(iter(res["data"]["products"]["nodes"]), None)
+            if not node:
+                print(f"[{i}/{len(plans)}] not found: {p['handle']}")
+                continue
+
+            have = {
+                tuple(sorted((o["name"], o["value"]) for o in v["selectedOptions"]))
+                for v in node["variants"]["nodes"]
+            }
+            missing = [
+                v for v in p["variants"]
+                if tuple(sorted((o["optionName"], o["name"]) for o in v["optionValues"])) not in have
+            ]
+            if not missing:
+                print(f"[{i}/{len(plans)}] {p['handle']}: nothing to add")
+                pin_colours(client, node, p)
+                continue
+
+            # A new value has to exist on the option before a variant can use it.
+            live = client.query(
+                "query($q: String!) { products(first: 1, query: $q) "
+                "{ nodes { options { id name optionValues { name } } } } }",
+                {"q": f"handle:{p['handle']}"},
+            )["data"]["products"]["nodes"][0]["options"]
+            for opt in p["options"]:
+                on_product = next((o for o in live if o["name"] == opt["name"]), None)
+                if not on_product:
+                    continue
+                known = {v["name"] for v in on_product["optionValues"]}
+                new = [v for v in opt["values"] if v["name"] not in known]
+                if new:
+                    r = client.query(OPTION_ADD_VALUES, {
+                        "productId": node["id"],
+                        "option": {"id": on_product["id"]},
+                        "add": [{"name": v["name"]} for v in new],
+                    })
+                    e = r.get("errors") or ((r.get("data") or {}).get("productOptionUpdate") or {}).get("userErrors")
+                    if e:
+                        print(f"[{i}/{len(plans)}] FAILED adding {[v['name'] for v in new]}: {str(e)[:140]}")
+                        continue
+                    print(f"    option {opt['name']}: added {[v['name'] for v in new]}")
+
+            # productVariantsBulkCreate carries the SKU on the inventory item,
+            # unlike productSet, which takes it on the variant.
+            payload_variants = [
+                {
+                    "price": v["price"],
+                    "optionValues": v["optionValues"],
+                    "inventoryItem": {"sku": v["sku"]},
+                }
+                for v in missing
+            ]
+            r = client.query(VARIANTS_CREATE, {"productId": node["id"], "variants": payload_variants})
+            payload = (r.get("data") or {}).get("productVariantsBulkCreate") or {}
+            e = r.get("errors") or payload.get("userErrors")
+            if e:
+                print(f"[{i}/{len(plans)}] FAILED {p['handle']}: {str(e)[:180]}")
+                continue
+            print(f"[{i}/{len(plans)}] {p['handle']}: added {len(payload['productVariants'])} variants")
+            # A variant created after the import has no image of its own, so
+            # pin the colours again with the product re-read.
+            fresh = client.query(PRODUCT_MEDIA_QUERY, {"q": f"handle:{p['handle']}"})
+            pin_colours(client, fresh["data"]["products"]["nodes"][0], p)
+        return 0
+
     if args.images:
         urls = upload(client, sorted({n for p in plans for n in p["images"]}))
         for i, p in enumerate(plans, 1):
-            res = client.query(PRODUCT_MEDIA_QUERY, {"handle": f"handle:{p['handle']}"})
+            res = client.query(PRODUCT_MEDIA_QUERY, {"q": f"handle:{p['handle']}"})
             node = next(iter(res["data"]["products"]["nodes"]), None)
             if not node:
                 print(f"[{i}/{len(plans)}] not found: {p['handle']}")
