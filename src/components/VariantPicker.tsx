@@ -1,6 +1,7 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { useProductSelection } from "@/components/ProductSelection";
 
 export type PickerVariant = {
   size: string | null;
@@ -175,6 +176,13 @@ export function VariantPicker({ variants: raw }: { variants: PickerVariant[] }) 
 
   const [size, setSize] = useState<string | null>(null);
   const [color, setColor] = useState<string | null>(null);
+
+  // Tell the gallery, when there is one listening.
+  const selection = useProductSelection();
+  const publish = selection?.setColor;
+  useEffect(() => {
+    publish?.(color);
+  }, [color, publish]);
 
   const sizesForColor = color ? new Set(variants.filter((v) => v.color === color).map((v) => v.size)) : null;
   const colorsForSize = size ? new Set(variants.filter((v) => v.size === size).map((v) => v.color)) : null;

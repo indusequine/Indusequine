@@ -46,6 +46,7 @@ export type Product = {
   image?: string; // Shopify CDN URL
   description?: string | null; // only populated by getProductBySlug
   images?: string[]; // likewise: every photograph, featured one first
+  imagesByColor?: Record<string, string>; // likewise: colour -> its own photograph
   seller?: Seller | null; // who sells it, as distinct from who makes it
   supplierCode?: string | null; // what that seller calls it in their own system
   inStock: boolean;
@@ -387,7 +388,18 @@ export async function getProductBySlug(slug: string): Promise<Product | undefine
     ? [product.image, ...gallery.filter((url) => url !== product.image)]
     : gallery;
 
-  return { ...product, images };
+  // Suppliers pin a photograph to each variant, so a colour's own shot is
+  // whatever its variants carry. Read it off the variants rather than guessing
+  // from filenames, and it works for any supplier who does the same.
+  const imagesByColor: Record<string, string> = {};
+  for (const variant of node.variantPhotos?.nodes ?? []) {
+    const colour = variant.selectedOptions.find((o) => o.name === "Color")?.value;
+    if (colour && variant.image && !imagesByColor[colour]) {
+      imagesByColor[colour] = variant.image.url;
+    }
+  }
+
+  return { ...product, images, imagesByColor };
 }
 
 export type SearchHit = {
