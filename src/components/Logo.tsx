@@ -1,13 +1,14 @@
 import Link from "next/link";
 
 type LogoProps = {
-  variant?: "forest" | "cream";
+  variant?: "forest" | "cream" | "white";
   showMark?: boolean;
   size?: "sm" | "md" | "lg";
 };
 
 export function Logo({ variant = "forest", showMark = true, size = "md" }: LogoProps) {
-  const color = variant === "forest" ? "text-forest" : "text-cream-soft";
+  const color =
+    variant === "forest" ? "text-forest" : variant === "white" ? "text-white" : "text-cream-soft";
   const sizes = {
     sm: { mark: 22, wordmark: "text-base tracking-[0.28em]" },
     md: { mark: 28, wordmark: "text-lg tracking-[0.3em]" },

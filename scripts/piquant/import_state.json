@@ -1,0 +1,49 @@
+{
+ "created": [
+  {
+   "code": "LACE",
+   "id": "gid://shopify/Product/7797346107479",
+   "handle": "piquant-girls-high-collar-lace-t-shirt"
+  },
+  {
+   "code": "FSN",
+   "id": "gid://shopify/Product/7797346304087",
+   "handle": "piquant-full-sleeve-normal-collar-t-shirt"
+  },
+  {
+   "code": "FSH",
+   "id": "gid://shopify/Product/7797346467927",
+   "handle": "piquant-full-sleeve-high-collar-t-shirt"
+  },
+  {
+   "code": "HSN",
+   "id": "gid://shopify/Product/7797346631767",
+   "handle": "piquant-half-sleeve-normal-collar-t-shirt"
+  },
+  {
+   "code": "SH-ALOE",
+   "id": "gid://shopify/Product/7797346828375",
+   "handle": "piquant-aloe-and-coconut-oil-revitalizer-horse-shampoo"
+  },
+  {
+   "code": "SH-CUCU",
+   "id": "gid://shopify/Product/7797346926679",
+   "handle": "piquant-cucumber-melon-horse-shampoo"
+  },
+  {
+   "code": "SH-BHRI",
+   "id": "gid://shopify/Product/7797347024983",
+   "handle": "piquant-bhringaraj-revitalizer-horse-shampoo"
+  },
+  {
+   "code": "SH-YLAN",
+   "id": "gid://shopify/Product/7797347156055",
+   "handle": "piquant-ylang-ylang-horse-shampoo"
+  },
+  {
+   "code": "SH-CLD9",
+   "id": "gid://shopify/Product/7797347287127",
+   "handle": "piquant-cloud-9-horse-shampoo"
+  }
+ ]
+}

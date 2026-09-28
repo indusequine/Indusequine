@@ -163,8 +163,16 @@ def extract_variant_descriptor(full_name: str, base: str) -> tuple[str | None, s
         low = t.lower()
         if low in COLOR_WORDS or low in {c.replace("-", "") for c in COLOR_WORDS}:
             color = t
-        elif low in SIZE_WORDS or re.fullmatch(r"\d+(\.\d+)?\"?", low) or re.fullmatch(r"\d{2,3}[sml]", low):
-            size = t
+        elif (
+            low in SIZE_WORDS
+            or re.fullmatch(r"\d+(\.\d+)?\"?", low)
+            or re.fullmatch(r"\d{2,3}[sml]", low)
+            or re.fullmatch(r"fr\d{2,3}|in\d{2,3}", low)
+        ):
+            # European sizing often carries two tokens ("FR30", "IN20") for
+            # the same variant -- keep both instead of the second overwriting
+            # the first.
+            size = f"{size}/{t}" if size else t
     return size, color
 
 

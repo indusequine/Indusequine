@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-16T18:09:14.677091+05:30",
+  "generatedAt": "2026-08-18T16:38:06.183356+05:30",
   "sourceFile": "Tack-Shop_Inventory-List_13AUG26.xlsx",
   "categories": [
     {
@@ -1102,7 +1102,7 @@
       "variants": [
         {
           "sku": "ANASCR-SS-WB-ES-40",
-          "size": "40",
+          "size": "38/40",
           "color": null,
           "price": 6899
         }
@@ -4290,13 +4290,13 @@
       "variants": [
         {
           "sku": "CWD-SOC-35-39",
-          "size": "39",
+          "size": "35/39",
           "color": null,
           "price": 3455
         },
         {
           "sku": "CWD-SCKS-40-46",
-          "size": "46",
+          "size": "40/46",
           "color": null,
           "price": 3455
         }
@@ -5744,49 +5744,49 @@
       "variants": [
         {
           "sku": "ELT-LAD-ORLIRDLEG-DEEP-36-IN26",
-          "size": null,
+          "size": "IN26",
           "color": null,
           "price": 12999
         },
         {
           "sku": "ELT-LAD-ORLIRDLEG-DEEP-38-IN28",
-          "size": null,
+          "size": "IN28",
           "color": null,
           "price": 12999
         },
         {
           "sku": "ELT-LAD-ORLIRDLEG-DEEP-40-IN30",
-          "size": null,
+          "size": "IN30",
           "color": null,
           "price": 12999
         },
         {
           "sku": "ELT-LAD-ORLIRDLEG-DEEP-42-IN32",
-          "size": null,
+          "size": "IN32",
           "color": null,
           "price": 12999
         },
         {
           "sku": "ELT-LAD-ORLIRDLEG-WHIT-36-IN26",
-          "size": null,
+          "size": "IN26",
           "color": "White",
           "price": 12999
         },
         {
           "sku": "ELT-LAD-ORLIRDLEG-WHIT-38-IN28",
-          "size": null,
+          "size": "IN28",
           "color": "White",
           "price": 12999
         },
         {
           "sku": "ELT-LAD-ORLIRDLEG-WHIT-40-IN",
-          "size": null,
+          "size": "IN30",
           "color": "White",
           "price": 12999
         },
         {
           "sku": "ELT-LAD-ORLIRDLEG-WHIT-42-IN32",
-          "size": null,
+          "size": "IN32",
           "color": "White",
           "price": 12999
         }
@@ -5876,25 +5876,25 @@
       "variants": [
         {
           "sku": "ELT-MALSTRBLT-BLU-L/X",
-          "size": "XL",
+          "size": "L/XL",
           "color": null,
           "price": 2199
         },
         {
           "sku": "ELT-MALSTRBLT-BLU-S/M",
-          "size": "M",
+          "size": "S/M",
           "color": null,
           "price": 2199
         },
         {
           "sku": "ELT-MALSTRBLT-VEL-L/X",
-          "size": "XL",
+          "size": "L/XL",
           "color": null,
           "price": 2199
         },
         {
           "sku": "ELT-MALSTRBLT-VEL-S/M",
-          "size": "M",
+          "size": "S/M",
           "color": null,
           "price": 2199
         }
@@ -5922,37 +5922,37 @@
       "variants": [
         {
           "sku": "ELT-MNSBRCH-MARC-46-BLA-IN32",
-          "size": null,
+          "size": "IN32",
           "color": "Black",
           "price": 15749
         },
         {
           "sku": "ELT-MNSBRCH-MARC-46-WHI-IN32",
-          "size": null,
+          "size": "IN32",
           "color": "White",
           "price": 15749
         },
         {
           "sku": "ELT-MNSBRCH-MARC-48-BLA-IN34",
-          "size": null,
+          "size": "IN34",
           "color": "Black",
           "price": 15749
         },
         {
           "sku": "ELT-MNSBRCH-MARC-48-WHI-IN34",
-          "size": null,
+          "size": "IN34",
           "color": "White",
           "price": 15749
         },
         {
           "sku": "ELT-MNSBRCH-MATTE-46-BLA-IN32",
-          "size": null,
+          "size": "IN32",
           "color": "Black",
           "price": 15499
         },
         {
           "sku": "ELT-MNSBRCH-MATTE-48-BLA-IN34",
-          "size": null,
+          "size": "IN34",
           "color": "Black",
           "price": 15499
         }
@@ -5966,37 +5966,37 @@
       "variants": [
         {
           "sku": "ELT-MNSBRCH-MAILO-DR46-IN32-BLAC",
-          "size": null,
+          "size": "IN32",
           "color": "Black",
           "price": 13999
         },
         {
           "sku": "ELT-MNSBRCH-MAILO-46-DEEP-IN32",
-          "size": null,
+          "size": "IN32",
           "color": null,
           "price": 13999
         },
         {
           "sku": "ELT-MNSBRCH-MAILO-46-WHIT-IN32",
-          "size": null,
+          "size": "IN32",
           "color": "White",
           "price": 13999
         },
         {
           "sku": "ELT-MNSBRCH-MAILO-48-BLAC-IN34",
-          "size": null,
+          "size": "IN34",
           "color": "Black",
           "price": 13999
         },
         {
           "sku": "ELT-MNSBRCH-MAILO-48-DEEP-IN34",
-          "size": null,
+          "size": "IN34",
           "color": null,
           "price": 13999
         },
         {
           "sku": "ELT-MNSBRCH-MAILO-48-WHIT-IN34",
-          "size": null,
+          "size": "IN34",
           "color": "White",
           "price": 13999
         }
@@ -6270,7 +6270,7 @@
       "variants": [
         {
           "sku": "ELT-LAD-PIARIDLEG",
-          "size": null,
+          "size": "IN30",
           "color": "Black",
           "price": 9999
         }
@@ -9456,55 +9456,55 @@
       "variants": [
         {
           "sku": "EQUI-CLASC-SOCK-ANT/35-38",
-          "size": "38",
+          "size": "35/38",
           "color": "Anthracite",
           "price": 1099
         },
         {
           "sku": "EQUI-CLASC-SOCK-ANT/39-41",
-          "size": "41",
+          "size": "39/41",
           "color": "Anthracite",
           "price": 1099
         },
         {
           "sku": "EQUI-CLASC-SOCK-ANT/42-45",
-          "size": "45",
+          "size": "42/45",
           "color": "Anthracite",
           "price": 1099
         },
         {
           "sku": "EQUI-CLASC-SOCK-BLA/35-38",
-          "size": "38",
+          "size": "35/38",
           "color": "Black",
           "price": 1099
         },
         {
           "sku": "EQUI-CLASC-SOCK-BLA/39-41",
-          "size": "41",
+          "size": "39/41",
           "color": "Black",
           "price": 1099
         },
         {
           "sku": "EQUI-CLASC-SOCK-BLA/42-45",
-          "size": "45",
+          "size": "42/45",
           "color": "Black",
           "price": 1099
         },
         {
           "sku": "EQUI-CLASC-SOCK-NAV/35-38",
-          "size": "38",
+          "size": "35/38",
           "color": "Navy",
           "price": 1099
         },
         {
           "sku": "EQUI-CLASC-SOCK-NAV/39-41",
-          "size": "41",
+          "size": "39/41",
           "color": "Navy",
           "price": 1099
         },
         {
           "sku": "EQUI-CLASC-SOCK-NAV/42-45",
-          "size": "45",
+          "size": "42/45",
           "color": "Navy",
           "price": 1099
         }
@@ -9650,55 +9650,55 @@
       "variants": [
         {
           "sku": "EQUI-ELIOTPNT-MEN-BLACK-38-IN28",
-          "size": null,
+          "size": "FR38/IN28",
           "color": "Black",
           "price": 13499
         },
         {
           "sku": "EQUI-ELIOTPNT-MEN-BLACK-40-IN30",
-          "size": null,
+          "size": "FR40/IN30",
           "color": "Black",
           "price": 13499
         },
         {
           "sku": "EQUI-ELIOTPNT-MEN-BLACK-42-IN32",
-          "size": null,
+          "size": "FR42/IN32",
           "color": "Black",
           "price": 13499
         },
         {
           "sku": "EQUI-ELIOTPNT-MEN-NAVY-38-IN28",
-          "size": null,
+          "size": "FR38/IN28",
           "color": "Navy",
           "price": 13499
         },
         {
           "sku": "EQUI-ELIOTPNT-MEN-NAVY-40-IN30",
-          "size": null,
+          "size": "FR40/IN30",
           "color": "Navy",
           "price": 13499
         },
         {
           "sku": "EQUI-ELIOTPNT-MEN-NAVY-42-IN32",
-          "size": null,
+          "size": "FR42/IN32",
           "color": "Navy",
           "price": 13499
         },
         {
           "sku": "EQUI-ELIOTPNT-MEN-WHITE-38-IN28",
-          "size": null,
+          "size": "FR38/IN28",
           "color": "White",
           "price": 13499
         },
         {
           "sku": "EQUI-ELIOTPNT-MEN-WHITE-40-IN30",
-          "size": null,
+          "size": "FR40/IN30",
           "color": "White",
           "price": 13499
         },
         {
           "sku": "EQUI-ELIOTPNT-MEN-WHITE-42-IN32",
-          "size": null,
+          "size": "FR42/IN32",
           "color": "White",
           "price": 13499
         }
@@ -9894,37 +9894,37 @@
       "variants": [
         {
           "sku": "EQUI-PUBRGTWMNBRCH-BLACK-36-IN26",
-          "size": null,
+          "size": "FR36/IN26",
           "color": "Black",
           "price": 5999
         },
         {
           "sku": "EQUI-PUBRGTWMNBRCH-BLACK-38-IN28",
-          "size": null,
+          "size": "FR38/IN28",
           "color": "Black",
           "price": 5999
         },
         {
           "sku": "EQUI-PUBRGTWMNBRCH-BORD-36-IN26",
-          "size": null,
+          "size": "FR36/IN26",
           "color": null,
           "price": 5999
         },
         {
           "sku": "EQUI-PUBRGTWMNBRCH-BORD-38-IN28",
-          "size": null,
+          "size": "FR38/IN28",
           "color": null,
           "price": 5999
         },
         {
           "sku": "EQUI-PUBRGTWMNBRCH-WHITE-36-IN26",
-          "size": null,
+          "size": "FR36/IN26",
           "color": "White",
           "price": 5999
         },
         {
           "sku": "EQUI-PUBRGTWMNBRCH-WHITE-38-IN28",
-          "size": null,
+          "size": "FR38/IN28",
           "color": "White",
           "price": 5999
         }
@@ -9966,13 +9966,13 @@
       "variants": [
         {
           "sku": "EQUI-SAMBRECHS-MEN-BEIGE-38-IN28",
-          "size": null,
+          "size": "FR38/IN28",
           "color": "Beige",
           "price": 13499
         },
         {
           "sku": "EQUI-SAMBRECHS-MEN-BEIGE-40-IN30",
-          "size": null,
+          "size": "FR40/IN30",
           "color": "Beige",
           "price": 13499
         }
@@ -12056,37 +12056,37 @@
       "variants": [
         {
           "sku": "FH-TCHNLSCKS-BLACK-35-38",
-          "size": "38",
+          "size": "35/38",
           "color": "Black",
           "price": 2249
         },
         {
           "sku": "FH-TCHNLSCKS-BLACK-39-42",
-          "size": "42",
+          "size": "39/42",
           "color": "Black",
           "price": 2249
         },
         {
           "sku": "FH-TCHNLSCKS-BLACK-43-46",
-          "size": "46",
+          "size": "43/46",
           "color": "Black",
           "price": 2249
         },
         {
           "sku": "FH-TCHNLSCKS-NAVY-35-38",
-          "size": "38",
+          "size": "35/38",
           "color": "Navy",
           "price": 2249
         },
         {
           "sku": "FH-TCHNLSCKS-NAVY-39-42",
-          "size": "42",
+          "size": "39/42",
           "color": "Navy",
           "price": 2249
         },
         {
           "sku": "FH-TCHNLSCKS-NAVY-43-46",
-          "size": "46",
+          "size": "43/46",
           "color": "Navy",
           "price": 2249
         }
@@ -12298,13 +12298,13 @@
         },
         {
           "sku": "FRBT-SS-S-M-FUL",
-          "size": "M",
+          "size": "S/M",
           "color": "White",
           "price": 3500
         },
         {
           "sku": "FRBT-SS-S-M-HAL",
-          "size": "M",
+          "size": "S/M",
           "color": "White",
           "price": 3500
         },
@@ -15226,7 +15226,7 @@
         },
         {
           "sku": "HEL-AJA-BL-L-L",
-          "size": "L",
+          "size": "L/L",
           "color": "Black",
           "price": 49999
         },
@@ -15250,7 +15250,7 @@
         },
         {
           "sku": "HEL-AJA-BL-XL-",
-          "size": "L",
+          "size": "XL/L",
           "color": "Black",
           "price": 49999
         },
@@ -15262,7 +15262,7 @@
         },
         {
           "sku": "HEL-AJA-GR-L-L",
-          "size": "L",
+          "size": "L/L",
           "color": "Gray",
           "price": 49999
         },
@@ -15286,7 +15286,7 @@
         },
         {
           "sku": "HEL-AJA-GR-XL-",
-          "size": "L",
+          "size": "XL/L",
           "color": "Gray",
           "price": 49999
         },
@@ -15298,7 +15298,7 @@
         },
         {
           "sku": "HEL-AJA-NA-L-L",
-          "size": "L",
+          "size": "L/L",
           "color": null,
           "price": 49999
         },
@@ -15322,7 +15322,7 @@
         },
         {
           "sku": "HEL-AJA-NA-XL-",
-          "size": "L",
+          "size": "XL/L",
           "color": null,
           "price": 49999
         },
@@ -15334,7 +15334,7 @@
         },
         {
           "sku": "HEL-AJA-OR-L-L",
-          "size": "L",
+          "size": "L/L",
           "color": "Orange",
           "price": 49999
         },
@@ -15358,7 +15358,7 @@
         },
         {
           "sku": "HEL-AJA-OR-XL-",
-          "size": "L",
+          "size": "XL/L",
           "color": "Orange",
           "price": 49999
         },
@@ -15370,7 +15370,7 @@
         },
         {
           "sku": "HEL-AJA-RE-L-L",
-          "size": "L",
+          "size": "L/L",
           "color": "Red",
           "price": 49999
         },
@@ -15394,7 +15394,7 @@
         },
         {
           "sku": "HEL-AJA-RE-XL-",
-          "size": "L",
+          "size": "XL/L",
           "color": "Red",
           "price": 49999
         }
@@ -18554,385 +18554,385 @@
       "variants": [
         {
           "sku": "LBB-26-BLA-BRA1",
-          "size": "1.2",
+          "size": "26/1.2",
           "color": "Black",
           "price": 2500
         },
         {
           "sku": "LBB-26-BLA-STE1",
-          "size": "1.2",
+          "size": "26/1.2",
           "color": "Black",
           "price": 2500
         },
         {
           "sku": "LBB-26-BLA-BRA",
-          "size": "1",
+          "size": "26/1",
           "color": "Black",
           "price": 2500
         },
         {
           "sku": "LBB-26-BLA-STE",
-          "size": "1",
+          "size": "26/1",
           "color": "Black",
           "price": 2500
         },
         {
           "sku": "LBB-26-BRO-BRA1",
-          "size": "1.2",
+          "size": "26/1.2",
           "color": "Brown",
           "price": 2500
         },
         {
           "sku": "LBB-26-BRO-STE1",
-          "size": "1.2",
+          "size": "26/1.2",
           "color": "Brown",
           "price": 2500
         },
         {
           "sku": "LBB-26-BRO-BRA",
-          "size": "1",
+          "size": "26/1",
           "color": "Brown",
           "price": 2500
         },
         {
           "sku": "LBB-26-BRO-STE",
-          "size": "1",
+          "size": "26/1",
           "color": "Brown",
           "price": 2500
         },
         {
           "sku": "LBB-28-BLA-BRA1",
-          "size": "1.2",
+          "size": "28/1.2",
           "color": "Black",
           "price": 2500
         },
         {
           "sku": "LBB-28-BLA-STE1",
-          "size": "1.2",
+          "size": "28/1.2",
           "color": "Black",
           "price": 2500
         },
         {
           "sku": "LBB-28-BLA-BRA",
-          "size": "1",
+          "size": "28/1",
           "color": "Black",
           "price": 2500
         },
         {
           "sku": "LBB-28-BLA-STE",
-          "size": "1",
+          "size": "28/1",
           "color": "Black",
           "price": 2500
         },
         {
           "sku": "LBB-28-BRO-BRA1",
-          "size": "1.2",
+          "size": "28/1.2",
           "color": "Brown",
           "price": 2500
         },
         {
           "sku": "LBB-28-BRO-STE1",
-          "size": "1.2",
+          "size": "28/1.2",
           "color": "Brown",
           "price": 2500
         },
         {
           "sku": "LBB-28-BRO-BRA",
-          "size": "1",
+          "size": "28/1",
           "color": "Brown",
           "price": 2500
         },
         {
           "sku": "LBB-28-BRO-STE",
-          "size": "1",
+          "size": "28/1",
           "color": "Brown",
           "price": 2500
         },
         {
           "sku": "LBB-30-BLA-BRA1",
-          "size": "1.2",
+          "size": "30/1.2",
           "color": "Black",
           "price": 2500
         },
         {
           "sku": "LBB-30-BLA-STE1",
-          "size": "1.2",
+          "size": "30/1.2",
           "color": "Black",
           "price": 2500
         },
         {
           "sku": "LBB-30-BLA-BRA",
-          "size": "1",
+          "size": "30/1",
           "color": "Black",
           "price": 2500
         },
         {
           "sku": "LBB-30-BLA-STE",
-          "size": "1",
+          "size": "30/1",
           "color": "Black",
           "price": 2500
         },
         {
           "sku": "LBB-30-BRO-BRA1",
-          "size": "1.2",
+          "size": "30/1.2",
           "color": "Brown",
           "price": 2500
         },
         {
           "sku": "LBB-30-BRO-STE1",
-          "size": "1.2",
+          "size": "30/1.2",
           "color": "Brown",
           "price": 2500
         },
         {
           "sku": "LBB-30-BRO-BRA",
-          "size": "1",
+          "size": "30/1",
           "color": "Brown",
           "price": 2500
         },
         {
           "sku": "LBB-30-BRO-STE",
-          "size": "1",
+          "size": "30/1",
           "color": "Brown",
           "price": 2500
         },
         {
           "sku": "LBB-32-BLA-BRA1",
-          "size": "1.2",
+          "size": "32/1.2",
           "color": "Black",
           "price": 2500
         },
         {
           "sku": "LBB-32-BLA-STE1",
-          "size": "1.2",
+          "size": "32/1.2",
           "color": "Black",
           "price": 2500
         },
         {
           "sku": "LBB-32-BLA-BRA",
-          "size": "1",
+          "size": "32/1",
           "color": "Black",
           "price": 2500
         },
         {
           "sku": "LBB-32-BLA-STE",
-          "size": "1",
+          "size": "32/1",
           "color": "Black",
           "price": 2500
         },
         {
           "sku": "LBB-32-BRO-BRA1",
-          "size": "1.2",
+          "size": "32/1.2",
           "color": "Brown",
           "price": 2500
         },
         {
           "sku": "LBB-32-BRO-STE1",
-          "size": "1.2",
+          "size": "32/1.2",
           "color": "Brown",
           "price": 2500
         },
         {
           "sku": "LBB-32-BRO-BRA",
-          "size": "1",
+          "size": "32/1",
           "color": "Brown",
           "price": 2500
         },
         {
           "sku": "LBB-32-BRO-STE",
-          "size": "1",
+          "size": "32/1",
           "color": "Brown",
           "price": 2500
         },
         {
           "sku": "LBB-34-BLA-BRA1",
-          "size": "1.2",
+          "size": "34/1.2",
           "color": "Black",
           "price": 2500
         },
         {
           "sku": "LBB-34-BLA-STE1",
-          "size": "1.2",
+          "size": "34/1.2",
           "color": "Black",
           "price": 2500
         },
         {
           "sku": "LBB-34-BLA-BRA",
-          "size": "1",
+          "size": "34/1",
           "color": "Black",
           "price": 2500
         },
         {
           "sku": "LBB-34-BLA-STE",
-          "size": "1",
+          "size": "34/1",
           "color": "Black",
           "price": 2500
         },
         {
           "sku": "LBB-34-BRO-BRA1",
-          "size": "1.2",
+          "size": "34/1.2",
           "color": "Brown",
           "price": 2500
         },
         {
           "sku": "LBB-34-BRO-STE1",
-          "size": "1.2",
+          "size": "34/1.2",
           "color": "Brown",
           "price": 2500
         },
         {
           "sku": "LBB-34-BRO-BRA",
-          "size": "1",
+          "size": "34/1",
           "color": "Brown",
           "price": 2500
         },
         {
           "sku": "LBB-34-BRO-STE",
-          "size": "1",
+          "size": "34/1",
           "color": "Brown",
           "price": 2500
         },
         {
           "sku": "LBB-36-BLA-BRA1",
-          "size": "1.2",
+          "size": "36/1.2",
           "color": "Black",
           "price": 2500
         },
         {
           "sku": "LBB-36-BLA-STE1",
-          "size": "1.2",
+          "size": "36/1.2",
           "color": "Black",
           "price": 2500
         },
         {
           "sku": "LBB-36-BLA-BRA",
-          "size": "1",
+          "size": "36/1",
           "color": "Black",
           "price": 2500
         },
         {
           "sku": "LBB-36-BLA-STE",
-          "size": "1",
+          "size": "36/1",
           "color": "Black",
           "price": 2500
         },
         {
           "sku": "LBB-36-BRO-BRA1",
-          "size": "1.2",
+          "size": "36/1.2",
           "color": "Brown",
           "price": 2500
         },
         {
           "sku": "LBB-36-BRO-STE1",
-          "size": "1.2",
+          "size": "36/1.2",
           "color": "Brown",
           "price": 2500
         },
         {
           "sku": "LBB-36-BRO-BRA",
-          "size": "1",
+          "size": "36/1",
           "color": "Brown",
           "price": 2500
         },
         {
           "sku": "LBB-36-BRO-STE",
-          "size": "1",
+          "size": "36/1",
           "color": "Brown",
           "price": 2500
         },
         {
           "sku": "LBB-38-BLA-BRA1",
-          "size": "1.2",
+          "size": "38/1.2",
           "color": "Black",
           "price": 2500
         },
         {
           "sku": "LBB-38-BLA-STE1",
-          "size": "1.2",
+          "size": "38/1.2",
           "color": "Black",
           "price": 2500
         },
         {
           "sku": "LBB-38-BLA-BRA",
-          "size": "1",
+          "size": "38/1",
           "color": "Black",
           "price": 2500
         },
         {
           "sku": "LBB-38-BLA-STE",
-          "size": "1",
+          "size": "38/1",
           "color": "Black",
           "price": 2500
         },
         {
           "sku": "LBB-38-BRO-BRA1",
-          "size": "1.2",
+          "size": "38/1.2",
           "color": "Brown",
           "price": 2500
         },
         {
           "sku": "LBB-38-BRO-STE1",
-          "size": "1.2",
+          "size": "38/1.2",
           "color": "Brown",
           "price": 2500
         },
         {
           "sku": "LBB-38-BRO-BRA",
-          "size": "1",
+          "size": "38/1",
           "color": "Brown",
           "price": 2500
         },
         {
           "sku": "LBB-38-BRO-STE",
-          "size": "1",
+          "size": "38/1",
           "color": "Brown",
           "price": 2500
         },
         {
           "sku": "LBB-24-BLA-BRA1",
-          "size": "1.2",
+          "size": "24/1.2",
           "color": "Black",
           "price": 2500
         },
         {
           "sku": "LBB-24-BLA-STE1",
-          "size": "1.2",
+          "size": "24/1.2",
           "color": "Black",
           "price": 2500
         },
         {
           "sku": "LBB-24-BLA-BRA",
-          "size": "1",
+          "size": "24/1",
           "color": "Black",
           "price": 2500
         },
         {
           "sku": "LBB-24-BLA-STE",
-          "size": "1",
+          "size": "24/1",
           "color": "Black",
           "price": 2500
         },
         {
           "sku": "LBB-24-BRO-BRA1",
-          "size": "1.2",
+          "size": "24/1.2",
           "color": "Brown",
           "price": 2500
         },
         {
           "sku": "LBB-24-BRO-STE1",
-          "size": "1.2",
+          "size": "24/1.2",
           "color": "Brown",
           "price": 2500
         },
         {
           "sku": "LBB-24-BRO-BRA",
-          "size": "1",
+          "size": "24/1",
           "color": "Brown",
           "price": 2500
         },
         {
           "sku": "LBB-24-BRO-STE",
-          "size": "1",
+          "size": "24/1",
           "color": "Brown",
           "price": 2500
         }
@@ -21658,337 +21658,337 @@
       "variants": [
         {
           "sku": "SAM-BRCH-ADL-ANT-FR30-IN20",
-          "size": null,
+          "size": "FR30/IN20",
           "color": "Anthracite",
           "price": 24999
         },
         {
           "sku": "SAM-BRCH-ADL-ANT-FR32-IN22",
-          "size": null,
+          "size": "FR32/IN22",
           "color": "Anthracite",
           "price": 24999
         },
         {
           "sku": "SAM-BRCH-ADL-ANT-FR34-IN24",
-          "size": null,
+          "size": "FR34/IN24",
           "color": "Anthracite",
           "price": 24999
         },
         {
           "sku": "SAM-BRCH-ADL-ANT-FR36-IN26",
-          "size": null,
+          "size": "FR36/IN26",
           "color": "Anthracite",
           "price": 24999
         },
         {
           "sku": "SAM-BRCH-ADL-ANT-FR38-IN28",
-          "size": null,
+          "size": "FR38/IN28",
           "color": "Anthracite",
           "price": 24999
         },
         {
           "sku": "SAM-BRCH-ADL-ANT-FR40-IN30",
-          "size": null,
+          "size": "FR40/IN30",
           "color": "Anthracite",
           "price": 24999
         },
         {
           "sku": "SAM-BRCH-ADL-ANT-FR42-IN32",
-          "size": null,
+          "size": "FR42/IN32",
           "color": "Anthracite",
           "price": 24999
         },
         {
           "sku": "SAM-BRCH-ADL-ANT-FR44-IN34",
-          "size": null,
+          "size": "FR44/IN34",
           "color": "Anthracite",
           "price": 24999
         },
         {
           "sku": "SAM-BRCH-ADL-BEI-FR30-IN20",
-          "size": null,
+          "size": "FR30/IN20",
           "color": "Beige",
           "price": 24999
         },
         {
           "sku": "SAM-BRCH-ADL-BEI-FR32-IN22",
-          "size": null,
+          "size": "FR32/IN22",
           "color": "Beige",
           "price": 24999
         },
         {
           "sku": "SAM-BRCH-ADL-BEI-FR34-IN24",
-          "size": null,
+          "size": "FR34/IN24",
           "color": "Beige",
           "price": 24999
         },
         {
           "sku": "SAM-BRCH-ADL-BEI-FR36-IN26",
-          "size": null,
+          "size": "FR36/IN26",
           "color": "Beige",
           "price": 24999
         },
         {
           "sku": "SAM-BRCH-ADL-BEI-FR38-IN28",
-          "size": null,
+          "size": "FR38/IN28",
           "color": "Beige",
           "price": 24999
         },
         {
           "sku": "SAM-BRCH-ADL-BEI-FR40-IN30",
-          "size": null,
+          "size": "FR40/IN30",
           "color": "Beige",
           "price": 24999
         },
         {
           "sku": "SAM-BRCH-ADL-BEI-FR42-IN32",
-          "size": null,
+          "size": "FR42/IN32",
           "color": "Beige",
           "price": 24999
         },
         {
           "sku": "SAM-BRCH-ADL-BEI-FR44-IN34",
-          "size": null,
+          "size": "FR44/IN34",
           "color": "Beige",
           "price": 24999
         },
         {
           "sku": "SAM-BRCH-ADL-BLA-FR30-IN20",
-          "size": null,
+          "size": "FR30/IN20",
           "color": "Black",
           "price": 24999
         },
         {
           "sku": "SAM-BRCH-ADL-BLA-FR32-IN22",
-          "size": null,
+          "size": "FR32/IN22",
           "color": "Black",
           "price": 24999
         },
         {
           "sku": "SAM-BRCH-ADL-BLA-FR34-IN24",
-          "size": null,
+          "size": "FR34/IN24",
           "color": "Black",
           "price": 24999
         },
         {
           "sku": "SAM-BRCH-ADL-BLA-FR36-IN26",
-          "size": null,
+          "size": "FR36/IN26",
           "color": "Black",
           "price": 24999
         },
         {
           "sku": "SAM-BRCH-ADL-BLA-FR38-IN28",
-          "size": null,
+          "size": "FR38/IN28",
           "color": "Black",
           "price": 24999
         },
         {
           "sku": "SAM-BRCH-ADL-BLA-FR40-IN30",
-          "size": null,
+          "size": "FR40/IN30",
           "color": "Black",
           "price": 24999
         },
         {
           "sku": "SAM-BRCH-ADL-BLA-FR42-IN32",
-          "size": null,
+          "size": "FR42/IN32",
           "color": "Black",
           "price": 24999
         },
         {
           "sku": "SAM-BRCH-ADL-BLA-FR44-IN34",
-          "size": null,
+          "size": "FR44/IN34",
           "color": "Black",
           "price": 24999
         },
         {
           "sku": "SAM-BRCH-ADL-BRO-FR30-IN20",
-          "size": null,
+          "size": "FR30/IN20",
           "color": "Brown",
           "price": 24999
         },
         {
           "sku": "SAM-BRCH-ADL-BRO-FR32-IN22",
-          "size": null,
+          "size": "FR32/IN22",
           "color": "Brown",
           "price": 24999
         },
         {
           "sku": "SAM-BRCH-ADL-BRO-FR34-IN24",
-          "size": null,
+          "size": "FR34/IN24",
           "color": "Brown",
           "price": 24999
         },
         {
           "sku": "SAM-BRCH-ADL-BRO-FR36-IN26",
-          "size": null,
+          "size": "FR36/IN26",
           "color": "Brown",
           "price": 24999
         },
         {
           "sku": "SAM-BRCH-ADL-BRO-FR38-IN28",
-          "size": null,
+          "size": "FR38/IN28",
           "color": "Brown",
           "price": 24999
         },
         {
           "sku": "SAM-BRCH-ADL-BRO-FR40-IN30",
-          "size": null,
+          "size": "FR40/IN30",
           "color": "Brown",
           "price": 24999
         },
         {
           "sku": "SAM-BRCH-ADL-BRO-FR42-IN32",
-          "size": null,
+          "size": "FR42/IN32",
           "color": "Brown",
           "price": 24999
         },
         {
           "sku": "SAM-BRCH-ADL-BRO-FR44-IN34",
-          "size": null,
+          "size": "FR44/IN34",
           "color": "Brown",
           "price": 24999
         },
         {
           "sku": "SAM-BRCH-ADL-NAV-FR30-IN20",
-          "size": null,
+          "size": "FR30/IN20",
           "color": "Navy",
           "price": 24999
         },
         {
           "sku": "SAM-BRCH-ADL-NAV-FR32-IN22",
-          "size": null,
+          "size": "FR32/IN22",
           "color": "Navy",
           "price": 24999
         },
         {
           "sku": "SAM-BRCH-ADL-NAV-FR34-IN24",
-          "size": null,
+          "size": "FR34/IN24",
           "color": "Navy",
           "price": 24999
         },
         {
           "sku": "SAM-BRCH-ADL-NAV-FR36-IN26",
-          "size": null,
+          "size": "FR36/IN26",
           "color": "Navy",
           "price": 24999
         },
         {
           "sku": "SAM-BRCH-ADL-NAV-FR38-IN28",
-          "size": null,
+          "size": "FR38/IN28",
           "color": "Navy",
           "price": 24999
         },
         {
           "sku": "SAM-BRCH-ADL-NAV-FR40-IN30",
-          "size": null,
+          "size": "FR40/IN30",
           "color": "Navy",
           "price": 24999
         },
         {
           "sku": "SAM-BRCH-ADL-NAV-FR42-IN32",
-          "size": null,
+          "size": "FR42/IN32",
           "color": "Navy",
           "price": 24999
         },
         {
           "sku": "SAM-BRCH-ADL-NAV-FR44-IN34",
-          "size": null,
+          "size": "FR44/IN34",
           "color": "Navy",
           "price": 24999
         },
         {
           "sku": "SAM-BRCH-ADL-TAU-FR30-IN20",
-          "size": null,
+          "size": "FR30/IN20",
           "color": null,
           "price": 24999
         },
         {
           "sku": "SAM-BRCH-ADL-TAU-FR32-IN22",
-          "size": null,
+          "size": "FR32/IN22",
           "color": null,
           "price": 24999
         },
         {
           "sku": "SAM-BRCH-ADL-TAU-FR34-IN24",
-          "size": null,
+          "size": "FR34/IN24",
           "color": null,
           "price": 24999
         },
         {
           "sku": "SAM-BRCH-ADL-TAU-FR36-IN26",
-          "size": null,
+          "size": "FR36/IN26",
           "color": null,
           "price": 24999
         },
         {
           "sku": "SAM-BRCH-ADL-TAU-FR38-IN28",
-          "size": null,
+          "size": "FR38/IN28",
           "color": null,
           "price": 24999
         },
         {
           "sku": "SAM-BRCH-ADL-TAU-FR40-IN30",
-          "size": null,
+          "size": "FR40/IN30",
           "color": null,
           "price": 24999
         },
         {
           "sku": "SAM-BRCH-ADL-TAU-FR42-IN32",
-          "size": null,
+          "size": "FR42/IN32",
           "color": null,
           "price": 24999
         },
         {
           "sku": "SAM-BRCH-ADL-TAU-FR44-IN34",
-          "size": null,
+          "size": "FR44/IN34",
           "color": null,
           "price": 24999
         },
         {
           "sku": "SAM-BRCH-ADL-WHI-FR30-IN20",
-          "size": null,
+          "size": "FR30/IN20",
           "color": "White",
           "price": 24999
         },
         {
           "sku": "SAM-BRCH-ADL-WHI-FR32-IN22",
-          "size": null,
+          "size": "FR32/IN22",
           "color": "White",
           "price": 24999
         },
         {
           "sku": "SAM-BRCH-ADL-WHI-FR34-IN24",
-          "size": null,
+          "size": "FR34/IN24",
           "color": "White",
           "price": 24999
         },
         {
           "sku": "SAM-BRCH-ADL-WHI-FR36-IN26",
-          "size": null,
+          "size": "FR36/IN26",
           "color": "White",
           "price": 24999
         },
         {
           "sku": "SAM-BRCH-ADL-WHI-FR38-IN28",
-          "size": null,
+          "size": "FR38/IN28",
           "color": "White",
           "price": 24999
         },
         {
           "sku": "SAM-BRCH-ADL-WHI-FR40-IN30",
-          "size": null,
+          "size": "FR40/IN30",
           "color": "White",
           "price": 24999
         },
         {
           "sku": "SAM-BRCH-ADL-WHI-FR42-IN32",
-          "size": null,
+          "size": "FR42/IN32",
           "color": "White",
           "price": 24999
         },
         {
           "sku": "SAM-BRCH-ADL-WHI-FR44-IN34/",
-          "size": null,
+          "size": "FR44/IN34",
           "color": "White",
           "price": 24999
         }
@@ -22002,271 +22002,271 @@
       "variants": [
         {
           "sku": "SAM-BECH-EDRD-BIE-36-IN26",
-          "size": null,
+          "size": "FR36/IN26",
           "color": null,
           "price": 20999
         },
         {
           "sku": "SAM-BECH-EDRD-BIE-38-IN28",
-          "size": null,
+          "size": "FR38/IN28",
           "color": null,
           "price": 20999
         },
         {
           "sku": "SAM-BECH-EDRD-BIE-40-IN30",
-          "size": null,
+          "size": "FR40/IN30",
           "color": null,
           "price": 20999
         },
         {
           "sku": "SAM-BECH-EDRD-BIE-42-IN32",
-          "size": null,
+          "size": "FR42/IN32",
           "color": null,
           "price": 20999
         },
         {
           "sku": "SAM-BECH-EDRD-BIE-44-IN34",
-          "size": null,
+          "size": "FR44/IN34",
           "color": null,
           "price": 20999
         },
         {
           "sku": "SAM-BECH-EDRD-BIE-46-IN36",
-          "size": null,
+          "size": "FR46/IN36",
           "color": null,
           "price": 20999
         },
         {
           "sku": "SAM-BECH-EDRD-BIE-48-IN38",
-          "size": null,
+          "size": "FR48/IN38",
           "color": null,
           "price": 20999
         },
         {
           "sku": "SAM-BECH-EDRD-BIE-50-IN40",
-          "size": null,
+          "size": "FR50/IN40",
           "color": null,
           "price": 20999
         },
         {
           "sku": "SAM-BECH-EDRD-BIE-52-IN42",
-          "size": null,
+          "size": "FR52/IN42",
           "color": null,
           "price": 20999
         },
         {
           "sku": "SAM-BECH-EDRD-BLA-36-IN26",
-          "size": null,
+          "size": "FR36/IN26",
           "color": "Black",
           "price": 20999
         },
         {
           "sku": "SAM-BECH-EDRD-BLA-38-IN28",
-          "size": null,
+          "size": "FR38/IN28",
           "color": "Black",
           "price": 20999
         },
         {
           "sku": "SAM-BECH-EDRD-BLA-40-IN30",
-          "size": null,
+          "size": "FR40/IN30",
           "color": "Black",
           "price": 20999
         },
         {
           "sku": "SAM-BECH-EDRD-BLA-42-IN32",
-          "size": null,
+          "size": "FR42/IN32",
           "color": "Black",
           "price": 20999
         },
         {
           "sku": "SAM-BECH-EDRD-BLA-44-IN34",
-          "size": null,
+          "size": "FR44/IN34",
           "color": "Black",
           "price": 20999
         },
         {
           "sku": "SAM-BECH-EDRD-BLA-46-IN36",
-          "size": null,
+          "size": "FR46/IN36",
           "color": "Black",
           "price": 20999
         },
         {
           "sku": "SAM-BECH-EDRD-BLA-48-IN38",
-          "size": null,
+          "size": "FR48/IN38",
           "color": "Black",
           "price": 20999
         },
         {
           "sku": "SAM-BECH-EDRD-BLA-50-IN40",
-          "size": null,
+          "size": "FR50/IN40",
           "color": "Black",
           "price": 20999
         },
         {
           "sku": "SAM-BECH-EDRD-BLA-52-IN42",
-          "size": null,
+          "size": "FR52/IN42",
           "color": "Black",
           "price": 20999
         },
         {
           "sku": "SAM-BECH-EDRD-NAV-36-IN26",
-          "size": null,
+          "size": "FR36/IN26",
           "color": "Navy",
           "price": 20999
         },
         {
           "sku": "SAM-BECH-EDRD-NAV-38-IN28",
-          "size": null,
+          "size": "FR38/IN28",
           "color": "Navy",
           "price": 20999
         },
         {
           "sku": "SAM-BECH-EDRD-NAV-40-IN30",
-          "size": null,
+          "size": "FR40/IN30",
           "color": "Navy",
           "price": 20999
         },
         {
           "sku": "SAM-BECH-EDRD-NAV-42-IN32",
-          "size": null,
+          "size": "FR42/IN32",
           "color": "Navy",
           "price": 20999
         },
         {
           "sku": "SAM-BECH-EDRD-NAV-44-IN34",
-          "size": null,
+          "size": "FR44/IN34",
           "color": "Navy",
           "price": 20999
         },
         {
           "sku": "SAM-BECH-EDRD-NAV-46-IN36",
-          "size": null,
+          "size": "FR46/IN36",
           "color": "Navy",
           "price": 20999
         },
         {
           "sku": "SAM-BECH-EDRD-NAV-48-IN38",
-          "size": null,
+          "size": "FR48/IN38",
           "color": "Navy",
           "price": 20999
         },
         {
           "sku": "SAM-BECH-EDRD-NAV-50-IN40",
-          "size": null,
+          "size": "FR50/IN40",
           "color": "Navy",
           "price": 20999
         },
         {
           "sku": "SAM-BECH-EDRD-NAV-52-IN42",
-          "size": null,
+          "size": "FR52/IN42",
           "color": "Navy",
           "price": 20999
         },
         {
           "sku": "SAM-BECH-EDRD-NIC-36-IN26",
-          "size": null,
+          "size": "FR36/IN26",
           "color": null,
           "price": 20999
         },
         {
           "sku": "SAM-BECH-EDRD-NIC-38-IN28",
-          "size": null,
+          "size": "FR38/IN28",
           "color": null,
           "price": 20999
         },
         {
           "sku": "SAM-BECH-EDRD-NIC-40-IN30",
-          "size": null,
+          "size": "FR40/IN30",
           "color": null,
           "price": 20999
         },
         {
           "sku": "SAM-BECH-EDRD-NIC-42-IN32",
-          "size": null,
+          "size": "FR42/IN32",
           "color": null,
           "price": 20999
         },
         {
           "sku": "SAM-BECH-EDRD-NIC-44-IN34",
-          "size": null,
+          "size": "FR44/IN34",
           "color": null,
           "price": 20999
         },
         {
           "sku": "SAM-BECH-EDRD-NIC-46-IN36",
-          "size": null,
+          "size": "FR46/IN36",
           "color": null,
           "price": 20999
         },
         {
           "sku": "SAM-BECH-EDRD-NIC-48-IN38",
-          "size": null,
+          "size": "FR48/IN38",
           "color": null,
           "price": 20999
         },
         {
           "sku": "SAM-BECH-EDRD-NIC-50-IN40",
-          "size": null,
+          "size": "FR50/IN40",
           "color": null,
           "price": 20999
         },
         {
           "sku": "SAM-BECH-EDRD-NIC-52-IN42",
-          "size": null,
+          "size": "FR52/IN42",
           "color": null,
           "price": 20999
         },
         {
           "sku": "SAM-BECH-EDRD-WHI-36-IN26",
-          "size": null,
+          "size": "FR36/IN26",
           "color": "White",
           "price": 20999
         },
         {
           "sku": "SAM-BECH-EDRD-WHI-38-IN28",
-          "size": null,
+          "size": "FR38/IN28",
           "color": "White",
           "price": 20999
         },
         {
           "sku": "SAM-BECH-EDRD-WHI-40-IN30",
-          "size": null,
+          "size": "FR40/IN30",
           "color": "White",
           "price": 20999
         },
         {
           "sku": "SAM-BECH-EDRD-WHI-42-IN32",
-          "size": null,
+          "size": "FR42/IN32",
           "color": "White",
           "price": 20999
         },
         {
           "sku": "SAM-BECH-EDRD-WHI-44-IN34",
-          "size": null,
+          "size": "FR44/IN34",
           "color": "White",
           "price": 20999
         },
         {
           "sku": "SAM-BECH-EDRD-WHI-46-IN36",
-          "size": null,
+          "size": "FR46/IN36",
           "color": "White",
           "price": 20999
         },
         {
           "sku": "SAM-BECH-EDRD-WHI-48-IN38",
-          "size": null,
+          "size": "FR48/IN38",
           "color": "White",
           "price": 20999
         },
         {
           "sku": "SAM-BECH-EDRD-WHI-50-IN40",
-          "size": null,
+          "size": "FR50/IN40",
           "color": "White",
           "price": 20999
         },
         {
           "sku": "SAM-BECH-EDRD-WHI-52-IN42",
-          "size": null,
+          "size": "FR52/IN42",
           "color": "White",
           "price": 20999
         }
@@ -22280,337 +22280,337 @@
       "variants": [
         {
           "sku": "SAM-BRCH-EDRD-MATT-FG-FR36-IN26-ANT",
-          "size": null,
+          "size": "FR36/IN26",
           "color": "Anthracite",
           "price": 20999
         },
         {
           "sku": "SAM-BRCH-EDRD-MATT-FG-FR36-IN26-BLA",
-          "size": null,
+          "size": "FR36/IN26",
           "color": "Black",
           "price": 20999
         },
         {
           "sku": "SAM-BRCH-EDRD-MATT-FG-FR36-IN26-GRE",
-          "size": null,
+          "size": "FR36/IN26",
           "color": "Grey",
           "price": 20999
         },
         {
           "sku": "SAM-BRCH-EDRD-MATT-FG-FR36-IN26-KAK",
-          "size": null,
+          "size": "FR36/IN26",
           "color": null,
           "price": 20999
         },
         {
           "sku": "SAM-BRCH-EDRD-MATT-FG-FR36-IN26-NAV",
-          "size": null,
+          "size": "FR36/IN26",
           "color": "Navy",
           "price": 20999
         },
         {
           "sku": "SAM-BRCH-EDRD-MATT-FG-FR36-IN26-STE",
-          "size": null,
+          "size": "FR36/IN26",
           "color": null,
           "price": 20999
         },
         {
           "sku": "SAM-BRCH-EDRD-MATT-FG-FR36-IN26-WHI",
-          "size": null,
+          "size": "FR36/IN26",
           "color": "White",
           "price": 20999
         },
         {
           "sku": "SAM-BRCH-EDRD-MATT-FG-FR38-IN28-ANT",
-          "size": null,
+          "size": "FR38/IN28",
           "color": "Anthracite",
           "price": 20999
         },
         {
           "sku": "SAM-BRCH-EDRD-MATT-FG-FR38-IN28-BLA",
-          "size": null,
+          "size": "FR38/IN28",
           "color": "Black",
           "price": 20999
         },
         {
           "sku": "SAM-BRCH-EDRD-MATT-FG-FR38-IN28-GRE",
-          "size": null,
+          "size": "FR38/IN28",
           "color": "Grey",
           "price": 20999
         },
         {
           "sku": "SAM-BRCH-EDRD-MATT-FG-FR38-IN28-KAK",
-          "size": null,
+          "size": "FR38/IN28",
           "color": null,
           "price": 20999
         },
         {
           "sku": "SAM-BRCH-EDRD-MATT-FG-FR38-IN28-NAV",
-          "size": null,
+          "size": "FR38/IN28",
           "color": "Navy",
           "price": 20999
         },
         {
           "sku": "SAM-BRCH-EDRD-MATT-FG-FR38-IN28-STE",
-          "size": null,
+          "size": "FR38/IN28",
           "color": null,
           "price": 20999
         },
         {
           "sku": "SAM-BRCH-EDRD-MATT-FG-FR38-IN28-WHI",
-          "size": null,
+          "size": "FR38/IN28",
           "color": "White",
           "price": 20999
         },
         {
           "sku": "SAM-BRCH-EDRD-MATT-FG-FR40-IN30-ANT",
-          "size": null,
+          "size": "FR40/IN30",
           "color": "Anthracite",
           "price": 20999
         },
         {
           "sku": "SAM-BRCH-EDRD-MATT-FG-FR40-IN30-BLA",
-          "size": null,
+          "size": "FR40/IN30",
           "color": "Black",
           "price": 20999
         },
         {
           "sku": "SAM-BRCH-EDRD-MATT-FG-FR40-IN30-GRE",
-          "size": null,
+          "size": "FR40/IN30",
           "color": "Grey",
           "price": 20999
         },
         {
           "sku": "SAM-BRCH-EDRD-MATT-FG-40-KAK-IN40",
-          "size": null,
+          "size": "FR40/IN30",
           "color": null,
           "price": 20999
         },
         {
           "sku": "SAM-BRCH-EDRD-MATT-FG-40-NAV-IN30",
-          "size": null,
+          "size": "FR40/IN30",
           "color": "Navy",
           "price": 20999
         },
         {
           "sku": "SAM-BRCH-EDRD-MATT-FG-40-STE-IN30",
-          "size": null,
+          "size": "FR40/IN30",
           "color": null,
           "price": 20999
         },
         {
           "sku": "SAM-BRCH-EDRD-MATT-FG-40-WHI-IN30",
-          "size": null,
+          "size": "FR40/IN30",
           "color": "White",
           "price": 20999
         },
         {
           "sku": "SAM-BRCH-EDRD-MATT-FG-42-ANT-IN32",
-          "size": null,
+          "size": "FR42/IN32",
           "color": "Anthracite",
           "price": 20999
         },
         {
           "sku": "SAM-BRCH-EDRD-MATT-FG-42-BLA-IN32",
-          "size": null,
+          "size": "FR42/IN32",
           "color": "Black",
           "price": 20999
         },
         {
           "sku": "SAM-BRCH-EDRD-MATT-FG-42-GRE-IN32",
-          "size": null,
+          "size": "FR42/IN32",
           "color": "Grey",
           "price": 20999
         },
         {
           "sku": "SAM-BRCH-EDRD-MATT-FG-42-KAK-IN32",
-          "size": null,
+          "size": "FR42/IN32",
           "color": null,
           "price": 20999
         },
         {
           "sku": "SAM-BRCH-EDRD-MATT-FG-42-NAV-IN32",
-          "size": null,
+          "size": "FR42/IN32",
           "color": "Navy",
           "price": 20999
         },
         {
           "sku": "SAM-BRCH-EDRD-MATT-FG-42-STE-IN32",
-          "size": null,
+          "size": "FR42/IN32",
           "color": null,
           "price": 20999
         },
         {
           "sku": "SAM-BRCH-EDRD-MATT-FG-FR42-IN32-WHI",
-          "size": null,
+          "size": "FR42/IN32",
           "color": "White",
           "price": 20999
         },
         {
           "sku": "SAM-BRCH-EDRD-MATT-FG-44-ANT-IN34",
-          "size": null,
+          "size": "FR44/IN34",
           "color": "Anthracite",
           "price": 20999
         },
         {
           "sku": "SAM-BRCH-EDRD-MATT-FG-44-BLA-IN34",
-          "size": null,
+          "size": "FR44/IN34",
           "color": "Black",
           "price": 20999
         },
         {
           "sku": "SAM-BRCH-EDRD-MATT-FG-44-GRE-IN34",
-          "size": null,
+          "size": "FR44/IN34",
           "color": "Grey",
           "price": 20999
         },
         {
           "sku": "SAM-BRCH-EDRD-MATT-FG-44-KAK-IN34",
-          "size": null,
+          "size": "FR44/IN34",
           "color": null,
           "price": 20999
         },
         {
           "sku": "SAM-BRCH-EDRD-MATT-FG-44-NAV-IN34",
-          "size": null,
+          "size": "FR44/IN34",
           "color": "Navy",
           "price": 20999
         },
         {
           "sku": "SAM-BRCH-EDRD-MATT-FG-44-STE-IN34",
-          "size": null,
+          "size": "FR44/IN34",
           "color": null,
           "price": 20999
         },
         {
           "sku": "SAM-BRCH-EDRD-MATT-FG-44-WHI-IN34",
-          "size": null,
+          "size": "FR44/IN34",
           "color": "White",
           "price": 20999
         },
         {
           "sku": "SAM-BRCH-EDRD-MATT-FG-46-ANT-IN36",
-          "size": null,
+          "size": "FR46/IN36",
           "color": "Anthracite",
           "price": 20999
         },
         {
           "sku": "SAM-BRCH-EDRD-MATT-FG-46-BLA-IN36",
-          "size": null,
+          "size": "FR46/IN36",
           "color": "Black",
           "price": 20999
         },
         {
           "sku": "SAM-BRCH-EDRD-MATT-FG-46-GRE-IN36",
-          "size": null,
+          "size": "FR46/IN36",
           "color": "Grey",
           "price": 20999
         },
         {
           "sku": "SAM-BRCH-EDRD-MATT-FG-46-KAK-IN36",
-          "size": null,
+          "size": "FR46/IN36",
           "color": null,
           "price": 20999
         },
         {
           "sku": "SAM-BRCH-EDRD-MATT-FG-46-NAV-IN36",
-          "size": null,
+          "size": "FR46/IN36",
           "color": "Navy",
           "price": 20999
         },
         {
           "sku": "SAM-BRCH-EDRD-MATT-FG-46-STE-IN36",
-          "size": null,
+          "size": "FR46/IN36",
           "color": null,
           "price": 20999
         },
         {
           "sku": "SAM-BRCH-EDRD-MATT-FG-46-WHI-IN36",
-          "size": null,
+          "size": "FR46/IN36",
           "color": "White",
           "price": 20999
         },
         {
           "sku": "SAM-BRCH-EDRD-MATT-FG-48-ANT-IN38",
-          "size": null,
+          "size": "FR48/IN38",
           "color": "Anthracite",
           "price": 20999
         },
         {
           "sku": "SAM-BRCH-EDRD-MATT-FG-48-BLA-IN38",
-          "size": null,
+          "size": "FR48/IN38",
           "color": "Black",
           "price": 20999
         },
         {
           "sku": "SAM-BRCH-EDRD-MATT-FG-48-GRE-IN38",
-          "size": null,
+          "size": "FR48/IN38",
           "color": "Grey",
           "price": 20999
         },
         {
           "sku": "SAM-BRCH-EDRD-MATT-FG-48-KAK-IN38",
-          "size": null,
+          "size": "FR48/IN38",
           "color": null,
           "price": 20999
         },
         {
           "sku": "SAM-BRCH-EDRD-MATT-FG-48-NAV-IN38",
-          "size": null,
+          "size": "FR48/IN38",
           "color": "Navy",
           "price": 20999
         },
         {
           "sku": "SAM-BRCH-EDRD-MATT-FG-48-STE-IN38",
-          "size": null,
+          "size": "FR48/IN38",
           "color": null,
           "price": 20999
         },
         {
           "sku": "SAM-BRCH-EDRD-MATT-FG-48-WHI-IN38",
-          "size": null,
+          "size": "FR48/IN38",
           "color": "White",
           "price": 20999
         },
         {
           "sku": "SAM-BRCH-EDRD-MATT-FG-50-ANT-IN40",
-          "size": null,
+          "size": "FR50/IN40",
           "color": "Anthracite",
           "price": 20999
         },
         {
           "sku": "SAM-BRCH-EDRD-MATT-FG-50-BLA-IN40",
-          "size": null,
+          "size": "FR50/IN40",
           "color": "Black",
           "price": 20999
         },
         {
           "sku": "SAM-BRCH-EDRD-MATT-FG-50-GRE-IN40",
-          "size": null,
+          "size": "FR50/IN40",
           "color": "Grey",
           "price": 20999
         },
         {
           "sku": "SAM-BRCH-EDRD-MATT-FG-50-KAK-IN40",
-          "size": null,
+          "size": "FR50/IN40",
           "color": null,
           "price": 20999
         },
         {
           "sku": "SAM-BRCH-EDRD-MATT-FG-50-NAV-IN40",
-          "size": null,
+          "size": "FR50/IN40",
           "color": "Navy",
           "price": 20999
         },
         {
           "sku": "SAM-BRCH-EDRD-MATT-FG-50-STE-IN40",
-          "size": null,
+          "size": "FR50/IN40",
           "color": null,
           "price": 20999
         },
         {
           "sku": "SAM-BRCH-EDRD-MATT-FG-50-WHI-IN40",
-          "size": null,
+          "size": "FR50/IN40",
           "color": "White",
           "price": 20999
         }
@@ -22624,241 +22624,241 @@
       "variants": [
         {
           "sku": "SAM-BRCH-EDRD-BLA-FR36-IN26",
-          "size": null,
+          "size": "FR36/IN26",
           "color": "Black",
           "price": 19999
         },
         {
           "sku": "SAM-BRCH-EDRD-BLA-FR38-IN28",
-          "size": null,
+          "size": "FR38/IN28",
           "color": "Black",
           "price": 19999
         },
         {
           "sku": "SAM-BRCH-EDRD-BLA-FR40-IN30",
-          "size": null,
+          "size": "FR40/IN30",
           "color": "Black",
           "price": 19999
         },
         {
           "sku": "SAM-BRCH-EDRD-BLA-FR4-1-IN32",
-          "size": null,
+          "size": "FR42/IN32",
           "color": "Black",
           "price": 19999
         },
         {
           "sku": "SAM-BRCH-EDRD-BLA-FR4-2-IN34",
-          "size": null,
+          "size": "FR44/IN34",
           "color": "Black",
           "price": 19999
         },
         {
           "sku": "SAM-BRCH-EDRD-BLA-FR4-3-IN36",
-          "size": null,
+          "size": "FR46/IN36",
           "color": "Black",
           "price": 19999
         },
         {
           "sku": "SAM-BRCH-EDRD-BLA-FR4-4-IN38",
-          "size": null,
+          "size": "FR48/IN38",
           "color": "Black",
           "price": 19999
         },
         {
           "sku": "SAM-BRCH-EDRD-BLA-FR5-IN40",
-          "size": null,
+          "size": "FR50/IN40",
           "color": "Black",
           "price": 19999
         },
         {
           "sku": "SAM-BRCH-EDRD-DAR-FR3-IN26",
-          "size": null,
+          "size": "FR36/IN26",
           "color": null,
           "price": 19999
         },
         {
           "sku": "SAM-BRCH-EDRD-DAR-FR3-1-IN28",
-          "size": null,
+          "size": "FR38/IN28",
           "color": null,
           "price": 19999
         },
         {
           "sku": "SAM-BRCH-EDRD-DAR-FR4-IN30",
-          "size": null,
+          "size": "FR40/IN30",
           "color": null,
           "price": 19999
         },
         {
           "sku": "SAM-BRCH-EDRD-DAR-FR4-1-IN32",
-          "size": null,
+          "size": "FR42/IN32",
           "color": null,
           "price": 19999
         },
         {
           "sku": "SAM-BRCH-EDRD-DAR-FR4-2-IN34",
-          "size": null,
+          "size": "FR44/IN34",
           "color": null,
           "price": 19999
         },
         {
           "sku": "SAM-BRCH-EDRD-DAR-FR4-3-IN36",
-          "size": null,
+          "size": "FR46/IN36",
           "color": null,
           "price": 19999
         },
         {
           "sku": "SAM-BRCH-EDRD-DAR-FR4-4-IN38",
-          "size": null,
+          "size": "FR48/IN38",
           "color": null,
           "price": 19999
         },
         {
           "sku": "SAM-BRCH-EDRD-DAR-FR5-IN40",
-          "size": null,
+          "size": "FR50/IN40",
           "color": null,
           "price": 19999
         },
         {
           "sku": "SAM-BRCH-EDRD-FOR-FR3-IN26",
-          "size": null,
+          "size": "FR36/IN26",
           "color": null,
           "price": 19999
         },
         {
           "sku": "SAM-BRCH-EDRD-FOR-FR3-1-IN28",
-          "size": null,
+          "size": "FR38/IN28",
           "color": null,
           "price": 19999
         },
         {
           "sku": "SAM-BRCH-EDRD-FOR-FR4-IN30",
-          "size": null,
+          "size": "FR40/IN30",
           "color": null,
           "price": 19999
         },
         {
           "sku": "SAM-BRCH-EDRD-FOR-FR4-1-IN32",
-          "size": null,
+          "size": "FR42/IN32",
           "color": null,
           "price": 19999
         },
         {
           "sku": "SAM-BRCH-EDRD-FOR-FR4-3-IN36",
-          "size": null,
+          "size": "FR46/IN36",
           "color": null,
           "price": 19999
         },
         {
           "sku": "SAM-BRCH-EDRD-FOR-FR4-4-IN38",
-          "size": null,
+          "size": "FR48/IN38",
           "color": null,
           "price": 19999
         },
         {
           "sku": "SAM-BRCH-EDRD-FOR-FR5-IN40",
-          "size": null,
+          "size": "FR50/IN40",
           "color": null,
           "price": 19999
         },
         {
           "sku": "SAM-BRCH-EDRD-NAV-FR3-IN26",
-          "size": null,
+          "size": "FR36/IN26",
           "color": "Navy",
           "price": 19999
         },
         {
           "sku": "SAM-BRCH-EDRD-NAV-FR3-1-IN28",
-          "size": null,
+          "size": "FR38/IN28",
           "color": "Navy",
           "price": 19999
         },
         {
           "sku": "SAM-BRCH-EDRD-NAV-FR4-IN30",
-          "size": null,
+          "size": "FR40/IN30",
           "color": "Navy",
           "price": 19999
         },
         {
           "sku": "SAM-BRCH-EDRD-NAV-FR4-1-IN32",
-          "size": null,
+          "size": "FR42/IN32",
           "color": "Navy",
           "price": 19999
         },
         {
           "sku": "SAM-BRCH-EDRD-NAV-FR4-2-IN34",
-          "size": null,
+          "size": "FR44/IN34",
           "color": "Navy",
           "price": 19999
         },
         {
           "sku": "SAM-BRCH-EDRD-NAV-FR4-3-IN36",
-          "size": null,
+          "size": "FR46/IN36",
           "color": "Navy",
           "price": 19999
         },
         {
           "sku": "SAM-BRCH-EDRD-NAV-FR4-4-IN38",
-          "size": null,
+          "size": "FR48/IN38",
           "color": "Navy",
           "price": 19999
         },
         {
           "sku": "SAM-BRCH-EDRD-NAV-FR5-IN40",
-          "size": null,
+          "size": "FR50/IN40",
           "color": "Navy",
           "price": 19999
         },
         {
           "sku": "SAM-BRCH-EDRD-TPE-FR4-IN30",
-          "size": null,
+          "size": "FR40/IN30",
           "color": null,
           "price": 19999
         },
         {
           "sku": "SAM-BRCH-EDRD-WHI-FR3-IN26",
-          "size": null,
+          "size": "FR36/IN26",
           "color": "White",
           "price": 19999
         },
         {
           "sku": "SAM-BRCH-EDRD-WHI-FR3-1-IN28",
-          "size": null,
+          "size": "FR38/IN28",
           "color": "White",
           "price": 19999
         },
         {
           "sku": "SAM-BRCH-EDRD-WHI-FR4-IN30",
-          "size": null,
+          "size": "FR40/IN30",
           "color": "White",
           "price": 19999
         },
         {
           "sku": "SAM-BRCH-EDRD-WHI-FR4-1-IN32",
-          "size": null,
+          "size": "FR42/IN32",
           "color": "White",
           "price": 19999
         },
         {
           "sku": "SAM-BRCH-EDRD-WHI-FR4-2-IN34",
-          "size": null,
+          "size": "FR44/IN34",
           "color": "White",
           "price": 19999
         },
         {
           "sku": "SAM-BRCH-EDRD-WHI-FR4-3-IN36",
-          "size": null,
+          "size": "FR46/IN36",
           "color": "White",
           "price": 19999
         },
         {
           "sku": "SAM-BRCH-EDRD-WHI-FR4-4-IN38",
-          "size": null,
+          "size": "FR48/IN38",
           "color": "White",
           "price": 19999
         },
         {
           "sku": "SAM-BRCH-EDRD-WHI-FR5-IN40",
-          "size": null,
+          "size": "FR50/IN40",
           "color": "White",
           "price": 19999
         }
@@ -22872,7 +22872,7 @@
       "variants": [
         {
           "sku": "SAM-BRCH-EDRD-FOR-FR4-2-IN34",
-          "size": null,
+          "size": "FR44/IN34",
           "color": null,
           "price": 19999
         }
@@ -22886,7 +22886,7 @@
       "variants": [
         {
           "sku": "SAM-BRCH-ADL-PG-FR40-IN30",
-          "size": null,
+          "size": "FR40/IN30",
           "color": null,
           "price": 25999
         }
@@ -22900,253 +22900,253 @@
       "variants": [
         {
           "sku": "SAM-BRCH-MRC-BEI-FR36-IN26",
-          "size": null,
+          "size": "FR36/IN26",
           "color": "Beige",
           "price": 25999
         },
         {
           "sku": "SAM-BRCH-MRC-BEI-FR38-IN28",
-          "size": null,
+          "size": "FR38/IN28",
           "color": "Beige",
           "price": 25999
         },
         {
           "sku": "SAM-BRCH-MRC-BEI-FR40-IN30",
-          "size": null,
+          "size": "FR40/IN30",
           "color": "Beige",
           "price": 25999
         },
         {
           "sku": "SAM-BRCH-MRC-BEI-FR42-IN32",
-          "size": null,
+          "size": "FR42/IN32",
           "color": "Beige",
           "price": 25999
         },
         {
           "sku": "SAM-BRCH-MRC-BEI-FR44-IN34",
-          "size": null,
+          "size": "FR44/IN34",
           "color": "Beige",
           "price": 25999
         },
         {
           "sku": "SAM-BRCH-MRC-BEI-FR46-IN36",
-          "size": null,
+          "size": "FR46/IN36",
           "color": "Beige",
           "price": 25999
         },
         {
           "sku": "SAM-BRCH-MRC-BEI-FR48-IN38",
-          "size": null,
+          "size": "FR48/IN38",
           "color": "Beige",
           "price": 25999
         },
         {
           "sku": "SAM-BRCH-MRC-BEI-FR50-IN40",
-          "size": null,
+          "size": "FR50/IN40",
           "color": "Beige",
           "price": 25999
         },
         {
           "sku": "SAM-BRCH-MRC-BLA-FR36-IN26",
-          "size": null,
+          "size": "FR36/IN26",
           "color": "Black",
           "price": 25999
         },
         {
           "sku": "SAM-BRCH-MRC-BLA-FR38-IN28",
-          "size": null,
+          "size": "FR38/IN28",
           "color": "Black",
           "price": 25999
         },
         {
           "sku": "SAM-BRCH-MRC-BLA-FR40-IN30",
-          "size": null,
+          "size": "FR40/IN30",
           "color": "Black",
           "price": 25999
         },
         {
           "sku": "SAM-BRCH-MRC-BLA-FR42-IN32",
-          "size": null,
+          "size": "FR42/IN32",
           "color": "Black",
           "price": 25999
         },
         {
           "sku": "SAM-BRCH-MRC-BLA-FR44-IN34",
-          "size": null,
+          "size": "FR44/IN34",
           "color": "Black",
           "price": 25999
         },
         {
           "sku": "SAM-BRCH-MRC-BLA-FR46-IN36",
-          "size": null,
+          "size": "FR46/IN36",
           "color": "Black",
           "price": 25999
         },
         {
           "sku": "SAM-BRCH-MRC-BLA-FR48-IN38",
-          "size": null,
+          "size": "FR48/IN38",
           "color": "Black",
           "price": 25999
         },
         {
           "sku": "SAM-BRCH-MRC-BLA-FR50-IN40",
-          "size": null,
+          "size": "FR50/IN40",
           "color": "Black",
           "price": 25999
         },
         {
           "sku": "SAM-BRCH-MRC-NAV-FR36-IN26",
-          "size": null,
+          "size": "FR36/IN26",
           "color": "Navy",
           "price": 25999
         },
         {
           "sku": "SAM-BRCH-MRC-NAV-FR38-IN28",
-          "size": null,
+          "size": "FR38/IN28",
           "color": "Navy",
           "price": 25999
         },
         {
           "sku": "SAM-BRCH-MRC-NAV-FR40-IN30",
-          "size": null,
+          "size": "FR40/IN30",
           "color": "Navy",
           "price": 25999
         },
         {
           "sku": "SAM-BRCH-MRC-NAV-FR42-IN32",
-          "size": null,
+          "size": "FR42/IN32",
           "color": "Navy",
           "price": 25999
         },
         {
           "sku": "SAM-BRCH-MRC-NAV-FR44-IN34",
-          "size": null,
+          "size": "FR44/IN34",
           "color": "Navy",
           "price": 25999
         },
         {
           "sku": "SAM-BRCH-MRC-NAV-FR46-IN36",
-          "size": null,
+          "size": "FR46/IN36",
           "color": "Navy",
           "price": 25999
         },
         {
           "sku": "SAM-BRCH-MRC-NAV-FR48-IN38",
-          "size": null,
+          "size": "FR48/IN38",
           "color": "Navy",
           "price": 25999
         },
         {
           "sku": "SAM-BRCH-MRC-NAV-FR50-IN40",
-          "size": null,
+          "size": "FR50/IN40",
           "color": "Navy",
           "price": 25999
         },
         {
           "sku": "SAM-BRCH-MRC-TAU-FR36-IN26",
-          "size": null,
+          "size": "FR36/IN26",
           "color": null,
           "price": 25999
         },
         {
           "sku": "SAM-BRCH-MRC-TAU-FR38-IN28",
-          "size": null,
+          "size": "FR38/IN28",
           "color": null,
           "price": 25999
         },
         {
           "sku": "SAM-BRCH-MRC-TAU-FR40-IN30",
-          "size": null,
+          "size": "FR40/IN30",
           "color": null,
           "price": 25999
         },
         {
           "sku": "SAM-BRCH-MRC-TAU-FR42-IN32",
-          "size": null,
+          "size": "FR42/IN32",
           "color": null,
           "price": 25999
         },
         {
           "sku": "SAM-BRCH-MRC-TAU-FR44-IN34",
-          "size": null,
+          "size": "FR44/IN34",
           "color": null,
           "price": 25999
         },
         {
           "sku": "SAM-BRCH-MRC-TAU-FR46-IN36",
-          "size": null,
+          "size": "FR46/IN36",
           "color": null,
           "price": 25999
         },
         {
           "sku": "SAM-BRCH-MRC-TAU-FR48-IN38",
-          "size": null,
+          "size": "FR48/IN38",
           "color": null,
           "price": 25999
         },
         {
           "sku": "SAM-BRCH-MRC-TAU-FR50-IN40",
-          "size": null,
+          "size": "FR50/IN40",
           "color": null,
           "price": 25999
         },
         {
           "sku": "SAM-BRCH-MRC-WHI-FR36-IN26",
-          "size": null,
+          "size": "FR36/IN26",
           "color": "White",
           "price": 25999
         },
         {
           "sku": "SAM-BRCH-MRC-WHI-FR38-IN28",
-          "size": null,
+          "size": "FR38/IN28",
           "color": "White",
           "price": 25999
         },
         {
           "sku": "SAM-BRCH-MRC-WHI-FR40-IN30",
-          "size": null,
+          "size": "FR40/IN30",
           "color": "White",
           "price": 25999
         },
         {
           "sku": "SAM-BRCH-MRC-WHI-FR42-IN32",
-          "size": null,
+          "size": "FR42/IN32",
           "color": "White",
           "price": 25999
         },
         {
           "sku": "SAM-BRCH-MRC-WHI-FR44-IN34",
-          "size": null,
+          "size": "FR44/IN34",
           "color": "White",
           "price": 25999
         },
         {
           "sku": "SAM-BRCH-MRC-WHI-FR46-IN36",
-          "size": null,
+          "size": "FR46/IN36",
           "color": "White",
           "price": 25999
         },
         {
           "sku": "SAM-BRCH-MRC-WHI-FR48-IN38",
-          "size": null,
+          "size": "FR48/IN38",
           "color": "White",
           "price": 25999
         },
         {
           "sku": "SAM-BRCH-MRC-WHI-FR50-IN40",
-          "size": null,
+          "size": "FR50/IN40",
           "color": "White",
           "price": 25999
         },
         {
           "sku": "SAM-BRCH-MRC-LGR-FR40-IN30",
-          "size": null,
+          "size": "IN30",
           "color": null,
           "price": 25999
         },
         {
           "sku": "SAM-BRCH-ADL-PTBL-FR40-IN30",
-          "size": null,
+          "size": "FR40/IN30",
           "color": null,
           "price": 25999
         }
@@ -23160,271 +23160,271 @@
       "variants": [
         {
           "sku": "SAM-BRCH-MRCU-PERM-FR36-BIE-IN26",
-          "size": null,
+          "size": "FR36/IN26",
           "color": null,
           "price": 24999
         },
         {
           "sku": "SAM-BRCH-MRCU-PERM-FR36-BLA-IN26",
-          "size": null,
+          "size": "FR36/IN26",
           "color": "Black",
           "price": 24999
         },
         {
           "sku": "SAM-BRCH-MRCU-PERM-36-NAV-IN26",
-          "size": null,
+          "size": "FR36/IN26",
           "color": "Navy",
           "price": 24999
         },
         {
           "sku": "SAM-BRCH-MRCU-PERM-36-TAU-IN26",
-          "size": null,
+          "size": "FR36/IN26",
           "color": null,
           "price": 24999
         },
         {
           "sku": "SAM-BRCH-MRCU-PERM-36-WHI-IN26",
-          "size": null,
+          "size": "FR36/IN26",
           "color": "White",
           "price": 24999
         },
         {
           "sku": "SAM-BRCH-MRCU-PERM-38-BIE-IN28",
-          "size": null,
+          "size": "FR38/IN28",
           "color": null,
           "price": 24999
         },
         {
           "sku": "SAM-BRCH-MRCU-PERM-38-BLA-IN28",
-          "size": null,
+          "size": "FR38/IN28",
           "color": "Black",
           "price": 24999
         },
         {
           "sku": "SAM-BRCH-MRCU-PERM-38-NAV-IN28",
-          "size": null,
+          "size": "FR38/IN28",
           "color": "Navy",
           "price": 24999
         },
         {
           "sku": "SAM-BRCH-MRCU-PERM-38-TAU-IN28",
-          "size": null,
+          "size": "FR38/IN28",
           "color": null,
           "price": 24999
         },
         {
           "sku": "SAM-BRCH-MRCU-PERM-38-WHI-IN28",
-          "size": null,
+          "size": "FR38/IN28",
           "color": "White",
           "price": 24999
         },
         {
           "sku": "SAM-BRCH-MRCU-PERM-40-BIE-IN30",
-          "size": null,
+          "size": "FR40/IN30",
           "color": null,
           "price": 24999
         },
         {
           "sku": "SAM-BRCH-MRCU-PERM-40-BLA-IN30",
-          "size": null,
+          "size": "FR40/IN30",
           "color": "Black",
           "price": 24999
         },
         {
           "sku": "SAM-BRCH-MRCU-PERM-40-NAV-IN30",
-          "size": null,
+          "size": "FR40/IN30",
           "color": "Navy",
           "price": 24999
         },
         {
           "sku": "SAM-BRCH-MRCU-PERM-40-TAU-IN30",
-          "size": null,
+          "size": "FR40/IN30",
           "color": null,
           "price": 24999
         },
         {
           "sku": "SAM-BRCH-MRCU-PERM-40-WHI-IN30",
-          "size": null,
+          "size": "FR40/IN30",
           "color": "White",
           "price": 24999
         },
         {
           "sku": "SAM-BRCH-MRCU-PERM-42-BIE-IN32",
-          "size": null,
+          "size": "FR42/IN32",
           "color": null,
           "price": 24999
         },
         {
           "sku": "SAM-BRCH-MRCU-PERM-42-BLA-IN32",
-          "size": null,
+          "size": "FR42/IN32",
           "color": "Black",
           "price": 24999
         },
         {
           "sku": "SAM-BRCH-MRCU-PERM-42-NAV-IN32",
-          "size": null,
+          "size": "FR42/IN32",
           "color": "Navy",
           "price": 24999
         },
         {
           "sku": "SAM-BRCH-MRCU-PERM-42-TAU-IN32",
-          "size": null,
+          "size": "FR42/IN32",
           "color": null,
           "price": 24999
         },
         {
           "sku": "SAM-BRCH-MRCU-PERM-42-WHI-IN32",
-          "size": null,
+          "size": "FR42/IN32",
           "color": "White",
           "price": 24999
         },
         {
           "sku": "SAM-BRCH-MRCU-PERM-44-BIE-IN34",
-          "size": null,
+          "size": "FR44/IN34",
           "color": null,
           "price": 24999
         },
         {
           "sku": "SAM-BRCH-MRCU-PERM-44-BLA-IN34",
-          "size": null,
+          "size": "FR44/IN34",
           "color": "Black",
           "price": 24999
         },
         {
           "sku": "SAM-BRCH-MRCU-PERM-44-NAV-IN34",
-          "size": null,
+          "size": "FR44/IN34",
           "color": "Navy",
           "price": 24999
         },
         {
           "sku": "SAM-BRCH-MRCU-PERM-44-TAU-IN34",
-          "size": null,
+          "size": "FR44/IN34",
           "color": null,
           "price": 24999
         },
         {
           "sku": "SAM-BRCH-MRCU-PERM-44-WHI-IN34",
-          "size": null,
+          "size": "FR44/IN34",
           "color": "White",
           "price": 24999
         },
         {
           "sku": "SAM-BRCH-MRCU-PERM-46-BIE-IN36",
-          "size": null,
+          "size": "FR46/IN36",
           "color": null,
           "price": 24999
         },
         {
           "sku": "SAM-BRCH-MRCU-PERM-46-BLA-IN36",
-          "size": null,
+          "size": "FR46/IN36",
           "color": "Black",
           "price": 24999
         },
         {
           "sku": "SAM-BRCH-MRCU-PERM-46-NAV-IN36",
-          "size": null,
+          "size": "FR46/IN36",
           "color": "Navy",
           "price": 24999
         },
         {
           "sku": "SAM-BRCH-MRCU-PERM-46-TAU-IN36",
-          "size": null,
+          "size": "FR46/IN36",
           "color": null,
           "price": 24999
         },
         {
           "sku": "SAM-BRCH-MRCU-PERM-46-WHI-IN36",
-          "size": null,
+          "size": "FR46/IN36",
           "color": "White",
           "price": 24999
         },
         {
           "sku": "SAM-BRCH-MRCU-PERM-48-BIE-IN38",
-          "size": null,
+          "size": "FR48/IN38",
           "color": null,
           "price": 24999
         },
         {
           "sku": "SAM-BRCH-MRCU-PERM-48-BLA-IN38",
-          "size": null,
+          "size": "FR48/IN38",
           "color": "Black",
           "price": 24999
         },
         {
           "sku": "SAM-BRCH-MRCU-PERM-48-NAV-IN38",
-          "size": null,
+          "size": "FR48/IN38",
           "color": "Navy",
           "price": 24999
         },
         {
           "sku": "SAM-BRCH-MRCU-PERM-48-TAU-IN38",
-          "size": null,
+          "size": "FR48/IN38",
           "color": null,
           "price": 24999
         },
         {
           "sku": "SAM-BRCH-MRCU-PERM-48-WHI-IN38",
-          "size": null,
+          "size": "FR48/IN38",
           "color": "White",
           "price": 24999
         },
         {
           "sku": "SAM-BRCH-MRCU-PERM-50-BIE-IN40",
-          "size": null,
+          "size": "FR50/IN40",
           "color": null,
           "price": 24999
         },
         {
           "sku": "SAM-BRCH-MRCU-PERM-50-BLA-IN40",
-          "size": null,
+          "size": "FR50/IN40",
           "color": "Black",
           "price": 24999
         },
         {
           "sku": "SAM-BRCH-MRCU-PERM-50-NAV-IN40",
-          "size": null,
+          "size": "FR50/IN40",
           "color": "Navy",
           "price": 24999
         },
         {
           "sku": "SAM-BRCH-MRCU-PERM-50-TAU-IN40",
-          "size": null,
+          "size": "FR50/IN40",
           "color": null,
           "price": 24999
         },
         {
           "sku": "SAM-BRCH-MRCU-PERM-50-WHI-IN40",
-          "size": null,
+          "size": "FR50/IN40",
           "color": "White",
           "price": 24999
         },
         {
           "sku": "SAM-BRCH-MRCU-PERM-52-BIE-IN42",
-          "size": null,
+          "size": "FR52/IN42",
           "color": null,
           "price": 24999
         },
         {
           "sku": "SAM-BRCH-MRCU-PERM-52-BLA-IN42",
-          "size": null,
+          "size": "FR52/IN42",
           "color": "Black",
           "price": 24999
         },
         {
           "sku": "SAM-BRCH-MRCU-PERM-52-NAV-IN42",
-          "size": null,
+          "size": "FR52/IN42",
           "color": "Navy",
           "price": 24999
         },
         {
           "sku": "SAM-BRCH-MRCU-PERM-52-TAU-IN42",
-          "size": null,
+          "size": "FR52/IN42",
           "color": null,
           "price": 24999
         },
         {
           "sku": "SAM-BRCH-MRCU-PERM-52-WHI-IN42",
-          "size": null,
+          "size": "FR52/IN42",
           "color": "White",
           "price": 24999
         }
@@ -23438,13 +23438,13 @@
       "variants": [
         {
           "sku": "SAM-BRCH-RPL-SG-FR40-IN30",
-          "size": null,
+          "size": "FR40/IN30",
           "color": null,
           "price": 22999
         },
         {
           "sku": "SAM-BRCH-RPL-WT-FR40-IN30",
-          "size": null,
+          "size": "FR40/IN30",
           "color": "White",
           "price": 22999
         }
@@ -26278,181 +26278,181 @@
       "variants": [
         {
           "sku": "SAM-SHJCKT-LOIS-44-BF",
-          "size": null,
+          "size": "FR44",
           "color": null,
           "price": 47499
         },
         {
           "sku": "SAM-SJ-LO-BLA-FR32",
-          "size": null,
+          "size": "FR32",
           "color": "Black",
           "price": 47499
         },
         {
           "sku": "SAM-SJ-LO-BLA-FR34",
-          "size": null,
+          "size": "FR34",
           "color": "Black",
           "price": 47499
         },
         {
           "sku": "SAM-SJ-LO-BLA-FR36",
-          "size": null,
+          "size": "FR36",
           "color": "Black",
           "price": 47499
         },
         {
           "sku": "SAM-SJ-LO-BLA-FR38",
-          "size": null,
+          "size": "FR38",
           "color": "Black",
           "price": 47499
         },
         {
           "sku": "SAM-SJ-LO-BLA-FR40",
-          "size": null,
+          "size": "FR40",
           "color": "Black",
           "price": 47499
         },
         {
           "sku": "SAM-SJ-LO-BLA-FR42",
-          "size": null,
+          "size": "FR42",
           "color": "Black",
           "price": 47499
         },
         {
           "sku": "SAM-SJ-LO-BLA-FR44",
-          "size": null,
+          "size": "FR44",
           "color": "Black",
           "price": 47499
         },
         {
           "sku": "SAM-SJ-LO-BLA-FR46",
-          "size": null,
+          "size": "FR46",
           "color": "Black",
           "price": 47499
         },
         {
           "sku": "SAM-SJ-LO-BLA-FR48",
-          "size": null,
+          "size": "FR48",
           "color": "Black",
           "price": 47499
         },
         {
           "sku": "SAM-SJ-LO-LIG-FR32",
-          "size": null,
+          "size": "FR32",
           "color": null,
           "price": 47499
         },
         {
           "sku": "SAM-SJ-LO-LIG-FR34",
-          "size": null,
+          "size": "FR34",
           "color": null,
           "price": 47499
         },
         {
           "sku": "SAM-SJ-LO-LIG-FR36",
-          "size": null,
+          "size": "FR36",
           "color": null,
           "price": 47499
         },
         {
           "sku": "SAM-SJ-LO-LIG-FR38",
-          "size": null,
+          "size": "FR38",
           "color": null,
           "price": 47499
         },
         {
           "sku": "SAM-SJ-LO-LIG-FR40",
-          "size": null,
+          "size": "FR40",
           "color": null,
           "price": 47499
         },
         {
           "sku": "SAM-SJ-LO-LIG-FR42",
-          "size": null,
+          "size": "FR42",
           "color": null,
           "price": 47499
         },
         {
           "sku": "SAM-SJ-LO-LIG-FR44",
-          "size": null,
+          "size": "FR44",
           "color": null,
           "price": 47499
         },
         {
           "sku": "SAM-SJ-LO-LIG-FR46",
-          "size": null,
+          "size": "FR46",
           "color": null,
           "price": 47499
         },
         {
           "sku": "SAM-SJ-LO-LIG-FR48",
-          "size": null,
+          "size": "FR48",
           "color": null,
           "price": 47499
         },
         {
           "sku": "SAM-SHJCKT-LOIS-MGNT-42",
-          "size": null,
+          "size": "FR42",
           "color": null,
           "price": 47499
         },
         {
           "sku": "SAM-SHJCKT-LOIS-AR-MGT-46",
-          "size": null,
+          "size": "FR46",
           "color": null,
           "price": 47499
         },
         {
           "sku": "SAM-SJ-LO-NAV-FR32",
-          "size": null,
+          "size": "FR32",
           "color": "Navy",
           "price": 47499
         },
         {
           "sku": "SAM-SJ-LO-NAV-FR34",
-          "size": null,
+          "size": "FR34",
           "color": "Navy",
           "price": 47499
         },
         {
           "sku": "SAM-SJ-LO-NAV-FR36",
-          "size": null,
+          "size": "FR36",
           "color": "Navy",
           "price": 47499
         },
         {
           "sku": "SAM-SJ-LO-NAV-FR38",
-          "size": null,
+          "size": "FR38",
           "color": "Navy",
           "price": 47499
         },
         {
           "sku": "SAM-SJ-LO-NAV-FR40",
-          "size": null,
+          "size": "FR40",
           "color": "Navy",
           "price": 47499
         },
         {
           "sku": "SAM-SJ-LO-NAV-FR46",
-          "size": null,
+          "size": "FR46",
           "color": "Navy",
           "price": 47499
         },
         {
           "sku": "SAM-SJ-LO-NAV-FR48",
-          "size": null,
+          "size": "FR48",
           "color": "Navy",
           "price": 47499
         },
         {
           "sku": "SAM-SJ-LO-NIG-50",
-          "size": null,
+          "size": "FR50",
           "color": null,
           "price": 47499
         },
         {
           "sku": "SAM-SJ-LO-NIG-52",
-          "size": null,
+          "size": "FR52",
           "color": null,
           "price": 47499
         }
@@ -26866,145 +26866,145 @@
       "variants": [
         {
           "sku": "SAM-SJ-VIC-BLA-FR32",
-          "size": null,
+          "size": "FR32",
           "color": "Black",
           "price": 45000
         },
         {
           "sku": "SAM-SJ-VIC-BLA-FR34",
-          "size": null,
+          "size": "FR34",
           "color": "Black",
           "price": 45000
         },
         {
           "sku": "SAM-SJ-VIC-BLA-FR36",
-          "size": null,
+          "size": "FR36",
           "color": "Black",
           "price": 45000
         },
         {
           "sku": "SAM-SJ-VIC-BLA-FR38",
-          "size": null,
+          "size": "FR38",
           "color": "Black",
           "price": 45000
         },
         {
           "sku": "SAM-SJ-VIC-BLA-FR40",
-          "size": null,
+          "size": "FR40",
           "color": "Black",
           "price": 45000
         },
         {
           "sku": "SAM-SJ-VIC-BLA-FR42",
-          "size": null,
+          "size": "FR42",
           "color": "Black",
           "price": 45000
         },
         {
           "sku": "SAM-SJ-VIC-BLA-FR44",
-          "size": null,
+          "size": "FR44",
           "color": "Black",
           "price": 45000
         },
         {
           "sku": "SAM-SJ-VIC-BLA-FR48",
-          "size": null,
+          "size": "FR48",
           "color": "Black",
           "price": 45000
         },
         {
           "sku": "SAM-SJ-VIC-LIG-FR32",
-          "size": null,
+          "size": "FR32",
           "color": null,
           "price": 45000
         },
         {
           "sku": "SAM-SJ-VIC-LIG-FR34",
-          "size": null,
+          "size": "FR34",
           "color": null,
           "price": 45000
         },
         {
           "sku": "SAM-SJ-VIC-LIG-FR36",
-          "size": null,
+          "size": "FR36",
           "color": null,
           "price": 45000
         },
         {
           "sku": "SAM-SJ-VIC-LIG-FR38",
-          "size": null,
+          "size": "FR38",
           "color": null,
           "price": 45000
         },
         {
           "sku": "SAM-SJ-VIC-LIG-FR40",
-          "size": null,
+          "size": "FR40",
           "color": null,
           "price": 45000
         },
         {
           "sku": "SAM-SJ-VIC-LIG-FR42",
-          "size": null,
+          "size": "FR42",
           "color": null,
           "price": 45000
         },
         {
           "sku": "SAM-SJ-VIC-LIG-FR44",
-          "size": null,
+          "size": "FR44",
           "color": null,
           "price": 45000
         },
         {
           "sku": "SAM-SJ-VIC-LIG-FR48",
-          "size": null,
+          "size": "FR48",
           "color": null,
           "price": 45000
         },
         {
           "sku": "SAM-SJ-VIC-NAV-FR32",
-          "size": null,
+          "size": "FR32",
           "color": "Navy",
           "price": 45000
         },
         {
           "sku": "SAM-SJ-VIC-NAV-FR34",
-          "size": null,
+          "size": "FR34",
           "color": "Navy",
           "price": 45000
         },
         {
           "sku": "SAM-SJ-VIC-NAV-FR36",
-          "size": null,
+          "size": "FR36",
           "color": "Navy",
           "price": 45000
         },
         {
           "sku": "SAM-SJ-VIC-NAV-FR38",
-          "size": null,
+          "size": "FR38",
           "color": "Navy",
           "price": 45000
         },
         {
           "sku": "SAM-SJ-VIC-NAV-FR40",
-          "size": null,
+          "size": "FR40",
           "color": "Navy",
           "price": 45000
         },
         {
           "sku": "SAM-SJ-VIC-NAV-FR42",
-          "size": null,
+          "size": "FR42",
           "color": "Navy",
           "price": 45000
         },
         {
           "sku": "SAM-SJ-VIC-NAV-FR44",
-          "size": null,
+          "size": "FR44",
           "color": "Navy",
           "price": 45000
         },
         {
           "sku": "SAM-SJ-VIC-NAV-FR48",
-          "size": null,
+          "size": "FR48",
           "color": "Navy",
           "price": 45000
         }
@@ -27018,145 +27018,145 @@
       "variants": [
         {
           "sku": "SAM-SJ-VCF-BLA-FR38",
-          "size": null,
+          "size": "FR38",
           "color": null,
           "price": 47499
         },
         {
           "sku": "SAM-SJ-VCF-BLA-FR32",
-          "size": null,
+          "size": "FR32",
           "color": "Black",
           "price": 47499
         },
         {
           "sku": "SAM-SJ-VCF-BLA-FR34",
-          "size": null,
+          "size": "FR34",
           "color": "Black",
           "price": 47499
         },
         {
           "sku": "SAM-SJ-VCF-BLA-FR36",
-          "size": null,
+          "size": "FR36",
           "color": "Black",
           "price": 47499
         },
         {
           "sku": "SAM-SJ-VCF-BLA-FR40",
-          "size": null,
+          "size": "FR40",
           "color": "Black",
           "price": 47499
         },
         {
           "sku": "SAM-SJ-VCF-BLA-FR42",
-          "size": null,
+          "size": "FR42",
           "color": "Black",
           "price": 47499
         },
         {
           "sku": "SAM-SJ-VCF-BLA-FR44",
-          "size": null,
+          "size": "FR44",
           "color": "Black",
           "price": 47499
         },
         {
           "sku": "SAM-SJ-VCF-BLA-FR46",
-          "size": null,
+          "size": "FR46",
           "color": "Black",
           "price": 47499
         },
         {
           "sku": "SAM-SJ-VCF-LIG-FR32",
-          "size": null,
+          "size": "FR32",
           "color": null,
           "price": 47499
         },
         {
           "sku": "SAM-SJ-VCF-LIG-FR34",
-          "size": null,
+          "size": "FR34",
           "color": null,
           "price": 47499
         },
         {
           "sku": "SAM-SJ-VCF-LIG-FR36",
-          "size": null,
+          "size": "FR36",
           "color": null,
           "price": 47499
         },
         {
           "sku": "SAM-SJ-VCF-LIG-FR40",
-          "size": null,
+          "size": "FR40",
           "color": null,
           "price": 47499
         },
         {
           "sku": "SAM-SJ-VCF-LIG-FR42",
-          "size": null,
+          "size": "FR42",
           "color": null,
           "price": 47499
         },
         {
           "sku": "SAM-SJ-VCF-LIG-FR44",
-          "size": null,
+          "size": "FR44",
           "color": null,
           "price": 47499
         },
         {
           "sku": "SAM-SJ-VCF-LIG-FR46",
-          "size": null,
+          "size": "FR46",
           "color": null,
           "price": 47499
         },
         {
           "sku": "SAM-SJ-VCF-LIG-FR38",
-          "size": null,
+          "size": "FR38",
           "color": null,
           "price": 47499
         },
         {
           "sku": "SAM-SJ-VCF-NAV-FR32",
-          "size": null,
+          "size": "FR32",
           "color": "Navy",
           "price": 47499
         },
         {
           "sku": "SAM-SJ-VCF-NAV-FR34",
-          "size": null,
+          "size": "FR34",
           "color": "Navy",
           "price": 47499
         },
         {
           "sku": "SAM-SJ-VCF-NAV-FR36",
-          "size": null,
+          "size": "FR36",
           "color": "Navy",
           "price": 47499
         },
         {
           "sku": "SAM-SJ-VCF-NAV-FR38",
-          "size": null,
+          "size": "FR38",
           "color": "Navy",
           "price": 47499
         },
         {
           "sku": "SAM-SJ-VCF-NAV-FR40",
-          "size": null,
+          "size": "FR40",
           "color": "Navy",
           "price": 47499
         },
         {
           "sku": "SAM-SJ-VCF-NAV-FR42",
-          "size": null,
+          "size": "FR42",
           "color": "Navy",
           "price": 47499
         },
         {
           "sku": "SAM-SJ-VCF-NAV-FR44",
-          "size": null,
+          "size": "FR44",
           "color": "Navy",
           "price": 47499
         },
         {
           "sku": "SAM-SJ-VCF-NAV-FR46",
-          "size": null,
+          "size": "FR46",
           "color": "Navy",
           "price": 47499
         }

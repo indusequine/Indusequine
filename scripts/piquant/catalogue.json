@@ -1,0 +1,381 @@
+{
+  "_comment": [
+    "Piquant Equestrians, read off their brand catalogue PDF (15 pages, September 2026).",
+    "Prices came from the founder, not the PDF, which carries none: half sleeve 2499,",
+    "full sleeve 2750, shampoo 450 at 250ml and 799 at 500ml. The catalogue carries no",
+    "SKUs either, so supplier codes below are ours, built as PQ-<style>-<colour>-<size>.",
+    "Sizes are one option rather than two, so a product keeps Colour x Size: 'Kids M' and",
+    "'Teens M' are different garments at the same letter and have to stay apart.",
+    "Photography is Piquant's own, supplied as one landscape frame per colourway with front and back side by side. prepare_images.py splits and squares them."
+  ],
+  "vendor": "Piquant",
+  "supplier_tag": "supplier:piquant",
+  "size_chart": {
+    "Kids M": [
+      50,
+      32
+    ],
+    "Kids L": [
+      52,
+      34
+    ],
+    "Kids XL": [
+      54,
+      36
+    ],
+    "Teens XS": [
+      63,
+      36
+    ],
+    "Teens S (girls)": [
+      65,
+      38
+    ],
+    "Teens M (girls)": [
+      67,
+      40
+    ],
+    "Teens L": [
+      69,
+      42
+    ],
+    "Teens S (boys)": [
+      63,
+      39
+    ],
+    "Teens M (boys)": [
+      65,
+      41
+    ],
+    "Men S": [
+      65,
+      38
+    ],
+    "Men M": [
+      67,
+      40
+    ],
+    "Men L": [
+      69,
+      42
+    ],
+    "Men XL": [
+      71,
+      44
+    ]
+  },
+  "products": [
+    {
+      "code": "LACE",
+      "handle": "piquant-girls-high-collar-lace-t-shirt",
+      "title": "Girls High Collar Lace T-shirt",
+      "category": "show-shirt",
+      "price": "2499.00",
+      "sleeve": "half",
+      "fit": "girls",
+      "colours": [
+        "Navy",
+        "Black",
+        "Sky Blue",
+        "Mauve",
+        "Red"
+      ],
+      "sizes": [
+        "Kids M",
+        "Kids L",
+        "Kids XL",
+        "Teens XS",
+        "Teens S",
+        "Teens M",
+        "Teens L"
+      ],
+      "images": {
+        "main": "lace-navy",
+        "extra": [
+          "lace-navy-back",
+          "lace-black",
+          "lace-black-back",
+          "lace-sky-blue",
+          "lace-sky-blue-back",
+          "lace-mauve",
+          "lace-mauve-back",
+          "lace-red",
+          "lace-red-back"
+        ],
+        "by_colour": {
+          "Navy": "lace-navy",
+          "Black": "lace-black",
+          "Sky Blue": "lace-sky-blue",
+          "Mauve": "lace-mauve",
+          "Red": "lace-red"
+        }
+      },
+      "blurb": "A show shirt cut for the ring, with lace sleeves and a zip that does not fight you at the collar.",
+      "features": [
+        "High collar with an easy zip",
+        "Lace detailing through the sleeves",
+        "Perforated panel across the back for air",
+        "Contrast cuff and collar in white"
+      ]
+    },
+    {
+      "code": "FSN",
+      "handle": "piquant-full-sleeve-normal-collar-t-shirt",
+      "title": "Full Sleeve Normal Collar T-shirt",
+      "category": "show-shirt",
+      "price": "2750.00",
+      "sleeve": "full",
+      "fit": "boys",
+      "colours": [
+        "Navy",
+        "Black",
+        "Mauve",
+        "Red"
+      ],
+      "sizes": [
+        "Kids M",
+        "Kids L",
+        "Kids XL",
+        "Teens S",
+        "Teens M",
+        "Men S",
+        "Men M",
+        "Men L",
+        "Men XL"
+      ],
+      "images": {
+        "main": "fs-normal-navy",
+        "extra": [
+          "fs-normal-navy-back",
+          "fs-normal-black",
+          "fs-normal-black-back",
+          "fs-normal-mauve",
+          "fs-normal-mauve-back",
+          "fs-normal-red",
+          "fs-normal-red-back"
+        ],
+        "by_colour": {
+          "Navy": "fs-normal-navy",
+          "Black": "fs-normal-black",
+          "Mauve": "fs-normal-mauve",
+          "Red": "fs-normal-red"
+        }
+      },
+      "blurb": "The classic collar, long in the sleeve, with a tie holder for the days the ring asks for one.",
+      "features": [
+        "Classic collar with a button closure",
+        "Tie holder at the placket",
+        "Perforated panel across the back for air",
+        "Contrast cuff and collar in white"
+      ]
+    },
+    {
+      "code": "FSH",
+      "handle": "piquant-full-sleeve-high-collar-t-shirt",
+      "title": "Full Sleeve High Collar T-shirt",
+      "category": "show-shirt",
+      "price": "2750.00",
+      "sleeve": "full",
+      "fit": "girls",
+      "colours": [
+        "Navy",
+        "Black",
+        "Mauve",
+        "Red"
+      ],
+      "sizes": [
+        "Kids M",
+        "Kids L",
+        "Kids XL",
+        "Teens XS",
+        "Teens S",
+        "Teens M",
+        "Teens L"
+      ],
+      "images": {
+        "main": "fs-high-navy",
+        "extra": [
+          "fs-high-navy-back",
+          "fs-high-black",
+          "fs-high-black-back",
+          "fs-high-mauve",
+          "fs-high-mauve-back",
+          "fs-high-red",
+          "fs-high-red-back"
+        ],
+        "by_colour": {
+          "Navy": "fs-high-navy",
+          "Black": "fs-high-black",
+          "Mauve": "fs-high-mauve",
+          "Red": "fs-high-red"
+        }
+      },
+      "blurb": "A high collar and a long sleeve, for the rider who wants the neck covered and the arm free.",
+      "features": [
+        "High collar with a quality zipper",
+        "Perforated panel across the back for air",
+        "Contrast cuff and collar in white"
+      ]
+    },
+    {
+      "code": "HSN",
+      "handle": "piquant-half-sleeve-normal-collar-t-shirt",
+      "title": "Half Sleeve Normal Collar T-shirt",
+      "category": "show-shirt",
+      "price": "2499.00",
+      "sleeve": "half",
+      "fit": "boys",
+      "colours": [
+        "Navy",
+        "Black",
+        "Sky Blue",
+        "Mauve",
+        "Red"
+      ],
+      "sizes": [
+        "Kids M",
+        "Kids L",
+        "Kids XL",
+        "Teens S",
+        "Teens M",
+        "Men S",
+        "Men M",
+        "Men L",
+        "Men XL"
+      ],
+      "images": {
+        "main": "hs-normal-navy",
+        "extra": [
+          "hs-normal-navy-back",
+          "hs-normal-black",
+          "hs-normal-black-back",
+          "hs-normal-sky-blue",
+          "hs-normal-sky-blue-back",
+          "hs-normal-mauve",
+          "hs-normal-mauve-back",
+          "hs-normal-red",
+          "hs-normal-red-back"
+        ],
+        "by_colour": {
+          "Navy": "hs-normal-navy",
+          "Black": "hs-normal-black",
+          "Sky Blue": "hs-normal-sky-blue",
+          "Mauve": "hs-normal-mauve",
+          "Red": "hs-normal-red"
+        }
+      },
+      "blurb": "Short in the sleeve and vented down the sides, for a warm day in the collecting ring.",
+      "features": [
+        "Classic collar with a button closure",
+        "Tie holder at the placket",
+        "Perforated side panels and back for air",
+        "Contrast cuff and collar in white"
+      ]
+    },
+    {
+      "code": "SH-ALOE",
+      "handle": "piquant-aloe-and-coconut-oil-revitalizer-horse-shampoo",
+      "title": "Aloe and Coconut Oil Revitalizer Horse Shampoo",
+      "category": "shampoo-and-conditioner",
+      "sizes_ml": [
+        250,
+        500
+      ],
+      "images": {
+        "main": "shampoo-aloe-coconut"
+      },
+      "strapline": "Purifies, protects, soothes",
+      "blurb": "A gentle, nourishing shampoo for a healthy coat and happier skin.",
+      "ingredients": [
+        "Aloe vera powder",
+        "Coconut oil",
+        "Rosemary oil",
+        "Neem oil"
+      ]
+    },
+    {
+      "code": "SH-CUCU",
+      "handle": "piquant-cucumber-melon-horse-shampoo",
+      "title": "Cucumber Melon Horse Shampoo",
+      "category": "shampoo-and-conditioner",
+      "sizes_ml": [
+        250,
+        500
+      ],
+      "images": {
+        "main": "shampoo-cucumber-melon"
+      },
+      "strapline": "Fresh, juicy, revitalizing",
+      "blurb": "A gentle cleanse for a healthy coat and skin.",
+      "ingredients": [
+        "Cucumber melon essence",
+        "Aloe vera powder",
+        "Rosemary oil",
+        "Coconut oil"
+      ]
+    },
+    {
+      "code": "SH-BHRI",
+      "handle": "piquant-bhringaraj-revitalizer-horse-shampoo",
+      "title": "Bhringaraj Revitalizer Horse Shampoo",
+      "category": "shampoo-and-conditioner",
+      "sizes_ml": [
+        250,
+        500
+      ],
+      "images": {
+        "main": "shampoo-bhringaraj"
+      },
+      "strapline": "Nourishes, strengthens, restores",
+      "blurb": "Nourishes deeply and strengthens naturally, for a healthy, radiant coat.",
+      "ingredients": [
+        "Bhringaraj oil",
+        "Rosemary oil",
+        "Coconut oil"
+      ]
+    },
+    {
+      "code": "SH-YLAN",
+      "handle": "piquant-ylang-ylang-horse-shampoo",
+      "title": "Ylang Ylang Horse Shampoo",
+      "category": "shampoo-and-conditioner",
+      "sizes_ml": [
+        250,
+        500
+      ],
+      "images": {
+        "main": "shampoo-ylang-ylang"
+      },
+      "strapline": "Clean, care, shine",
+      "blurb": "Ylang ylang essential oil to keep your horse's coat clean, healthy and naturally radiant.",
+      "ingredients": [
+        "Essential oil",
+        "Aloe vera powder",
+        "Rosemary oil",
+        "Neem oil",
+        "Coconut oil"
+      ]
+    },
+    {
+      "code": "SH-CLD9",
+      "handle": "piquant-cloud-9-horse-shampoo",
+      "title": "Cloud 9 Horse Shampoo",
+      "category": "shampoo-and-conditioner",
+      "sizes_ml": [
+        250,
+        500
+      ],
+      "images": {
+        "main": "shampoo-cloud-9"
+      },
+      "strapline": "Gentle, nourishing, pH balanced",
+      "blurb": "Gentle care for a clean, nourished and healthy-looking coat.",
+      "ingredients": [
+        "Anota seeds",
+        "Coconut oil",
+        "Rosemary oil",
+        "Essential oils"
+      ]
+    }
+  ]
+}

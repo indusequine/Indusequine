@@ -1,8 +1,11 @@
 import type { Metadata } from "next";
-import { Cormorant_Garamond, Inter } from "next/font/google";
+import { Cormorant_Garamond, DM_Mono, Inter } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import "./globals.css";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { IntroCurtain } from "@/components/IntroCurtain";
 
 const cormorant = Cormorant_Garamond({
   variable: "--font-cormorant",
@@ -18,14 +21,22 @@ const inter = Inter({
   display: "swap",
 });
 
+// Used only for small labels -- categories, counts, SKUs, section eyebrows.
+const dmMono = DM_Mono({
+  variable: "--font-mono-dm",
+  subsets: ["latin"],
+  weight: ["400", "500"],
+  display: "swap",
+});
+
 export const metadata: Metadata = {
   metadataBase: new URL("https://indusequine.com"),
   title: {
-    default: "Indusequine — India's First Equestrian Marketplace",
+    default: "Indusequine: India's First Equestrian Marketplace",
     template: "%s · Indusequine",
   },
   description:
-    "India's first dedicated equestrian marketplace. Premium products for riders, horses and stables. Trusted coaches, vets and farriers. Launching soon.",
+    "India's first dedicated equestrian marketplace. Premium products for riders, horses and stables. Trusted coaches, vets and farriers.",
   keywords: [
     "equestrian India",
     "horse riding equipment India",
@@ -39,18 +50,18 @@ export const metadata: Metadata = {
     "farrier India",
   ],
   openGraph: {
-    title: "Indusequine — India's First Equestrian Marketplace",
+    title: "Indusequine: India's First Equestrian Marketplace",
     description:
-      "A curated home for riders, horses, stables, and the professionals who serve them. Organising India's equestrian community for the first time.",
+      "One home for riders, horses, stables and the professionals who serve them. Organising India's equestrian community for the first time.",
     type: "website",
     locale: "en_IN",
     siteName: "Indusequine",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Indusequine — India's First Equestrian Marketplace",
+    title: "Indusequine: India's First Equestrian Marketplace",
     description:
-      "A curated home for riders, horses, stables, and the professionals who serve them.",
+      "One home for riders, horses, stables and the professionals who serve them.",
   },
   robots: {
     index: true,
@@ -66,12 +77,15 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${cormorant.variable} ${inter.variable} h-full antialiased`}
+      className={`${cormorant.variable} ${inter.variable} ${dmMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col bg-cream-soft text-ink">
+        <IntroCurtain />
         <Header />
-        <main className="flex-1">{children}</main>
+        <main className="flex-1 flex flex-col">{children}</main>
         <Footer />
+        <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );

@@ -1,7 +1,10 @@
 import { LogoMarkPattern } from "@/components/Logo";
 import type { Product } from "@/data/products";
-import { getCategory } from "@/data/products";
 import { categoryTileClass } from "@/lib/categoryTileColor";
+import { shopifyImage } from "@/lib/imageUrl";
+
+// A card sits at ~380px, the detail image at ~700px; both doubled for 2x screens.
+const WIDTHS = { card: 760, detail: 1400 } as const;
 
 type ProductImageProps = {
   product: Product;
@@ -14,22 +17,22 @@ export function ProductImage({ product, size = "card" }: ProductImageProps) {
       <div className="relative aspect-square overflow-hidden bg-cream-warm">
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
-          src={product.image}
+          src={shopifyImage(product.image, WIDTHS[size])}
           alt={product.name}
           className="w-full h-full object-cover"
           loading="lazy"
+          decoding="async"
         />
       </div>
     );
   }
 
-  const category = getCategory(product.category);
-  const label = category?.name ?? "";
+  const label = product.categoryName ?? "";
 
   return (
     <div
       role="img"
-      aria-label={`${product.name} — photography coming soon`}
+      aria-label={`${product.name}: photography coming soon`}
       className={`relative aspect-square overflow-hidden flex items-center justify-center ${categoryTileClass(product.category)}`}
     >
       <div className="absolute inset-0 opacity-[0.08] pointer-events-none">

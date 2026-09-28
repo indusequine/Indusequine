@@ -85,13 +85,13 @@ export function WaitlistForm() {
     return (
       <div className="border border-forest/20 bg-cream p-10 md:p-14 text-center">
         <p className="eyebrow text-brass-deep">
-          You&rsquo;re On The List
+          You&rsquo;re In
         </p>
         <h3 className="font-display text-3xl md:text-4xl mt-4 text-forest">
           Thank you.
         </h3>
         <p className="mt-4 text-charcoal leading-relaxed max-w-xl mx-auto">
-          You&rsquo;re on the list. We&rsquo;ll be in touch as soon as we open the gates.
+          We&rsquo;ll send the occasional, considered note as we grow.
           In the meantime, follow our journey on Instagram or drop us a note at{" "}
           <a href="mailto:hello@indusequine.com" className="text-forest underline underline-offset-4">
             hello@indusequine.com
@@ -146,12 +146,12 @@ export function WaitlistForm() {
         disabled={pending}
         className="inline-flex items-center justify-center px-8 py-4 bg-forest text-cream-soft hover:bg-forest-deep transition-colors text-sm tracking-[0.15em] uppercase disabled:opacity-50 disabled:cursor-not-allowed"
       >
-        {pending ? "Submitting…" : "Join the Waitlist"}
+        {pending ? "Submitting…" : "Get Updates"}
       </button>
 
       <p className="text-xs text-stone leading-relaxed">
-        We&rsquo;ll only contact you about Indusequine&rsquo;s launch and an
-        occasional, considered note. No spam, ever.
+        We&rsquo;ll only send the occasional, considered note about
+        what&rsquo;s new. No spam, ever.
       </p>
     </form>
   );

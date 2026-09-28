@@ -18,6 +18,7 @@
 
   --font-display: var(--font-cormorant), "Cormorant Garamond", "Times New Roman", serif;
   --font-body: var(--font-inter), "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-mono: var(--font-mono-dm), "DM Mono", ui-monospace, "SF Mono", Menlo, monospace;
 }
 
 html {
@@ -45,22 +46,105 @@ h1, h2, h3, h4, h5, h6, .font-display {
   color: var(--color-cream-soft);
 }
 
-.eyebrow {
-  font-family: var(--font-body);
-  font-size: 0.75rem;
-  letter-spacing: 0.22em;
-  text-transform: uppercase;
-  font-weight: 500;
+/* These sit in the components layer so Tailwind utilities still win -- a few
+   places set their own size or tracking on top of .eyebrow, and unlayered CSS
+   would silently beat those utilities. */
+@layer components {
+  /* Small labels -- categories, counts, SKUs, section eyebrows -- sit in mono.
+     Mono is already wide, so it needs less tracking than Inter did. */
+  .eyebrow {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    font-weight: 400;
+  }
+
+  .mono {
+    font-family: var(--font-mono);
+    font-variant-numeric: tabular-nums;
+  }
+
+  .rule {
+    display: inline-block;
+    width: 2rem;
+    height: 1px;
+    background: currentColor;
+    vertical-align: middle;
+    margin-right: 0.75rem;
+    opacity: 0.5;
+  }
 }
 
-.rule {
-  display: inline-block;
-  width: 2rem;
+/* The intro curtain. Hidden outright where motion isn't welcome, so anyone on
+   reduced motion goes straight to the site.
+
+   The animation below is a failsafe, not the mechanism: it lifts the curtain on
+   its own by 2.9s, so a visitor whose JavaScript never arrives is never shut
+   out. When the script does run it removes that animation and drives the
+   curtain from real load progress instead. Belt and braces, because a stuck
+   curtain is a worse failure than the slow paint it exists to cover. */
+.intro-curtain {
+  display: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .intro-curtain {
+    display: grid;
+    place-items: center;
+    position: fixed;
+    inset: 0;
+    z-index: 100;
+    background: var(--color-forest-deep);
+    /* Outlasts the script's 2.6s ceiling, and holds fully opaque until 2.3s,
+       so a late-hydrating bundle can never catch it mid-fade. */
+    animation: introFailsafe 2.9s ease-in-out forwards;
+  }
+
+  /* What the script uses once it has taken the failsafe off. */
+  .intro-curtain-done {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.55s ease-in-out, visibility 0s linear 0.55s;
+  }
+}
+
+.intro-curtain-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.75rem;
+  color: var(--color-brass-light);
+}
+
+.intro-curtain-track {
+  width: clamp(120px, 22vw, 190px);
   height: 1px;
-  background: currentColor;
-  vertical-align: middle;
-  margin-right: 0.75rem;
-  opacity: 0.5;
+  background: color-mix(in srgb, var(--color-brass-light) 25%, transparent);
+  overflow: hidden;
+}
+
+.intro-curtain-bar {
+  height: 100%;
+  background: var(--color-brass-light);
+  transform-origin: left center;
+  transform: scaleX(0);
+  /* Transform only -- a width animation would relayout on every frame. */
+  transition: transform 0.25s ease-out;
+  animation: introBar 2.3s ease-out forwards;
+}
+
+@keyframes introFailsafe {
+  0%, 80% { opacity: 1; visibility: visible; }
+  100% { opacity: 0; visibility: hidden; }
+}
+
+/* The bar advances before the bundle arrives, so the loader never sits at zero
+   while JavaScript is still on its way. The script removes this animation when
+   it takes over, otherwise its inline transform would lose to it. */
+@keyframes introBar {
+  from { transform: scaleX(0); }
+  to { transform: scaleX(0.92); }
 }
 
 @keyframes fadeInUp {
@@ -68,6 +152,717 @@ h1, h2, h3, h4, h5, h6, .font-display {
   to { opacity: 1; transform: translateY(0); }
 }
 
-.fade-in-up {
-  animation: fadeInUp 0.8s ease-out backwards;
+/* The hero entrance. `backwards` holds the element at opacity 0 through its
+   delay, so this is the one thing on the site that genuinely does paint late --
+   and it was running for everyone, including people who have asked their system
+   for less motion. It now only runs when motion is welcome; otherwise the hero
+   is simply there. */
+@media (prefers-reduced-motion: no-preference) {
+  .fade-in-up {
+    animation: fadeInUp 0.8s ease-out backwards;
+  }
+}
+
+/* Brand marquee. Two identical halves sit side by side and the pair slides by
+   exactly half its width, so the moment the first half leaves, the second is
+   already in its place -- the loop has no seam. Pure CSS, so it costs no
+   JavaScript and never blocks paint. The edges fade out rather than cutting
+   names in half at the viewport boundary. */
+@keyframes marqueeSlide {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+.marquee {
+  overflow: hidden;
+  mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
+}
+
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: marqueeSlide linear infinite;
+}
+
+/* Pause on hover so a name is easy to click, and on focus-within so keyboard
+   users are never chasing a moving target. */
+.marquee:hover .marquee-track,
+.marquee:focus-within .marquee-track {
+  animation-play-state: paused;
+}
+
+/* Reduce-motion gets the list standing still, scrollable by hand. */
+@media (prefers-reduced-motion: reduce) {
+  .marquee {
+    overflow-x: auto;
+    mask-image: none;
+  }
+  .marquee-track {
+    animation: none;
+  }
+}
+
+@keyframes revealUp {
+  from { transform: translateY(18px); }
+  to { transform: translateY(0); }
+}
+
+/* One reveal, used everywhere: content settles up into place as it enters view.
+   Deliberately no opacity. A scroll-driven fade leaves anything already
+   half-on-screen when the page loads sitting part-faded, which reads as the
+   page still loading -- nothing here is ever hidden, it only moves.
+
+   Scroll-driven and CSS-only, so there's no JavaScript, nothing waits on a
+   script, and browsers without support show the content at rest. ease-out puts
+   most of the travel at the start of the range, so an element has settled well
+   before it reaches the middle of the viewport. */
+@media (prefers-reduced-motion: no-preference) {
+  @supports (animation-timeline: view()) {
+    .reveal {
+      animation: revealUp ease-out both;
+      animation-timeline: view();
+      animation-range: entry 0% entry 40%;
+    }
+  }
+}
+
+/* The brand strip on the homepage: a row of maker logos that drifts sideways
+   on its own. The row is rendered twice and the track travels exactly half its
+   width, so the second copy is where the first was when the loop restarts and
+   the seam never shows.
+
+   It holds still while the pointer is over it or a link inside it has keyboard
+   focus, so nothing a reader is aiming at slides away. */
+.brand-strip__viewport {
+  overflow: hidden;
+  /* fade the two ends rather than cutting logos off mid-mark */
+  -webkit-mask-image: linear-gradient(
+    90deg, transparent, #000 90px, #000 calc(100% - 90px), transparent);
+  mask-image: linear-gradient(
+    90deg, transparent, #000 90px, #000 calc(100% - 90px), transparent);
+}
+
+.brand-strip__track {
+  display: flex;
+  width: max-content;
+}
+
+.brand-strip__row {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+  padding: 0 2rem 0 0;
+  margin: 0;
+  list-style: none;
+}
+
+.brand-strip__item {
+  display: block;
+  width: 130px;
+}
+
+.brand-strip__box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  transition: transform 0.2s ease;
+}
+
+.brand-strip__box img {
+  width: auto;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+/* Brands that haven't sent artwork show their name set as a wordmark, so the
+   row reads as one list rather than logos followed by leftovers. */
+.brand-strip__name {
+  font-size: 0.875rem;
+  font-weight: 600;
+  letter-spacing: 0.055em;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 1.25;
+  color: var(--color-forest-deep);
+}
+
+.brand-strip__item:hover .brand-strip__box {
+  transform: scale(1.06);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .brand-strip__track {
+    animation: brandDrift 90s linear infinite;
+  }
+
+  /* Held still for a reader on a poor connection, where the second row that
+     makes the loop seamless is not loaded at all. */
+  .brand-strip__viewport.is-still .brand-strip__track {
+    animation: none;
+    width: auto;
+  }
+
+  .brand-strip__viewport.is-still {
+    -webkit-mask-image: none;
+    mask-image: none;
+  }
+
+  .brand-strip__viewport.is-still .brand-strip__row {
+    flex-wrap: wrap;
+    gap: 2rem 2.5rem;
+  }
+
+  .brand-strip__viewport:hover .brand-strip__track,
+  .brand-strip__viewport:focus-within .brand-strip__track {
+    animation-play-state: paused;
+  }
+}
+
+@keyframes brandDrift {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+/* Without the drift there is no way to reach the far end of a single row, so
+   it wraps into a static block instead and the duplicate row is dropped. */
+@media (prefers-reduced-motion: reduce) {
+  .brand-strip__track {
+    width: auto;
+  }
+  .brand-strip__viewport {
+    -webkit-mask-image: none;
+    mask-image: none;
+  }
+  .brand-strip__row {
+    flex-wrap: wrap;
+    gap: 2rem 2.5rem;
+  }
+  .brand-strip__row[aria-hidden="true"] {
+    display: none;
+  }
+}
+
+/* The campaign hero, built to the designer's comp (measured at 1920x1080):
+   a full-height photograph, a serif headline near 125px over a 47px gutter,
+   and a dark wash to the left so white type reads wherever the photograph
+   happens to be bright. */
+.campaign-hero {
+  position: relative;
+  /* Plain vh first: a browser that does not know svh drops that line and keeps
+     this one, rather than dropping both and collapsing the hero to the height
+     of its own text, which lets the next section show above the fold. svh then
+     wins where it is understood, so a phone's address bar cannot crop the
+     buttons off the bottom. */
+  height: 100vh;
+  height: 100svh;
+  min-height: 600px;
+  overflow: hidden;
+  background: #000;
+  color: #fff;
+}
+
+.campaign-hero__slide {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.6s ease;
+}
+
+.campaign-hero__slide.is-showing {
+  opacity: 1;
+  z-index: 1;
+}
+
+.campaign-hero__media {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.campaign-hero__shade {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(90deg, rgba(0,0,0,0.88) 0%, rgba(0,0,0,0.55) 38%, rgba(0,0,0,0.12) 72%, rgba(0,0,0,0.32) 100%),
+    linear-gradient(180deg, rgba(0,0,0,0.45) 0%, transparent 22%);
+}
+
+.campaign-hero__copy {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  padding-inline: clamp(1.5rem, 3.9vw, 4.6875rem);
+  padding-block: 7rem 4rem;
+}
+
+.campaign-hero__eyebrow {
+  font-family: var(--font-body);
+  font-size: clamp(0.75rem, 0.94vw, 1.125rem);
+  font-weight: 400;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  margin: 0 0 clamp(1.25rem, 3.1vw, 3.75rem);
+}
+
+.campaign-hero__title {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: clamp(2.75rem, 6.5vw, 7.8125rem);
+  line-height: 1.23;
+  letter-spacing: -0.005em;
+  margin: 0 0 clamp(2rem, 6.3vw, 7.5rem);
+  /* Each campaign sets its own line break, because where a headline turns is a
+     typographic decision in the comp, not something to leave to the measure. */
+  white-space: pre-line;
+  max-width: 16ch;
+}
+
+.campaign-hero__body {
+  font-family: var(--font-body);
+  font-size: clamp(1rem, 1.3vw, 1.5625rem);
+  line-height: 1.55;
+  margin: 0 0 clamp(1.25rem, 1.7vw, 2rem);
+  max-width: 28ch;
+}
+
+.campaign-hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+/* Square and white, the same 64px height as the bar's button. */
+.campaign-hero__button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: clamp(3rem, 3.3vw, 4rem);
+  padding-inline: clamp(1.5rem, 2.45vw, 2.9375rem);
+  background: #fff;
+  color: var(--color-ink);
+  font-family: var(--font-body);
+  font-size: clamp(0.9375rem, 0.89vw, 1.0625rem);
+  font-weight: 600;
+  transition: background 0.2s ease;
+}
+
+.campaign-hero__button:hover { background: rgba(255,255,255,0.86); }
+
+.campaign-hero__dots {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: clamp(1.5rem, 2.8vw, 3rem);
+  z-index: 3;
+  display: flex;
+  justify-content: center;
+  gap: 0.6875rem;
+}
+
+.campaign-hero__dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  border: 1px solid rgba(255,255,255,0.85);
+  background: transparent;
+  padding: 0;
+  cursor: pointer;
+}
+
+.campaign-hero__dot[aria-current="true"] { background: #fff; }
+
+.campaign-hero__dot:focus-visible { outline: 2px solid #fff; outline-offset: 3px; }
+
+@media (prefers-reduced-motion: reduce) {
+  .campaign-hero__slide { transition: none; }
+}
+
+/* The header: shopping on the bar, Services and Discover in menus under it.
+   White ground and a sans face, which is the direction the marketplace is
+   moving in, rather than the cream and serif of the older pages. */
+.site-header__utility {
+  font-size: 0.8125rem;
+  color: var(--color-stone);
+  white-space: nowrap;
+}
+.site-header__utility:hover { color: var(--color-ink); }
+
+.site-header__link {
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--color-ink);
+  white-space: nowrap;
+}
+.site-header__link:hover { color: var(--color-forest); }
+
+.site-header__link--muted {
+  font-weight: 500;
+  color: var(--color-charcoal);
+  display: inline-flex;
+  align-items: center;
+}
+
+/* The panel hangs 12px below the link. Without this the cursor leaves the menu
+   while crossing that gap and the panel shuts before the reader reaches it, so
+   the hover area is extended over the gap and pulled back with a negative
+   margin, which leaves the bar's layout untouched. */
+.site-header__menu {
+  position: relative;
+  padding-bottom: 0.75rem;
+  margin-bottom: -0.75rem;
+}
+
+/* Anchored to the bar rather than to the link, so the panel lines up with the
+   navigation no matter how wide its trigger is. */
+.site-header__panel {
+  position: absolute;
+  top: calc(100% + 0.75rem);
+  left: -1rem;
+  min-width: 15rem;
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+  padding: 1rem 1.25rem 1.125rem;
+  z-index: 50;
+}
+
+.site-header__panel-heading {
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: var(--color-stone);
+  margin: 0 0 0.625rem;
+}
+
+.site-header__panel-link {
+  display: block;
+  font-size: 0.875rem;
+  color: var(--color-charcoal);
+  padding: 0.3125rem 0;
+}
+.site-header__panel-link:hover {
+  color: var(--color-forest);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+/* A small fixed field, not one that stretches across the bar. */
+.site-header__search {
+  align-items: center;
+  gap: 0.5rem;
+  width: 210px;
+  padding: 0.4rem 0.85rem;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  border-radius: 999px;
+  background: var(--color-cream-soft);
+  color: var(--color-stone);
+}
+
+.site-header__search input {
+  width: 100%;
+  min-width: 0;
+  border: 0;
+  background: transparent;
+  outline: none;
+  font: inherit;
+  font-size: 0.8125rem;
+  color: var(--color-ink);
+}
+
+.site-header__search:focus-within {
+  border-color: var(--color-forest);
+}
+
+/* The bar sits over a photograph whose right side is bright and busy, which a
+   translucent white field disappears into. A dark fill and a firmer border
+   keep it readable wherever the photograph happens to be light. */
+.site-header--overlay .site-header__search {
+  border-color: rgba(255, 255, 255, 0.55);
+  background: rgba(0, 0, 0, 0.42);
+  color: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(2px);
+}
+
+.site-header--overlay .site-header__search input { color: #fff; }
+.site-header--overlay .site-header__search input::placeholder { color: rgba(255, 255, 255, 0.8); }
+.site-header--overlay .site-header__search:focus-within { border-color: #fff; }
+
+/* The menu button, which holds the pages a rider needs least often. */
+.site-header__more {
+  width: 36px;
+  height: 36px;
+  /* Squared off, like the hero's buttons, rather than the round badge a phone
+     menu usually wears. */
+  border-radius: 0;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  background: transparent;
+  display: grid;
+  place-items: center;
+  gap: 4px;
+  cursor: pointer;
+}
+
+.site-header__more span {
+  display: block;
+  width: 14px;
+  height: 1.4px;
+  border-radius: 2px;
+  background: var(--color-ink);
+}
+
+.site-header__more:hover { border-color: rgba(0, 0, 0, 0.3); }
+
+.site-header--overlay .site-header__more {
+  border-color: rgba(255, 255, 255, 0.55);
+  background: rgba(0, 0, 0, 0.42);
+  backdrop-filter: blur(2px);
+}
+.site-header--overlay .site-header__more span { background: #fff; }
+.site-header--overlay .site-header__more:hover { border-color: #fff; }
+
+/* The one panel that hangs off the right end has to open inward. */
+.site-header__panel--right { left: auto; right: -0.5rem; }
+
+/* The homepage runs on white with a sans face, which is the direction the
+   marketplace is moving in. The older pages still carry the cream and serif,
+   so this is scoped here rather than changed globally mid-move. */
+.home { background: #fff; flex: 1; padding-bottom: 2rem; }
+
+.home__section { padding: 3rem 0; }
+
+.home__head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1.75rem;
+}
+
+.home__head h2 {
+  font-family: var(--font-body);
+  font-size: clamp(1.375rem, 2.4vw, 1.75rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--color-ink);
+  margin: 0;
+}
+
+.home__head a {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--color-forest);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  white-space: nowrap;
+}
+
+/* Cover tile beside a two-by-two of collections. The cover is twice the height
+   of a single tile, so on a wide screen the block squares off. */
+.bento {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.bento__tile {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  background: var(--color-cream-warm);
+  aspect-ratio: 4 / 3;
+}
+
+.bento__tile > img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.bento__tile:hover > img { transform: scale(1.03); }
+
+/* A product shot is a cut-out on white, not a photograph that can be cropped,
+   so it sits inside its tile rather than filling it. */
+.bento__tile--product,
+.bento__tile--cover:has(.bento__shot) {
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.bento__shot {
+  position: absolute;
+  inset: 0;
+  bottom: 4.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.25rem;
+}
+
+.bento__shot img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.bento__shot--cover { padding: clamp(1.25rem, 2.2vw, 2.25rem); }
+
+/* The banner moves through a dozen products, so each one is a layer inside the
+   tile and they cross-fade. Only the one showing takes pointer or keyboard
+   focus; the rest are inert. */
+.bento__rotator {
+  position: absolute;
+  inset: 0;
+  display: block;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.5s ease;
+}
+
+.bento__rotator.is-showing {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .bento__rotator { transition: none; }
+}
+
+.bento__tile--product:hover > img { transform: none; }
+
+.bento__caption {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 1.25rem;
+  color: #fff;
+  font-size: 1.125rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.62), transparent);
+}
+
+.bento__caption small {
+  display: block;
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  opacity: 0.85;
+  margin-bottom: 0.25rem;
+}
+
+.bento__caption--dark {
+  color: var(--color-ink);
+  background: none;
+  font-size: 0.9375rem;
+}
+
+.bento__caption--dark small { color: var(--color-stone); opacity: 1; }
+
+/* Phones only. Two 4:3 tiles side by side leave a photograph about 120px tall,
+   and a caption that runs to three lines on a narrow screen leaves an
+   absolutely positioned shot with almost no room -- it was 8px. So on a phone
+   the banner and the product run full width and lay their shot out above the
+   caption instead of behind it. The desktop grid above is untouched. */
+@media (max-width: 899px) {
+  .bento__tile--cover,
+  .bento__tile--product {
+    grid-column: span 2;
+    display: flex;
+    flex-direction: column;
+    aspect-ratio: auto;
+    min-height: 17rem;
+  }
+
+  .bento__rotator {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .bento__tile--cover .bento__shot,
+  .bento__tile--product .bento__shot {
+    position: relative;
+    inset: auto;
+    flex: 1;
+    min-height: 9rem;
+  }
+
+  .bento__tile--cover .bento__caption--dark,
+  .bento__tile--product .bento__caption--dark {
+    position: relative;
+  }
+
+  .bento__tile:not(.bento__tile--cover):not(.bento__tile--product) {
+    aspect-ratio: 1 / 1;
+  }
+}
+
+@media (min-width: 900px) {
+  .bento { grid-template-columns: repeat(4, 1fr); }
+  .bento__tile--cover {
+    grid-column: span 2;
+    grid-row: span 2;
+    aspect-ratio: auto;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .bento__tile > img, .bento__tile:hover > img { transition: none; transform: none; }
+}
+
+/* The header bar, to the same comp: 102px tall on a wide screen, a 47px
+   gutter, 44px between navigation items, and white type over the photograph
+   on the homepage. */
+.site-header__bar {
+  width: 100%;
+  padding-inline: clamp(1.25rem, 2.45vw, 2.9375rem);
+}
+
+/* Inner pages keep the gutter they had before the comp work, which was written
+   for the homepage. */
+.site-header__bar--tight { padding-inline: clamp(1.25rem, 2vw, 2.5rem); }
+
+.site-header--overlay .site-header__link,
+.site-header--overlay .site-header__utility,
+.site-header--overlay .site-header__link--muted {
+  color: rgba(255, 255, 255, 0.82);
+  font-weight: 400;
+}
+
+.site-header--overlay .site-header__link:hover,
+.site-header--overlay .site-header__utility:hover {
+  color: #fff;
+}
+
+.site-header--overlay .site-header__panel {
+  background: rgba(10, 10, 10, 0.94);
+  border-color: rgba(255, 255, 255, 0.14);
+}
+
+.site-header--overlay .site-header__panel-heading { color: rgba(255,255,255,0.55); }
+.site-header--overlay .site-header__panel-link { color: rgba(255,255,255,0.85); }
+.site-header--overlay .site-header__panel-link:hover { color: #fff; }
+
+@media (min-width: 1400px) {
+  .site-header__link,
+  .site-header__utility { font-size: 0.9375rem; }
+  /* The comp's 44px between items is measured at 1920. Our bar carries eleven
+     links rather than four, so it takes that spacing only once there is room. */
+  .site-header--overlay nav { gap: 1.625rem; }
+}
+
+@media (min-width: 1650px) {
+  .site-header--overlay nav { gap: 2.75rem; }
 }
