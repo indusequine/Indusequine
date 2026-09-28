@@ -90,6 +90,12 @@ query($cursor: String) {
 }
 """
 
+PRODUCT_UPDATE = """
+mutation($product: ProductUpdateInput!) {
+  productUpdate(product: $product) { product { handle } userErrors { field message } }
+}
+"""
+
 HANDLES_QUERY = """
 query($q: String!) {
   products(first: 250, query: $q) { nodes { id handle title } }
@@ -102,17 +108,21 @@ query($q: String!) {
 
 
 def shirt_description(p: dict, chart: dict) -> str:
-    rows = "".join(
-        f"<tr><td>{s}</td><td>{chart[key(p, s)][0]}</td><td>{chart[key(p, s)][1]}</td></tr>"
-        for s in p["sizes"]
+    """Prose, not markup.
+
+    The product page renders Shopify's plain-text `description`, which Shopify
+    derives from the HTML by stripping every tag. A list or a table sent here
+    arrives as one run-on paragraph with the cells jammed together, so the
+    measurements have to read as a sentence to survive the trip.
+    """
+    features = ". ".join(p["features"])
+    sizes = ", ".join(
+        f"{s} {chart[key(p, s)][0]} by {chart[key(p, s)][1]}" for s in p["sizes"]
     )
-    features = "".join(f"<li>{f}</li>" for f in p["features"])
     return (
-        f"<p>{p['blurb']}</p>"
-        f"<ul>{features}</ul>"
-        "<h4>Size guide</h4>"
-        "<table><thead><tr><th>Size</th><th>Length (cm)</th><th>Shoulder (cm)</th></tr></thead>"
-        f"<tbody>{rows}</tbody></table>"
+        f"<p>{p['blurb']}</p>\n"
+        f"<p>{features}.</p>\n"
+        f"<p>Measurements in centimetres, length by shoulder: {sizes}.</p>"
     )
 
 
@@ -125,11 +135,10 @@ def key(p: dict, size: str) -> str:
 
 
 def shampoo_description(p: dict) -> str:
-    items = "".join(f"<li>{i}</li>" for i in p["ingredients"])
+    items = ", ".join(i.lower() for i in p["ingredients"])
     return (
-        f"<p><strong>{p['strapline']}</strong></p>"
-        f"<p>{p['blurb']}</p>"
-        f"<h4>Ingredients</h4><ul>{items}</ul>"
+        f"<p>{p['strapline']}. {p['blurb']}</p>\n"
+        f"<p>Made with {items}.</p>\n"
         "<p>Available in 250 ml and 500 ml.</p>"
     )
 
@@ -141,7 +150,11 @@ def plan_for(p: dict, cat: dict) -> dict:
 
     if "colours" in p:
         options = [
-            {"name": "Colour", "values": [{"name": c} for c in p["colours"]]},
+            # "Color", not "Colour": products.ts reads this option by name, and
+            # the rest of the catalogue came in from the original migration
+            # spelled the American way. A British spelling here parses as no
+            # colour at all, and the picker silently drops to sizes only.
+            {"name": "Color", "values": [{"name": c} for c in p["colours"]]},
             {"name": "Size", "values": [{"name": s} for s in p["sizes"]]},
         ]
         variants = [
@@ -149,7 +162,7 @@ def plan_for(p: dict, cat: dict) -> dict:
                 "sku": f"PQ-{p['code']}-{slug(c)}-{slug(s)}",
                 "price": p["price"],
                 "optionValues": [
-                    {"optionName": "Colour", "name": c},
+                    {"optionName": "Color", "name": c},
                     {"optionName": "Size", "name": s},
                 ],
             }
@@ -259,6 +272,8 @@ def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--apply", action="store_true", help="write to Shopify")
     ap.add_argument("--only", help="comma-separated product codes")
+    ap.add_argument("--descriptions", action="store_true",
+                    help="rewrite descriptions on products already created")
     args = ap.parse_args()
 
     cat = json.loads(CATALOGUE.read_text())
@@ -283,6 +298,22 @@ def main() -> int:
         return 0
 
     client = ShopifyClient(load_env())
+
+    if args.descriptions:
+        # productUpdate, never productSet: productSet replaces the variant list
+        # wholesale and would take all 145 of them with it.
+        for i, p in enumerate(plans, 1):
+            found = client.query(HANDLES_QUERY, {"q": f"handle:{p['handle']}"})
+            node = next(iter(found["data"]["products"]["nodes"]), None)
+            if not node:
+                print(f"[{i}/{len(plans)}] not found: {p['handle']}")
+                continue
+            r = client.query(PRODUCT_UPDATE, {
+                "product": {"id": node["id"], "descriptionHtml": p["description"]},
+            })
+            errs = r.get("errors") or ((r.get("data") or {}).get("productUpdate") or {}).get("userErrors")
+            print(f"[{i}/{len(plans)}] {'FAILED ' + str(errs)[:120] if errs else 'updated ' + p['handle']}")
+        return 0
 
     taken = client.query(HANDLES_QUERY, {
         "q": " OR ".join(f"handle:{p['handle']}" for p in plans)
@@ -353,7 +384,7 @@ def main() -> int:
             updates = []
             for v in product["variants"]["nodes"]:
                 colour = next(
-                    (o["value"] for o in v["selectedOptions"] if o["name"] == "Colour"), None
+                    (o["value"] for o in v["selectedOptions"] if o["name"] == "Color"), None
                 )
                 media_id = media.get(p["by_colour"].get(colour, ""))
                 if media_id:
