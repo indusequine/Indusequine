@@ -6,28 +6,64 @@
     "SKUs either, so supplier codes below are ours, built as PQ-<style>-<colour>-<size>.",
     "Sizes are one option rather than two, so a product keeps Colour x Size: 'Kids M' and",
     "'Teens M' are different garments at the same letter and have to stay apart.",
-    "Measurements are from the size chart on page 10, in cm."
+    "Photography is Piquant's own, supplied as one landscape frame per colourway with front and back side by side. prepare_images.py splits and squares them."
   ],
-
   "vendor": "Piquant",
   "supplier_tag": "supplier:piquant",
-
   "size_chart": {
-    "Kids M": [50, 32],
-    "Kids L": [52, 34],
-    "Kids XL": [54, 36],
-    "Teens XS": [63, 36],
-    "Teens S (girls)": [65, 38],
-    "Teens M (girls)": [67, 40],
-    "Teens L": [69, 42],
-    "Teens S (boys)": [63, 39],
-    "Teens M (boys)": [65, 41],
-    "Men S": [65, 38],
-    "Men M": [67, 40],
-    "Men L": [69, 42],
-    "Men XL": [71, 44]
+    "Kids M": [
+      50,
+      32
+    ],
+    "Kids L": [
+      52,
+      34
+    ],
+    "Kids XL": [
+      54,
+      36
+    ],
+    "Teens XS": [
+      63,
+      36
+    ],
+    "Teens S (girls)": [
+      65,
+      38
+    ],
+    "Teens M (girls)": [
+      67,
+      40
+    ],
+    "Teens L": [
+      69,
+      42
+    ],
+    "Teens S (boys)": [
+      63,
+      39
+    ],
+    "Teens M (boys)": [
+      65,
+      41
+    ],
+    "Men S": [
+      65,
+      38
+    ],
+    "Men M": [
+      67,
+      40
+    ],
+    "Men L": [
+      69,
+      42
+    ],
+    "Men XL": [
+      71,
+      44
+    ]
   },
-
   "products": [
     {
       "code": "LACE",
@@ -37,11 +73,35 @@
       "price": "2499.00",
       "sleeve": "half",
       "fit": "girls",
-      "colours": ["Navy", "Black", "Sky Blue", "Mauve", "Red"],
-      "sizes": ["Kids M", "Kids L", "Kids XL", "Teens XS", "Teens S", "Teens M", "Teens L"],
+      "colours": [
+        "Navy",
+        "Black",
+        "Sky Blue",
+        "Mauve",
+        "Red"
+      ],
+      "sizes": [
+        "Kids M",
+        "Kids L",
+        "Kids XL",
+        "Teens XS",
+        "Teens S",
+        "Teens M",
+        "Teens L"
+      ],
       "images": {
-        "main": "lace-front",
-        "extra": ["lace-back"],
+        "main": "lace-navy",
+        "extra": [
+          "lace-navy-back",
+          "lace-black",
+          "lace-black-back",
+          "lace-sky-blue",
+          "lace-sky-blue-back",
+          "lace-mauve",
+          "lace-mauve-back",
+          "lace-red",
+          "lace-red-back"
+        ],
         "by_colour": {
           "Navy": "lace-navy",
           "Black": "lace-black",
@@ -66,11 +126,33 @@
       "price": "2750.00",
       "sleeve": "full",
       "fit": "boys",
-      "colours": ["Navy", "Black", "Mauve", "Red"],
-      "sizes": ["Kids M", "Kids L", "Kids XL", "Teens S", "Teens M", "Men S", "Men M", "Men L"],
+      "colours": [
+        "Navy",
+        "Black",
+        "Mauve",
+        "Red"
+      ],
+      "sizes": [
+        "Kids M",
+        "Kids L",
+        "Kids XL",
+        "Teens S",
+        "Teens M",
+        "Men S",
+        "Men M",
+        "Men L"
+      ],
       "images": {
-        "main": "fs-normal-front",
-        "extra": ["fs-normal-back"],
+        "main": "fs-normal-navy",
+        "extra": [
+          "fs-normal-navy-back",
+          "fs-normal-black",
+          "fs-normal-black-back",
+          "fs-normal-mauve",
+          "fs-normal-mauve-back",
+          "fs-normal-red",
+          "fs-normal-red-back"
+        ],
         "by_colour": {
           "Navy": "fs-normal-navy",
           "Black": "fs-normal-black",
@@ -94,11 +176,32 @@
       "price": "2750.00",
       "sleeve": "full",
       "fit": "girls",
-      "colours": ["Navy", "Black", "Mauve", "Red"],
-      "sizes": ["Kids M", "Kids L", "Kids XL", "Teens XS", "Teens S", "Teens M", "Teens L"],
+      "colours": [
+        "Navy",
+        "Black",
+        "Mauve",
+        "Red"
+      ],
+      "sizes": [
+        "Kids M",
+        "Kids L",
+        "Kids XL",
+        "Teens XS",
+        "Teens S",
+        "Teens M",
+        "Teens L"
+      ],
       "images": {
-        "main": "fs-high-front",
-        "extra": ["fs-high-back"],
+        "main": "fs-high-navy",
+        "extra": [
+          "fs-high-navy-back",
+          "fs-high-black",
+          "fs-high-black-back",
+          "fs-high-mauve",
+          "fs-high-mauve-back",
+          "fs-high-red",
+          "fs-high-red-back"
+        ],
         "by_colour": {
           "Navy": "fs-high-navy",
           "Black": "fs-high-black",
@@ -121,11 +224,36 @@
       "price": "2499.00",
       "sleeve": "half",
       "fit": "boys",
-      "colours": ["Navy", "Black", "Sky Blue", "Mauve", "Red"],
-      "sizes": ["Kids M", "Kids L", "Kids XL", "Teens S", "Teens M", "Men S", "Men M", "Men L"],
+      "colours": [
+        "Navy",
+        "Black",
+        "Sky Blue",
+        "Mauve",
+        "Red"
+      ],
+      "sizes": [
+        "Kids M",
+        "Kids L",
+        "Kids XL",
+        "Teens S",
+        "Teens M",
+        "Men S",
+        "Men M",
+        "Men L"
+      ],
       "images": {
-        "main": "hs-normal-front",
-        "extra": ["hs-normal-back"],
+        "main": "hs-normal-navy",
+        "extra": [
+          "hs-normal-navy-back",
+          "hs-normal-black",
+          "hs-normal-black-back",
+          "hs-normal-sky-blue",
+          "hs-normal-sky-blue-back",
+          "hs-normal-mauve",
+          "hs-normal-mauve-back",
+          "hs-normal-red",
+          "hs-normal-red-back"
+        ],
         "by_colour": {
           "Navy": "hs-normal-navy",
           "Black": "hs-normal-black",
@@ -142,61 +270,110 @@
         "Contrast cuff and collar in white"
       ]
     },
-
     {
       "code": "SH-ALOE",
       "handle": "piquant-aloe-and-coconut-oil-revitalizer-horse-shampoo",
       "title": "Aloe and Coconut Oil Revitalizer Horse Shampoo",
       "category": "shampoo-and-conditioner",
-      "sizes_ml": [250, 500],
-      "images": { "main": "shampoo-aloe-coconut" },
+      "sizes_ml": [
+        250,
+        500
+      ],
+      "images": {
+        "main": "shampoo-aloe-coconut"
+      },
       "strapline": "Purifies, protects, soothes",
       "blurb": "A gentle, nourishing shampoo for a healthy coat and happier skin.",
-      "ingredients": ["Aloe vera powder", "Coconut oil", "Rosemary oil", "Neem oil"]
+      "ingredients": [
+        "Aloe vera powder",
+        "Coconut oil",
+        "Rosemary oil",
+        "Neem oil"
+      ]
     },
     {
       "code": "SH-CUCU",
       "handle": "piquant-cucumber-melon-horse-shampoo",
       "title": "Cucumber Melon Horse Shampoo",
       "category": "shampoo-and-conditioner",
-      "sizes_ml": [250, 500],
-      "images": { "main": "shampoo-cucumber-melon" },
+      "sizes_ml": [
+        250,
+        500
+      ],
+      "images": {
+        "main": "shampoo-cucumber-melon"
+      },
       "strapline": "Fresh, juicy, revitalizing",
       "blurb": "A gentle cleanse for a healthy coat and skin.",
-      "ingredients": ["Cucumber melon essence", "Aloe vera powder", "Rosemary oil", "Coconut oil"]
+      "ingredients": [
+        "Cucumber melon essence",
+        "Aloe vera powder",
+        "Rosemary oil",
+        "Coconut oil"
+      ]
     },
     {
       "code": "SH-BHRI",
       "handle": "piquant-bhringaraj-revitalizer-horse-shampoo",
       "title": "Bhringaraj Revitalizer Horse Shampoo",
       "category": "shampoo-and-conditioner",
-      "sizes_ml": [250, 500],
-      "images": { "main": "shampoo-bhringaraj" },
+      "sizes_ml": [
+        250,
+        500
+      ],
+      "images": {
+        "main": "shampoo-bhringaraj"
+      },
       "strapline": "Nourishes, strengthens, restores",
       "blurb": "Nourishes deeply and strengthens naturally, for a healthy, radiant coat.",
-      "ingredients": ["Bhringaraj oil", "Rosemary oil", "Coconut oil"]
+      "ingredients": [
+        "Bhringaraj oil",
+        "Rosemary oil",
+        "Coconut oil"
+      ]
     },
     {
       "code": "SH-YLAN",
       "handle": "piquant-ylang-ylang-horse-shampoo",
       "title": "Ylang Ylang Horse Shampoo",
       "category": "shampoo-and-conditioner",
-      "sizes_ml": [250, 500],
-      "images": { "main": "shampoo-ylang-ylang" },
+      "sizes_ml": [
+        250,
+        500
+      ],
+      "images": {
+        "main": "shampoo-ylang-ylang"
+      },
       "strapline": "Clean, care, shine",
       "blurb": "Ylang ylang essential oil to keep your horse's coat clean, healthy and naturally radiant.",
-      "ingredients": ["Essential oil", "Aloe vera powder", "Rosemary oil", "Neem oil", "Coconut oil"]
+      "ingredients": [
+        "Essential oil",
+        "Aloe vera powder",
+        "Rosemary oil",
+        "Neem oil",
+        "Coconut oil"
+      ]
     },
     {
       "code": "SH-CLD9",
       "handle": "piquant-cloud-9-horse-shampoo",
       "title": "Cloud 9 Horse Shampoo",
       "category": "shampoo-and-conditioner",
-      "sizes_ml": [250, 500],
-      "images": { "main": "shampoo-cloud-9" },
+      "sizes_ml": [
+        250,
+        500
+      ],
+      "images": {
+        "main": "shampoo-cloud-9"
+      },
       "strapline": "Gentle, nourishing, pH balanced",
       "blurb": "Gentle care for a clean, nourished and healthy-looking coat.",
-      "ingredients": ["Anota seeds", "Coconut oil", "Rosemary oil", "Essential oils"]
+      "ingredients": [
+        "Anota seeds",
+        "Coconut oil",
+        "Rosemary oil",
+        "Essential oils"
+      ]
     }
   ]
 }
