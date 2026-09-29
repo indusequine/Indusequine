@@ -1,0 +1,83 @@
+{
+ "merged": [
+  {
+   "survivor": "freejump-spur-one-disc",
+   "absorb_ids": {
+    "freejump-spur-one-disc-black-pearl": "gid://shopify/Product/7740530622551"
+   }
+  },
+  {
+   "survivor": "freejump-spur-one-extra-long",
+   "absorb_ids": {
+    "freejump-spur-one-extra-long-black-pearl": "gid://shopify/Product/7740530688087"
+   }
+  },
+  {
+   "survivor": "freejump-spur-one-hammer",
+   "absorb_ids": {
+    "freejump-spur-one-hammer-black-pearl": "gid://shopify/Product/7740530786391"
+   }
+  },
+  {
+   "survivor": "freejump-spur-one-prince-of-wales",
+   "absorb_ids": {
+    "freejump-spur-one-prince-of-wales-black-pearl": "gid://shopify/Product/7740530851927"
+   }
+  },
+  {
+   "survivor": "freejump-spur-one-round-end",
+   "absorb_ids": {
+    "freejump-spur-one-round-end-black-pearl": "gid://shopify/Product/7740530917463"
+   }
+  },
+  {
+   "survivor": "equitheme-soft-classic-competition-jacket-black-8-kids",
+   "absorb_ids": {
+    "equitheme-soft-classic-competition-jacket-black-10-kids": "gid://shopify/Product/7740524920919",
+    "equitheme-soft-classic-competition-jacket-black-12-kids": "gid://shopify/Product/7740524986455",
+    "equitheme-soft-classic-competition-jacket-black-14-kids": "gid://shopify/Product/7740525019223",
+    "equitheme-soft-classic-competition-jacket-navy-8-kids": "gid://shopify/Product/7740525215831",
+    "equitheme-soft-classic-competition-jacket-navy-10-kids": "gid://shopify/Product/7740525117527",
+    "equitheme-soft-classic-competition-jacket-navy-12-kids": "gid://shopify/Product/7740525150295",
+    "equitheme-soft-classic-competition-jacket-navy-14-kids": "gid://shopify/Product/7740525183063"
+   }
+  },
+  {
+   "survivor": "equitheme-bale-show-jacket-black-38-ladies",
+   "absorb_ids": {
+    "equitheme-bale-show-jacket-black-40-ladies": "gid://shopify/Product/7740523937879"
+   }
+  },
+  {
+   "survivor": "fleck-riding-whips-woven-nylon-cover-wrapped-grip-black-80cm",
+   "absorb_ids": {
+    "fleck-riding-whips-woven-nylon-cover-wrapped-grip-black-90cm": "gid://shopify/Product/7740527673431",
+    "fleck-riding-whips-woven-nylon-cover-wrapped-grip-blue-80cm": "gid://shopify/Product/7740527706199",
+    "fleck-riding-whips-woven-nylon-cover-wrapped-grip-blue-90cm": "gid://shopify/Product/7740527771735",
+    "fleck-riding-whips-woven-nylon-cover-wrapped-grip-brown-80cm": "gid://shopify/Product/7740527804503",
+    "fleck-riding-whips-woven-nylon-cover-wrapped-grip-brown-90cm": "gid://shopify/Product/7740527837271",
+    "fleck-riding-whips-woven-nylon-cover-wrapped-grip-burgundy-80cm": "gid://shopify/Product/7740527870039",
+    "fleck-riding-whips-woven-nylon-cover-wrapped-grip-burgundy-90cm": "gid://shopify/Product/7740527902807"
+   }
+  },
+  {
+   "survivor": "fleck-riding-whips-woven-nylon-cover-rubber-handle-assorted-80cm",
+   "absorb_ids": {
+    "fleck-riding-whips-woven-nylon-cover-rubber-handle-assorted-90cm": "gid://shopify/Product/7740528001111"
+   }
+  },
+  {
+   "survivor": "waldhausen-spur-10mm-grand-prix-roller-spurs",
+   "absorb_ids": {
+    "waldhausen-spur-20mm-grand-prix-roller-spurs": "gid://shopify/Product/7740552151127",
+    "waldhausen-spur-30mm-grand-prix-roller-spurs": "gid://shopify/Product/7740552183895"
+   }
+  },
+  {
+   "survivor": "eco-spurs-5mm-468609",
+   "absorb_ids": {
+    "eco-spurs-10mm-401275": "gid://shopify/Product/7771245215831"
+   }
+  }
+ ]
+}
