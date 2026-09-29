@@ -21,6 +21,7 @@ import sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
 from migrate_to_shopify import ShopifyClient, load_env  # noqa: E402
+from revalidate import ping  # noqa: E402
 from recategorise import (  # noqa: E402
     ADD_TO_COLLECTION,
     COLLECTIONS_QUERY,
@@ -121,6 +122,7 @@ def main():
     with open(STATE_PATH, "w") as f:
         json.dump({"moved": plan}, f, indent=1)
     print(f"\n{len(plan)} moved. --undo puts them back.")
+    ping()
     return 0
 
 

@@ -34,6 +34,7 @@ from pathlib import Path
 HERE = Path(__file__).resolve().parent
 sys.path.insert(0, str(HERE.parent))
 from migrate_to_shopify import ShopifyClient, load_env  # noqa: E402
+from revalidate import ping  # noqa: E402
 
 CATALOGUE = HERE / "catalogue.json"
 IMAGES = HERE / "images"
@@ -596,6 +597,7 @@ def main() -> int:
 
     STATE.write_text(json.dumps({"created": created}, indent=1))
     print(f"\n{len(created)} products created. Ids in {STATE.name} for rollback.")
+    ping()
     return 0
 
 

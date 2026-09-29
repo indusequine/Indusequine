@@ -28,6 +28,7 @@ import sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
 from migrate_to_shopify import ShopifyClient, load_env  # noqa: E402
+from revalidate import ping  # noqa: E402
 
 STATE = os.path.join(os.path.dirname(os.path.abspath(__file__)), "merge_split_state.json")
 
@@ -373,6 +374,7 @@ def main():
     with open(STATE, "w") as f:
         json.dump({"merged": done + kept}, f, indent=1)
     print(f"\n{len(done)} merged. --undo restores the drafted listings.")
+    ping()
     return 0
 
 
