@@ -28,7 +28,7 @@ ROOT = Path(__file__).resolve().parent.parent
 DEFAULT_SITE = "https://indusequine-indus9.vercel.app"
 
 
-def config() -> tuple[str, str | None]:
+def config() -> tuple[str, str | None, str | None]:
     env = {}
     path = ROOT / ".env"
     if path.exists():
@@ -39,23 +39,32 @@ def config() -> tuple[str, str | None]:
                 env[k.strip()] = v.strip()
     site = os.environ.get("SITE_URL") or env.get("SITE_URL") or DEFAULT_SITE
     secret = os.environ.get("REVALIDATE_SECRET") or env.get("REVALIDATE_SECRET")
-    return site.rstrip("/"), secret
+    bypass = os.environ.get("VERCEL_BYPASS_SECRET") or env.get("VERCEL_BYPASS_SECRET")
+    return site.rstrip("/"), secret, bypass
 
 
 def ping(paths: list[str] | None = None) -> bool:
     """Refresh the catalogue pages, or just the ones given. True if it worked."""
-    site, secret = config()
+    site, secret, bypass = config()
     if not secret:
         print("note: REVALIDATE_SECRET is not set, so the site still has its old "
               "pages for up to an hour. Add it to .env to refresh immediately.")
         return False
+
+    headers = {"Content-Type": "application/json"}
+    # The deployment sits behind Vercel's login wall, which answers a script
+    # with a 401 of its own long before the request reaches the site. This is
+    # the header Vercel provides to let automation through while people still
+    # meet the wall.
+    if bypass:
+        headers["x-vercel-protection-bypass"] = bypass
 
     body = json.dumps({"secret": secret, **({"paths": paths} if paths else {})}).encode()
     req = urllib.request.Request(
         # The site sets trailingSlash, and a POST does not survive the
         # 308 it answers with, so ask for the slashed path directly.
         f"{site}/api/revalidate/", data=body,
-        headers={"Content-Type": "application/json"}, method="POST",
+        headers=headers, method="POST",
     )
     try:
         with urllib.request.urlopen(req, timeout=30) as resp:
@@ -63,7 +72,12 @@ def ping(paths: list[str] | None = None) -> bool:
         print(f"refreshed {len(done)} path{'' if len(done) == 1 else 's'} on {site}")
         return True
     except urllib.error.HTTPError as e:
-        print(f"could not refresh the site: HTTP {e.code} {e.read().decode()[:160]}")
+        detail = e.read().decode()[:200]
+        if "vercel_auth_enabled" in detail:
+            detail = ("blocked by Vercel's Deployment Protection. Set "
+                      "VERCEL_BYPASS_SECRET in .env from Settings -> Deployment "
+                      "Protection -> Protection Bypass for Automation.")
+        print(f"could not refresh the site: HTTP {e.code} {detail}")
     except (urllib.error.URLError, TimeoutError, OSError) as e:
         print(f"could not reach the site to refresh it: {e}")
     return False

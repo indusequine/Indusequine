@@ -28,3 +28,12 @@ zero inventory. Each sync tags what its supplier's site reports, and
 shown and marked, never hidden. Hiding (status DRAFT) is reserved for products
 a supplier has dropped and for the split listings folded into multi-variant
 products.
+
+**A catalogue change is not visible until the pages are refreshed.** Every page
+that reads Shopify is cached for an hour, so a merge or a price fix keeps
+serving the old version until then, which reads as the change not having
+worked. `scripts/revalidate.py` tells the site to refresh; the write scripts
+call it themselves when they finish. It needs `REVALIDATE_SECRET` (matching the
+one set in Vercel) and `VERCEL_BYPASS_SECRET` (Settings -> Deployment
+Protection -> Protection Bypass for Automation), because the deployment sits
+behind Vercel's login wall and answers a script with its own 401 otherwise.
