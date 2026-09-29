@@ -1,6 +1,28 @@
 {
  "merged": [
   {
+   "survivor": "cwd-french-nose-band-bridle-regular",
+   "absorb_ids": {
+    "cwd-french-nose-band-bridle": "gid://shopify/Product/7740510699607",
+    "cwd-french-nose-band-bridle-regular-black-extra": "gid://shopify/Product/7740510994519",
+    "cwd-french-nose-band-bridle-regular-brown-extra": "gid://shopify/Product/7740511027287"
+   }
+  },
+  {
+   "survivor": "cwd-french-nose-band-bridle-anatomic",
+   "absorb_ids": {
+    "cwd-french-nose-band-bridle-anatomic-black-extra": "gid://shopify/Product/7740510896215",
+    "cwd-french-nose-band-bridle-anatomic-brown-extra": "gid://shopify/Product/7740510928983"
+   }
+  },
+  {
+   "survivor": "cwd-french-nose-band-bridle-anatomic-fancy-stitching",
+   "absorb_ids": {
+    "cwd-french-nose-band-bridle-anatomic-fancy-stitching-black-extra": "gid://shopify/Product/7740510830679",
+    "cwd-french-nose-band-bridle-anatomic-fancy-stitching-brown-extra": "gid://shopify/Product/7740510863447"
+   }
+  },
+  {
    "survivor": "freejump-spur-one-disc",
    "absorb_ids": {
     "freejump-spur-one-disc-black-pearl": "gid://shopify/Product/7740530622551"

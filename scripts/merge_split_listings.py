@@ -111,6 +111,48 @@ GROUPS = [
         "options": ["Size"],
         "members": {"eco-spurs-5mm-468609": {}, "eco-spurs-10mm-401275": {}},
     },
+    # -- CWD French Nose Band: three models, each 2 colours x 4 sizes, cut into
+    #    ten listings. The SKU reads CWD-FNB-<model>-<colour>-<size>, and the
+    #    price confirms the model: Regular 54999, Fancy 52566, Anatomic 49999.
+    #    The "Extra" listings carry no colour of their own and say Size=Full
+    #    where their SKU says EXT, so both are supplied here.
+    {
+        "survivor": "cwd-french-nose-band-bridle-regular",
+        "title": "CWD French Nose Band Bridle - Regular",
+        "options": ["Color", "Size"],
+        "members": {
+            "cwd-french-nose-band-bridle-regular": {},
+            # REG-BR-PON, the Brown/Pony this listing was missing
+            "cwd-french-nose-band-bridle": {},
+            "cwd-french-nose-band-bridle-regular-black-extra": {"Color": "Black", "Size": "Extra Full"},
+            "cwd-french-nose-band-bridle-regular-brown-extra": {"Color": "Brown", "Size": "Extra Full"},
+        },
+    },
+    {
+        "survivor": "cwd-french-nose-band-bridle-anatomic",
+        "title": "CWD French Nose Band Bridle - Anatomic",
+        "options": ["Color", "Size"],
+        "members": {
+            "cwd-french-nose-band-bridle-anatomic": {},
+            "cwd-french-nose-band-bridle-anatomic-black-extra": {"Color": "Black", "Size": "Extra Full"},
+            "cwd-french-nose-band-bridle-anatomic-brown-extra": {"Color": "Brown", "Size": "Extra Full"},
+        },
+    },
+    {
+        "survivor": "cwd-french-nose-band-bridle-anatomic-fancy-stitching",
+        "title": "CWD French Nose Band Bridle - Anatomic Fancy Stitching",
+        "options": ["Color", "Size"],
+        # Five of its six SKUs say ANA where the price says FAN, and carry a
+        # "-1" the importer added to keep them unique against the Anatomic
+        # listing they were copied from. CWD-FNB-FAN-BL-COB is the one that
+        # came through right, and sets the shape for the rest.
+        "sku_rewrite": (r"^CWD-FNB-ANA-(BL|BR)-(COB|FUL|PON|EXT)-1$", r"CWD-FNB-FAN-\1-\2"),
+        "members": {
+            "cwd-french-nose-band-bridle-anatomic-fancy-stitching": {},
+            "cwd-french-nose-band-bridle-anatomic-fancy-stitching-black-extra": {"Color": "Black", "Size": "Extra Full"},
+            "cwd-french-nose-band-bridle-anatomic-fancy-stitching-brown-extra": {"Color": "Brown", "Size": "Extra Full"},
+        },
+    },
 ]
 
 PRODUCT_QUERY = """
@@ -200,8 +242,12 @@ def build(client, group):
             missing = [o for o in group["options"] if o not in values]
             if missing:
                 return None, f"{handle}: no value for {missing}"
+            sku = v["sku"]
+            fix = group.get("sku_rewrite")
+            if fix and sku:
+                sku = re.sub(fix[0], fix[1], sku)
             variants.append({
-                "sku": v["sku"],
+                "sku": sku,
                 "price": v["price"],
                 "optionValues": [{"optionName": o, "name": values[o]} for o in group["options"]],
             })
@@ -258,8 +304,14 @@ def main():
         os.remove(STATE)
         return 0
 
+    only = next((a.split("=", 1)[1] for a in sys.argv if a.startswith("--only=")), None)
+    groups = [g for g in GROUPS if not only or only in g["survivor"]]
+    if only and not groups:
+        print(f"no group matches --only={only}")
+        return 1
+
     plans, problems = [], []
-    for group in GROUPS:
+    for group in groups:
         plan, why = build(client, group)
         (problems if why else plans).append(why or plan)
 
@@ -312,8 +364,14 @@ def main():
         print(f"[{i}/{len(plans)}] {p['survivor']}: {len(p['variants'])} variants, "
               f"{len(p['absorb'])} listings drafted")
 
+    # Keep what earlier runs recorded: a --only run would otherwise drop the
+    # rollback for every group it did not touch.
+    kept = []
+    if os.path.exists(STATE):
+        touched = {r["survivor"] for r in done}
+        kept = [r for r in json.load(open(STATE))["merged"] if r["survivor"] not in touched]
     with open(STATE, "w") as f:
-        json.dump({"merged": done}, f, indent=1)
+        json.dump({"merged": done + kept}, f, indent=1)
     print(f"\n{len(done)} merged. --undo restores the drafted listings.")
     return 0
 
