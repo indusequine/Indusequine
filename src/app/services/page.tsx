@@ -15,11 +15,12 @@ const services = [
     eyebrow: "Coaches",
     title: "The right instructor for the ride you want.",
     intro:
-      "India has excellent coaches. They live in stables and WhatsApp groups, not on the open web. Indusequine puts them in one place, with discipline, qualification, experience, fees and student reviews, so finding the right teacher stops being a treasure hunt.",
+      "India has excellent coaches. They live in stables and WhatsApp groups, not on the open web. Indusequine puts them in one place, with discipline, qualification, experience and student reviews, so finding the right teacher stops being a treasure hunt.",
     bullets: [
       "Disciplines: dressage, show jumping, eventing, polo, endurance, vaulting, hacking",
       "Levels: from first-lesson learners to international competitors",
-      "Filters: by city, stable, age group, fee range, language",
+      "Filters: by city, stable, age group, language",
+      "Fees on request: we put you in touch and the coach quotes you directly",
       "Profiles include credentials (BHS, FEI, IEF, federation licences) and verified student reviews",
     ],
     promiseEyebrow: "What we verify",
@@ -59,7 +60,7 @@ const services = [
     bullets: [
       "Disciplines: hot shoeing, cold shoeing, corrective work, barefoot trims",
       "Specialisms: sport horses, polo ponies, Marwari & indigenous breeds, foals",
-      "Travel radius, fees, and booking lead times shown up front",
+      "Travel radius and booking lead times shown up front, fees on request",
       "Verified by the stables they shoe at",
     ],
     promiseEyebrow: "What we verify",
