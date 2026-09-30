@@ -153,6 +153,12 @@ function buildVet(form) {
        'Degree, university and year. For example BVSc & AH, then MVSc in ' +
        'Surgery. Include any equine specialisation.');
 
+  text(form, 'Veterinary Council registration number', false,
+       'And which State Veterinary Council. This is optional, but it is '
+       + 'the one thing a worried owner can check for themselves, so a '
+       + 'profile that shows it gets trusted faster. Send it on WhatsApp '
+       + 'later if you do not have it to hand.');
+
   choice(form, 'Do you work with horses full time?', true,
          ['Yes, equine only', 'Mostly horses, some other animals',
           'Mixed practice, horses are part of it']);

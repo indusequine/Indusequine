@@ -65,7 +65,7 @@ const services = [
     promiseEyebrow: "What we verify",
     promiseItems: [
       "Apprenticeship / formal training",
-      "Stable references (minimum two)",
+      "Stable references",
       "Tooling & technique evidence",
       "Active client roster",
     ],
