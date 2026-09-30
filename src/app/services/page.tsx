@@ -27,7 +27,6 @@ const services = [
     promiseItems: [
       "Identity & teaching credentials",
       "Stable / school affiliation",
-      "Insurance & safeguarding",
       "Active student references",
     ],
   },

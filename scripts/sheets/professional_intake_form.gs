@@ -56,14 +56,14 @@ function buildIntakeForm() {
 
   // ---- who they are, asked of everyone -------------------------------------
   text(form, 'Full name', true);
-  text(form, 'Mobile number (WhatsApp, if different please say)', true);
-  text(form, 'Email address', false);
+  text(form, 'WhatsApp number', true,
+       'This is how we will reach you, and how we will ask for certificates '
+       + 'and photographs of your work.');
+  text(form, 'Email address', true);
   text(form, 'Which city and state are you based in?', true);
   text(form, 'Which languages do you work in?', true,
        'For example: English, Hindi, Marathi. Riders filter by this.');
   text(form, 'How many years have you worked with horses?', true);
-  text(form, 'Instagram, Facebook or website', false,
-       'Anything that shows your work. Leave blank if you have none.');
 
   // The question that sends each trade down its own page. Its choices point at
   // pages that do not exist yet, so it is created here and answered at the end.
@@ -124,6 +124,13 @@ function buildCoach(form) {
   para(form, 'Which stables or riding schools do you teach at?', true,
        'Name and city for each. If you travel to riders, say so here.');
 
+  text(form, 'Do you own your own club or riding school?', true,
+       'If you do, tell us what it is called. If not, just say no.');
+
+  choice(form, 'Can client horses be stabled where you teach?', true,
+         ['Yes', 'No', 'At some of the places I teach'],
+         'Riders looking to move a horse ask this first.');
+
   para(form, 'What are your qualifications?', true,
        'For example BHS Stage 3, FEI Level 1, EFI or IEF licence, NIS ' +
        'certification, or an army or police riding qualification. Please give ' +
@@ -131,21 +138,13 @@ function buildCoach(form) {
        'by certificate, say that — it is not a disqualification and we would ' +
        'rather know.');
 
-  choice(form, 'Do you hold public liability insurance?', true,
-         ['Yes', 'No', 'Through the stable I teach at', 'Not sure']);
-
-  choice(form, 'Do you have any child safeguarding training or certification?', true,
-         ['Yes', 'No'],
-         'We ask because parents will. A "no" does not stop you being listed.');
-
   text(form, 'What do you charge for a private lesson?', true, FEE_NOTE);
   text(form, 'And for a group lesson, or a monthly or package rate?', false);
 
-  text(form, 'Do you travel to other stables? How far?', true,
-       'For example: up to 30 km, or anywhere in the NCR.');
+  choice(form, 'Do you travel to other stables to teach?', true, ['Yes', 'No']);
 
   para(form, 'Two students or parents we can speak to', true,
-       'Name and phone number for each. ' + REF_NOTE);
+       'Name and phone number for each, and at least two please. A coach is judged by the riders they have taught, and this is the part riders trust most. ' + REF_NOTE);
 }
 
 
@@ -241,9 +240,6 @@ function buildClosing(form) {
   choice(form, 'May we list you on Indusequine once we have verified your details?', true,
          ['Yes', 'I would like to see my profile first']);
 
-  choice(form, 'May we contact the references you gave?', true, ['Yes', 'No']);
-
-  text(form, 'How did you hear about us?', false);
 
   form.addSectionHeaderItem()
     .setTitle('One more thing')
