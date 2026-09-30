@@ -143,7 +143,7 @@ function buildCoach(form) {
 
   choice(form, 'Do you travel to other stables to teach?', true, ['Yes', 'No']);
 
-  para(form, 'Two students or parents we can speak to', true,
+  para(form, 'Two students or parents we can speak to', false,
        'Name and phone number for each, and at least two please. A coach is judged by the riders they have taught, and this is the part riders trust most. ' + REF_NOTE);
 }
 
