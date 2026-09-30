@@ -153,9 +153,6 @@ function buildVet(form) {
        'Degree, university and year. For example BVSc & AH, then MVSc in ' +
        'Surgery. Include any equine specialisation.');
 
-  text(form, 'Veterinary Council registration number', true,
-       'And which State Veterinary Council you are registered with.');
-
   choice(form, 'Do you work with horses full time?', true,
          ['Yes, equine only', 'Mostly horses, some other animals',
           'Mixed practice, horses are part of it']);
@@ -177,10 +174,10 @@ function buildVet(form) {
          ['Yes, any hour', 'Yes, during daylight hours',
           'Only for stables I already work with', 'No']);
 
-  text(form, 'How quickly can you usually reach a horse in an emergency?', true,
+  text(form, 'How quickly can you usually reach a horse in an emergency?', false,
        'An honest answer helps more than an optimistic one.');
 
-  text(form, 'Which areas do you cover?', true,
+  text(form, 'Which areas do you cover?', false,
        'Districts, or a distance from your base.');
 
   choice(form, 'Do you work from a clinic, or do you travel?', true,
@@ -189,7 +186,7 @@ function buildVet(form) {
   text(form, 'What do you charge for a routine consultation or farm visit?', true, FEE_NOTE);
   text(form, 'And for a call-out or an emergency?', false);
 
-  para(form, 'Two stables or owners we can speak to', true,
+  para(form, 'Two stables or owners we can speak to', false,
        'Name and phone number for each. ' + REF_NOTE);
 }
 
@@ -216,17 +213,17 @@ function buildFarrier(form) {
 
   text(form, 'Roughly how many horses do you shoe in a month?', true);
 
-  text(form, 'Which areas do you travel to?', true,
+  text(form, 'Which areas do you travel to?', false,
        'Cities, or a distance from your base.');
 
-  text(form, 'How far ahead do you need to be booked?', true,
+  text(form, 'How far ahead do you need to be booked?', false,
        'For example: two days, or a week in season.');
 
-  text(form, 'What do you charge for a full set of shoes?', true, FEE_NOTE);
+  text(form, 'How much do you charge per horse for shoeing?', true, FEE_NOTE);
   text(form, 'And for a trim, or for remedial work?', false);
   text(form, 'Do you charge for travel? How much?', false);
 
-  para(form, 'Two stables we can speak to', true,
+  para(form, 'Two stables we can speak to', false,
        'Name and phone number for each. We ask farriers for two because a ' +
        'stable knows within a month whether the shoeing is holding. ' + REF_NOTE);
 }
@@ -241,12 +238,49 @@ function buildClosing(form) {
          ['Yes', 'I would like to see my profile first']);
 
 
+  photos(form);
+
   form.addSectionHeaderItem()
     .setTitle('One more thing')
-    .setHelpText('If you have certificates, licences or photographs of your ' +
-                 'work, send them to us on WhatsApp on the number we contacted ' +
-                 'you from. We deliberately have not asked you to upload ' +
-                 'anything here, because Google would make you sign in first.');
+    .setHelpText('If you have certificates or licences, send them to us on ' +
+                 'WhatsApp on the number we contacted you from.');
+}
+
+
+/**
+ * The photographs question.
+ *
+ * Apps Script has been able to read answers to a file-upload question for
+ * years without being able to create one. If that is still true this throws,
+ * and the log says what to add by hand rather than leaving a form that quietly
+ * asks for nothing.
+ */
+function photos(form) {
+  var title = 'Photographs of you and your work';
+  var help = 'As many as you like. A picture of you riding or teaching, your ' +
+    'work, your stable, your horses. This is the single thing that decides ' +
+    'whether a rider stops at your profile, and a listing without one gets ' +
+    'passed over. If you would rather send them on WhatsApp, that is fine too.';
+
+  try {
+    form.addFileUploadItem()
+      .setTitle(title)
+      .setHelpText(help)
+      .setRequired(false);
+    Logger.log('Photo upload question added.');
+  } catch (e) {
+    form.addParagraphTextItem()
+      .setTitle(title)
+      .setHelpText(help + ' Paste a link here, or just say you will send them ' +
+                   'on WhatsApp.')
+      .setRequired(false);
+    Logger.log('COULD NOT create a file-upload question: ' + e.message);
+    Logger.log('A text box asking for a link was put in its place. To take ' +
+               'real uploads, open the form, find "' + title + '", and change ' +
+               'its type to File upload. Set it to images only and allow up to ' +
+               '10 files. Google will ask you to confirm that respondents must ' +
+               'sign in to a Google account.');
+  }
 }
 
 
