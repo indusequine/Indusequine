@@ -12,6 +12,8 @@
  *   3. Run > buildIntakeForm. Google will ask for permission to create forms.
  *   4. The log prints two links: the form to send, and its edit page.
  *   5. In the form's editor, Responses > link to a spreadsheet.
+ *   6. Change the photographs question from Paragraph to File upload by hand.
+ *      Apps Script cannot create that question type; see photos() below.
  *
  * Re-running makes a second form; it does not update the first. Edit questions
  * here and rebuild while nobody has answered, or edit in the form itself once
@@ -256,10 +258,14 @@ function buildClosing(form) {
 /**
  * The photographs question.
  *
- * Apps Script has been able to read answers to a file-upload question for
- * years without being able to create one. If that is still true this throws,
- * and the log says what to add by hand rather than leaving a form that quietly
- * asks for nothing.
+ * Apps Script cannot create a file-upload question. Confirmed by running this
+ * on 2026-09-30: it reads answers to one happily but has no way to add one, so
+ * the call below throws and the text box is what you get.
+ *
+ * After every rebuild, open the form, find this question and change its type
+ * from Paragraph to File upload: images only, up to 10 files. Google then
+ * warns that respondents must sign in to a Google account, which on Android
+ * they already are.
  */
 function photos(form) {
   var title = 'Photographs of you and your work';
