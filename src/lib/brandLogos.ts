@@ -32,6 +32,7 @@ const WITH_LOGO = new Set([
   "mustad",
   "one-k",
   "ovation",
+  "piquant",
   "professional-s-choice",
   "riding-world",
   "roeckl",
@@ -59,6 +60,9 @@ const OPTICAL_SCALE: Record<string, number> = {
   shires: 0.94,
   ovation: 0.94,
   "professional-s-choice": 0.9,
+  // Square, so it takes nearly the full height: held back much further and
+  // the wordmark under the horse stops being readable.
+  piquant: 0.95,
 };
 
 export function brandLogoScale(name: string): number {
