@@ -1,0 +1,38 @@
+name: Sync EQUESTRIANS
+
+# Keeps EQUESTRIANS' three products on Indusequine in line with equestrians.in:
+# price changes, and out-of-stock / back-in-stock. Their airbag vest sells out,
+# so the stock state is the point of running this at all.
+#
+# They are on Shopify, so there is nothing to scrape: the sync reads their
+# public products.json directly. See scripts/equestrians/sync.py.
+
+on:
+  schedule:
+    - cron: "32 */6 * * *" # every 6 hours (UTC); between the other two syncs so none overlap
+  workflow_dispatch: # "Run workflow" button in the Actions tab
+
+concurrency:
+  group: sync-equestrians
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v5
+
+      - name: Sync into Shopify
+        env:
+          SHOPIFY_ADMIN_CLIENT_ID: ${{ secrets.SHOPIFY_ADMIN_CLIENT_ID }}
+          SHOPIFY_ADMIN_CLIENT_SECRET: ${{ secrets.SHOPIFY_ADMIN_CLIENT_SECRET }}
+          SHOPIFY_STORE_DOMAIN: ${{ secrets.SHOPIFY_STORE_DOMAIN }}
+          # Without these the sync still runs and says the site keeps its old
+          # pages for up to an hour, rather than failing a run that worked.
+          REVALIDATE_SECRET: ${{ secrets.REVALIDATE_SECRET }}
+          VERCEL_BYPASS_SECRET: ${{ secrets.VERCEL_BYPASS_SECRET }}
+        run: python3 scripts/equestrians/sync.py --apply

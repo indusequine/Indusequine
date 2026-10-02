@@ -16,6 +16,7 @@ const WITH_LOGO = new Set([
   "cwd",
   "elt",
   "equenatural",
+  "equestrians",
   "equilibrium",
   "equiline",
   "equitheme",
