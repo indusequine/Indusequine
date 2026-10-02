@@ -50,12 +50,21 @@ export type Product = {
   seller?: Seller | null; // who sells it, as distinct from who makes it
   supplierCode?: string | null; // what that seller calls it in their own system
   inStock: boolean;
+  gender?: string | null; // clothes only, and only where the title said
 };
 
 // Stock is not tracked in Shopify: our suppliers hold it, and each sync marks
 // what their site reports. An unmarked product is taken to be in stock, so a
 // product that has never been synced reads as available rather than sold out.
 const OUT_OF_STOCK_TAGS = ["sync:tack-shop-out-of-stock", "sync:out-of-stock"];
+
+/** Who a garment is cut for, where we know. Only clothes carry this: a girth
+ *  has no gender, and a product whose title never said is left without one
+ *  rather than guessed at, so it simply does not appear under a gender. */
+export function genderFromTags(tags: string[]): string | null {
+  const tag = tags.find((t) => t.startsWith("gender:"));
+  return tag ? tag.slice("gender:".length) : null;
+}
 
 export function inStockFromTags(tags: string[]): boolean {
   return !tags.some((t) => OUT_OF_STOCK_TAGS.includes(t));
@@ -132,6 +141,7 @@ function mapProduct(node: ShopifyProductNode, categoryName: string): Product {
     seller: sellerFromTags(node.tags),
     supplierCode: supplierCodeFromTags(node.tags),
     inStock: inStockFromTags(node.tags),
+    gender: genderFromTags(node.tags),
   };
 }
 

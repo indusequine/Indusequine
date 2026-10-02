@@ -6,6 +6,9 @@ import { ProductGrid } from "@/components/ProductGrid";
 
 const SEARCH_THRESHOLD = 12;
 
+// The order a shop lists them in, not alphabetical.
+const GENDER_ORDER = ["women", "men", "kids", "unisex"];
+
 type Sort = "featured" | "price-asc" | "price-desc" | "name";
 
 /** The lowest real price on a product, for sorting and for the range filter.
@@ -18,7 +21,7 @@ function lowestPrice(product: Product): number | null {
 export function CategoryProductBrowser({ products }: { products: Product[] }) {
   const [query, setQuery] = useState("");
   const [brand, setBrand] = useState("");
-  const [size, setSize] = useState("");
+  const [gender, setGender] = useState("");
   const [inStockOnly, setInStockOnly] = useState(false);
   const [sort, setSort] = useState<Sort>("featured");
 
@@ -32,10 +35,13 @@ export function CategoryProductBrowser({ products }: { products: Product[] }) {
     [products],
   );
 
-  const sizes = useMemo(() => {
-    const found = new Set<string>();
-    for (const p of products) for (const v of p.variants) if (v.size) found.add(v.size);
-    return [...found].sort((a, b) => a.localeCompare(b, undefined, { numeric: true }));
+  // Clothes carry who they are cut for; equipment does not, so the filter only
+  // appears where something in the category has one. Half this catalogue's
+  // clothes are untagged because their title never said, and those stay out of
+  // every gender rather than being guessed into one.
+  const genders = useMemo(() => {
+    const found = new Set(products.map((p) => p.gender).filter((g): g is string => Boolean(g)));
+    return GENDER_ORDER.filter((g) => found.has(g));
   }, [products]);
 
   const outOfStockCount = useMemo(() => products.filter((p) => !p.inStock).length, [products]);
@@ -47,7 +53,7 @@ export function CategoryProductBrowser({ products }: { products: Product[] }) {
         return false;
       }
       if (brand && p.brand !== brand) return false;
-      if (size && !p.variants.some((v) => v.size === size)) return false;
+      if (gender && p.gender !== gender) return false;
       if (inStockOnly && !p.inStock) return false;
       return true;
     });
@@ -61,11 +67,11 @@ export function CategoryProductBrowser({ products }: { products: Product[] }) {
       if (pb === null) return -1;
       return sort === "price-asc" ? pa - pb : pb - pa;
     });
-  }, [products, query, brand, size, inStockOnly, sort]);
+  }, [products, query, brand, gender, inStockOnly, sort]);
 
   const showSearch = products.length > SEARCH_THRESHOLD;
-  const showFilters = brands.length > 1 || sizes.length > 1 || outOfStockCount > 0;
-  const narrowed = Boolean(query || brand || size || inStockOnly);
+  const showFilters = brands.length > 1 || genders.length > 1 || outOfStockCount > 0;
+  const narrowed = Boolean(query || brand || gender || inStockOnly);
 
   const selectClass =
     "px-3 py-2.5 bg-cream-soft border border-forest/15 focus:border-forest focus:outline-none " +
@@ -103,17 +109,17 @@ export function CategoryProductBrowser({ products }: { products: Product[] }) {
               </select>
             )}
 
-            {sizes.length > 1 && (
+            {genders.length > 1 && (
               <select
-                value={size}
-                onChange={(e) => setSize(e.target.value)}
-                aria-label="Filter by size"
+                value={gender}
+                onChange={(e) => setGender(e.target.value)}
+                aria-label="Filter by who it is for"
                 className={selectClass}
               >
-                <option value="">All sizes</option>
-                {sizes.map((s) => (
-                  <option key={s} value={s}>
-                    {s}
+                <option value="">Everyone</option>
+                {genders.map((g) => (
+                  <option key={g} value={g}>
+                    {g === "kids" ? "Kids" : g === "unisex" ? "Unisex" : g === "men" ? "Men" : "Women"}
                   </option>
                 ))}
               </select>
@@ -154,7 +160,7 @@ export function CategoryProductBrowser({ products }: { products: Product[] }) {
                 onClick={() => {
                   setQuery("");
                   setBrand("");
-                  setSize("");
+                  setGender("");
                   setInStockOnly(false);
                 }}
                 className="underline underline-offset-2 hover:text-forest"
