@@ -1,19 +1,19 @@
-name: Sync EQUESTRIANS
+name: Sync Vonamor
 
-# Keeps EQUESTRIANS' three products on Indusequine in line with equestrians.in:
-# price changes, and out-of-stock / back-in-stock. Their airbag vest sells out,
+# Keeps Vonamor's nine products on Indusequine in line with vonamor.in:
+# price changes, and out-of-stock / back-in-stock. Breeches sell out by size,
 # so the stock state is the point of running this at all.
 #
 # They are on Shopify, so there is nothing to scrape: the sync reads their
-# public products.json directly. See scripts/equestrians/sync.py.
+# public products.json directly. See scripts/vonamor/sync.py.
 
 on:
   schedule:
-    - cron: "32 */6 * * *" # every 6 hours (UTC); the four syncs run at :02 :17 :32 :47 so none overlap
+    - cron: "02 */6 * * *" # every 6 hours (UTC); the four syncs run at :02 :17 :32 :47 so none overlap
   workflow_dispatch: # "Run workflow" button in the Actions tab
 
 concurrency:
-  group: sync-equestrians
+  group: sync-vonamor
   cancel-in-progress: false
 
 permissions:
@@ -35,4 +35,4 @@ jobs:
           # pages for up to an hour, rather than failing a run that worked.
           REVALIDATE_SECRET: ${{ secrets.REVALIDATE_SECRET }}
           VERCEL_BYPASS_SECRET: ${{ secrets.VERCEL_BYPASS_SECRET }}
-        run: python3 scripts/equestrians/sync.py --apply
+        run: python3 scripts/vonamor/sync.py --apply
