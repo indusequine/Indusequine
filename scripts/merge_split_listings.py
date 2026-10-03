@@ -28,6 +28,7 @@ import sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
 from migrate_to_shopify import ShopifyClient, load_env  # noqa: E402
+from snapshot import take  # noqa: E402
 from revalidate import ping  # noqa: E402
 
 STATE = os.path.join(os.path.dirname(os.path.abspath(__file__)), "merge_split_state.json")
@@ -296,7 +297,12 @@ def main():
         if not os.path.exists(STATE):
             print("nothing to undo")
             return 0
-        for row in json.load(open(STATE))["merged"]:
+        done = json.load(open(STATE))["merged"]
+        # Undoing is a write like any other, and what it overwrites is worth
+        # keeping too.
+        take(client, handles=[r["survivor"] for r in done]
+             + [h for r in done for h in r["absorb_ids"]], label="merge-undo")
+        for row in done:
             for handle, pid in row["absorb_ids"].items():
                 client.query(STATUS, {"input": {"id": pid, "status": "ACTIVE"}})
                 print(f"restored {handle}")
@@ -333,6 +339,9 @@ def main():
     if problems:
         print("\nRefusing to run while any group is unresolved.")
         return 1
+
+    take(client, handles=[h for p in plans for h in [p["survivor"], *p["absorb"]]],
+         label="merge-split-listings")
 
     done = []
     for i, p in enumerate(plans, 1):

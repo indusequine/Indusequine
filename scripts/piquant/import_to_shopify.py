@@ -35,6 +35,7 @@ HERE = Path(__file__).resolve().parent
 sys.path.insert(0, str(HERE.parent))
 from migrate_to_shopify import ShopifyClient, load_env  # noqa: E402
 from revalidate import ping  # noqa: E402
+from snapshot import take  # noqa: E402
 
 CATALOGUE = HERE / "catalogue.json"
 IMAGES = HERE / "images"
@@ -377,6 +378,7 @@ def main() -> int:
         return 0
 
     client = ShopifyClient(load_env())
+    take(client, handles=[p["handle"] for p in plans], label="piquant")
 
     if args.variants:
         # Only ever adds. A variant that exists in Shopify but not in the

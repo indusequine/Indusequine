@@ -37,3 +37,20 @@ call it themselves when they finish. It needs `REVALIDATE_SECRET` (matching the
 one set in Vercel) and `VERCEL_BYPASS_SECRET` (Settings -> Deployment
 Protection -> Protection Bypass for Automation), because the deployment sits
 behind Vercel's login wall and answers a script with its own 401 otherwise.
+
+**Snapshot before writing to Shopify.** `scripts/snapshot.py` copies the
+catalogue to `backups/` (gitignored): metadata for every product, and the
+actual image bytes for the products about to change. The scripts that can
+destroy something call `take()` themselves, before their first write and
+including their `--undo` paths. A dry run takes nothing.
+
+Downloading the images is the point, not a nicety. A colour split once deleted
+the photographs of 36 listings, and the script had recorded their URLs: Shopify
+CDN links die with the media they point at, so every one of them was already
+404 by the time it mattered. Recovering took an afternoon of supplier websites,
+and two colours were never found.
+
+**`productSet` means "this product is exactly this".** Anything not restated is
+removed, including media. It has now destroyed variants once and images once.
+Treat every call as destructive, pass everything the product should still have,
+and snapshot first.

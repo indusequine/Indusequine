@@ -34,6 +34,7 @@ sys.path.insert(0, HERE)
 
 from migrate_to_shopify import ShopifyClient, load_env  # noqa: E402
 from revalidate import ping  # noqa: E402
+from snapshot import take  # noqa: E402
 
 STATE = os.path.join(HERE, "split_colours_state.json")
 
@@ -225,6 +226,10 @@ def main() -> int:
             print("nothing to undo")
             return 0
         done = json.load(open(STATE))["split"]
+        # Undoing is a write like any other, and the thing it overwrites is
+        # worth keeping too.
+        take(client, handles=[m["handle"] for r in done for m in r["made"]],
+             label="split-colours-undo")
         for row in done:
             o = row["original"]
             res = client.query(PRODUCT_SET, {
@@ -259,6 +264,9 @@ def main() -> int:
     if not args.apply:
         print("\nDry run. Nothing written. Re-run with --apply.")
         return 0
+
+    take(client, handles=[pc["handle"] for p in plans for pc in p["pieces"]],
+         label="split-colours")
 
     collections = {}
     cursor = None

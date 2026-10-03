@@ -35,6 +35,7 @@ sys.path.insert(0, os.path.dirname(HERE))
 
 from migrate_to_shopify import ShopifyClient, load_env  # noqa: E402
 from revalidate import ping  # noqa: E402
+from snapshot import take  # noqa: E402
 
 FEED = "https://equestrians.in/products.json?limit=250"
 VENDOR = "EQUESTRIANS"
@@ -218,6 +219,8 @@ def main() -> int:
         if not page["pageInfo"]["hasNextPage"]:
             break
         cursor = page["pageInfo"]["endCursor"]
+
+    take(client, handles=[p["handle"] for p in plans], label="equestrians-sync")
 
     done = []
     for i, p in enumerate(plans, 1):

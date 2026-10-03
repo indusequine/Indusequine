@@ -50,3 +50,6 @@ next-env.d.ts
 # one-off script run logs
 /scripts/migration_output/
 /scripts/delhi_tack_shop/output/
+
+# catalogue snapshots taken before a write; local safety net, not source
+/backups/
