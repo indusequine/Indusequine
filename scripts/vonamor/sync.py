@@ -189,10 +189,13 @@ def main() -> int:
               + ("" if p["in_stock"] else "  OUT OF STOCK"))
     for t in skipped:
         print(f"  SKIPPED (no category mapped): {t}")
+    if skipped:
+        print("\n  Vonamor have added something this does not know where to file.")
+        print("  Add its product_type to CATEGORIES at the top of this file.")
 
     if not args.apply:
         print("\nDry run. Nothing written. Re-run with --apply.")
-        return 0
+        return 1 if skipped else 0
 
     client = ShopifyClient(load_env())
     take(client, handles=[p["handle"] for p in plans], label="vonamor-sync")
@@ -247,7 +250,9 @@ def main() -> int:
         json.dump({"synced": done}, f, indent=1)
     print(f"\n{len(done)} synced.")
     ping()
-    return 0
+    # Fail the run so the scheduled job emails rather than skipping in silence.
+    # Everything mappable has already been written by this point.
+    return 1 if skipped else 0
 
 
 if __name__ == "__main__":

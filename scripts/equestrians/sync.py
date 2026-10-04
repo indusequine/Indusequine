@@ -207,7 +207,7 @@ def main() -> int:
 
     if not args.apply:
         print("\nDry run. Nothing written. Re-run with --apply.")
-        return 0
+        return 1 if extra else 0
 
     client = ShopifyClient(load_env())
 
@@ -272,7 +272,8 @@ def main() -> int:
         json.dump({"synced": done}, f, indent=1)
     print(f"\n{len(done)} synced.")
     ping()
-    return 0
+    # Fail the run so the scheduled job emails rather than skipping in silence.
+    return 1 if extra else 0
 
 
 if __name__ == "__main__":
