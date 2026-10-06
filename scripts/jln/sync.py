@@ -98,12 +98,13 @@ STOP_WORDS = {"the", "with", "and", "a", "for", "of", "to", "in"}
 # Products held back for a decision rather than guessed at. The nine with no
 # entry in category_map.json are held automatically; these are held for other
 # reasons.
-HELD = {
-    "waldhausen-single-jointed-pony-snaffle":
-        "duplicate of waldhausen-single-jointed-pony-snaffle-bit on their side "
-        "- same bit, same two sizes, Rs3,000 vs Rs4,100, this one with no "
-        "photo, description or category. Ask JLN which is current.",
-}
+# Listings held back for a decision rather than guessed at, by their slug and
+# the reason. Empty on purpose: JLN list the Waldhausen Single Jointed Pony
+# Snaffle twice, same two sizes, Rs3,000 and Rs4,100, and both go up as they
+# are. If that is their mistake they will correct it on their side and the next
+# run carries the correction through, which is the whole point of reading their
+# catalogue rather than keeping our own copy of it.
+HELD: dict[str, str] = {}
 
 # Three of their listings are priced or varied by an option products.ts cannot
 # read, so published whole they would show one size twice at two prices. Each
