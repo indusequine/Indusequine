@@ -350,13 +350,20 @@ def variants_of(prod: dict, code: str, fetch_each: bool,
                 continue
             label = pretty.get(a["name"], {}).get(a["value"], a["value"])
             chosen.append((names.get(a["name"], a["name"]), unescape(str(label))))
+        sku = "-".join([code] + [slug(val).upper() for _, val in chosen]) if chosen else code
         out.append({
-            "sku": "-".join([code] + [slug(val).upper() for _, val in chosen]) if chosen else code,
+            "sku": sku,
             "price": f"{price:.2f}",
-            "optionValues": [{"optionName": n, "name": val} for n, val in chosen],
+            # productSet refuses variants with no options, and a product whose
+            # every attribute holds a single value has none left after the
+            # constants are dropped. The migration's own answer was a "Title"
+            # option, which products.ts already reads as no size and no colour.
+            "optionValues": ([{"optionName": n, "name": val} for n, val in chosen]
+                             or [{"optionName": "Title", "name": sku}]),
         })
-    if not out:  # a simple product, no variations
-        out.append({"sku": code, "price": f"{parent_price:.2f}", "optionValues": []})
+    if not out:  # a simple product, no variations at all
+        out.append({"sku": code, "price": f"{parent_price:.2f}",
+                    "optionValues": [{"optionName": "Title", "name": code}]})
     return out
 
 
@@ -420,13 +427,19 @@ def plan_for(prod: dict, category: str,
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--apply", action="store_true", help="write to Shopify")
-    ap.add_argument("--only", help="one of their slugs, for a single product")
+    ap.add_argument("--only", help="comma-separated slugs of theirs, to redo "
+                                   "just those; the rest of the state is kept")
     args = ap.parse_args()
 
     cmap = json.load(open(CATEGORY_MAP))
     feed = get(FEED)
     if args.only:
-        feed = [p for p in feed if p["slug"] == args.only]
+        wanted = {x.strip() for x in args.only.split(",") if x.strip()}
+        missing = wanted - {p["slug"] for p in feed}
+        if missing:
+            print(f"not on their site: {', '.join(sorted(missing))}")
+            return 2
+        feed = [p for p in feed if p["slug"] in wanted]
 
     plans, held = [], []
     for p in feed:
@@ -516,8 +529,15 @@ def main() -> int:
         print(f"[{i}/{len(plans)}] {q['handle']}: {len(q['variants'])} variants"
               + ("" if q["in_stock"] else ", marked out of stock"))
 
+    # A partial run must not erase what a full run recorded: an --only pass
+    # once overwrote the rollback state for eleven earlier merges.
+    synced = done
+    if args.only and os.path.exists(STATE):
+        before = json.load(open(STATE)).get("synced") or []
+        fresh = {d["handle"] for d in done}
+        synced = [d for d in before if d["handle"] not in fresh] + done
     with open(STATE, "w") as f:
-        json.dump({"synced": done}, f, indent=1)
+        json.dump({"synced": synced}, f, indent=1)
     print(f"\n{len(done)} synced.")
     ping()
     # Fail the run so the scheduled job emails rather than holding in silence.
