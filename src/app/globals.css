@@ -970,3 +970,73 @@ h1, h2, h3, h4, h5, h6, .font-display {
   outline: 2px solid var(--color-brass);
   outline-offset: 2px;
 }
+
+
+/* The hero on a phone. The comp this was built from is a 1920x1080 landscape
+   frame: copy down the left third, a wash from the left so white type reads,
+   and the block centred vertically. None of that survives a portrait screen,
+   where the left third is the whole width and centred copy leaves a gap above
+   and below with the headline floating in the middle of the picture.
+   So on a phone the copy sits on the floor of the frame, the wash comes up
+   from the bottom instead of in from the left, and the buttons span the width
+   rather than huddling at one end. */
+@media (max-width: 767px) {
+  .campaign-hero__slide { align-items: flex-end; }
+
+  .campaign-hero__shade {
+    background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.42) 0%,
+      transparent 26%,
+      rgba(0, 0, 0, 0.22) 54%,
+      rgba(0, 0, 0, 0.86) 100%);
+  }
+
+  .campaign-hero__copy {
+    padding-left: calc(1.25rem + env(safe-area-inset-left, 0px));
+    padding-right: calc(1.25rem + env(safe-area-inset-right, 0px));
+    padding-top: 0;
+    padding-bottom: calc(4.5rem + env(safe-area-inset-bottom, 0px));
+  }
+
+  .campaign-hero__eyebrow {
+    font-size: 0.625rem;
+    letter-spacing: 0.18em;
+    margin-bottom: 0.75rem;
+  }
+
+  .campaign-hero__title {
+    font-size: 2.5rem;
+    line-height: 1.07;
+    margin-bottom: 0.75rem;
+    /* the comp's line breaks are written for a wide frame; let it set its own */
+    white-space: normal;
+    max-width: none;
+  }
+
+  .campaign-hero__body {
+    font-size: 0.9375rem;
+    line-height: 1.5;
+    margin-bottom: 1.25rem;
+    max-width: 34ch;
+  }
+
+  .campaign-hero__actions { gap: 0.5rem; }
+
+  .campaign-hero__button {
+    flex: 1;
+    min-height: 3rem;
+    padding-inline: 0.75rem;
+    font-size: 0.875rem;
+  }
+
+  /* The second action reads as the quieter of the two, the way it does on a
+     phone banner, rather than two identical white slabs. */
+  .campaign-hero__button + .campaign-hero__button {
+    background: transparent;
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.65);
+  }
+
+  .campaign-hero__dots { bottom: calc(1.75rem + env(safe-area-inset-bottom, 0px)); }
+}
