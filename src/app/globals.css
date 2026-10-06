@@ -292,9 +292,20 @@ h1, h2, h3, h4, h5, h6, .font-display {
   transform: scale(1.06);
 }
 
+.brand-strip__lanes {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+/* Every other lane runs the other way. */
+.brand-strip__viewport[data-reverse] .brand-strip__track {
+  animation-direction: reverse;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .brand-strip__track {
-    animation: brandDrift 90s linear infinite;
+    animation: brandDrift var(--drift, 90s) linear infinite;
   }
 
   /* Held still for a reader on a poor connection, where the second row that
@@ -878,4 +889,78 @@ h1, h2, h3, h4, h5, h6, .font-display {
 
 @media (min-width: 1650px) {
   .site-header--overlay nav { gap: 2.75rem; }
+}
+
+
+/* The bar along the bottom of a phone. Fixed, so it survives the page
+   scrolling, and it sits above the home indicator rather than under it. The
+   body is padded by the same amount so the footer is never trapped behind it.
+   Nothing here applies from md up, where the header does this job. */
+.mobile-tabs {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 50;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  background: var(--color-cream-soft);
+  border-top: 1px solid rgba(26, 58, 46, 0.14);
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+  /* iOS draws a translucent bar over this; the blur keeps the labels legible
+     against whatever is scrolling underneath. */
+  backdrop-filter: blur(8px);
+}
+
+.mobile-tabs__tab {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.1875rem;
+  padding: 0.5rem 0.25rem 0.4375rem;
+  color: var(--color-forest);
+  opacity: 0.55;
+  text-decoration: none;
+  font-family: var(--font-body);
+  font-size: 0.625rem;
+  letter-spacing: 0.04em;
+  /* A tap target under 44px is one a thumb misses. */
+  min-height: 52px;
+}
+
+.mobile-tabs__tab[aria-current="page"] {
+  opacity: 1;
+  color: var(--color-forest-deep);
+}
+
+.mobile-tabs__tab:active { opacity: 0.85; }
+.mobile-tabs__tab:focus-visible {
+  outline: 2px solid var(--color-brass);
+  outline-offset: -3px;
+}
+
+/* Room for the bar, so the last row of products and the footer clear it. */
+@media (max-width: 767px) {
+  body { padding-bottom: calc(52px + env(safe-area-inset-bottom, 0px)); }
+}
+
+
+/* Three lanes only pay their way if the nameplates are small enough that a
+   phone shows several at once; at the desktop size two filled the screen. */
+@media (max-width: 767px) {
+  .brand-strip__lanes { gap: 0.5rem; }
+
+  .brand-strip__item { width: 92px; }
+  .brand-strip__box { height: 34px; }
+  .brand-strip__name { font-size: 0.6875rem; letter-spacing: 0.045em; }
+  .brand-strip__row { gap: 1.5rem; padding-right: 1.5rem; }
+
+  /* A narrower fade, or it eats most of a phone's width. */
+  .brand-strip__viewport {
+    -webkit-mask-image: linear-gradient(
+      90deg, transparent, #000 28px, #000 calc(100% - 28px), transparent);
+    mask-image: linear-gradient(
+      90deg, transparent, #000 28px, #000 calc(100% - 28px), transparent);
+  }
 }
