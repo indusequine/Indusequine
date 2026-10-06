@@ -44,7 +44,7 @@ from html import unescape
 HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, os.path.dirname(HERE))
 
-from feeds import FeedUnavailable, read_json  # noqa: E402
+from feeds import FeedUnavailable, last_written, read_json, tolerate  # noqa: E402
 from migrate_to_shopify import ShopifyClient, load_env  # noqa: E402
 from revalidate import ping  # noqa: E402
 from snapshot import take  # noqa: E402
@@ -435,7 +435,9 @@ def main() -> int:
         feed = get(FEED)
     except FeedUnavailable as e:
         print(f"{e}\n  {e.url}\n\nNothing was written. Shopify is unchanged.")
-        return 2
+        # Rate limited is their address being busy, not a fault of ours, so
+        # wait for the next run unless nothing has synced here in a week.
+        return tolerate(e, last_written(ShopifyClient(load_env()), SUPPLIER_TAG))
     if args.only:
         wanted = {x.strip() for x in args.only.split(",") if x.strip()}
         missing = wanted - {p["slug"] for p in feed}
@@ -444,7 +446,12 @@ def main() -> int:
             return 2
         feed = [p for p in feed if p["slug"] in wanted]
 
-    plans, held = [], []
+    # Two different things, which must not look the same from the outside.
+    # `held` is a listing somebody has already looked at and written a reason
+    # for; it is a settled state and does not fail the run. `unknown` is
+    # something of theirs nothing here can place, which is the whole reason
+    # this run shouts.
+    plans, held, unknown = [], [], []
     for p in feed:
         if p["slug"] in HELD:
             held.append((p, HELD[p["slug"]]))
@@ -455,32 +462,39 @@ def main() -> int:
                 if q["variants"]:
                     plans.append(q)
                 else:
-                    held.append((p, f"{spec['attribute']} {value} is in SPLITS "
-                                    f"but they list no variation for it"))
+                    unknown.append((p, f"{spec['attribute']} {value} is in "
+                                       f"SPLITS but they list no variation for it"))
         elif p["slug"] in cmap:
             plans.append(plan_for(p, cmap[p["slug"]]))
         else:
-            held.append((p, "not in category_map.json - nothing here knows "
-                            "where it should be filed"))
+            unknown.append((p, "not in category_map.json - nothing here knows "
+                               "where it should be filed"))
 
     # listings, not products: three of theirs become two listings each
     print(f"JLN Equestrian: {len(feed)} products on their site, "
           f"{len(plans)} listing{'' if len(plans) == 1 else 's'} to write, "
-          f"{len(held)} held\n")
+          f"{len(held)} held, {len(unknown)} needing a decision\n")
     for q in plans:
         pic = f"{len(q['images'])}img" if q["images"] else "NO PHOTO"
         print(f"  {q['title'][:48]:48s} {q['category']:28s} "
               f"{len(q['variants'])}v {pic:8s} {q['gender'] or '-':6s}"
               + ("" if q["in_stock"] else " OUT OF STOCK"))
     if held:
-        print(f"\n  {len(held)} held back, not written:")
+        print(f"\n  {len(held)} held back on purpose, not written:")
         for p, why in held:
             print(f"    {title_of(p['name'])[:52]}")
             print(f"        {why}")
+    if unknown:
+        print(f"\n  {len(unknown)} NEEDS A DECISION:")
+        for p, why in unknown:
+            print(f"    {title_of(p['name'])[:52]}")
+            print(f"        {why}")
+        print("\n  JLN have listed something this does not know where to file.")
+        print("  Add it to scripts/jln/category_map.json.")
 
     if not args.apply:
         print("\nDry run. Nothing written. Re-run with --apply.")
-        return 1 if held else 0
+        return 1 if unknown else 0
 
     client = ShopifyClient(load_env())
     take(client, handles=[q["handle"] for q in plans], label="jln-sync")
@@ -546,9 +560,10 @@ def main() -> int:
         json.dump({"synced": synced}, f, indent=1)
     print(f"\n{len(done)} synced.")
     ping()
-    # Fail the run so the scheduled job emails rather than holding in silence.
-    # Everything mappable has already been written by this point.
-    return 1 if held else 0
+    # Fail only on something new that nothing can place, so the email means
+    # "come and look". A listing held with a written reason is a decision
+    # already taken and must not mail every six hours forever.
+    return 1 if unknown else 0
 
 
 if __name__ == "__main__":

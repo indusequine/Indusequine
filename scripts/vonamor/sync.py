@@ -32,7 +32,7 @@ import urllib.request
 HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, os.path.dirname(HERE))
 
-from feeds import FeedUnavailable, read_json  # noqa: E402
+from feeds import FeedUnavailable, last_written, read_json, tolerate  # noqa: E402
 from migrate_to_shopify import ShopifyClient, load_env  # noqa: E402
 from revalidate import ping  # noqa: E402
 from snapshot import take  # noqa: E402
@@ -182,7 +182,9 @@ def main() -> int:
         # Their site, not our catalogue. Say so rather than dying on a
         # traceback that GitHub reports only as "exit code 1".
         print(f"{e}\n  {e.url}\n\nNothing was written. Shopify is unchanged.")
-        return 2
+        # Rate limited is their address being busy, not a fault of ours, so
+        # wait for the next run unless nothing has synced here in a week.
+        return tolerate(e, last_written(ShopifyClient(load_env()), SUPPLIER_TAG))
     plans = [q for q in (plan_for(p) for p in feed) if q]
     skipped = [p["title"] for p in feed if not CATEGORIES.get(p.get("product_type"))]
 

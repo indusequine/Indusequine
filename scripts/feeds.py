@@ -20,6 +20,7 @@ it, which is honest and is what their own storefront serves.
 """
 from __future__ import annotations
 
+import datetime
 import json
 import os
 import time
@@ -59,6 +60,87 @@ class FeedUnavailable(RuntimeError):
     def __init__(self, supplier: str, url: str, reason: str):
         self.supplier, self.url, self.reason = supplier, url, reason
         super().__init__(f"could not read {supplier}'s feed: {reason}")
+
+    @property
+    def rate_limited(self) -> bool:
+        """Shopify refusing the address rather than the request.
+
+        It rate limits by client IP, and these syncs run on GitHub runners
+        whose addresses are shared with a great many other projects, so the
+        budget is spent before our one request per six hours arrives. A new run
+        draws a new address, so this clears by itself and is not a fault.
+        """
+        return "HTTP 429" in self.reason
+
+
+# How long a supplier may go unread before it stops being someone else's
+# problem and becomes ours. Four runs a day and roughly a one-in-nine chance
+# each, so a week of silence is well past bad luck.
+QUIET_LIMIT = datetime.timedelta(days=7)
+
+LAST_WRITE_QUERY = """
+query($q: String!) {
+  products(first: 1, query: $q, sortKey: UPDATED_AT, reverse: true) {
+    nodes { updatedAt }
+  }
+}
+"""
+
+
+def last_written(client, supplier_tag: str) -> datetime.datetime | None:
+    """When this supplier's products were last written here, from Shopify.
+
+    Not from a file. A run on a GitHub runner writes to a fresh checkout and
+    never commits it, so anything this records locally is gone by the next run
+    and anything committed is frozen at whatever was committed. Shopify is the
+    one piece of state that actually persists between runs, and a successful
+    sync always touches it.
+    """
+    try:
+        nodes = client.query(LAST_WRITE_QUERY,
+                             {"q": f"tag:'{supplier_tag}'"})["data"]["products"]["nodes"]
+    except Exception as e:  # a broken read here must not mask the feed problem
+        print(f"  (could not ask Shopify when this supplier last synced: {e})")
+        return None
+    if not nodes:
+        return None
+    return datetime.datetime.fromisoformat(nodes[0]["updatedAt"].replace("Z", "+00:00"))
+
+
+def tolerate(error: FeedUnavailable,
+             last_write: datetime.datetime | None) -> int:
+    """The exit code for a feed we could not read: 0 to wait, 1 to shout.
+
+    A rate limit on a shared address is worth waiting out, because the next run
+    draws a different address. Mailing a failure every six hours for it only
+    teaches everyone to ignore the mail, which is how three broken syncs went
+    unnoticed for a week. But waiting quietly forever would hide a supplier who
+    has gone for good, so once their products here have been untouched for
+    longer than QUIET_LIMIT the run fails for real.
+    """
+    if not error.rate_limited:
+        return 1
+    if last_write is None:
+        print(f"\nRate limited, and nothing of {error.supplier}'s has ever been "
+              f"written here. Failing so this gets looked at.")
+        return 1
+    quiet = datetime.datetime.now(datetime.timezone.utc) - last_write
+    if quiet < QUIET_LIMIT:
+        print(f"\nRate limited by Shopify, which limits by address, and these "
+              f"runs share theirs with every other project on the runner.\n"
+              f"{error.supplier}'s products here were last written "
+              f"{quiet.total_seconds() / 3600:.0f} hours ago, so this is worth "
+              f"waiting out rather than calling a failure.")
+        annotate("notice", f"{error.supplier} rate limited by Shopify; last "
+                           f"written {quiet.total_seconds() / 3600:.0f}h ago, "
+                           f"inside the {QUIET_LIMIT.days}-day limit - waiting "
+                           f"for the next run")
+        return 0
+    print(f"\n{error.supplier}'s products here have not been written for "
+          f"{quiet.days} days, longer than the {QUIET_LIMIT.days} allowed. "
+          f"Failing for real.")
+    annotate("error", f"{error.supplier} has not synced for {quiet.days} days")
+    return 1
 
 
 def read_json(url: str, supplier: str, timeout: int = 30):
