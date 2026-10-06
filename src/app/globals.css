@@ -1060,3 +1060,56 @@ h1, h2, h3, h4, h5, h6, .font-display {
   .site-header__more span { width: 18px; height: 1.6px; }
   .site-header__more { gap: 4.5px; }
 }
+
+
+/* The horizontal rows the homepage is built from. */
+.rail-section { padding-block: 2rem 0.5rem; }
+
+.rail {
+  display: flex;
+  gap: 0.625rem;
+  overflow-x: auto;
+  padding-inline: 1.5rem;
+  padding-bottom: 0.75rem;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+
+.rail::-webkit-scrollbar { display: none; }
+
+/* A little over two tiles on a phone, so the one cut off at the edge says
+   there is more to see. */
+.rail > * {
+  flex: 0 0 44%;
+  scroll-snap-align: start;
+  min-width: 0;
+}
+
+.rail--wide > * { flex-basis: 66%; }
+
+@media (min-width: 640px) {
+  .rail > * { flex-basis: 30%; }
+  .rail--wide > * { flex-basis: 44%; }
+}
+
+@media (min-width: 768px) {
+  .rail { padding-inline: 2.5rem; gap: 1rem; }
+  .rail > * { flex-basis: 23%; }
+  .rail--wide > * { flex-basis: 31%; }
+}
+
+@media (min-width: 1024px) {
+  .rail > * { flex-basis: 18.5%; }
+  .rail--wide > * { flex-basis: 24%; }
+}
+
+/* Past the container's own width, line the first tile up with its edge rather
+   than with the screen's. 80rem is max-w-7xl, 2.5rem is the md gutter. */
+@media (min-width: 1360px) {
+  .rail { padding-inline: calc((100vw - 80rem) / 2 + 2.5rem); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .rail { scroll-snap-type: none; }
+}

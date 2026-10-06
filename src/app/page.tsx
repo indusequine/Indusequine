@@ -1,15 +1,16 @@
 import Link from "next/link";
 import type { Metadata } from "next";
-import { Container } from "@/components/Container";
 import CampaignHero, { type Campaign } from "@/components/CampaignHero";
 import BrandStrip from "@/components/BrandStrip";
-import CollectionBanner, { type BannerItem } from "@/components/CollectionBanner";
+import { Rail } from "@/components/Rail";
+import { CategoryTile } from "@/components/CategoryTile";
+import { ProductCard } from "@/components/ProductCard";
 import { categoryGroups } from "@/lib/categoryGroups";
-import { shopifyImage } from "@/lib/imageUrl";
 import { brandSlug } from "@/lib/brands";
 import {
   getAllBrands,
   getCategoriesWithCounts,
+  getCategoryImages,
   getProductsByBrand,
 } from "@/data/products";
 
@@ -54,112 +55,62 @@ const campaigns: Campaign[] = [
   },
 ];
 
-// The banner shows one real product from one brand, and moves on. Each pairing
-// is a brand and a category we hold photographed stock in, so the biggest tile
-// on the page is always something a rider can actually buy. It turns over with
-// the hourly revalidation rather than on every request, so the page stays
-// static and two people looking at once see the same thing.
-const BANNERS = [
-  { brand: "CWD", category: "bridle-and-reins" },
-  { brand: "Kep Italia", category: "helmet" },
-  { brand: "Freejump", category: "stirrup-and-stirrup-leathers" },
-  { brand: "Fleck", category: "whips" },
-  { brand: "Roeckl", category: "gloves" },
-  { brand: "Samshield", category: "show-jacket" },
-  { brand: "Horseware", category: "fly-sheet" },
-];
-
-// Two photographed products from each pairing, so the tile has a dozen or so
-// to move through. A pairing whose photography has gone contributes nothing
-// rather than leaving a gap.
-const PER_PAIRING = 2;
-
-async function collectBanners(categoryName: (slug: string) => string): Promise<BannerItem[]> {
-  const lists = await Promise.all(BANNERS.map((b) => getProductsByBrand(b.brand)));
-  const items: BannerItem[] = [];
-  BANNERS.forEach((choice, index) => {
-    const matching = lists[index]
-      .filter((p) => p.category === choice.category && p.image)
-      .slice(0, PER_PAIRING);
-    for (const product of matching) {
-      items.push({
-        eyebrow: categoryName(choice.category),
-        title: choice.brand,
-        href: `/marketplace/brand/${brandSlug(choice.brand)}/${choice.category}`,
-        image: product.image!,
-        alt: product.name,
-      });
-    }
-  });
-  return items;
-}
-
 export default async function HomePage() {
-  const [brands, categories, trendingProducts] = await Promise.all([
+  const [brands, categories, trendingProducts, categoryImages] = await Promise.all([
     getAllBrands(),
     getCategoriesWithCounts(),
     getProductsByBrand("Freejump"),
+    getCategoryImages(),
   ]);
 
-  const nameFor = (slug: string) =>
-    categories.find((c) => c.slug === slug)?.name ?? slug.replace(/-/g, " ");
-  const banners = await collectBanners(nameFor);
-  // Narrowed here so the tile below can rely on the image being there.
-  const trending = trendingProducts.find((p): p is typeof p & { image: string } =>
-    Boolean(p.image),
-  );
+  // The busiest categories that actually have a photograph, so no rail tile
+  // falls back to the logo pattern while a photographed one waits behind it.
+  const topCategories = [...categories]
+    .filter((c) => c.count > 0 && categoryImages.has(c.slug))
+    .sort((a, b) => b.count - a.count)
+    .slice(0, 12);
+  const trendingRail = trendingProducts.filter((p) => p.image).slice(0, 10);
 
   return (
     <div className="home">
       <CampaignHero campaigns={campaigns} />
 
+      {/* Rows rather than one stacked block. The block put a banner and a
+          trending product side by side in the markup and full width on a
+          phone, so two screens went by before a rider met a category. Four
+          rows now occupy about the space those two did, and each one says
+          what it holds by showing a piece of the next tile. */}
+      <Rail title="Shop by group" href="/marketplace" linkLabel="All categories" wide>
+        {categoryGroups.map((group) => (
+          <Link key={group.slug} href={`/marketplace/group/${group.slug}`} className="bento__tile">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src={group.image} alt="" />
+            <span className="bento__caption">{group.name}</span>
+          </Link>
+        ))}
+      </Rail>
+
+      <Rail title="Shop by category" href="/marketplace" linkLabel="All categories">
+        {topCategories.map((category) => (
+          <CategoryTile
+            key={category.slug}
+            category={category}
+            count={category.count}
+            href={`/marketplace/category/${category.slug}`}
+            image={categoryImages.get(category.slug)}
+          />
+        ))}
+      </Rail>
+
       <BrandStrip brands={brands} />
 
-      <section className="home__section border-t border-black/10">
-        <Container size="wide">
-          <div className="home__head">
-            <h2>Shop the collections</h2>
-            <Link href="/marketplace">All categories</Link>
-          </div>
-
-          <div className="bento">
-            <CollectionBanner items={banners} />
-
-            {/* Three, not four: the banner and the trending product take the
-                other two places in this block. Stable is on Shop All and in
-                the navigation. */}
-            {categoryGroups.slice(0, 3).map((group) => (
-              <Link
-                key={group.slug}
-                href={`/marketplace/group/${group.slug}`}
-                className="bento__tile"
-              >
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src={group.image} alt="" />
-                <span className="bento__caption">{group.name}</span>
-              </Link>
-            ))}
-
-            {trending && (
-              <Link
-                href={`/marketplace/product/${trending.slug}`}
-                className="bento__tile bento__tile--product"
-              >
-                <span className="bento__shot">
-                  {/* Shopify-hosted, so it goes through the same resizing helper
-                      the product cards use rather than next/image. */}
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img src={shopifyImage(trending.image, 760)} alt="" loading="lazy" />
-                </span>
-                <span className="bento__caption bento__caption--dark">
-                  <small>Trending now</small>
-                  {trending.name}
-                </span>
-              </Link>
-            )}
-          </div>
-        </Container>
-      </section>
+      {trendingRail.length > 0 && (
+        <Rail title="Trending now" href={`/marketplace/brand/${brandSlug("Freejump")}`}>
+          {trendingRail.map((product) => (
+            <ProductCard key={product.slug} product={product} />
+          ))}
+        </Rail>
+      )}
 
     </div>
   );
