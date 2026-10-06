@@ -91,6 +91,9 @@ SIZE_ATTRS = {
     "rug size",
 }
 
+# Words that carry nothing in a code read down the phone.
+STOP_WORDS = {"the", "with", "and", "a", "for", "of", "to", "in"}
+
 # Products held back for a decision rather than guessed at. The nine with no
 # entry in category_map.json are held automatically; these are held for other
 # reasons.
@@ -99,16 +102,35 @@ HELD = {
         "duplicate of waldhausen-single-jointed-pony-snaffle-bit on their side "
         "- same bit, same two sizes, Rs3,000 vs Rs4,100, this one with no "
         "photo, description or category. Ask JLN which is current.",
-    "jln-coronet-boots":
-        "priced by a Lining option (Sheepskin Rs1,100 / Without Rs850) our "
-        "picker cannot show, so size S would appear twice at two prices.",
-    "flex-on-armet-helmet-star":
-        "has a Visor Type option (Angel / Mixte) our picker cannot show, so "
-        "each colour and size would appear twice.",
 }
 
-# Words that carry nothing in a code read down the phone.
-STOP_WORDS = {"the", "with", "and", "a", "for", "of", "to", "in"}
+# Three of their listings are priced or varied by an option products.ts cannot
+# read, so published whole they would show one size twice at two prices. Each
+# becomes one listing per value instead, the way the colour split was done.
+# Front and hind are genuinely different boots and are filed differently.
+SPLITS = {
+    "premier-equine-air-cooled-original-eventing-boots": {
+        "attribute": "Horse Leg",
+        "values": {
+            "front": ("Front", "tendon-boots"),
+            "hind": ("Hind", "fetlock-boots"),
+        },
+    },
+    "jln-coronet-boots": {
+        "attribute": "Lining",
+        "values": {
+            "sheepskin": ("Sheepskin", "bell-boots"),
+            "without-sheepskin": ("Without Sheepskin", "bell-boots"),
+        },
+    },
+    "flex-on-armet-helmet-star": {
+        "attribute": "Visor Type",
+        "values": {
+            "angel": ("Angel Visor", "helmet"),
+            "mixte": ("Mixte Visor", "helmet"),
+        },
+    },
+}
 
 # Their descriptions end by restating the colours and sizes, which the picker
 # already shows. Dropped for the same reason Piquant's size lists were.
@@ -193,7 +215,9 @@ def code_for(title: str) -> str:
         words = words[len(vendor_words):]
     words = [w for w in words if w.lower() not in STOP_WORDS][:5]
     body = "".join(w[:4].upper() for w in words)
-    if vendor == NO_BRAND:
+    # JLN's own label needs no initial after JLN, and a product with no maker
+    # must not be given "I" for the no-brand marker
+    if vendor in (NO_BRAND, "JLN"):
         return f"JLN-{body}"
     # skip the possessive "s" of Professional's Choice, which would read PSC
     initials = "".join(w[0] for w in re.findall(r"[A-Za-z]{2,}", vendor))[:3].upper()
@@ -294,7 +318,8 @@ def real_images(prod: dict) -> list[str]:
             if "placeholder" not in i["src"].lower()]
 
 
-def variants_of(prod: dict, code: str, fetch_each: bool) -> list[dict]:
+def variants_of(prod: dict, code: str, fetch_each: bool,
+                split: tuple[str, str] | None = None) -> list[dict]:
     """One Shopify variant per variation of theirs.
 
     Their product object carries a single price and the variations carry only
@@ -311,12 +336,17 @@ def variants_of(prod: dict, code: str, fetch_each: bool) -> list[dict]:
 
     out = []
     for v in prod.get("variations") or []:
+        # one listing per value of a split option: keep only its variations,
+        # and drop the option itself, which is now said in the title
+        if split and not any(a["name"] == split[0] and a["value"] == split[1]
+                             for a in v["attributes"]):
+            continue
         price = parent_price
         if fetch_each:
             price = int(get(VARIATION.format(id=v["id"]))["prices"]["price"]) / 100
         chosen = []
         for a in v["attributes"]:
-            if a["name"] in constant:
+            if a["name"] in constant or (split and a["name"] == split[0]):
                 continue
             label = pretty.get(a["name"], {}).get(a["value"], a["value"])
             chosen.append((names.get(a["name"], a["name"]), unescape(str(label))))
@@ -340,11 +370,28 @@ def product_options(variants: list[dict]) -> list[dict]:
     return [{"name": n, "values": [{"name": x} for x in vals]} for n, vals in seen.items()]
 
 
-def plan_for(prod: dict, category: str) -> dict:
+def plan_for(prod: dict, category: str,
+             split: tuple[str, str, str] | None = None) -> dict:
+    """One product of theirs as one of ours.
+
+    `split` is (their attribute name, the term slug, what to call it), which
+    makes this one listing out of one value of an option our picker cannot
+    show. The code keeps the parent's words and gains the value, so the two
+    listings read as siblings down the phone.
+    """
     title = title_of(prod["name"])
     code = code_for(title)
+    # their own-label slugs already start with jln, and jln-jln-half-boots is
+    # not a URL anyone should be given
+    handle = prod["slug"] if prod["slug"].startswith("jln-") else f"jln-{prod['slug']}"
+    if split:
+        attribute, value, label = split
+        title = f"{title} - {label}"
+        code = f"{code}-{slug(label).upper()}"
+        handle = f"{handle}-{value}"
     fetch_each = bool(prod["prices"].get("price_range"))
-    variants = variants_of(prod, code, fetch_each)
+    variants = variants_of(prod, code, fetch_each,
+                           (split[0], split[1]) if split else None)
     in_stock = bool(prod.get("is_in_stock"))
 
     tags = [f"category:{category}", SUPPLIER_TAG, f"supplier-code:{code}"]
@@ -355,7 +402,7 @@ def plan_for(prod: dict, category: str) -> dict:
         tags.append(OOS_TAG)
 
     return {
-        "handle": f"jln-{prod['slug']}",
+        "handle": handle,
         "title": title,
         "vendor": vendor_of(title),
         "category": category,
@@ -385,6 +432,15 @@ def main() -> int:
     for p in feed:
         if p["slug"] in HELD:
             held.append((p, HELD[p["slug"]]))
+        elif p["slug"] in SPLITS:
+            spec = SPLITS[p["slug"]]
+            for value, (label, category) in spec["values"].items():
+                q = plan_for(p, category, (spec["attribute"], value, label))
+                if q["variants"]:
+                    plans.append(q)
+                else:
+                    held.append((p, f"{spec['attribute']} {value} is in SPLITS "
+                                    f"but they list no variation for it"))
         elif p["slug"] in cmap:
             plans.append(plan_for(p, cmap[p["slug"]]))
         else:
