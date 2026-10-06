@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Cormorant_Garamond, DM_Mono, Inter } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
@@ -28,6 +28,19 @@ const dmMono = DM_Mono({
   weight: ["400", "500"],
   display: "swap",
 });
+
+// Without viewport-fit=cover, iOS lays the whole page out inside the safe
+// area: the hero stops short of the top and bottom edges on every notched
+// iPhone and no height can reach them, which is most of why the campaign did
+// not fill the screen. Covering the whole display is the first half; the other
+// half is that every bar and button now has to keep itself clear of the
+// Dynamic Island and the home indicator with env(safe-area-inset-*), which the
+// stylesheet does from here on.
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  viewportFit: "cover",
+};
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://indusequine.com"),

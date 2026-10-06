@@ -357,6 +357,11 @@ h1, h2, h3, h4, h5, h6, .font-display {
      buttons off the bottom. */
   height: 100vh;
   height: 100svh;
+  /* dvh last, and it is the one that matters on an iPhone. Safari floats its
+     bottom bar over the large viewport rather than insetting it, so a hero
+     sized to the small viewport stops short and shows a band of the next
+     section underneath. dvh follows the bar as it collapses. */
+  height: 100dvh;
   min-height: 600px;
   overflow: hidden;
   background: #000;
@@ -397,8 +402,12 @@ h1, h2, h3, h4, h5, h6, .font-display {
   position: relative;
   z-index: 2;
   width: 100%;
-  padding-inline: clamp(1.5rem, 3.9vw, 4.6875rem);
-  padding-block: 7rem 4rem;
+  /* The insets are 0 on everything but a notched phone, so these need no
+     media query: on a desktop they resolve to exactly the old values. */
+  padding-left: calc(clamp(1.5rem, 3.9vw, 4.6875rem) + env(safe-area-inset-left, 0px));
+  padding-right: calc(clamp(1.5rem, 3.9vw, 4.6875rem) + env(safe-area-inset-right, 0px));
+  padding-top: 7rem;
+  padding-bottom: calc(4rem + env(safe-area-inset-bottom, 0px));
 }
 
 .campaign-hero__eyebrow {
@@ -458,7 +467,7 @@ h1, h2, h3, h4, h5, h6, .font-display {
   position: absolute;
   left: 0;
   right: 0;
-  bottom: clamp(1.5rem, 2.8vw, 3rem);
+  bottom: calc(clamp(1.5rem, 2.8vw, 3rem) + env(safe-area-inset-bottom, 0px));
   z-index: 3;
   display: flex;
   justify-content: center;
@@ -827,7 +836,11 @@ h1, h2, h3, h4, h5, h6, .font-display {
    on the homepage. */
 .site-header__bar {
   width: 100%;
-  padding-inline: clamp(1.25rem, 2.45vw, 2.9375rem);
+  padding-left: calc(clamp(1.25rem, 2.45vw, 2.9375rem) + env(safe-area-inset-left, 0px));
+  padding-right: calc(clamp(1.25rem, 2.45vw, 2.9375rem) + env(safe-area-inset-right, 0px));
+  /* The page now runs under the status bar, so the header pushes itself below
+     the clock rather than sitting behind it. */
+  padding-top: env(safe-area-inset-top, 0px);
 }
 
 /* Inner pages keep the gutter they had before the comp work, which was written
