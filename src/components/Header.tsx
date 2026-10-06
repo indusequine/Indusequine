@@ -124,6 +124,13 @@ export function Header() {
                 <input type="search" name="q" placeholder="Search" aria-label="Search the site" />
               </form>
 
+              {/* The field needs room a phone has not got, so below sm it is a
+                  button to the search page instead. Without it there is no way
+                  into 964 products on a phone at all. */}
+              <Link href="/search" className="site-header__searchlink sm:hidden" aria-label="Search">
+                <SearchGlyph />
+              </Link>
+
               <div
                 className="site-header__menu"
                 onMouseEnter={() => openMenu("more")}

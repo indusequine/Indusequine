@@ -892,60 +892,6 @@ h1, h2, h3, h4, h5, h6, .font-display {
 }
 
 
-/* The bar along the bottom of a phone. Fixed, so it survives the page
-   scrolling, and it sits above the home indicator rather than under it. The
-   body is padded by the same amount so the footer is never trapped behind it.
-   Nothing here applies from md up, where the header does this job. */
-.mobile-tabs {
-  position: fixed;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 50;
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  background: var(--color-cream-soft);
-  border-top: 1px solid rgba(26, 58, 46, 0.14);
-  padding-bottom: env(safe-area-inset-bottom, 0px);
-  /* iOS draws a translucent bar over this; the blur keeps the labels legible
-     against whatever is scrolling underneath. */
-  backdrop-filter: blur(8px);
-}
-
-.mobile-tabs__tab {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 0.1875rem;
-  padding: 0.5rem 0.25rem 0.4375rem;
-  color: var(--color-forest);
-  opacity: 0.55;
-  text-decoration: none;
-  font-family: var(--font-body);
-  font-size: 0.625rem;
-  letter-spacing: 0.04em;
-  /* A tap target under 44px is one a thumb misses. */
-  min-height: 52px;
-}
-
-.mobile-tabs__tab[aria-current="page"] {
-  opacity: 1;
-  color: var(--color-forest-deep);
-}
-
-.mobile-tabs__tab:active { opacity: 0.85; }
-.mobile-tabs__tab:focus-visible {
-  outline: 2px solid var(--color-brass);
-  outline-offset: -3px;
-}
-
-/* Room for the bar, so the last row of products and the footer clear it. */
-@media (max-width: 767px) {
-  body { padding-bottom: calc(52px + env(safe-area-inset-bottom, 0px)); }
-}
-
-
 /* Three lanes only pay their way if the nameplates are small enough that a
    phone shows several at once; at the desktop size two filled the screen. */
 @media (max-width: 767px) {
@@ -997,4 +943,30 @@ h1, h2, h3, h4, h5, h6, .font-display {
   .bento__caption small { font-size: 0.5625rem; margin-bottom: 0.125rem; }
 
   .bento__caption--dark { font-size: 0.75rem; line-height: 1.3; }
+}
+
+
+/* On a phone the search field has no room, so it is this instead: the same
+   36px square as the menu button next to it, with the same squared-off edge. */
+.site-header__searchlink {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 0;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  color: var(--color-forest);
+}
+
+.site-header--overlay .site-header__searchlink {
+  border-color: rgba(255, 255, 255, 0.55);
+  color: rgba(255, 255, 255, 0.9);
+  background: rgba(0, 0, 0, 0.42);
+  backdrop-filter: blur(2px);
+}
+
+.site-header__searchlink:focus-visible {
+  outline: 2px solid var(--color-brass);
+  outline-offset: 2px;
 }
