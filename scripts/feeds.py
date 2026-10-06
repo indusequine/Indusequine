@@ -174,9 +174,70 @@ def read_json(url: str, supplier: str, timeout: int = 30):
               f"(attempt {attempt} of {len(BACKOFF) + 1})")
         annotate("warning", f"{supplier} feed attempt {attempt}: {last}")
         time.sleep(pause)
+
+    # Refused for the address rather than the request, so ask from an address
+    # that is ours. Only worth doing for a rate limit: a 404 is a 404 wherever
+    # it is asked from.
+    if "HTTP 429" in last:
+        print(f"  {supplier}: rate limited here, asking the site to fetch it instead")
+        try:
+            return read_via_site(url, supplier, timeout)
+        except FeedUnavailable as e:
+            last = f"{last} | and through the site: {e.reason}"
+
     annotate("error", f"could not read {supplier}'s feed at {url} - {last}")
     probe(url, supplier)
     raise FeedUnavailable(supplier, url, last)
+
+
+def read_via_site(url: str, supplier: str, timeout: int = 30):
+    """The feed, fetched by our own deployment rather than by this machine.
+
+    Vercel has an address of its own that Shopify has no quarrel with, and the
+    deployment already holds the secret these scripts use for revalidation, so
+    this needs nothing new configured and nothing asked of the supplier.
+    """
+    from revalidate import config  # local import: only this path needs it
+
+    site, secret, bypass = config()
+    if not secret:
+        raise FeedUnavailable(supplier, url, "REVALIDATE_SECRET is not set, so "
+                                             "the site cannot be asked to fetch it")
+    headers = {"Content-Type": "application/json", "User-Agent": USER_AGENT}
+    # The deployment sits behind Vercel's login wall, which answers a script
+    # with its own 401 long before the request reaches the route.
+    if bypass:
+        headers["x-vercel-protection-bypass"] = bypass
+
+    body = json.dumps({"secret": secret, "url": url}).encode()
+    # trailingSlash is on and a POST does not survive the 308, so ask for the
+    # slashed path directly.
+    req = urllib.request.Request(f"{site}/api/supplier-feed/", data=body,
+                                 headers=headers, method="POST")
+    try:
+        with urllib.request.urlopen(req, timeout=timeout + 10) as resp:
+            relayed = json.loads(resp.read())
+    except urllib.error.HTTPError as e:
+        detail = e.read()[:200].decode("utf-8", "replace")
+        raise FeedUnavailable(supplier, url,
+                              f"the site would not fetch it: HTTP {e.code} {detail}")
+    except (urllib.error.URLError, TimeoutError, OSError, json.JSONDecodeError) as e:
+        raise FeedUnavailable(supplier, url,
+                              f"could not reach the site to fetch it: {e}")
+
+    status = relayed.get("status")
+    if status != 200:
+        raise FeedUnavailable(supplier, url,
+                              f"their feed answered the site with HTTP {status}")
+    try:
+        feed = json.loads(relayed.get("body") or "")
+    except json.JSONDecodeError as e:
+        raise FeedUnavailable(supplier, url,
+                              f"the site relayed something that is not JSON ({e})")
+    print(f"  {supplier}: read through the site")
+    annotate("notice", f"{supplier}'s feed was read through the site, "
+                       f"because this runner is rate limited by Shopify")
+    return feed
 
 
 def probe(url: str, supplier: str) -> None:
