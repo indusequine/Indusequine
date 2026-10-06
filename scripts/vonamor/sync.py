@@ -32,6 +32,7 @@ import urllib.request
 HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, os.path.dirname(HERE))
 
+from feeds import FeedUnavailable, read_json  # noqa: E402
 from migrate_to_shopify import ShopifyClient, load_env  # noqa: E402
 from revalidate import ping  # noqa: E402
 from snapshot import take  # noqa: E402
@@ -124,9 +125,7 @@ def description(html: str) -> str:
 
 
 def fetch_feed() -> list[dict]:
-    req = urllib.request.Request(FEED, headers={"User-Agent": "Indusequine catalogue sync"})
-    with urllib.request.urlopen(req, timeout=30) as resp:
-        return json.loads(resp.read())["products"]
+    return read_json(FEED, "Vonamor")["products"]
 
 
 def plan_for(p: dict) -> dict | None:
@@ -177,7 +176,13 @@ def main() -> int:
     ap.add_argument("--apply", action="store_true", help="write to Shopify")
     args = ap.parse_args()
 
-    feed = fetch_feed()
+    try:
+        feed = fetch_feed()
+    except FeedUnavailable as e:
+        # Their site, not our catalogue. Say so rather than dying on a
+        # traceback that GitHub reports only as "exit code 1".
+        print(f"{e}\n  {e.url}\n\nNothing was written. Shopify is unchanged.")
+        return 2
     plans = [q for q in (plan_for(p) for p in feed) if q]
     skipped = [p["title"] for p in feed if not CATEGORIES.get(p.get("product_type"))]
 

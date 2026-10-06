@@ -33,6 +33,7 @@ import urllib.request
 HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, os.path.dirname(HERE))
 
+from feeds import FeedUnavailable, read_json  # noqa: E402
 from migrate_to_shopify import ShopifyClient, load_env  # noqa: E402
 from revalidate import ping  # noqa: E402
 from snapshot import take  # noqa: E402
@@ -131,9 +132,7 @@ query($q: String!) {
 
 
 def fetch_feed() -> list[dict]:
-    req = urllib.request.Request(FEED, headers={"User-Agent": "Indusequine catalogue sync"})
-    with urllib.request.urlopen(req, timeout=30) as resp:
-        return json.loads(resp.read())["products"]
+    return read_json(FEED, "EQUESTRIANS")["products"]
 
 
 def plan_for(theirs: dict, ours: dict) -> dict:
@@ -188,7 +187,11 @@ def main() -> int:
     ap.add_argument("--apply", action="store_true", help="write to Shopify")
     args = ap.parse_args()
 
-    feed = {p["handle"]: p for p in fetch_feed()}
+    try:
+        feed = {p["handle"]: p for p in fetch_feed()}
+    except FeedUnavailable as e:
+        print(f"{e}\n  {e.url}\n\nNothing was written. Shopify is unchanged.")
+        return 2
     missing = [h for h in PRODUCTS if h not in feed]
     extra = [h for h in feed if h not in PRODUCTS]
 

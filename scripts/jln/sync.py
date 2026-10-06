@@ -44,6 +44,7 @@ from html import unescape
 HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, os.path.dirname(HERE))
 
+from feeds import FeedUnavailable, read_json  # noqa: E402
 from migrate_to_shopify import ShopifyClient, load_env  # noqa: E402
 from revalidate import ping  # noqa: E402
 from snapshot import take  # noqa: E402
@@ -175,9 +176,7 @@ query($q: String!) {
 
 
 def get(url: str):
-    req = urllib.request.Request(url, headers={"User-Agent": UA})
-    with urllib.request.urlopen(req, timeout=30) as resp:
-        return json.loads(resp.read())
+    return read_json(url, "JLN Equestrian")
 
 
 def slug(s: str) -> str:
@@ -432,7 +431,11 @@ def main() -> int:
     args = ap.parse_args()
 
     cmap = json.load(open(CATEGORY_MAP))
-    feed = get(FEED)
+    try:
+        feed = get(FEED)
+    except FeedUnavailable as e:
+        print(f"{e}\n  {e.url}\n\nNothing was written. Shopify is unchanged.")
+        return 2
     if args.only:
         wanted = {x.strip() for x in args.only.split(",") if x.strip()}
         missing = wanted - {p["slug"] for p in feed}
@@ -460,7 +463,10 @@ def main() -> int:
             held.append((p, "not in category_map.json - nothing here knows "
                             "where it should be filed"))
 
-    print(f"JLN Equestrian: {len(feed)} products on their site, {len(plans)} mapped\n")
+    # listings, not products: three of theirs become two listings each
+    print(f"JLN Equestrian: {len(feed)} products on their site, "
+          f"{len(plans)} listing{'' if len(plans) == 1 else 's'} to write, "
+          f"{len(held)} held\n")
     for q in plans:
         pic = f"{len(q['images'])}img" if q["images"] else "NO PHOTO"
         print(f"  {q['title'][:48]:48s} {q['category']:28s} "
