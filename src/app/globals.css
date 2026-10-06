@@ -964,3 +964,37 @@ h1, h2, h3, h4, h5, h6, .font-display {
       90deg, transparent, #000 28px, #000 calc(100% - 28px), transparent);
   }
 }
+
+
+/* Phones, again, but tighter than the rule above. A banner and a product tile
+   that each take the full width at a 17rem floor is two screenfuls before a
+   rider sees a single category, which is the same mistake the product grid was
+   making. The banner stays wide because it is the one thing here that earns
+   it; the trending product drops into the grid beside the categories, and the
+   whole block closes up. */
+@media (max-width: 767px) {
+  .bento { gap: 0.625rem; }
+
+  .bento__tile--cover { min-height: 12.5rem; }
+
+  .bento__tile--product {
+    grid-column: span 1;
+    min-height: 0;
+    aspect-ratio: 3 / 4;
+  }
+
+  .bento__tile--product .bento__shot {
+    min-height: 0;
+    padding: 0.625rem;
+  }
+
+  .bento__caption {
+    padding: 0.75rem;
+    font-size: 0.9375rem;
+    font-weight: 600;
+  }
+
+  .bento__caption small { font-size: 0.5625rem; margin-bottom: 0.125rem; }
+
+  .bento__caption--dark { font-size: 0.75rem; line-height: 1.3; }
+}
