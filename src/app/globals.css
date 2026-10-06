@@ -368,11 +368,6 @@ h1, h2, h3, h4, h5, h6, .font-display {
      buttons off the bottom. */
   height: 100vh;
   height: 100svh;
-  /* dvh last, and it is the one that matters on an iPhone. Safari floats its
-     bottom bar over the large viewport rather than insetting it, so a hero
-     sized to the small viewport stops short and shows a band of the next
-     section underneath. dvh follows the bar as it collapses. */
-  height: 100dvh;
   min-height: 600px;
   overflow: hidden;
   background: #000;
@@ -981,13 +976,6 @@ h1, h2, h3, h4, h5, h6, .font-display {
    from the bottom instead of in from the left, and the buttons span the width
    rather than huddling at one end. */
 @media (max-width: 767px) {
-  /* lvh, not dvh. dvh is the viewport as it stands, so with Safari's toolbar
-     expanded the hero stops above it and a band of the next section shows
-     through. lvh is the whole screen, and the toolbar floats over the foot of
-     the picture instead, which is what edge to edge means on a phone. The copy
-     below carries enough bottom padding to stay clear of it. */
-  .campaign-hero { height: 100lvh; }
-
   .campaign-hero__slide { align-items: flex-end; }
 
   .campaign-hero__shade {
@@ -1003,7 +991,7 @@ h1, h2, h3, h4, h5, h6, .font-display {
     padding-left: calc(1.25rem + env(safe-area-inset-left, 0px));
     padding-right: calc(1.25rem + env(safe-area-inset-right, 0px));
     padding-top: 0;
-    padding-bottom: calc(6rem + env(safe-area-inset-bottom, 0px));
+    padding-bottom: calc(4rem + env(safe-area-inset-bottom, 0px));
   }
 
   .campaign-hero__eyebrow {
@@ -1045,7 +1033,7 @@ h1, h2, h3, h4, h5, h6, .font-display {
     border: 1px solid rgba(255, 255, 255, 0.65);
   }
 
-  .campaign-hero__dots { bottom: calc(3.25rem + env(safe-area-inset-bottom, 0px)); }
+  .campaign-hero__dots { bottom: calc(1.5rem + env(safe-area-inset-bottom, 0px)); }
 }
 
 
