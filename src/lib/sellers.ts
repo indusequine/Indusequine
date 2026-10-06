@@ -9,6 +9,7 @@ export type Seller = { slug: string; name: string };
 const SELLER_NAMES: Record<string, string> = {
   "the-tack-shop": "The Tack Shop",
   "delhi-tack-shop": "Delhi Tack Shop",
+  jln: "JLN Equestrian",
 };
 
 export const SUPPLIER_TAG_PREFIX = "supplier:";

@@ -1,0 +1,47 @@
+name: Sync JLN Equestrian
+
+# Keeps JLN Equestrian's range on Indusequine in line with jlnequestrian.com:
+# new products, price changes, and out-of-stock / back-in-stock.
+#
+# They run WooCommerce rather than Shopify, so there is nothing to scrape
+# either: WooCommerce's own Store API is public on their site and the sync
+# reads it directly. See scripts/jln/sync.py.
+#
+# The sync fails the run when they list something scripts/jln/category_map.json
+# has no entry for, so a new product of theirs arrives as a failed run to look
+# at rather than as a guess at which shelf it belongs on.
+
+on:
+  schedule:
+    # Every 6 hours, on the odd hours the other four syncs do not use. They all
+    # run at */6, meaning 00:00, 06:00, 12:00 and 18:00 UTC; this one sits a
+    # clear three hours off every one of them, because it is the slowest of the
+    # five after The Tack Shop and a shared Shopify rate limit is the one thing
+    # these jobs can take from each other.
+    - cron: "22 3,9,15,21 * * *"
+  workflow_dispatch: # "Run workflow" button in the Actions tab
+
+concurrency:
+  group: sync-jln
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v5
+
+      - name: Sync into Shopify
+        env:
+          SHOPIFY_ADMIN_CLIENT_ID: ${{ secrets.SHOPIFY_ADMIN_CLIENT_ID }}
+          SHOPIFY_ADMIN_CLIENT_SECRET: ${{ secrets.SHOPIFY_ADMIN_CLIENT_SECRET }}
+          SHOPIFY_STORE_DOMAIN: ${{ secrets.SHOPIFY_STORE_DOMAIN }}
+          # Without these the sync still runs and says the site keeps its old
+          # pages for up to an hour, rather than failing a run that worked.
+          REVALIDATE_SECRET: ${{ secrets.REVALIDATE_SECRET }}
+          VERCEL_BYPASS_SECRET: ${{ secrets.VERCEL_BYPASS_SECRET }}
+        run: python3 scripts/jln/sync.py --apply
