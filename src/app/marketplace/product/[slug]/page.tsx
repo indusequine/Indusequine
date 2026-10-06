@@ -61,7 +61,7 @@ export default async function ProductPage({ params }: Props) {
 
           {/* Wraps both columns so picking a colour can move the gallery. */}
           <ProductSelection>
-          <div className="mt-10 grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
+          <div className="mt-5 sm:mt-10 grid grid-cols-1 lg:grid-cols-12 gap-7 sm:gap-12 lg:gap-16 items-start">
             <div className="lg:col-span-6">
               {/* Most products have one photograph and keep the plain image. */}
               {product.images && product.images.length > 1 ? (
@@ -79,7 +79,7 @@ export default async function ProductPage({ params }: Props) {
               {product.brand && (
                 <p className="eyebrow text-brass-deep">{product.brand}</p>
               )}
-              <h1 className="font-display text-4xl md:text-5xl text-forest leading-tight mt-3">
+              <h1 className="font-display text-2xl sm:text-4xl md:text-5xl text-forest leading-tight mt-2 sm:mt-3">
                 {product.name}
               </h1>
               <p className="mt-3 text-sm text-stone">{product.categoryName}</p>
@@ -123,7 +123,7 @@ export default async function ProductPage({ params }: Props) {
       <section className="bg-cream py-16 md:py-24">
         <Container size="narrow">
           <p className="eyebrow text-forest text-center">Interested?</p>
-          <h2 className="font-display text-3xl md:text-4xl text-forest text-center mt-3 leading-tight">
+          <h2 className="font-display text-2xl sm:text-3xl md:text-4xl text-forest text-center mt-3 leading-tight">
             Ask us about the {product.name}.
           </h2>
           <div className="mt-10">
