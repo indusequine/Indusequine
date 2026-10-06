@@ -11,6 +11,7 @@ import {
   getAllBrands,
   getCategoriesWithCounts,
   getCategoryImages,
+  getNewArrivals,
   getProductsByBrand,
 } from "@/data/products";
 
@@ -56,12 +57,14 @@ const campaigns: Campaign[] = [
 ];
 
 export default async function HomePage() {
-  const [brands, categories, trendingProducts, categoryImages] = await Promise.all([
-    getAllBrands(),
-    getCategoriesWithCounts(),
-    getProductsByBrand("Freejump"),
-    getCategoryImages(),
-  ]);
+  const [brands, categories, trendingProducts, categoryImages, newArrivals] =
+    await Promise.all([
+      getAllBrands(),
+      getCategoriesWithCounts(),
+      getProductsByBrand("Freejump"),
+      getCategoryImages(),
+      getNewArrivals(12),
+    ]);
 
   // The busiest categories that actually have a photograph, so no rail tile
   // falls back to the logo pattern while a photographed one waits behind it.
@@ -75,12 +78,19 @@ export default async function HomePage() {
     <div className="home">
       <CampaignHero campaigns={campaigns} />
 
-      {/* Rows rather than one stacked block. The block put a banner and a
-          trending product side by side in the markup and full width on a
-          phone, so two screens went by before a rider met a category. Four
-          rows now occupy about the space those two did, and each one says
-          what it holds by showing a piece of the next tile. */}
-      <Rail title="Shop by group" href="/marketplace" linkLabel="All categories" wide>
+      {/* The front page on a phone is three things: the campaign, what has
+          just arrived, and who we carry. Shop by group repeats the hero's own
+          two buttons and Trending now is a fourth row nobody asked to scroll,
+          so both stay on the desktop and come off the phone. */}
+      {newArrivals.length > 0 && (
+        <Rail title="New in" href="/marketplace" linkLabel="Shop all">
+          {newArrivals.map((product) => (
+            <ProductCard key={product.slug} product={product} />
+          ))}
+        </Rail>
+      )}
+
+      <Rail title="Shop by group" href="/marketplace" linkLabel="All categories" wide desktopOnly>
         {categoryGroups.map((group) => (
           <Link key={group.slug} href={`/marketplace/group/${group.slug}`} className="bento__tile">
             {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -90,6 +100,8 @@ export default async function HomePage() {
         ))}
       </Rail>
 
+      {/* The one row kept against the founder's shorter list: without it a
+          phone has no route into sixty-three categories but the menu. */}
       <Rail title="Shop by category" href="/marketplace" linkLabel="All categories">
         {topCategories.map((category) => (
           <CategoryTile
@@ -105,7 +117,7 @@ export default async function HomePage() {
       <BrandStrip brands={brands} />
 
       {trendingRail.length > 0 && (
-        <Rail title="Trending now" href={`/marketplace/brand/${brandSlug("Freejump")}`}>
+        <Rail title="Trending now" href={`/marketplace/brand/${brandSlug("Freejump")}`} desktopOnly>
           {trendingRail.map((product) => (
             <ProductCard key={product.slug} product={product} />
           ))}

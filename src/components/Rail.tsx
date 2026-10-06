@@ -18,6 +18,7 @@ export function Rail({
   href,
   linkLabel = "See all",
   wide,
+  desktopOnly,
   children,
 }: {
   title: string;
@@ -25,10 +26,12 @@ export function Rail({
   linkLabel?: string;
   /** Fewer, larger tiles -- for the four groups rather than sixty categories. */
   wide?: boolean;
+  /** Kept off a phone, where the front page is meant to be short. */
+  desktopOnly?: boolean;
   children: ReactNode;
 }) {
   return (
-    <section className="rail-section">
+    <section className={`rail-section${desktopOnly ? " hidden md:block" : ""}`}>
       <Container size="wide">
         <div className="home__head">
           <h2>{title}</h2>

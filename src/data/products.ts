@@ -9,6 +9,7 @@ import {
   COLLECTIONS_QUERY,
   PRODUCTS_LEAN_QUERY,
   PRODUCTS_BY_VENDOR_QUERY,
+  NEW_PRODUCTS_QUERY,
 } from "@/lib/shopify/queries";
 import type {
   ProductByHandleData,
@@ -17,6 +18,7 @@ import type {
   CollectionsData,
   ProductsLeanData,
   ProductsByVendorData,
+  NewProductsData,
   ShopifyProductNode,
   ShopifyProductLeanNode,
   ShopifyVariantNode,
@@ -143,6 +145,29 @@ function mapProduct(node: ShopifyProductNode, categoryName: string): Product {
     inStock: inStockFromTags(node.tags),
     gender: genderFromTags(node.tags),
   };
+}
+
+/** The newest products in the catalogue, newest first.
+ *
+ * Shopify does the ordering, so this is the real thing rather than the first
+ * however-many products a query happens to return. Only products with a
+ * photograph are kept: a row called New in is the wrong place to meet the
+ * "photography coming soon" tile.
+ */
+export async function getNewArrivals(limit = 12): Promise<Product[]> {
+  const categories = await getCategories();
+  const nameBySlug = new Map(categories.map((c) => [c.slug, c.name]));
+  // Asking for more than we need leaves room to drop the unphotographed ones.
+  const data = await shopifyFetch<NewProductsData>(NEW_PRODUCTS_QUERY, {
+    first: limit * 4,
+  });
+  return data.products.edges
+    .map((edge) => {
+      const slug = categorySlugFromTags(edge.node.tags);
+      return mapProduct(edge.node, (slug && nameBySlug.get(slug)) || "");
+    })
+    .filter((product) => product.image)
+    .slice(0, limit);
 }
 
 async function fetchAllProductsLean(): Promise<ShopifyProductLeanNode[]> {

@@ -125,6 +125,27 @@ export const PRODUCTS_BY_VENDOR_QUERY = /* GraphQL */ `
   }
 `;
 
+// The most recently added products, straight from Shopify's own ordering, so
+// "New in" means what it says rather than whichever products happen to come
+// back first. Same node shape as the vendor query, because the cards on the
+// homepage need prices and variants like any other.
+export const NEW_PRODUCTS_QUERY = /* GraphQL */ `
+  ${PRODUCT_FIELDS_FRAGMENT}
+  query NewProducts($first: Int!) {
+    products(first: $first, sortKey: CREATED_AT, reverse: true) {
+      edges {
+        node {
+          ...ProductFields
+        }
+      }
+      pageInfo {
+        hasNextPage
+        endCursor
+      }
+    }
+  }
+`;
+
 // Lean pass over the full catalogue — handle + tags only, no variants/images.
 // Backs both getAllProductSlugs() (reads .handle) and getTopCategories() (reads .tags),
 // since a shared query lets identical page fetches hit Next's fetch cache for both callers.

@@ -71,7 +71,7 @@ export function Header() {
           : "site-header sticky top-0 z-40"
       }
     >
-      <div className={overlay ? "border-b border-white/20" : "bg-white border-b border-black/10"}>
+      <div className={overlay ? "md:border-b md:border-white/20" : "bg-white md:border-b md:border-black/10"}>
         <div className="site-header__bar">
           <div className="flex items-center h-16 min-[1100px]:h-[4.5rem]">
             {/* left end: the logo and the four places to go */}

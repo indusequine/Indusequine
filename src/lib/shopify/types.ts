@@ -52,6 +52,7 @@ export type CollectionProductsData = {
 
 export type CollectionsData = { collections: ShopifyConnection<ShopifyCollectionNode> };
 
+export type NewProductsData = { products: ShopifyConnection<ShopifyProductNode> };
 export type ProductsLeanData = { products: ShopifyConnection<ShopifyProductLeanNode> };
 
 export type ProductsByVendorData = { products: ShopifyConnection<ShopifyProductNode> };
