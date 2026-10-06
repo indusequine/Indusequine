@@ -981,6 +981,13 @@ h1, h2, h3, h4, h5, h6, .font-display {
    from the bottom instead of in from the left, and the buttons span the width
    rather than huddling at one end. */
 @media (max-width: 767px) {
+  /* lvh, not dvh. dvh is the viewport as it stands, so with Safari's toolbar
+     expanded the hero stops above it and a band of the next section shows
+     through. lvh is the whole screen, and the toolbar floats over the foot of
+     the picture instead, which is what edge to edge means on a phone. The copy
+     below carries enough bottom padding to stay clear of it. */
+  .campaign-hero { height: 100lvh; }
+
   .campaign-hero__slide { align-items: flex-end; }
 
   .campaign-hero__shade {
@@ -996,7 +1003,7 @@ h1, h2, h3, h4, h5, h6, .font-display {
     padding-left: calc(1.25rem + env(safe-area-inset-left, 0px));
     padding-right: calc(1.25rem + env(safe-area-inset-right, 0px));
     padding-top: 0;
-    padding-bottom: calc(4.5rem + env(safe-area-inset-bottom, 0px));
+    padding-bottom: calc(6rem + env(safe-area-inset-bottom, 0px));
   }
 
   .campaign-hero__eyebrow {
@@ -1038,5 +1045,30 @@ h1, h2, h3, h4, h5, h6, .font-display {
     border: 1px solid rgba(255, 255, 255, 0.65);
   }
 
-  .campaign-hero__dots { bottom: calc(1.75rem + env(safe-area-inset-bottom, 0px)); }
+  .campaign-hero__dots { bottom: calc(3.25rem + env(safe-area-inset-bottom, 0px)); }
+}
+
+
+/* On a phone the header's two controls lose their boxes. A bordered square
+   with a translucent grey fill reads as a widget pasted onto the photograph;
+   the mark alone, with a shadow so it survives a pale patch of picture, sits
+   in the image the way Nike's does. */
+@media (max-width: 767px) {
+  .site-header__more,
+  .site-header__searchlink,
+  .site-header--overlay .site-header__more,
+  .site-header--overlay .site-header__searchlink {
+    border-color: transparent;
+    background: transparent;
+    backdrop-filter: none;
+  }
+
+  .site-header--overlay .site-header__more,
+  .site-header--overlay .site-header__searchlink {
+    filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.5));
+  }
+
+  /* A touch larger now there is no box to give them presence. */
+  .site-header__more span { width: 18px; height: 1.6px; }
+  .site-header__more { gap: 4.5px; }
 }
