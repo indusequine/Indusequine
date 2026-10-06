@@ -225,6 +225,8 @@ def build(p: dict, m: dict, valid_categories: set[str]) -> dict:
             "price": unit_price(p, v["color"]),
         })
 
+    in_stock = any((v.get("quantity") or 0) > 0 for v in p["variants"])
+
     tags = [f"category:{category}", SUPPLIER_TAG, f"supplier-code:{p['code']}"]
     # Out of stock is shown and marked, not hidden, so a rider still finds the
     # product and learns we carry it. Made-to-order is never out of stock.
@@ -233,7 +235,6 @@ def build(p: dict, m: dict, valid_categories: set[str]) -> dict:
     if p.get("madeToOrder"):
         tags.append("made-to-order")
 
-    in_stock = any((v.get("quantity") or 0) > 0 for v in p["variants"])
     return {
         "code": p["code"],
         "name": resolve_name(p, m),
