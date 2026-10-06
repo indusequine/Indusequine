@@ -21,6 +21,7 @@ it, which is honest and is what their own storefront serves.
 from __future__ import annotations
 
 import json
+import os
 import time
 import urllib.error
 import urllib.request
@@ -35,6 +36,21 @@ RETRY_CODES = {408, 425, 429, 430, 500, 502, 503, 504}
 # How long to wait before each retry. Short at first, then long enough that a
 # rate limit has a chance to clear.
 BACKOFF = (2, 8, 20, 45)
+
+
+def annotate(level: str, message: str) -> None:
+    """Say this where it can be read without a credential.
+
+    A failed run's log needs a GitHub token to fetch, so the reason a sync
+    failed was reaching nobody: the run said only "Process completed with exit
+    code 2" and someone had to open the browser to learn more. Annotations are
+    served by the public API, so the reason goes there too and can be read from
+    outside.
+    """
+    if os.environ.get("GITHUB_ACTIONS") != "true":
+        return
+    flat = " ".join(str(message).split())[:700]
+    print(f"::{level}::{flat}", flush=True)
 
 
 class FeedUnavailable(RuntimeError):
@@ -74,5 +90,35 @@ def read_json(url: str, supplier: str, timeout: int = 30):
             break
         print(f"  {supplier}: {last} - trying again in {pause}s "
               f"(attempt {attempt} of {len(BACKOFF) + 1})")
+        annotate("warning", f"{supplier} feed attempt {attempt}: {last}")
         time.sleep(pause)
+    annotate("error", f"could not read {supplier}'s feed at {url} - {last}")
+    probe(url, supplier)
     raise FeedUnavailable(supplier, url, last)
+
+
+def probe(url: str, supplier: str) -> None:
+    """When a feed will not be read, find out how much of their site will.
+
+    Whether their whole site refuses us or only the feed endpoint decides what
+    to do about it, and the difference is one request each. Runs only in CI, and
+    only on a run that has already failed, so it costs a working sync nothing.
+    """
+    if os.environ.get("GITHUB_ACTIONS") != "true":
+        return
+    origin = "/".join(url.split("/")[:3])
+    for path in ("/robots.txt", "/", "/products.json?limit=1",
+                 "/collections/all/products.json?limit=1"):
+        req = urllib.request.Request(origin + path,
+                                     headers={"User-Agent": USER_AGENT,
+                                              "Accept": "*/*"})
+        try:
+            with urllib.request.urlopen(req, timeout=20) as resp:
+                body = resp.read(200)
+                kind = resp.headers.get("Content-Type", "?").split(";")[0]
+                outcome = f"HTTP {resp.status} {kind} {len(body)}+ bytes"
+        except urllib.error.HTTPError as e:
+            outcome = f"HTTP {e.code} {e.reason}"
+        except (urllib.error.URLError, TimeoutError, OSError) as e:
+            outcome = f"{type(e).__name__}: {e}"
+        annotate("warning", f"probe {supplier} {path} -> {outcome}")
