@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import { Container } from "@/components/Container";
@@ -44,24 +43,17 @@ export default async function GroupPage({ params }: Props) {
       const byPhoto = Number(Boolean(images.get(b.slug))) - Number(Boolean(images.get(a.slug)));
       return byPhoto || b.count - a.count;
     });
-  const totalProducts = categories.reduce((sum, c) => sum + c.count, 0);
-
   return (
-    <section className="bg-cream-soft py-16 md:py-24">
+    <section className="bg-cream-soft pt-6 md:pt-10 pb-16 md:pb-24">
       <Container size="wide">
-        <Link href="/marketplace" className="eyebrow text-brass-deep hover:text-oxblood transition-colors">
-          ← The Marketplace
-        </Link>
+        {/* Somebody who tapped Rider knows they tapped Rider. Saying it back to
+            them, with the tagline, a count and a way to undo it, was four lines
+            of cream before the first category. The heading stays for screen
+            readers and search engines without taking any of them, which is what
+            Shop All does one level up. */}
+        <h1 className="sr-only">{group.name}</h1>
 
-        <h1 className="font-display text-4xl md:text-5xl mt-6 text-forest leading-tight">
-          {group.name}
-        </h1>
-        <p className="mt-3 text-charcoal leading-relaxed max-w-xl">{group.tagline}</p>
-        <p className="mt-2 text-sm text-stone">
-          {totalProducts} products across {categories.length} categories
-        </p>
-
-        <div className="mt-12 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
           {categories.map((category) => (
             <CategoryTile
               key={category.slug}
