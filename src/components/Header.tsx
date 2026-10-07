@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { usePathname } from "next/navigation";
 import { opensOnDark } from "@/lib/darkHeaderRoutes";
 import { Logo } from "./Logo";
@@ -56,6 +56,18 @@ export function Header() {
   // Both wear the overlay's colours -- white type, white marks. Only the
   // homepage floats over its campaign; the rest stay sticky as they were.
   const light = overlay || onDark;
+
+  // Every other page opens on cream-soft, the same ground as the body, so the
+  // header takes it too and the seam at the top goes. The rule it used to carry
+  // comes back only once the page has moved: at rest there is nothing to divide,
+  // but a bar that content slides under needs an edge or the text just stops.
+  const [scrolled, setScrolled] = useState(false);
+  useEffect(() => {
+    const sync = () => setScrolled(window.scrollY > 8);
+    sync();
+    window.addEventListener("scroll", sync, { passive: true });
+    return () => window.removeEventListener("scroll", sync);
+  }, []);
   const [menu, setMenu] = useState<string | null>(null);
   const [open, setOpen] = useState(false);
   // Closing waits a moment, so a cursor that clips a corner on its way to an
@@ -87,7 +99,7 @@ export function Header() {
               // No rule at the foot of it: the hero underneath is the same
               // colour, and a line there is the seam we are removing.
               ? "bg-forest-deep"
-              : "bg-white md:border-b md:border-black/10"
+              : `bg-cream-soft${scrolled ? " border-b border-forest/10" : ""}`
         }
       >
         <div className="site-header__bar">
@@ -195,7 +207,7 @@ export function Header() {
       </div>
 
       {open && (
-        <div className={`min-[1100px]:hidden ${light ? "bg-forest-deep" : "bg-white border-b border-black/10"}`}>
+        <div className={`min-[1100px]:hidden ${light ? "bg-forest-deep" : "bg-cream-soft border-b border-forest/10"}`}>
           <div className="site-header__bar">
             <form action="/search" className="site-header__search my-4 w-full" role="search">
               <SearchGlyph />
