@@ -1113,3 +1113,19 @@ h1, h2, h3, h4, h5, h6, .font-display {
 @media (prefers-reduced-motion: reduce) {
   .rail { scroll-snap-type: none; }
 }
+
+
+/* The product gallery scrolls sideways; the bar underneath it would sit across
+   the photograph, and the thumbnails already say how many there are. */
+.gallery-track {
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+  /* a drag should move the photographs, not the page */
+  overscroll-behavior-x: contain;
+}
+
+.gallery-track::-webkit-scrollbar { display: none; }
+
+@media (prefers-reduced-motion: reduce) {
+  .gallery-track { scroll-behavior: auto; }
+}
