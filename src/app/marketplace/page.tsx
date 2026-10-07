@@ -33,7 +33,10 @@ export default async function MarketplacePage() {
               search engines without taking a line of the page. */}
           <h1 className="sr-only">Shop all</h1>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          {/* Two a row on a phone. One a row meant four tiles at 456px each, so
+              Stable and the Also Browse list under it were most of two
+              thousand pixels down. Everything from sm up is as it was. */}
+          <div className="grid grid-cols-2 gap-3 sm:grid-cols-2 sm:gap-4 lg:grid-cols-3">
             {categoryGroups.map((group) => {
               const productCount = group.categorySlugs.reduce(
                 (sum, slug) => sum + (countBySlug.get(slug) ?? 0),

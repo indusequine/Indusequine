@@ -10,7 +10,7 @@ export function CategoryGroupTile({ group, productCount }: CategoryGroupTileProp
   return (
     <Link
       href={`/marketplace/group/${group.slug}`}
-      className="group relative aspect-[3/4] overflow-hidden block"
+      className="group relative aspect-[4/5] sm:aspect-[3/4] overflow-hidden block"
     >
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <img
@@ -20,14 +20,14 @@ export function CategoryGroupTile({ group, productCount }: CategoryGroupTileProp
       />
       <div className="absolute inset-0 bg-gradient-to-t from-forest-deep via-forest-deep/40 to-forest-deep/60" />
 
-      <div className="relative h-full flex flex-col justify-end p-6 md:p-8 text-cream-soft">
-        <p className="eyebrow text-brass-light">
+      <div className="relative h-full flex flex-col justify-end p-3 sm:p-6 md:p-8 text-cream-soft">
+        <p className="eyebrow text-brass-light text-[0.5625rem] sm:text-inherit">
           {productCount} {productCount === 1 ? "Product" : "Products"}
         </p>
-        <h3 className="font-display text-3xl md:text-4xl mt-3 leading-tight">
+        <h3 className="font-display text-lg sm:text-3xl md:text-4xl mt-1 sm:mt-3 leading-tight">
           {group.name}
         </h3>
-        <p className="mt-2 text-sm text-cream-soft/80 leading-relaxed max-w-xs">
+        <p className="hidden sm:block mt-2 text-sm text-cream-soft/80 leading-relaxed max-w-xs">
           {group.tagline}
         </p>
       </div>
