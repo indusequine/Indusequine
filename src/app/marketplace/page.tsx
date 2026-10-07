@@ -33,10 +33,12 @@ export default async function MarketplacePage() {
               search engines without taking a line of the page. */}
           <h1 className="sr-only">Shop all</h1>
 
-          {/* Two a row on a phone. One a row meant four tiles at 456px each, so
-              Stable and the Also Browse list under it were most of two
-              thousand pixels down. Everything from sm up is as it was. */}
-          <div className="grid grid-cols-2 gap-3 sm:grid-cols-2 sm:gap-4 lg:grid-cols-3">
+          {/* One a row on a phone, but landscape rather than portrait. Two tall
+              tiles side by side came out nearly square and read as a grid of
+              boxes; a wide one is a banner, which is what a group is. Two fill
+              a screen with the third showing, so it is plain there is more.
+              Everything from sm up is as it was. */}
+          <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 sm:gap-4 lg:grid-cols-3">
             {categoryGroups.map((group) => {
               const productCount = group.categorySlugs.reduce(
                 (sum, slug) => sum + (countBySlug.get(slug) ?? 0),
