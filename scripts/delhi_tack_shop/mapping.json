@@ -74,7 +74,9 @@
     "21091012": "saddle-pads",
     "WST": "socks-and-ties",
     "BSB": "wraps-and-bandages",
-    "9727": "bags"
+    "9727": "bags",
+    "FM": "fly-mask",
+    "NHL": "halter-and-lead-rope"
   },
   "skip": {
     "F02251": "Same product already listed from the existing supplier (freejump-airbag)",
