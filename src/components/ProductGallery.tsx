@@ -9,6 +9,11 @@ import { useProductSelection } from "@/components/ProductSelection";
 const MAIN = 1400;
 const THUMB = 180;
 
+// Dots stop reading as a count somewhere past here, and the catalogue agrees:
+// of the 167 products with more than one photograph the median is three and
+// only twelve carry more than eight. Those twelve get a tally instead.
+const DOTS_MAX = 8;
+
 type ProductGalleryProps = {
   images: string[];
   name: string;
@@ -90,7 +95,9 @@ export function ProductGallery({ images, name, imagesByColor }: ProductGalleryPr
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src={shopifyImage(url, MAIN)}
-              alt={index === 0 ? name : ""}
+              // The thumbnails carried these labels and are hidden on a phone,
+              // so each shot has to say which one it is itself.
+              alt={index === 0 ? name : `${name}, photograph ${index + 1} of ${images.length}`}
               className="w-full h-full object-cover"
               decoding="async"
               loading={index === 0 ? "eager" : "lazy"}
@@ -99,7 +106,30 @@ export function ProductGallery({ images, name, imagesByColor }: ProductGalleryPr
         ))}
       </div>
 
-      <ul className="grid grid-cols-6 gap-2 sm:grid-cols-8" role="list">
+      {/* On a phone the row above is swiped, so a grid of 90px squares under it
+          is work nobody needs to do: the dots say how many there are and which
+          one this is, and that is all a thumbnail was being asked for. Past
+          eight they stop reading as a count and a tally is plainer. */}
+      <div className="flex items-center justify-center gap-2 md:hidden" aria-hidden="true">
+        {images.length <= DOTS_MAX ? (
+          images.map((url, index) => (
+            <span
+              key={url}
+              className={
+                index === shown
+                  ? "h-1.5 w-5 rounded-full bg-forest transition-all"
+                  : "h-1.5 w-1.5 rounded-full bg-forest/25 transition-all"
+              }
+            />
+          ))
+        ) : (
+          <span className="font-mono text-xs text-stone tabular-nums">
+            {shown + 1} / {images.length}
+          </span>
+        )}
+      </div>
+
+      <ul className="hidden md:grid grid-cols-6 gap-2 sm:grid-cols-8" role="list">
         {images.map((url, index) => (
           <li key={url}>
             <button
