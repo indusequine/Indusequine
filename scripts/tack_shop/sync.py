@@ -50,20 +50,17 @@ import argparse
 import json
 import sys
 import time
-import urllib.request
 from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
 sys.path.insert(0, str(HERE.parent))
+from feeds import FeedUnavailable, read_json  # noqa: E402
 from migrate_to_shopify import ShopifyClient, load_env  # noqa: E402
 from snapshot import take  # noqa: E402
 
 API = "https://www.tackshop.in/storefront/api/v1/products"
 IMAGE_BASE = "https://www.tackshop.in"
 IMAGE_SIZE = "1200x1200"
-UA = ("Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 "
-      "(KHTML, like Gecko) Chrome/124 Safari/537.36")
-
 SUPPLIER_TAG = "supplier:the-tack-shop"
 OOS_TAG = "sync:tack-shop-out-of-stock"           # marked out of stock; stays on the site
 RETIRED_TAG = "sync:tack-shop-discontinued"        # retired once; never auto-shown
@@ -166,10 +163,13 @@ def clean(x) -> str:
 def fetch_site() -> list[dict]:
     seen, out = set(), []
     for page in range(1, MAX_PAGES + 1):
-        req = urllib.request.Request(f"{API}?page_number={page}",
-                                     headers={"User-Agent": UA, "Accept": "application/json"})
-        with urllib.request.urlopen(req, timeout=120) as r:
-            payload = json.load(r)["payload"]
+        # Seventeen requests to their API for one run, each one previously a
+        # single try: one blip anywhere across them killed the whole sync with
+        # a traceback and an exit code nobody could read. read_json retries
+        # with backoff and, when it finally gives up, says which page of whose
+        # API refused and with what code.
+        payload = read_json(f"{API}?page_number={page}", "The Tack Shop",
+                            timeout=120)["payload"]
         batch = payload.get("products") or []
         new = [p for p in batch if p["product_id"] not in seen]
         if not new:
@@ -572,11 +572,17 @@ def main() -> int:
     ap.add_argument("--undo-retire", action="store_true")
     args = ap.parse_args()
     client = ShopifyClient(load_env())
-    if args.undo_retire:
-        return undo_retire(client)
-    if args.retire_discontinued:
-        return retire(client, args.dry_run)
-    return sync(client, args.dry_run)
+    try:
+        if args.undo_retire:
+            return undo_retire(client)
+        if args.retire_discontinued:
+            return retire(client, args.dry_run)
+        return sync(client, args.dry_run)
+    except FeedUnavailable as e:
+        # Their site, not our catalogue, and not the same thing as finding a
+        # product we cannot file, which is what exit 1 means here.
+        print(f"{e}\n  {e.url}\n\nNothing was written. Shopify is unchanged.")
+        return 2
 
 
 if __name__ == "__main__":
