@@ -50,7 +50,7 @@ export default async function ProductPage({ params }: Props) {
 
   return (
     <>
-      <section className="bg-cream-soft py-16 md:py-20 border-b border-forest/10">
+      <section className="bg-cream-soft pt-4 md:pt-10 pb-16 md:pb-20 border-b border-forest/10">
         <Container size="wide">
           <Link
             href={`/marketplace/category/${product.category}`}
@@ -61,7 +61,7 @@ export default async function ProductPage({ params }: Props) {
 
           {/* Wraps both columns so picking a colour can move the gallery. */}
           <ProductSelection>
-          <div className="mt-5 sm:mt-10 grid grid-cols-1 lg:grid-cols-12 gap-7 sm:gap-12 lg:gap-16 items-start">
+          <div className="mt-3 sm:mt-10 grid grid-cols-1 lg:grid-cols-12 gap-7 sm:gap-12 lg:gap-16 items-start">
             <div className="lg:col-span-6">
               {/* Most products have one photograph and keep the plain image. */}
               {product.images && product.images.length > 1 ? (
