@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useRef, useState } from "react";
 import { usePathname } from "next/navigation";
+import { opensOnDark } from "@/lib/darkHeaderRoutes";
 import { Logo } from "./Logo";
 
 // Shopping and the two other areas sit on the bar. Rider, Horse, Horse Care
@@ -47,7 +48,14 @@ const moreLinks = [
 export function Header() {
   // On the homepage the bar sits over the campaign photograph in white. Every
   // other page starts with white, so it takes its solid form instead.
-  const overlay = usePathname() === "/";
+  const pathname = usePathname() ?? "/";
+  const overlay = pathname === "/";
+  // Pages that open on the forest-deep hero: the header takes the same ground
+  // so the two read as one block instead of a white bar laid on a green one.
+  const onDark = !overlay && opensOnDark(pathname);
+  // Both wear the overlay's colours -- white type, white marks. Only the
+  // homepage floats over its campaign; the rest stay sticky as they were.
+  const light = overlay || onDark;
   const [menu, setMenu] = useState<string | null>(null);
   const [open, setOpen] = useState(false);
   // Closing waits a moment, so a cursor that clips a corner on its way to an
@@ -68,15 +76,25 @@ export function Header() {
       className={
         overlay
           ? "site-header site-header--overlay absolute inset-x-0 top-0 z-40"
-          : "site-header sticky top-0 z-40"
+          : `site-header sticky top-0 z-40${onDark ? " site-header--overlay site-header--dark" : ""}`
       }
     >
-      <div className={overlay ? "md:border-b md:border-white/20" : "bg-white md:border-b md:border-black/10"}>
+      <div
+        className={
+          overlay
+            ? "md:border-b md:border-white/20"
+            : onDark
+              // No rule at the foot of it: the hero underneath is the same
+              // colour, and a line there is the seam we are removing.
+              ? "bg-forest-deep"
+              : "bg-white md:border-b md:border-black/10"
+        }
+      >
         <div className="site-header__bar">
           <div className="flex items-center h-16 min-[1100px]:h-[4.5rem]">
             {/* left end: the logo and the four places to go */}
             <div className="flex items-center gap-7">
-              <Logo size="md" variant={overlay ? "white" : "forest"} />
+              <Logo size="md" variant={light ? "white" : "forest"} />
 
               <nav className="hidden min-[1100px]:flex items-center gap-7" aria-label="Main">
                 {barLinks.map((link) => (
@@ -177,7 +195,7 @@ export function Header() {
       </div>
 
       {open && (
-        <div className="min-[1100px]:hidden bg-white border-b border-black/10">
+        <div className={`min-[1100px]:hidden ${light ? "bg-forest-deep" : "bg-white border-b border-black/10"}`}>
           <div className="site-header__bar">
             <form action="/search" className="site-header__search my-4 w-full" role="search">
               <SearchGlyph />
