@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import { Container } from "@/components/Container";
@@ -36,22 +35,15 @@ export default async function CategoryPage({ params }: Props) {
   const products = await getProductsByCategory(slug);
 
   return (
-    <section className="bg-cream-soft py-16 md:py-24">
+    <section className="bg-cream-soft pt-6 md:pt-10 pb-16 md:pb-24">
       <Container size="wide">
-        <Link href="/marketplace" className="eyebrow text-brass-deep hover:text-oxblood transition-colors">
-          ← All Categories
-        </Link>
+        {/* Same as a group page: somebody who tapped Helmet does not need to be
+            told they are in Helmet, with a count and a way back, before they
+            see one. The browser under this already prints how many there are,
+            and the filter bar is the thing worth the space. */}
+        <h1 className="sr-only">{category.name}</h1>
 
-        <h1 className="font-display text-4xl md:text-5xl mt-6 text-forest leading-tight">
-          {category.name}
-        </h1>
-        <p className="mt-3 text-charcoal">
-          {products.length} {products.length === 1 ? "product" : "products"}
-        </p>
-
-        <div className="mt-12">
-          <CategoryProductBrowser products={products} />
-        </div>
+        <CategoryProductBrowser products={products} />
       </Container>
     </section>
   );

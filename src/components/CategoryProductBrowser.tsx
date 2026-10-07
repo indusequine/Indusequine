@@ -4,8 +4,6 @@ import { useMemo, useState } from "react";
 import type { Product } from "@/data/products";
 import { ProductGrid } from "@/components/ProductGrid";
 
-const SEARCH_THRESHOLD = 12;
-
 // The order a shop lists them in, not alphabetical.
 const GENDER_ORDER = ["women", "men", "kids", "unisex"];
 
@@ -19,7 +17,6 @@ function lowestPrice(product: Product): number | null {
 }
 
 export function CategoryProductBrowser({ products }: { products: Product[] }) {
-  const [query, setQuery] = useState("");
   const [brand, setBrand] = useState("");
   const [gender, setGender] = useState("");
   const [inStockOnly, setInStockOnly] = useState(false);
@@ -47,11 +44,7 @@ export function CategoryProductBrowser({ products }: { products: Product[] }) {
   const outOfStockCount = useMemo(() => products.filter((p) => !p.inStock).length, [products]);
 
   const filtered = useMemo(() => {
-    const q = query.trim().toLowerCase();
     const matching = products.filter((p) => {
-      if (q && !p.name.toLowerCase().includes(q) && !p.brand?.toLowerCase().includes(q)) {
-        return false;
-      }
       if (brand && p.brand !== brand) return false;
       if (gender && p.gender !== gender) return false;
       if (inStockOnly && !p.inStock) return false;
@@ -67,11 +60,10 @@ export function CategoryProductBrowser({ products }: { products: Product[] }) {
       if (pb === null) return -1;
       return sort === "price-asc" ? pa - pb : pb - pa;
     });
-  }, [products, query, brand, gender, inStockOnly, sort]);
+  }, [products, brand, gender, inStockOnly, sort]);
 
-  const showSearch = products.length > SEARCH_THRESHOLD;
   const showFilters = brands.length > 1 || genders.length > 1 || outOfStockCount > 0;
-  const narrowed = Boolean(query || brand || gender || inStockOnly);
+  const narrowed = Boolean(brand || gender || inStockOnly);
 
   const selectClass =
     "px-3 py-2.5 bg-cream-soft border border-forest/15 focus:border-forest focus:outline-none " +
@@ -79,20 +71,9 @@ export function CategoryProductBrowser({ products }: { products: Product[] }) {
 
   return (
     <div>
-      {(showSearch || showFilters) && (
+      {showFilters && (
         <div className="mb-10">
           <div className="flex flex-wrap gap-3">
-            {showSearch && (
-              <input
-                type="search"
-                value={query}
-                onChange={(e) => setQuery(e.target.value)}
-                placeholder="Search by name or brand…"
-                aria-label="Search within this category"
-                className={`${selectClass} w-full sm:w-64 py-3`}
-              />
-            )}
-
             {brands.length > 1 && (
               <select
                 value={brand}
@@ -158,7 +139,6 @@ export function CategoryProductBrowser({ products }: { products: Product[] }) {
               <button
                 type="button"
                 onClick={() => {
-                  setQuery("");
                   setBrand("");
                   setGender("");
                   setInStockOnly(false);
