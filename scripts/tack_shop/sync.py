@@ -50,6 +50,7 @@ import argparse
 import json
 import sys
 import time
+from html import unescape
 from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
@@ -154,7 +155,12 @@ PLACEHOLDER = ("test", "untitled", "sample", "dummy", "temp", "asdf", "xxx")
 
 
 def clean(x) -> str:
-    s = "" if x is None else str(x).strip()
+    """Their field as a usable string, with HTML entities turned back into
+    characters. Their API escapes names, so "Carr & Day & Martin" arrives as
+    "Carr &amp; Day &amp; Martin" and went up on the site reading exactly that
+    -- ampersand, a, m, p, semicolon -- in the product title and again in the
+    URL."""
+    s = "" if x is None else unescape(str(x)).strip()
     return "" if s.lower() in ("", "none", "nan") else s
 
 
