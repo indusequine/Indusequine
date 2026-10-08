@@ -15,6 +15,12 @@ export const categoryTileProduct: Record<string, string> = {
   // These three defaulted to a photograph shot against a dark background, which
   // the tile's multiply blend turned into a dark block. Each of these is the
   // cleanest cut-out in its category, measured across every product in it.
+  // The tile defaulted to a hollow mouth eggbutt snaffle: a thin bar and two
+  // rings, which at tile size is a faint horizontal line. A three ring dutch
+  // gag has the silhouette to read small, and its copper lozenge is the one
+  // warm note in a category of bare steel.
+  "bits-and-connectors": "jln-premier-equine-three-ring-dutch-gag-with-copper-lozenge",
+
   recovery: "equilibrium-heatsense-massage-pad-35864",
   "horse-shoe": "mustad-equilibrium-air-horse-shoes-horse-shoe",
   downvest: "samshield-avoriaz-downvest",

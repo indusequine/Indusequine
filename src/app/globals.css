@@ -1076,6 +1076,12 @@ h1, h2, h3, h4, h5, h6, .font-display {
   gap: 0.625rem;
   overflow-x: auto;
   padding-inline: 1.5rem;
+  /* Matching the padding, and the reason the rows looked broken: mandatory
+     snapping aligns the first tile's edge with the scrollport's edge, so on
+     load the browser scrolled the left gutter out of sight and the row started
+     hard against the window while its heading sat indented. scroll-padding
+     moves the snap position in by the same amount. */
+  scroll-padding-inline: 1.5rem;
   padding-bottom: 0.75rem;
   scroll-snap-type: x mandatory;
   -webkit-overflow-scrolling: touch;
@@ -1100,7 +1106,7 @@ h1, h2, h3, h4, h5, h6, .font-display {
 }
 
 @media (min-width: 768px) {
-  .rail { padding-inline: 2.5rem; gap: 1rem; }
+  .rail { padding-inline: 2.5rem; scroll-padding-inline: 2.5rem; gap: 1rem; }
   .rail > * { flex-basis: 23%; }
   .rail--wide > * { flex-basis: 31%; }
 }
@@ -1113,7 +1119,10 @@ h1, h2, h3, h4, h5, h6, .font-display {
 /* Past the container's own width, line the first tile up with its edge rather
    than with the screen's. 80rem is max-w-7xl, 2.5rem is the md gutter. */
 @media (min-width: 1360px) {
-  .rail { padding-inline: calc((100vw - 80rem) / 2 + 2.5rem); }
+  .rail {
+    padding-inline: calc((100vw - 80rem) / 2 + 2.5rem);
+    scroll-padding-inline: calc((100vw - 80rem) / 2 + 2.5rem);
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
