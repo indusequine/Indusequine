@@ -84,11 +84,9 @@ export default async function HomePage() {
         </Rail>
       )}
 
-      {/* The phone keeps this one: without it there is no route into
-          sixty-three categories on a small screen. A laptop has the header for
-          that, and the founder asked for the wide front page to be the campaign,
-          what is new, and who we carry. */}
-      <Rail title="Shop by category" href="/marketplace" linkLabel="All categories" phoneOnly>
+      {/* On both. Without it there is no route into sixty-three categories
+          from the front page at any width. */}
+      <Rail title="Shop by category" href="/marketplace" linkLabel="All categories">
         {topCategories.map((category) => (
           <CategoryTile
             key={category.slug}
