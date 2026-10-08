@@ -4,6 +4,7 @@ import Link from "next/link";
 import { Container } from "@/components/Container";
 import { brandSlug } from "@/lib/brands";
 import { useSlowConnection } from "@/lib/useSlowConnection";
+import { useIsPhone } from "@/lib/useIsPhone";
 import { brandLogo, brandLogoScale } from "@/lib/brandLogos";
 import type { Brand } from "@/data/products";
 
@@ -58,17 +59,18 @@ function BrandLink({ brand, prefetch }: { brand: Brand; prefetch?: false }) {
   );
 }
 
-// Three lanes, not one. A single row fits two nameplates on a phone, which
-// reads as an empty shelf rather than a catalogue of twenty-two brands.
-// Alternating the direction makes the block feel alive at a glance and stops
-// the three lanes drifting as one slab.
-const LANES = 3;
+// Three lanes on a phone, where a single row fits two nameplates and reads as
+// an empty shelf. One lane on a laptop, which is what it always was and what
+// there is room for: the three were asked for to fill a narrow screen, not to
+// change a wide one.
 
 export default function BrandStrip({ brands }: { brands: Brand[] }) {
   // Thirty-one logos, each its own request, and a duplicate row so the drift
   // can loop. On a poor connection the strip holds still and shows the twelve
   // busiest brands, which is one row and no second copy.
   const slow = useSlowConnection();
+  const phone = useIsPhone();
+  const LANES = phone ? 3 : 1;
   const all = interleave(brands);
   const ordered = slow ? all.slice(0, 12) : all;
   if (!ordered.length) return null;

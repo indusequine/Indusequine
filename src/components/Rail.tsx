@@ -19,6 +19,7 @@ export function Rail({
   linkLabel = "See all",
   wide,
   desktopOnly,
+  phoneOnly,
   children,
 }: {
   title: string;
@@ -28,10 +29,14 @@ export function Rail({
   wide?: boolean;
   /** Kept off a phone, where the front page is meant to be short. */
   desktopOnly?: boolean;
+  /** Kept off a laptop, where the header already does this job. */
+  phoneOnly?: boolean;
   children: ReactNode;
 }) {
   return (
-    <section className={`rail-section${desktopOnly ? " hidden md:block" : ""}`}>
+    <section
+      className={`rail-section${desktopOnly ? " hidden md:block" : ""}${phoneOnly ? " md:hidden" : ""}`}
+    >
       <Container size="wide">
         <div className="home__head">
           <h2>{title}</h2>

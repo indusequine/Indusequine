@@ -1,18 +1,14 @@
-import Link from "next/link";
 import type { Metadata } from "next";
 import CampaignHero, { type Campaign } from "@/components/CampaignHero";
 import BrandStrip from "@/components/BrandStrip";
 import { Rail } from "@/components/Rail";
-import { CategoryTile } from "@/components/CategoryTile";
 import { ProductCard } from "@/components/ProductCard";
-import { categoryGroups } from "@/lib/categoryGroups";
-import { brandSlug } from "@/lib/brands";
+import { CategoryTile } from "@/components/CategoryTile";
 import {
   getAllBrands,
   getCategoriesWithCounts,
   getCategoryImages,
   getNewArrivals,
-  getProductsByBrand,
 } from "@/data/products";
 
 export const metadata: Metadata = {
@@ -57,31 +53,29 @@ const campaigns: Campaign[] = [
 ];
 
 export default async function HomePage() {
-  const [brands, categories, trendingProducts, categoryImages, newArrivals] =
-    await Promise.all([
-      getAllBrands(),
-      getCategoriesWithCounts(),
-      getProductsByBrand("Freejump"),
-      getCategoryImages(),
-      getNewArrivals(12),
-    ]);
+  const [brands, newArrivals, categories, categoryImages] = await Promise.all([
+    getAllBrands(),
+    getNewArrivals(12),
+    getCategoriesWithCounts(),
+    getCategoryImages(),
+  ]);
 
-  // The busiest categories that actually have a photograph, so no rail tile
-  // falls back to the logo pattern while a photographed one waits behind it.
+  // Only on the phone, so only the busiest dozen that have a photograph.
   const topCategories = [...categories]
     .filter((c) => c.count > 0 && categoryImages.has(c.slug))
     .sort((a, b) => b.count - a.count)
     .slice(0, 12);
-  const trendingRail = trendingProducts.filter((p) => p.image).slice(0, 10);
+
 
   return (
     <div className="home">
       <CampaignHero campaigns={campaigns} />
 
-      {/* The front page on a phone is three things: the campaign, what has
-          just arrived, and who we carry. Shop by group repeats the hero's own
-          two buttons and Trending now is a fourth row nobody asked to scroll,
-          so both stay on the desktop and come off the phone. */}
+      {/* The front page is the campaign, what has just arrived, and who we
+          carry. Nothing else. Shop by group repeated the hero's own two
+          buttons, Shop by category and Trending now were two more rows to
+          scroll past, and all of them reached the desktop when only the phone
+          had been asked about. */}
       {newArrivals.length > 0 && (
         <Rail title="New in" href="/marketplace" linkLabel="Shop all">
           {newArrivals.map((product) => (
@@ -90,19 +84,11 @@ export default async function HomePage() {
         </Rail>
       )}
 
-      <Rail title="Shop by group" href="/marketplace" linkLabel="All categories" wide desktopOnly>
-        {categoryGroups.map((group) => (
-          <Link key={group.slug} href={`/marketplace/group/${group.slug}`} className="bento__tile">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src={group.image} alt="" />
-            <span className="bento__caption">{group.name}</span>
-          </Link>
-        ))}
-      </Rail>
-
-      {/* The one row kept against the founder's shorter list: without it a
-          phone has no route into sixty-three categories but the menu. */}
-      <Rail title="Shop by category" href="/marketplace" linkLabel="All categories">
+      {/* The phone keeps this one: without it there is no route into
+          sixty-three categories on a small screen. A laptop has the header for
+          that, and the founder asked for the wide front page to be the campaign,
+          what is new, and who we carry. */}
+      <Rail title="Shop by category" href="/marketplace" linkLabel="All categories" phoneOnly>
         {topCategories.map((category) => (
           <CategoryTile
             key={category.slug}
@@ -115,14 +101,6 @@ export default async function HomePage() {
       </Rail>
 
       <BrandStrip brands={brands} />
-
-      {trendingRail.length > 0 && (
-        <Rail title="Trending now" href={`/marketplace/brand/${brandSlug("Freejump")}`} desktopOnly>
-          {trendingRail.map((product) => (
-            <ProductCard key={product.slug} product={product} />
-          ))}
-        </Rail>
-      )}
 
     </div>
   );
