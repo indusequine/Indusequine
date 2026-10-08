@@ -1,8 +1,14 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import type { Product } from "@/data/products";
 import { ProductGrid } from "@/components/ProductGrid";
+
+// Twelve fits both grids whole: six rows of two on a phone, four rows of three
+// on a laptop. Twenty-eight of the sixty-three categories hold more than
+// fifteen products and the largest holds eighty-two, which is a long way to
+// scroll to reach a filter you have already set.
+const PAGE_SIZE = 12;
 
 // The order a shop lists them in, not alphabetical.
 const GENDER_ORDER = ["women", "men", "kids", "unisex"];
@@ -65,12 +71,42 @@ export function CategoryProductBrowser({ products }: { products: Product[] }) {
   const showFilters = brands.length > 1 || genders.length > 1 || outOfStockCount > 0;
   const narrowed = Boolean(brand || gender || inStockOnly);
 
+  // Back to the first page whenever the list underneath changes, or page 4 of
+  // a brand filter becomes page 4 of nothing.
+  const [page, setPage] = useState(1);
+  const filterKey = `${brand}|${gender}|${inStockOnly}|${sort}`;
+  const [seenKey, setSeenKey] = useState(filterKey);
+  if (filterKey !== seenKey) {
+    setSeenKey(filterKey);
+    setPage(1);
+  }
+
+  const pages = Math.max(1, Math.ceil(filtered.length / PAGE_SIZE));
+  const current = Math.min(page, pages);
+  const from = (current - 1) * PAGE_SIZE;
+  const shown = filtered.slice(from, from + PAGE_SIZE);
+
+  // Turning a page should put the first product of it where the eye is, not
+  // leave the reader halfway down a page they have already seen.
+  const top = useRef<HTMLDivElement>(null);
+  const turned = useRef(false);
+  useEffect(() => {
+    if (!turned.current) return;
+    turned.current = false;
+    top.current?.scrollIntoView({ behavior: "smooth", block: "start" });
+  }, [current]);
+
+  const turn = (to: number) => {
+    turned.current = true;
+    setPage(to);
+  };
+
   const selectClass =
     "px-3 py-2.5 bg-cream-soft border border-forest/15 focus:border-forest focus:outline-none " +
     "focus:ring-1 focus:ring-forest/30 transition-colors text-ink text-sm";
 
   return (
-    <div>
+    <div ref={top} className="scroll-mt-24">
       {showFilters && (
         <div className="mb-10">
           <div className="flex flex-wrap gap-3">
@@ -133,7 +169,10 @@ export function CategoryProductBrowser({ products }: { products: Product[] }) {
 
           <div className="mt-3 flex items-center gap-4 text-xs text-stone">
             <span>
-              Showing {filtered.length} of {products.length}
+              {filtered.length === 0
+                ? "Showing none"
+                : `Showing ${from + 1}-${from + shown.length} of ${filtered.length}`}
+              {filtered.length !== products.length && ` (${products.length} in all)`}
             </span>
             {narrowed && (
               <button
@@ -153,7 +192,55 @@ export function CategoryProductBrowser({ products }: { products: Product[] }) {
       )}
 
       {filtered.length > 0 ? (
-        <ProductGrid products={filtered} />
+        <>
+          <ProductGrid products={shown} />
+          {pages > 1 && (
+            <nav
+              className="mt-10 flex flex-wrap items-center justify-center gap-2"
+              aria-label="Pages"
+            >
+              <button
+                type="button"
+                onClick={() => turn(current - 1)}
+                disabled={current === 1}
+                className={pagerClass}
+              >
+                Previous
+              </button>
+
+              {pageNumbers(current, pages).map((n, i) =>
+                n === null ? (
+                  <span key={`gap-${i}`} className="px-1 text-stone text-sm">
+                    &hellip;
+                  </span>
+                ) : (
+                  <button
+                    key={n}
+                    type="button"
+                    onClick={() => turn(n)}
+                    aria-current={n === current ? "page" : undefined}
+                    className={
+                      n === current
+                        ? `${pagerClass} bg-forest text-cream-soft border-forest`
+                        : pagerClass
+                    }
+                  >
+                    {n}
+                  </button>
+                ),
+              )}
+
+              <button
+                type="button"
+                onClick={() => turn(current + 1)}
+                disabled={current === pages}
+                className={pagerClass}
+              >
+                Next
+              </button>
+            </nav>
+          )}
+        </>
       ) : (
         <p className="text-charcoal">
           Nothing here matches that. Try clearing a filter.
@@ -161,4 +248,24 @@ export function CategoryProductBrowser({ products }: { products: Product[] }) {
       )}
     </div>
   );
+}
+
+const pagerClass =
+  "min-w-10 px-3 py-2 text-sm border border-forest/20 bg-cream-soft text-forest " +
+  "hover:border-forest/50 disabled:opacity-40 disabled:hover:border-forest/20 " +
+  "disabled:cursor-default transition-colors";
+
+/** First, last, and the pages either side of this one, with gaps marked null.
+ *  Eighty-two products is seven pages, which fits; a bigger category would run
+ *  off a phone without this. */
+function pageNumbers(current: number, pages: number): (number | null)[] {
+  if (pages <= 7) return Array.from({ length: pages }, (_, i) => i + 1);
+  const out: (number | null)[] = [1];
+  const from = Math.max(2, current - 1);
+  const to = Math.min(pages - 1, current + 1);
+  if (from > 2) out.push(null);
+  for (let n = from; n <= to; n += 1) out.push(n);
+  if (to < pages - 1) out.push(null);
+  out.push(pages);
+  return out;
 }

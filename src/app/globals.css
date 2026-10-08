@@ -943,15 +943,21 @@ h1, h2, h3, h4, h5, h6, .font-display {
 
 /* On a phone the search field has no room, so it is this instead: the same
    36px square as the menu button next to it, with the same squared-off edge. */
-.site-header__searchlink {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 36px;
-  height: 36px;
-  border-radius: 0;
-  border: 1px solid rgba(0, 0, 0, 0.12);
-  color: var(--color-forest);
+/* In the components layer, so the sm:hidden on the element itself still wins.
+   Unlayered, this rule's display: inline-flex beat that utility and the search
+   button showed at every width -- a second search control sitting next to the
+   field it was written to stand in for. */
+@layer components {
+  .site-header__searchlink {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 0;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    color: var(--color-forest);
+  }
 }
 
 .site-header--overlay .site-header__searchlink {
