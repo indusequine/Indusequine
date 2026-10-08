@@ -1106,7 +1106,18 @@ h1, h2, h3, h4, h5, h6, .font-display {
 }
 
 @media (min-width: 768px) {
-  .rail { padding-inline: 2.5rem; scroll-padding-inline: 2.5rem; gap: 1rem; }
+  /* From here up the row stops being full bleed and becomes exactly the
+     container's content box: both of its edges then line up with the heading
+     and the "See all" link above it, and a part-shown tile is sliced at that
+     line rather than at the window's. 75rem is max-w-7xl less the 2.5rem
+     gutter on each side, which is what Container resolves to. */
+  .rail {
+    width: min(100% - 5rem, 75rem);
+    margin-inline: auto;
+    padding-inline: 0;
+    scroll-padding-inline: 0;
+    gap: 1rem;
+  }
   .rail > * { flex-basis: 23%; }
   .rail--wide > * { flex-basis: 31%; }
 }
@@ -1114,15 +1125,6 @@ h1, h2, h3, h4, h5, h6, .font-display {
 @media (min-width: 1024px) {
   .rail > * { flex-basis: 18.5%; }
   .rail--wide > * { flex-basis: 24%; }
-}
-
-/* Past the container's own width, line the first tile up with its edge rather
-   than with the screen's. 80rem is max-w-7xl, 2.5rem is the md gutter. */
-@media (min-width: 1360px) {
-  .rail {
-    padding-inline: calc((100vw - 80rem) / 2 + 2.5rem);
-    scroll-padding-inline: calc((100vw - 80rem) / 2 + 2.5rem);
-  }
 }
 
 @media (prefers-reduced-motion: reduce) {
