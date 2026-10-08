@@ -27,7 +27,7 @@ export default async function MarketplacePage() {
   return (
     <>
       <section className="bg-cream-soft pt-10 md:pt-14 pb-16 md:pb-20">
-        <Container size="wide">
+        <Container size="fluid">
           {/* The campaign belongs on the homepage; a rider here has already
               chosen to shop. The heading is carried for screen readers and
               search engines without taking a line of the page. */}
@@ -89,7 +89,7 @@ function TrustBadges({
   ];
   return (
     <section className="bg-cream py-10 border-y border-forest/10">
-      <Container size="wide">
+      <Container size="fluid">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
           {badges.map((b) => (
             <div key={b.label}>

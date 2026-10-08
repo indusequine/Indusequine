@@ -45,7 +45,7 @@ export default async function GroupPage({ params }: Props) {
     });
   return (
     <section className="bg-cream-soft pt-6 md:pt-10 pb-16 md:pb-24">
-      <Container size="wide">
+      <Container size="fluid">
         {/* Somebody who tapped Rider knows they tapped Rider. Saying it back to
             them, with the tagline, a count and a way to undo it, was four lines
             of cream before the first category. The heading stays for screen

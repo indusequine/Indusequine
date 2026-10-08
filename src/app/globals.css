@@ -1107,12 +1107,12 @@ h1, h2, h3, h4, h5, h6, .font-display {
 
 @media (min-width: 768px) {
   /* From here up the row stops being full bleed and becomes exactly the
-     container's content box: both of its edges then line up with the heading
-     and the "See all" link above it, and a part-shown tile is sliced at that
-     line rather than at the window's. 75rem is max-w-7xl less the 2.5rem
-     gutter on each side, which is what Container resolves to. */
+     container's content box, so both of its edges line up with the heading and
+     the "See all" link above it, and a part-shown tile is sliced at that line
+     rather than at the window's. The same max() the fluid Container uses, so
+     the two cannot drift apart. */
   .rail {
-    width: min(100% - 5rem, 75rem);
+    width: calc(100% - 2 * max(2.5rem, 4.5vw));
     margin-inline: auto;
     padding-inline: 0;
     scroll-padding-inline: 0;
@@ -1125,6 +1125,18 @@ h1, h2, h3, h4, h5, h6, .font-display {
 @media (min-width: 1024px) {
   .rail > * { flex-basis: 18.5%; }
   .rail--wide > * { flex-basis: 24%; }
+}
+
+/* Wider screens get more tiles rather than bigger ones. Without this a fluid
+   row on a 27-inch display is five tiles the size of dinner plates. */
+@media (min-width: 1600px) {
+  .rail > * { flex-basis: 15.4%; }
+  .rail--wide > * { flex-basis: 19.2%; }
+}
+
+@media (min-width: 2100px) {
+  .rail > * { flex-basis: 12.8%; }
+  .rail--wide > * { flex-basis: 15.8%; }
 }
 
 @media (prefers-reduced-motion: reduce) {

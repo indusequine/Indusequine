@@ -50,7 +50,7 @@ export default async function BrandCategoryPage({ params }: Props) {
   return (
     <>
       <section className="bg-forest-deep text-cream-soft py-14 md:py-16 border-b border-brass/20">
-        <Container size="wide">
+        <Container size="fluid">
           <Link
             href={`/marketplace/brand/${brand.slug}`}
             className="eyebrow text-brass-light hover:text-cream-soft transition-colors"
@@ -75,14 +75,14 @@ export default async function BrandCategoryPage({ params }: Props) {
       </section>
 
       <section className="bg-cream-soft py-14 md:py-20">
-        <Container size="wide">
+        <Container size="fluid">
           <CategoryProductBrowser products={products} />
         </Container>
       </section>
 
       {siblings.length > 0 && (
         <section className="bg-cream py-14 md:py-16 border-t border-forest/10">
-          <Container size="wide">
+          <Container size="fluid">
             <p className="eyebrow text-brass-deep">More from {brand.name}</p>
             <div className="mt-6 flex flex-wrap gap-x-8 gap-y-3">
               {siblings.map((c) => (

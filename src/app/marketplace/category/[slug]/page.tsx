@@ -36,7 +36,7 @@ export default async function CategoryPage({ params }: Props) {
 
   return (
     <section className="bg-cream-soft pt-6 md:pt-10 pb-16 md:pb-24">
-      <Container size="wide">
+      <Container size="fluid">
         {/* Same as a group page: somebody who tapped Helmet does not need to be
             told they are in Helmet, with a count and a way back, before they
             see one. The browser under this already prints how many there are,

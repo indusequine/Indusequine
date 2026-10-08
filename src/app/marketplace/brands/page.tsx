@@ -19,7 +19,7 @@ export default async function BrandsPage() {
 
   return (
     <div className="bg-cream-soft">
-      <Container size="wide">
+      <Container size="fluid">
         <div className="py-14 md:py-20">
           <h1 className="font-display text-3xl md:text-4xl text-forest-deep">All brands</h1>
           <p className="mt-3 text-forest/70 max-w-prose">

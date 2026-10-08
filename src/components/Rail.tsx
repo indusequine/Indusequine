@@ -37,7 +37,7 @@ export function Rail({
     <section
       className={`rail-section${desktopOnly ? " hidden md:block" : ""}${phoneOnly ? " md:hidden" : ""}`}
     >
-      <Container size="wide">
+      <Container size="fluid">
         <div className="home__head">
           <h2>{title}</h2>
           {href && <Link href={href}>{linkLabel}</Link>}

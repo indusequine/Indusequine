@@ -52,7 +52,7 @@ export default async function BrandPage({ params }: Props) {
   return (
     <>
       <section className="bg-forest-deep text-cream-soft py-16 md:py-20 border-b border-brass/20">
-        <Container size="wide">
+        <Container size="fluid">
           <Link
             href="/marketplace"
             className="eyebrow text-brass-light hover:text-cream-soft transition-colors"
@@ -69,7 +69,7 @@ export default async function BrandPage({ params }: Props) {
       </section>
 
       <section className="bg-cream-soft py-16 md:py-24">
-        <Container size="wide">
+        <Container size="fluid">
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
             {categories.map((category) => (
               <CategoryTile

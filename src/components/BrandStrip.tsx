@@ -82,7 +82,7 @@ export default function BrandStrip({ brands }: { brands: Brand[] }) {
 
   return (
     <section className="bg-white py-12 md:py-16" aria-labelledby="brand-strip-heading">
-      <Container size="wide">
+      <Container size="fluid">
         <div className="home__head">
           <h2 id="brand-strip-heading">Shop by brand</h2>
           <Link href="/marketplace/brands">All brands</Link>
