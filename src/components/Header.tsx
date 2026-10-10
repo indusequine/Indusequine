@@ -208,17 +208,10 @@ export function Header() {
 
       {open && (
         <div className={`min-[1100px]:hidden ${light ? "bg-forest-deep" : "bg-cream-soft border-b border-forest/10"}`}>
+          {/* No search field here. The header carries a search button beside
+              the menu, so this was the second of two controls doing one job. */}
           <div className="site-header__bar">
-            <form action="/search" className="site-header__search my-4 w-full" role="search">
-              <SearchGlyph />
-              <input
-                type="search"
-                name="q"
-                placeholder="Search the site"
-                aria-label="Search the site"
-              />
-            </form>
-            <nav className="pb-4 flex flex-col" aria-label="Main">
+            <nav className="py-2 flex flex-col" aria-label="Main">
               {[
                 ...barLinks,
                 ...menus.map((m) => ({ href: m.href, label: m.label })),
@@ -227,7 +220,11 @@ export function Header() {
                 <Link
                   key={link.href}
                   href={link.href}
-                  className="py-2.5 text-sm text-ink"
+                  // The panel takes the dark ground over the hero and on the
+                  // dark pages, so the links have to follow it. Hardcoded
+                  // text-ink left them near-black on forest-deep, which is
+                  // nothing you can read.
+                  className={`py-2.5 text-sm ${light ? "text-cream-soft" : "text-ink"}`}
                   onClick={() => setOpen(false)}
                 >
                   {link.label}
