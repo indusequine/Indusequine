@@ -48,7 +48,12 @@ const moreLinks = [
 export function Header() {
   // On the homepage the bar sits over the campaign photograph in white. Every
   // other page starts with white, so it takes its solid form instead.
-  const pathname = usePathname() ?? "/";
+  // `|| "/"` and not `?? "/"`: on Vercel's prerender usePathname() comes back
+  // as an empty string rather than null, which ?? lets through. "" is not "/",
+  // so the homepage rendered as an ordinary cream bar instead of floating over
+  // its campaign, and the hero lost the header that belongs to it. Locally it
+  // returns "/" and the bug never showed.
+  const pathname = usePathname() || "/";
   const overlay = pathname === "/";
   // Pages that open on the forest-deep hero: the header takes the same ground
   // so the two read as one block instead of a white bar laid on a green one.
