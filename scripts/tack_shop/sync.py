@@ -55,7 +55,8 @@ from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
 sys.path.insert(0, str(HERE.parent))
-from feeds import FeedUnavailable, read_json  # noqa: E402
+import feeds  # noqa: E402
+from feeds import read_json  # noqa: E402
 from migrate_to_shopify import ShopifyClient, load_env  # noqa: E402
 from snapshot import take  # noqa: E402
 
@@ -578,18 +579,17 @@ def main() -> int:
     ap.add_argument("--undo-retire", action="store_true")
     args = ap.parse_args()
     client = ShopifyClient(load_env())
-    try:
-        if args.undo_retire:
-            return undo_retire(client)
-        if args.retire_discontinued:
-            return retire(client, args.dry_run)
-        return sync(client, args.dry_run)
-    except FeedUnavailable as e:
-        # Their site, not our catalogue, and not the same thing as finding a
-        # product we cannot file, which is what exit 1 means here.
-        print(f"{e}\n  {e.url}\n\nNothing was written. Shopify is unchanged.")
-        return 2
+    # FeedUnavailable is not caught here any more. feeds.run() takes it, prints
+    # the same thing, and also writes the reason as an annotation, which this
+    # handler never did -- so a run that failed because their site was down
+    # said only "exit code 2" to anyone without a token. Their site going down
+    # is still not the same thing as a product we cannot file, and still exit 2.
+    if args.undo_retire:
+        return undo_retire(client)
+    if args.retire_discontinued:
+        return retire(client, args.dry_run)
+    return sync(client, args.dry_run)
 
 
 if __name__ == "__main__":
-    raise SystemExit(main())
+    raise SystemExit(feeds.run(main, "The Tack Shop"))

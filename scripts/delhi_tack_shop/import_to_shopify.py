@@ -44,6 +44,7 @@ from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
 sys.path.insert(0, str(HERE.parent))
+import feeds  # noqa: E402
 from migrate_to_shopify import (  # noqa: E402
     CATALOGUE_PATH,
     PRODUCT_SET_MUTATION,
@@ -444,8 +445,11 @@ def main():
         LOG_PATH.write_text(json.dumps({"summary": summary, "problems": problems}, indent=2, ensure_ascii=False))
     report(summary, problems, args.dry_run)
     if problems:
-        sys.exit(1)
+        feeds.needs_a_look("Delhi Tack Shop", "products that need attention",
+                           problems)
+        return 1
+    return 0
 
 
 if __name__ == "__main__":
-    main()
+    raise SystemExit(feeds.run(main, "Delhi Tack Shop"))

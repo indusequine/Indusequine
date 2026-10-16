@@ -25,6 +25,9 @@ import urllib.request
 from datetime import datetime, timezone
 from pathlib import Path
 
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
+import feeds  # noqa: E402
+
 BASE_URL = "https://delhitackshop.com"
 OUT_PATH = Path(__file__).resolve().parent / "output" / "scraped.json"
 REQUEST_DELAY = 0.25  # small shop's site -- stay polite
@@ -224,8 +227,11 @@ def main():
     }, indent=2, ensure_ascii=False))
     print(f"\n{len(products)} scraped, {len(failures)} failed -> {OUT_PATH.relative_to(Path.cwd()) if OUT_PATH.is_relative_to(Path.cwd()) else OUT_PATH}")
     if failures:
-        sys.exit(1)
+        feeds.needs_a_look("Delhi Tack Shop (scrape)", "products that would "
+                           "not scrape", failures)
+        return 1
+    return 0
 
 
 if __name__ == "__main__":
-    main()
+    raise SystemExit(feeds.run(main, "Delhi Tack Shop (scrape)"))

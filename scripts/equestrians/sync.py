@@ -33,6 +33,7 @@ import urllib.request
 HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, os.path.dirname(HERE))
 
+import feeds  # noqa: E402
 from feeds import FeedUnavailable, last_written, read_json, tolerate  # noqa: E402
 from migrate_to_shopify import ShopifyClient, load_env  # noqa: E402
 from revalidate import ping  # noqa: E402
@@ -207,6 +208,8 @@ def main() -> int:
         print(f"    {len(p['variants'])} variants, {len(p['images'])} images, {stock}")
     for h in missing:
         print(f"  GONE from their site: {h} (left alone here)")
+    feeds.needs_a_look("EQUESTRIANS", "handles on their site that nothing "
+                       "here knows about", extra)
     for h in extra:
         print(f"  NEW on their site, not mapped: {h} — add it to PRODUCTS above")
 
@@ -282,4 +285,4 @@ def main() -> int:
 
 
 if __name__ == "__main__":
-    raise SystemExit(main())
+    raise SystemExit(feeds.run(main, "EQUESTRIANS"))

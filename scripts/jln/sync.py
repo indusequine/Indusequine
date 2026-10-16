@@ -44,6 +44,7 @@ from html import unescape
 HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, os.path.dirname(HERE))
 
+import feeds  # noqa: E402
 from feeds import FeedUnavailable, last_written, read_json, tolerate  # noqa: E402
 from migrate_to_shopify import ShopifyClient, load_env  # noqa: E402
 from revalidate import ping  # noqa: E402
@@ -486,6 +487,8 @@ def main() -> int:
             print(f"    {title_of(p['name'])[:52]}")
             print(f"        {why}")
     if unknown:
+        feeds.needs_a_look("JLN Equestrian", "listings needing a decision",
+                           [p.get("slug") or p.get("name") or "?" for p, _ in unknown])
         print(f"\n  {len(unknown)} NEEDS A DECISION:")
         for p, why in unknown:
             print(f"    {title_of(p['name'])[:52]}")
@@ -568,4 +571,4 @@ def main() -> int:
 
 
 if __name__ == "__main__":
-    raise SystemExit(main())
+    raise SystemExit(feeds.run(main, "JLN Equestrian"))

@@ -23,7 +23,9 @@ from __future__ import annotations
 import datetime
 import json
 import os
+import sys
 import time
+import traceback
 import urllib.error
 import urllib.request
 
@@ -265,3 +267,56 @@ def probe(url: str, supplier: str) -> None:
         except (urllib.error.URLError, TimeoutError, OSError) as e:
             outcome = f"{type(e).__name__}: {e}"
         annotate("warning", f"probe {supplier} {path} -> {outcome}")
+
+
+def run(main, supplier: str) -> int:
+    """Run a sync's main() and make however it ended readable from outside.
+
+    The exit code is all that reaches the failure email, and 1 is the same
+    number whether a supplier listed something nothing can file, a write died
+    halfway through, or the script hit a bug. Telling those apart meant opening
+    the log, and the log needs a token.
+
+    So whatever happens is also written as an annotation. Those are served by
+    the public API, which on a public repository needs no credential at all, so
+    the reason a run failed can be read without going anywhere near GitHub's
+    web interface.
+
+    Exit codes, unchanged: 0 worked, 1 come and look, 2 their site was down.
+    """
+    try:
+        code = main() or 0
+    except FeedUnavailable as e:
+        annotate("error", f"{supplier}: {e.reason}")
+        print(f"\n{e}\n  {e.url}\n\nNothing was written. Shopify is unchanged.",
+              file=sys.stderr)
+        return 2
+    except KeyboardInterrupt:
+        raise
+    except Exception as e:
+        # A traceback in the log and one line in the annotation. Without this
+        # an unhandled exception is indistinguishable from the deliberate
+        # exit 1 the syncs use to say a product needs a decision.
+        annotate("error", f"{supplier}: the sync stopped on "
+                          f"{type(e).__name__}: {e}")
+        traceback.print_exc()
+        return 1
+    if code not in (0, 1, 2):
+        annotate("error", f"{supplier}: finished with exit code {code}")
+    return code
+
+
+def needs_a_look(supplier: str, what: str, items) -> None:
+    """Name what a deliberate exit 1 is actually about.
+
+    The syncs fail a run on purpose when a supplier lists something they cannot
+    place, so that it mails rather than passing in silence. This puts the first
+    few names in the annotation, so the mail says which products without anyone
+    opening anything.
+    """
+    items = list(items)
+    if not items:
+        return
+    shown = ", ".join(str(i) for i in items[:5])
+    more = f" and {len(items) - 5} more" if len(items) > 5 else ""
+    annotate("error", f"{supplier}: {len(items)} {what}: {shown}{more}")

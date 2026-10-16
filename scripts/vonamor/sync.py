@@ -32,6 +32,7 @@ import urllib.request
 HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, os.path.dirname(HERE))
 
+import feeds  # noqa: E402
 from feeds import FeedUnavailable, last_written, read_json, tolerate  # noqa: E402
 from migrate_to_shopify import ShopifyClient, load_env  # noqa: E402
 from revalidate import ping  # noqa: E402
@@ -197,6 +198,8 @@ def main() -> int:
     for t in skipped:
         print(f"  SKIPPED (no category mapped): {t}")
     if skipped:
+        feeds.needs_a_look("Vonamor", "products with no category for their "
+                           "product_type", skipped)
         print("\n  Vonamor have added something this does not know where to file.")
         print("  Add its product_type to CATEGORIES at the top of this file.")
 
@@ -263,4 +266,4 @@ def main() -> int:
 
 
 if __name__ == "__main__":
-    raise SystemExit(main())
+    raise SystemExit(feeds.run(main, "Vonamor"))
