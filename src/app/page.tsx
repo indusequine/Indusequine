@@ -32,8 +32,8 @@ const campaigns: Campaign[] = [
     image: "/images/hero-wide.jpg",
     priority: true,
     actions: [
-      { label: "Shop Rider", href: "/marketplace/group/rider" },
-      { label: "Shop Horse", href: "/marketplace/group/horse" },
+      { label: "For Rider", href: "/marketplace/group/rider" },
+      { label: "For Horse", href: "/marketplace/group/horse" },
     ],
   },
   {
