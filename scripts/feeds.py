@@ -111,7 +111,7 @@ def last_written(client, supplier_tag: str) -> datetime.datetime | None:
 
 def tolerate(error: FeedUnavailable,
              last_write: datetime.datetime | None) -> int:
-    """The exit code for a feed we could not read: 0 to wait, 1 to shout.
+    """The exit code for a feed we could not read: 0 to wait, 2 theirs, 1 ours.
 
     A rate limit on a shared address is worth waiting out, because the next run
     draws a different address. Mailing a failure every six hours for it only
@@ -121,7 +121,12 @@ def tolerate(error: FeedUnavailable,
     longer than QUIET_LIMIT the run fails for real.
     """
     if not error.rate_limited:
-        return 1
+        # Their site, so exit 2, the same as every other way a feed goes
+        # unread. This returned 1 and so a supplier being down for five minutes
+        # arrived looking exactly like a product nobody can file, which is a
+        # thing somebody has to sit down and decide about. One of those is
+        # worth being woken for and the other is not.
+        return 2
     if last_write is None:
         print(f"\nRate limited, and nothing of {error.supplier}'s has ever been "
               f"written here. Failing so this gets looked at.")
